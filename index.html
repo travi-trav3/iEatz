@@ -1,13 +1,388 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html>
+<html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iEatz Healthy — Dinner, decided.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono&display=swap">
-<link rel="stylesheet" href="assets/colors_and_type.css">
+
+<style>/* ==========================================================================
+   iEatz Healthy — Design System Tokens
+   Visual direction: editorial wellness. Magazine-feel, not fitness-app green.
+   ========================================================================== */
+
+/* ---- Fonts (Google) ----
+   Display:    Instrument Serif  — marketing headlines, stat numerals
+   Body:       Inter Tight        — UI text + marketing body
+   App UI:     Plus Jakarta Sans  — entire iOS app surface
+   Mono:       JetBrains Mono     — mono captions (rare)
+*/
+/* latin-ext */
+/* latin */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* ===========================================================
+   EDITORIAL SERIF — Instrument Serif
+   Marketing surfaces (IG, web) use Instrument Serif at 400 weight,
+   with italic for stat numerals and pull quotes. It is a non-variable
+   transitional serif with no optical-size / WONK / SOFT axes — quiet
+   and consistent at every scale.
+   App surfaces use Plus Jakarta Sans (see --app-font in app.css).
+   =========================================================== */
+
+:root {
+  /* ---------- COLOR — Brand greens ---------- */
+  --ie-green:           #1F8B4C;   /* primary accent, CTAs, stat numbers */
+  --ie-green-dark:      #0E4A2A;   /* headlines, strong emphasis */
+  --ie-green-deep:      #08311B;   /* darkest, used sparingly */
+  --ie-green-light:     #E6F4EC;   /* card tints, subtle backgrounds */
+  --ie-green-mint:      #F2FAF6;   /* full-bleed light-wash backgrounds */
+
+  /* ---------- COLOR — Ink (text) ---------- */
+  --ie-ink:             #0A0F0C;   /* primary text */
+  --ie-ink-medium:      #5C625E;   /* secondary text, body on warm paper */
+  --ie-ink-light:       #9CA29F;   /* captions, labels, meta */
+  --ie-ink-faint:       #C8CDCA;   /* dividers, disabled */
+
+  /* ---------- COLOR — Surfaces ---------- */
+  --ie-paper:           #F5F2EA;   /* preferred warm background, NOT white */
+  --ie-paper-deep:      #ECE7D8;   /* sectioning, alt cards */
+  --ie-white:           #FFFFFF;   /* cards, overlays */
+  --ie-black:           #0A0F0C;   /* full-bleed dark moments */
+
+  /* ---------- COLOR — Accents (used sparingly, food-photo adjacent) ---------- */
+  --ie-tomato:          #C9412B;   /* warning, contrast moments, "not that" */
+  --ie-saffron:         #E4A93C;   /* highlight, callouts */
+  --ie-aubergine:       #4A2E4D;   /* rare deep accent */
+
+  /* ---------- TYPE — Families ---------- */
+  --ie-font-display:    "Instrument Serif", "Times New Roman", Georgia, serif;
+  --ie-font-sans:       "Inter Tight", "Helvetica Neue", system-ui, sans-serif;
+  --ie-font-mono:       "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+  /* ---------- TYPE — Scale (instagram-first; mobile-safe) ---------- */
+  /* 24px floor for body, 36+ for headlines on 1080×1350 IG posts */
+  --ie-fs-hero:         clamp(56px, 7.2vw, 120px);   /* IG carousel hero */
+  --ie-fs-display:      clamp(44px, 5.4vw, 88px);    /* large headlines */
+  --ie-fs-h1:           clamp(36px, 4vw, 64px);
+  --ie-fs-h2:           clamp(28px, 3vw, 48px);
+  --ie-fs-h3:           24px;
+  --ie-fs-stat:         clamp(80px, 12vw, 220px);    /* the big number */
+  --ie-fs-body-lg:      28px;
+  --ie-fs-body:         24px;     /* floor */
+  --ie-fs-caption:      18px;
+  --ie-fs-eyebrow:      14px;     /* small caps eyebrow */
+
+  /* ---------- TYPE — Weights ---------- */
+  --ie-fw-light:        300;
+  --ie-fw-regular:      400;
+  --ie-fw-medium:       500;
+  --ie-fw-semibold:     600;
+  --ie-fw-bold:         700;
+
+  /* ---------- SPACING (4-step base, generous) ---------- */
+  --ie-sp-1:  4px;
+  --ie-sp-2:  8px;
+  --ie-sp-3:  12px;
+  --ie-sp-4:  16px;
+  --ie-sp-5:  24px;
+  --ie-sp-6:  32px;
+  --ie-sp-7:  48px;
+  --ie-sp-8:  64px;
+  --ie-sp-9:  80px;       /* IG safe-zone */
+  --ie-sp-10: 120px;
+
+  /* ---------- RADII (soft, magazine-like) ---------- */
+  --ie-r-xs:  4px;
+  --ie-r-sm:  8px;
+  --ie-r-md:  16px;
+  --ie-r-lg:  24px;
+  --ie-r-xl:  32px;
+  --ie-r-pill: 999px;
+
+  /* ---------- SHADOWS (green-tinted, multi-layer) ---------- */
+  --ie-shadow-xs:  0 1px 2px rgba(14, 74, 42, 0.04);
+  --ie-shadow-sm:  0 1px 2px rgba(14, 74, 42, 0.04),
+                   0 2px 6px rgba(14, 74, 42, 0.05);
+  --ie-shadow-md:  0 2px 6px rgba(14, 74, 42, 0.05),
+                   0 8px 24px rgba(14, 74, 42, 0.07);
+  --ie-shadow-lg:  0 4px 12px rgba(14, 74, 42, 0.06),
+                   0 16px 40px rgba(14, 74, 42, 0.10),
+                   0 32px 72px rgba(14, 74, 42, 0.06);
+  --ie-shadow-xl:  0 8px 24px rgba(14, 74, 42, 0.08),
+                   0 32px 72px rgba(14, 74, 42, 0.14);
+
+  /* ---------- BORDERS ---------- */
+  --ie-border-hair:   1px solid rgba(10, 15, 12, 0.08);
+  --ie-border-card:   1px solid rgba(10, 15, 12, 0.06);
+  --ie-border-strong: 1px solid rgba(10, 15, 12, 0.16);
+
+  /* ---------- IG TEMPLATE TOKENS ---------- */
+  --ig-w: 1080px;
+  --ig-h: 1350px;
+  --ig-safe: 80px;          /* safe zone on all edges */
+  --ig-no-text-bottom: 15%; /* % of height reserved at bottom (caption preview) */
+
+  /* ===========================================================
+     UI-KIT ALIASES — the IG kit (templates/) and iOS kit
+     (ui_kits/ios_app/) reference these short names.
+     Mapped to the canonical --ie-* tokens above.
+     =========================================================== */
+
+  /* Type */
+  --font-sans:  var(--ie-font-sans);
+  --font-serif: var(--ie-font-display);
+  --font-mono:  var(--ie-font-mono);
+
+  /* Surfaces */
+  --paper:        var(--ie-paper);
+  --paper-light:  #FAF7F0;                  /* slightly lighter than paper */
+  --white:        var(--ie-white);
+  --black:        var(--ie-black);
+
+  /* Brand greens */
+  --brand-green:        var(--ie-green);
+  --brand-green-dark:   var(--ie-green-dark);
+  --brand-green-deep:   var(--ie-green-deep);
+  --brand-green-light:  var(--ie-green-light);
+  --brand-mint:         var(--ie-green-mint);
+
+  /* App-specific greens (iOS kit uses these names) */
+  --app-mint-bg:    #F1FCF3;                /* almost-white green, iOS bg */
+  --app-green:      #3BBF4F;                /* bright action green (FAB, chips) */
+  --app-green-deep: #193A19;                /* primary CTA fill */
+  --brand-mark-green: #61CA8C;              /* logo mark on mint (app splash) */
+
+  /* Ink scale (1 = darkest, 5 = faintest) */
+  --ink-1: var(--ie-ink);
+  --ink-2: #2A2F2C;                         /* slightly softer primary */
+  --ink-3: var(--ie-ink-medium);
+  --ink-4: var(--ie-ink-light);
+  --ink-5: var(--ie-ink-faint);
+
+  /* Shadow aliases */
+  --shadow-xs: var(--ie-shadow-xs);
+  --shadow-sm: var(--ie-shadow-sm);
+  --shadow-md: var(--ie-shadow-md);
+  --shadow-lg: var(--ie-shadow-lg);
+  --shadow-xl: var(--ie-shadow-xl);
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   Use these classes wherever possible.
+   ============================================================ */
+
+.ie-hero {
+  font-family: var(--ie-font-display);
+  font-weight: 400;
+  font-size: var(--ie-fs-hero);
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  color: var(--ie-green-dark);
+}
+
+.ie-display {
+  font-family: var(--ie-font-display);
+  font-weight: 500;
+  font-size: var(--ie-fs-display);
+  line-height: 1.0;
+  letter-spacing: -0.015em;
+  color: var(--ie-ink);
+  text-wrap: balance;
+}
+
+.ie-h1 {
+  font-family: var(--ie-font-display);
+  font-weight: 500;
+  font-size: var(--ie-fs-h1);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ie-ink);
+  text-wrap: balance;
+}
+
+.ie-h2 {
+  font-family: var(--ie-font-display);
+  font-weight: 500;
+  font-size: var(--ie-fs-h2);
+  line-height: 1.08;
+  letter-spacing: -0.008em;
+  color: var(--ie-ink);
+  text-wrap: balance;
+}
+
+.ie-h3 {
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: var(--ie-fs-h3);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink);
+}
+
+.ie-stat {
+  font-family: var(--ie-font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--ie-fs-stat);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--ie-green);
+}
+
+.ie-stat--ink { color: var(--ie-green-dark); }
+.ie-stat--tomato { color: var(--ie-tomato); }
+
+.ie-body {
+  font-family: var(--ie-font-sans);
+  font-weight: 400;
+  font-size: var(--ie-fs-body);
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink-medium);
+  text-wrap: pretty;
+}
+
+.ie-body-lg {
+  font-family: var(--ie-font-sans);
+  font-weight: 400;
+  font-size: var(--ie-fs-body-lg);
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink-medium);
+  text-wrap: pretty;
+}
+
+.ie-caption {
+  font-family: var(--ie-font-sans);
+  font-weight: 500;
+  font-size: var(--ie-fs-caption);
+  line-height: 1.4;
+  color: var(--ie-ink-light);
+}
+
+.ie-eyebrow {
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: var(--ie-fs-eyebrow);
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ie-ink-medium);
+}
+
+.ie-eyebrow--green { color: var(--ie-green); }
+.ie-eyebrow--paper { color: var(--ie-paper); }
+
+.ie-mono {
+  font-family: var(--ie-font-mono);
+  font-size: 16px;
+  letter-spacing: 0;
+  color: var(--ie-ink-medium);
+}
+
+/* ============================================================
+   COMPONENT PRIMITIVES
+   ============================================================ */
+
+.ie-accent-bar {
+  display: inline-block;
+  width: 48px;
+  height: 4px;
+  background: var(--ie-green);
+  border-radius: 2px;
+}
+
+.ie-card {
+  background: var(--ie-white);
+  border-radius: var(--ie-r-lg);
+  box-shadow: var(--ie-shadow-md);
+  border: var(--ie-border-card);
+}
+
+.ie-card--paper {
+  background: var(--ie-paper);
+}
+
+.ie-card--green {
+  background: var(--ie-green-light);
+}
+
+.ie-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 28px;
+  background: var(--ie-green-dark);
+  color: var(--ie-paper);
+  border-radius: var(--ie-r-pill);
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.005em;
+  border: none;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.ie-cta:hover { background: var(--ie-green); transform: translateY(-1px); }
+.ie-cta:active { transform: translateY(0) scale(0.99); }
+
+/* Brand badge: small fridge icon + iEatz Healthy wordmark */
+.ie-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink);
+}
+.ie-brand-badge .mark {
+  width: 24px; height: 24px;
+  color: var(--ie-green);
+  display: inline-flex;
+}
+.ie-brand-badge.on-dark { color: var(--ie-paper); }
+.ie-brand-badge.on-dark .mark { color: var(--ie-green-light); }
+</style>
+
 <style>
   /* =========================================================
      iEatz Healthy — Marketing Landing Page
@@ -91,7 +466,7 @@
     padding: 14px 26px;
     background: var(--ie-green-dark);
     color: var(--paper-light);
-    border-radius: 999px;
+    border-radius: var(--btn-radius, 999px);
     font-family: var(--font-sans);
     font-size: 15px; font-weight: 600;
     letter-spacing: -0.005em;
@@ -280,7 +655,7 @@
   @media (max-width: 980px) { .tension-body { grid-template-columns: 1fr; gap: 56px; } }
   .tension-photo {
     position: relative;
-    aspect-ratio: 5 / 4;
+    aspect-ratio: 3 / 4;
     border-radius: 24px;
     overflow: hidden;
     background: #1c1410;
@@ -289,7 +664,7 @@
   .tension-photo img {
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center 35%;
+    object-position: center center;
     display: block;
     /* slight desaturation + warmer tone — emphasize the "problem" mood */
     filter: saturate(0.9) contrast(1.02);
@@ -703,9 +1078,9 @@
     height: 60px;
     border-top: 1px solid #E6F0EA;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
-    padding: 0 8px;
+    padding: 0 6px;
   }
   .phone-tab-item {
     display: flex; flex-direction: column; align-items: center; gap: 2px;
@@ -720,7 +1095,7 @@
     position: absolute;
     left: 50%; top: 50%; transform: translate(-78%, -42%) rotate(8deg);
     width: 220px; height: 290px;
-    background: url('assets/photos/cutting-board-veg.jpg') center/cover no-repeat;
+    background: url("assets/photos/cutting-board-veg.jpg") center/cover no-repeat;
     border-radius: 24px;
     box-shadow: 0 20px 40px rgba(14,74,42,0.15);
     z-index: -1;
@@ -856,311 +1231,254 @@
     text-wrap: pretty;
   }
 
-  /* ---- Recipe-detail screen contents ---- */
-  .rd-hero {
-    height: 168px;
-    border-radius: 18px;
-    background-size: cover; background-position: center;
+  /* Real in-app screenshots placed inside the phone bezels */
+  .gshot { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* Circular human-face avatar overlaid on screen 01's profile slot */
+  .gshot-avatar {
+    position: absolute;
+    left: 4.3%; top: 7.4%;
+    width: 15.4%; aspect-ratio: 1;
+    border-radius: 999px;
+    background-size: cover;
+    background-position: center 28%;
+    box-shadow: 0 1px 3px rgba(10,15,12,0.18);
+    z-index: 3;
+  }
+
+  /* ============================================================
+     REAL iEatz APP SCREENS — recreated from the Figma source.
+     App surface font = Plus Jakarta Sans (ExtraBold headings).
+     Palette: mint #F1FCF3 · action green #3BBF4F · CTA #2E5331
+     · heading ink #0A1F0D · serving navy #302F6B.
+     ============================================================ */
+
+  /* ---- Choose available ingredients (onboarding input) ---- */
+  .ci { display: flex; flex-direction: column; height: 100%; }
+  .ci-back {
+    width: 34px; height: 34px; border-radius: 999px;
+    background: #3BBF4F; color: #0A0F0C;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .ci-back svg { width: 15px; height: 15px; }
+  .ci-prog {
+    margin-top: 16px; height: 5px; border-radius: 999px;
+    background: #DCEADF; overflow: hidden;
+  }
+  .ci-prog i { display: block; height: 100%; width: 34%; background: #3BBF4F; border-radius: 999px; }
+  .ci-h {
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+    font-weight: 800; font-size: 22px; line-height: 1.14;
+    letter-spacing: -0.02em; color: #0A1F0D; margin: 16px 0 0;
+  }
+  .ci-cloud {
+    flex: 1; margin-top: 16px;
+    display: flex; flex-wrap: wrap; gap: 8px 10px;
+    align-content: flex-start; justify-content: center;
+    overflow: hidden;
+  }
+  .ci-tile {
+    width: 62px; height: 62px; border-radius: 18px;
+    background: #E4F1E7;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
     position: relative;
-    overflow: hidden;
-    margin-top: 6px;
   }
-  .rd-hero .save {
-    position: absolute; top: 12px; right: 12px;
-    width: 32px; height: 32px; border-radius: 999px;
-    background: rgba(255,255,255,0.94);
-    display: inline-flex; align-items: center; justify-content: center;
-    color: #1F8B4C;
-  }
-  .rd-hero .meta-pill {
-    position: absolute; bottom: 12px; left: 12px;
-    background: rgba(10,15,12,0.78);
-    color: #fff;
-    border-radius: 999px;
-    padding: 6px 12px;
-    font-size: 10px; font-weight: 700;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    backdrop-filter: blur(6px);
-  }
-  .rd-title {
-    font-family: var(--font-serif);
-    font-size: 20px;
-    line-height: 1.12;
-    letter-spacing: -0.01em;
-    color: #0A0F0C;
-    margin: 14px 0 0;
-    text-wrap: balance;
-  }
-  .rd-stats {
-    display: flex; gap: 6px; margin-top: 10px;
-  }
-  .rd-stats .s {
-    flex: 1;
-    background: #fff;
-    border-radius: 12px;
-    padding: 8px 6px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(14,74,42,0.05);
-  }
-  .rd-stats .n {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 17px;
-    color: #1F8B4C;
-    line-height: 1;
-  }
-  .rd-stats .l {
-    font-size: 9px; letter-spacing: 0.08em;
-    color: #6b7a72; text-transform: uppercase;
-    font-weight: 700; margin-top: 4px;
-  }
-  .rd-section {
-    margin-top: 14px;
-    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: #6b7a72; font-weight: 700;
-  }
-  .rd-ing {
-    margin-top: 8px;
-    display: flex; flex-direction: column; gap: 6px;
-  }
-  .rd-ing .row {
-    display: grid; grid-template-columns: 18px 1fr auto;
-    gap: 10px; align-items: center;
-    font-size: 12px; font-weight: 600; color: #0A0F0C;
-    background: #fff;
-    border-radius: 10px; padding: 8px 12px;
-  }
-  .rd-ing .check {
-    width: 16px; height: 16px; border-radius: 999px;
-    background: #E6F4EC; color: #1F8B4C;
-    display: inline-flex; align-items: center; justify-content: center;
-  }
-  .rd-ing .check svg { width: 10px; height: 10px; }
-  .rd-ing .row.off .check {
-    background: transparent;
-    border: 1.5px solid #C9D8CE;
-    color: transparent;
-  }
-  .rd-ing .qty {
-    font-size: 11px; color: #6b7a72; font-weight: 600;
-  }
-
-  /* ---- Meal-plan screen contents ---- */
-  .mp-tabs {
-    display: flex; gap: 6px;
-    background: #fff;
-    border-radius: 999px; padding: 4px;
-    box-shadow: 0 2px 8px rgba(14,74,42,0.05);
-    margin-top: 4px;
-  }
-  .mp-tabs .t {
-    flex: 1; padding: 8px 0;
-    border-radius: 999px;
-    text-align: center;
-    font-size: 11px; font-weight: 700;
-    color: #6b7a72;
-  }
-  .mp-tabs .t.on {
-    background: #0E4A2A;
-    color: #fff;
-  }
-  .mp-title {
-    font-family: var(--font-serif);
-    font-size: 22px;
-    color: #0A0F0C;
-    margin: 16px 0 0;
-    letter-spacing: -0.01em;
-    line-height: 1.1;
-  }
-  .mp-sub {
-    margin-top: 4px;
-    font-size: 11px; color: #6b7a72;
-    letter-spacing: 0.04em;
-  }
-  .mp-day {
-    margin-top: 12px;
-    background: #fff;
-    border-radius: 14px;
-    padding: 12px;
-    box-shadow: 0 2px 6px rgba(14,74,42,0.05);
-    display: grid;
-    grid-template-columns: 36px 1fr;
-    gap: 12px; align-items: center;
-  }
-  .mp-day .date {
-    text-align: center;
-  }
-  .mp-day .date .dw {
-    font-size: 9px; letter-spacing: 0.12em;
-    color: #6b7a72; text-transform: uppercase; font-weight: 700;
-  }
-  .mp-day .date .dn {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 22px;
-    color: #1F8B4C;
-    line-height: 1;
-    margin-top: 2px;
-  }
-  .mp-day .meals {
-    display: flex; flex-direction: column; gap: 4px;
-    border-left: 1px solid #E6F0EA;
-    padding-left: 12px;
-  }
-  .mp-day .meal {
-    font-size: 11px; color: #0A0F0C;
-    font-weight: 600;
-    line-height: 1.25;
-  }
-  .mp-day .meal .lbl {
-    display: inline-block;
-    font-size: 8px; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: #1F8B4C;
-    margin-right: 6px;
-    width: 36px;
-  }
-  .mp-day.today {
-    background: #0E4A2A;
-    color: #fff;
-  }
-  .mp-day.today .date .dw,
-  .mp-day.today .date .dn,
-  .mp-day.today .meal,
-  .mp-day.today .meals { color: #fff; }
-  .mp-day.today .date .dn { color: #9FE4B3; }
-  .mp-day.today .meal .lbl { color: #9FE4B3; }
-  .mp-day.today .meals { border-left-color: rgba(255,255,255,0.18); }
-
-  /* ---- Tracker / Today screen contents ---- */
-  .tk-greet {
-    font-size: 11px; color: #6b7a72; font-weight: 600;
-    letter-spacing: 0.04em;
-  }
-  .tk-title {
-    font-family: var(--font-serif);
-    font-size: 22px;
-    color: #0A0F0C;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    margin-top: 2px;
-  }
-  .tk-ring-card {
-    margin-top: 14px;
-    background: #0E4A2A;
-    color: #fff;
-    border-radius: 18px;
-    padding: 16px;
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    gap: 14px; align-items: center;
-  }
-  .tk-ring { position: relative; width: 96px; height: 96px; }
-  .tk-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
-  .tk-ring .center {
+  .ci-tile .emo { font-size: 23px; line-height: 1; }
+  .ci-tile .lab { font-size: 7.5px; color: #46514A; font-weight: 600; }
+  .ci-tile.sel { background: #7C8A7E; }
+  .ci-tile.sel .emo { opacity: 0.45; }
+  .ci-tile.sel .lab { color: #fff; }
+  .ci-tile .ck {
     position: absolute; inset: 0;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    color: #3BBF4F;
   }
-  .tk-ring .num {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 28px;
-    line-height: 1;
-    color: #9FE4B3;
-  }
-  .tk-ring .lbl {
-    font-size: 8px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-top: 4px;
-    opacity: 0.7;
-    font-weight: 700;
-  }
-  .tk-ring-meta .lbl {
-    font-size: 9px; letter-spacing: 0.12em;
-    text-transform: uppercase; font-weight: 700;
-    color: #9FE4B3;
-  }
-  .tk-ring-meta .h {
-    font-family: var(--font-serif);
-    font-size: 14px;
-    color: #fff;
-    margin-top: 4px;
-    line-height: 1.2;
-    letter-spacing: -0.005em;
-  }
-  .tk-ring-meta .left {
-    margin-top: 8px;
-    font-size: 10px;
-    color: rgba(255,255,255,0.7);
-    line-height: 1.3;
-  }
-  .tk-macros {
+  .ci-tile .ck svg { width: 26px; height: 26px; }
+  .ci-cta {
     margin-top: 12px;
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
+    background: #2E5331; color: #fff;
+    text-align: center; border-radius: 16px; padding: 15px;
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+    font-weight: 700; font-size: 15px;
   }
-  .tk-macros .m {
-    background: #fff;
-    border-radius: 12px;
-    padding: 10px 8px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(14,74,42,0.05);
+
+  /* ---- Recipe detail ---- */
+  .ar { display: flex; flex-direction: column; height: 100%; }
+  .ar-hero {
+    height: 106px; border-radius: 18px;
+    background-size: cover; background-position: center;
+    position: relative; flex: none;
   }
-  .tk-macros .pn {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 17px;
-    color: #1F8B4C;
-    line-height: 1;
+  .ar-icon {
+    width: 30px; height: 30px; border-radius: 999px;
+    background: rgba(255,255,255,0.92); color: #0A0F0C;
+    display: inline-flex; align-items: center; justify-content: center;
+    position: absolute; top: 10px;
   }
-  .tk-macros .pn .of { color: #C9D8CE; font-size: 11px; margin-left: 2px; }
-  .tk-macros .pl {
-    font-size: 9px; text-transform: uppercase;
-    letter-spacing: 0.1em; color: #6b7a72;
-    margin-top: 4px; font-weight: 700;
+  .ar-icon svg { width: 15px; height: 15px; }
+  .ar-icon.back { left: 10px; }
+  .ar-icon.fav { right: 10px; color: #2E7D43; }
+  .ar-name {
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+    font-weight: 800; font-size: 18px; line-height: 1.16;
+    letter-spacing: -0.01em; color: #0A1F0D; margin: 11px 0 0;
   }
-  .tk-macros .bar {
-    margin-top: 6px;
-    height: 3px; border-radius: 999px;
-    background: #E6F4EC;
-    overflow: hidden;
+  .ar-meta {
+    margin-top: 7px; display: flex; gap: 14px;
+    font-size: 11px; color: #6b7a72; font-weight: 600;
+    align-items: center;
   }
-  .tk-macros .bar i {
-    display: block; height: 100%; background: #1F8B4C;
+  .ar-meta .it { display: inline-flex; align-items: center; gap: 4px; }
+  .ar-meta b { color: #0A0F0C; }
+  .ar-meta .star { color: #F1A33C; }
+  .ar-sec {
+    margin-top: 13px;
+    display: flex; align-items: center; justify-content: space-between;
   }
-  .tk-meals {
-    margin-top: 12px;
-    display: flex; flex-direction: column; gap: 6px;
+  .ar-sec h4 {
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+    font-weight: 700; font-size: 15px; color: #193A19; margin: 0;
   }
-  .tk-meal {
-    background: #fff;
-    border-radius: 12px;
-    padding: 8px;
-    display: grid;
-    grid-template-columns: 36px 1fr auto;
-    gap: 10px; align-items: center;
-    box-shadow: 0 2px 6px rgba(14,74,42,0.04);
+  .ar-serv {
+    background: #302F6B; color: #fff; border-radius: 14px;
+    padding: 8px 12px; display: inline-flex; align-items: center; gap: 12px;
+    font-size: 13px; font-weight: 700;
   }
-  .tk-meal .thumb {
-    width: 36px; height: 36px; border-radius: 8px;
+  .ar-serv .stp { display: inline-flex; gap: 8px; }
+  .ar-serv .stp span {
+    width: 18px; height: 18px; border-radius: 999px;
+    border: 1.5px solid rgba(255,255,255,0.55);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 14px; line-height: 1;
+  }
+  .ar-ings { margin-top: 12px; display: flex; gap: 10px; }
+  .ar-ing { flex: 1; }
+  .ar-ing .th {
+    width: 100%; height: 60px; border-radius: 14px;
     background-size: cover; background-position: center;
   }
-  .tk-meal .nm {
-    font-size: 11px; font-weight: 700; color: #0A0F0C;
-    line-height: 1.2;
+  .ar-ing .nm { font-size: 9px; color: #0A0F0C; font-weight: 700; margin-top: 5px; text-align: center; }
+  .ar-ing .q { font-size: 8px; color: #8A9B9B; text-align: center; }
+  .ar-step { display: flex; gap: 10px; margin-top: 8px; }
+  .ar-step .n {
+    width: 22px; height: 22px; border-radius: 999px; flex: none;
+    background: #E9F5EC; color: #2E7D43; font-weight: 800; font-size: 11px;
+    display: inline-flex; align-items: center; justify-content: center;
   }
-  .tk-meal .mt {
-    font-size: 9px; letter-spacing: 0.04em;
-    color: #6b7a72; margin-top: 2px;
+  .ar-step p { margin: 0; font-size: 11px; color: #46514A; line-height: 1.35; }
+  .ar-cta {
+    margin-top: 10px;
   }
-  .tk-meal .kcal {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 15px;
-    color: #1F8B4C;
+  .ar-cta .b {
+    background: #2E5331; color: #fff; text-align: center;
+    border-radius: 16px; padding: 14px;
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+    font-weight: 700; font-size: 14px;
   }
+
+  /* ---- Subscribe to iEatzPro (paywall) ---- */
+  .ap { display: flex; flex-direction: column; height: 100%; }
+  .ap-photos {
+    display: grid; grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50px; gap: 6px; position: relative; flex: none;
+  }
+  .ap-photos .p { border-radius: 12px; background-size: cover; background-position: center; }
+  .ap-photos .p.tall { grid-row: span 2; }
+  .ap-photos .x {
+    position: absolute; right: 6px; top: 6px;
+    width: 28px; height: 28px; border-radius: 999px;
+    background: #3BBF4F; color: #0A0F0C;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .ap-photos .x svg { width: 13px; height: 13px; }
+  .ap-stars { margin-top: 12px; text-align: center; color: #F1A33C; font-size: 15px; letter-spacing: 4px; }
+  .ap-h {
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+    font-weight: 800; font-size: 19px; text-align: center;
+    color: #0A1F0D; margin: 7px 0 0; letter-spacing: -0.01em;
+  }
+  .ap-feats { margin-top: 11px; display: flex; flex-direction: column; gap: 7px; }
+  .ap-feat { display: flex; align-items: center; gap: 10px; font-size: 12px; color: #1D2520; font-weight: 600; }
+  .ap-feat .ck { width: 17px; height: 17px; color: #3BBF4F; flex: none; }
+  .ap-tiers { margin-top: 12px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+  .ap-tier {
+    border: 1.5px solid #D7E5DA; border-radius: 14px;
+    padding: 11px 5px 12px; text-align: center; background: #fff;
+  }
+  .ap-tier.sel { border-color: #3BBF4F; }
+  .ap-tier .tn { font-size: 11px; font-weight: 800; color: #0A0F0C; }
+  .ap-tier .badge {
+    background: #3BBF4F; color: #fff; font-size: 8px; font-weight: 800;
+    padding: 3px 6px; border-radius: 6px; display: inline-block; margin-top: 6px;
+  }
+  .ap-tier .tp { font-size: 10px; color: #8A9B9B; margin-top: 7px; font-weight: 600; line-height: 1.3; }
+  .ap-cta {
+    margin-top: 12px; background: #2E5331; color: #fff;
+    text-align: center; border-radius: 16px; padding: 13px;
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+    font-weight: 700; font-size: 15px;
+  }
+  .ap-fine { margin-top: 8px; text-align: center; font-size: 9px; color: #9CA29F; font-weight: 600; letter-spacing: 0.02em; }
+
+
+  /* ---- Recipes Home (rendered in the large "how it works" phone) ---- */
+  .rh { display: flex; flex-direction: column; height: 100%; }
+  .rh-top { display: flex; align-items: center; justify-content: space-between; }
+  .rh-av {
+    width: 44px; height: 44px; border-radius: 999px;
+    background-size: cover; background-position: center; background-color: #E4F1E7;
+  }
+  .rh-acts { display: flex; gap: 10px; }
+  .rh-act {
+    width: 40px; height: 40px; border-radius: 12px; background: #E9F5EC;
+    display: inline-flex; align-items: center; justify-content: center; color: #0A0F0C;
+  }
+  .rh-act svg { width: 18px; height: 18px; }
+  .rh-cal { margin-top: 16px; }
+  .rh-cal-row {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 15px; font-weight: 700; color: #0A1F0D;
+  }
+  .rh-cal-row .chev { color: #0A0F0C; }
+  .rh-cal-bar { margin-top: 8px; height: 6px; border-radius: 999px; background: #E2EDE4; overflow: hidden; }
+  .rh-cal-bar i { display: block; height: 100%; width: 38%; background: #3BBF4F; border-radius: 999px; }
+  .rh-cal-sub { margin-top: 6px; font-size: 10px; color: #9CA29F; }
+  .rh-h {
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+    font-weight: 800; font-size: 25px; line-height: 1.08;
+    letter-spacing: -0.02em; color: #0A1F0D; margin: 16px 0 0;
+  }
+  .rh-pills { margin-top: 14px; display: flex; gap: 8px; overflow: hidden; }
+  .rh-pill {
+    border: 1px solid #D7E5DA; border-radius: 999px; padding: 8px 14px;
+    font-size: 12px; font-weight: 600; color: #7C8A7E; white-space: nowrap; flex: none;
+  }
+  .rh-pill.on { background: #3BBF4F; color: #fff; border-color: #3BBF4F; }
+  .rh-sec { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; }
+  .rh-sec h4 { font-family: 'Plus Jakarta Sans', var(--font-sans); font-weight: 800; font-size: 13px; color: #0A0F0C; margin: 0; white-space: nowrap; }
+  .rh-sec a { font-size: 11px; color: #6b7a72; font-weight: 600; }
+  .rh-cards { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .rh-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 10px rgba(14,74,42,0.05); }
+  .rh-card .img { height: 82px; background-size: cover; background-position: center; position: relative; }
+  .rh-card .heart {
+    position: absolute; top: 7px; right: 7px; width: 22px; height: 22px; border-radius: 999px;
+    background: rgba(255,255,255,0.9); color: #2E7D43;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .rh-card .heart svg { width: 12px; height: 12px; }
+  .rh-card .bd { padding: 8px 10px 11px; }
+  .rh-card .nm { font-size: 11px; font-weight: 700; color: #0A0F0C; line-height: 1.2; }
+  .rh-card .mt { font-size: 9px; color: #6b7a72; margin-top: 5px; display: flex; align-items: center; gap: 7px; }
+  .rh-card .mt .star { color: #F1A33C; }
+  .rh-card .mt .clk { display: inline-flex; align-items: center; gap: 3px; }
+  .rh-card .mt .clk svg { width: 9px; height: 9px; }
+  .rh-sec h4 .emo { font-size: 13px; }
+  .rh-bundles { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .rh-bundle { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 10px rgba(14,74,42,0.05); }
+  .rh-bundle .img { height: 66px; background-size: cover; background-position: center; }
+  .rh-bundle .bn { font-size: 11px; font-weight: 700; color: #0A0F0C; line-height: 1.2; padding: 8px 10px 0; }
+  .rh-bundle .brow { display: flex; align-items: center; justify-content: space-between; padding: 4px 10px 10px; font-size: 9px; color: #6b7a72; font-weight: 600; }
+  .rh-bundle .brow .info { color: #B7C2BB; display: inline-flex; }
+  .rh-bundle .brow .info svg { width: 12px; height: 12px; }
 
   /* ===========================================================
      SECTION 6 — Money Angle (full-bleed editorial stat)
@@ -1329,13 +1647,13 @@
 
   /* Smaller feature cards on right column */
   .feat-card.feat-grocery .feat-photo {
-    background-image: url('assets/photos/spices-spoons.jpg');
+    background-image: url("assets/photos/spices-spoons.jpg");
   }
   .feat-card.feat-meal .feat-photo {
-    background-image: url('assets/photos/pesto-pasta-bowl.jpg');
+    background-image: url("assets/photos/pesto-pasta-bowl.jpg");
   }
   .feat-card.feat-macro .feat-photo {
-    background-image: url('assets/photos/salmon.jpg');
+    background-image: url("assets/photos/salmon.jpg");
   }
   .feat-instacart-badge {
     margin-top: 18px;
@@ -1557,12 +1875,12 @@
   .finalcta .decor-left {
     left: -120px; top: 50%;
     transform: translateY(-50%) rotate(-6deg);
-    background-image: url('assets/photos/pesto-pasta-bowl.jpg');
+    background-image: url("assets/photos/pesto-pasta-bowl.jpg");
   }
   .finalcta .decor-right {
     right: -120px; top: 50%;
     transform: translateY(-50%) rotate(6deg);
-    background-image: url('assets/photos/buddha-bowl.jpg');
+    background-image: url("assets/photos/buddha-bowl.jpg");
   }
   @media (max-width: 1100px) {
     .finalcta .decor-left, .finalcta .decor-right { display: none; }
@@ -1675,7 +1993,7 @@
       <div>
         <span class="eyebrow">iEatz Healthy</span>
         <h1>Dinner, <span class="accent">decided.</span></h1>
-        <p class="sub">Tell iEatz what's in your kitchen. Get healthy meals back in seconds. No recipes to search. No groceries to buy. Just cook.</p>
+        <p class="sub" id="heroSub">Tell iEatz what's in your kitchen. Get healthy meals back in seconds. No recipes to search. No groceries to buy. Just cook.</p>
         <div class="hero-ctas">
           <a class="as-badge as-badge--lg" href="#download" aria-label="Download on the App Store">
             <img src="assets/app-store-badge.png" alt="Download on the App Store">
@@ -1687,7 +2005,7 @@
           <span class="dot"></span>
           <span>No credit card.</span>
           <span class="dot"></span>
-          <span>iOS only, Android coming soon.</span>
+          <span id="androidNote">iOS only, Android coming soon.</span>
         </div>
       </div>
 
@@ -1708,7 +2026,7 @@
         </div>
         <div class="pill">
           <span class="ind"></span>
-          Reading 7 ingredients
+          7 ingredients imported
         </div>
       </div>
     </div>
@@ -1772,7 +2090,6 @@
   <div class="caption">
     <div class="caption-inner">
       <h3>The same fridge. <span class="em">A different week.</span></h3>
-      <div class="credit">Photography · Tuesday, 6:14 PM</div>
     </div>
   </div>
 </section>
@@ -1797,7 +2114,7 @@
         <div class="day-label">Wednesday</div>
         <div class="day-body">
           <strong>Out of ideas, not food.</strong>
-          iEatz reads what's in your fridge and figures it out. The half-onion gets a job.
+          iEatz works from what you already bought and figures it out. The half-onion gets a job.
         </div>
       </div>
       <div class="day">
@@ -1878,7 +2195,7 @@
           <div class="step-num">02</div>
           <div>
             <h3 class="step-ttl">Tell iEatz what you have.</h3>
-            <p class="step-body">Type it or snap a photo. The AI reads your ingredients instantly — even the half-jar of olives.</p>
+            <p class="step-body" id="importStepCopy">Type your ingredients in, or snap a photo of your grocery receipt — iEatz imports the whole haul in one tap, down to the half-jar of olives.</p>
           </div>
         </div>
         <div class="step">
@@ -1908,65 +2225,99 @@
               </div>
             </div>
             <div class="phone-body">
-              <div class="phone-greet">Tuesday evening</div>
-              <div class="phone-title">What's for dinner,<br>Maya?</div>
+              <div class="rh">
+                <div class="rh-top">
+                  <div class="rh-av" style="background-image: url(&quot;assets/photos/couple-cooking.jpg&quot;);"></div>
+                  <div class="rh-acts">
+                    <div class="rh-act">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4-4"></path></svg>
+                    </div>
+                    <div class="rh-act">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z"></path></svg>
+                    </div>
+                  </div>
+                </div>
 
-              <div class="phone-card">
-                <div class="pc-lbl">In your fridge</div>
-                <div class="pc-input">
-                  <span class="pc-tag">chicken</span>
-                  <span class="pc-tag">rice</span>
-                  <span class="pc-tag">broccoli</span>
-                  <span class="pc-tag">lemon</span>
-                  <span class="pc-tag plus">+ add</span>
+                <div class="rh-cal">
+                  <div class="rh-cal-row">
+                    <span>Today's Calories&nbsp;&nbsp;2300</span>
+                    <span class="chev">›</span>
+                  </div>
+                  <div class="rh-cal-bar"><i></i></div>
+                  <div class="rh-cal-sub">You have consumed 0% of your total caloric intake today.</div>
                 </div>
-                <div class="pc-button">Generate recipes</div>
-              </div>
 
-              <div class="phone-section-ttl">3 recipes from what you have</div>
-              <div class="recipe-list">
-                <div class="rrow">
-                  <div class="rrow-thumb" style="background-image: url('assets/photos/salmon.jpg');"></div>
-                  <div>
-                    <div class="rrow-name">Honey-garlic chicken bowls</div>
-                    <div class="rrow-meta">15 min · 480 cal · 42g protein</div>
-                  </div>
-                  <div class="rrow-arrow">›</div>
+                <div class="rh-sec">
+                  <h4>Handpicked for you <span class="emo">💚</span></h4>
+                  <a href="#how">View all recipes</a>
                 </div>
-                <div class="rrow">
-                  <div class="rrow-thumb" style="background-image: url('assets/photos/buddha-bowl.jpg');"></div>
-                  <div>
-                    <div class="rrow-name">Lemon chicken & broccoli rice</div>
-                    <div class="rrow-meta">18 min · 410 cal · 38g protein</div>
+
+                <div class="rh-cards">
+                  <div class="rh-card">
+                    <div class="img" style="background-image: url(&quot;assets/photos/salmon.jpg&quot;);">
+                      <span class="heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"></path></svg></span>
+                    </div>
+                    <div class="bd">
+                      <div class="nm">Pan-Seared Chicken with Asparagus</div>
+                      <div class="mt"><span class="clk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>30 mins</span><span>450 calories</span></div>
+                    </div>
                   </div>
-                  <div class="rrow-arrow">›</div>
+                  <div class="rh-card">
+                    <div class="img" style="background-image: url(&quot;assets/photos/tacos.jpg&quot;);">
+                      <span class="heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"></path></svg></span>
+                    </div>
+                    <div class="bd">
+                      <div class="nm">Spicy Garlic Chicken Bites</div>
+                      <div class="mt"><span class="clk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>20 mins</span><span>380 calories</span></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="rrow">
-                  <div class="rrow-thumb" style="background-image: url('assets/photos/pesto-pasta-bowl.jpg');"></div>
-                  <div>
-                    <div class="rrow-name">Chicken fried rice, lighter</div>
-                    <div class="rrow-meta">12 min · 460 cal · 35g protein</div>
+
+                <div class="rh-sec">
+                  <h4>Meal bundles <span class="emo">🍱</span></h4>
+                  <a href="#how">Shop ingredients</a>
+                </div>
+
+                <div class="rh-bundles">
+                  <div class="rh-bundle">
+                    <div class="img" style="background-image: url(&quot;assets/photos/couple-cooking.jpg&quot;);"></div>
+                    <div class="bn">Fitness optimizer</div>
+                    <div class="brow"><span>7 recipes</span><span class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg></span></div>
                   </div>
-                  <div class="rrow-arrow">›</div>
+                  <div class="rh-bundle">
+                    <div class="img" style="background-image: url(&quot;assets/photos/meal-prep-spread.jpg&quot;);"></div>
+                    <div class="bn">Holistic wellness explorer</div>
+                    <div class="brow"><span>5 recipes</span><span class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg></span></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="phone-tab">
+            <div class="phone-tab" style="position: relative;">
               <div class="phone-tab-item active">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 12h16"/><path d="M8 7v2M16 7v2M8 15v2M16 15v2"/></svg>
-                Fridge
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg>
+                Home
               </div>
               <div class="phone-tab-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 6h14l-1 13H6L5 6z"/><path d="M9 6V4h6v2"/></svg>
-                Recipes
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"></path></svg>
+                Favorites
+              </div>
+              <div class="phone-tab-item" aria-hidden="true"></div>
+              <div class="phone-tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 21.5c4 .5 9-3 12.5-9.5-2-2-5-2.5-7.5-.5-2 1.6-3 4.4-5 10z"></path><path d="M14 11c1.5-2 3-3 5-3.2"></path><path d="M15.5 9.5C17 7 18.5 5.5 21 5"></path></svg>
+                Inventory
               </div>
               <div class="phone-tab-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-                Plan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="10" r="3"></circle><path d="M6.4 18.8a6 6 0 0 1 11.2 0"></path></svg>
+                Profile
               </div>
-              <div class="phone-tab-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-                You
+              <div style="position: absolute; left: 50%; top: -24px; transform: translateX(-50%); width: 52px; height: 52px; border-radius: 999px; background: #3BBF4F; box-shadow: 0 8px 20px rgba(59,191,79,0.4); display: flex; align-items: center; justify-content: center; color: #fff;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                  <rect x="6.35" y="3" width="1.05" height="5" rx="0.52"></rect>
+                  <rect x="8.15" y="3" width="1.05" height="5" rx="0.52"></rect>
+                  <rect x="9.95" y="3" width="1.05" height="5" rx="0.52"></rect>
+                  <path d="M5.5 7.5h6.4a.4.4 0 0 1 .4.45c-.13 1.55-1.16 2.7-2.5 2.93V20.55a1.1 1.1 0 0 1-2.2 0V10.88C6.26 10.65 5.23 9.5 5.1 7.95a.4.4 0 0 1 .4-.45Z"></path>
+                  <path d="M16.95 3c-1.5.35-2.55 2.7-2.55 5.45 0 2.1 1.03 3.62 2.4 4V20.55a1.1 1.1 0 0 0 2.2 0V3.72c0-.52-.52-.85-1-.72Z"></path>
+                </svg>
               </div>
             </div>
           </div>
@@ -1984,222 +2335,59 @@
     <div class="gallery-head">
       <div>
         <span class="eyebrow">A look inside</span>
-        <h2>What happens after you tap <span class="em">Generate.</span></h2>
+        <h2 data-comment-anchor="913363e67a-h2">From your fridge to dinner, in <span class="em">three taps.</span></h2>
       </div>
-      <p class="gallery-intro">A real recipe in your hand. A week of meals on the rails. A picture of what you ate, without the spreadsheet.</p>
+      <p class="gallery-intro">Tell iEatz what's in your kitchen, pick the recipe it builds around it, and cook in fifteen. No store run, no endless scrolling, no what's-for-dinner spiral.</p>
     </div>
 
     <div class="gallery-grid">
-      <!-- ───────── Screen 1: Recipe Detail ───────── -->
+      <!-- ───────── Screen 1: Home — handpicked for you (real screenshot) ───────── -->
       <div class="gphone-cell">
         <div class="gphone-num">01</div>
         <div class="gphone">
           <div class="gphone-notch"></div>
           <div class="gphone-screen">
-            <div class="gphone-status">
-              <span>9:41</span>
-              <div class="icons">
-                <span class="ph-bars"></span>
-                <span class="ph-bat"></span>
-              </div>
-            </div>
-            <div class="gphone-body" style="background: #F1FCF3;">
-              <div class="gphone-toprow">
-                <div class="gphone-cbtn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-                <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#6b7a72; font-weight:700;">Recipe · 02 of 03</div>
-                <div class="gphone-cbtn">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"/></svg>
-                </div>
-              </div>
-              <div class="rd-hero" style="background-image: url('assets/photos/buddha-bowl.jpg');">
-                <div class="meta-pill">AI Generated</div>
-              </div>
-              <div class="rd-title">Lemon-tahini chickpea bowls with crisp cucumber.</div>
-              <div class="rd-stats">
-                <div class="s"><div class="n">15</div><div class="l">min</div></div>
-                <div class="s"><div class="n">410</div><div class="l">cal</div></div>
-                <div class="s"><div class="n">18g</div><div class="l">protein</div></div>
-              </div>
-              <div class="rd-section">Ingredients · from your fridge</div>
-              <div class="rd-ing">
-                <div class="row">
-                  <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  <span>Chickpeas</span>
-                  <span class="qty">1 can</span>
-                </div>
-                <div class="row">
-                  <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                  <span>Cucumber</span>
-                  <span class="qty">1</span>
-                </div>
-                <div class="row off">
-                  <span class="check"></span>
-                  <span>Lemon</span>
-                  <span class="qty">½</span>
-                </div>
-              </div>
-            </div>
+            <img class="gshot" src="assets/photos/app-home.jpg" alt="iEatz home screen — today's calories and a feed of meals handpicked for you">
+            <div class="gshot-avatar" style="background-image: url(&quot;assets/avatar.png&quot;);" aria-hidden="true"></div>
+            <div class="gshot-avatar" style="background-image: url(&quot;assets/avatar.png&quot;);" aria-hidden="true"></div>
           </div>
         </div>
         <div class="gphone-caption">
-          <div class="tag">The recipe</div>
-          <div class="ttl">A real recipe, with steps for someone who's never deglazed a pan.</div>
-          <div class="sub">Hero photo. Time, calories, macros. Ingredient checklist drawn from what you typed.</div>
+          <div class="tag">Step one</div>
+          <div class="ttl">Open to meals already picked for you.</div>
+          <div class="sub">A home feed built around your goals and today's calories — no blank search bar, no decision paralysis.</div>
         </div>
       </div>
 
-      <!-- ───────── Screen 2: Weekly Meal Plan ───────── -->
+      <!-- ───────── Screen 2: Recipe detail with macros (real screenshot) ───────── -->
       <div class="gphone-cell">
         <div class="gphone-num">02</div>
         <div class="gphone">
           <div class="gphone-notch"></div>
           <div class="gphone-screen">
-            <div class="gphone-status">
-              <span>9:41</span>
-              <div class="icons">
-                <span class="ph-bars"></span>
-                <span class="ph-bat"></span>
-              </div>
-            </div>
-            <div class="gphone-body" style="background: #F1FCF3;">
-              <div class="gphone-toprow">
-                <div class="gphone-cbtn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-                <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#6b7a72; font-weight:700;">My Plan</div>
-                <div class="gphone-cbtn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </div>
-              </div>
-              <div class="mp-tabs">
-                <div class="t on">Week</div>
-                <div class="t">Day</div>
-                <div class="t">Goals</div>
-              </div>
-              <h3 class="mp-title">This week</h3>
-              <p class="mp-sub">Mar 3 — 9  ·  Vegetarian  ·  1,800 kcal/day</p>
-
-              <div class="mp-day">
-                <div class="date"><div class="dw">Mon</div><div class="dn">3</div></div>
-                <div class="meals">
-                  <div class="meal"><span class="lbl">BFST</span>Greek yogurt + berries</div>
-                  <div class="meal"><span class="lbl">LUNCH</span>Lemon-tahini bowls</div>
-                  <div class="meal"><span class="lbl">DINNER</span>Pesto farfalle</div>
-                </div>
-              </div>
-              <div class="mp-day today">
-                <div class="date"><div class="dw">Tue</div><div class="dn">4</div></div>
-                <div class="meals">
-                  <div class="meal"><span class="lbl">BFST</span>Egg & avocado toast</div>
-                  <div class="meal"><span class="lbl">LUNCH</span>Buddha bowl, lentils</div>
-                  <div class="meal"><span class="lbl">DINNER</span>Chickpea tacos</div>
-                </div>
-              </div>
-              <div class="mp-day">
-                <div class="date"><div class="dw">Wed</div><div class="dn">5</div></div>
-                <div class="meals">
-                  <div class="meal"><span class="lbl">BFST</span>Overnight oats</div>
-                  <div class="meal"><span class="lbl">DINNER</span>Coconut curry</div>
-                </div>
-              </div>
-            </div>
+            <img class="gshot" src="assets/photos/app-recipe.jpg" alt="iEatz recipe screen — Pan-Seared Chicken with Asparagus and Spinach, with carbs, protein and fat per serving">
           </div>
         </div>
         <div class="gphone-caption">
-          <div class="tag">The plan</div>
-          <div class="ttl">Pick a style. Get a week of meals around it.</div>
-          <div class="sub">Built from what's in your kitchen, not someone else's shopping list. Swap any meal in one tap.</div>
+          <div class="tag">Step two</div>
+          <div class="ttl">Cook it — macros already counted.</div>
+          <div class="sub">Time, calories, and a carbs–protein–fat breakdown sit on every dish, so dinner stays on plan.</div>
         </div>
       </div>
 
-      <!-- ───────── Screen 3: Today / Macros ───────── -->
+      <!-- ───────── Screen 3: Shop missing items with Instacart (real screenshot) ───────── -->
       <div class="gphone-cell">
         <div class="gphone-num">03</div>
         <div class="gphone">
           <div class="gphone-notch"></div>
           <div class="gphone-screen">
-            <div class="gphone-status">
-              <span>9:41</span>
-              <div class="icons">
-                <span class="ph-bars"></span>
-                <span class="ph-bat"></span>
-              </div>
-            </div>
-            <div class="gphone-body" style="background: #F1FCF3;">
-              <div class="gphone-toprow">
-                <div>
-                  <div class="tk-greet">Tuesday · March 4</div>
-                  <div class="tk-title">Today</div>
-                </div>
-                <div class="gphone-cbtn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                </div>
-              </div>
-
-              <div class="tk-ring-card">
-                <div class="tk-ring">
-                  <svg viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="8"/>
-                    <circle cx="50" cy="50" r="42" fill="none" stroke="#9FE4B3" stroke-width="8" stroke-linecap="round"
-                            stroke-dasharray="263.9" stroke-dashoffset="100"/>
-                  </svg>
-                  <div class="center">
-                    <div class="num">1,240</div>
-                    <div class="lbl">of 2,000</div>
-                  </div>
-                </div>
-                <div class="tk-ring-meta">
-                  <div class="lbl">Today's intake</div>
-                  <div class="h">On track for your goal.</div>
-                  <div class="left">760 cal left  ·  2 meals logged</div>
-                </div>
-              </div>
-
-              <div class="tk-macros">
-                <div class="m">
-                  <div class="pn">68g<span class="of"> / 110</span></div>
-                  <div class="pl">Protein</div>
-                  <div class="bar"><i style="width: 62%;"></i></div>
-                </div>
-                <div class="m">
-                  <div class="pn">142g<span class="of"> / 220</span></div>
-                  <div class="pl">Carbs</div>
-                  <div class="bar"><i style="width: 65%;"></i></div>
-                </div>
-                <div class="m">
-                  <div class="pn">38g<span class="of"> / 60</span></div>
-                  <div class="pl">Fat</div>
-                  <div class="bar"><i style="width: 63%;"></i></div>
-                </div>
-              </div>
-
-              <div class="tk-meals">
-                <div class="tk-meal">
-                  <div class="thumb" style="background-image: url('assets/photos/pesto-pasta-bowl.jpg');"></div>
-                  <div>
-                    <div class="nm">Pesto farfalle</div>
-                    <div class="mt">Lunch  ·  12:40 PM</div>
-                  </div>
-                  <div class="kcal">410</div>
-                </div>
-                <div class="tk-meal">
-                  <div class="thumb" style="background-image: url('assets/photos/buddha-bowl.jpg');"></div>
-                  <div>
-                    <div class="nm">Greek yogurt bowl</div>
-                    <div class="mt">Breakfast  ·  8:10 AM</div>
-                  </div>
-                  <div class="kcal">320</div>
-                </div>
-              </div>
-            </div>
+            <img class="gshot" src="assets/photos/app-instacart.jpg" alt="Instacart screen — your missing items for the recipe, ready to add to cart">
           </div>
         </div>
         <div class="gphone-caption">
-          <div class="tag">The tracker</div>
-          <div class="ttl">Nutrition on every plate. No spreadsheet.</div>
-          <div class="sub">Cook a recipe, log a meal. Calories and macros land in your day automatically.</div>
+          <div class="tag">Step three</div>
+          <div class="ttl">Missing something? Shop it in a tap.</div>
+          <div class="sub">Send just the gaps straight to Instacart, get them delivered, and you're cooking the same night.</div>
         </div>
       </div>
     </div>
@@ -2298,7 +2486,7 @@
         <h3>Missing one thing? One tap.</h3>
         <p>iEatz figures out what's short, builds the list, and sends it to Instacart. No wandering the aisles. No "where do they keep the harissa."</p>
         <span class="feat-instacart-badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#FAF1E0"/><path d="M8 13l3 3 6-7" stroke="#0E4A2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#FAF1E0"></circle><path d="M8 13l3 3 6-7" stroke="#0E4A2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           Sends to Instacart in one tap
         </span>
       </article>
@@ -2447,5 +2635,4 @@
   </div>
 </footer>
 
-</body>
-</html>
+</body></html>
