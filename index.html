@@ -1,0 +1,2451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iEatz Healthy — Dinner, decided.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono&display=swap">
+<link rel="stylesheet" href="assets/colors_and_type.css">
+<style>
+  /* =========================================================
+     iEatz Healthy — Marketing Landing Page
+     Editorial wellness. Paper backgrounds, Instrument Serif,
+     brand green used sparingly.
+     ========================================================= */
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink-1);
+    font-family: var(--font-sans);
+    font-size: 18px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ----- Layout containers ----- */
+  .wrap { width: 100%; max-width: 1320px; margin: 0 auto; padding: 0 48px; }
+  @media (max-width: 720px) { .wrap { padding: 0 24px; } }
+
+  /* ----- Type utilities (extending design system) ----- */
+  .serif { font-family: var(--font-serif); font-weight: 400; }
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brand-green);
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px; height: 2px;
+    background: var(--brand-green);
+    display: inline-block;
+  }
+  .eyebrow.on-dark { color: #9FE4B3; }
+  .eyebrow.on-dark::before { background: #9FE4B3; }
+  .eyebrow.muted { color: var(--ink-4); }
+  .eyebrow.muted::before { background: var(--ink-5); }
+
+  /* ----- Nav ----- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(245, 242, 234, 0.86);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid rgba(10,15,12,0.06);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--font-sans);
+    font-weight: 600; font-size: 18px;
+    letter-spacing: -0.01em; color: var(--ink-1);
+  }
+  .brand .mark { width: 22px; height: auto; color: var(--brand-green); }
+  .nav-links {
+    display: flex; gap: 36px; align-items: center;
+    font-size: 15px; color: var(--ink-3);
+    font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--ink-1); }
+  @media (max-width: 820px) { .nav-links a:not(.btn) { display: none; } }
+
+  /* ----- Buttons ----- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 26px;
+    background: var(--ie-green-dark);
+    color: var(--paper-light);
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-size: 15px; font-weight: 600;
+    letter-spacing: -0.005em;
+    border: none; cursor: pointer;
+    transition: background 160ms ease, transform 100ms ease;
+    white-space: nowrap;
+  }
+  .btn:hover { background: var(--ie-green-deep); }
+  .btn:active { transform: translateY(1px); }
+  .btn--lg { padding: 20px 36px; font-size: 17px; }
+  .btn--xl { padding: 24px 44px; font-size: 19px; }
+  .btn--ghost {
+    background: transparent; color: var(--ink-1);
+    border: 1px solid rgba(10,15,12,0.18);
+  }
+  .btn--ghost:hover { background: transparent; border-color: var(--ink-1); }
+  .btn--paper { background: var(--paper); color: var(--ie-green-dark); }
+  .btn--paper:hover { background: var(--white); }
+  .btn .arrow { font-size: 18px; line-height: 1; }
+
+  /* App Store badge */
+  .as-badge {
+    display: inline-block;
+    height: 60px;
+    transition: transform 100ms ease, filter 160ms ease;
+  }
+  .as-badge img { height: 100%; width: auto; display: block; }
+  .as-badge:hover { transform: translateY(-1px); }
+  .as-badge:active { transform: translateY(1px); }
+  .as-badge--sm { height: 44px; }
+  .as-badge--lg { height: 72px; }
+
+  /* ===========================================================
+     HERO
+     =========================================================== */
+  .hero { padding: 80px 0 120px; position: relative; overflow: hidden; }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.05fr 1fr;
+    gap: 80px; align-items: center;
+  }
+  @media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; gap: 56px; } }
+
+  .hero h1 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(56px, 7.2vw, 112px);
+    line-height: 0.94;
+    letter-spacing: -0.025em;
+    color: var(--ie-ink);
+    margin: 28px 0 0;
+    text-wrap: balance;
+  }
+  .hero h1 .accent { color: var(--brand-green); font-style: italic; }
+  .hero .sub {
+    font-family: var(--font-sans);
+    font-size: 22px; font-weight: 400;
+    line-height: 1.5; color: var(--ink-3);
+    margin: 32px 0 0; max-width: 540px;
+  }
+  .hero-ctas { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+  .hero-fine {
+    margin-top: 18px; font-size: 14px; color: var(--ink-4);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-fine .dot { width: 4px; height: 4px; border-radius: 999px; background: var(--ink-5); }
+
+  .hero-photo {
+    position: relative; aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    background: var(--ie-green-light);
+  }
+  .hero-photo img {
+    width: 100%; height: 100%; object-fit: cover;
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    display: block;
+  }
+
+  .hero-photo .pill {
+    position: absolute; bottom: 24px; left: 24px;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 18px;
+    background: rgba(245,242,234,0.94);
+    backdrop-filter: blur(8px);
+    border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+    color: var(--ink-1);
+  }
+  .hero-photo .pill .ind {
+    width: 8px; height: 8px; border-radius: 999px;
+    background: var(--brand-green);
+    box-shadow: 0 0 0 4px rgba(31,139,76,0.18);
+  }
+
+  /* Floating "card" of generated dinner — overlaps bottom-right edge */
+  .hero-photo .recipe-card {
+    position: absolute; bottom: -32px; right: -32px;
+    width: 268px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px 22px 22px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(10,15,12,0.04);
+  }
+  .hero-photo .recipe-card .ingredients {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 12px;
+  }
+  .hero-photo .recipe-card .ingr {
+    font-size: 12px; font-weight: 500;
+    padding: 5px 10px; border-radius: 999px;
+    background: var(--ie-green-light);
+    color: var(--ie-green-dark);
+    letter-spacing: 0.02em;
+  }
+  .hero-photo .recipe-card .rname {
+    font-family: var(--font-serif);
+    font-size: 21px;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    color: var(--ink-1);
+    margin: 4px 0 10px;
+    text-wrap: balance;
+  }
+  .hero-photo .recipe-card .meta {
+    font-size: 12px; color: var(--ink-4);
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .hero-photo .stat-tag {
+    position: absolute; left: -28px; top: 48px;
+    background: var(--ie-green-dark);
+    color: var(--paper);
+    border-radius: 14px;
+    padding: 14px 20px;
+    box-shadow: var(--shadow-md);
+    font-family: var(--font-sans);
+  }
+  .stat-tag .num {
+    font-family: var(--font-serif);
+    font-style: italic; font-size: 40px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #9FE4B3;
+    padding-right: 4px;
+  }
+  .stat-tag .lbl { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 8px; opacity: 0.85; font-weight: 600; }
+
+  /* Background accent — concentric arcs (subtle) */
+  .arcs {
+    position: absolute;
+    top: -10%;
+    left: -8%;
+    width: 720px; height: 720px;
+    border-radius: 50%;
+    background: radial-gradient(circle, transparent 60%, rgba(31,139,76,0.04) 61%, rgba(31,139,76,0.04) 61.5%, transparent 62%),
+                radial-gradient(circle, transparent 70%, rgba(31,139,76,0.04) 71%, rgba(31,139,76,0.04) 71.5%, transparent 72%),
+                radial-gradient(circle, transparent 80%, rgba(31,139,76,0.05) 81%, rgba(31,139,76,0.05) 81.5%, transparent 82%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+
+  /* ===========================================================
+     SECTION 2 — Tension
+     =========================================================== */
+  .tension { padding: 140px 0 140px; background: var(--paper-light); }
+  .tension h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--ink-1);
+    max-width: 1080px;
+    margin: 28px 0 72px;
+    text-wrap: balance;
+  }
+  .tension-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  @media (max-width: 980px) { .tension-body { grid-template-columns: 1fr; gap: 56px; } }
+  .tension-photo {
+    position: relative;
+    aspect-ratio: 5 / 4;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #1c1410;
+    box-shadow: var(--shadow-lg);
+  }
+  .tension-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
+    /* slight desaturation + warmer tone — emphasize the "problem" mood */
+    filter: saturate(0.9) contrast(1.02);
+  }
+  .tension-photo .timestamp {
+    position: absolute; top: 24px; left: 24px;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 10px 16px;
+    background: rgba(10,15,12,0.55);
+    backdrop-filter: blur(8px);
+    border-radius: 999px;
+    color: var(--paper);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .tension-photo .timestamp .pulse {
+    width: 6px; height: 6px; border-radius: 999px;
+    background: var(--ie-tomato);
+    box-shadow: 0 0 0 4px rgba(214,79,57,0.25);
+  }
+  .tension-photo .caption-block {
+    position: absolute; left: 24px; right: 24px; bottom: 24px;
+    padding: 18px 20px;
+    background: rgba(245,242,234,0.94);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px;
+  }
+  .tension-photo .caption-block .cap-txt {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.2;
+    color: var(--ink-1);
+    letter-spacing: -0.005em;
+  }
+  .tension-photo .caption-block .cap-meta {
+    font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .tension-lines { display: flex; flex-direction: column; gap: 28px; }
+  .tline {
+    display: grid; grid-template-columns: 80px 1fr;
+    gap: 32px; align-items: baseline;
+    padding: 32px 0;
+    border-top: 1px solid rgba(10,15,12,0.10);
+  }
+  .tline:last-of-type { border-bottom: 1px solid rgba(10,15,12,0.10); }
+  .tline-num {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 40px;
+    color: var(--ink-4);
+    letter-spacing: -0.02em;
+  }
+  .tline-text {
+    font-family: var(--font-serif);
+    font-size: clamp(24px, 2.6vw, 38px);
+    line-height: 1.25;
+    color: var(--ink-1);
+    letter-spacing: -0.012em;
+    text-wrap: pretty;
+  }
+  .tline-text .em { color: var(--ie-tomato); font-style: italic; }
+  @media (max-width: 720px) {
+    .tline { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  /* ===========================================================
+     SECTION 3 — The Shift (dark green)
+     =========================================================== */
+  .shift {
+    background: var(--ie-green-dark);
+    color: var(--paper);
+    padding: 140px 0 160px;
+    position: relative;
+    overflow: hidden;
+  }
+  .shift h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5.2vw, 80px);
+    line-height: 1.0;
+    letter-spacing: -0.022em;
+    color: var(--paper);
+    max-width: 1000px;
+    margin: 28px 0 96px;
+    text-wrap: balance;
+  }
+  .shift h2 .accent { color: #9FE4B3; font-style: italic; }
+
+  .day-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 56px;
+  }
+  @media (max-width: 820px) { .day-grid { grid-template-columns: 1fr; gap: 8px; } }
+
+  .day {
+    padding: 36px 0;
+    border-top: 1px solid rgba(255,255,255,0.14);
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .day-label {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 30px;
+    color: #9FE4B3;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .day-body {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.86);
+    max-width: 460px;
+  }
+  .day-body strong {
+    font-weight: 600;
+    color: #fff;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: -0.005em;
+  }
+
+  .shift-decor {
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(159,228,179,0.10) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* ===========================================================
+     SECTION 4 — Proof Strip
+     =========================================================== */
+  .proof { padding: 120px 0; background: var(--paper); }
+  .proof-quote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(32px, 3.6vw, 56px);
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    color: var(--ink-1);
+    max-width: 1080px;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .proof-quote::before { content: "“"; color: var(--brand-green); margin-right: 4px; }
+  .proof-quote::after { content: "”"; color: var(--brand-green); }
+  .proof-attr {
+    margin-top: 36px;
+    display: flex; align-items: center; gap: 16px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+  }
+  .proof-attr .avatar {
+    width: 48px; height: 48px; border-radius: 999px;
+    background: linear-gradient(135deg, #E6F4EC, #C6DCC8);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ie-green-dark);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .proof-stats {
+    margin-top: 96px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(10,15,12,0.10);
+    border-bottom: 1px solid rgba(10,15,12,0.10);
+  }
+  @media (max-width: 720px) { .proof-stats { grid-template-columns: 1fr; } }
+  .pstat {
+    padding: 48px 36px;
+    border-right: 1px solid rgba(10,15,12,0.10);
+  }
+  .pstat:last-child { border-right: none; }
+  @media (max-width: 720px) {
+    .pstat { border-right: none; border-bottom: 1px solid rgba(10,15,12,0.10); }
+    .pstat:last-child { border-bottom: none; }
+  }
+  .pstat-num {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(56px, 6vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--brand-green);
+  }
+  .pstat-lbl {
+    margin-top: 14px;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+  }
+
+  /* ===========================================================
+     SECTION 5 — How it Works (iPhone mockup)
+     =========================================================== */
+  .how { padding: 140px 0 160px; background: var(--ie-green-mint); }
+  .how h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--ink-1);
+    max-width: 900px;
+    margin: 28px 0 0;
+    text-wrap: balance;
+  }
+  .how-sub {
+    font-size: 20px; color: var(--ink-3);
+    margin: 24px 0 0; max-width: 560px;
+  }
+  .how-grid {
+    margin-top: 88px;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  @media (max-width: 980px) { .how-grid { grid-template-columns: 1fr; gap: 56px; } }
+
+  .steps { display: flex; flex-direction: column; gap: 12px; }
+  .step {
+    display: grid; grid-template-columns: 92px 1fr;
+    gap: 28px;
+    padding: 32px 0;
+    border-top: 1px solid rgba(10,74,42,0.14);
+    align-items: start;
+  }
+  .step:last-child { border-bottom: 1px solid rgba(10,74,42,0.14); }
+  .step-num {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 56px;
+    color: var(--brand-green);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .step-ttl {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    line-height: 1.1;
+    color: var(--ink-1);
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .step-body {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--ink-3);
+    line-height: 1.5;
+    max-width: 460px;
+  }
+
+  .how-cta-row { margin-top: 56px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+
+  /* iPhone mockup */
+  .phone-stage {
+    position: relative;
+    display: flex; justify-content: center;
+    perspective: 1200px;
+  }
+  .phone {
+    width: 320px; height: 660px;
+    background: #0A0F0C;
+    border-radius: 52px;
+    padding: 12px;
+    box-shadow:
+      0 30px 60px rgba(14,74,42,0.20),
+      0 60px 120px rgba(14,74,42,0.16),
+      0 0 0 1px rgba(0,0,0,0.4) inset;
+    position: relative;
+    transform: rotate(-3deg);
+  }
+  .phone-screen {
+    width: 100%; height: 100%;
+    background: #F1FCF3;
+    border-radius: 42px;
+    overflow: hidden;
+    position: relative;
+    display: flex; flex-direction: column;
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+  }
+  .phone-notch {
+    position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+    width: 108px; height: 28px; background: #0A0F0C;
+    border-radius: 999px; z-index: 10;
+  }
+  .phone-status {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 30px 0; font-size: 12px; font-weight: 600;
+    color: #0A0F0C;
+  }
+  .phone-status-icons { display: inline-flex; gap: 5px; align-items: center; }
+  .ph-bars { width: 16px; height: 10px; background:
+    linear-gradient(to right, #0A0F0C 0 3px, transparent 3px 4px, #0A0F0C 4px 7px, transparent 7px 8px, #0A0F0C 8px 11px, transparent 11px 12px, #0A0F0C 12px 16px); }
+  .ph-bat { width: 22px; height: 11px; border: 1px solid #0A0F0C; border-radius: 3px; position: relative; }
+  .ph-bat::after { content: ""; position: absolute; right: -3px; top: 3px; width: 2px; height: 5px; background: #0A0F0C; border-radius: 1px; }
+  .ph-bat::before { content: ""; position: absolute; left: 1px; top: 1px; bottom: 1px; width: 60%; background: #0A0F0C; border-radius: 1px; }
+
+  .phone-body { flex: 1; padding: 40px 22px 16px; overflow: hidden; }
+  .phone-greet {
+    font-size: 13px; color: #6b7a72; font-weight: 500;
+    letter-spacing: 0;
+  }
+  .phone-title {
+    font-size: 24px; font-weight: 700;
+    color: #0A0F0C; letter-spacing: -0.02em; margin-top: 2px;
+    line-height: 1.15;
+  }
+  .phone-card {
+    margin-top: 18px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 4px 16px rgba(14,74,42,0.06);
+  }
+  .pc-lbl {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #3BBF4F; font-weight: 700;
+  }
+  .pc-input {
+    margin-top: 8px; font-size: 14px; color: #0A0F0C;
+    font-weight: 600;
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .pc-tag {
+    background: #E6F4EC;
+    color: #0E4A2A;
+    border-radius: 999px; padding: 6px 12px;
+    font-size: 12px; font-weight: 600;
+  }
+  .pc-tag.plus {
+    background: transparent;
+    border: 1px dashed #C9D8CE;
+    color: #5C625E;
+  }
+  .pc-button {
+    margin-top: 12px;
+    background: #193A19;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .phone-section-ttl {
+    margin-top: 20px;
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #6b7a72; font-weight: 700;
+  }
+  .recipe-list { margin-top: 10px; display: flex; flex-direction: column; gap: 10px; }
+  .rrow {
+    background: #fff;
+    border-radius: 16px;
+    padding: 12px;
+    display: grid; grid-template-columns: 56px 1fr auto; gap: 12px;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(14,74,42,0.05);
+  }
+  .rrow-thumb {
+    width: 56px; height: 56px;
+    border-radius: 12px;
+    background-size: cover; background-position: center;
+  }
+  .rrow-name {
+    font-size: 13px; font-weight: 700; color: #0A0F0C;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .rrow-meta {
+    font-size: 10px; color: #6b7a72;
+    margin-top: 2px; letter-spacing: 0.04em;
+  }
+  .rrow-arrow {
+    font-size: 14px; color: #3BBF4F; font-weight: 700;
+  }
+
+  .phone-tab {
+    background: #fff;
+    height: 60px;
+    border-top: 1px solid #E6F0EA;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding: 0 8px;
+  }
+  .phone-tab-item {
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    font-size: 9px; color: #9CA29F; font-weight: 600;
+  }
+  .phone-tab-item.active { color: #3BBF4F; }
+  .phone-tab-item svg { width: 22px; height: 22px; }
+
+  /* Phone secondary "snap" card behind */
+  .phone-stage::after {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%; transform: translate(-78%, -42%) rotate(8deg);
+    width: 220px; height: 290px;
+    background: url('assets/photos/cutting-board-veg.jpg') center/cover no-repeat;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(14,74,42,0.15);
+    z-index: -1;
+  }
+
+  /* ===========================================================
+     GALLERY — "A look inside" multi-screen showcase
+     =========================================================== */
+  .gallery {
+    padding: 140px 0 160px;
+    background: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .gallery-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 88px;
+  }
+  @media (max-width: 820px) { .gallery-head { grid-template-columns: 1fr; gap: 24px; } }
+  .gallery h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--ink-1);
+    margin: 28px 0 0;
+    max-width: 620px;
+    text-wrap: balance;
+  }
+  .gallery h2 .em { font-style: italic; color: var(--brand-green); }
+  .gallery-intro {
+    font-size: 19px; color: var(--ink-3); max-width: 420px;
+    line-height: 1.5;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    align-items: start;
+  }
+  @media (max-width: 1100px) { .gallery-grid { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  @media (max-width: 720px)  { .gallery-grid { grid-template-columns: 1fr; gap: 64px; } }
+
+  .gphone-cell {
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center;
+  }
+  .gphone-num {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--brand-green);
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+  /* Compact phone — 280x580 — used in product gallery */
+  .gphone {
+    width: 280px; height: 580px;
+    background: #0A0F0C;
+    border-radius: 46px;
+    padding: 10px;
+    box-shadow:
+      0 24px 48px rgba(14,74,42,0.18),
+      0 48px 96px rgba(14,74,42,0.14),
+      0 0 0 1px rgba(0,0,0,0.4) inset;
+    position: relative;
+  }
+  .gphone-screen {
+    width: 100%; height: 100%;
+    background: #F1FCF3;
+    border-radius: 38px;
+    overflow: hidden;
+    position: relative;
+    display: flex; flex-direction: column;
+    font-family: 'Plus Jakarta Sans', var(--font-sans);
+    color: #0A0F0C;
+  }
+  .gphone-notch {
+    position: absolute; top: 6px; left: 50%; transform: translateX(-50%);
+    width: 96px; height: 24px; background: #0A0F0C;
+    border-radius: 999px; z-index: 10;
+  }
+  .gphone-status {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 26px 0; font-size: 11px; font-weight: 600;
+    color: #0A0F0C;
+  }
+  .gphone-status .icons { display: inline-flex; gap: 5px; align-items: center; }
+  .gphone-body { flex: 1; overflow: hidden; padding: 28px 20px 12px; position: relative; }
+  .gphone-toprow {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 14px;
+  }
+  .gphone-cbtn {
+    width: 32px; height: 32px; border-radius: 999px;
+    background: rgba(255,255,255,0.85);
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: 0 1px 4px rgba(14,74,42,0.08);
+    color: #0A0F0C;
+  }
+  .gphone-cbtn svg { width: 14px; height: 14px; }
+
+  .gphone-caption {
+    margin-top: 28px;
+    max-width: 280px;
+  }
+  .gphone-caption .tag {
+    font-family: var(--font-sans);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--brand-green);
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .gphone-caption .ttl {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    color: var(--ink-1);
+    text-wrap: balance;
+  }
+  .gphone-caption .sub {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--ink-3);
+    line-height: 1.5;
+    max-width: 260px;
+    text-wrap: pretty;
+  }
+
+  /* ---- Recipe-detail screen contents ---- */
+  .rd-hero {
+    height: 168px;
+    border-radius: 18px;
+    background-size: cover; background-position: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 6px;
+  }
+  .rd-hero .save {
+    position: absolute; top: 12px; right: 12px;
+    width: 32px; height: 32px; border-radius: 999px;
+    background: rgba(255,255,255,0.94);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #1F8B4C;
+  }
+  .rd-hero .meta-pill {
+    position: absolute; bottom: 12px; left: 12px;
+    background: rgba(10,15,12,0.78);
+    color: #fff;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    backdrop-filter: blur(6px);
+  }
+  .rd-title {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    color: #0A0F0C;
+    margin: 14px 0 0;
+    text-wrap: balance;
+  }
+  .rd-stats {
+    display: flex; gap: 6px; margin-top: 10px;
+  }
+  .rd-stats .s {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px 6px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(14,74,42,0.05);
+  }
+  .rd-stats .n {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 17px;
+    color: #1F8B4C;
+    line-height: 1;
+  }
+  .rd-stats .l {
+    font-size: 9px; letter-spacing: 0.08em;
+    color: #6b7a72; text-transform: uppercase;
+    font-weight: 700; margin-top: 4px;
+  }
+  .rd-section {
+    margin-top: 14px;
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #6b7a72; font-weight: 700;
+  }
+  .rd-ing {
+    margin-top: 8px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .rd-ing .row {
+    display: grid; grid-template-columns: 18px 1fr auto;
+    gap: 10px; align-items: center;
+    font-size: 12px; font-weight: 600; color: #0A0F0C;
+    background: #fff;
+    border-radius: 10px; padding: 8px 12px;
+  }
+  .rd-ing .check {
+    width: 16px; height: 16px; border-radius: 999px;
+    background: #E6F4EC; color: #1F8B4C;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .rd-ing .check svg { width: 10px; height: 10px; }
+  .rd-ing .row.off .check {
+    background: transparent;
+    border: 1.5px solid #C9D8CE;
+    color: transparent;
+  }
+  .rd-ing .qty {
+    font-size: 11px; color: #6b7a72; font-weight: 600;
+  }
+
+  /* ---- Meal-plan screen contents ---- */
+  .mp-tabs {
+    display: flex; gap: 6px;
+    background: #fff;
+    border-radius: 999px; padding: 4px;
+    box-shadow: 0 2px 8px rgba(14,74,42,0.05);
+    margin-top: 4px;
+  }
+  .mp-tabs .t {
+    flex: 1; padding: 8px 0;
+    border-radius: 999px;
+    text-align: center;
+    font-size: 11px; font-weight: 700;
+    color: #6b7a72;
+  }
+  .mp-tabs .t.on {
+    background: #0E4A2A;
+    color: #fff;
+  }
+  .mp-title {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    color: #0A0F0C;
+    margin: 16px 0 0;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .mp-sub {
+    margin-top: 4px;
+    font-size: 11px; color: #6b7a72;
+    letter-spacing: 0.04em;
+  }
+  .mp-day {
+    margin-top: 12px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(14,74,42,0.05);
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 12px; align-items: center;
+  }
+  .mp-day .date {
+    text-align: center;
+  }
+  .mp-day .date .dw {
+    font-size: 9px; letter-spacing: 0.12em;
+    color: #6b7a72; text-transform: uppercase; font-weight: 700;
+  }
+  .mp-day .date .dn {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 22px;
+    color: #1F8B4C;
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .mp-day .meals {
+    display: flex; flex-direction: column; gap: 4px;
+    border-left: 1px solid #E6F0EA;
+    padding-left: 12px;
+  }
+  .mp-day .meal {
+    font-size: 11px; color: #0A0F0C;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .mp-day .meal .lbl {
+    display: inline-block;
+    font-size: 8px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: #1F8B4C;
+    margin-right: 6px;
+    width: 36px;
+  }
+  .mp-day.today {
+    background: #0E4A2A;
+    color: #fff;
+  }
+  .mp-day.today .date .dw,
+  .mp-day.today .date .dn,
+  .mp-day.today .meal,
+  .mp-day.today .meals { color: #fff; }
+  .mp-day.today .date .dn { color: #9FE4B3; }
+  .mp-day.today .meal .lbl { color: #9FE4B3; }
+  .mp-day.today .meals { border-left-color: rgba(255,255,255,0.18); }
+
+  /* ---- Tracker / Today screen contents ---- */
+  .tk-greet {
+    font-size: 11px; color: #6b7a72; font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .tk-title {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    color: #0A0F0C;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-top: 2px;
+  }
+  .tk-ring-card {
+    margin-top: 14px;
+    background: #0E4A2A;
+    color: #fff;
+    border-radius: 18px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 14px; align-items: center;
+  }
+  .tk-ring { position: relative; width: 96px; height: 96px; }
+  .tk-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+  .tk-ring .center {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: #fff;
+  }
+  .tk-ring .num {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1;
+    color: #9FE4B3;
+  }
+  .tk-ring .lbl {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 4px;
+    opacity: 0.7;
+    font-weight: 700;
+  }
+  .tk-ring-meta .lbl {
+    font-size: 9px; letter-spacing: 0.12em;
+    text-transform: uppercase; font-weight: 700;
+    color: #9FE4B3;
+  }
+  .tk-ring-meta .h {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    color: #fff;
+    margin-top: 4px;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  .tk-ring-meta .left {
+    margin-top: 8px;
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.3;
+  }
+  .tk-macros {
+    margin-top: 12px;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .tk-macros .m {
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(14,74,42,0.05);
+  }
+  .tk-macros .pn {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 17px;
+    color: #1F8B4C;
+    line-height: 1;
+  }
+  .tk-macros .pn .of { color: #C9D8CE; font-size: 11px; margin-left: 2px; }
+  .tk-macros .pl {
+    font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: #6b7a72;
+    margin-top: 4px; font-weight: 700;
+  }
+  .tk-macros .bar {
+    margin-top: 6px;
+    height: 3px; border-radius: 999px;
+    background: #E6F4EC;
+    overflow: hidden;
+  }
+  .tk-macros .bar i {
+    display: block; height: 100%; background: #1F8B4C;
+  }
+  .tk-meals {
+    margin-top: 12px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .tk-meal {
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    gap: 10px; align-items: center;
+    box-shadow: 0 2px 6px rgba(14,74,42,0.04);
+  }
+  .tk-meal .thumb {
+    width: 36px; height: 36px; border-radius: 8px;
+    background-size: cover; background-position: center;
+  }
+  .tk-meal .nm {
+    font-size: 11px; font-weight: 700; color: #0A0F0C;
+    line-height: 1.2;
+  }
+  .tk-meal .mt {
+    font-size: 9px; letter-spacing: 0.04em;
+    color: #6b7a72; margin-top: 2px;
+  }
+  .tk-meal .kcal {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 15px;
+    color: #1F8B4C;
+  }
+
+  /* ===========================================================
+     SECTION 6 — Money Angle (full-bleed editorial stat)
+     =========================================================== */
+  .money { padding: 160px 0; background: var(--paper); }
+  .money-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 96px; align-items: center;
+  }
+  @media (max-width: 980px) { .money-grid { grid-template-columns: 1fr; gap: 56px; } }
+  .money-stat {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(160px, 22vw, 360px);
+    line-height: 0.85;
+    letter-spacing: -0.045em;
+    color: var(--ie-tomato);
+    margin: 0;
+  }
+  .money-stat .currency { font-size: 0.5em; vertical-align: top; letter-spacing: 0; }
+  .money-stat-lbl {
+    margin-top: 20px;
+    font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-3); font-weight: 600;
+  }
+  .money h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(36px, 4.2vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink-1);
+    margin: 28px 0 0;
+    text-wrap: balance;
+  }
+  .money h2 .em { font-style: italic; color: var(--brand-green); }
+  .money p {
+    font-size: 20px; color: var(--ink-3);
+    line-height: 1.55;
+    margin: 32px 0 0;
+    max-width: 560px;
+  }
+  .money p .pop { color: var(--ink-1); font-weight: 500; }
+
+  /* ===========================================================
+     SECTION 7 — Features (What's Inside)
+     =========================================================== */
+  .features { padding: 140px 0 160px; background: var(--paper-light); }
+  .features-head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: end;
+    margin-bottom: 80px;
+  }
+  @media (max-width: 820px) { .features-head { grid-template-columns: 1fr; gap: 24px; } }
+  .features h2 {
+    font-family: var(--font-serif); font-weight: 400;
+    font-size: clamp(40px, 5vw, 76px);
+    line-height: 1.02; letter-spacing: -0.02em;
+    color: var(--ink-1); margin: 28px 0 0;
+    text-wrap: balance;
+  }
+  .features-intro { color: var(--ink-3); font-size: 19px; max-width: 460px; }
+
+  .feat-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+  }
+  @media (max-width: 820px) { .feat-grid { grid-template-columns: 1fr; } }
+
+  .feat-card {
+    background: var(--white);
+    border-radius: 28px;
+    padding: 40px;
+    border: 1px solid rgba(10,15,12,0.05);
+    box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+  .feat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .feat-tag {
+    font-family: var(--font-sans);
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--brand-green);
+  }
+  .feat-card h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(28px, 2.8vw, 40px);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--ink-1);
+    margin: 14px 0 0;
+    text-wrap: balance;
+  }
+  .feat-card p {
+    color: var(--ink-3); font-size: 17px;
+    line-height: 1.5;
+    margin: 18px 0 0;
+  }
+  .feat-photo {
+    margin-top: 32px;
+    border-radius: 16px; overflow: hidden;
+    flex: 1;
+    min-height: 220px;
+    background-size: cover; background-position: center;
+  }
+
+  /* Feature 1 — big, with phone-style preview */
+  .feat-card.feat-hero {
+    background: var(--ie-green-dark);
+    color: var(--paper);
+    padding: 48px;
+  }
+  .feat-card.feat-hero .feat-tag { color: #9FE4B3; }
+  .feat-card.feat-hero h3 { color: var(--paper); }
+  .feat-card.feat-hero p { color: rgba(255,255,255,0.78); }
+
+  .feat-recipe-preview {
+    margin-top: 32px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 18px;
+    padding: 22px 24px;
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+  .feat-recipe-preview .ttl {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #9FE4B3; font-weight: 700;
+  }
+  .frp-chips { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .frp-chip {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13px; font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+  .frp-arrow {
+    margin-top: 18px;
+    border-top: 1px dashed rgba(255,255,255,0.2);
+    padding-top: 16px;
+    display: flex; align-items: center; gap: 12px;
+    color: #9FE4B3;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    font-weight: 700;
+  }
+  .frp-recipe {
+    margin-top: 10px;
+    font-family: var(--font-serif);
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+  .frp-meta {
+    margin-top: 12px; display: flex; gap: 18px;
+    font-size: 12px; color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+  .frp-meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .frp-meta strong { color: #fff; font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 18px; letter-spacing: -0.01em; }
+
+  /* Smaller feature cards on right column */
+  .feat-card.feat-grocery .feat-photo {
+    background-image: url('assets/photos/spices-spoons.jpg');
+  }
+  .feat-card.feat-meal .feat-photo {
+    background-image: url('assets/photos/pesto-pasta-bowl.jpg');
+  }
+  .feat-card.feat-macro .feat-photo {
+    background-image: url('assets/photos/salmon.jpg');
+  }
+  .feat-instacart-badge {
+    margin-top: 18px;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 14px;
+    background: var(--ie-green-light);
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--ie-green-dark);
+    font-weight: 600;
+  }
+  .feat-macros {
+    margin-top: 22px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .feat-macros .m {
+    background: var(--ie-green-mint);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+  }
+  .feat-macros .m-num {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 24px;
+    color: var(--ie-green-dark);
+    line-height: 1;
+  }
+  .feat-macros .m-lbl {
+    font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--ink-3);
+    font-weight: 700;
+    margin-top: 6px;
+  }
+
+  /* ===========================================================
+     SECTION 8 — Objections
+     =========================================================== */
+  .obj { padding: 140px 0; background: var(--paper); }
+  .obj h2 {
+    font-family: var(--font-serif); font-weight: 400;
+    font-size: clamp(36px, 4.2vw, 64px);
+    line-height: 1.05; letter-spacing: -0.02em;
+    color: var(--ink-1); margin: 28px 0 80px;
+    max-width: 900px;
+    text-wrap: balance;
+  }
+  .obj h2 .em { font-style: italic; }
+  .obj-list { display: flex; flex-direction: column; gap: 0; }
+  .obj-item {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    padding: 48px 0;
+    border-top: 1px solid rgba(10,15,12,0.10);
+    align-items: start;
+  }
+  .obj-item:last-child { border-bottom: 1px solid rgba(10,15,12,0.10); }
+  @media (max-width: 820px) { .obj-item { grid-template-columns: 1fr; gap: 16px; } }
+  .obj-q {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.1;
+    color: var(--ink-1);
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+  }
+  .obj-q::before { content: "“"; color: var(--brand-green); }
+  .obj-q::after { content: "”"; color: var(--brand-green); }
+  .obj-a {
+    font-size: 19px;
+    color: var(--ink-3);
+    line-height: 1.55;
+    max-width: 560px;
+  }
+  .obj-a strong { color: var(--ink-1); font-weight: 500; }
+
+  /* ===========================================================
+     PHOTO BAND — full-bleed editorial photo with caption
+     =========================================================== */
+  .photo-band {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    background: var(--ink-1);
+  }
+  .photo-band img {
+    width: 100%; height: 100%; object-fit: cover;
+    display: block;
+  }
+  .photo-band--tall { height: 640px; }
+  .photo-band .caption {
+    position: absolute; inset: 0;
+    display: flex; align-items: flex-end;
+    padding: 64px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(10,15,12,0.72) 100%);
+    color: var(--paper);
+  }
+  .photo-band .caption-inner {
+    max-width: 1320px; width: 100%; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: end;
+    gap: 48px; flex-wrap: wrap;
+  }
+  .photo-band .caption h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(36px, 4.4vw, 64px);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--paper);
+    margin: 0;
+    max-width: 720px;
+    text-wrap: balance;
+  }
+  .photo-band .caption h3 .em { font-style: italic; color: #9FE4B3; }
+  .photo-band .caption .credit {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .photo-band .caption .credit::before {
+    content: "";
+    display: inline-block; width: 20px; height: 1px;
+    background: rgba(255,255,255,0.6);
+    margin-right: 10px; vertical-align: middle;
+  }
+  /* Floating eyebrow at top-left of photo band */
+  .photo-band .ph-eyebrow {
+    position: absolute; top: 48px; left: 64px;
+    font-family: var(--font-sans);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    display: inline-flex; align-items: center; gap: 12px;
+    z-index: 2;
+  }
+  .photo-band .ph-eyebrow::before {
+    content: "";
+    width: 28px; height: 2px;
+    background: #9FE4B3;
+  }
+  @media (max-width: 720px) {
+    .photo-band { height: 380px; }
+    .photo-band .caption { padding: 32px 24px; }
+    .photo-band .ph-eyebrow { top: 24px; left: 24px; }
+  }
+
+  /* ===========================================================
+     CTA Strip — reusable mid-section call-to-action
+     =========================================================== */
+  .cta-strip {
+    margin-top: 88px;
+    padding: 36px 40px;
+    border-radius: 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 32px; flex-wrap: wrap;
+    background: var(--white);
+    border: 1px solid rgba(10,15,12,0.06);
+    box-shadow: var(--shadow-sm);
+  }
+  .cta-strip .cta-strip-msg {
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 2.2vw, 32px);
+    line-height: 1.15;
+    color: var(--ink-1);
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+    max-width: 620px;
+  }
+  .cta-strip .cta-strip-msg .em { font-style: italic; color: var(--brand-green); }
+  .cta-strip .cta-strip-side {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .cta-strip .cta-strip-fine {
+    font-size: 13px; color: var(--ink-4); letter-spacing: 0.04em;
+  }
+  /* dark variant — for dark green sections */
+  .cta-strip.on-dark {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: none;
+  }
+  .cta-strip.on-dark .cta-strip-msg { color: var(--paper); }
+  .cta-strip.on-dark .cta-strip-msg .em { color: #9FE4B3; }
+  .cta-strip.on-dark .cta-strip-fine { color: rgba(255,255,255,0.6); }
+
+  /* paper variant — for paper-light sections */
+  .cta-strip.on-paper {
+    background: var(--paper);
+    border-color: rgba(10,15,12,0.08);
+  }
+
+  /* ===========================================================
+     SECTION 9 — Final CTA
+     =========================================================== */
+  .finalcta {
+    background: var(--ie-green-dark);
+    color: var(--paper);
+    padding: 160px 0 180px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .finalcta .decor-left,
+  .finalcta .decor-right {
+    position: absolute;
+    width: 380px; height: 480px;
+    border-radius: 24px;
+    background-size: cover; background-position: center;
+    box-shadow: var(--shadow-lg);
+    opacity: 0.4;
+    filter: saturate(0.8);
+  }
+  .finalcta .decor-left {
+    left: -120px; top: 50%;
+    transform: translateY(-50%) rotate(-6deg);
+    background-image: url('assets/photos/pesto-pasta-bowl.jpg');
+  }
+  .finalcta .decor-right {
+    right: -120px; top: 50%;
+    transform: translateY(-50%) rotate(6deg);
+    background-image: url('assets/photos/buddha-bowl.jpg');
+  }
+  @media (max-width: 1100px) {
+    .finalcta .decor-left, .finalcta .decor-right { display: none; }
+  }
+  .finalcta-inner { position: relative; z-index: 2; max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  .finalcta h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(44px, 6vw, 96px);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    color: var(--paper);
+    margin: 32px 0 0;
+    text-wrap: balance;
+  }
+  .finalcta h2 .em { color: #9FE4B3; font-style: italic; }
+  .finalcta-sub {
+    font-size: 22px; color: rgba(255,255,255,0.78);
+    margin: 32px auto 0; max-width: 620px;
+    line-height: 1.5;
+  }
+  .finalcta-ctas { margin-top: 56px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .finalcta-fine {
+    margin-top: 28px; font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.04em;
+  }
+
+  /* ===========================================================
+     FOOTER
+     =========================================================== */
+  footer {
+    background: var(--ink-1); color: var(--paper);
+    padding: 80px 0 56px;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 56px;
+  }
+  @media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  .foot-tag {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    line-height: 1.1;
+    color: var(--paper);
+    margin: 24px 0 0;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    max-width: 380px;
+  }
+  .foot-tag .em { font-style: italic; color: #9FE4B3; }
+  .foot-h {
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); font-weight: 700;
+  }
+  .foot-links { margin-top: 18px; display: flex; flex-direction: column; gap: 12px; }
+  .foot-links a { color: rgba(255,255,255,0.78); font-size: 15px; }
+  .foot-links a:hover { color: #9FE4B3; }
+  .foot-base {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; color: rgba(255,255,255,0.5);
+    flex-wrap: wrap; gap: 16px;
+  }
+
+  /* Tiny utilities */
+  .sr { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+     NAV
+     ===================================================================== -->
+<nav class="nav" data-screen-label="Nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#">
+      <svg class="mark" viewBox="0 0 38.25 58.486" fill="none">
+        <path d="M 0 5.03 C 0 2.252 2.252 0 5.03 0 L 33.22 0 C 35.998 0 38.25 2.252 38.25 5.03 L 38.25 20.119 L 0 20.119 L 0 5.03 Z" fill="currentColor"></path>
+        <path d="M 0 49.83 C 0 52.608 2.252 54.86 5.03 54.86 L 33.22 54.86 C 35.998 54.86 38.25 52.608 38.25 49.83 L 38.25 22.81 L 0 22.81 L 0 49.83 Z" fill="currentColor"></path>
+        <path d="M 6.083 6.2 C 6.083 5.489 6.659 4.913 7.369 4.913 C 8.08 4.913 8.656 5.489 8.656 6.2 L 8.656 16.259 C 8.656 16.97 8.08 17.546 7.369 17.546 C 6.659 17.546 6.083 16.97 6.083 16.259 L 6.083 6.2 Z" fill="currentColor"></path>
+        <path d="M 6.083 26.787 C 6.083 26.076 6.659 25.5 7.369 25.5 C 8.08 25.5 8.656 26.076 8.656 26.787 L 8.656 36.846 C 8.656 37.557 8.08 38.133 7.369 38.133 C 6.659 38.133 6.083 37.557 6.083 36.846 L 6.083 26.787 Z" fill="currentColor"></path>
+        <path d="M 5.264 54.86 L 10.878 54.86 L 9.892 57.771 C 9.748 58.199 9.347 58.486 8.895 58.486 L 7.2 58.486 C 6.743 58.486 6.338 58.192 6.198 57.757 L 5.264 54.86 Z" fill="currentColor"></path>
+        <path d="M 27.489 54.86 L 33.103 54.86 L 32.117 57.771 C 31.972 58.199 31.571 58.486 31.12 58.486 L 29.425 58.486 C 28.968 58.486 28.563 58.192 28.423 57.757 L 27.489 54.86 Z" fill="currentColor"></path>
+      </svg>
+      iEatz <span style="color: var(--ink-3); font-weight: 500;">Healthy</span>
+    </a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#story">Story</a>
+      <a class="as-badge as-badge--sm" href="#download" aria-label="Download on the App Store">
+        <img src="assets/app-store-badge.png" alt="Download on the App Store">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- =====================================================================
+     SECTION 1 — HERO
+     ===================================================================== -->
+<header class="hero" data-screen-label="01 Hero">
+  <div class="arcs"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">iEatz Healthy</span>
+        <h1>Dinner, <span class="accent">decided.</span></h1>
+        <p class="sub">Tell iEatz what's in your kitchen. Get healthy meals back in seconds. No recipes to search. No groceries to buy. Just cook.</p>
+        <div class="hero-ctas">
+          <a class="as-badge as-badge--lg" href="#download" aria-label="Download on the App Store">
+            <img src="assets/app-store-badge.png" alt="Download on the App Store">
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
+        </div>
+        <div class="hero-fine">
+          <span>Free on the App Store.</span>
+          <span class="dot"></span>
+          <span>No credit card.</span>
+          <span class="dot"></span>
+          <span>iOS only, Android coming soon.</span>
+        </div>
+      </div>
+
+      <div class="hero-photo" aria-hidden="true">
+        <img src="assets/photos/couple-cooking.jpg" alt="A couple cooking together at home, smiling">
+        <div class="recipe-card">
+          <div class="ingredients">
+            <span class="ingr">chicken</span>
+            <span class="ingr">rice</span>
+            <span class="ingr">broccoli</span>
+          </div>
+          <div class="rname">Honey-garlic chicken with charred broccoli</div>
+          <div class="meta">15 min · 480 cal</div>
+        </div>
+        <div class="stat-tag">
+          <div class="num">300+</div>
+          <div class="lbl">recipes / day</div>
+        </div>
+        <div class="pill">
+          <span class="ind"></span>
+          Reading 7 ingredients
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =====================================================================
+     SECTION 2 — THE TENSION
+     ===================================================================== -->
+<section class="tension" data-screen-label="02 Tension" id="story">
+  <div class="wrap">
+    <span class="eyebrow muted">The problem</span>
+    <h2>You already have the food.<br>You just don't have a plan for it.</h2>
+
+    <div class="tension-body">
+      <figure class="tension-photo">
+        <img src="assets/photos/fridge-real-mess.jpg" alt="A real, lived-in fridge: eggs, strawberries, sausages, fresh produce — plenty of food, no obvious dinner">
+        <div class="timestamp">
+          <span class="pulse"></span>
+          Tuesday · 6:14 PM
+        </div>
+        <figcaption class="caption-block">
+          <div class="cap-txt">"There's nothing to eat."</div>
+          <div class="cap-meta">Said in front of<br>a full fridge</div>
+        </figcaption>
+      </figure>
+
+      <div class="tension-lines">
+        <div class="tline">
+          <div class="tline-num">i.</div>
+          <p class="tline-text">It's 6 PM. Everyone's hungry. You open the fridge, close it, and <span class="em">open DoorDash.</span></p>
+        </div>
+        <div class="tline">
+          <div class="tline-num">ii.</div>
+          <p class="tline-text">You bought groceries Sunday. By Thursday, <span class="em">half of it is in the trash.</span></p>
+        </div>
+        <div class="tline">
+          <div class="tline-num">iii.</div>
+          <p class="tline-text">You want to eat better. But planning meals feels like <span class="em">a part-time job.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <div class="cta-strip-msg">Skip the 6 PM spiral. <span class="em">Download iEatz now.</span></div>
+      <div class="cta-strip-side">
+        <a class="as-badge" href="#download" aria-label="Download on the App Store">
+          <img src="assets/app-store-badge.png" alt="Download on the App Store">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     PHOTO BAND — The clean fridge (transformation pivot)
+     ===================================================================== -->
+<section class="photo-band photo-band--tall" data-screen-label="Photo · Clean fridge" aria-hidden="true">
+  <img src="assets/photos/fridge-organized.jpg" alt="A clean, well-organized fridge full of produce">
+  <span class="ph-eyebrow">A new picture</span>
+  <div class="caption">
+    <div class="caption-inner">
+      <h3>The same fridge. <span class="em">A different week.</span></h3>
+      <div class="credit">Photography · Tuesday, 6:14 PM</div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SECTION 3 — THE SHIFT
+     ===================================================================== -->
+<section class="shift" data-screen-label="03 Shift">
+  <div class="shift-decor"></div>
+  <div class="wrap" style="position:relative;">
+    <span class="eyebrow on-dark">The shift</span>
+    <h2>What changes when dinner <span class="accent">takes care of itself.</span></h2>
+    <div class="day-grid">
+      <div class="day">
+        <div class="day-label">Monday</div>
+        <div class="day-body">
+          <strong>"chicken, rice, broccoli."</strong>
+          You type three things. Three recipes in 10 seconds. Dinner's done before your jacket's off.
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-label">Wednesday</div>
+        <div class="day-body">
+          <strong>Out of ideas, not food.</strong>
+          iEatz reads what's in your fridge and figures it out. The half-onion gets a job.
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-label">Friday</div>
+        <div class="day-body">
+          <strong>Date night at home.</strong>
+          A twenty-minute shrimp stir-fry from ingredients you already had. No stop at the store. No $80 takeout.
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-label">Sunday</div>
+        <div class="day-body">
+          <strong>Two-minute meal plan.</strong>
+          A week of meals, a grocery list, sent to Instacart in one tap. Then close the laptop.
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip on-dark">
+      <div class="cta-strip-msg">Make Monday the day it changes. <span class="em">Download now.</span></div>
+      <div class="cta-strip-side">
+        <a class="as-badge" href="#download" aria-label="Download on the App Store">
+          <img src="assets/app-store-badge.png" alt="Download on the App Store">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SECTION 4 — PROOF
+     ===================================================================== -->
+<section class="proof" data-screen-label="04 Proof">
+  <div class="wrap">
+    <span class="eyebrow">In their words</span>
+    <p class="proof-quote" style="margin-top: 36px;">I haven't ordered takeout in three weeks. The wildest part is I'm cooking from what was already there.</p>
+    <div class="proof-attr">
+      <span class="avatar">M</span>
+      <span>Maya R. · iEatz user, March</span>
+    </div>
+
+    <div class="proof-stats">
+      <div class="pstat">
+        <div class="pstat-num">300<span style="font-size:0.6em">+</span></div>
+        <div class="pstat-lbl">Recipes generated daily</div>
+      </div>
+      <div class="pstat">
+        <div class="pstat-num">12<span style="font-size:0.4em; margin-left:6px;">min</span></div>
+        <div class="pstat-lbl">Average cook time</div>
+      </div>
+      <div class="pstat">
+        <div class="pstat-num">$0</div>
+        <div class="pstat-lbl">Extra groceries needed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SECTION 5 — HOW IT WORKS
+     ===================================================================== -->
+<section class="how" data-screen-label="05 How it works" id="how">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2>Three steps. No grocery run.</h2>
+    <p class="how-sub">From the fridge to the plate, without the spiral of indecision in between.</p>
+
+    <div class="how-grid">
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div>
+            <h3 class="step-ttl">Open the fridge.</h3>
+            <p class="step-body">Or your pantry. Or whatever's in the freezer. Wherever food lives.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div>
+            <h3 class="step-ttl">Tell iEatz what you have.</h3>
+            <p class="step-body">Type it or snap a photo. The AI reads your ingredients instantly — even the half-jar of olives.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div>
+            <h3 class="step-ttl">Cook in fifteen.</h3>
+            <p class="step-body">Real recipes ranked by what you actually have. Macros included. Step-by-step instructions.</p>
+          </div>
+        </div>
+        <div class="how-cta-row">
+          <a class="as-badge" href="#download" aria-label="Download on the App Store">
+            <img src="assets/app-store-badge.png" alt="Download on the App Store">
+          </a>
+          <span style="font-size: 14px; color: var(--ink-4);">Free, forever — no account needed to try.</span>
+        </div>
+      </div>
+
+      <div class="phone-stage">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status">
+              <span>9:41</span>
+              <div class="phone-status-icons">
+                <span class="ph-bars"></span>
+                <span class="ph-bat"></span>
+              </div>
+            </div>
+            <div class="phone-body">
+              <div class="phone-greet">Tuesday evening</div>
+              <div class="phone-title">What's for dinner,<br>Maya?</div>
+
+              <div class="phone-card">
+                <div class="pc-lbl">In your fridge</div>
+                <div class="pc-input">
+                  <span class="pc-tag">chicken</span>
+                  <span class="pc-tag">rice</span>
+                  <span class="pc-tag">broccoli</span>
+                  <span class="pc-tag">lemon</span>
+                  <span class="pc-tag plus">+ add</span>
+                </div>
+                <div class="pc-button">Generate recipes</div>
+              </div>
+
+              <div class="phone-section-ttl">3 recipes from what you have</div>
+              <div class="recipe-list">
+                <div class="rrow">
+                  <div class="rrow-thumb" style="background-image: url('assets/photos/salmon.jpg');"></div>
+                  <div>
+                    <div class="rrow-name">Honey-garlic chicken bowls</div>
+                    <div class="rrow-meta">15 min · 480 cal · 42g protein</div>
+                  </div>
+                  <div class="rrow-arrow">›</div>
+                </div>
+                <div class="rrow">
+                  <div class="rrow-thumb" style="background-image: url('assets/photos/buddha-bowl.jpg');"></div>
+                  <div>
+                    <div class="rrow-name">Lemon chicken & broccoli rice</div>
+                    <div class="rrow-meta">18 min · 410 cal · 38g protein</div>
+                  </div>
+                  <div class="rrow-arrow">›</div>
+                </div>
+                <div class="rrow">
+                  <div class="rrow-thumb" style="background-image: url('assets/photos/pesto-pasta-bowl.jpg');"></div>
+                  <div>
+                    <div class="rrow-name">Chicken fried rice, lighter</div>
+                    <div class="rrow-meta">12 min · 460 cal · 35g protein</div>
+                  </div>
+                  <div class="rrow-arrow">›</div>
+                </div>
+              </div>
+            </div>
+            <div class="phone-tab">
+              <div class="phone-tab-item active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 12h16"/><path d="M8 7v2M16 7v2M8 15v2M16 15v2"/></svg>
+                Fridge
+              </div>
+              <div class="phone-tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 6h14l-1 13H6L5 6z"/><path d="M9 6V4h6v2"/></svg>
+                Recipes
+              </div>
+              <div class="phone-tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                Plan
+              </div>
+              <div class="phone-tab-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+                You
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SECTION 5b — A LOOK INSIDE (product gallery, 3 in-app screens)
+     ===================================================================== -->
+<section class="gallery" data-screen-label="05b A look inside">
+  <div class="wrap">
+    <div class="gallery-head">
+      <div>
+        <span class="eyebrow">A look inside</span>
+        <h2>What happens after you tap <span class="em">Generate.</span></h2>
+      </div>
+      <p class="gallery-intro">A real recipe in your hand. A week of meals on the rails. A picture of what you ate, without the spreadsheet.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- ───────── Screen 1: Recipe Detail ───────── -->
+      <div class="gphone-cell">
+        <div class="gphone-num">01</div>
+        <div class="gphone">
+          <div class="gphone-notch"></div>
+          <div class="gphone-screen">
+            <div class="gphone-status">
+              <span>9:41</span>
+              <div class="icons">
+                <span class="ph-bars"></span>
+                <span class="ph-bat"></span>
+              </div>
+            </div>
+            <div class="gphone-body" style="background: #F1FCF3;">
+              <div class="gphone-toprow">
+                <div class="gphone-cbtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+                <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#6b7a72; font-weight:700;">Recipe · 02 of 03</div>
+                <div class="gphone-cbtn">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"/></svg>
+                </div>
+              </div>
+              <div class="rd-hero" style="background-image: url('assets/photos/buddha-bowl.jpg');">
+                <div class="meta-pill">AI Generated</div>
+              </div>
+              <div class="rd-title">Lemon-tahini chickpea bowls with crisp cucumber.</div>
+              <div class="rd-stats">
+                <div class="s"><div class="n">15</div><div class="l">min</div></div>
+                <div class="s"><div class="n">410</div><div class="l">cal</div></div>
+                <div class="s"><div class="n">18g</div><div class="l">protein</div></div>
+              </div>
+              <div class="rd-section">Ingredients · from your fridge</div>
+              <div class="rd-ing">
+                <div class="row">
+                  <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span>Chickpeas</span>
+                  <span class="qty">1 can</span>
+                </div>
+                <div class="row">
+                  <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                  <span>Cucumber</span>
+                  <span class="qty">1</span>
+                </div>
+                <div class="row off">
+                  <span class="check"></span>
+                  <span>Lemon</span>
+                  <span class="qty">½</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gphone-caption">
+          <div class="tag">The recipe</div>
+          <div class="ttl">A real recipe, with steps for someone who's never deglazed a pan.</div>
+          <div class="sub">Hero photo. Time, calories, macros. Ingredient checklist drawn from what you typed.</div>
+        </div>
+      </div>
+
+      <!-- ───────── Screen 2: Weekly Meal Plan ───────── -->
+      <div class="gphone-cell">
+        <div class="gphone-num">02</div>
+        <div class="gphone">
+          <div class="gphone-notch"></div>
+          <div class="gphone-screen">
+            <div class="gphone-status">
+              <span>9:41</span>
+              <div class="icons">
+                <span class="ph-bars"></span>
+                <span class="ph-bat"></span>
+              </div>
+            </div>
+            <div class="gphone-body" style="background: #F1FCF3;">
+              <div class="gphone-toprow">
+                <div class="gphone-cbtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+                <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#6b7a72; font-weight:700;">My Plan</div>
+                <div class="gphone-cbtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </div>
+              </div>
+              <div class="mp-tabs">
+                <div class="t on">Week</div>
+                <div class="t">Day</div>
+                <div class="t">Goals</div>
+              </div>
+              <h3 class="mp-title">This week</h3>
+              <p class="mp-sub">Mar 3 — 9  ·  Vegetarian  ·  1,800 kcal/day</p>
+
+              <div class="mp-day">
+                <div class="date"><div class="dw">Mon</div><div class="dn">3</div></div>
+                <div class="meals">
+                  <div class="meal"><span class="lbl">BFST</span>Greek yogurt + berries</div>
+                  <div class="meal"><span class="lbl">LUNCH</span>Lemon-tahini bowls</div>
+                  <div class="meal"><span class="lbl">DINNER</span>Pesto farfalle</div>
+                </div>
+              </div>
+              <div class="mp-day today">
+                <div class="date"><div class="dw">Tue</div><div class="dn">4</div></div>
+                <div class="meals">
+                  <div class="meal"><span class="lbl">BFST</span>Egg & avocado toast</div>
+                  <div class="meal"><span class="lbl">LUNCH</span>Buddha bowl, lentils</div>
+                  <div class="meal"><span class="lbl">DINNER</span>Chickpea tacos</div>
+                </div>
+              </div>
+              <div class="mp-day">
+                <div class="date"><div class="dw">Wed</div><div class="dn">5</div></div>
+                <div class="meals">
+                  <div class="meal"><span class="lbl">BFST</span>Overnight oats</div>
+                  <div class="meal"><span class="lbl">DINNER</span>Coconut curry</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gphone-caption">
+          <div class="tag">The plan</div>
+          <div class="ttl">Pick a style. Get a week of meals around it.</div>
+          <div class="sub">Built from what's in your kitchen, not someone else's shopping list. Swap any meal in one tap.</div>
+        </div>
+      </div>
+
+      <!-- ───────── Screen 3: Today / Macros ───────── -->
+      <div class="gphone-cell">
+        <div class="gphone-num">03</div>
+        <div class="gphone">
+          <div class="gphone-notch"></div>
+          <div class="gphone-screen">
+            <div class="gphone-status">
+              <span>9:41</span>
+              <div class="icons">
+                <span class="ph-bars"></span>
+                <span class="ph-bat"></span>
+              </div>
+            </div>
+            <div class="gphone-body" style="background: #F1FCF3;">
+              <div class="gphone-toprow">
+                <div>
+                  <div class="tk-greet">Tuesday · March 4</div>
+                  <div class="tk-title">Today</div>
+                </div>
+                <div class="gphone-cbtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+              </div>
+
+              <div class="tk-ring-card">
+                <div class="tk-ring">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="8"/>
+                    <circle cx="50" cy="50" r="42" fill="none" stroke="#9FE4B3" stroke-width="8" stroke-linecap="round"
+                            stroke-dasharray="263.9" stroke-dashoffset="100"/>
+                  </svg>
+                  <div class="center">
+                    <div class="num">1,240</div>
+                    <div class="lbl">of 2,000</div>
+                  </div>
+                </div>
+                <div class="tk-ring-meta">
+                  <div class="lbl">Today's intake</div>
+                  <div class="h">On track for your goal.</div>
+                  <div class="left">760 cal left  ·  2 meals logged</div>
+                </div>
+              </div>
+
+              <div class="tk-macros">
+                <div class="m">
+                  <div class="pn">68g<span class="of"> / 110</span></div>
+                  <div class="pl">Protein</div>
+                  <div class="bar"><i style="width: 62%;"></i></div>
+                </div>
+                <div class="m">
+                  <div class="pn">142g<span class="of"> / 220</span></div>
+                  <div class="pl">Carbs</div>
+                  <div class="bar"><i style="width: 65%;"></i></div>
+                </div>
+                <div class="m">
+                  <div class="pn">38g<span class="of"> / 60</span></div>
+                  <div class="pl">Fat</div>
+                  <div class="bar"><i style="width: 63%;"></i></div>
+                </div>
+              </div>
+
+              <div class="tk-meals">
+                <div class="tk-meal">
+                  <div class="thumb" style="background-image: url('assets/photos/pesto-pasta-bowl.jpg');"></div>
+                  <div>
+                    <div class="nm">Pesto farfalle</div>
+                    <div class="mt">Lunch  ·  12:40 PM</div>
+                  </div>
+                  <div class="kcal">410</div>
+                </div>
+                <div class="tk-meal">
+                  <div class="thumb" style="background-image: url('assets/photos/buddha-bowl.jpg');"></div>
+                  <div>
+                    <div class="nm">Greek yogurt bowl</div>
+                    <div class="mt">Breakfast  ·  8:10 AM</div>
+                  </div>
+                  <div class="kcal">320</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gphone-caption">
+          <div class="tag">The tracker</div>
+          <div class="ttl">Nutrition on every plate. No spreadsheet.</div>
+          <div class="sub">Cook a recipe, log a meal. Calories and macros land in your day automatically.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     PHOTO BAND — The dream meal
+     ===================================================================== -->
+<section class="photo-band" data-screen-label="Photo · Dream meal" aria-hidden="true">
+  <img src="assets/photos/pesto-pasta-bowl.jpg" alt="A bowl of pesto pasta with cherry tomatoes">
+  <span class="ph-eyebrow">Twenty minutes ago, this was groceries</span>
+  <div class="caption">
+    <div class="caption-inner">
+      <h3>Pesto, pasta, the last of the cherry tomatoes. <span class="em">No store run.</span></h3>
+      <div class="credit">Recipe · 20 min · 410 cal</div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SECTION 6 — THE MONEY ANGLE
+     ===================================================================== -->
+<section class="money" data-screen-label="06 Money">
+  <div class="wrap">
+    <div class="money-grid">
+      <div>
+        <span class="eyebrow muted" style="color: var(--ie-tomato);">The pantry math</span>
+        <div style="margin-top: 24px;">
+          <div class="money-stat"><span class="currency">$</span>1,500</div>
+          <div class="money-stat-lbl">Wasted by the average U.S. household each year</div>
+        </div>
+      </div>
+      <div>
+        <h2>You're not bad at cooking. You're bad at <span class="em">not wasting food.</span></h2>
+        <p>You buy food. You forget about it. You order takeout. The food goes bad. Repeat.</p>
+        <p><span class="pop">iEatz reverses the cycle.</span> Instead of buying food for recipes, you get recipes for your food. You cook what you have. You waste less. You spend less.</p>
+        <div style="margin-top: 36px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
+          <a class="as-badge" href="#download" aria-label="Download on the App Store">
+            <img src="assets/app-store-badge.png" alt="Download on the App Store">
+          </a>
+          <span style="font-size: 14px; color: var(--ink-4); letter-spacing: 0.02em;">Stop the cycle. Free, forever.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SECTION 7 — FEATURES
+     ===================================================================== -->
+<section class="features" data-screen-label="07 Features" id="features">
+  <div class="wrap">
+    <div class="features-head">
+      <div>
+        <span class="eyebrow">What's inside</span>
+        <h2>Built for how you actually eat.</h2>
+      </div>
+      <p class="features-intro">Not a cookbook. Not a tracker. Not a meal-kit. A small set of tools that meet you at the fridge door.</p>
+    </div>
+
+    <div class="feat-grid">
+      <!-- BIG card -->
+      <article class="feat-card feat-hero">
+        <span class="feat-tag">AI recipe generation</span>
+        <h3>Type three ingredients. Get a complete recipe.</h3>
+        <p>Every meal starts from what's in your kitchen, not someone else's shopping list. Instructions, cook time, macros — all in one card.</p>
+
+        <div class="feat-recipe-preview">
+          <div class="ttl">You typed</div>
+          <div class="frp-chips">
+            <span class="frp-chip">cucumber</span>
+            <span class="frp-chip">chickpeas</span>
+            <span class="frp-chip">lemon</span>
+          </div>
+          <div class="frp-arrow">↓ iEatz returned</div>
+          <div class="frp-recipe">Lemon-tahini chickpea bowls with crisp cucumber.</div>
+          <div class="frp-meta">
+            <span><strong>15</strong>min</span>
+            <span><strong>410</strong>cal</span>
+            <span><strong>18g</strong>protein</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Smaller cards -->
+      <article class="feat-card feat-meal">
+        <span class="feat-tag">Personalized meal plans</span>
+        <h3>Pick your style. Get a week.</h3>
+        <p>Keto. Vegetarian. Fitness. Time-starved parent. Choose a goal — iEatz builds the full week around what's already in your kitchen.</p>
+        <div class="feat-photo"></div>
+      </article>
+
+      <article class="feat-card feat-grocery">
+        <span class="feat-tag">Smart grocery + Instacart</span>
+        <h3>Missing one thing? One tap.</h3>
+        <p>iEatz figures out what's short, builds the list, and sends it to Instacart. No wandering the aisles. No "where do they keep the harissa."</p>
+        <span class="feat-instacart-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#FAF1E0"/><path d="M8 13l3 3 6-7" stroke="#0E4A2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Sends to Instacart in one tap
+        </span>
+      </article>
+
+      <article class="feat-card feat-macro">
+        <span class="feat-tag">Calorie + macro tracking</span>
+        <h3>Nutrition on every plate.</h3>
+        <p>Full breakdown on every recipe. Log meals as you cook. Track your day. No separate app, no spreadsheet.</p>
+        <div class="feat-macros">
+          <div class="m">
+            <div class="m-num">480</div>
+            <div class="m-lbl">cal</div>
+          </div>
+          <div class="m">
+            <div class="m-num">42g</div>
+            <div class="m-lbl">protein</div>
+          </div>
+          <div class="m">
+            <div class="m-num">54g</div>
+            <div class="m-lbl">carb</div>
+          </div>
+          <div class="m">
+            <div class="m-num">14g</div>
+            <div class="m-lbl">fat</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="cta-strip on-paper">
+      <div class="cta-strip-msg">Every feature, free on the starter plan. <span class="em">Download now.</span></div>
+      <div class="cta-strip-side">
+        <a class="as-badge" href="#download" aria-label="Download on the App Store">
+          <img src="assets/app-store-badge.png" alt="Download on the App Store">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SECTION 8 — OBJECTIONS
+     ===================================================================== -->
+<section class="obj" data-screen-label="08 Objections">
+  <div class="wrap">
+    <span class="eyebrow muted">For the skeptics</span>
+    <h2>Three reasons you think this <span class="em">won't work</span> for you.</h2>
+
+    <div class="obj-list">
+      <div class="obj-item">
+        <div class="obj-q">I can barely cook.</div>
+        <div class="obj-a"><strong>You don't need to be.</strong> Every recipe has step-by-step instructions written for someone who's never deglazed a pan in their life. If you can follow directions, you can make these meals.</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">I only have random stuff.</div>
+        <div class="obj-a"><strong>That's the point.</strong> Three ingredients, five ingredients, the weird jar from the back of the pantry. The AI works with what you have — not what you should have bought.</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">Is this another subscription I'll forget about?</div>
+        <div class="obj-a"><strong>The starter plan is free, forever.</strong> No trial that auto-charges. No gotcha. If iEatz Pro is worth it for you later, you decide later.</div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <div class="cta-strip-msg">No risk. No credit card. <span class="em">Just download.</span></div>
+      <div class="cta-strip-side">
+        <a class="as-badge" href="#download" aria-label="Download on the App Store">
+          <img src="assets/app-store-badge.png" alt="Download on the App Store">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SECTION 9 — FINAL CTA
+     ===================================================================== -->
+<section class="finalcta" data-screen-label="09 Final CTA" id="download">
+  <div class="decor-left"></div>
+  <div class="decor-right"></div>
+  <div class="finalcta-inner">
+    <span class="eyebrow on-dark">Download iEatz Healthy</span>
+    <h2>Dinner shouldn't take <span class="em">this much energy.</span></h2>
+    <p class="finalcta-sub">iEatz is free on the App Store. Open the fridge. We'll handle the rest.</p>
+    <div class="finalcta-ctas">
+      <a class="as-badge as-badge--lg" href="#" aria-label="Download on the App Store">
+        <img src="assets/app-store-badge.png" alt="Download on the App Store">
+      </a>
+    </div>
+    <p class="finalcta-fine">iOS only · iPhone 11 and newer · Free, forever plan</p>
+  </div>
+</section>
+
+<!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#" style="color: var(--paper);">
+          <svg class="mark" viewBox="0 0 38.25 58.486" fill="none" style="color: #9FE4B3;">
+            <path d="M 0 5.03 C 0 2.252 2.252 0 5.03 0 L 33.22 0 C 35.998 0 38.25 2.252 38.25 5.03 L 38.25 20.119 L 0 20.119 L 0 5.03 Z" fill="currentColor"></path>
+            <path d="M 0 49.83 C 0 52.608 2.252 54.86 5.03 54.86 L 33.22 54.86 C 35.998 54.86 38.25 52.608 38.25 49.83 L 38.25 22.81 L 0 22.81 L 0 49.83 Z" fill="currentColor"></path>
+            <path d="M 6.083 6.2 C 6.083 5.489 6.659 4.913 7.369 4.913 C 8.08 4.913 8.656 5.489 8.656 6.2 L 8.656 16.259 C 8.656 16.97 8.08 17.546 7.369 17.546 C 6.659 17.546 6.083 16.97 6.083 16.259 L 6.083 6.2 Z" fill="currentColor"></path>
+            <path d="M 6.083 26.787 C 6.083 26.076 6.659 25.5 7.369 25.5 C 8.08 25.5 8.656 26.076 8.656 26.787 L 8.656 36.846 C 8.656 37.557 8.08 38.133 7.369 38.133 C 6.659 38.133 6.083 37.557 6.083 36.846 L 6.083 26.787 Z" fill="currentColor"></path>
+            <path d="M 5.264 54.86 L 10.878 54.86 L 9.892 57.771 C 9.748 58.199 9.347 58.486 8.895 58.486 L 7.2 58.486 C 6.743 58.486 6.338 58.192 6.198 57.757 L 5.264 54.86 Z" fill="currentColor"></path>
+            <path d="M 27.489 54.86 L 33.103 54.86 L 32.117 57.771 C 31.972 58.199 31.571 58.486 31.12 58.486 L 29.425 58.486 C 28.968 58.486 28.563 58.192 28.423 57.757 L 27.489 54.86 Z" fill="currentColor"></path>
+          </svg>
+          iEatz Healthy
+        </a>
+        <p class="foot-tag">Cook with <span class="em">what's already there.</span></p>
+      </div>
+      <div>
+        <div class="foot-h">Product</div>
+        <div class="foot-links">
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#download">Download</a>
+          <a href="#">Pro plan</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-h">Company</div>
+        <div class="foot-links">
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-h">Follow</div>
+        <div class="foot-links">
+          <a href="#">@ieatzhealthy</a>
+          <a href="#">Newsletter</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <div>© 2026 iEatz Healthy · Made for people who already own a fridge.</div>
+      <div>App Store · iOS</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
