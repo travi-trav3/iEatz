@@ -1,0 +1,19 @@
+{
+  "organization": { "name": "Applied Intelligence Co.", "id": "6a138b7d82bb2ed009fed356" },
+  "channel": { "name": "ieatzhealthy", "service": "pinterest", "id": "6a14637fc687a22dd424eee8" },
+  "dimensions": "1000x1500",
+  "attachMethod": "manual (no updateIdea mutation in Buffer MCP)",
+  "urlBase": "https://raw.githubusercontent.com/travi-trav3/iEatz/claude/cool-planck-pL6bL/assets/pinterest/",
+  "pins": [
+    { "file": "01-fridge.png", "ideaId": "6a147b109fe5b621c37d4cfe", "ideaTitle": "What to make with what's in your fridge", "overlay": "Healthy recipes from your fridge.", "source": "fridge-real-mess.jpg" },
+    { "file": "02-grain-bowl.png", "ideaId": "6a147b19ff4aaa9905e306f4", "ideaTitle": "15-minute lemon tahini grain bowl", "overlay": "Lemon-tahini grain bowl.", "source": "buddha-bowl.jpg" },
+    { "file": "03-stop-wasting.png", "ideaId": "6a147b219fe5b621c37d4d52", "ideaTitle": "How to stop wasting groceries", "overlay": "$1,500 wasted on food every year.", "source": "typographic" },
+    { "file": "04-keto.png", "ideaId": "6a147b289fe5b621c37d4d89", "ideaTitle": "Easy keto dinners from pantry staples", "overlay": "Eat keto from what you have.", "source": "app-recipe.jpg" },
+    { "file": "05-meal-prep.png", "ideaId": "6a147b309fe5b621c37d4dcf", "ideaTitle": "Weekly meal prep made simple", "overlay": "A week of meals, planned for you.", "source": "meal-prep-spread.jpg" },
+    { "file": "06-high-protein-breakfast.png", "ideaId": "6a147b384a6f5d18c535d73d", "ideaTitle": "High-protein breakfast ideas", "overlay": "High-protein, no planning.", "source": "cutting-board-veg.jpg" },
+    { "file": "07-track-calories.png", "ideaId": "6a147b3fff4aaa9905e30769", "ideaTitle": "Track calories without obsessing", "overlay": "Track calories, skip the obsessing.", "source": "app-home.jpg" },
+    { "file": "08-gluten-free.png", "ideaId": "6a147b47e72395f3a7fb6278", "ideaTitle": "Gluten-free dinner ideas", "overlay": "Gluten-free, from what you have.", "source": "salmon.jpg", "flag": "low-res source (320x480)" },
+    { "file": "09-fridge-to-cart.png", "ideaId": "6a147b4e9fe5b621c37d4e2f", "ideaTitle": "Turn your fridge into a shopping list", "overlay": "Fridge to cart, one tap.", "source": "app-instacart.jpg" },
+    { "file": "10-five-dinners.png", "ideaId": "6a147b56e72395f3a7fb62ba", "ideaTitle": "5 dinners without going to the store", "overlay": "5 dinners, zero shopping.", "source": "typographic" }
+  ]
+}
