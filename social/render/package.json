@@ -1,0 +1,15 @@
+{
+  "name": "ieatz-social-render",
+  "version": "1.0.0",
+  "private": true,
+  "description": "iEatz Healthy social graphics render harness (Playwright + sharp)",
+  "type": "commonjs",
+  "scripts": {
+    "render": "node render.js",
+    "batch": "node batch-render.js"
+  },
+  "dependencies": {
+    "playwright-core": "1.49.1",
+    "sharp": "0.33.5"
+  }
+}

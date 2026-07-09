@@ -1,0 +1,5 @@
+render/node_modules/
+render/out/
+render/*out/
+render/pins/
+render/gf.css
