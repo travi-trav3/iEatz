@@ -83,11 +83,26 @@ Design tokens: `index.html` `:root` block and `social/render/base.css`
   and won't work headless here. Port its JSX templates into this harness or run its own build/export.
 
 ## 5. Content pillars & formats
-Pillars (rotate; never two of the same back-to-back): **Pantry/Fridge**, **Health/Diet**,
-**Grocery/Instacart**, plus **Recipes**. Each App Store CPP theme maps to a pillar.
-Per pillar: **1 Instagram carousel (5 slides, 1080×1350)** + **3 Pinterest pins (1000×1500)**.
-Carousel arc: hook (editorial photo) → how-it-works/steps → app-screen proof → testimonial → CTA.
-Rotate CTAs and formats (photo hero / stat / list / quote / device / recipe card).
+**8 content pillars — rotate through all; never two of the same back-to-back.**
+They come from two axes (a post carries a narrative angle AND a topic); treat as a flat
+list of 8 for rotation. Cycle all 8 before repeating.
+
+*Narrative pillars (the "5 content pillars" from the SOW / Social-Content-Pipeline skill):*
+1. **Transformation** — personal story / before-after / testimonial (approved names ONLY:
+   Maya R., Leoactionz, SixSocks, Ashly H.). Format: quote card.
+2. **Money/Waste** — shocking stat + solution ("$1,500/yr tossed", "$18 → $6"). Format: stat / compare.
+3. **Lifestyle** — aspirational moment + how the app fits (busy weeknight, family cooking). Format: photo hero.
+4. **Recipe/Food** — specific dish + ease/speed + ingredients. Format: recipe card / photo / list.
+5. **Product/Feature** — what the app does + why (scan receipt → recipe, Instacart handoff). Format: device (real app screens only).
+
+*Topic pillars (use-case, from the App Store CPP themes):*
+6. **Pantry/Fridge** — cook what you already have.
+7. **Health/Diet** — high-protein, gluten-free, keto, macros (label estimates).
+8. **Grocery/Instacart** — grocery run → week of dinners, one-tap cart.
+
+Per batch: rotate all 8; alternate templates (photo hero / stat / list / quote / device / recipe card)
+and CTAs. Carousel arc: hook (editorial photo) → how-it-works/steps → app-screen proof → testimonial → CTA.
+Seasonal lens layers on top (e.g. back-to-school / busy-weeknight for Aug — seed 4–6 wks early).
 
 ### Photo library (`assets/photos/`) — track usage, avoid repeats within ~30 days
 | File | What it is | Notes |
@@ -103,8 +118,11 @@ Rotate CTAs and formats (photo hero / stat / list / quote / device / recipe card
 | couple-cooking.jpg | couple cooking (warm, candid) | Instacart/lifestyle |
 | spices-spoons.jpg | spices in spoons | accent (not a dish) |
 | app-home / app-recipe / app-instacart | REAL app screens | device/proof slides only |
-**The dish-photo library is thin (~4 plated dishes).** Recipe pillar repeats within ~2 weeks —
-commission more warm, candid food photography (Instacart "human lens": real, imperfect, mid-moment).
+**Library expanded to 74 photos** (Jul 2026) across `assets/photos/{food,fridge,grocery,lifestyle,pantry}/`,
+indexed in `assets/photos/photos.json` (keyed by pillar, with public URLs + low-res/ext flags). Use fresh,
+unique imagery per pin (Pinterest favors new images); still avoid repeating a hero within ~30 days.
+QA note: open every photo before use — some slugs are misleading (a "gluten-free" pick showed bread; a
+"cobb-salad" file is actually tartines). Video still not available — Reels/Idea Pins deferred.
 
 ## 6. QA GATE — run on EVERY rendered PNG before hosting
 Open the actual image (Read tool). Do not rely on alt text/dimensions. Check:
