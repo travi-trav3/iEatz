@@ -67,7 +67,43 @@ const igRecipe = (p) => `<div class="pin ig-recipe">
   ${foot}
 </div>`;
 
+const tStat = (p) => `<div class="pin t-stat">
+  <div class="stat-wrap">
+    <div class="eyebrow">${p.eyebrow}</div>
+    <div class="stat">${p.stat}</div>
+    <div class="stat-sub">${p.statSub}</div>
+    <div class="stat-body"><span class="rule"></span><p>${p.statBody}</p></div>
+  </div>
+  ${foot}
+</div>`;
+
+const tDevice = (p) => `<div class="pin t-device">
+  <div class="dhead">
+    <div class="eyebrow">${p.eyebrow}</div>
+    <h1 class="head">${p.head}</h1>
+    ${p.cap ? `<div class="dcap">${p.cap}</div>` : ''}
+  </div>
+  <div class="stage"><div class="phone"><div class="screen"><img src="${PHOTOS}/${p.photo}" alt=""></div></div></div>
+  ${foot}
+</div>`;
+
+const igQuote = (p) => `<div class="pin ig-quote">
+  <div class="qwrap">
+    <div class="eyebrow">${p.eyebrow}</div>
+    <blockquote class="quote">${p.quote}</blockquote>
+    <div class="attr"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="name">${p.name}</span></div>
+  </div>
+  ${foot}
+</div>`;
+
 const EXTRA = `
+.ig-quote{display:flex;flex-direction:column;background:var(--paper);padding:96px 76px 58px}
+.ig-quote .qwrap{flex:1;display:flex;flex-direction:column;justify-content:center}
+.ig-quote .quote{font-family:var(--serif);font-weight:400;font-size:82px;line-height:1.08;letter-spacing:-0.01em;color:var(--ink);margin:22px 0 0}
+.ig-quote .quote .accent{color:var(--green);font-style:italic}
+.ig-quote .attr{display:flex;align-items:center;gap:20px;margin-top:52px}
+.ig-quote .stars{color:var(--green);font-size:36px;letter-spacing:5px}
+.ig-quote .name{font-family:var(--sans);font-weight:600;font-size:32px;color:var(--ink)}
 .ig-photo{display:flex;flex-direction:column}
 .ig-photo .hero{width:100%;height:760px;overflow:hidden;position:relative}
 .ig-photo .hero img{width:100%;height:100%;object-fit:cover;display:block}
@@ -143,32 +179,41 @@ const posts = [
     eyebrow: 'Meal prep for beginners', head: `One grocery run, <span class="accent">five weeknight dinners.</span>`,
     chips: ['1 trip', '5 dinners', 'Back-to-school'] },
 
-  // ---------- INSTAGRAM ----------
-  { file: 'jul18-ig-skillet-pasta', ...IG, render: igPhoto, photo: 'food/pesto-pasta-bowl.jpg',
-    eyebrow: '20-minute dinner', head: `20-minute <span class="accent">weeknight pasta.</span>`,
+  // ---------- INSTAGRAM (8-pillar rotation, one each Jul 18-31) ----------
+  // 1. Recipe/Food
+  { file: 'jul18-ig-recipe-pasta', ...IG, render: igPhoto, photo: 'food/pesto-pasta-bowl.jpg',
+    eyebrow: 'Recipe · 20-minute dinner', head: `20-minute <span class="accent">weeknight pasta.</span>`,
     chips: ['20 min', 'One pan', '5 ingredients'] },
-  { file: 'jul20-ig-fridge-three', ...IG, render: igPhoto, photo: 'fridge/fridge-real-mess.jpg',
+  // 2. Money/Waste
+  { file: 'jul20-ig-money-waste', ...IG, render: tStat,
+    eyebrow: 'The cost of no plan', stat: '$1,500',
+    statSub: `of groceries the average household throws out every year.`,
+    statBody: `iEatz turns what's already in your kitchen into dinner — so more of it gets eaten, not tossed.` },
+  // 3. Grocery/Instacart
+  { file: 'jul22-ig-grocery-instacart', ...IG, render: igPhoto, photo: 'grocery/woman-grocery-shopping.jpg',
+    eyebrow: 'Grocery to table', head: `One grocery run, <span class="accent">a week of dinners.</span>`,
+    chips: ['1 grocery run', '5 dinners', 'One-tap cart'] },
+  // 4. Product/Feature (real app screen only)
+  { file: 'jul24-ig-product-feature', ...IG, render: tDevice, photo: 'app-recipe.jpg',
+    eyebrow: 'How it works', head: `Scan your receipt. <span class="accent">Get dinner.</span>`,
+    cap: `iEatz reads what you already bought and builds recipes from it — in seconds.` },
+  // 5. Transformation (approved testimonial)
+  { file: 'jul25-ig-transformation', ...IG, render: igQuote,
+    eyebrow: 'From the reviews',
+    quote: `Three weeks in and I <span class="accent">haven't ordered takeout once.</span> I just cook what's already in my kitchen.`,
+    name: 'Ashly H.' },
+  // 6. Pantry/Fridge
+  { file: 'jul27-ig-pantry-fridge', ...IG, render: igPhoto, photo: 'fridge/fridge-real-mess.jpg',
     eyebrow: 'Pantry-first cooking', head: `3 things in your fridge, <span class="accent">one dinner.</span>`,
     chips: ['Zero shopping', 'Less waste', 'Scan & cook'] },
-  { file: 'jul22-ig-grocery-five', ...IG, render: igPhoto, photo: 'grocery/woman-grocery-shopping.jpg',
-    eyebrow: 'Grocery to table', head: `Grocery haul to <span class="accent">5 dinners.</span>`,
-    chips: ['1 grocery run', '5 dinners', 'One tap'] },
-  { file: 'jul24-ig-highprotein-noprep', ...IG, render: igPhoto, photo: 'food/chickpea-power-bowl.jpg',
+  // 7. Health/Diet
+  { file: 'jul29-ig-health-diet', ...IG, render: igPhoto, photo: 'food/chickpea-power-bowl.jpg',
     eyebrow: 'High-protein, no prep', head: `High-protein dinners <span class="accent">without the meal prep.</span>`,
     chips: ['30 g protein', 'No Sunday prep', '20 min'] },
-  { file: 'jul25-ig-backtoschool-family', ...IG, render: igPhoto, photo: 'lifestyle/family-cooking-together.jpg',
-    eyebrow: 'Back-to-school dinners', head: `Weeknight dinners the <span class="accent">whole family eats.</span>`,
-    chips: ['Kid-approved', '20 min', 'No planning'] },
-  { file: 'jul27-ig-sheetpan-recipe', ...IG, render: igRecipe,
-    eyebrow: '5-ingredient sheet-pan dinner', head: `5-ingredient <span class="accent">sheet-pan dinner.</span>`,
-    ings: ['Chicken thighs', 'Baby potatoes', 'Broccoli', 'Olive oil + lemon', 'Paprika'],
-    method: `Toss it all on one sheet pan, roast at 425°F for 25 minutes, and dinner's done. iEatz builds the recipe from what's on your receipt.` },
-  { file: 'jul29-ig-pantry-tonight', ...IG, render: igPhoto, photo: 'pantry/pantry-open-spice.jpg',
-    eyebrow: 'Pantry-first cooking', head: `What's in your <span class="accent">pantry tonight?</span>`,
-    chips: ['Pantry staples', 'No shopping', 'Scan & cook'] },
-  { file: 'jul31-ig-fridge-cart', ...IG, render: igPhoto, photo: 'fridge/fridge-organized.jpg',
-    eyebrow: 'Fridge to cart', head: `Fridge to cart, <span class="accent">one tap.</span>`,
-    chips: ['Instacart', 'Fills the gaps', 'Seconds'] },
+  // 8. Lifestyle
+  { file: 'jul31-ig-lifestyle', ...IG, render: igPhoto, photo: 'lifestyle/couple-cooking.jpg',
+    eyebrow: 'Weeknight, handled', head: `Tonight's dinner is <span class="accent">already in your kitchen.</span>`,
+    chips: ['No takeout', 'No planning', '15 minutes'] },
 ];
 
 (async () => {
