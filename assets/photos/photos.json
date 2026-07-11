@@ -1,0 +1,401 @@
+{
+  "description": "Raw food photography library for the iEatz Healthy social content pipeline. Organized by content pillar (category) so render templates can filter. Byte sources uploaded from the iEatz Healthy Design System photo set.",
+  "urlBase": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/",
+  "categories": [
+    "food",
+    "fridge",
+    "grocery",
+    "lifestyle",
+    "pantry"
+  ],
+  "count": 74,
+  "countByCategory": {
+    "food": 39,
+    "fridge": 8,
+    "grocery": 5,
+    "lifestyle": 18,
+    "pantry": 4
+  },
+  "photos": [
+    {
+      "file": "food/restaurant-plated-dish.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/restaurant-plated-dish.jpg"
+    },
+    {
+      "file": "food/gourmet-burger.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/gourmet-burger.jpg"
+    },
+    {
+      "file": "food/veggie-bowl-eggs.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/veggie-bowl-eggs.jpg"
+    },
+    {
+      "file": "food/power-bowl-veg.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/power-bowl-veg.jpg"
+    },
+    {
+      "file": "food/mezze-dips-spread.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/mezze-dips-spread.jpg"
+    },
+    {
+      "file": "food/breakfast-plate-eggs.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/breakfast-plate-eggs.jpg"
+    },
+    {
+      "file": "food/breakfast-flatlay-avocado.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/breakfast-flatlay-avocado.jpg"
+    },
+    {
+      "file": "food/brunch-table-spread.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/brunch-table-spread.jpg"
+    },
+    {
+      "file": "food/grain-bowl-burlap.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/grain-bowl-burlap.jpg"
+    },
+    {
+      "file": "food/rice-bowl-in-hands.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/rice-bowl-in-hands.jpg"
+    },
+    {
+      "file": "food/spaghetti-plate.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/spaghetti-plate.jpg"
+    },
+    {
+      "file": "food/tomato-toast.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/tomato-toast.jpg"
+    },
+    {
+      "file": "food/chickpea-power-bowl.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/chickpea-power-bowl.jpg"
+    },
+    {
+      "file": "food/outdoor-dining-table.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/outdoor-dining-table.jpg"
+    },
+    {
+      "file": "food/healthy-bowls-table.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/healthy-bowls-table.jpg"
+    },
+    {
+      "file": "food/tomato-pasta-skillet.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/tomato-pasta-skillet.jpg"
+    },
+    {
+      "file": "food/cobb-salad-plate.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/cobb-salad-plate.jpg"
+    },
+    {
+      "file": "food/veggie-plate-avocado.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/veggie-plate-avocado.jpg"
+    },
+    {
+      "file": "food/tacos-lime.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/tacos-lime.jpg"
+    },
+    {
+      "file": "food/spices-spoons.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/spices-spoons.jpg"
+    },
+    {
+      "file": "food/prep-spread-greens.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/prep-spread-greens.jpg"
+    },
+    {
+      "file": "food/platter-roast.png",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/platter-roast.png"
+    },
+    {
+      "file": "food/pesto-pasta-bowl.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/pesto-pasta-bowl.jpg"
+    },
+    {
+      "file": "food/pasta-dark-fork.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/pasta-dark-fork.jpg"
+    },
+    {
+      "file": "food/nuts-almonds.png",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/nuts-almonds.png"
+    },
+    {
+      "file": "food/greens-flatlay-mint.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/greens-flatlay-mint.jpg"
+    },
+    {
+      "file": "food/green-bowl-floral.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/green-bowl-floral.jpg"
+    },
+    {
+      "file": "food/buddha-bowl.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/buddha-bowl.jpg"
+    },
+    {
+      "file": "food/berries-negative-space.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/berries-negative-space.jpg"
+    },
+    {
+      "file": "food/avocado-pink.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/avocado-pink.jpg"
+    },
+    {
+      "file": "food/food-03.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-03.jpg",
+      "flag": "low-res"
+    },
+    {
+      "file": "food/food-02.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-02.jpg",
+      "flag": "low-res"
+    },
+    {
+      "file": "food/food-05-salmon.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-05-salmon.jpg",
+      "flag": "low-res"
+    },
+    {
+      "file": "food/cutting-board-veg.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/cutting-board-veg.jpg"
+    },
+    {
+      "file": "food/roast-table.png",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/roast-table.png"
+    },
+    {
+      "file": "food/food-07.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-07.jpg",
+      "flag": "low-res"
+    },
+    {
+      "file": "food/food-04.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-04.jpg",
+      "flag": "low-res"
+    },
+    {
+      "file": "food/food-01.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-01.jpg",
+      "flag": "low-res"
+    },
+    {
+      "file": "food/food-06.jpg",
+      "category": "food",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-06.jpg",
+      "flag": "low-res"
+    },
+    {
+      "file": "fridge/fridge-stocked.jpg",
+      "category": "fridge",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-stocked.jpg"
+    },
+    {
+      "file": "fridge/fridge-full-produce.jpg",
+      "category": "fridge",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-full-produce.jpg"
+    },
+    {
+      "file": "fridge/fridge-warm-open.jpg",
+      "category": "fridge",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-warm-open.jpg"
+    },
+    {
+      "file": "fridge/fridge-real-mess.jpg",
+      "category": "fridge",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-real-mess.jpg"
+    },
+    {
+      "file": "fridge/fridge-organized.jpg",
+      "category": "fridge",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-organized.jpg"
+    },
+    {
+      "file": "fridge/anti-fridge-smeg.jpg",
+      "category": "fridge",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/anti-fridge-smeg.jpg"
+    },
+    {
+      "file": "fridge/anti-fridge-shoe.jpg",
+      "category": "fridge",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/anti-fridge-shoe.jpg"
+    },
+    {
+      "file": "fridge/anti-fridge-rusty.jpg",
+      "category": "fridge",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/anti-fridge-rusty.jpg"
+    },
+    {
+      "file": "grocery/woman-grocery-shopping.jpg",
+      "category": "grocery",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/woman-grocery-shopping.jpg"
+    },
+    {
+      "file": "grocery/kid-in-grocery-cart.jpg",
+      "category": "grocery",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/kid-in-grocery-cart.jpg"
+    },
+    {
+      "file": "grocery/grocery-storefront.jpg",
+      "category": "grocery",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-storefront.jpg"
+    },
+    {
+      "file": "grocery/grocery-store-aisle.jpg",
+      "category": "grocery",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-store-aisle.jpg"
+    },
+    {
+      "file": "grocery/grocery-bag-produce.jpg",
+      "category": "grocery",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-bag-produce.jpg"
+    },
+    {
+      "file": "lifestyle/woman-in-kitchen.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/woman-in-kitchen.jpg"
+    },
+    {
+      "file": "lifestyle/woman-eating-salad.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/woman-eating-salad.jpg"
+    },
+    {
+      "file": "lifestyle/woman-dining-out.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/woman-dining-out.jpg"
+    },
+    {
+      "file": "lifestyle/mother-child-meal.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/mother-child-meal.jpg"
+    },
+    {
+      "file": "lifestyle/mother-child-cooking.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/mother-child-cooking.jpg"
+    },
+    {
+      "file": "lifestyle/kitchen-prep-scene.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/kitchen-prep-scene.jpg"
+    },
+    {
+      "file": "lifestyle/family-meal-at-table.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/family-meal-at-table.jpg"
+    },
+    {
+      "file": "lifestyle/family-cooking-together.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/family-cooking-together.jpg"
+    },
+    {
+      "file": "lifestyle/cooking-roast-at-stove.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/cooking-roast-at-stove.jpg"
+    },
+    {
+      "file": "lifestyle/pan-steam.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/pan-steam.jpg"
+    },
+    {
+      "file": "lifestyle/kitchen-wide.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/kitchen-wide.jpg"
+    },
+    {
+      "file": "lifestyle/couple-cooking.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/couple-cooking.jpg"
+    },
+    {
+      "file": "lifestyle/cook-snap-1.png",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/cook-snap-1.png"
+    },
+    {
+      "file": "lifestyle/chop-tomatoes.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/chop-tomatoes.jpg"
+    },
+    {
+      "file": "lifestyle/chop-cilantro.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/chop-cilantro.jpg"
+    },
+    {
+      "file": "lifestyle/shop-label-check.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/shop-label-check.jpg",
+      "flag": "ext-mismatch: PNG data with .jpg name"
+    },
+    {
+      "file": "lifestyle/watermelon-beach.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/watermelon-beach.jpg",
+      "flag": "low-res"
+    },
+    {
+      "file": "lifestyle/lifestyle-02.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/lifestyle-02.jpg",
+      "flag": "low-res"
+    },
+    {
+      "file": "pantry/counter-eggs-prep.jpg",
+      "category": "pantry",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/counter-eggs-prep.jpg"
+    },
+    {
+      "file": "pantry/pantry-real-shelves.jpg",
+      "category": "pantry",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/pantry-real-shelves.jpg"
+    },
+    {
+      "file": "pantry/pantry-open-spice.jpg",
+      "category": "pantry",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/pantry-open-spice.jpg"
+    },
+    {
+      "file": "pantry/pantry-jars.jpg",
+      "category": "pantry",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/pantry-jars.jpg"
+    }
+  ]
+}
