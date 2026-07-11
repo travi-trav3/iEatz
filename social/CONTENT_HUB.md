@@ -3,8 +3,9 @@
 **North star: app installs, via organic Pinterest + search/AI answer engines (SEO/AEO).**
 Recipe/ingredient pages on **iEatsHealthy.com/recipes/** become the owned destination that
 (a) ranks for long-tail recipe queries, (b) gets cited by LLMs answering "what do I make
-with X", (c) unlocks Pinterest Rich Pins, and (d) routes every visitor to the App Store
-with readable attribution. Extends `CONTROL_CENTER.md`; does not replace it.
+with X", (c) unlocks Pinterest Rich Pins, and (d) routes every visitor to the App Store.
+Success metric: **total installs trending up over time** — per-post install attribution
+is deliberately out of scope. Extends `CONTROL_CENTER.md`; does not replace it.
 Expectation-setting: SEO/AEO compounds over months 2–6 (per the acquisition-push plan) —
 the system is judged on trajectory at the 90-day checkpoint, not week-2 numbers.
 
@@ -57,30 +58,28 @@ Nothing written twice; nothing drifts. The web page is the only net-new output.
   partly by what the 74-photo library can support; if no honest photo exists, the
   concept waits or ships FAQ-schema-only.
 
-## 4. Attribution architecture (v2 — closes the biggest measurement hole)
-UTMs die at the App Store: GA sees the outbound click, App Store Connect never sees the
-UTM, so "which content drove installs" would be unreadable — blinding the exact loop this
-plan exists to optimize. Two-layer fix:
-- **On-site + social links (GA-readable):** every CTA carries
-  `utm_source={pinterest|instagram|google}`, `utm_medium={social|organic}`,
-  `utm_campaign=hub`, `utm_content=<content-id>`.
-- **App Store links (install-readable):** use Apple **campaign links** —
-  `?pt=<provider-token>&ct=<content-id>&mt=8` — so App Store Connect reports
-  product-page views/installs **per content ID**. One-time setup: pull the provider
-  token (pt) from App Store Connect.
-- The Smart App Banner inherits the page context; page→store buttons always use the
-  campaign link.
-Result: GA shows page behavior per content; ASC shows installs per content; the ledger
-joins them by `content-id`.
+## 4. Measurement approach (simplified by decision — 2026-07-11)
+Per-content install attribution is **out of scope**: the KPI is the total-install trend
+in App Store Connect, read against the leading indicators in §15. What we keep, because
+it's free and already generated:
+- **UTMs on all social/page links** — GA still shows page behavior and page→store CTR
+  per content, which is the signal used to weight future batches.
+- Store links are plain App Store URLs. If per-content install data is ever wanted,
+  Apple campaign tokens (`?ct=<content-id>`) or a OneLink/deep-link layer can be added
+  later with zero infrastructure change — it's a query param on links the router
+  already builds.
+Consequence: since installs are coarse, the **leading indicators are the steering
+signal** — GSC/Bing clicks, pin outbound clicks, and page→store CTR decide what to
+make more of. §15 is the loop, not install attribution.
 
 ## 5. CTA & destination routing v2
 Decided per concept at batch planning, recorded in the object.
 
 | Concept type | Pin URL | Page CTA | Why |
 |---|---|---|---|
-| Page-backed (recipe/ingredient query) | **the page** (+UTM) | App Store campaign link | Rich Pins fire from the page's Recipe/OG markup; Pinterest gets a trusted owned domain; installs stay attributed |
+| Page-backed (recipe/ingredient query) | **the page** (+UTM) | App Store | Rich Pins fire from the page's Recipe/OG markup; Pinterest gets a trusted owned domain |
 | Maps cleanly to a CPP theme | CPP URL (+UTM) | — | tighter message match |
-| Brand / story / proof (no search target) | homepage or App Store campaign link | — | no page earned |
+| Brand / story / proof (no search target) | homepage or App Store | — | no page earned |
 | Unsure | homepage (+UTM) | — | default |
 
 **v2 change:** in v1, page-backed pins pointed at the App Store. That threw away the Rich
@@ -108,7 +107,7 @@ the ieatzhealthy account).
    is the standard.
 7. **Ping the index** — sitemap already updated in the deploy; IndexNow ping (Bing/AI
    crawlers); GSC picks up via sitemap.
-8. **Resolve CTA URLs** — router applies §5 + appends UTM / campaign tokens.
+8. **Resolve CTA URLs** — router applies §5 + appends UTMs.
 9. **Approve at schedule time** (preview gate), then Buffer `customScheduled`,
    `dueAt` 7+ days out. Images referenced must already be on `main` (§3).
 10. **Write the ledger record** — content ID ↔ object path, images, page URL + status,
@@ -200,7 +199,7 @@ specific question. 2–3/week reads as human-curated — keep it that way.
 | Schema drift/invalid JSON-LD | Automated schema lint pre-deploy (§6.5) |
 | Query cannibalization over months | Ledger query registry + planning dedup (§10) |
 | Rich results flagged as spam | Honest-imagery rule (§7.11) + provenance + volume cap |
-| Attribution unreadable | Two-layer UTM + Apple campaign tokens (§4) |
+| Can't tell what's working (installs are coarse by choice) | Leading indicators per content: GSC/Bing clicks, pin outbound clicks, page→store CTR (§4, §15) |
 | Pages orphaned / never crawled | Sitemap in deploy + nav link + IndexNow + GSC/Bing (§8) |
 | CWV tanks rankings | WebP image pipeline + static HTML (§3, §8) |
 | Buffer/MCP flap mid-batch | Ledger records progress; every step idempotent and resumable |
@@ -217,8 +216,8 @@ specific question. 2–3/week reads as human-curated — keep it that way.
    + Slack alert on failure.
 9. **Weekly review digest** — scheduled compilation of the next 7 days' queue to Slack.
 One-time setup (manual, ~an hour total): GSC + Bing verification · IndexNow token ·
-Apple provider token (pt) · Pinterest domain claim + Rich Pin validation · nav link
-to `/recipes/` · `supported-capabilities.json` from Travis's list.
+Pinterest domain claim + Rich Pin validation · nav link to `/recipes/` ·
+`supported-capabilities.json` from Travis's list.
 
 ## 13. Content object schema v2
 ```json
@@ -244,7 +243,7 @@ to `/recipes/` · `supported-capabilities.json` from Travis's list.
   "cta": {
     "destination": "page | app_store | cpp_health | homepage",
     "pin_url": "https://ieatshealthy.com/recipes/...?utm_...",
-    "store_url": "https://apps.apple.com/...?pt=<pt>&ct=chicken-rice-highprotein-mealprep&mt=8"
+    "store_url": "https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706"
   },
   "buffer": { "pin_post_id": "", "ig_post_id": "", "due_at": "" }
 }
@@ -267,9 +266,9 @@ to `/recipes/` · `supported-capabilities.json` from Travis's list.
 - **Weekly (ops):** queue review (§6.12); pre-flight incident count (should be ~0).
 - **Monthly (performance):** GSC impressions/clicks + Bing equivalents per page;
   pin outbound clicks (Buffer metrics); page → store CTR (GA, by utm_content);
-  installs by ct token (App Store Connect); indexation rate (pages indexed / published).
+  total installs trend (App Store Connect); indexation rate (pages indexed / published).
 - **Day-90 checkpoint:** trajectory review. Healthy = indexation >80%, impressions
-  compounding month-over-month, first attributable installs. Unhealthy = re-examine
+  compounding month-over-month, total-install trend inflecting upward. Unhealthy = re-examine
   query selection and page quality before adding volume — never fix flat results by
   publishing faster (that's the doorway-page death spiral).
 
@@ -284,8 +283,9 @@ to `/recipes/` · `supported-capabilities.json` from Travis's list.
 
 ## Changelog — v1 → v2 (pressure-test results)
 **Added (holes that defeated the goal):**
-- §4 Attribution: UTMs never reach App Store Connect — Apple campaign links (`ct`/`pt`)
-  added so installs are attributable per content; without this the optimization loop is blind.
+- §4 Measurement: per-post install attribution deliberately descoped (Travis, 7/11) —
+  KPI is the total-install trend; UTMs kept for GA leading indicators, which become the
+  steering signal. Campaign tokens / OneLink noted as a zero-infra add-later.
 - §5 Routing: page-backed pins now point at the **page**, not the App Store — captures
   the Rich Pin unlock the Q3 strategy called out; Pinterest domain claim added.
 - §6.11 T-48h automated pre-flight — auto-publish safety no longer rests solely on a
