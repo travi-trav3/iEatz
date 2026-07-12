@@ -60,63 +60,69 @@
     },
     {
       "id": "jul21-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-07-21T15:31:00-07:00",
       "file": "assets/pinterest/july/jul21-pin-cheap-healthy.png",
       "title": "Cheap Healthy Dinners Under $6",
       "alt": "Hands holding a teal bowl of shredded chicken, rice, tomatoes and cilantro. Headline: Healthy dinners under $6.",
-      "text": "Healthy dinner under $6 a serving: a shredded chicken and rice bowl ready in 15 minutes. Budget meal ideas from what's already in your kitchen — iEatz turns your grocery receipt into cheap healthy dinners."
+      "text": "Healthy dinner under $6 a serving: a shredded chicken and rice bowl ready in 15 minutes. Budget meal ideas from what's already in your kitchen — iEatz turns your grocery receipt into cheap healthy dinners.",
+      "bufferId": "6a5411459372accfada7dc71"
     },
     {
       "id": "jul22-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-07-22T14:12:00-07:00",
       "file": "assets/pinterest/july/jul22-pin-grocery-week.png",
       "title": "One Grocery Run, a Week of Dinners — Meal Prep for Beginners",
       "alt": "Two paper grocery bags with apples, bananas, cabbage and bread on a wood floor. Headline: One grocery run, a week of dinners.",
-      "text": "Turn one grocery run into a week of dinners. Beginner meal prep without the Sunday marathon: scan your receipt and iEatz plans five healthy dinners from what you bought."
+      "text": "Turn one grocery run into a week of dinners. Beginner meal prep without the Sunday marathon: scan your receipt and iEatz plans five healthy dinners from what you bought.",
+      "bufferId": "6a54115e00357d0bb668668f"
     },
     {
       "id": "jul23-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-07-23T14:09:00-07:00",
       "file": "assets/pinterest/july/jul23-pin-glutenfree.png",
       "title": "Gluten-Free Weeknight Dinners From Pantry Staples",
       "alt": "Bowl of green herb puree topped with beans, pine nuts, tomatoes and edible flowers. Headline: Gluten-free dinners from your pantry.",
-      "text": "Fast gluten-free dinner ideas from pantry staples — naturally gluten-free, weeknight-quick, no special shopping trip. iEatz finds the gluten-free recipes hiding in the groceries you already have."
+      "text": "Fast gluten-free dinner ideas from pantry staples — naturally gluten-free, weeknight-quick, no special shopping trip. iEatz finds the gluten-free recipes hiding in the groceries you already have.",
+      "bufferId": "6a5411ce98dc0120703aabab"
     },
     {
       "id": "jul24-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-07-24T14:44:00-07:00",
       "file": "assets/pinterest/july/jul24-pin-mealprep-list.png",
       "title": "5 Dinners From One Grocery Run",
       "alt": "Numbered list: five dinners from one grocery run — sheet-pan chicken, grain bowls, skillet pasta, veggie tacos, fridge-clean-out soup.",
-      "text": "Five easy dinners from one grocery run: sheet-pan chicken and veg, big-batch grain bowls, skillet pasta, loaded veggie tacos, and a fridge-clean-out soup. iEatz builds each recipe from what's on your receipt."
+      "text": "Five easy dinners from one grocery run: sheet-pan chicken and veg, big-batch grain bowls, skillet pasta, loaded veggie tacos, and a fridge-clean-out soup. iEatz builds each recipe from what's on your receipt.",
+      "bufferId": "6a5412539cf8918f1dcd60e7"
     },
     {
       "id": "jul25-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-07-25T16:39:00-07:00",
       "file": "assets/pinterest/july/jul25-pin-backtoschool-lunch.png",
       "title": "Back-to-School Lunchbox Ideas — Make Ahead in 15 Minutes",
       "alt": "Grain bowl with chicken, rice, corn and greens on burlap. Headline: Back-to-school lunchbox ideas.",
-      "text": "Back-to-school lunchbox ideas you can make ahead in 15 minutes — kid-approved, healthy, and built from groceries you already have. Get ahead of the school-year scramble with iEatz."
+      "text": "Back-to-school lunchbox ideas you can make ahead in 15 minutes — kid-approved, healthy, and built from groceries you already have. Get ahead of the school-year scramble with iEatz.",
+      "bufferId": "6a54127498dc0120703ab585"
     },
     {
       "id": "jul26-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-07-26T12:25:00-07:00",
       "file": "assets/pinterest/july/jul26-pin-busy-weeknight.png",
       "title": "Busy Weeknight Dinners in 20 Minutes",
       "alt": "Plate piled with noodles, mushrooms and herbs. Headline: Busy weeknight dinners in 20 minutes.",
-      "text": "Busy weeknight dinners in 20 minutes, one pan, whole family fed. When school nights get hectic, iEatz turns what's already in your kitchen into fast healthy dinners."
+      "text": "Busy weeknight dinners in 20 minutes, one pan, whole family fed. When school nights get hectic, iEatz turns what's already in your kitchen into fast healthy dinners.",
+      "bufferId": "6a5413909372accfada7f5db"
     },
     {
       "id": "jul28-pin",
