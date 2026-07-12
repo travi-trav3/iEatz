@@ -126,87 +126,96 @@
     },
     {
       "id": "jul28-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-07-28T15:31:00-07:00",
       "file": "assets/pinterest/july/jul28-pin-highprotein-lunch.png",
       "title": "High-Protein Lunches for the Week — Meal-Prep Friendly",
       "alt": "Blue bowl with soft-boiled eggs, avocado, greens, tomatoes and radish. Headline: High-protein lunches for the week.",
-      "text": "High-protein lunch ideas for the week: eggs, avocado and greens that meal-prep in minutes. iEatz builds high-protein recipes from your grocery receipt — no macro math required."
+      "text": "High-protein lunch ideas for the week: eggs, avocado and greens that meal-prep in minutes. iEatz builds high-protein recipes from your grocery receipt — no macro math required.",
+      "bufferId": "6a541b959372accfada83bf1"
     },
     {
       "id": "jul29-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-07-29T14:12:00-07:00",
       "file": "assets/pinterest/july/jul29-pin-pantry-dinner.png",
       "title": "Pantry Dinner Ideas — Your Pantry Is Tonight's Dinner",
       "alt": "Glass jars of lentils, rice, oats and dried goods on a pantry shelf. Headline: Your pantry is tonight's dinner.",
-      "text": "Pantry dinner ideas from the staples you already own — lentils, rice, oats, beans. No shopping trip required: iEatz scans your receipt and turns pantry staples into tonight's dinner."
+      "text": "Pantry dinner ideas from the staples you already own — lentils, rice, oats, beans. No shopping trip required: iEatz scans your receipt and turns pantry staples into tonight's dinner.",
+      "bufferId": "6a541ced3c32835e9d8d302e"
     },
     {
       "id": "jul31-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-07-31T14:44:00-07:00",
       "file": "assets/pinterest/july/jul31-pin-grocery-five.png",
       "title": "One Grocery Run, Five Weeknight Dinners — Back-to-School",
       "alt": "Corner grocery storefront with produce stands at dusk. Headline: One grocery run, five weeknight dinners.",
-      "text": "One grocery trip, five weeknight dinners — the back-to-school survival plan. iEatz maps your receipt to a week of fast healthy meals so school nights run themselves."
+      "text": "One grocery trip, five weeknight dinners — the back-to-school survival plan. iEatz maps your receipt to a week of fast healthy meals so school nights run themselves.",
+      "bufferId": "6a541d039372accfada849b0"
     },
     {
       "id": "jul18-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-07-18T21:44:00-07:00",
       "file": "assets/social/july/jul18-ig-recipe-pasta.png",
       "alt": "Bowl of pesto farfalle pasta with cherry tomatoes and greens. Headline: 20-minute weeknight pasta.",
-      "text": "20-minute weeknight pasta from five ingredients — pesto farfalle with cherry tomatoes and greens. One pan, no planning: iEatz matched this recipe to what was already on the receipt.\n\nDownload iEatz Healthy on the App Store.\n\n#weeknightdinner #easypasta #5ingredientmeals #pantrycooking"
+      "text": "20-minute weeknight pasta from five ingredients — pesto farfalle with cherry tomatoes and greens. One pan, no planning: iEatz matched this recipe to what was already on the receipt.\n\nDownload iEatz Healthy on the App Store.\n\n#weeknightdinner #easypasta #5ingredientmeals #pantrycooking",
+      "bufferId": "6a541d139372accfada84a5e"
     },
     {
       "id": "jul20-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-07-20T19:44:00-07:00",
       "file": "assets/social/july/jul20-ig-money-waste.png",
       "alt": "Large green $1,500 statistic: groceries the average household throws out every year.",
-      "text": "The average household throws out about $1,500 of groceries a year — most of it food that never got cooked. iEatz turns what's already in your kitchen into dinner, so more of it gets eaten, not tossed.\n\nFree on the App Store.\n\n#foodwaste #mealplanning #budgetcooking #pantrymeals"
+      "text": "The average household throws out about $1,500 of groceries a year — most of it food that never got cooked. iEatz turns what's already in your kitchen into dinner, so more of it gets eaten, not tossed.\n\nFree on the App Store.\n\n#foodwaste #mealplanning #budgetcooking #pantrymeals",
+      "bufferId": "6a541d235f9decadd29a332a"
     },
     {
       "id": "jul22-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-07-22T13:12:00-07:00",
       "file": "assets/social/july/jul22-ig-grocery-instacart.png",
       "alt": "Woman shopping with a green basket of fresh greens in a grocery aisle. Headline: One grocery run, a week of dinners.",
-      "text": "One grocery run, a week of dinners. Scan the receipt and iEatz plans five healthy meals from what you bought — and fills any gaps with a one-tap Instacart cart.\n\nDownload iEatz Healthy on the App Store.\n\n#groceryhaul #mealprep #weeknightdinner #instacart"
+      "text": "One grocery run, a week of dinners. Scan the receipt and iEatz plans five healthy meals from what you bought — and fills any gaps with a one-tap Instacart cart.\n\nDownload iEatz Healthy on the App Store.\n\n#groceryhaul #mealprep #weeknightdinner #instacart",
+      "bufferId": "6a541d333c32835e9d8d31da"
     },
     {
       "id": "jul24-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-07-24T20:04:00-07:00",
       "file": "assets/social/july/jul24-ig-product-feature.png",
       "alt": "iEatz app recipe screen in a phone frame: pan-seared chicken with asparagus and spinach, macros shown. Headline: Scan your receipt. Get dinner.",
-      "text": "Scan your receipt. Get dinner. iEatz reads what you already bought and builds recipes from it in seconds — macros included, estimated per serving.\n\nFree on the App Store.\n\n#recipeapp #mealplanningapp #healthyeating #dinnerideas"
+      "text": "Scan your receipt. Get dinner. iEatz reads what you already bought and builds recipes from it in seconds — macros included, estimated per serving.\n\nFree on the App Store.\n\n#recipeapp #mealplanningapp #healthyeating #dinnerideas",
+      "bufferId": "6a541d425f9decadd29a33ed"
     },
     {
       "id": "jul25-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-07-25T21:44:00-07:00",
       "file": "assets/social/july/jul25-ig-transformation.png",
       "alt": "Five-star review quote from Ashly H.: Three weeks in and I haven't ordered takeout once. I just cook what's already in my kitchen.",
-      "text": "Three weeks in and Ashly hasn't ordered takeout once — just dinners built from what's already in her kitchen. From the App Store reviews.\n\nDownload iEatz Healthy and cook what you have.\n\n#notakeout #homecooking #healthyhabits #ieatzhealthy"
+      "text": "Three weeks in and Ashly hasn't ordered takeout once — just dinners built from what's already in her kitchen. From the App Store reviews.\n\nDownload iEatz Healthy and cook what you have.\n\n#notakeout #homecooking #healthyhabits #ieatzhealthy",
+      "bufferId": "6a541d5498dc0120703b16c6"
     },
     {
       "id": "jul27-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-07-27T19:44:00-07:00",
       "file": "assets/social/july/jul27-ig-pantry-fridge.png",
       "alt": "Real fridge shelf with grapes, strawberries, sausages and jars. Headline: 3 things in your fridge, one dinner.",
-      "text": "3 things in your fridge, one dinner. Point iEatz at the fridge chaos and it finds the recipe hiding in there — zero shopping, less waste.\n\nFree on the App Store.\n\n#fridgecleanout #pantrycooking #reducefoodwaste #easydinners"
+      "text": "3 things in your fridge, one dinner. Point iEatz at the fridge chaos and it finds the recipe hiding in there — zero shopping, less waste.\n\nFree on the App Store.\n\n#fridgecleanout #pantrycooking #reducefoodwaste #easydinners",
+      "bufferId": "6a541d6c9cf8918f1dcdd6a9"
     },
     {
       "id": "jul29-ig",
