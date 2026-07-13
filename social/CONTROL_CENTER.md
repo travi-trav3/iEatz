@@ -16,9 +16,14 @@ them, and schedule them to Buffer at optimal times — on brand, error-free, eve
 ## 1. Environment (read first)
 - **Claude Code on the web**, ephemeral cloud container. Anything not committed to
   git is lost when the session ends. **Commit/push everything that matters.**
-- Repo: **`travi-trav3/iEatz`**, cloned at `/home/user/iEatz`. Work on branch
-  **`claude/cool-planck-pL6bL`** (or the current feature branch). GitHub MCP is
-  scoped to this repo only.
+- Repo: **`travi-trav3/iEatz`**, cloned at `/home/user/iEatz`. Work on the current
+  feature branch (recent: `add-food-photography`, which also **serves the live post
+  images** — keep it alive until its scheduled posts publish; deleting it 404s the URLs).
+  GitHub MCP is scoped to this repo only.
+- **Portable master skill:** the brand-agnostic pipeline lives in the Notion
+  **"Social-Content-Pipeline"** page (§9). This file is the iEatz *instance* of it.
+  When a learning is brand-agnostic, memorialize it in BOTH — the Notion skill (so other
+  accounts inherit it) and here.
 - The production system lives in **`social/`** (this folder). Render harness in
   `social/render/`. Photos in `assets/photos/`. Output PNGs in
   `assets/pinterest/` and `assets/social/`.
@@ -148,22 +153,68 @@ logo collisions, and a math error.
 Org **"Applied Intelligence Co."** = `6a138b7d82bb2ed009fed356`.
 - **Instagram** channel `6a14b495c687a22dd4267bfc` — `create_post` needs
   `metadata.instagram = {type:"post", shouldShareToFeed:true}`. **Cap ≈ 4–5 posts/week.**
-  Slots (PT): mon 19:44/20:57 · tue 17:45/19:13 · wed 13:12/18:54 · thu 08:41/09:25 ·
-  fri 20:04/22:36 · sat 21:44/22:00 · sun 20:17/21:33.
 - **Pinterest** channel `6a14637fc687a22dd424eee8`, board **Quick Saves**
   `boardServiceId "1011339728760978564"` — `create_post` needs
   `metadata.pinterest = {boardServiceId, title (<100 chars, keyword), url (App Store)}`.
-  Pinterest can post frequently. Slots (PT): mon 14:18/16:47/20:13/21:57 · tue 15:31/16:15/20:17/21:33 ·
-  wed 14:12/15:56/16:40/19:53 · thu 14:09/16:40/18:12/20:15 · fri 14:44/15:00/16:15/17:31 ·
-  sat 16:39/18:11/19:27/23:01 · sun 12:25/15:13/20:02/21:18.
+  Pinterest can post daily. (Keyword boards TBD — pins land in Quick Saves until they exist;
+  re-home later for Rich Pins.)
 - Common `create_post` args: `channelId`, `schedulingType:"automatic"`, `mode:"customScheduled"`,
   `dueAt` (ISO with `-07:00`), `text`, `assets:[{image:{url, thumbnailUrl, metadata:{altText, dimensions}}}]`.
-- **Preview gate:** show the user rendered images before scheduling live unless told otherwise.
-  Recipe captions carry the full short recipe + macros. Alt text is descriptive.
-- **Limitation:** Buffer's API here has **no `updateIdea`/`editIdea`** — you cannot attach media
-  to an existing *idea*. Either `create_post` fresh, or save PNGs + a manifest for manual attach.
-- To move a scheduled post: `edit_post` (carry `assets` + `metadata` forward, set new `dueAt`,
-  `saveToDraft:false`). To hold one: `saveToDraft:true`.
+
+### 8.1 Cadence — post like a human, not a scheduler (learned Jul 2026)
+Do NOT fall into a fixed grid. The classic bot tell is **IG on Mon/Wed/Fri every week at
+identical times**, and **all Pinterest pins clustered in one afternoon band**. Two goals:
+(a) read as human, (b) collect engagement data on **every day of the week** so we learn each
+account's real best times instead of guessing.
+- **Cover all 7 weekdays.** Over any ~2-week run, every weekday Mon–Sun carries ≥1 post per
+  channel — no day permanently dark. IG drifts to M/W/F on its own; deliberately force Tue/Thu/Sun in.
+- **Vary the daypart.** Spread across early morning (7–9a), lunch (12–1p), evening (6–8p), and
+  late-night (9–10p) within a batch. Never clump everything in one 2–4p block.
+- **Irregular minutes, never repeat a time.** Use off-round minutes (7:20, 9:50, 10:35, 21:10);
+  no two posts in a batch share the same clock time.
+- **Uneven spacing** (skip a day here, double up there) reads more human than perfect alternation.
+- Keep IG ≈4–5/wk; Pinterest near-daily. Anchor every date to `get_account` `currentTime`
+  (never schedule in the past — the session clock can jump days).
+- **Once ≥2–3 weeks of `sent` metrics exist,** weight future times toward each account's actual
+  top performers. That real data replaces any generic starting slots — do not hand-carry another
+  account's slot grid; let each account teach you its own.
+
+### 8.2 Autonomy — pre-approve Buffer so no one babysits (learned Jul 2026)
+The operator must not click "allow" on every Buffer call. Set this up first, before a scheduling run:
+- Allow-rule pre-authorizes the whole Buffer server:
+  `.claude/settings.json` → `{"permissions":{"allow":["mcp__Buffer"]}}` (bare server name = all its tools).
+  Commit it to the repo (portable across sessions) AND add it to the operator's global
+  `~/.claude/settings.json` (covers local CLI use).
+- **Settings load at session START.** Writing/committing them mid-session does NOT stop prompts in
+  that session — it applies to the **next** session, and only if the file is on the branch that
+  session checks out (so land it on `main` for every future cloud session to inherit it).
+- **In-session stopgap:** on the prompt, choose **"don't ask again for Buffer,"** NOT "allow once"
+  (which never persists). "Allow once" being the only button clicked is the usual cause of endless prompts.
+
+### 8.3 Ledger — idempotent scheduling through flapping connectors (learned Jul 2026)
+Buffer disconnects mid-session and parallel calls can drop. Track every batch in
+`social/manifest/<batch>.json` as the resume source-of-truth so scheduling is safe to stop/retry
+with zero duplicates:
+- Batch-level: org id, channel IDs + `boardServiceId`, `urlBase` (raw.githubusercontent branch base),
+  `appStoreUrl`, `igMetadata`.
+- Per post: `id`, `status` (`pending`→`scheduled`), `bufferId` (returned on success), `channel`,
+  `dueAt`, `file`, `title`/`alt`, `text`.
+- Schedule one post → on success write its `bufferId` + `status:scheduled` → commit. A failed call
+  fails at the permission/connector layer *before* execution, so just retry it — never creates a dupe.
+- Resume = read the ledger, act only on `pending`. This is how a run survives compaction/restart.
+
+### 8.4 Editing & batching
+- To move a scheduled post: `edit_post` — the post is **re-validated as a whole, not merged** —
+  so carry `assets` + `metadata` + `text` forward and change only `dueAt` (or content). Dropping the
+  asset or `metadata.instagram.type`/`metadata.pinterest.boardServiceId` rejects the edit.
+  `saveToDraft:false` keeps it scheduled; `saveToDraft:true` holds it.
+- **Once Buffer is pre-approved (§8.2), `create_post`/`edit_post` can be batched in parallel**
+  (verified Jul 2026 — six IG edits in one turn all succeeded). Before approval, parallel calls fail
+  ("permission stream closed") — fall back to one call per turn. Edits are idempotent, so a
+  partially-failed batch is safe to re-fire.
+- **No `updateIdea`/`editIdea`** — cannot attach media to an existing *idea*; `create_post` fresh.
+- **Preview gate:** show rendered images before scheduling live unless told otherwise. Recipe
+  captions carry the full short recipe + estimated macros; alt text is descriptive.
 
 ## 9. Other connections
 - **Google Drive** MCP — how the user hands you logo assets / design zips (egress-safe).
@@ -185,13 +236,45 @@ Org **"Applied Intelligence Co."** = `6a138b7d82bb2ed009fed356`.
 7. Slack engagement alerts. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
-- Repo branch `claude/cool-planck-pL6bL`. Landing page + `social/` committed.
-- Scheduled/sent: original 10 Pinterest pins (Jul 1–10); 4 clean drafts rescheduled;
-  4 remade broken posts (leftover-rice, poke, chickpea, shakshuka) scheduled; 1 IG post
-  ("weeknight dinner") published early on Jul 9.
-- **Staged, pending a Buffer reconnect:** the 12-post recipe + Instacart pillar batch
-  (see `assets/social/` and `social/manifest/`) — 6 concepts × IG+Pinterest, Pinterest Jul 14+,
-  IG Jul 18+.
-- **To import:** the "Content Brand Pillars" CPP build from another session (24 PNGs +
-  JSX/CSS templates) — bring in via Send to Claude Code Web or a Drive zip, then audit
-  against sections 3 & 6 before scheduling.
+- Branch `add-food-photography`: landing page, `social/`, 74-photo library, and all July
+  assets committed. Buffer is pre-approved via `.claude/settings.json` (§8.2).
+- **July 18–31 batch fully scheduled (20 posts):** 12 Pinterest + 8 Instagram, all rendered,
+  QA'd, hosted, and verified 200. Ledger of record: `social/manifest/july-batch.json`
+  (every post's `bufferId`/`dueAt`/`status`).
+- **Cadence reworked (Jul 13):** IG spread across all 7 weekdays with humanized times
+  (was rigid M/W/F); Pinterest times humanized off the old 2–4p block. See §8.1.
+- **August plan:** SEO/AEO recipe-page **Content Hub** (`social/CONTENT_HUB.md`) — page-backed
+  Pinterest growth; KPI is total-install trend (per-post attribution descoped; optional
+  Onelink/deeplink UTMs). Needs the website repo added via `add_repo` and 7 Pinterest keyword boards.
+- **Open follow-ups:** create the 7 Pinterest keyword boards (Buffer API can't — native only),
+  then re-home Quick-Saves pins for Rich Pins.
+
+## 12. Applying this to a new account (portability)
+This file is iEatz-specific; the reusable engine is the **`social-content-pipeline` skill**
+(Claude Skill + mirrored Notion page). To stand up a new brand, **swap the config, keep the method:**
+- **Swap (per account):** brand tokens/fonts, photo library, logo/brand mark, voice + "never/always say"
+  rules, approved-testimonial list, real app/product screenshots, Buffer org + channel IDs +
+  `boardServiceId`, hosting repo/branch, Slack channel, destination URL.
+- **Keep (every account):** the phase order, the 8-pillar rotation discipline, the humanized
+  cadence rules (§8.1), Buffer pre-approval (§8.2), the ledger resume pattern (§8.3), the
+  mandatory QA gate (§6), the hard constraints (§3: no fabricated UI, real testimonials, macros
+  labeled estimates), and hosting-on-raw + verify-200.
+- First move on a new account: run the skill's **brand intake**, then create the account's own
+  CONTROL_CENTER-style instance file so the next session resumes cleanly.
+
+## 13. Evolution log (what changed, so learnings compound)
+- **Jul 2026 — photo library:** 4 dishes → **74 photos** across 5 categories, indexed in
+  `assets/photos/photos.json`. QA lesson: slugs lie (a "gluten-free" pick showed bread) — open every image.
+- **Jul 2026 — pillars:** 5 → **8** (added Pantry/Fridge, Health/Diet, Grocery/Instacart as topic axes).
+- **Jul 13 2026 — cadence:** killed the rigid M/W/F + fixed-slot grid. New rule: cover all 7
+  weekdays, vary dayparts, irregular non-repeating minutes, let `sent` metrics teach each account
+  its own best times (§8.1).
+- **Jul 2026 — autonomy:** established Buffer pre-approval via `.claude/settings.json` allow-rule
+  and documented the "settings load at session start" gotcha (§8.2).
+- **Jul 2026 — reliability:** formalized the `manifest/<batch>.json` ledger as the idempotent
+  resume source-of-truth for scheduling through connector flapping (§8.3); confirmed parallel
+  `edit_post` works once Buffer is allow-listed (§8.4).
+- **Jul 2026 — hosting:** corrected Pages→`raw.githubusercontent.com` (Pages/`github.io` is
+  egress-blocked); branch that serves images must stay alive until posts publish.
+- **Aug 2026 (planned):** SEO/AEO recipe-page Content Hub (`CONTENT_HUB.md`); install-trend KPI
+  over per-post attribution.
