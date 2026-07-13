@@ -219,7 +219,8 @@
     },
     {
       "id": "jul29-ig",
-      "status": "pending",
+      "status": "scheduled",
+      "bufferId": "6a5455635f9decadd29c17e4",
       "channel": "instagram",
       "dueAt": "2026-07-29T13:12:00-07:00",
       "file": "assets/social/july/jul29-ig-health-diet.png",
@@ -228,7 +229,8 @@
     },
     {
       "id": "jul31-ig",
-      "status": "pending",
+      "status": "scheduled",
+      "bufferId": "6a54556d9372accfadaa2e9f",
       "channel": "instagram",
       "dueAt": "2026-07-31T20:04:00-07:00",
       "file": "assets/social/july/jul31-ig-lifestyle.png",
