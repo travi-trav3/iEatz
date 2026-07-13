@@ -248,6 +248,10 @@ with zero duplicates:
   Onelink/deeplink UTMs). Needs the website repo added via `add_repo` and 7 Pinterest keyword boards.
 - **Open follow-ups:** create the 7 Pinterest keyword boards (Buffer API can't — native only),
   then re-home Quick-Saves pins for Rich Pins.
+- **Pending cleanup (from skill merge C12):** IG was re-spaced to the humanized cadence, but the
+  **12 Pinterest pins are still on the old afternoon grid** (~14:00–16:00, duplicate times) — I held
+  those `edit_post`s during the permission fix. Re-space them: spread dayparts, irregular
+  non-repeating minutes. New target times are staged in `july-batch.json`'s intent; still to apply.
 
 ## 12. Applying this to a new account (portability)
 This file is iEatz-specific; the reusable engine is the **`social-content-pipeline` skill**
@@ -278,3 +282,11 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   egress-blocked); branch that serves images must stay alive until posts publish.
 - **Aug 2026 (planned):** SEO/AEO recipe-page Content Hub (`CONTENT_HUB.md`); install-trend KPI
   over per-post attribution.
+- **Jul 13 2026 — skill merge (two branched sessions → one):** folded a parallel session's deltas
+  into the `social-content-pipeline` skill: partner/co-marketing discipline; inherit-and-remediate
+  an existing queue (audit → safety-hold to draft preserving `dueAt` → triage; repair-in-place >
+  delete > template-substitute); escalate a photography shot-list + min-source-resolution QA fail;
+  egress is broader than Pages (sample partner colors from screenshots); font-acquisition mechanic;
+  persist the render harness portably; recipe+macros derivable from a photo; Slack alert keyed to
+  actual `sent`/`externalLink`; tool-availability ≠ connector-state; verify destination URL.
+  Conflict C12 resolved canonical-wins (see Pending cleanup above re: Pinterest re-spacing).
