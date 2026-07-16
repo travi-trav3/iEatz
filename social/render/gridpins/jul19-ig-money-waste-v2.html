@@ -1,0 +1,128 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../fonts.css">
+<style>:root{
+  --green:#1F8B4C; --green-dark:#0E4A2A; --green-deep:#08311B;
+  --green-light:#E6F4EC; --green-mint:#F2FAF6; --mark-mint:#9FE4B3;
+  --ink:#0A0F0C; --ink-medium:#5C625E; --ink-light:#9CA29F; --ink-faint:#C8CDCA;
+  --paper:#F5F2EA; --paper-deep:#ECE7D8; --white:#FFFFFF;
+  --tomato:#C9412B; --saffron:#E4A93C;
+  --serif:"Instrument Serif","Times New Roman",Georgia,serif;
+  --sans:"Inter Tight","Helvetica Neue",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1000px;height:1500px}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.pin{width:1000px;height:1500px;position:relative;overflow:hidden;display:flex;flex-direction:column;background:var(--paper)}
+
+/* ---------- Brand badge (fridge mark + wordmark) ---------- */
+.badge{display:inline-flex;align-items:center;gap:14px;font-family:var(--sans);font-weight:600;font-size:27px;letter-spacing:-0.01em;color:var(--ink)}
+.badge .mark{width:34px;height:auto;color:var(--green);display:block;flex:none}
+.badge.on-dark{color:var(--paper)}
+.badge.on-dark .mark{color:var(--mark-mint)}
+
+/* ---------- Shared text ---------- */
+.eyebrow{font-family:var(--sans);font-weight:600;font-size:23px;letter-spacing:0.14em;text-transform:uppercase;color:var(--green)}
+.head{font-family:var(--serif);font-weight:400;line-height:0.97;letter-spacing:-0.01em;color:var(--ink)}
+.head .accent{color:var(--green);font-style:italic}
+
+/* ---------- Chips ---------- */
+.chips{display:flex;gap:14px;flex-wrap:wrap}
+.chip{font-family:var(--sans);font-weight:600;font-size:24px;letter-spacing:-0.01em;color:var(--green-dark);background:var(--green-light);padding:13px 24px;border-radius:999px}
+
+/* ---------- T-PHOTO / T-RECIPE (photo top, paper panel bottom) ---------- */
+.t-photo .hero{width:1000px;height:900px;overflow:hidden;position:relative}
+.t-photo .hero img{width:100%;height:100%;object-fit:cover;display:block}
+.t-photo .hero::after{content:"";position:absolute;inset:0;box-shadow:inset 0 -80px 90px -60px rgba(10,15,12,0.28)}
+.t-photo .panel{flex:1;background:var(--paper);padding:74px 76px 60px;display:flex;flex-direction:column}
+.t-photo .head{font-size:86px;margin-top:20px}
+.t-photo .chips{margin-top:34px}
+.t-photo .spacer{flex:1;min-height:24px}
+
+/* ---------- T-STAT (big number on paper) ---------- */
+.t-stat{padding:92px 88px 64px;display:flex;flex-direction:column}
+.t-stat .stat-wrap{flex:1;display:flex;flex-direction:column;justify-content:center}
+.t-stat .stat{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--green);font-size:330px;line-height:0.82;letter-spacing:-0.02em;margin:30px 0 0}
+.t-stat .stat-sub{font-family:var(--serif);font-size:70px;line-height:1.03;color:var(--ink);max-width:780px;margin-top:18px}
+.t-stat .stat-body{display:flex;gap:24px;margin-top:40px;max-width:760px}
+.t-stat .stat-body .rule{width:46px;height:3px;background:var(--green);margin-top:18px;flex:none}
+.t-stat .stat-body p{font-family:var(--sans);font-weight:400;font-size:29px;line-height:1.46;color:var(--ink-medium)}
+.t-stat .stat-body strong{color:var(--ink);font-weight:600}
+.t-stat .accent-photo{position:absolute;top:80px;right:88px;width:250px;height:250px;border-radius:50%;overflow:hidden;box-shadow:0 18px 44px rgba(14,74,42,0.16)}
+.t-stat .accent-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.t-stat .spacer{flex:1}
+
+/* ---------- T-DEVICE (phone screenshot) ---------- */
+.t-device{background:var(--green-mint);padding:84px 0 64px;align-items:center;text-align:center}
+.t-device .dhead{padding:0 90px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.t-device .head{font-size:74px}
+.t-device .dcap{font-family:var(--sans);font-size:27px;line-height:1.4;color:var(--ink-medium);max-width:680px}
+.t-device .stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%}
+.t-device .phone{width:438px;background:#0A0F0C;border-radius:56px;padding:13px;box-shadow:0 44px 100px rgba(14,74,42,0.20),0 8px 24px rgba(14,74,42,0.10)}
+.t-device .phone .screen{border-radius:44px;overflow:hidden;display:block;background:#fff}
+.t-device .phone img{width:100%;display:block}
+.t-device .foot{width:100%;padding:0 84px}
+
+/* ---------- T-LIST (numbered, paper + serif) ---------- */
+.t-list{padding:90px 84px 64px;display:flex;flex-direction:column}
+.t-list .list-wrap{flex:1;display:flex;flex-direction:column;justify-content:center}
+.t-list .head{font-size:92px;margin-top:18px}
+.t-list .list{margin-top:48px}
+.t-list .item{display:flex;gap:30px;align-items:baseline;padding:30px 4px;border-top:1px solid var(--ink-faint)}
+.t-list .item:last-child{border-bottom:1px solid var(--ink-faint)}
+.t-list .num{font-family:var(--serif);font-style:italic;color:var(--green);font-size:66px;line-height:1;min-width:74px;flex:none}
+.t-list .lab{display:flex;flex-direction:column;gap:6px}
+.t-list .lab .t{font-family:var(--sans);font-weight:600;font-size:36px;letter-spacing:-0.01em;color:var(--ink)}
+.t-list .lab .s{font-family:var(--sans);font-weight:400;font-size:24px;color:var(--ink-medium)}
+.t-list .spacer{flex:1;min-height:20px}
+
+/* footer row shared */
+.foot{display:flex;align-items:center;justify-content:space-between}
+.foot .url{font-family:var(--sans);font-weight:500;font-size:24px;color:var(--ink-light);letter-spacing:-0.01em}
+
+.eyebrow.mint{color:var(--mark-mint)}
+.foot-dark{display:flex;align-items:center;justify-content:space-between;padding:0}
+.foot-dark .url{font-family:var(--sans);font-weight:600;font-size:24px;color:rgba(245,242,234,0.66)}
+.foot-dark.abs{position:absolute;left:72px;right:72px;bottom:56px}
+/* Shell A: deep green */
+.ig-statdark{background:var(--green-deep);padding:88px 80px 56px;display:flex;flex-direction:column}
+.ig-statdark .swrap{flex:1;display:flex;flex-direction:column;justify-content:center}
+.ig-statdark .bignum{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--mark-mint);line-height:0.9;letter-spacing:-0.02em;margin-top:26px}
+.ig-statdark .subhead{font-family:var(--serif);font-weight:400;font-size:64px;line-height:1.04;letter-spacing:-0.01em;color:var(--paper);margin-top:30px;max-width:860px}
+.ig-statdark .stat-body{display:flex;gap:24px;margin-top:42px;max-width:800px}
+.ig-statdark .stat-body .rule{width:46px;height:3px;background:var(--mark-mint);margin-top:18px;flex:none}
+.ig-statdark .stat-body p{font-family:var(--sans);font-size:29px;line-height:1.5;color:rgba(245,242,234,0.82)}
+/* Shell B: full bleed */
+.ig-bleed{background:var(--ink)}
+.ig-bleed .bg,.ig-quotedark .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,12,0.10) 0%,rgba(10,15,12,0.06) 34%,rgba(10,15,12,0.82) 86%)}
+.scrim.heavy{background:linear-gradient(180deg,rgba(10,15,12,0.46) 0%,rgba(10,15,12,0.52) 40%,rgba(10,15,12,0.88) 88%)}
+.ig-bleed .bwrap{position:absolute;left:72px;right:72px;bottom:170px}
+.ig-bleed .bhead{font-family:var(--serif);font-weight:400;font-size:92px;line-height:0.99;letter-spacing:-0.01em;color:var(--paper)}
+.ig-bleed .bhead .accent{color:var(--mark-mint);font-style:italic}
+.ig-bleed .bsub{font-family:var(--sans);font-size:29px;line-height:1.45;color:rgba(245,242,234,0.85);margin-top:26px;max-width:800px}
+.ig-bleed .eyebrow,.ig-quotedark .eyebrow{margin-bottom:22px}
+/* Shell C: quote overlay */
+.ig-quotedark{background:var(--ink)}
+.ig-quotedark .qwrap{position:absolute;left:72px;right:72px;bottom:170px}
+.ig-quotedark .quote{font-family:var(--serif);font-weight:400;font-size:76px;line-height:1.06;letter-spacing:-0.01em;color:var(--paper)}
+.ig-quotedark .quote .accent{color:var(--mark-mint);font-style:italic}
+.ig-quotedark .attr{font-family:var(--sans);font-weight:600;font-size:24px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mark-mint);margin-top:34px}
+
+html,body{width:1080px;height:1350px;margin:0}.pin{width:1080px;height:1350px}
+.ig-statdark .bignum{font-size:290px}
+</style></head><body><div class="pin ig-statdark">
+  <div class="swrap">
+    <div class="eyebrow mint">The pantry math</div>
+    <div class="bignum">$1,500</div>
+    <h1 class="subhead">of groceries thrown out per household, <span style="color:var(--mark-mint);font-style:italic">every year.</span></h1>
+    <div class="stat-body"><span class="rule"></span><p>Most of it is food that never got cooked. iEatz turns what’s already in your kitchen into dinner — so it gets eaten, not tossed.</p></div>
+  </div>
+  <div class="foot-dark"><div class="badge on-dark"><svg class="mark" viewBox="0 0 38.25 58.486" fill="none">
+<path d="M 0 5.03 C 0 2.252 2.252 0 5.03 0 L 33.22 0 C 35.998 0 38.25 2.252 38.25 5.03 L 38.25 20.119 L 0 20.119 L 0 5.03 Z" fill="currentColor"></path>
+<path d="M 0 49.83 C 0 52.608 2.252 54.86 5.03 54.86 L 33.22 54.86 C 35.998 54.86 38.25 52.608 38.25 49.83 L 38.25 22.81 L 0 22.81 L 0 49.83 Z" fill="currentColor"></path>
+<path d="M 6.083 6.2 C 6.083 5.489 6.659 4.913 7.369 4.913 C 8.08 4.913 8.656 5.489 8.656 6.2 L 8.656 16.259 C 8.656 16.97 8.08 17.546 7.369 17.546 C 6.659 17.546 6.083 16.97 6.083 16.259 L 6.083 6.2 Z" fill="currentColor"></path>
+<path d="M 6.083 26.787 C 6.083 26.076 6.659 25.5 7.369 25.5 C 8.08 25.5 8.656 26.076 8.656 26.787 L 8.656 36.846 C 8.656 37.557 8.08 38.133 7.369 38.133 C 6.659 38.133 6.083 37.557 6.083 36.846 L 6.083 26.787 Z" fill="currentColor"></path>
+<path d="M 5.264 54.86 L 10.878 54.86 L 9.892 57.771 C 9.748 58.199 9.347 58.486 8.895 58.486 L 7.2 58.486 C 6.743 58.486 6.338 58.192 6.198 57.757 L 5.264 54.86 Z" fill="currentColor"></path>
+<path d="M 27.489 54.86 L 33.103 54.86 L 32.117 57.771 C 31.972 58.199 31.571 58.486 31.12 58.486 L 29.425 58.486 C 28.968 58.486 28.563 58.192 28.423 57.757 L 27.489 54.86 Z" fill="currentColor"></path>
+</svg><span>iEatz Healthy</span></div><span class="url">ieatzhealthy.com</span></div>
+</div></body></html>

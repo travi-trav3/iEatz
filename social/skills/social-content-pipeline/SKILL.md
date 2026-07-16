@@ -71,7 +71,16 @@ Before producing anything new on an account you're taking over:
 ### Phase 2: Content planning
 Plan the full batch before rendering:
 1. **Pillar rotation** — never two of the same pillar back-to-back; cycle through all before repeating.
-2. **Template variety** — alternate formats (photo hero, stat card, quote, recipe, comparison, list, device).
+2. **Template variety — and SURFACE variety (grid-first design).** Rotating named templates is not
+   enough: if every template shares one background and type anatomy, the grid still reads as
+   wallpaper. Rotate the **surface** — e.g. light paper / dark brand color / full-bleed photo with
+   overlay — so adjacent tiles contrast at grid distance. Rules learned the hard way (Jul 2026, a
+   grid where 5 of 8 posts were the same photo-top+cream-panel shell, three of them consecutive):
+   - No two **adjacent** posts (by publish order) share the same shell; cap any one shell at ~⅓ of a batch.
+   - Before scheduling, view the plan **as the grid** — thumbnails in a row next to the already-published
+     tiles — not as isolated images. Plan against the live grid, not just within the batch.
+   - Build at least one dark-surface and one full-bleed-photo shell into every brand's template kit;
+     brand tokens usually already contain the needed dark color (invert the palette).
 3. **Photo tracking** — never reuse the same hero within ~30 days; favor fresh, unique imagery. Open
    every candidate — slugs lie.
 4. **When the hero library is too thin to sustain a pillar without repeats, don't quietly repeat —

@@ -282,6 +282,12 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   egress-blocked); branch that serves images must stay alive until posts publish.
 - **Aug 2026 (planned):** SEO/AEO recipe-page Content Hub (`CONTENT_HUB.md`); install-trend KPI
   over per-post attribution.
+- **Jul 13 2026 — grid-variety fix:** operator flagged the IG grid as monotone — 5 of 8 July posts
+  were the same photo-top+cream-panel shell (3 consecutive), and ALL templates shared one cream
+  anatomy. Added 3 shells in `render/grid-fix-render.js` (`ig-statdark` deep-green stat,
+  `ig-bleed` full-bleed photo overlay, `ig-quotedark` dark testimonial overlay) and swapped 5
+  scheduled posts to v2 assets via edit_post. New rule (Skill Phase 2): rotate SURFACES
+  (paper/deep-green/full-bleed), no two adjacent posts share a shell, plan against the live grid.
 - **Jul 13 2026 — skill merge (two branched sessions → one):** folded a parallel session's deltas
   into the `social-content-pipeline` skill: partner/co-marketing discipline; inherit-and-remediate
   an existing queue (audit → safety-hold to draft preserving `dueAt` → triage; repair-in-place >
