@@ -81,7 +81,17 @@ Design tokens: `index.html` `:root` block and `social/render/base.css`
 - Templates already built (classes in `base.css` + scripts): `t-photo` (photo hero + paper panel),
   `t-recipe` (phone recipe card — phone is CONTAINED with the badge in clear paper below),
   `t-stat` (big green italic number), `t-list` (numbered, paper+serif), `t-device` (app screenshot
-  in phone), `t-compare` (price $X→$Y), `icp` (Instacart-forward: photo + small "Shop with Instacart" chip).
+  in phone), `t-compare` (price $X→$Y), `icp` (Instacart-forward: photo + small "Shop with Instacart" chip);
+  grid-fix shells (`grid-fix-render.js`): `ig-statdark` (deep-green stat), `ig-bleed` (full-bleed photo
+  overlay), `ig-quotedark` (dark testimonial); design-system ports (`template-depth-render.js`, Jul 16):
+  `ig-steps` (numbered white cards on paper, from TplThreeSteps), `ig-recipehero` (photo-dominant recipe
+  feature, from TplRecipeHero), `ig-cta` (closing CTA slide, from TplCTA — not yet used).
+- **The canonical template depth lives in the Drive design system** (folder "Design System: iEatz" →
+  "iEatz Healthy Design System" → `ui_kits/instagram/Templates.jsx`, Drive file id
+  `1dKPveYPjtsQA_eja13xqRs33Z5LFPJ6Y`): 6 IG templates — EditorialTitle, BigStat (paper + circle photo
+  accent), ThreeSteps, RecipeHero, Quote, CTA. ALL are now ported here. When planning a batch, rotate
+  through the FULL set, not just the shells the last batch used. (The 19 MB "PNGs_iEatz CPP Tiles.zip"
+  in Drive exceeds the connector's 10 MB download limit — use the JSX sources instead.)
 - Content Pillars (CPP) system: import the Claude Design bundle (`Content Pillars.html`,
   `Carousels.jsx`, `Pins.jsx`, `Shared.jsx`, `cpp.css`, `colors_and_type.css`, real screenshots)
   via **"Send to Claude Code Web"** or a Drive zip — the DesignSync MCP needs interactive login
@@ -269,6 +279,13 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Jul 16 2026 — template-depth fix:** operator flagged the grid as same/similar templates again.
+  Root cause: the harness had ported only a SUBSET of the design system's IG templates — TplThreeSteps,
+  TplRecipeHero and TplCTA (from Drive `ui_kits/instagram/Templates.jsx`) were never implemented, so
+  rotation could only cycle the shells that existed locally. Ported all three
+  (`render/template-depth-render.js`), rebuilt the Jul 17 legacy shakshuka post (→ ig-steps) and
+  jul18 pasta (→ ig-recipehero), swapped via edit_post. New rule: batch planning starts from the FULL
+  design-system template list (§4), and any template not yet in the harness gets ported, not skipped.
 - **Jul 2026 — photo library:** 4 dishes → **74 photos** across 5 categories, indexed in
   `assets/photos/photos.json`. QA lesson: slugs lie (a "gluten-free" pick showed bread) — open every image.
 - **Jul 2026 — pillars:** 5 → **8** (added Pantry/Fridge, Health/Diet, Grocery/Instacart as topic axes).

@@ -23,7 +23,7 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "[rev 2026-07-16b: full reconcile vs Buffer — all 20 posts match (bufferId/dueAt/asset/channel). ONE post live in the queue is NOT part of this batch: legacy IG post 6a34146dac82a80d78ee25f0 (fix-shakshuka.png, due 2026-07-17T08:41-07:00, created Jun 18), image hosted on branch claude/cool-planck-pL6bL — that branch must ALSO stay alive through Jul 17; image verified 200 and QA-passed 2026-07-16.] All 20 PNGs QA-passed + verified 200 on 2026-07-12. Keep branch add-food-photography alive until Jul 31 posts publish. Buffer MCP flapping during scheduling; statuses below track progress. For pending: create_post with channelId, schedulingType=automatic, mode=customScheduled, dueAt as listed, text, assets image url=urlBase+file (thumbnailUrl same, altText + dimensions), and metadata (pinterest: boardServiceId+title+url=appStoreUrl; instagram: igMetadata). [rev 2026-07-13: IG rescheduled to span all 7 weekdays with humanized times; Pinterest times pending humanization.] [rev 2026-07-16: all 12 Pinterest pins re-timed to humanized schedule via edit_post, confirmed in Buffer.] [rev 2026-07-13b: grid-variety fix — 5 IG assets replaced with v2 shells (deep-green stat x2, full-bleed photo x2, dark quote overlay x1) so surfaces rotate cream/green/photo; swapped in Buffer via edit_post.]",
+  "note": "[rev 2026-07-16c: template-depth fix — Travis flagged grid monotony; root cause: harness had only a subset of the design system's IG templates. Ported TplThreeSteps/TplRecipeHero/TplCTA from Drive ui_kits/instagram/Templates.jsx into social/render/template-depth-render.js. Jul 17 legacy post + jul18-ig re-rendered on the new shells and swapped via edit_post (confirmed). NOTE: those two v2 PNGs are hosted on branch claude/social-handover-review-sw772y — that branch must stay alive through Jul 18.] [rev 2026-07-16b: full reconcile vs Buffer — all 20 posts match (bufferId/dueAt/asset/channel). ONE post live in the queue is NOT part of this batch: legacy IG post 6a34146dac82a80d78ee25f0 (fix-shakshuka.png, due 2026-07-17T08:41-07:00, created Jun 18), image hosted on branch claude/cool-planck-pL6bL — that branch must ALSO stay alive through Jul 17; image verified 200 and QA-passed 2026-07-16.] All 20 PNGs QA-passed + verified 200 on 2026-07-12. Keep branch add-food-photography alive until Jul 31 posts publish. Buffer MCP flapping during scheduling; statuses below track progress. For pending: create_post with channelId, schedulingType=automatic, mode=customScheduled, dueAt as listed, text, assets image url=urlBase+file (thumbnailUrl same, altText + dimensions), and metadata (pinterest: boardServiceId+title+url=appStoreUrl; instagram: igMetadata). [rev 2026-07-13: IG rescheduled to span all 7 weekdays with humanized times; Pinterest times pending humanization.] [rev 2026-07-16: all 12 Pinterest pins re-timed to humanized schedule via edit_post, confirmed in Buffer.] [rev 2026-07-13b: grid-variety fix — 5 IG assets replaced with v2 shells (deep-green stat x2, full-bleed photo x2, dark quote overlay x1) so surfaces rotate cream/green/photo; swapped in Buffer via edit_post.]",
   "posts": [
     {
       "id": "jul18-pin",
@@ -158,12 +158,24 @@
       "bufferId": "6a541d039372accfada849b0"
     },
     {
+      "id": "jul17-ig-legacy",
+      "status": "scheduled",
+      "bufferId": "6a34146dac82a80d78ee25f0",
+      "channel": "instagram",
+      "dueAt": "2026-07-17T08:41:00-07:00",
+      "file": "assets/social/july/jul17-ig-recipe-shakshuka-v2.png",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/claude/social-handover-review-sw772y/assets/social/july/jul17-ig-recipe-shakshuka-v2.png",
+      "alt": "Skillet shakshuka in three numbered steps on warm paper: 01 simmer the tomatoes, 02 crack the eggs right in, 03 cover until just set. Headline: Skillet shakshuka, in three moves.",
+      "text": "Canned tomatoes. Eggs. That cumin you bought six months ago. Twenty minutes in one pan and you have a dinner that looks like you spent an hour on it.\n\niEatz matched this recipe to what was on the receipt. Download iEatz Healthy on the App Store.\n\n#ieatzhealthy #shakshuka #easyrecipes #onepanmeal #highprotein"
+    },
+    {
       "id": "jul18-ig",
       "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-07-18T10:35:00-07:00",
-      "file": "assets/social/july/jul18-ig-recipe-pasta.png",
-      "alt": "Bowl of pesto farfalle pasta with cherry tomatoes and greens. Headline: 20-minute weeknight pasta.",
+      "file": "assets/social/july/jul18-ig-recipe-pasta-v2.png",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/claude/social-handover-review-sw772y/assets/social/july/jul18-ig-recipe-pasta-v2.png",
+      "alt": "Pesto farfalle pasta with cherry tomatoes filling the top of the frame; chips read 20 min, one pan, 5 ingredients. Headline: 20-minute weeknight pasta.",
       "text": "20-minute weeknight pasta from five ingredients — pesto farfalle with cherry tomatoes and greens. One pan, no planning: iEatz matched this recipe to what was already on the receipt.\n\nDownload iEatz Healthy on the App Store.\n\n#weeknightdinner #easypasta #5ingredientmeals #pantrycooking",
       "bufferId": "6a541d139372accfada84a5e"
     },
