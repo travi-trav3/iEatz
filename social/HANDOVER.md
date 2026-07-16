@@ -37,6 +37,14 @@ What Travis values, in priority order — this is the quality bar you're held to
 
 ## 2. Live state (verified in Buffer 2026-07-16)
 
+> **Re-verified 2026-07-16 ~4 PM PT (new session):** full `list_posts` reconcile — all 20 batch
+> posts match the ledger exactly (bufferId, dueAt, asset, channel, status `scheduled`). One
+> additional scheduled post exists that is NOT in the batch/ledger cheat-sheet: **legacy IG post
+> `6a34146dac82a80d78ee25f0`** (Skillet shakshuka recipe card, `fix-shakshuka.png`, due
+> **Jul 17 8:41 AM PT**, created Jun 18). Its image is hosted on branch
+> **`claude/cool-planck-pL6bL`** — keep that branch alive through Jul 17 (verified 200 +
+> QA-passed on 2026-07-16). It is a valid on-brand post; left scheduled.
+
 - **July 18–31 batch: 20 posts scheduled and DONE.** 12 Pinterest + 8 Instagram, rendered,
   QA-passed, hosted, verified 200, humanized times on both channels. Nothing pending in the batch.
 - **Ledger of record:** `social/manifest/july-batch.json` — every post's `bufferId`, `dueAt`,
