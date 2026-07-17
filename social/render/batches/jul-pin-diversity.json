@@ -1,0 +1,82 @@
+{
+  "name": "jul-pin-diversity",
+  "note": "Re-shells 7 of the 11 tPhoto Pinterest clones (audit 2026-07-16) so the pin set rotates surfaces: paper/photo -> bleed/dark/device. Messages unchanged except jul31 (was a dupe of jul22).",
+  "posts": [
+    {
+      "file": "jul19-pin-fridge-meals-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "headSize": 98,
+      "photo": "fridge/fridge-full-produce.jpg",
+      "eyebrow": "Pantry & fridge meals",
+      "head": "What to make with <span class=\"accent\">what's in your fridge.</span>",
+      "sub": "Zero shopping, less waste — scan your receipt and cook what you already have."
+    },
+    {
+      "file": "jul21-pin-cheap-healthy-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "statdark",
+      "statSize": 400,
+      "eyebrow": "Cheap healthy dinners",
+      "stat": "$6",
+      "sub": "Healthy dinner, per serving.",
+      "body": "A 15-minute chicken-and-rice bowl from groceries you already have. iEatz finds the budget dinners hiding on your receipt."
+    },
+    {
+      "file": "jul23-pin-glutenfree-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "headSize": 98,
+      "photo": "food/green-bowl-floral.jpg",
+      "eyebrow": "Gluten-free weeknight",
+      "head": "Gluten-free dinners <span class=\"accent\">from your pantry.</span>",
+      "sub": "Naturally gluten-free, weeknight-quick — no special shopping trip."
+    },
+    {
+      "file": "jul25-pin-backtoschool-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "headSize": 98,
+      "photo": "food/grain-bowl-burlap.jpg",
+      "eyebrow": "Back-to-school lunchbox",
+      "head": "Back-to-school <span class=\"accent\">lunchbox ideas.</span>",
+      "sub": "Make ahead in 15 minutes — kid-approved, no morning scramble."
+    },
+    {
+      "file": "jul26-pin-busy-weeknight-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "statdark",
+      "statSize": 210,
+      "eyebrow": "Busy weeknight dinners",
+      "stat": "20 min",
+      "sub": "One pan. Whole family fed.",
+      "body": "When school nights get hectic, iEatz turns what's already in your kitchen into dinner."
+    },
+    {
+      "file": "jul29-pin-pantry-dinner-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "headSize": 98,
+      "photo": "pantry/pantry-jars.jpg",
+      "eyebrow": "Pantry & fridge meals",
+      "head": "Your pantry is <span class=\"accent\">tonight's dinner.</span>",
+      "sub": "Lentils, rice, beans — no shopping trip required."
+    },
+    {
+      "file": "jul31-pin-scan-receipt-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "device",
+      "photo": "app-recipe.jpg",
+      "eyebrow": "How it works",
+      "head": "Scan your receipt. <span class=\"accent\">Get dinner.</span>",
+      "cap": "iEatz reads what you already bought and builds healthy recipes from it — in seconds."
+    }
+  ]
+}
