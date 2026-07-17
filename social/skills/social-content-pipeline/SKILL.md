@@ -126,6 +126,19 @@ Stack: headless Chromium via **playwright-core + sharp** (not Puppeteer/sips).
    `.gitignore` for `node_modules`/output dirs, one-command README (`npm install && node <script>`).
 6. Templates must produce FINISHED content — real photos, real type, editorial gradients, brand
    badge. Never placeholder/skeleton renders.
+7. **If the design system ships React/JSX templates, render them AS-IS — don't re-implement.**
+   Vendor the design system into the repo (JSX modules + token CSS + real screens + a pinned
+   React/ReactDOM/Babel-standalone) and write a thin driver that mounts ONE frame at exact pixel
+   size, waits for `document.fonts` + all images, screenshots, downsamples with sharp. This keeps
+   the design system canonical (single source of truth) and avoids drift from hand-porting. Cross-
+   module refs work because each module does `Object.assign(window, {...})`.
+   **Gotcha:** JSX **attribute** strings (`attr="…"`) do NOT interpret `\uXXXX` escapes — they render
+   literally (an em-dash ships as the text `—`). Convert to real `—`/`'`/`"` chars on import.
+   Expression props (`prop={'…'}`) are fine.
+8. **Formats beyond single posts:** support **multi-slide IG carousels** (a swipeable arc:
+   hook → how-it-works/steps → app-screen proof → testimonial/review → CTA) and standalone pins.
+   A carousel is ONE Buffer post with an ordered `assets` array + one caption. Build every pillar's
+   program into the same template modules so the whole rotation renders from one system.
 
 ### Phase 5: QA gate — MANDATORY, on EVERY rendered image
 Open the actual PNG (don't trust alt text/dimensions). This gate exists because real batches shipped

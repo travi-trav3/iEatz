@@ -45,6 +45,13 @@ What Travis values, in priority order — this is the quality bar you're held to
 > **`claude/cool-planck-pL6bL`** — keep that branch alive through Jul 17 (verified 200 +
 > QA-passed on 2026-07-16). It is a valid on-brand post; left scheduled.
 
+> **New capability (2026-07-17):** the Content-Pillars design system is now in the repo at
+> `social/design-system/cpp/` and renders headless via `social/render/cpp-render.js`. This adds
+> **IG carousels** (new format) + deep templates + the `Horizon` wave device. Three pillar programs
+> (Pantry/Health/Grocery) are rendered, QA'd, and hosted — 3 carousels + 9 pins — ledgered in
+> `social/manifest/cpp-batch.json`, **not yet scheduled** (they're the ready-to-go August carousel
+> content). See CONTROL_CENTER §4/§5/§13.
+
 - **July 18–31 batch: 20 posts scheduled and DONE.** 12 Pinterest + 8 Instagram, rendered,
   QA-passed, hosted, verified 200, humanized times on both channels. Nothing pending in the batch.
 - **Ledger of record:** `social/manifest/july-batch.json` — every post's `bufferId`, `dueAt`,
