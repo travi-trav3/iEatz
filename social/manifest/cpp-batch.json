@@ -1,0 +1,49 @@
+{
+  "batch": "cpp-content-pillars",
+  "createdAt": "2026-07-17",
+  "status": "rendered-hosted-unscheduled",
+  "note": "Content-Pillar templates ported from the Drive design system into social/design-system/cpp and rendered via social/render/cpp-render.js. 3 five-slide IG carousels + 9 Pinterest pins, all QA-passed 2026-07-17. NOT yet scheduled — IG carousels are a new format for this account and belong in the August batch (July queue is full through Aug 1). Schedule against the humanized cadence (CONTROL_CENTER 8.1), interleaved with the other 5 narrative pillars. Images hosted on branch claude/social-handover-review-sw772y — keep alive until published, or land on main.",
+  "organization": { "name": "Applied Intelligence Co.", "id": "6a138b7d82bb2ed009fed356" },
+  "channels": {
+    "pinterest": { "id": "6a14637fc687a22dd424eee8", "board": "Quick Saves", "boardServiceId": "1011339728760978564" },
+    "instagram": { "id": "6a14b495c687a22dd4267bfc" }
+  },
+  "urlBaseSocial": "https://raw.githubusercontent.com/travi-trav3/iEatz/claude/social-handover-review-sw772y/assets/social/cpp/",
+  "urlBasePins": "https://raw.githubusercontent.com/travi-trav3/iEatz/claude/social-handover-review-sw772y/assets/pinterest/cpp/",
+  "appStoreUrl": "https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706",
+  "igMetadata": { "instagram": { "type": "post", "shouldShareToFeed": true } },
+  "carousels": [
+    {
+      "id": "cpp-pantry-carousel",
+      "pillar": "Pantry / Fridge",
+      "channel": "instagram",
+      "slides": ["pantry-car-1-hook.png", "pantry-car-2-steps.png", "pantry-car-3-app.png", "pantry-car-4-quote.png", "pantry-car-5-cta.png"],
+      "caption": "Tonight's dinner is already in your fridge.\n\nOpen it, snap a photo, and iEatz reads the ingredients and ranks real recipes by what you already have — dinner in fifteen, no shopping list. Swipe to see how it works.\n\nDownload iEatz Healthy on the App Store.\n\n#pantrycooking #fridgecleanout #whatsinmyfridge #easyweeknightdinners #reducefoodwaste"
+    },
+    {
+      "id": "cpp-health-carousel",
+      "pillar": "Health / Diet",
+      "channel": "instagram",
+      "slides": ["health-car-1-hook.png", "health-car-2-app.png", "health-car-3-app.png", "health-car-4-review.png", "health-car-5-cta.png"],
+      "caption": "Healthy dinners, tuned to your numbers.\n\nEvery recipe shows calories and macros before you cook, set to the targets you give it once. Macros are estimates per serving. Swipe through — then eat for your body, not a generic plan.\n\nDownload iEatz Healthy on the App Store.\n\n#highprotein #macrofriendly #healthyeating #mealplanning #caloriecounting"
+    },
+    {
+      "id": "cpp-grocery-carousel",
+      "pillar": "Grocery / Instacart",
+      "channel": "instagram",
+      "slides": ["grocery-car-1-hook.png", "grocery-car-2-app.png", "grocery-car-3-app.png", "grocery-car-4-review.png", "grocery-car-5-cta.png"],
+      "caption": "Cook what you're craving — from craving to cart in three taps.\n\nPick any recipe, iEatz checks your kitchen against a running inventory, and adds only what's missing to an Instacart cart. Swipe to see it work.\n\nDownload iEatz Healthy on the App Store.\n\n#groceryhaul #instacart #mealprep #kitcheninventory #weeknightdinner"
+    }
+  ],
+  "pins": [
+    { "id": "cpp-pantry-pin-list", "channel": "pinterest", "file": "pantry-pin-1-list.png", "title": "5 Pantry Staples That Make Any Dinner Work", "alt": "Numbered list of five pantry staples beside a photo of glass jars of lentils and grains. Headline: 5 staples that make any dinner work.", "text": "Five pantry staples that turn into almost any dinner: tinned beans, red lentils, couscous, tahini and smoked paprika. iEatz builds real recipes from the staples you already own." },
+    { "id": "cpp-pantry-pin-hook", "channel": "pinterest", "file": "pantry-pin-2-hook.png", "title": "Cook With What's Already in Your Fridge", "alt": "Open fridge in warm light. Headline: Cook with what's already in your fridge.", "text": "Snap a photo of your fridge and iEatz finds the dinner hiding in there — no shopping trip, less waste. Pantry-first cooking, free on the App Store." },
+    { "id": "cpp-pantry-pin-stat", "channel": "pinterest", "file": "pantry-pin-3-stat.png", "title": "15-Minute Dinners From a Single Photo", "alt": "Giant italic numeral 15 min with a circular grain-bowl photo. Headline: dinners from a single photo.", "text": "Point your camera at the fridge and iEatz ranks real recipes by what you already have — dinner in fifteen minutes, from a single photo." },
+    { "id": "cpp-health-pin-list", "channel": "pinterest", "file": "health-pin-1-list.png", "title": "5 Ways iEatz Keeps Your Meals on Track", "alt": "Numbered list of five health features beside a green grain bowl. Headline: 5 ways iEatz keeps you on track.", "text": "Macros up front, calorie targets tuned to your body, allergy flags, weekly trends and goal-first picks. Healthy meal planning that follows your numbers — macros are estimates per serving." },
+    { "id": "cpp-health-pin-app", "channel": "pinterest", "file": "health-pin-2-app.png", "title": "See Calories and Macros Before You Cook", "alt": "Phone showing the iEatz recipe screen with macros. Headline: See macros before you cook.", "text": "Calories, protein, carbs and fat on every recipe card, before the first chop. Macros are estimates per serving. Free on the App Store." },
+    { "id": "cpp-health-pin-hook", "channel": "pinterest", "file": "health-pin-3-hook.png", "title": "Eat for Your Body, Not a Generic Plan", "alt": "Fresh greens prep spread. Headline: Eat for your body, not a generic plan.", "text": "Set your targets once and every iEatz recipe follows your numbers. Healthy dinners built around you — free to start on the App Store." },
+    { "id": "cpp-grocery-pin-list", "channel": "pinterest", "file": "grocery-pin-1-list.png", "title": "Craving to Cart in Three Taps", "alt": "Numbered three-step list beside a shopper checking a label. Headline: Craving to cart, in three taps.", "text": "Pick a recipe, iEatz checks your kitchen, and only the missing ingredients go to an Instacart cart. Grocery, sorted — powered by Instacart." },
+    { "id": "cpp-grocery-pin-hook", "channel": "pinterest", "file": "grocery-pin-2-hook.png", "title": "Never Buy What You Already Own", "alt": "Fresh grocery haul on a counter. Headline: Never buy what you already own.", "text": "iEatz remembers your kitchen, so your shopping list only holds what's actually missing. Less waste, less double-buying — free on the App Store." },
+    { "id": "cpp-grocery-pin-app", "channel": "pinterest", "file": "grocery-pin-3-app.png", "title": "Shop the Gaps, Delivered", "alt": "Phone showing the iEatz recipe screen with a Shop with Instacart button. Headline: Shop the gaps, delivered.", "text": "iEatz builds an Instacart cart from just the ingredients you're missing for a recipe. From craving to delivery in a tap — powered by Instacart." }
+  ]
+}

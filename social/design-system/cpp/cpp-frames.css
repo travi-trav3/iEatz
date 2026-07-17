@@ -1,0 +1,251 @@
+/* ============================================================
+   iEatz Healthy — Content Brand Pillars
+   Social templates (Instagram carousels + Pinterest pins)
+   Layers on colors_and_type.css. Built on the CPP tile vocabulary:
+   warm paper, Instrument Serif headline with one green word,
+   connecting green "horizon" wave, phone-framed app screens.
+   ============================================================ */
+
+:root {
+  /* per-tweak overrides fall back to these */
+  --pillar-paper: var(--ie-paper);
+  --pillar-accent: var(--ie-green);
+  --hl-scale: 1;          /* headline size multiplier */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: #14201A;   /* deep desk behind the frames */
+  font-family: var(--ie-font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Page scaffold ---------- */
+.page {
+  padding: 72px 56px 120px;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+.page-head { margin: 0 0 8px; max-width: 900px; }
+.page-kicker {
+  font-family: var(--ie-font-sans);
+  font-size: 15px; font-weight: 600; letter-spacing: 0.22em;
+  text-transform: uppercase; color: #6FCB93; margin: 0 0 22px;
+}
+.page-title {
+  font-family: var(--ie-font-display); font-weight: 400;
+  font-size: 60px; line-height: 1.0; letter-spacing: -0.02em;
+  color: #F3F0E7; margin: 0;
+}
+.page-title em { font-style: italic; color: #9FE4B3; }
+.page-sub {
+  font-family: var(--ie-font-sans); font-size: 19px; line-height: 1.5;
+  color: #A7B2AB; margin: 20px 0 0; max-width: 720px;
+}
+
+/* ---------- Pillar section ---------- */
+.pillar { margin-top: 96px; }
+.pillar-bar {
+  display: flex; align-items: baseline; gap: 20px;
+  padding-bottom: 22px; margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.pillar-index {
+  font-family: var(--ie-font-display); font-style: italic;
+  font-size: 40px; color: var(--pillar-accent); line-height: 1;
+}
+.pillar-name {
+  font-family: var(--ie-font-display); font-size: 40px; font-weight: 400;
+  color: #F3F0E7; letter-spacing: -0.015em; line-height: 1;
+}
+.pillar-theme {
+  font-family: var(--ie-font-sans); font-size: 15px; font-weight: 500;
+  letter-spacing: 0.02em; color: #8A968F; margin-left: auto;
+}
+
+.row-label {
+  font-family: var(--ie-font-mono); font-size: 13px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #7C8981; margin: 40px 0 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.row-label::after { content: ""; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+
+/* ---------- Frame rails (scaling gallery) ---------- */
+.rail { display: flex; gap: 34px; flex-wrap: wrap; align-items: flex-start; }
+
+.frame-wrap { display: flex; flex-direction: column; gap: 12px; }
+.frame-cap {
+  font-family: var(--ie-font-mono); font-size: 12px; letter-spacing: 0.08em;
+  color: #7C8981; text-align: center;
+}
+
+/* Scaler: shrinks the fixed-size art into the rail */
+.scale-ig, .scale-pin {
+  position: relative; overflow: hidden; border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+  flex-shrink: 0;
+}
+.scale-ig  { width: 324px; height: 405px; }               /* 1080×1350 @ 0.3 */
+.scale-pin { width: 300px; }                              /* 1000 wide @ 0.3 */
+
+.scale-ig  > .ig  { transform: scale(0.3); transform-origin: top left; }
+.scale-pin > .pin { transform: scale(0.3); transform-origin: top left; }
+
+/* ============================================================
+   SHARED SLIDE / PIN SURFACES
+   ============================================================ */
+.ig, .pin {
+  position: relative; overflow: hidden;
+  background: var(--pillar-paper);
+  font-family: var(--ie-font-sans);
+}
+.ig  { width: 1080px; height: 1350px; }
+.pin { width: 1000px; height: 1500px; }        /* 2:3 default; tall variant set inline */
+
+/* soft top vignette when photo bleeds to top edge */
+.bleed-top-shade {
+  position: absolute; top: 0; left: 0; right: 0; height: 260px;
+  background: linear-gradient(180deg, rgba(8,49,27,0.34), transparent);
+  z-index: 3;
+}
+
+/* ---------- Headline system ---------- */
+.hl {
+  font-family: var(--ie-font-display); font-weight: 400;
+  color: var(--ie-ink); letter-spacing: -0.02em; line-height: 1.02;
+  margin: 0; text-wrap: balance;
+}
+.hl em { font-style: normal; color: var(--pillar-accent); }
+.hl.on-dark { color: #FBFAF6; }
+.hl.on-dark em { color: #9FE4B3; }
+
+.eyebrow {
+  font-family: var(--ie-font-sans); font-size: 26px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--pillar-accent);
+  margin: 0;
+}
+.eyebrow.muted { color: var(--ie-ink-light); }
+.eyebrow.on-dark { color: #9FE4B3; }
+
+.accent-bar {
+  width: 96px; height: 6px; border-radius: 999px;
+  background: var(--pillar-accent); display: block;
+}
+
+.support {
+  font-family: var(--ie-font-sans); font-size: 30px; font-weight: 400;
+  line-height: 1.42; color: var(--ie-ink-medium); margin: 0; text-wrap: pretty;
+}
+.support b { color: var(--ie-ink); font-weight: 600; }
+.support.on-dark { color: rgba(255,255,255,0.82); }
+
+/* ---------- Brand badge ---------- */
+.badge { position: absolute; display: flex; align-items: center; gap: 14px; z-index: 12; }
+.badge .mark { width: 34px; height: auto; color: var(--pillar-accent); display: block; }
+.badge .wm { display: flex; flex-direction: column; line-height: 1; }
+.badge .wm b { font-family: var(--ie-font-sans); font-weight: 700; font-size: 26px; color: var(--ie-ink); letter-spacing: -0.01em; }
+.badge .wm span { font-family: var(--ie-font-sans); font-weight: 500; font-size: 18px; color: var(--ie-ink-light); letter-spacing: 0.04em; margin-top: 3px; }
+.badge.on-dark .mark { color: #9FE4B3; }
+.badge.on-dark .wm b { color: #FBFAF6; }
+.badge.on-dark .wm span { color: rgba(255,255,255,0.6); }
+
+/* ---------- Pager dots (carousel) ---------- */
+.pager { position: absolute; top: 64px; right: 80px; display: flex; gap: 12px; z-index: 12; }
+.pager i { width: 12px; height: 12px; border-radius: 999px; background: rgba(10,15,12,0.16); display: block; }
+.pager i.on { background: var(--pillar-accent); }
+.pager.on-dark i { background: rgba(255,255,255,0.28); }
+.pager.on-dark i.on { background: #9FE4B3; }
+
+.swipe {
+  position: absolute; bottom: 62px; right: 80px; z-index: 12;
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--ie-font-sans); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.02em; color: var(--ie-ink-medium);
+}
+.swipe.on-dark { color: rgba(255,255,255,0.72); }
+.swipe svg { width: 30px; height: 30px; }
+
+/* ---------- Photo slot ---------- */
+.photo { background-size: cover; background-position: center; background-repeat: no-repeat; }
+.photo.placeholder {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  background:
+    radial-gradient(90% 70% at 30% 18%, rgba(255,255,255,0.55), transparent 70%),
+    linear-gradient(150deg, #E6F4EC 0%, #C6DCC8 60%, #AFCBB4 100%);
+}
+.photo.placeholder .ph-inner {
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+  color: var(--ie-green-dark); padding: 40px;
+}
+.photo.placeholder .ph-inner svg { width: 72px; height: 72px; opacity: 0.5; }
+.photo.placeholder .ph-inner span {
+  font-family: var(--ie-font-sans); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.66; max-width: 360px;
+  line-height: 1.35;
+}
+
+/* ---------- Pill / chip ---------- */
+.pill {
+  display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px;
+  background: var(--ie-green-light); color: var(--ie-green-dark);
+  border-radius: 999px; font-family: var(--ie-font-sans);
+  font-size: 24px; font-weight: 600; letter-spacing: 0.01em;
+}
+.pill.solid { background: var(--pillar-accent); color: #fff; }
+
+/* ---------- Phone frame (app screenshots) ---------- */
+.phone {
+  position: relative; border-radius: 54px; background: #0A0F0C;
+  padding: 12px; box-shadow: 0 30px 70px rgba(8,49,27,0.32), 0 6px 18px rgba(8,49,27,0.2);
+}
+.phone .glass {
+  position: relative; width: 100%; height: 100%;
+  border-radius: 44px; overflow: hidden; background: #fff;
+}
+.phone .glass img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.phone .notch {
+  position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+  width: 38%; height: 30px; background: #0A0F0C; border-radius: 999px; z-index: 4;
+}
+
+/* ---------- Numbered list (save-worthy pins) ---------- */
+.nlist { display: flex; flex-direction: column; }
+.nlist .item {
+  display: grid; grid-template-columns: 84px 1fr; align-items: baseline; gap: 28px;
+  padding: 30px 0; border-top: 1px solid rgba(10,15,12,0.10);
+}
+.nlist .item:first-child { border-top: none; }
+.nlist .num {
+  font-family: var(--ie-font-display); font-style: italic; font-size: 52px;
+  line-height: 1; color: var(--pillar-accent); letter-spacing: -0.02em;
+}
+.nlist .it-title {
+  font-family: var(--ie-font-display); font-size: 44px; font-weight: 500;
+  line-height: 1.02; color: var(--ie-ink); letter-spacing: -0.01em;
+}
+.nlist .it-note {
+  font-family: var(--ie-font-sans); font-size: 24px; font-weight: 400;
+  line-height: 1.35; color: var(--ie-ink-medium); margin-top: 8px;
+}
+
+/* ---------- Big stat ---------- */
+.stat-num {
+  font-family: var(--ie-font-display); font-style: italic; font-weight: 500;
+  color: var(--pillar-accent); line-height: 0.86; letter-spacing: -0.04em;
+}
+
+/* Pinterest CTA tag — small pill, top-left */
+.pin-tag {
+  position: absolute; top: 60px; left: 70px; z-index: 12;
+  display: inline-flex; align-items: center; padding: 12px 24px;
+  background: rgba(255,255,255,0.9); backdrop-filter: blur(6px);
+  border: 1px solid rgba(10,15,12,0.08); border-radius: 999px;
+  font-family: var(--ie-font-sans); font-size: 20px; font-weight: 600;
+  letter-spacing: 0.02em; color: var(--ie-green-dark);
+}
+
+/* dark slide surface */
+.ig.dark, .pin.dark { background: var(--ie-green-deep); }
+.ig.dark .support, .pin.dark .support { color: rgba(255,255,255,0.8); }

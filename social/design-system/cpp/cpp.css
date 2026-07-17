@@ -1,0 +1,680 @@
+/* ==========================================================================
+   iEatz Healthy — Design System Tokens
+   Visual direction: editorial wellness. Magazine-feel, not fitness-app green.
+   ========================================================================== */
+
+/* ---- Fonts (Google) ----
+   Display:    Instrument Serif  — marketing headlines, stat numerals
+   Body:       Inter Tight        — UI text + marketing body
+   App UI:     Plus Jakarta Sans  — entire iOS app surface
+   Mono:       JetBrains Mono     — mono captions (rare)
+*/
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("91c9bab4-24c2-4747-8ead-c78787bada3f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e1dda5bd-876f-4930-bf38-041b2a7bf437") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("3dd6b6f1-270a-4b50-8561-f2834f361ef4") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("871abaa8-7dfe-4450-b8b8-ec9e08930ab3") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("c7e36f30-11af-4dad-9a34-0ac091f8b5df") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("5e5f99da-f68c-4ff3-8528-0b8aa3c42f32") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("f6c99aad-d372-4c08-bb09-6aeaf2207a15") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("3cfd0096-0c83-440a-a1a8-c3dc78b6fc2b") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("d07531db-6163-4e3e-8f90-3cc97eb0534c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("252a9ea4-25ae-47fb-8355-e4d9ff00fe73") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("c6b21718-20c4-442c-82e9-820433c345e2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("fbd97fc3-2eca-4d79-9ccb-cdceb01810b4") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("ac1020c2-0bbe-4aa1-88bf-48b5da93a8e0") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("f63001d3-e958-49e7-9733-102c7ddf3488") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("ec3bbde1-aa48-43c8-befb-48815a44642a") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("34bbbe16-d353-41a9-af06-b304a307c9dd") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("d884440e-6d9b-4c92-8a3a-a7a2a50bbc88") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("6303a517-2a3a-4ae1-902e-e8b684a7068a") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("9c6f17c9-8f1c-4597-8433-60ac7a143d31") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("3a283cd0-4217-4a7d-a44e-b7083fcf2d59") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("87be0eb7-b4ac-48ed-aaea-64e798fa0f3a") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c1d0f7d1-6d2d-4305-930d-1c46c8427630") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("f3fa0cb1-4365-4a8e-b42e-3442cebff69e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("f0fab168-fe43-436f-ba05-b81b068e3710") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("9c6f17c9-8f1c-4597-8433-60ac7a143d31") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3a283cd0-4217-4a7d-a44e-b7083fcf2d59") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("87be0eb7-b4ac-48ed-aaea-64e798fa0f3a") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("c1d0f7d1-6d2d-4305-930d-1c46c8427630") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("f3fa0cb1-4365-4a8e-b42e-3442cebff69e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("f0fab168-fe43-436f-ba05-b81b068e3710") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("94540e12-11dd-43e9-a6fb-5a27f7f4d669") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("35688b7a-bd81-4fd7-aff7-4ab9b234263d") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("68e4f989-c684-44d8-8360-7d0c6a268614") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("5c0ab01b-aa8b-42a1-9b6d-923687fd6aab") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("80d3e44b-0907-4879-93f6-121aa9bf673c") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("6a6c810a-3af1-437e-a6a8-8e320c703a3d") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("16c513dd-405d-492d-b358-71382ee29c55") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("43f641cb-ed63-4217-ad31-cc65bda2ecec") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* ===========================================================
+   EDITORIAL SERIF — Instrument Serif
+   Marketing surfaces (IG, web) use Instrument Serif at 400 weight,
+   with italic for stat numerals and pull quotes. It is a non-variable
+   transitional serif with no optical-size / WONK / SOFT axes — quiet
+   and consistent at every scale.
+   App surfaces use Plus Jakarta Sans (see --app-font in app.css).
+   =========================================================== */
+
+:root {
+  /* ---------- COLOR — Brand greens ---------- */
+  --ie-green:           #1F8B4C;   /* primary accent, CTAs, stat numbers */
+  --ie-green-dark:      #0E4A2A;   /* headlines, strong emphasis */
+  --ie-green-deep:      #08311B;   /* darkest, used sparingly */
+  --ie-green-light:     #E6F4EC;   /* card tints, subtle backgrounds */
+  --ie-green-mint:      #F2FAF6;   /* full-bleed light-wash backgrounds */
+
+  /* ---------- COLOR — Ink (text) ---------- */
+  --ie-ink:             #0A0F0C;   /* primary text */
+  --ie-ink-medium:      #5C625E;   /* secondary text, body on warm paper */
+  --ie-ink-light:       #9CA29F;   /* captions, labels, meta */
+  --ie-ink-faint:       #C8CDCA;   /* dividers, disabled */
+
+  /* ---------- COLOR — Surfaces ---------- */
+  --ie-paper:           #F5F2EA;   /* preferred warm background, NOT white */
+  --ie-paper-deep:      #ECE7D8;   /* sectioning, alt cards */
+  --ie-white:           #FFFFFF;   /* cards, overlays */
+  --ie-black:           #0A0F0C;   /* full-bleed dark moments */
+
+  /* ---------- COLOR — Accents (used sparingly, food-photo adjacent) ---------- */
+  --ie-tomato:          #C9412B;   /* warning, contrast moments, "not that" */
+  --ie-saffron:         #E4A93C;   /* highlight, callouts */
+  --ie-aubergine:       #4A2E4D;   /* rare deep accent */
+
+  /* ---------- TYPE — Families ---------- */
+  --ie-font-display:    "Instrument Serif", "Times New Roman", Georgia, serif;
+  --ie-font-sans:       "Inter Tight", "Helvetica Neue", system-ui, sans-serif;
+  --ie-font-mono:       "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+  /* ---------- TYPE — Scale (instagram-first; mobile-safe) ---------- */
+  /* 24px floor for body, 36+ for headlines on 1080×1350 IG posts */
+  --ie-fs-hero:         clamp(56px, 7.2vw, 120px); /* @kind font */  /* IG carousel hero */
+  --ie-fs-display:      clamp(44px, 5.4vw, 88px); /* @kind font */  /* large headlines */
+  --ie-fs-h1:           clamp(36px, 4vw, 64px); /* @kind font */
+  --ie-fs-h2:           clamp(28px, 3vw, 48px); /* @kind font */
+  --ie-fs-h3:           24px; /* @kind font */
+  --ie-fs-stat:         clamp(80px, 12vw, 220px); /* @kind font */  /* the big number */
+  --ie-fs-body-lg:      28px; /* @kind font */
+  --ie-fs-body:         24px; /* @kind font */  /* floor */
+  --ie-fs-caption:      18px; /* @kind font */
+  --ie-fs-eyebrow:      14px; /* @kind font */  /* small caps eyebrow */
+
+  /* ---------- TYPE — Weights ---------- */
+  --ie-fw-light:        300; /* @kind font */
+  --ie-fw-regular:      400; /* @kind font */
+  --ie-fw-medium:       500; /* @kind font */
+  --ie-fw-semibold:     600; /* @kind font */
+  --ie-fw-bold:         700; /* @kind font */
+
+  /* ---------- SPACING (4-step base, generous) ---------- */
+  --ie-sp-1:  4px;
+  --ie-sp-2:  8px;
+  --ie-sp-3:  12px;
+  --ie-sp-4:  16px;
+  --ie-sp-5:  24px;
+  --ie-sp-6:  32px;
+  --ie-sp-7:  48px;
+  --ie-sp-8:  64px;
+  --ie-sp-9:  80px;       /* IG safe-zone */
+  --ie-sp-10: 120px;
+
+  /* ---------- RADII (soft, magazine-like) ---------- */
+  --ie-r-xs:  4px;
+  --ie-r-sm:  8px;
+  --ie-r-md:  16px;
+  --ie-r-lg:  24px;
+  --ie-r-xl:  32px;
+  --ie-r-pill: 999px;
+
+  /* ---------- SHADOWS (green-tinted, multi-layer) ---------- */
+  --ie-shadow-xs:  0 1px 2px rgba(14, 74, 42, 0.04);
+  --ie-shadow-sm:  0 1px 2px rgba(14, 74, 42, 0.04),
+                   0 2px 6px rgba(14, 74, 42, 0.05);
+  --ie-shadow-md:  0 2px 6px rgba(14, 74, 42, 0.05),
+                   0 8px 24px rgba(14, 74, 42, 0.07);
+  --ie-shadow-lg:  0 4px 12px rgba(14, 74, 42, 0.06),
+                   0 16px 40px rgba(14, 74, 42, 0.10),
+                   0 32px 72px rgba(14, 74, 42, 0.06);
+  --ie-shadow-xl:  0 8px 24px rgba(14, 74, 42, 0.08),
+                   0 32px 72px rgba(14, 74, 42, 0.14);
+
+  /* ---------- BORDERS ---------- */
+  --ie-border-hair:   1px solid rgba(10, 15, 12, 0.08); /* @kind other */
+  --ie-border-card:   1px solid rgba(10, 15, 12, 0.06); /* @kind other */
+  --ie-border-strong: 1px solid rgba(10, 15, 12, 0.16); /* @kind other */
+
+  /* ---------- IG TEMPLATE TOKENS ---------- */
+  --ig-w: 1080px;
+  --ig-h: 1350px;
+  --ig-safe: 80px;          /* safe zone on all edges */
+  --ig-no-text-bottom: 15%; /* % of height reserved at bottom (caption preview) */
+
+  /* ===========================================================
+     UI-KIT ALIASES — the IG kit (templates/) and iOS kit
+     (ui_kits/ios_app/) reference these short names.
+     Mapped to the canonical --ie-* tokens above.
+     =========================================================== */
+
+  /* Type */
+  --font-sans:  var(--ie-font-sans);
+  --font-serif: var(--ie-font-display);
+  --font-mono:  var(--ie-font-mono);
+
+  /* Surfaces */
+  --paper:        var(--ie-paper);
+  --paper-light:  #FAF7F0;                  /* slightly lighter than paper */
+  --white:        var(--ie-white);
+  --black:        var(--ie-black);
+
+  /* Brand greens */
+  --brand-green:        var(--ie-green);
+  --brand-green-dark:   var(--ie-green-dark);
+  --brand-green-deep:   var(--ie-green-deep);
+  --brand-green-light:  var(--ie-green-light);
+  --brand-mint:         var(--ie-green-mint);
+
+  /* App-specific greens (iOS kit uses these names) */
+  --app-mint-bg:    #F1FCF3;                /* almost-white green, iOS bg */
+  --app-green:      #3BBF4F;                /* bright action green (FAB, chips) */
+  --app-green-deep: #193A19;                /* primary CTA fill */
+  --brand-mark-green: #61CA8C;              /* logo mark on mint (app splash) */
+
+  /* Ink scale (1 = darkest, 5 = faintest) */
+  --ink-1: var(--ie-ink);
+  --ink-2: #2A2F2C;                         /* slightly softer primary */
+  --ink-3: var(--ie-ink-medium);
+  --ink-4: var(--ie-ink-light);
+  --ink-5: var(--ie-ink-faint);
+
+  /* Shadow aliases */
+  --shadow-xs: var(--ie-shadow-xs);
+  --shadow-sm: var(--ie-shadow-sm);
+  --shadow-md: var(--ie-shadow-md);
+  --shadow-lg: var(--ie-shadow-lg);
+  --shadow-xl: var(--ie-shadow-xl);
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   Use these classes wherever possible.
+   ============================================================ */
+
+.ie-hero {
+  font-family: var(--ie-font-display);
+  font-weight: 400;
+  font-size: var(--ie-fs-hero);
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  color: var(--ie-green-dark);
+}
+
+.ie-display {
+  font-family: var(--ie-font-display);
+  font-weight: 500;
+  font-size: var(--ie-fs-display);
+  line-height: 1.0;
+  letter-spacing: -0.015em;
+  color: var(--ie-ink);
+  text-wrap: balance;
+}
+
+.ie-h1 {
+  font-family: var(--ie-font-display);
+  font-weight: 500;
+  font-size: var(--ie-fs-h1);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ie-ink);
+  text-wrap: balance;
+}
+
+.ie-h2 {
+  font-family: var(--ie-font-display);
+  font-weight: 500;
+  font-size: var(--ie-fs-h2);
+  line-height: 1.08;
+  letter-spacing: -0.008em;
+  color: var(--ie-ink);
+  text-wrap: balance;
+}
+
+.ie-h3 {
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: var(--ie-fs-h3);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink);
+}
+
+.ie-stat {
+  font-family: var(--ie-font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--ie-fs-stat);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--ie-green);
+}
+
+.ie-stat--ink { color: var(--ie-green-dark); }
+.ie-stat--tomato { color: var(--ie-tomato); }
+
+.ie-body {
+  font-family: var(--ie-font-sans);
+  font-weight: 400;
+  font-size: var(--ie-fs-body);
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink-medium);
+  text-wrap: pretty;
+}
+
+.ie-body-lg {
+  font-family: var(--ie-font-sans);
+  font-weight: 400;
+  font-size: var(--ie-fs-body-lg);
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink-medium);
+  text-wrap: pretty;
+}
+
+.ie-caption {
+  font-family: var(--ie-font-sans);
+  font-weight: 500;
+  font-size: var(--ie-fs-caption);
+  line-height: 1.4;
+  color: var(--ie-ink-light);
+}
+
+.ie-eyebrow {
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: var(--ie-fs-eyebrow);
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ie-ink-medium);
+}
+
+.ie-eyebrow--green { color: var(--ie-green); }
+.ie-eyebrow--paper { color: var(--ie-paper); }
+
+.ie-mono {
+  font-family: var(--ie-font-mono);
+  font-size: 16px;
+  letter-spacing: 0;
+  color: var(--ie-ink-medium);
+}
+
+/* ============================================================
+   COMPONENT PRIMITIVES
+   ============================================================ */
+
+.ie-accent-bar {
+  display: inline-block;
+  width: 48px;
+  height: 4px;
+  background: var(--ie-green);
+  border-radius: 2px;
+}
+
+.ie-card {
+  background: var(--ie-white);
+  border-radius: var(--ie-r-lg);
+  box-shadow: var(--ie-shadow-md);
+  border: var(--ie-border-card);
+}
+
+.ie-card--paper {
+  background: var(--ie-paper);
+}
+
+.ie-card--green {
+  background: var(--ie-green-light);
+}
+
+.ie-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 28px;
+  background: var(--ie-green-dark);
+  color: var(--ie-paper);
+  border-radius: var(--ie-r-pill);
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.005em;
+  border: none;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.ie-cta:hover { background: var(--ie-green); transform: translateY(-1px); }
+.ie-cta:active { transform: translateY(0) scale(0.99); }
+
+/* Brand badge: small fridge icon + iEatz Healthy wordmark */
+.ie-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink);
+}
+.ie-brand-badge .mark {
+  width: 24px; height: 24px;
+  color: var(--ie-green);
+  display: inline-flex;
+}
+.ie-brand-badge.on-dark { color: var(--ie-paper); }
+.ie-brand-badge.on-dark .mark { color: var(--ie-green-light); }

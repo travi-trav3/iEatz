@@ -92,10 +92,21 @@ Design tokens: `index.html` `:root` block and `social/render/base.css`
   accent), ThreeSteps, RecipeHero, Quote, CTA. ALL are now ported here. When planning a batch, rotate
   through the FULL set, not just the shells the last batch used. (The 19 MB "PNGs_iEatz CPP Tiles.zip"
   in Drive exceeds the connector's 10 MB download limit — use the JSX sources instead.)
-- Content Pillars (CPP) system: import the Claude Design bundle (`Content Pillars.html`,
-  `Carousels.jsx`, `Pins.jsx`, `Shared.jsx`, `cpp.css`, `colors_and_type.css`, real screenshots)
-  via **"Send to Claude Code Web"** or a Drive zip — the DesignSync MCP needs interactive login
-  and won't work headless here. Port its JSX templates into this harness or run its own build/export.
+- **Content Pillars (CPP) system — NOW IN THE REPO** (`social/design-system/cpp/`, ported Jul 17
+  2026). The full design-system bundle (React/Babel JSX + tokens + real app screens + vendored
+  React/ReactDOM/Babel) lives in git and renders headless via `social/render/cpp-render.js` — no
+  Drive round-trip, no DesignSync login needed. It adds a **carousel format** and **deep templates**
+  the flat harness lacked:
+  - **IG carousel slides** (5-slide swipeable): `HookSlide`, `StepsSlide`, `AppSlide`, `QuoteSlide`,
+    `CtaSlide`. **Pin layouts**: `ListPin`, `HookPin`, `StatPin`, `AppPin`.
+  - **New brand device `Horizon`** — the connecting green contour wave that echoes the CPP tiles.
+  - **New primitive `Phone`** — notch+glass frame; may ONLY hold the real app screens in
+    `cpp/assets/` (`screen-recipe/weight/inventory/instacart-missing.png` — HARD CONSTRAINT §3).
+  - Render: `node social/render/cpp-render.js [pillar] [ig|pin] [index]` → `render/cppout/`.
+    Three pillar programs ship rendered + QA'd: pantry, health, grocery (5 slides + 3 pins each).
+    Ledger: `social/manifest/cpp-batch.json`. See `cpp/README.md`.
+  - Import gotcha (fixed): JSX **attribute** strings (`attr="…"`) do NOT interpret `\uXXXX` escapes —
+    they render literally (a `—` shipped as literal text). Author with real `—`/`'`/`"` chars.
 
 ## 5. Content pillars & formats
 **8 content pillars — rotate through all; never two of the same back-to-back.**
@@ -118,6 +129,13 @@ list of 8 for rotation. Cycle all 8 before repeating.
 Per batch: rotate all 8; alternate templates (photo hero / stat / list / quote / device / recipe card)
 and CTAs. Carousel arc: hook (editorial photo) → how-it-works/steps → app-screen proof → testimonial → CTA.
 Seasonal lens layers on top (e.g. back-to-school / busy-weeknight for Aug — seed 4–6 wks early).
+
+**Formats now include IG carousels** (5-slide swipeable, not just single posts) via the CPP system
+(§4). Three pillar programs are built + rendered + QA'd (`social/manifest/cpp-batch.json`): Pantry/Fridge,
+Health/Diet, Grocery/Instacart — each a full carousel following the hook→steps/app→proof→review→CTA arc,
+plus 3 Pinterest pins. These cover the 3 **topic** pillars (6–8); rotate them in alongside single posts
+for the 5 narrative pillars. When you build the other 5 pillars as carousels, add them to the CPP modules
+(`design-system/cpp/modules/Carousels.jsx` + `Pins.jsx`) so the whole rotation renders from one system.
 
 ### Photo library (`assets/photos/`) — track usage, avoid repeats within ~30 days
 | File | What it is | Notes |
@@ -259,6 +277,10 @@ with zero duplicates:
   Onelink/deeplink UTMs). Needs the website repo added via `add_repo` and 7 Pinterest keyword boards.
 - **Open follow-ups:** create the 7 Pinterest keyword boards (Buffer API can't — native only),
   then re-home Quick-Saves pins for Rich Pins.
+- **CPP content-pillar set (Jul 17):** design system ported to `social/design-system/cpp/`; 3 IG
+  carousels + 9 pins rendered, QA'd, hosted (`social/manifest/cpp-batch.json`), **not yet scheduled**
+  — they're the ready-to-go August carousel content (July queue is full through Aug 1). Schedule them
+  interleaved with single posts for the 5 narrative pillars, on the humanized cadence (§8.1).
 - **Permissions (Jul 16):** `.claude/settings.json` expanded from Buffer-only to ALL
   connectors (Buffer, Notion, github, Slack, Gmail, Drive, Calendar, Figma, Stripe, Meta Ads,
   Cloudflare, Claude_Code_Remote) + WebFetch/WebSearch. **Merge this to `main`** so every
@@ -279,6 +301,15 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Jul 17 2026 — CPP design system in-repo + carousel format:** operator sent the Content-Pillars
+  design bundle and asked to get every pillar/template into the workflow. Decoded the bundle, committed
+  the full design system to `social/design-system/cpp/` (JSX templates + tokens + real app screens +
+  vendored React/ReactDOM/Babel), and built `social/render/cpp-render.js` to render the ACTUAL JSX
+  headless — no re-implementation, design system stays canonical. Ships **IG carousels** (new format)
+  and deep templates (Hook/Steps/App/Quote/CTA slides; List/Hook/Stat/App pins) + the `Horizon` wave
+  device + `Phone` primitive. Rendered + QA'd all 24 frames (3 carousels + 9 pins), hosted, ledgered
+  (`cpp-batch.json`). Rule: build future pillar programs INTO the CPP modules so the whole rotation
+  renders from one system. Import gotcha memorialized: JSX `attr="…"` doesn't interpret `\uXXXX`.
 - **Jul 16 2026 — template-depth fix:** operator flagged the grid as same/similar templates again.
   Root cause: the harness had ported only a SUBSET of the design system's IG templates — TplThreeSteps,
   TplRecipeHero and TplCTA (from Drive `ui_kits/instagram/Templates.jsx`) were never implemented, so
