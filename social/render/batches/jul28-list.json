@@ -1,0 +1,36 @@
+{
+  "name": "jul28-list",
+  "note": "jul28 re-shell photo->list: brings Pinterest photo-template count to the 1/3 cap. No macro numbers on-image (unverifiable figures stay off creatives).",
+  "posts": [
+    {
+      "file": "jul28-pin-highprotein-list-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "list",
+      "eyebrow": "Meal-prep friendly",
+      "head": "High-protein lunches <span class=\"accent\">for the week.</span>",
+      "items": [
+        {
+          "t": "Egg & avocado grain bowl",
+          "s": "Ten-minute prep, keeps till Friday"
+        },
+        {
+          "t": "Shredded chicken rice box",
+          "s": "Cook once, eat three times"
+        },
+        {
+          "t": "Chickpea tuna salad",
+          "s": "No reheat needed"
+        },
+        {
+          "t": "Greek yogurt power box",
+          "s": "Assemble in five minutes"
+        },
+        {
+          "t": "Lentil & feta jar salad",
+          "s": "Shake and go"
+        }
+      ]
+    }
+  ]
+}
