@@ -37,8 +37,13 @@ What Travis values, in priority order — this is the quality bar you're held to
 
 ## 2. Live state (verified in Buffer 2026-07-16)
 
-- **July 18–31 batch: 20 posts scheduled and DONE.** 12 Pinterest + 8 Instagram, rendered,
-  QA-passed, hosted, verified 200, humanized times on both channels. Nothing pending in the batch.
+- **July 18–31 batch: 20 posts.** 12 Pinterest + 8 Instagram, rendered, QA-passed, hosted,
+  verified 200, humanized times on both channels. As of Jul 20: 4 sent, 16 scheduled. The
+  Pinterest set was re-shelled after the Jul 20 diversity audit (surfaces now rotate
+  paper/dark/bleed/mint like IG), and **Slack engagement alerts are scheduled in #social for
+  every future post** — that Buffer→Slack→ledger sequence is now a mandatory unit of work
+  (CONTROL_CENTER §9/§10), as is the pre-scheduling **batch diversity gate**
+  (`render/diversity-gate.js` + `contact-sheet.js`) — no batch schedules until it passes.
 - **Ledger of record:** `social/manifest/july-batch.json` — every post's `bufferId`, `dueAt`,
   `file`, `text`, `status`. It matches Buffer exactly as of this handover. Keep it that way:
   after ANY Buffer mutation, update the ledger and push.

@@ -9,12 +9,14 @@ social/
   CONTROL_CENTER.md    ← the master prompt for a new session (read this first)
   README.md            ← this file
   render/              ← the render harness (Playwright + sharp)
-    base.css           ← design tokens + all template classes
+    base.css           ← design tokens + ALL template/shell classes (single source)
     fonts.css + fonts/ ← self-hosted Instrument Serif + Inter Tight (no fallback)
-    render.js          ← original 10 Pinterest pins (photo/list/stat/device templates)
-    batch-render.js    ← recipe-card + Instacart-forward templates (IG 1080x1350 + Pin 1000x1500)
-    fix-render.js      ← list / price-compare / IG photo / IG recipe-card templates
-    instacart-render.js, recipe-render.js  ← single-template variants
+    templates.js       ← the shell registry (photo/list/stat/statdark/bleed/quotedark/quote/device/recipe)
+    render-batch.js    ← THE entrypoint: node render-batch.js batches/<batch>.json
+    diversity-gate.js  ← mandatory pre-scheduling batch check (run on the manifest ledger)
+    contact-sheet.js   ← per-channel montage; eyeball every batch as a set
+    batches/           ← batch content JSONs (posts as data, not code)
+    legacy/            ← retired one-off batch scripts (reference only; do not extend)
     package.json       ← deps: playwright-core, sharp
   manifest/            ← post → file → Buffer-idea mappings
 ```

@@ -71,16 +71,31 @@ Before producing anything new on an account you're taking over:
 ### Phase 2: Content planning
 Plan the full batch before rendering:
 1. **Pillar rotation** — never two of the same pillar back-to-back; cycle through all before repeating.
-2. **Template variety — and SURFACE variety (grid-first design).** Rotating named templates is not
-   enough: if every template shares one background and type anatomy, the grid still reads as
-   wallpaper. Rotate the **surface** — e.g. light paper / dark brand color / full-bleed photo with
-   overlay — so adjacent tiles contrast at grid distance. Rules learned the hard way (Jul 2026, a
-   grid where 5 of 8 posts were the same photo-top+cream-panel shell, three of them consecutive):
-   - No two **adjacent** posts (by publish order) share the same shell; cap any one shell at ~⅓ of a batch.
-   - Before scheduling, view the plan **as the grid** — thumbnails in a row next to the already-published
-     tiles — not as isolated images. Plan against the live grid, not just within the batch.
-   - Build at least one dark-surface and one full-bleed-photo shell into every brand's template kit;
-     brand tokens usually already contain the needed dark color (invert the palette).
+2. **Template variety — and SURFACE variety (set-first design, EVERY channel).** Rotating named
+   templates is not enough: if every template shares one background and type anatomy, the set still
+   reads as wallpaper. Rotate the **surface** — e.g. light paper / dark brand color / full-bleed
+   photo with overlay — so adjacent posts contrast at feed distance. **This applies per channel to
+   ANY set of posts, not just an Instagram grid** — the Jul 2026 failure mode was fixing the IG
+   grid while shipping 11 of 12 Pinterest pins on one identical shell, because the rule was framed
+   as "grid" and Pinterest isn't mentally a grid.
+   - No two **adjacent** posts (by publish order, per channel) share the same shell or surface;
+     cap any one shell at ~⅓ of a batch.
+   - **Run the batch diversity gate before scheduling — rules-as-code, not prose.** Keep a
+     `diversity-gate.js` that reads the batch ledger and hard-fails on: adjacent same
+     template/surface, template >⅓ cap, adjacent same pillar, <3 pillars per channel,
+     near-duplicate messages (≥3 shared title words at >60% overlap), hero-photo reuse in-batch,
+     and formulaic caption closers >40% or 3-in-a-row. This requires the ledger to carry
+     per-post `pillar`, `topic`, `template`, `surface`, `heroPhoto`, `cta` — write them at
+     planning time or the rotation is unauditable.
+   - **Render a contact sheet** (`contact-sheet.js`) and view the batch as a set next to the
+     already-published tiles — the gate catches structure; only eyes catch vibe.
+   - Build at least one dark-surface and one full-bleed-photo shell into every brand's template kit
+     **at every platform's dimensions** (brand tokens usually already contain the dark color);
+     an IG-only shell kit quietly recreates the monoculture on the other channel.
+   - **Message dedupe:** no two posts in a batch (or vs. the last ~30 days) carry the same
+     headline idea reworded ("One grocery run, a week of dinners" / "5 dinners from one grocery
+     run" is one message, not two). Vary caption *structures* too (question hook / mini-story /
+     list / stat / recipe steps) and include posts that aren't product pitches.
 3. **Photo tracking** — never reuse the same hero within ~30 days; favor fresh, unique imagery. Open
    every candidate — slugs lie.
 4. **When the hero library is too thin to sustain a pillar without repeats, don't quietly repeat —
@@ -204,10 +219,20 @@ MCP connectors (Buffer especially) disconnect mid-session. Track every batch in 
   **do NOT report the latter to the operator** — retry/wait rather than declaring a capability gone.
   The ledger makes the eventual retry idempotent.
 
-### Phase 8: Team engagement alerts (Slack)
-First-30-minutes engagement drives reach. For each scheduled post, send the team channel a short
-alert at (or just before) the post's `dueAt` — use `slack_schedule_message` when scheduling ahead.
-Format: platform · first line of caption · direct link · "Like, comment, save — first 30 min matter most."
+### Phase 8: Team engagement alerts (Slack) — NOT optional, NOT deferred
+First-30-minutes engagement drives reach. **The moment a post is scheduled (or rescheduled) in
+Buffer, schedule its Slack alert in the same work session — Buffer write, then Slack write, then
+ledger write. A post without a scheduled alert is an unfinished scheduling job.** (Learned Jul
+2026: alerts were spec'd but never scheduled until the operator noticed none had fired.)
+- `slack_schedule_message` to the team channel, `post_at` = the post's `dueAt` (Unix seconds).
+  Format: platform · first line of caption/title · profile or post link · "Like, comment, save —
+  the first 30 minutes matter most."
+- **Record the returned scheduled-message id in the ledger** (`slackAlert` per post) so a resumed
+  session knows which alerts exist and reschedules them when a post's `dueAt` moves.
+- **Re-anchor on real time first** (`date` / `get_account.currentTime`) — the session clock jumps
+  days between turns. A `time_in_past` error means the clock jumped: re-check now, alert only
+  future posts, and mark elapsed ones `skipped-already-sent` (a days-late "just published" ping
+  is noise; don't send it).
 - **When a post publishes off the planned schedule** (operator publishes manually/early), key the
   alert to the post's **actual `status:sent`**, not the planned `dueAt`, and pull the **real
   published permalink from the post's `externalLink`** (Buffer populates it on send) rather than

@@ -50,14 +50,17 @@ for (const [channel, posts] of Object.entries(byChannel)) {
   // 5. Hero photo never reused within the batch
   const seen = {};
   posts.forEach(p => { if (p.heroPhoto) { if (seen[p.heroPhoto]) fails.push(`${channel}: hero photo reused ${seen[p.heroPhoto]} & ${p.id} (${p.heroPhoto})`); seen[p.heroPhoto] = p.id; } });
-  // 6. Caption CTA formula capped: any one cta type <= 40%, never 3 in a row
-  const cCount = {};
-  posts.forEach(p => { if (p.cta && p.cta !== 'none') cCount[p.cta] = (cCount[p.cta] || 0) + 1; });
-  for (const [c, k] of Object.entries(cCount)) if (k / n > 0.4)
-    fails.push(`${channel}: cta "${c}" on ${k}/${n} posts (cap 40%)`);
-  for (let i = 2; i < n; i++)
-    if (posts[i].cta && posts[i].cta !== 'none' && posts[i].cta === posts[i - 1].cta && posts[i].cta === posts[i - 2].cta)
-      fails.push(`${channel}: cta "${posts[i].cta}" 3x in a row ending at ${posts[i].id}`);
+  // 6. FORMULAIC caption closers capped <= 40%, never 3 in a row.
+  // Only formula ctas count (default: the "scan your receipt" closer). Generic product
+  // mentions ("app-value") are a planning rule instead: include non-pitch posts per batch.
+  const formulaic = batch.formulaicCtas || ['receipt-scan'];
+  for (const f of formulaic) {
+    const k = posts.filter(p => p.cta === f).length;
+    if (k / n > 0.4) fails.push(`${channel}: formulaic cta "${f}" on ${k}/${n} posts (cap 40%)`);
+    for (let i = 2; i < n; i++)
+      if (posts[i].cta === f && posts[i - 1].cta === f && posts[i - 2].cta === f)
+        fails.push(`${channel}: formulaic cta "${f}" 3x in a row ending at ${posts[i].id}`);
+  }
 
   console.log(`${channel}: ${n} posts | templates ${JSON.stringify(tCount)} | pillars [${[...pillars]}]`);
 }

@@ -218,8 +218,13 @@ with zero duplicates:
 
 ## 9. Other connections
 - **Google Drive** MCP — how the user hands you logo assets / design zips (egress-safe).
-- **Slack** — team channel **#social `C0BATGA438T`**. When a post goes live, post an engagement
-  alert (platform, first line, direct link, "like/comment/save in the first 30 min").
+- **Slack** — team channel **#social `C0BATGA438T`**. **Mandatory, immediately after every Buffer
+  schedule/reschedule:** schedule the post's engagement alert with `slack_schedule_message`
+  (`post_at` = the post's `dueAt`; format: platform · first line · profile link · "Like, comment,
+  save — the first 30 minutes matter most") and record the returned id in the ledger as
+  `slackAlert`. Buffer write → Slack write → ledger write, one unit of work; a post without a
+  scheduled alert is an unfinished job. Re-anchor on real time first (`time_in_past` = the session
+  clock jumped); posts already sent get `skipped-already-sent`, not a stale alert.
 - **Notion** — the **Social-Content-Pipeline** skill page `3870a9f4-35b5-800a-ba80-e79895dd75ee`
   (fuller pipeline doc) and the Claude Design Playbook.
 - **Claude Design / DesignSync** — import design-system projects; needs interactive login
@@ -228,19 +233,26 @@ with zero duplicates:
 
 ## 10. Workflow each batch
 1. Confirm "now" (`get_account`). Read this file + `index.html` tokens.
-2. Plan the batch: pillar rotation, format variety, CTA rotation, photo usage (avoid repeats).
+2. Plan the batch **in the ledger first**: per-post `pillar`/`topic`/`template`/`surface`/
+   `heroPhoto`/`cta` fields. Pillar rotation, SURFACE rotation (both channels), CTA rotation,
+   photo usage (avoid repeats), message dedupe.
 3. Write copy (+ recipe + estimated macros where relevant); cross-check hard constraints.
-4. Render (harness) → **QA gate every image** → fix until clean.
-5. Host, verify 200.
-6. Schedule (preview gate), IG ≤4–5/wk, Pinterest heavier, optimal slots.
-7. Slack engagement alerts. Later: pull `sent` metrics, weight next batch to winners.
+4. Render (`render-batch.js batches/<batch>.json`) → **QA gate every image** → fix until clean.
+5. **Batch diversity gate:** `node diversity-gate.js ../manifest/<batch>.json` must PASS, and
+   eyeball `contact-sheet.js` output next to already-published tiles. No scheduling until clean.
+6. Host, verify 200.
+7. Schedule in Buffer (preview gate), IG ≤4–5/wk, Pinterest heavier, humanized times — and
+   **immediately schedule each post's Slack alert** (§9), recording `slackAlert` ids in the ledger.
+8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
 - Branch `add-food-photography`: landing page, `social/`, 74-photo library, and all July
   assets committed. Buffer is pre-approved via `.claude/settings.json` (§8.2).
-- **July 18–31 batch fully scheduled (20 posts):** 12 Pinterest + 8 Instagram, all rendered,
-  QA'd, hosted, and verified 200. Ledger of record: `social/manifest/july-batch.json`
-  (every post's `bufferId`/`dueAt`/`status`).
+- **July 18–31 batch (20 posts):** 12 Pinterest + 8 Instagram. As of Jul 20: 4 sent
+  (jul18/19 both channels), rest scheduled. Pinterest re-shelled per the diversity audit
+  (statdark ×2, bleed ×3, device ×1, list ×2 — photo now 4/12); Slack alerts scheduled for all
+  16 future posts. Ledger of record: `social/manifest/july-batch.json` (every post's
+  `bufferId`/`dueAt`/`status`/`slackAlert` + diversity fields).
 - **Cadence reworked (Jul 13 IG / Jul 16 Pinterest):** both channels now fully on the
   humanized schedule — all 7 weekdays covered, dayparts spread, irregular non-repeating
   minutes. All 12 Pinterest pins re-timed via `edit_post` Jul 16 and confirmed in Buffer. See §8.1.
@@ -269,6 +281,20 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Jul 20 2026 — diversity audit executed (root-cause fix for monoculture):** operator flagged
+  that pillars/templates weren't actually rotating. Findings: 11/12 July pins shipped on one
+  tPhoto shell; 3 near-duplicate "one grocery run" messages; every caption a product pitch, 13/20
+  on a receipt-scan closer; template library was scattered across 7 one-off scripts with only 4
+  shells in base.css. Fixes: consolidated harness (`templates.js` registry + `render-batch.js`,
+  all CSS in `base.css`, legacy scripts archived); pin-dimension dark/bleed/device/list shells;
+  6 pins re-shelled + jul28 to list + jul24 title de-duped + 4 caption closers varied via
+  edit_post; **new mandatory batch diversity gate** (`diversity-gate.js`, rules-as-code on ledger
+  fields pillar/topic/template/surface/heroPhoto/cta) + contact-sheet review (§10 steps 2/5).
+  Root cause named: rules were prose with no enforcement step, and the grid-variety rule was
+  IG-framed so Pinterest was skipped. Remaining July gate flags are sent-post legacy only.
+- **Jul 20 2026 — Slack alerts made mandatory-immediate:** engagement alerts were spec'd but never
+  scheduled until the operator noticed. New rule (§9/§10): Buffer write → Slack write → ledger
+  write as one unit; 16 July alerts scheduled (4 already-sent posts skipped as stale).
 - **Jul 2026 — photo library:** 4 dishes → **74 photos** across 5 categories, indexed in
   `assets/photos/photos.json`. QA lesson: slugs lie (a "gluten-free" pick showed bread) — open every image.
 - **Jul 2026 — pillars:** 5 → **8** (added Pantry/Fridge, Health/Diet, Grocery/Instacart as topic axes).
