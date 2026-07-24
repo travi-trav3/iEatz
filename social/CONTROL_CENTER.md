@@ -213,6 +213,12 @@ with zero duplicates:
   ("permission stream closed") — fall back to one call per turn. Edits are idempotent, so a
   partially-failed batch is safe to re-fire.
 - **No `updateIdea`/`editIdea`** — cannot attach media to an existing *idea*; `create_post` fresh.
+- **IG first comments — standard on every IG post:** typed tools have no first-comment field; use
+  `execute_mutation` on GraphQL `editPost` with `metadata.instagram.firstComment` (full-post
+  re-send: text + every asset + `type`/`shouldShareToFeed` + `schedulingType`, or you wipe media).
+  Select `... on PostActionSuccess { post { id metadata { ... on InstagramPostMetadata { firstComment } } } }`
+  + error fragments; verify a non-null echo; record `firstComment` in the ledger (retry-safe).
+  Comment = caption continuation or supporting detail, never a repeat. Pinterest: not supported.
 - **Preview gate:** show rendered images before scheduling live unless told otherwise. Recipe
   captions carry the full short recipe + estimated macros; alt text is descriptive.
 

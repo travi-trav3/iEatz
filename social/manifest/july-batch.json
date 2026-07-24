@@ -23,7 +23,7 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "All 20 PNGs QA-passed + verified 200 on 2026-07-12. Keep branch add-food-photography alive until Jul 31 posts publish. Buffer MCP flapping during scheduling; statuses below track progress. For pending: create_post with channelId, schedulingType=automatic, mode=customScheduled, dueAt as listed, text, assets image url=urlBase+file (thumbnailUrl same, altText + dimensions), and metadata (pinterest: boardServiceId+title+url=appStoreUrl; instagram: igMetadata). [rev 2026-07-13: IG rescheduled to span all 7 weekdays with humanized times; Pinterest times pending humanization.] [rev 2026-07-16: all 12 Pinterest pins re-timed to humanized schedule via edit_post, confirmed in Buffer.] [rev 2026-07-13b: grid-variety fix — 5 IG assets replaced with v2 shells (deep-green stat x2, full-bleed photo x2, dark quote overlay x1) so surfaces rotate cream/green/photo; swapped in Buffer via edit_post.] [rev 2026-07-20: audit fixes — 6 pins re-shelled to v2 (statdark/bleed/device), jul31 message de-duped; per-post pillar/topic/template/surface/heroPhoto/cta fields added for the diversity gate; Slack engagement alerts scheduled in #social for all 16 future posts (slackAlert ids), 4 already-sent posts skipped; jul19-pin published before its re-shell could land (kept old creative).] [rev 2026-07-20b: jul28 re-shelled photo->list; jul24 title de-duped; jul20/21/22/29 caption closers varied (receipt-scan formula now 4/12 pins incl. 2 sent); jul29 pillar retagged Lifestyle. Remaining gate flags are immutable sent-post legacy (jul18/19 adjacency).]",
+  "note": "All 20 PNGs QA-passed + verified 200 on 2026-07-12. Keep branch add-food-photography alive until Jul 31 posts publish. Buffer MCP flapping during scheduling; statuses below track progress. For pending: create_post with channelId, schedulingType=automatic, mode=customScheduled, dueAt as listed, text, assets image url=urlBase+file (thumbnailUrl same, altText + dimensions), and metadata (pinterest: boardServiceId+title+url=appStoreUrl; instagram: igMetadata). [rev 2026-07-13: IG rescheduled to span all 7 weekdays with humanized times; Pinterest times pending humanization.] [rev 2026-07-16: all 12 Pinterest pins re-timed to humanized schedule via edit_post, confirmed in Buffer.] [rev 2026-07-13b: grid-variety fix — 5 IG assets replaced with v2 shells (deep-green stat x2, full-bleed photo x2, dark quote overlay x1) so surfaces rotate cream/green/photo; swapped in Buffer via edit_post.] [rev 2026-07-20: audit fixes — 6 pins re-shelled to v2 (statdark/bleed/device), jul31 message de-duped; per-post pillar/topic/template/surface/heroPhoto/cta fields added for the diversity gate; Slack engagement alerts scheduled in #social for all 16 future posts (slackAlert ids), 4 already-sent posts skipped; jul19-pin published before its re-shell could land (kept old creative).] [rev 2026-07-20b: jul28 re-shelled photo->list; jul24 title de-duped; jul20/21/22/29 caption closers varied (receipt-scan formula now 4/12 pins incl. 2 sent); jul29 pillar retagged Lifestyle. Remaining gate flags are immutable sent-post legacy (jul18/19 adjacency).] [rev 2026-07-24: IG first comments attached via GraphQL editPost (metadata.instagram.firstComment, full-post re-send) to the 4 still-scheduled IG posts; jul22-ig/jul24-ig published before the request (clock jump to Jul 24) — skipped. Statuses synced: all posts due before Jul 24 marked sent.]",
   "posts": [
     {
       "id": "jul18-pin",
@@ -63,7 +63,7 @@
     },
     {
       "id": "jul20-pin",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "pinterest",
       "dueAt": "2026-07-20T18:50:00-07:00",
       "file": "assets/pinterest/july/jul20-pin-5ingredient-pasta.png",
@@ -81,7 +81,7 @@
     },
     {
       "id": "jul21-pin",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "pinterest",
       "dueAt": "2026-07-21T12:15:00-07:00",
       "file": "assets/pinterest/july/jul21-pin-cheap-healthy-v2.png",
@@ -99,7 +99,7 @@
     },
     {
       "id": "jul22-pin",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "pinterest",
       "dueAt": "2026-07-22T07:35:00-07:00",
       "file": "assets/pinterest/july/jul22-pin-grocery-week.png",
@@ -117,7 +117,7 @@
     },
     {
       "id": "jul23-pin",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "pinterest",
       "dueAt": "2026-07-23T21:20:00-07:00",
       "file": "assets/pinterest/july/jul23-pin-glutenfree-v2.png",
@@ -277,7 +277,7 @@
     },
     {
       "id": "jul22-ig",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "instagram",
       "dueAt": "2026-07-21T07:20:00-07:00",
       "file": "assets/social/july/jul21-ig-grocery-v2.png",
@@ -290,11 +290,12 @@
       "surface": "photo-bleed",
       "heroPhoto": "grocery/woman-grocery-shopping.jpg",
       "cta": "receipt-scan",
-      "slackAlert": "Dr0BJCCH36EP"
+      "slackAlert": "Dr0BJCCH36EP",
+      "firstComment": "skipped-already-sent"
     },
     {
       "id": "jul24-ig",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "instagram",
       "dueAt": "2026-07-23T18:40:00-07:00",
       "file": "assets/social/july/jul24-ig-product-feature.png",
@@ -307,7 +308,8 @@
       "surface": "mint",
       "heroPhoto": "app-recipe.jpg",
       "cta": "app-value",
-      "slackAlert": "Dr0BJLHS2EGZ"
+      "slackAlert": "Dr0BJLHS2EGZ",
+      "firstComment": "skipped-already-sent"
     },
     {
       "id": "jul25-ig",
@@ -324,7 +326,8 @@
       "surface": "dark",
       "heroPhoto": "lifestyle/woman-in-kitchen.jpg",
       "cta": "none",
-      "slackAlert": "Dr0BJFBXEHHB"
+      "slackAlert": "Dr0BJFBXEHHB",
+      "firstComment": "The takeout math adds up fast — a delivery order typically runs two to three times the cost of cooking the same meal at home. Cooking what you already have is the quiet budget win."
     },
     {
       "id": "jul27-ig",
@@ -341,7 +344,8 @@
       "surface": "paper",
       "heroPhoto": "fridge/fridge-real-mess.jpg",
       "cta": "receipt-scan",
-      "slackAlert": "Dr0BKD0RDGQG"
+      "slackAlert": "Dr0BKD0RDGQG",
+      "firstComment": "Rule of thumb for fridge-chaos dinners: one protein, one vegetable, one starch. iEatz does the matching — you just cook the result."
     },
     {
       "id": "jul29-ig",
@@ -358,7 +362,8 @@
       "surface": "dark",
       "heroPhoto": null,
       "cta": "app-value",
-      "slackAlert": "Dr0BJ3AC32PR"
+      "slackAlert": "Dr0BJ3AC32PR",
+      "firstComment": "For scale: 30 g of protein is roughly one chicken breast, or two eggs plus a cup of Greek yogurt, or a big bowl of lentils with feta. Estimates per serving — always verify for allergens."
     },
     {
       "id": "jul31-ig",
@@ -375,7 +380,8 @@
       "surface": "photo-bleed",
       "heroPhoto": "lifestyle/couple-cooking.jpg",
       "cta": "none",
-      "slackAlert": "Dr0BJLJNNVL1"
+      "slackAlert": "Dr0BJLJNNVL1",
+      "firstComment": "The 15-minute rule: when dinner takes longer to decide than to cook, deciding was the real problem. Let the app pick first — you just cook."
     }
   ]
 }

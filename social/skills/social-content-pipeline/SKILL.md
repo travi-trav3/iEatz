@@ -202,8 +202,21 @@ each account's real best times instead of guessing.
 - **Batching:** once pre-approved (§0), `create_post`/`edit_post` can run in parallel. Before
   approval, parallel calls fail at the permission layer — fall back to one per turn.
 - **No `updateIdea`/`editIdea`** — cannot attach media to an existing *idea*; `create_post` fresh.
-
-### Phase 7.5: Ledger — idempotent scheduling through flapping connectors
+- **First comments (Instagram, Facebook, LinkedIn):** the typed `create_post`/`edit_post` tools
+  have NO first-comment field — it exists only on the GraphQL `editPost` mutation at
+  `metadata.<service>.firstComment`. Recipe: (1) `create_post` normally, keep the post id;
+  (2) `execute_mutation` on `editPost` — it **re-validates the whole post, not a merge**, so
+  re-send `text`, EVERY asset, `dueAt`, `mode`, `schedulingType` (required), and the full
+  service metadata (`instagram` needs `type` + `shouldShareToFeed` alongside `firstComment`;
+  LinkedIn posts must be `schedulingType:"automatic"`); (3) the return type is a union — select
+  `... on PostActionSuccess { post { id metadata { ... on InstagramPostMetadata { firstComment } } } }`
+  plus the error fragments ("Cannot query field \"id\" on PostActionPayload" = you forgot the
+  success fragment; "Cannot query field \"firstComment\" on PostMetadata" = you forgot the
+  service-specific metadata fragment); (4) verify the payload echoes a **non-null firstComment**
+  and record it in the ledger so a retry never double-posts. "Account is not allowed to perform
+  this action on post" usually means the post already SENT (check the clock — it jumps).
+  A good first comment continues the caption or adds a supporting detail — never a repeat,
+  never an invented fact. Pinterest has no first comment.
 MCP connectors (Buffer especially) disconnect mid-session. Track every batch in a
 `manifest/<batch>.json` ledger so scheduling is safe to stop/retry with **zero duplicates**:
 - Batch-level: org id, channel ids + `boardServiceId`, `urlBase`, destination URL, per-platform
