@@ -215,9 +215,10 @@ each account's real best times instead of guessing.
   service-specific metadata fragment); (4) verify the payload echoes a **non-null firstComment**
   and record it in the ledger so a retry never double-posts. "Account is not allowed to perform
   this action on post" usually means the post already SENT (check the clock — it jumps).
-  **Voice: a first comment PLAYS OFF the post — it reacts to the specific quote, photo, or
-  numeral like the brand replying to itself — it never restates, reinforces, or extends the
-  pitch.** Good moves: call out a favorite detail in the testimonial; riff on what's literally
+  **Voice — the portable rule for every brand: a first comment is a REPLY, not a continuation —
+  write it as the brand reacting to the specific image, quote, or number the audience just saw,
+  and if the sentence would read naturally appended to the caption, it isn't a first comment yet.**
+  It reacts like the brand replying to itself; it never restates, reinforces, or extends the pitch. Good moves: call out a favorite detail in the testimonial; riff on what's literally
   visible in the photo ("the mystery jars live to see another week"); pre-empt the obvious
   audience objection to a stat ("no, that doesn't mean chicken breast five nights in a row").
   Bad: a second paragraph of caption, a supporting statistic, any repeat of the value prop.

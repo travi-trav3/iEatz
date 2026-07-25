@@ -68,6 +68,11 @@ Org **"<ORG NAME>"** = `<ORG ID>`.
   use a fixed grid or the channel's preset slots; let `sent` metrics teach the real best times.
 - **Ledger:** track each batch in `social/manifest/<batch>.json` (id/status/bufferId/dueAt/file/text)
   for idempotent, resumable scheduling.
+- **First comments (Skill §7, IG/FB/LinkedIn):** attach via GraphQL `editPost`
+  `metadata.<service>.firstComment` (full-post re-send). A first comment is a **reply, not a
+  continuation** — write it as the brand reacting to the specific image, quote, or number the
+  audience just saw; if it would read naturally appended to the caption, it isn't a first
+  comment yet.
 
 ## 9. Other connections
 - **Slack** team channel **<#CHANNEL NAME / ID>** — engagement alert on publish (Skill §8).
