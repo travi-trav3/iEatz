@@ -1953,6 +1953,57 @@
   .sr { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 
 </style>
+<!-- ==========================================================================
+     Meta Pixel — iEatz Healthy
+     Dataset 766649737085123 ("iEatzHealthy's Pixel", Business Mgr 106110620475071)
+
+     Fires:
+       PageView       on every page load
+       AppStoreClick  on any App Store CTA, with the placement label from the
+                      link's data-cta attribute, so we can see which of the
+                      nine CTAs actually earns the tap.
+
+     To carry this into the redesign: copy this whole block into <head>, and
+     keep data-cta="..." on every App Store link.
+     ========================================================================== -->
+
+<!-- DOMAIN VERIFICATION: paste the <meta name="facebook-domain-verification">
+     tag from Business Settings > Brand Safety > Domains > ieatzhealthy.com
+     on the line below, then delete this comment. Required before Aggregated
+     Event Measurement will let you configure conversion events. -->
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+/* Limited Data Use. The 0,0 args tell Meta to geolocate and apply LDU only to
+   California visitors. Costs some CA retargeting reach; buys CPRA cover
+   without needing a consent banner. Delete this line only after a real
+   consent mechanism and privacy policy are live. */
+fbq('dataProcessingOptions', ['LDU'], 0, 0);
+
+fbq('init', '766649737085123');
+fbq('track', 'PageView');
+
+/* App Store CTA clicks. Every CTA is target="_blank", so this page stays
+   alive when the App Store opens and the beacon completes reliably. */
+document.addEventListener('click', function (e) {
+  var t = e.target;
+  if (!t || typeof t.closest !== 'function') return;
+  var a = t.closest('a[href*="apps.apple.com"]');
+  if (!a || typeof window.fbq !== 'function') return;
+  fbq('trackCustom', 'AppStoreClick', {
+    placement: a.getAttribute('data-cta') || 'unlabeled',
+    page: location.pathname
+  });
+}, true);
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=766649737085123&ev=PageView&noscript=1"></noscript>
+
 </head>
 <body>
 
@@ -1976,7 +2027,7 @@
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
       <a href="#story">Story</a>
-      <a class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
+      <a data-cta="nav" class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
         <img src="assets/app-store-badge.png" alt="Download on the App Store">
       </a>
     </div>
@@ -1995,7 +2046,7 @@
         <h1>Dinner, <span class="accent">decided.</span></h1>
         <p class="sub" id="heroSub">Tell iEatz what's in your kitchen. Get healthy meals back in seconds. No recipes to search. No groceries to buy. Just cook.</p>
         <div class="hero-ctas">
-          <a class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
+          <a data-cta="hero" class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
             <img src="assets/app-store-badge.png" alt="Download on the App Store">
           </a>
           <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
@@ -2073,7 +2124,7 @@
     <div class="cta-strip">
       <div class="cta-strip-msg">Skip the 6 PM spiral. <span class="em">Download iEatz now.</span></div>
       <div class="cta-strip-side">
-        <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
+        <a data-cta="strip-6pm-spiral" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
           <img src="assets/app-store-badge.png" alt="Download on the App Store">
         </a>
       </div>
@@ -2136,7 +2187,7 @@
     <div class="cta-strip on-dark">
       <div class="cta-strip-msg">Make Monday the day it changes. <span class="em">Download now.</span></div>
       <div class="cta-strip-side">
-        <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
+        <a data-cta="strip-monday" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
           <img src="assets/app-store-badge.png" alt="Download on the App Store">
         </a>
       </div>
@@ -2206,7 +2257,7 @@
           </div>
         </div>
         <div class="how-cta-row">
-          <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
+          <a data-cta="how-it-works" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
             <img src="assets/app-store-badge.png" alt="Download on the App Store">
           </a>
           <span style="font-size: 14px; color: var(--ink-4);">Free, forever — no account needed to try.</span>
@@ -2426,7 +2477,7 @@
         <p>You buy food. You forget about it. You order takeout. The food goes bad. Repeat.</p>
         <p><span class="pop">iEatz reverses the cycle.</span> Instead of buying food for recipes, you get recipes for your food. You cook what you have. You waste less. You spend less.</p>
         <div style="margin-top: 36px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
-          <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
+          <a data-cta="story-cycle" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
             <img src="assets/app-store-badge.png" alt="Download on the App Store">
           </a>
           <span style="font-size: 14px; color: var(--ink-4); letter-spacing: 0.02em;">Stop the cycle. Free, forever.</span>
@@ -2519,7 +2570,7 @@
     <div class="cta-strip on-paper">
       <div class="cta-strip-msg">Every feature, free on the starter plan. <span class="em">Download now.</span></div>
       <div class="cta-strip-side">
-        <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
+        <a data-cta="strip-features" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
           <img src="assets/app-store-badge.png" alt="Download on the App Store">
         </a>
       </div>
@@ -2553,7 +2604,7 @@
     <div class="cta-strip">
       <div class="cta-strip-msg">No risk. No credit card. <span class="em">Just download.</span></div>
       <div class="cta-strip-side">
-        <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
+        <a data-cta="strip-no-risk" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
           <img src="assets/app-store-badge.png" alt="Download on the App Store">
         </a>
       </div>
@@ -2572,7 +2623,7 @@
     <h2>Dinner shouldn't take <span class="em">this much energy.</span></h2>
     <p class="finalcta-sub">iEatz is free on the App Store. Open the fridge. We'll handle the rest.</p>
     <div class="finalcta-ctas">
-      <a class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
+      <a data-cta="final-cta" class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
         <img src="assets/app-store-badge.png" alt="Download on the App Store">
       </a>
     </div>
@@ -2623,7 +2674,7 @@
         <div class="foot-links">
           <a href="#">@ieatzhealthy</a>
           <a href="#">Newsletter</a>
-          <a href="#">Privacy</a>
+          <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Service</a>
         </div>
       </div>
