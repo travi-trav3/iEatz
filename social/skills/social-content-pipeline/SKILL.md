@@ -215,8 +215,14 @@ each account's real best times instead of guessing.
   service-specific metadata fragment); (4) verify the payload echoes a **non-null firstComment**
   and record it in the ledger so a retry never double-posts. "Account is not allowed to perform
   this action on post" usually means the post already SENT (check the clock — it jumps).
-  A good first comment continues the caption or adds a supporting detail — never a repeat,
-  never an invented fact. Pinterest has no first comment.
+  **Voice: a first comment PLAYS OFF the post — it reacts to the specific quote, photo, or
+  numeral like the brand replying to itself — it never restates, reinforces, or extends the
+  pitch.** Good moves: call out a favorite detail in the testimonial; riff on what's literally
+  visible in the photo ("the mystery jars live to see another week"); pre-empt the obvious
+  audience objection to a stat ("no, that doesn't mean chicken breast five nights in a row").
+  Bad: a second paragraph of caption, a supporting statistic, any repeat of the value prop.
+  Never an invented fact (especially about real testimonial customers). Pinterest has no
+  first comment.
 MCP connectors (Buffer especially) disconnect mid-session. Track every batch in a
 `manifest/<batch>.json` ledger so scheduling is safe to stop/retry with **zero duplicates**:
 - Batch-level: org id, channel ids + `boardServiceId`, `urlBase`, destination URL, per-platform

@@ -218,7 +218,9 @@ with zero duplicates:
   re-send: text + every asset + `type`/`shouldShareToFeed` + `schedulingType`, or you wipe media).
   Select `... on PostActionSuccess { post { id metadata { ... on InstagramPostMetadata { firstComment } } } }`
   + error fragments; verify a non-null echo; record `firstComment` in the ledger (retry-safe).
-  Comment = caption continuation or supporting detail, never a repeat. Pinterest: not supported.
+  Comment voice = the brand replying to its own post: react to the specific quote, photo, or
+  numeral (riff on what's visible, pre-empt the obvious objection, flag a favorite detail) —
+  never restate, reinforce, or extend the pitch. Pinterest: not supported.
 - **Preview gate:** show rendered images before scheduling live unless told otherwise. Recipe
   captions carry the full short recipe + estimated macros; alt text is descriptive.
 

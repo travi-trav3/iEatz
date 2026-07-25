@@ -23,7 +23,7 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "All 20 PNGs QA-passed + verified 200 on 2026-07-12. Keep branch add-food-photography alive until Jul 31 posts publish. Buffer MCP flapping during scheduling; statuses below track progress. For pending: create_post with channelId, schedulingType=automatic, mode=customScheduled, dueAt as listed, text, assets image url=urlBase+file (thumbnailUrl same, altText + dimensions), and metadata (pinterest: boardServiceId+title+url=appStoreUrl; instagram: igMetadata). [rev 2026-07-13: IG rescheduled to span all 7 weekdays with humanized times; Pinterest times pending humanization.] [rev 2026-07-16: all 12 Pinterest pins re-timed to humanized schedule via edit_post, confirmed in Buffer.] [rev 2026-07-13b: grid-variety fix — 5 IG assets replaced with v2 shells (deep-green stat x2, full-bleed photo x2, dark quote overlay x1) so surfaces rotate cream/green/photo; swapped in Buffer via edit_post.] [rev 2026-07-20: audit fixes — 6 pins re-shelled to v2 (statdark/bleed/device), jul31 message de-duped; per-post pillar/topic/template/surface/heroPhoto/cta fields added for the diversity gate; Slack engagement alerts scheduled in #social for all 16 future posts (slackAlert ids), 4 already-sent posts skipped; jul19-pin published before its re-shell could land (kept old creative).] [rev 2026-07-20b: jul28 re-shelled photo->list; jul24 title de-duped; jul20/21/22/29 caption closers varied (receipt-scan formula now 4/12 pins incl. 2 sent); jul29 pillar retagged Lifestyle. Remaining gate flags are immutable sent-post legacy (jul18/19 adjacency).] [rev 2026-07-24: IG first comments attached via GraphQL editPost (metadata.instagram.firstComment, full-post re-send) to the 4 still-scheduled IG posts; jul22-ig/jul24-ig published before the request (clock jump to Jul 24) — skipped. Statuses synced: all posts due before Jul 24 marked sent.]",
+  "note": "All 20 PNGs QA-passed + verified 200 on 2026-07-12. Keep branch add-food-photography alive until Jul 31 posts publish. Buffer MCP flapping during scheduling; statuses below track progress. For pending: create_post with channelId, schedulingType=automatic, mode=customScheduled, dueAt as listed, text, assets image url=urlBase+file (thumbnailUrl same, altText + dimensions), and metadata (pinterest: boardServiceId+title+url=appStoreUrl; instagram: igMetadata). [rev 2026-07-13: IG rescheduled to span all 7 weekdays with humanized times; Pinterest times pending humanization.] [rev 2026-07-16: all 12 Pinterest pins re-timed to humanized schedule via edit_post, confirmed in Buffer.] [rev 2026-07-13b: grid-variety fix — 5 IG assets replaced with v2 shells (deep-green stat x2, full-bleed photo x2, dark quote overlay x1) so surfaces rotate cream/green/photo; swapped in Buffer via edit_post.] [rev 2026-07-20: audit fixes — 6 pins re-shelled to v2 (statdark/bleed/device), jul31 message de-duped; per-post pillar/topic/template/surface/heroPhoto/cta fields added for the diversity gate; Slack engagement alerts scheduled in #social for all 16 future posts (slackAlert ids), 4 already-sent posts skipped; jul19-pin published before its re-shell could land (kept old creative).] [rev 2026-07-20b: jul28 re-shelled photo->list; jul24 title de-duped; jul20/21/22/29 caption closers varied (receipt-scan formula now 4/12 pins incl. 2 sent); jul29 pillar retagged Lifestyle. Remaining gate flags are immutable sent-post legacy (jul18/19 adjacency).] [rev 2026-07-24: IG first comments attached via GraphQL editPost (metadata.instagram.firstComment, full-post re-send) to the 4 still-scheduled IG posts; jul22-ig/jul24-ig published before the request (clock jump to Jul 24) — skipped. Statuses synced: all posts due before Jul 24 marked sent.] [rev 2026-07-24b: first comments rewritten to the play-off voice (react to the quote/photo/numeral, never restate the pitch) per operator direction; all 4 re-verified in Buffer.]",
   "posts": [
     {
       "id": "jul18-pin",
@@ -327,7 +327,7 @@
       "heroPhoto": "lifestyle/woman-in-kitchen.jpg",
       "cta": "none",
       "slackAlert": "Dr0BJFBXEHHB",
-      "firstComment": "The takeout math adds up fast — a delivery order typically runs two to three times the cost of cooking the same meal at home. Cooking what you already have is the quiet budget win."
+      "firstComment": "The \"three weeks in\" part is our favorite detail. Week one is novelty, week two is discipline — by week three it's just how dinner works now."
     },
     {
       "id": "jul27-ig",
@@ -345,7 +345,7 @@
       "heroPhoto": "fridge/fridge-real-mess.jpg",
       "cta": "receipt-scan",
       "slackAlert": "Dr0BKD0RDGQG",
-      "firstComment": "Rule of thumb for fridge-chaos dinners: one protein, one vegetable, one starch. iEatz does the matching — you just cook the result."
+      "firstComment": "For the record, this exact shelf reads as a sausage and white-bean skillet with a grape-and-greens salad. The mystery jars live to see another week."
     },
     {
       "id": "jul29-ig",
@@ -363,7 +363,7 @@
       "heroPhoto": null,
       "cta": "app-value",
       "slackAlert": "Dr0BJ3AC32PR",
-      "firstComment": "For scale: 30 g of protein is roughly one chicken breast, or two eggs plus a cup of Greek yogurt, or a big bowl of lentils with feta. Estimates per serving — always verify for allergens."
+      "firstComment": "And before anyone says it — no, that number does not mean chicken breast five nights in a row. Chickpeas, eggs, lentils, yogurt and salmon all pull their weight."
     },
     {
       "id": "jul31-ig",
@@ -381,7 +381,7 @@
       "heroPhoto": "lifestyle/couple-cooking.jpg",
       "cta": "none",
       "slackAlert": "Dr0BJLJNNVL1",
-      "firstComment": "The 15-minute rule: when dinner takes longer to decide than to cook, deciding was the real problem. Let the app pick first — you just cook."
+      "firstComment": "An accurate portrait of the two kitchen roles: one person cooking, one person \"quality-checking\" off the wooden spoon. Every kitchen has both."
     }
   ]
 }
