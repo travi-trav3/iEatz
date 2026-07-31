@@ -254,6 +254,12 @@ with zero duplicates:
 8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
+- **Aug 1–14 batch fully scheduled (Jul 31):** 12 Pinterest + 8 IG incl. the account's FIRST
+  CAROUSEL. 8 distinct shells per the diversity gate (PASSED pre-scheduling, first try), 11
+  never-used photos (5 candidates rejected on open-the-photo QA), Slack alerts + IG first
+  comments attached at scheduling time. Ledger: `social/manifest/aug-1-14-batch.json`.
+- **Testimonials blocked:** only Ashly H.'s quote text exists in-repo. Restore Maya R. /
+  Leoactionz / SixSocks exact quote texts (from the CPP bundle) before quote posts resume.
 - Branch `add-food-photography`: landing page, `social/`, 74-photo library, and all July
   assets committed. Buffer is pre-approved via `.claude/settings.json` (§8.2).
 - **July 18–31 batch (20 posts):** 12 Pinterest + 8 Instagram. As of Jul 20: 4 sent
