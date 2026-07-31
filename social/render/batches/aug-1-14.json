@@ -44,15 +44,15 @@
       "body": "Roast night, then grain bowls, then broth soup. iEatz maps the leftovers so nothing gets tossed."
     },
     {
-      "file": "aug05-pin-protein-breakfast",
+      "file": "aug05-pin-protein-breakfast-v2",
       "w": 1000,
       "h": 1500,
       "template": "photo",
-      "photo": "food/breakfast-plate-eggs.jpg",
+      "photo": "food/breakfast-flatlay-avocado.jpg",
       "eyebrow": "Before the bus",
       "head": "High-protein breakfasts <span class=\"accent\">before the bus.</span>",
       "chips": [
-        "Eggs two ways",
+        "Yogurt + chia bowl",
         "10 minutes",
         "Kid-approved"
       ]
