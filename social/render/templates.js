@@ -51,6 +51,13 @@ const TEMPLATES = {
     <div class="stat-sub">${p.statSub}</div><div class="stat-body"><span class="rule"></span><p>${p.statBody}</p></div></div>${foot}
   </div>` },
 
+  recipephoto: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin t-recipephoto">
+    <div class="hero"><img src="${PHOTOS}/${p.photo}" alt="" style="object-position:${p.objPos || 'center'}"></div>
+    <div class="panel"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1>
+    <div class="need">You need</div><div class="ings">${p.ings.map(x => `<span class="ing">${x}</span>`).join('')}</div>
+    <div class="method"><span class="rule"></span><p>${p.method}</p></div><div class="spacer"></div>${foot}</div>
+  </div>` },
+
   // ---------- mint surface ----------
   device: { surface: 'mint', render: (p, PHOTOS) => `<div class="pin t-device">
     <div class="dhead"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1><p class="dcap">${p.cap}</p></div>
@@ -72,7 +79,7 @@ const TEMPLATES = {
 
   // ---------- photo-bleed surface ----------
   bleed: { surface: 'photo-bleed', render: (p, PHOTOS) => `<div class="pin ig-bleed">
-    <img class="bg" src="${PHOTOS}/${p.photo}" alt=""><div class="scrim"></div>
+    <img class="bg" src="${PHOTOS}/${p.photo}" alt="" style="object-position:${p.objPos || 'center'}"><div class="scrim"></div>
     <div class="bwrap"><div class="eyebrow mint">${p.eyebrow}</div><h1 class="bhead">${p.head}</h1>${p.sub ? `<p class="bsub">${p.sub}</p>` : ''}</div>${footDark}
   </div>` },
 };

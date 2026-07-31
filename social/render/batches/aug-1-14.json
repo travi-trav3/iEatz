@@ -2,133 +2,325 @@
   "name": "aug-1-14",
   "note": "Aug 1-14 batch renders. Ledger of record: social/manifest/aug-1-14-batch.json",
   "posts": [
-    { "file": "aug01-pin-lentil-soup", "w": 1000, "h": 1500, "template": "recipe",
-      "eyebrow": "Pantry dinner tonight",
-      "head": "One-pot <span class=\"accent\">lemon-lentil soup.</span>",
-      "ings": ["Red lentils", "Canned tomatoes", "Garlic", "Lemon", "Cumin", "Olive oil"],
-      "method": "Sauté garlic and cumin, add lentils, tomatoes and four cups of water, simmer twenty-five minutes, finish with lemon." },
-    { "file": "aug02-pin-family-dinner", "w": 1000, "h": 1500, "template": "bleed", "headSize": 96,
+    {
+      "file": "aug01-pin-egg-bowl-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "recipephoto",
+      "eyebrow": "Ten-minute lunch",
+      "head": "Soft-egg <span class=\"accent\">power bowl.</span>",
+      "ings": [
+        "Eggs",
+        "Mixed greens",
+        "Avocado",
+        "Cherry tomatoes",
+        "Radish",
+        "Olive oil"
+      ],
+      "method": "Jammy-boil the eggs for seven minutes, pile over dressed greens with avocado and tomato, finish with radish and good olive oil.",
+      "photo": "food/veggie-bowl-eggs.jpg"
+    },
+    {
+      "file": "aug02-pin-family-dinner-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "headSize": 96,
       "photo": "lifestyle/family-cooking-together.jpg",
       "eyebrow": "School-night dinners",
       "head": "Dinner is the <span class=\"accent\">easiest hour</span> of the day.",
-      "sub": "When the recipe is already picked, cooking together is the fun part." },
-    { "file": "aug03-pin-roast-chicken", "w": 1000, "h": 1500, "template": "statdark", "statSize": 380,
+      "sub": "When the recipe is already picked, cooking together is the fun part.",
+      "objPos": "58% center"
+    },
+    {
+      "file": "aug03-pin-roast-chicken",
+      "w": 1000,
+      "h": 1500,
+      "template": "statdark",
+      "statSize": 380,
       "eyebrow": "Stretch the groceries",
       "stat": "3",
       "sub": "Dinners from one roast chicken.",
-      "body": "Roast night, then grain bowls, then broth soup. iEatz maps the leftovers so nothing gets tossed." },
-    { "file": "aug05-pin-protein-breakfast", "w": 1000, "h": 1500, "template": "photo",
+      "body": "Roast night, then grain bowls, then broth soup. iEatz maps the leftovers so nothing gets tossed."
+    },
+    {
+      "file": "aug05-pin-protein-breakfast",
+      "w": 1000,
+      "h": 1500,
+      "template": "photo",
       "photo": "food/breakfast-plate-eggs.jpg",
       "eyebrow": "Before the bus",
       "head": "High-protein breakfasts <span class=\"accent\">before the bus.</span>",
-      "chips": ["Eggs two ways", "10 minutes", "Kid-approved"] },
-    { "file": "aug06-pin-shop-shelves", "w": 1000, "h": 1500, "template": "bleed", "headSize": 98,
+      "chips": [
+        "Eggs two ways",
+        "10 minutes",
+        "Kid-approved"
+      ]
+    },
+    {
+      "file": "aug06-pin-shop-shelves",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "headSize": 98,
       "photo": "pantry/pantry-open-spice.jpg",
       "eyebrow": "Pantry-first cooking",
       "head": "Shop your <span class=\"accent\">shelves</span> first.",
-      "sub": "Half of tonight's dinner is already behind this door." },
-    { "file": "aug07-pin-dinner-rotation", "w": 1000, "h": 1500, "template": "list",
+      "sub": "Half of tonight's dinner is already behind this door."
+    },
+    {
+      "file": "aug07-pin-dinner-rotation",
+      "w": 1000,
+      "h": 1500,
+      "template": "list",
       "eyebrow": "School-night survival",
       "head": "The school-night <span class=\"accent\">dinner rotation.</span>",
       "items": [
-        { "t": "Sheet-pan salmon + broccoli", "s": "Monday: one pan, no decisions" },
-        { "t": "Pantry taco night", "s": "Chickpeas, slaw, warm tortillas" },
-        { "t": "One-pot lentil soup", "s": "Simmers while homework happens" },
-        { "t": "Skillet chicken + greens", "s": "Twenty minutes, start to plate" },
-        { "t": "Friday fridge clean-out", "s": "Whatever's left becomes dinner" }
-      ] },
-    { "file": "aug08-pin-taco-night", "w": 1000, "h": 1500, "template": "bleed", "headSize": 98,
+        {
+          "t": "Sheet-pan salmon + broccoli",
+          "s": "Monday: one pan, no decisions"
+        },
+        {
+          "t": "Pantry taco night",
+          "s": "Chickpeas, slaw, warm tortillas"
+        },
+        {
+          "t": "One-pot lentil soup",
+          "s": "Simmers while homework happens"
+        },
+        {
+          "t": "Skillet chicken + greens",
+          "s": "Twenty minutes, start to plate"
+        },
+        {
+          "t": "Friday fridge clean-out",
+          "s": "Whatever's left becomes dinner"
+        }
+      ]
+    },
+    {
+      "file": "aug08-pin-taco-night",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "headSize": 98,
       "photo": "food/tacos-lime.jpg",
       "eyebrow": "Zero-shopping dinners",
       "head": "Taco night, <span class=\"accent\">zero shopping.</span>",
-      "sub": "Chickpeas, sweet potato, slaw — it was all on the receipt." },
-    { "file": "aug10-pin-instacart-gap", "w": 1000, "h": 1500, "template": "device",
+      "sub": "Chickpeas, sweet potato, slaw — it was all on the receipt."
+    },
+    {
+      "file": "aug10-pin-instacart-gap",
+      "w": 1000,
+      "h": 1500,
+      "template": "device",
       "photo": "app-instacart.jpg",
       "eyebrow": "When one thing's missing",
       "head": "Missing one ingredient? <span class=\"accent\">One tap.</span>",
-      "cap": "iEatz spots the gap in a recipe and fills it with a one-tap Instacart cart." },
-    { "file": "aug11-pin-8pm-rescue", "w": 1000, "h": 1500, "template": "bleed", "headSize": 98,
+      "cap": "iEatz spots the gap in a recipe and fills it with a one-tap Instacart cart."
+    },
+    {
+      "file": "aug11-pin-8pm-rescue",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "headSize": 98,
       "photo": "lifestyle/cooking-roast-at-stove.jpg",
       "eyebrow": "Late nights happen",
       "head": "The 8 p.m. <span class=\"accent\">dinner rescue.</span>",
-      "sub": "Late start, real dinner — twenty minutes, one pan." },
-    { "file": "aug12-pin-still-dinner", "w": 1000, "h": 1500, "template": "list",
+      "sub": "Late start, real dinner — twenty minutes, one pan."
+    },
+    {
+      "file": "aug12-pin-still-dinner",
+      "w": 1000,
+      "h": 1500,
+      "template": "list",
       "eyebrow": "Before it hits the bin",
       "head": "<span class=\"accent\">5 foods</span> you're tossing that are still dinner.",
       "items": [
-        { "t": "Wilting greens", "s": "Blitz into pesto or a soup" },
-        { "t": "Stale bread", "s": "Panzanella or skillet croutons" },
-        { "t": "Overripe tomatoes", "s": "Ten-minute pasta sauce" },
-        { "t": "Leftover rice", "s": "Fried-rice night, obviously" },
-        { "t": "Roast chicken bones", "s": "Tomorrow's broth" }
-      ] },
-    { "file": "aug13-pin-lunches-packed", "w": 1000, "h": 1500, "template": "statdark", "statSize": 300,
+        {
+          "t": "Wilting greens",
+          "s": "Blitz into pesto or a soup"
+        },
+        {
+          "t": "Stale bread",
+          "s": "Panzanella or skillet croutons"
+        },
+        {
+          "t": "Overripe tomatoes",
+          "s": "Ten-minute pasta sauce"
+        },
+        {
+          "t": "Leftover rice",
+          "s": "Fried-rice night, obviously"
+        },
+        {
+          "t": "Roast chicken bones",
+          "s": "Tomorrow's broth"
+        }
+      ]
+    },
+    {
+      "file": "aug13-pin-lunches-packed",
+      "w": 1000,
+      "h": 1500,
+      "template": "statdark",
+      "statSize": 300,
       "eyebrow": "School mornings",
       "stat": "7:00",
       "sub": "Lunches packed. Coffee still hot.",
-      "body": "Make-ahead lunches iEatz plans from what's already in the kitchen — mornings without the scramble." },
-    { "file": "aug14-pin-app-home", "w": 1000, "h": 1500, "template": "device",
+      "body": "Make-ahead lunches iEatz plans from what's already in the kitchen — mornings without the scramble."
+    },
+    {
+      "file": "aug14-pin-app-home",
+      "w": 1000,
+      "h": 1500,
+      "template": "device",
       "photo": "app-home.jpg",
       "eyebrow": "How iEatz thinks",
       "head": "Every dinner starts with <span class=\"accent\">what you have.</span>",
-      "cap": "The home screen reads your kitchen first — recipes come from your groceries, not a meal plan." },
-
-    { "file": "aug01-ig-carousel-s1", "w": 1080, "h": 1350, "template": "stat",
+      "cap": "The home screen reads your kitchen first — recipes come from your groceries, not a meal plan."
+    },
+    {
+      "file": "aug01-ig-carousel-s1",
+      "w": 1080,
+      "h": 1350,
+      "template": "stat",
       "eyebrow": "How it works",
       "stat": "3",
       "statSub": "moves from receipt to dinner.",
-      "statBody": "Swipe → the whole loop, start to finish." },
-    { "file": "aug01-ig-carousel-s2", "w": 1080, "h": 1350, "template": "list",
+      "statBody": "Swipe → the whole loop, start to finish."
+    },
+    {
+      "file": "aug01-ig-carousel-s2",
+      "w": 1080,
+      "h": 1350,
+      "template": "list",
       "eyebrow": "The three moves",
       "head": "Receipt → recipe → <span class=\"accent\">table.</span>",
       "items": [
-        { "t": "Scan the grocery receipt", "s": "Ten seconds, right in the kitchen" },
-        { "t": "Pick from the recipes it builds", "s": "Everything's based on what you bought" },
-        { "t": "Cook — gaps go to Instacart", "s": "One tap fills whatever's missing" }
-      ] },
-    { "file": "aug01-ig-carousel-s3", "w": 1080, "h": 1350, "template": "device",
+        {
+          "t": "Scan the grocery receipt",
+          "s": "Ten seconds, right in the kitchen"
+        },
+        {
+          "t": "Pick from the recipes it builds",
+          "s": "Everything's based on what you bought"
+        },
+        {
+          "t": "Cook — gaps go to Instacart",
+          "s": "One tap fills whatever's missing"
+        }
+      ]
+    },
+    {
+      "file": "aug01-ig-carousel-s3",
+      "w": 1080,
+      "h": 1350,
+      "template": "device",
       "photo": "app-instacart.jpg",
       "eyebrow": "Move three, in the wild",
       "head": "The gap, <span class=\"accent\">filled.</span>",
-      "cap": "Missing items route straight to a real Instacart cart — dinner stays on schedule." },
-    { "file": "aug04-ig-zero-trips", "w": 1080, "h": 1350, "template": "statdark", "statSize": 400,
+      "cap": "Missing items route straight to a real Instacart cart — dinner stays on schedule."
+    },
+    {
+      "file": "aug04-ig-zero-trips",
+      "w": 1080,
+      "h": 1350,
+      "template": "statdark",
+      "statSize": 400,
       "eyebrow": "The pantry week",
       "stat": "0",
       "sub": "Grocery trips this week.",
-      "body": "Not because the fridge is empty — because the week ran on what was already here." },
-    { "file": "aug06-ig-chickpea-tacos", "w": 1080, "h": 1350, "template": "recipe",
+      "body": "Not because the fridge is empty — because the week ran on what was already here."
+    },
+    {
+      "file": "aug06-ig-chickpea-tacos-v2",
+      "w": 1080,
+      "h": 1350,
+      "template": "recipephoto",
       "eyebrow": "Fifteen-minute dinner",
       "head": "Chickpea tacos, <span class=\"accent\">three moves.</span>",
-      "ings": ["Canned chickpeas", "Tortillas", "Slaw mix", "Lime", "Chipotle mayo"],
-      "method": "Crisp the chickpeas in a hot pan, pile into warm tortillas with slaw, finish with lime and a stripe of chipotle mayo." },
-    { "file": "aug08-ig-lunch-bowls", "w": 1080, "h": 1350, "template": "bleed",
+      "ings": [
+        "Canned chickpeas",
+        "Tortillas",
+        "Slaw mix",
+        "Lime",
+        "Chipotle mayo"
+      ],
+      "method": "Crisp the chickpeas in a hot pan, pile into warm tortillas with slaw, finish with lime and a stripe of chipotle mayo.",
+      "photo": "food/tacos-lime.jpg",
+      "objPos": "center 60%"
+    },
+    {
+      "file": "aug08-ig-lunch-bowls",
+      "w": 1080,
+      "h": 1350,
+      "template": "bleed",
       "photo": "food/healthy-bowls-table.jpg",
       "eyebrow": "The lunch math",
       "head": "Lunch you pack <span class=\"accent\">beats lunch you buy.</span>",
-      "sub": "On price, on protein, and on the 3 p.m. energy dip." },
-    { "file": "aug09-ig-sunday-table", "w": 1080, "h": 1350, "template": "igphoto",
+      "sub": "On price, on protein, and on the 3 p.m. energy dip."
+    },
+    {
+      "file": "aug09-ig-sunday-table",
+      "w": 1080,
+      "h": 1350,
+      "template": "igphoto",
       "photo": "food/brunch-table-spread.jpg",
       "eyebrow": "No app needed today",
       "head": "Sunday table, <span class=\"accent\">zero takeout.</span>",
-      "chips": ["Slow morning", "Big spread", "Everyone reaching"] },
-    { "file": "aug10-ig-decided", "w": 1080, "h": 1350, "template": "bleed",
+      "chips": [
+        "Slow morning",
+        "Big spread",
+        "Everyone reaching"
+      ]
+    },
+    {
+      "file": "aug10-ig-decided",
+      "w": 1080,
+      "h": 1350,
+      "template": "bleed",
       "photo": "lifestyle/pan-steam.jpg",
       "eyebrow": "Monday, handled",
       "head": "Dinner, decided <span class=\"accent\">at 6:10.</span>",
-      "sub": "Scanned the receipt Sunday — Monday just cooks." },
-    { "file": "aug12-ig-weeknight-formula", "w": 1080, "h": 1350, "template": "list",
+      "sub": "Scanned the receipt Sunday — Monday just cooks."
+    },
+    {
+      "file": "aug12-ig-weeknight-formula",
+      "w": 1080,
+      "h": 1350,
+      "template": "list",
       "eyebrow": "No recipe required",
       "head": "The weeknight <span class=\"accent\">formula.</span>",
       "items": [
-        { "t": "One protein you already have", "s": "Eggs count. Beans count." },
-        { "t": "One vegetable, any vegetable", "s": "Wilting is fine — that's flavor" },
-        { "t": "One starch from the pantry", "s": "Rice, pasta, tortillas, bread" },
-        { "t": "One sauce that ties it together", "s": "The fridge-door shelf is full of them" }
-      ] },
-    { "file": "aug14-ig-friday-recipe", "w": 1080, "h": 1350, "template": "device",
+        {
+          "t": "One protein you already have",
+          "s": "Eggs count. Beans count."
+        },
+        {
+          "t": "One vegetable, any vegetable",
+          "s": "Wilting is fine — that's flavor"
+        },
+        {
+          "t": "One starch from the pantry",
+          "s": "Rice, pasta, tortillas, bread"
+        },
+        {
+          "t": "One sauce that ties it together",
+          "s": "The fridge-door shelf is full of them"
+        }
+      ]
+    },
+    {
+      "file": "aug14-ig-friday-recipe",
+      "w": 1080,
+      "h": 1350,
+      "template": "device",
       "photo": "app-recipe.jpg",
       "eyebrow": "Friday, sorted",
       "head": "Friday's recipe is <span class=\"accent\">already picked.</span>",
-      "cap": "Pan-seared chicken, macros included — estimated per serving. The weekend starts at the stove." }
+      "cap": "Pan-seared chicken, macros included — estimated per serving. The weekend starts at the stove."
+    }
   ]
 }

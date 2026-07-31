@@ -137,3 +137,17 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
 .ig-recipe .method .rule{width:46px;height:3px;background:var(--green);margin-top:18px;flex:none}
 .ig-recipe .method p{font-family:var(--serif);font-size:46px;line-height:1.15;color:var(--ink)}
 .t-photo .chips{display:flex;flex-wrap:wrap;gap:14px}
+/* recipe card WITH photo hero (Aug 2026: text-only recipe cards die in-feed) */
+.t-recipephoto{display:flex;flex-direction:column}
+.t-recipephoto .hero{width:100%;height:46%;overflow:hidden;position:relative;flex:none}
+.t-recipephoto .hero img{width:100%;height:100%;object-fit:cover;display:block}
+.t-recipephoto .hero::after{content:"";position:absolute;inset:0;box-shadow:inset 0 -60px 70px -50px rgba(10,15,12,0.24)}
+.t-recipephoto .panel{flex:1;background:var(--paper);padding:52px 62px 50px;display:flex;flex-direction:column}
+.t-recipephoto .head{font-size:72px;margin-top:12px}
+.t-recipephoto .need{font-family:var(--sans);font-weight:600;font-size:21px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-light);margin-top:30px}
+.t-recipephoto .ings{display:flex;flex-wrap:wrap;gap:13px;margin-top:18px}
+.t-recipephoto .ing{font-family:var(--sans);font-weight:600;font-size:26px;color:var(--green-dark);background:var(--green-light);padding:13px 24px;border-radius:999px}
+.t-recipephoto .method{display:flex;gap:20px;margin-top:30px}
+.t-recipephoto .method .rule{width:42px;height:3px;background:var(--green);margin-top:16px;flex:none}
+.t-recipephoto .method p{font-family:var(--serif);font-size:36px;line-height:1.2;color:var(--ink)}
+.t-recipephoto .spacer{flex:1;min-height:12px}
