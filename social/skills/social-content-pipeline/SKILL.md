@@ -147,7 +147,15 @@ Open the actual PNG (don't trust alt text/dimensions). This gate exists because 
 wrong photos, logo collisions, and a math error. Check:
 1. **Dimensions** exactly 1080×1350 or 1000×1500.
 2. **Fonts loaded** (brand serif, not Georgia/Times).
-3. **Photo matches the copy** (shakshuka ≠ spaghetti; gluten-free ≠ flour tortillas).
+3. **Photo matches the copy** (shakshuka ≠ spaghetti; gluten-free ≠ flour tortillas) — AND
+   **reads as the meal it claims at thumbnail size, instantly** (learned Jul 2026: a technically
+   egg-containing plate of waffle+ham+mozzarella shipped as "breakfast"; the operator's reaction
+   was "idk what that is"). If a stranger can't name the meal in one second, it fails.
+4. **Food posts carry food photography.** A text-only recipe card is a QA fail for feeds —
+   use the photo-backed recipe shell (`recipephoto`); appetite appeal is the engagement driver.
+5. **Faces and subjects survive the crop.** Full-bleed portrait crops of landscape photos default
+   to center and will behead people at the edges — set the shell's `objPos` per photo and verify
+   every human subject is fully in frame at final aspect ratio.
 4. **No collisions** — brand badge, platform badge, headline, chips, and phone frames must not
    overlap; contain phone mockups; keep the logo in clear space.
 5. **Source resolution is high enough** — a hero that will look soft upscaled to target size is a QA

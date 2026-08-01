@@ -133,7 +133,11 @@ QA note: open every photo before use — some slugs are misleading (a "gluten-fr
 Open the actual image (Read tool). Do not rely on alt text/dimensions. Check:
 1. **Dimensions** exactly 1080×1350 or 1000×1500.
 2. **Fonts loaded** (serif is Instrument Serif, not Georgia).
-3. **Photo matches the copy** (shakshuka ≠ spaghetti; poke ≠ flatbread; GF ≠ flour tortillas).
+3. **Photo matches the copy** (shakshuka ≠ spaghetti; poke ≠ flatbread; GF ≠ flour tortillas)
+   — and **instantly reads as the meal it claims at thumbnail size** (a waffle-ham plate is not
+   "breakfast" even if eggs are on it). Food posts always carry food photography: text-only
+   recipe cards are a fail — use `recipephoto`. Full-bleed crops: set `objPos` so faces/subjects
+   survive the 2:3 or 4:5 crop; never ship a beheaded human.
 4. **No collisions** — brand badge, App Store badge, headline, chips, and phone frames must not
    overlap. Contain phone mockups; keep the logo in clear space (past failures: logo over title,
    badge kissing the phone, footer badge/URL overlapping).
