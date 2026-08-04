@@ -95,16 +95,23 @@ fbq('init', '766649737085123');
 fbq('track', 'PageView');
 
 /* App Store CTA clicks. Every CTA is target="_blank", so this page stays
-   alive when the App Store opens and the beacon completes reliably. */
+   alive when the store opens and the beacons complete reliably. Fires both
+   the Meta AppStoreClick custom event and a Pinterest `lead` conversion. */
 document.addEventListener('click', function (e) {
   var t = e.target;
   if (!t || typeof t.closest !== 'function') return;
   var a = t.closest('a[href*="apps.apple.com"]');
-  if (!a || typeof window.fbq !== 'function') return;
-  fbq('trackCustom', 'AppStoreClick', {
-    placement: a.getAttribute('data-cta') || 'unlabeled',
-    page: location.pathname
-  });
+  if (!a) return;
+  var placement = a.getAttribute('data-cta') || 'unlabeled';
+  if (typeof window.fbq === 'function') {
+    fbq('trackCustom', 'AppStoreClick', { placement: placement, page: location.pathname });
+  }
+  if (typeof window.pintrk === 'function') {
+    pintrk('track', 'lead', {
+      event_id: 'appstore-' + placement + '-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
+      lead_type: 'App Store Download'
+    });
+  }
 }, true);
 </script>
 <noscript><img height="1" width="1" style="display:none" alt=""
