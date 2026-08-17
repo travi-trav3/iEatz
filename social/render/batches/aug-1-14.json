@@ -3,12 +3,12 @@
   "note": "Aug 1-14 batch renders. Ledger of record: social/manifest/aug-1-14-batch.json",
   "posts": [
     {
-      "file": "aug01-pin-egg-bowl-v2",
+      "file": "aug01-pin-power-bowl-v3",
       "w": 1000,
       "h": 1500,
       "template": "recipephoto",
-      "eyebrow": "Ten-minute lunch",
-      "head": "Soft-egg <span class=\"accent\">power bowl.</span>",
+      "eyebrow": "High-protein lunch",
+      "head": "The ten-minute <span class=\"accent\">power bowl.</span>",
       "ings": [
         "Eggs",
         "Mixed greens",
@@ -17,7 +17,7 @@
         "Radish",
         "Olive oil"
       ],
-      "method": "Jammy-boil the eggs for seven minutes, pile over dressed greens with avocado and tomato, finish with radish and good olive oil.",
+      "method": "Boil the eggs for seven minutes so the yolks stay jammy, pile everything over dressed greens, and finish with good olive oil.",
       "photo": "food/veggie-bowl-eggs.jpg"
     },
     {
