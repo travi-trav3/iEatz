@@ -108,6 +108,8 @@ Plan the full batch before rendering:
    1000×1500 (2:3), SEO/keyword description, destination URL required, on-image text LARGER than IG.
 
 ### Phase 3: Copy writing
+
+- **Read every line of copy aloud.** Adjectives must be used the way people actually speak: "jammy egg" is a real phrase, "jammy-boil" is an invented verb; "soft-egg power bowl" reads like a SKU, "the ten-minute power bowl" reads like a person. If a phrase would sound odd said across a kitchen counter, rewrite it before it ships.
 1. **Match the pillar's purpose** (Transformation → story/testimonial; Money/Waste → stat + solution;
    Lifestyle → aspirational moment; Recipe/Food → dish + ease + ingredients; Product/Feature → what
    it does + why).

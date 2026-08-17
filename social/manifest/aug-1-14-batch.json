@@ -23,7 +23,7 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "Aug 1-14 batch, planned ledger-first per diversity gate. 8 distinct shells incl. first IG carousel; 11 never-used photos (all opened + QA'd; 4 rejected for off-message content: fries table, junk pantry shelf, Cheez-It cart, Hillshire pack, empty wine aisle). NO testimonial posts: Maya R./Leoactionz/SixSocks quote texts are not in the repo (CPP bundle) - restore them before quote posts resume. Receipt-scan closers capped. All 20 Slack alerts + IG first comments scheduled with the posts. [rev 2026-07-31: all 20 posts scheduled in Buffer, 20 Slack alerts armed, 8 IG first comments attached and verified (play-off voice). Fully executed per workflow: gate PASSED pre-scheduling, every image + photo QA-viewed, all URLs 200.] [rev 2026-07-31b: operator feedback fixes, all confirmed in Buffer — recipephoto shell replaces text-only recipe cards (aug01-pin now soft-egg power bowl w/ photo; aug06-ig tacos card got its hero); aug02-pin re-cropped w/ objPos so the boy is in frame; aug05-pin breakfast swapped from ambiguous dark plate to bright yogurt-chia flatlay w/ copy matched to photo. NOTE: aug08-pin and aug06-ig now share tacos-lime cross-channel 2 days apart (accepted; within-channel stays unique).]",
+  "note": "Aug 1-14 batch, planned ledger-first per diversity gate. 8 distinct shells incl. first IG carousel; 11 never-used photos (all opened + QA'd; 4 rejected for off-message content: fries table, junk pantry shelf, Cheez-It cart, Hillshire pack, empty wine aisle). NO testimonial posts: Maya R./Leoactionz/SixSocks quote texts are not in the repo (CPP bundle) - restore them before quote posts resume. Receipt-scan closers capped. All 20 Slack alerts + IG first comments scheduled with the posts. [rev 2026-07-31: all 20 posts scheduled in Buffer, 20 Slack alerts armed, 8 IG first comments attached and verified (play-off voice). Fully executed per workflow: gate PASSED pre-scheduling, every image + photo QA-viewed, all URLs 200.] [rev 2026-07-31b: operator feedback fixes, all confirmed in Buffer — recipephoto shell replaces text-only recipe cards (aug01-pin now soft-egg power bowl w/ photo; aug06-ig tacos card got its hero); aug02-pin re-cropped w/ objPos so the boy is in frame; aug05-pin breakfast swapped from ambiguous dark plate to bright yogurt-chia flatlay w/ copy matched to photo. NOTE: aug08-pin and aug06-ig now share tacos-lime cross-channel 2 days apart (accepted; within-channel stays unique).] [rev 2026-07-31c: aug01-pin copy naturalized per operator (jammy-boil/soft-egg were non-native phrasing) -> \"The ten-minute power bowl\", plain-English method.]",
   "formulaicCtas": [
     "receipt-scan"
   ],
@@ -33,16 +33,16 @@
       "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-08-01T09:05:00-07:00",
-      "file": "assets/pinterest/aug/aug01-pin-egg-bowl-v2.png",
+      "file": "assets/pinterest/aug/aug01-pin-power-bowl-v3.png",
       "template": "recipephoto",
       "surface": "paper",
       "pillar": "Recipe/Food",
       "topic": "Pantry/Fridge",
       "heroPhoto": "food/veggie-bowl-eggs.jpg",
       "cta": "app-value",
-      "title": "Soft-Egg Power Bowl — 10-Minute High-Protein Lunch",
-      "alt": "Recipe pin with photo of a blue bowl of soft-boiled eggs, greens, avocado, tomatoes and watermelon radish, plus ingredient chips and a one-line method.",
-      "text": "Soft-egg power bowl, ten minutes flat: jammy eggs over dressed greens with avocado, cherry tomatoes and radish. High protein, no cooking beyond the pot. iEatz surfaces bowls like this from what your kitchen already holds.",
+      "title": "10-Minute Power Bowl — Easy High-Protein Lunch",
+      "alt": "Recipe pin with photo of a blue bowl with jammy eggs, greens, avocado and watermelon radish, plus ingredient chips and a one-line method.",
+      "text": "The ten-minute power bowl: jammy eggs over dressed greens with avocado, cherry tomatoes and radish. High protein, and the only thing you actually cook is the eggs. iEatz finds bowls like this in what your kitchen already holds.",
       "bufferId": "6a6d32b6ebe00edff55d628c",
       "slackAlert": "Dr0BMACE1SRG"
     },

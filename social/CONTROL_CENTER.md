@@ -54,6 +54,8 @@ Design tokens: `index.html` `:root` block and `social/render/base.css`
 - **App Store URL (all CTAs):** `https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706`
 
 ## 3. HARD CONSTRAINTS — never violate
+
+- **Read every line of copy aloud.** Adjectives must be used the way people actually speak: "jammy egg" is a real phrase, "jammy-boil" is an invented verb; "soft-egg power bowl" reads like a SKU, "the ten-minute power bowl" reads like a person. If a phrase would sound odd said across a kitchen counter, rewrite it before it ships.
 1. **No fabricated in-app UI.** Phone frames may ONLY show real screenshots:
    `assets/photos/app-home.jpg`, `app-recipe.jpg`, `app-instacart.jpg`, and the CPP
    bundle's `screen-recipe/weight/inventory/instacart-missing.png`. Never invent an app screen.
