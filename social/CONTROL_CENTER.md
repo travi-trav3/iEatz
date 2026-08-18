@@ -260,6 +260,14 @@ with zero duplicates:
 8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
+- **Aug 18–31 batch fully scheduled (Aug 18):** 12 pins + 8 IG incl. second carousel. Ledger:
+  `social/manifest/aug-18-31-batch.json`. Aug 1–14 fully published.
+- **PINTEREST RECONNECTED (Aug 2026): new channel id `6a7a4b64b2d9d577435279f6`** — all pre-reconnect
+  Buffer post ids are dead (get_post 404s; sent pins re-imported via network). The channel now has
+  **8 topical boards** (Cheap healthy dinners / Easy weeknight / Grocery & meal planning / Meal prep /
+  High protein & macros / Pantry & clean-out / Quick Saves / School lunch & family) — **route every
+  pin to its matching board** via metadata.pinterest.boardServiceId (ids via get_channel); Quick Saves
+  is the fallback, not the default. IG channel unchanged (`6a14b495c687a22dd4267bfc`).
 - **Aug 1–14 batch fully scheduled (Jul 31):** 12 Pinterest + 8 IG incl. the account's FIRST
   CAROUSEL. 8 distinct shells per the diversity gate (PASSED pre-scheduling, first try), 11
   never-used photos (5 candidates rejected on open-the-photo QA), Slack alerts + IG first
