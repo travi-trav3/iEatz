@@ -2251,6 +2251,12 @@ footer{background:var(--ink-1);color:var(--paper);padding:80px 0 56px}
   /* Tiny utilities */
   .sr { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 
+  /* Fix: a later .obj-item rule above drops the 3-column layout for the
+     objection that carries the app screenshot; restore it here (wins by
+     coming last in the cascade). */
+  .obj-item--shot { grid-template-columns: 1fr 1.2fr 320px; align-items: center; }
+  @media (max-width: 1180px) { .obj-item--shot { grid-template-columns: 1fr 1.1fr 250px; gap: 36px; } }
+  @media (max-width: 820px)  { .obj-item--shot { grid-template-columns: 1fr; } }
 </style>
 <!-- ==========================================================================
      Meta Pixel — iEatz Healthy
