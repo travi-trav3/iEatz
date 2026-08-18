@@ -2,12 +2,12 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iEatz Healthy · Dinner, decided.</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>iEatz Healthy — Dinner, decided.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono&display=swap">
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <style>/* ==========================================================================
    iEatz Healthy — Design System Tokens
    Visual direction: editorial wellness. Magazine-feel, not fitness-app green.
@@ -383,6 +383,304 @@
 .ie-brand-badge.on-dark { color: var(--ie-paper); }
 .ie-brand-badge.on-dark .mark { color: var(--ie-green-light); }
 </style>
+<style>/* =========================================================
+   iEatz Healthy · Marketing landing page (rebuild, Aug 2026)
+   Editorial wellness. Paper backgrounds, Instrument Serif,
+   brand green used sparingly. Marketing track, not app track.
+   ========================================================= */
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink-1);font-family:var(--font-sans);font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--brand-green)}
+
+/* ----- Layout ----- */
+.wrap{width:100%;max-width:1320px;margin:0 auto;padding:0 48px}
+@media (max-width:720px){.wrap{padding:0 24px}}
+
+/* ----- Type utilities ----- */
+.serif{font-family:var(--font-serif);font-weight:400}
+.eyebrow{font-family:var(--font-sans);font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-green);display:inline-flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--brand-green);display:inline-block}
+.eyebrow.on-dark{color:#9FE4B3}
+.eyebrow.on-dark::before{background:#9FE4B3}
+.eyebrow.muted{color:var(--ink-4)}
+.eyebrow.muted::before{background:var(--ink-5)}
+
+/* ----- Nav ----- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(245,242,234,0.86);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid rgba(10,15,12,0.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:inline-flex;align-items:center;gap:12px;font-family:var(--font-sans);font-weight:600;font-size:18px;letter-spacing:-0.01em;color:var(--ink-1)}
+.brand:hover{color:var(--ink-1)}
+.brand .mark{width:22px;height:auto;color:var(--brand-green)}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--ink-3);font-weight:500}
+.nav-links a:hover{color:var(--ink-1)}
+@media (max-width:820px){.nav-links a:not(.btn){display:none}}
+
+/* ----- Buttons ----- */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:var(--ie-green-dark);color:var(--paper-light);border-radius:var(--btn-radius,999px);font-family:var(--font-sans);font-size:15px;font-weight:600;letter-spacing:-0.005em;border:none;cursor:pointer;transition:background 160ms ease;white-space:nowrap}
+.btn:hover{background:#0B3A21;color:var(--paper-light)}
+.btn:active{transform:translateY(1px);box-shadow:none}
+.btn--lg{padding:19px 34px;font-size:17px}
+.btn--xl{padding:23px 42px;font-size:19px}
+.btn--paper{background:var(--paper);color:var(--ie-green-dark)}
+.btn--paper:hover{background:var(--white);color:var(--ie-green-dark)}
+.textlink{font-size:16px;font-weight:500;color:var(--ink-3);border-bottom:1px solid rgba(10,15,12,0.22);padding-bottom:2px}
+.textlink:hover{color:var(--ink-1);border-color:var(--ink-1)}
+
+/* App Store badge */
+.as-badge{display:inline-block;height:54px;transition:transform 100ms ease}
+.as-badge img{height:100%;width:auto;display:block}
+.as-badge:active{transform:translateY(1px)}
+.as-badge--sm{height:42px}
+.as-badge--lg{height:62px}
+
+/* ===========================================================
+   1 · HERO
+   =========================================================== */
+.hero{padding:72px 0 120px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr;gap:56px}}
+.hero h1{font-family:var(--font-serif);font-weight:400;font-size:clamp(52px,7.2vw,112px);line-height:0.94;letter-spacing:-0.025em;color:var(--ie-ink);margin:24px 0 0;text-wrap:balance}
+.hero h1 .accent{color:var(--brand-green);font-style:italic}
+.hero .sub{font-family:var(--font-sans);font-size:22px;font-weight:400;line-height:1.5;color:var(--ink-3);margin:28px 0 0;max-width:540px}
+.hero-ctas{margin-top:36px;display:flex;flex-wrap:wrap;gap:20px 28px;align-items:center}
+
+/* Credibility unit · App Store rating */
+.rating{margin-top:20px;display:flex;align-items:center;gap:10px;font-family:var(--font-sans);font-size:15px;font-weight:500;color:var(--ink-3)}
+.rating .stars{color:var(--brand-green);letter-spacing:0.12em;font-size:14px;line-height:1}
+.rating-quote{margin:10px 0 0;font-family:var(--font-serif);font-style:italic;font-size:17px;line-height:1.3;color:var(--ink-3);max-width:440px}
+
+.hero-fine{margin-top:16px;font-size:14px;color:var(--ink-4);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.hero-fine .dot{width:4px;height:4px;border-radius:999px;background:var(--ink-5);flex:none}
+
+.hero-photo{position:relative;aspect-ratio:4/5;border-radius:24px;background:var(--ie-green-light)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;border-radius:24px;box-shadow:var(--shadow-lg);display:block}
+.hero-photo .pill{position:absolute;bottom:24px;left:24px;display:inline-flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(245,242,234,0.94);backdrop-filter:blur(8px);border-radius:999px;font-size:14px;font-weight:600;color:var(--ink-1)}
+.hero-photo .pill .ind{width:8px;height:8px;border-radius:999px;background:var(--brand-green);box-shadow:0 0 0 4px rgba(31,139,76,0.18)}
+.hero-photo .recipe-card{position:absolute;bottom:-32px;right:-32px;width:268px;background:var(--white);border-radius:20px;padding:20px 22px 22px;box-shadow:var(--shadow-lg);border:1px solid rgba(10,15,12,0.04)}
+.hero-photo .recipe-card .ingredients{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.hero-photo .recipe-card .ingr{font-size:12px;font-weight:500;padding:5px 10px;border-radius:999px;background:var(--ie-green-light);color:var(--ie-green-dark);letter-spacing:0.02em}
+.hero-photo .recipe-card .rname{font-family:var(--font-serif);font-size:21px;line-height:1.12;letter-spacing:-0.01em;color:var(--ink-1);margin:4px 0 10px;text-wrap:balance}
+.hero-photo .recipe-card .meta{font-size:12px;color:var(--ink-4);letter-spacing:0.06em;text-transform:uppercase;font-weight:600}
+@media (max-width:980px){.hero-photo .recipe-card{right:-12px;bottom:-24px;width:236px}}
+
+@media (max-width:720px){.hero{padding:44px 0 96px}.hero .sub{font-size:19px;margin-top:22px}.hero-ctas{margin-top:28px;gap:16px 24px}.hero h1{margin-top:18px}}
+
+.arcs{position:absolute;top:-10%;left:-8%;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,transparent 60%,rgba(31,139,76,0.04) 61%,rgba(31,139,76,0.04) 61.5%,transparent 62%),radial-gradient(circle,transparent 70%,rgba(31,139,76,0.04) 71%,rgba(31,139,76,0.04) 71.5%,transparent 72%),radial-gradient(circle,transparent 80%,rgba(31,139,76,0.05) 81%,rgba(31,139,76,0.05) 81.5%,transparent 82%);pointer-events:none;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+
+/* ===========================================================
+   2 · TENSION
+   =========================================================== */
+.tension{padding:130px 0 0;background:var(--paper-light)}
+.tension h2{font-family:var(--font-serif);font-weight:400;font-size:clamp(38px,5vw,76px);line-height:1.02;letter-spacing:-0.02em;color:var(--ink-1);max-width:1080px;margin:28px 0 72px;text-wrap:balance}
+.tension-body{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+@media (max-width:980px){.tension-body{grid-template-columns:1fr;gap:48px}}
+.tension-photo{position:relative;aspect-ratio:3/4;border-radius:36px;overflow:hidden;background:#1c1410;box-shadow:var(--shadow-lg);margin:0}
+.tension-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0.9) contrast(1.02)}
+.tension-photo .timestamp{position:absolute;top:24px;left:24px;display:inline-flex;align-items:center;gap:10px;padding:10px 16px;background:rgba(10,15,12,0.55);backdrop-filter:blur(8px);border-radius:999px;color:var(--paper);font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase}
+.tension-photo .timestamp .pulse{width:6px;height:6px;border-radius:999px;background:var(--ie-tomato);box-shadow:0 0 0 4px rgba(214,79,57,0.25)}
+.tension-photo .caption-block{position:absolute;left:24px;right:24px;bottom:24px;padding:18px 20px;background:rgba(245,242,234,0.94);backdrop-filter:blur(10px);border-radius:16px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.tension-photo .caption-block .cap-txt{font-family:var(--font-serif);font-style:italic;font-size:17px;line-height:1.2;color:var(--ink-1);letter-spacing:-0.005em}
+.tension-photo .caption-block .cap-meta{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-4);font-weight:500;white-space:nowrap}
+.tension-lines{display:flex;flex-direction:column;gap:28px}
+.tline{display:grid;grid-template-columns:80px 1fr;gap:32px;align-items:baseline;padding:32px 0;border-top:1px solid rgba(10,15,12,0.10)}
+.tline:last-of-type{border-bottom:1px solid rgba(10,15,12,0.10)}
+.tline-num{font-family:var(--font-serif);font-style:italic;font-size:40px;color:var(--ink-4);letter-spacing:-0.02em}
+.tline-text{font-family:var(--font-serif);font-size:clamp(24px,2.6vw,38px);line-height:1.25;color:var(--ink-1);letter-spacing:-0.012em;text-wrap:pretty}
+.tline-text .em{color:var(--ie-tomato);font-style:italic}
+@media (max-width:720px){.tline{grid-template-columns:1fr;gap:12px;padding:26px 0}}
+
+/* Closing money beat · design-system stat pattern */
+.stat-beat{margin-top:110px;padding:96px 0 120px;border-top:1px solid rgba(10,15,12,0.10);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+@media (max-width:980px){.stat-beat{grid-template-columns:1fr;gap:32px;margin-top:80px;padding:64px 0 88px}}
+.stat-beat .num{font-family:var(--font-serif);font-style:italic;font-size:clamp(120px,17vw,260px);line-height:0.82;letter-spacing:-0.045em;color:var(--brand-green);margin:0}
+.stat-beat .num .currency{font-size:0.5em;vertical-align:top;letter-spacing:0}
+.stat-beat .lbl{margin-top:22px;font-size:14px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);max-width:400px;line-height:1.5}
+.stat-beat .note{font-family:var(--font-serif);font-size:clamp(26px,2.8vw,40px);line-height:1.2;letter-spacing:-0.015em;color:var(--ink-1);margin:0;max-width:520px;text-wrap:pretty}
+
+/* ===========================================================
+   3 · DEMONSTRATION
+   =========================================================== */
+.demo{padding:130px 0 150px;background:var(--paper)}
+.demo .wrap{max-width:1560px}
+.demo h2{font-family:var(--font-serif);font-weight:400;font-size:clamp(38px,5vw,76px);line-height:1.02;letter-spacing:-0.02em;color:var(--ink-1);margin:28px 0 0;max-width:900px;text-wrap:balance}
+.demo h2 .em{font-style:italic;color:var(--brand-green)}
+.demo-grid{margin-top:76px;display:grid;grid-template-columns:repeat(4,1fr);gap:44px 36px;align-items:start}
+@media (max-width:1180px){.demo-grid{grid-template-columns:1fr 1fr;gap:56px 48px}}
+@media (max-width:720px){.demo-grid{grid-template-columns:1fr;gap:56px}}
+.shot-frame{aspect-ratio:639/1374;display:flex;align-items:flex-end;justify-content:center}
+.shot-frame img{width:100%;height:auto;border-radius:28px;box-shadow:0 4px 12px rgba(14,74,42,0.07),0 18px 44px rgba(14,74,42,0.13)}
+@media (max-width:1180px){.shot-frame img{border-radius:40px}}
+.shot-num{display:flex;align-items:center;gap:10px;padding:24px 0 0;font-family:var(--font-serif);font-style:italic;font-size:20px;color:var(--brand-green)}
+.shot-num::after{content:"";flex:1;height:1px;background:rgba(10,15,12,0.10)}
+.shot-cap{margin:14px 0 0;font-family:var(--font-serif);font-size:clamp(21px,1.5vw,25px);line-height:1.18;letter-spacing:-0.012em;color:var(--ink-1);text-wrap:pretty}
+/* App Store review card · verbatim review, dark green */
+.rev{margin-top:40px;max-width:840px;background:var(--ie-green-dark);color:var(--paper);border-radius:24px;padding:44px 48px 40px;box-shadow:0 8px 24px rgba(14,74,42,0.10),0 32px 72px rgba(14,74,42,0.14)}
+@media (max-width:720px){.rev{padding:32px 26px 28px}}
+.rev-stars{color:#9FE4B3;font-size:17px;letter-spacing:0.22em;line-height:1}
+.rev-ttl{margin-top:18px;font-family:var(--font-serif);font-size:clamp(28px,3vw,40px);line-height:1.05;letter-spacing:-0.015em;color:var(--paper)}
+.rev-body{margin:18px 0 0;font-size:20px;line-height:1.5;color:rgba(255,255,255,0.82);text-wrap:pretty}
+.rev-attr{margin-top:26px;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#9FE4B3}
+
+.cta-row{margin-top:72px;padding-top:44px;border-top:1px solid rgba(10,15,12,0.10);display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+
+/* Placeholder treatment · content awaiting verification (proof stats) */
+
+/* ===========================================================
+   4 · PROOF
+   =========================================================== */
+.proof{padding:120px 0 0;background:var(--paper-light)}
+.proof-quote{font-family:var(--font-serif);font-style:italic;font-size:clamp(30px,3.6vw,56px);line-height:1.15;letter-spacing:-0.012em;color:var(--ink-1);max-width:1080px;margin:36px 0 0;text-wrap:balance}
+.proof-quote::before{content:"“";color:var(--brand-green);margin-right:4px}
+.proof-quote::after{content:"”";color:var(--brand-green)}
+.proof-attr{margin-top:32px;display:flex;align-items:center;gap:16px;font-family:var(--font-sans);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+.proof-attr .avatar{width:48px;height:48px;border-radius:999px;background:linear-gradient(135deg,#E6F4EC,#C6DCC8);display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-style:italic;font-size:22px;color:var(--ie-green-dark);text-transform:none;letter-spacing:0}
+.proof-stats{margin-top:88px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(10,15,12,0.10);border-bottom:1px solid rgba(10,15,12,0.10)}
+@media (max-width:720px){.proof-stats{grid-template-columns:1fr}}
+.pstat{padding:44px 36px 44px 0;border-right:1px solid rgba(10,15,12,0.10)}
+.pstat:last-child{border-right:none}
+@media (max-width:720px){.pstat{border-right:none;border-bottom:1px solid rgba(10,15,12,0.10);padding:32px 0}.pstat:last-child{border-bottom:none}}
+.pstat-num{font-family:var(--font-serif);font-style:italic;font-size:clamp(52px,6vw,92px);line-height:1;letter-spacing:-0.03em;color:var(--brand-green)}
+.pstat-num.tbc{color:var(--ink-5)}
+.pstat-num .unit{font-size:0.4em;margin-left:6px;letter-spacing:-0.01em}
+.pstat-lbl{margin-top:14px;font-size:14px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3)}
+.pstat-flag{margin-top:10px;font-family:var(--font-mono);font-size:11px;color:var(--brand-green)}
+.proof-band{margin-top:110px}
+
+/* ===========================================================
+   5 · THE SHIFT
+   =========================================================== */
+.shift{background:var(--ie-green-dark);color:var(--paper);padding:130px 0 150px;position:relative;overflow:hidden}
+.shift h2{font-family:var(--font-serif);font-weight:400;font-size:clamp(38px,5.2vw,80px);line-height:1;letter-spacing:-0.022em;color:var(--paper);max-width:1000px;margin:28px 0 88px;text-wrap:balance}
+.shift h2 .accent{color:#9FE4B3;font-style:italic}
+.day-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 56px}
+@media (max-width:820px){.day-grid{grid-template-columns:1fr;gap:8px}}
+.day{padding:36px 0;border-top:1px solid rgba(255,255,255,0.14);display:grid;grid-template-columns:130px 1fr;gap:24px;align-items:start}
+@media (max-width:520px){.day{grid-template-columns:1fr;gap:10px}}
+.day-label{font-family:var(--font-serif);font-style:italic;font-size:30px;color:#9FE4B3;letter-spacing:-0.01em;line-height:1.1}
+.day-body{font-family:var(--font-sans);font-size:18px;line-height:1.55;color:rgba(255,255,255,0.86);max-width:460px}
+.day-body strong{color:#fff;font-family:var(--font-serif);font-style:italic;font-weight:400;font-size:24px;display:block;margin-bottom:8px;letter-spacing:-0.005em}
+.shift-decor{position:absolute;top:-20%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(159,228,179,0.10) 0%,transparent 60%);pointer-events:none}
+
+/* ===========================================================
+   6 · OBJECTIONS
+   =========================================================== */
+.obj{padding:130px 0;background:var(--paper)}
+.obj h2{font-family:var(--font-serif);font-weight:400;font-size:clamp(34px,4.2vw,64px);line-height:1.05;letter-spacing:-0.02em;color:var(--ink-1);margin:28px 0 72px;max-width:900px;text-wrap:balance}
+.obj h2 .em{font-style:italic}
+.obj-list{display:flex;flex-direction:column}
+.obj-item{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;padding:48px 0;border-top:1px solid rgba(10,15,12,0.10);align-items:start}
+.obj-item:last-child{border-bottom:1px solid rgba(10,15,12,0.10)}
+@media (max-width:820px){.obj-item{grid-template-columns:1fr;gap:16px;padding:36px 0}}
+.obj-q{font-family:var(--font-serif);font-style:italic;font-size:clamp(26px,3vw,42px);line-height:1.1;color:var(--ink-1);letter-spacing:-0.012em;text-wrap:balance}
+.obj-q::before{content:"“";color:var(--brand-green)}
+.obj-q::after{content:"”";color:var(--brand-green)}
+.obj-a{font-size:19px;color:var(--ink-3);line-height:1.55;max-width:560px}
+.obj-a strong{color:var(--ink-1);font-weight:500}
+.obj-item--shot{grid-template-columns:1fr 1.2fr 320px}
+@media (max-width:1180px){.obj-item--shot{grid-template-columns:1fr 1.1fr 250px;gap:36px}}
+@media (max-width:820px){.obj-item--shot{grid-template-columns:1fr}}
+.obj-shot img{width:100%;height:auto;max-width:320px;border-radius:24px;box-shadow:0 4px 12px rgba(14,74,42,0.07),0 18px 44px rgba(14,74,42,0.12)}
+
+/* ===========================================================
+   7 · HOW IT WORKS
+   =========================================================== */
+.how{padding:130px 0 150px;background:var(--ie-green-mint)}
+.how h2{font-family:var(--font-serif);font-weight:400;font-size:clamp(38px,5vw,76px);line-height:1.02;letter-spacing:-0.02em;color:var(--ink-1);max-width:900px;margin:28px 0 0;text-wrap:balance}
+.how-sub{font-size:20px;color:var(--ink-3);margin:24px 0 0;max-width:560px}
+.how-grid{margin-top:80px;display:grid;grid-template-columns:1.15fr 1fr;gap:72px;align-items:center}
+@media (max-width:980px){.how-grid{grid-template-columns:1fr;gap:48px}}
+.steps{display:flex;flex-direction:column}
+.step{display:grid;grid-template-columns:92px 1fr;gap:28px;padding:32px 0;border-top:1px solid rgba(10,74,42,0.14);align-items:start}
+.step:last-of-type{border-bottom:1px solid rgba(10,74,42,0.14)}
+@media (max-width:520px){.step{grid-template-columns:1fr;gap:8px}}
+.step-num{font-family:var(--font-serif);font-style:italic;font-size:56px;color:var(--brand-green);line-height:1;letter-spacing:-0.02em}
+.step-ttl{font-family:var(--font-serif);font-weight:400;font-size:32px;line-height:1.1;color:var(--ink-1);letter-spacing:-0.01em;margin:0}
+.step-body{margin-top:10px;font-size:18px;color:var(--ink-3);line-height:1.5;max-width:460px}
+.how-cta-row{margin-top:44px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.how-photo{position:relative;border-radius:36px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow-lg)}
+.how-photo img{width:100%;height:100%;object-fit:cover}
+.how-photo .tag{position:absolute;left:24px;bottom:24px;padding:12px 18px;border-radius:999px;background:rgba(245,242,234,0.94);backdrop-filter:blur(8px);font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-1)}
+
+/* ===========================================================
+   PHOTO BAND
+   =========================================================== */
+.photo-band{position:relative;width:100%;height:520px;overflow:hidden;background:var(--ink-1)}
+.photo-band img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-band--tall{height:600px}
+.photo-band .caption{position:absolute;inset:0;display:flex;align-items:flex-end;padding:64px;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(10,15,12,0.72) 100%);color:var(--paper)}
+.photo-band .caption-inner{max-width:1320px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:end;gap:48px;flex-wrap:wrap}
+.photo-band .caption h3{font-family:var(--font-serif);font-weight:400;font-size:clamp(34px,4.4vw,64px);line-height:1;letter-spacing:-0.02em;color:var(--paper);margin:0;max-width:720px;text-wrap:balance}
+.photo-band .caption h3 .em{font-style:italic;color:#9FE4B3}
+.photo-band .caption .credit{font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.7);font-weight:500;white-space:nowrap}
+.photo-band .caption .credit::before{content:"";display:inline-block;width:20px;height:1px;background:rgba(255,255,255,0.6);margin-right:10px;vertical-align:middle}
+.photo-band .ph-eyebrow{position:absolute;top:48px;left:64px;font-family:var(--font-sans);font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.9);display:inline-flex;align-items:center;gap:12px;z-index:2}
+.photo-band .ph-eyebrow::before{content:"";width:28px;height:2px;background:#9FE4B3}
+@media (max-width:720px){.photo-band,.photo-band--tall{height:380px}.photo-band .caption{padding:32px 24px}.photo-band .ph-eyebrow{top:24px;left:24px}}
+
+/* ===========================================================
+   CTA STRIP
+   =========================================================== */
+.cta-strip{margin-top:80px;padding:34px 40px;border-radius:24px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;background:var(--white);border:1px solid rgba(10,15,12,0.06);box-shadow:var(--shadow-sm)}
+.cta-strip .cta-strip-msg{font-family:var(--font-serif);font-size:clamp(22px,2.2vw,32px);line-height:1.15;color:var(--ink-1);letter-spacing:-0.012em;text-wrap:balance;max-width:620px}
+.cta-strip .cta-strip-msg .em{font-style:italic;color:var(--brand-green)}
+.cta-strip .cta-strip-side{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cta-strip .cta-strip-fine{font-size:13px;color:var(--ink-4);letter-spacing:0.04em}
+.cta-strip.on-dark{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);box-shadow:none}
+.cta-strip.on-dark .cta-strip-msg{color:var(--paper)}
+.cta-strip.on-dark .cta-strip-msg .em{color:#9FE4B3}
+.cta-strip.on-dark .cta-strip-fine{color:rgba(255,255,255,0.6)}
+.cta-strip.on-paper{background:var(--paper);border-color:rgba(10,15,12,0.08)}
+@media (max-width:720px){.cta-strip{padding:28px 24px;margin-top:56px}}
+
+/* ===========================================================
+   8 · CLOSE
+   =========================================================== */
+.finalcta{background:var(--ie-green-dark);color:var(--paper);padding:150px 0 170px;text-align:center;position:relative;overflow:hidden}
+.finalcta .decor-left,.finalcta .decor-right{position:absolute;width:380px;height:480px;border-radius:36px;background-size:cover;background-position:center;box-shadow:var(--shadow-lg);opacity:0.4;filter:saturate(0.8)}
+.finalcta .decor-left{left:-120px;top:50%;transform:translateY(-50%) rotate(-6deg);background-image:url("assets/photos/pesto-pasta-bowl.jpg")}
+.finalcta .decor-right{right:-120px;top:50%;transform:translateY(-50%) rotate(6deg);background-image:url("assets/photos/buddha-bowl.jpg")}
+@media (max-width:1100px){.finalcta .decor-left,.finalcta .decor-right{display:none}}
+.finalcta-inner{position:relative;z-index:2;max-width:880px;margin:0 auto;padding:0 24px}
+.finalcta h2{font-family:var(--font-serif);font-weight:400;font-size:clamp(42px,6vw,96px);line-height:0.98;letter-spacing:-0.025em;color:var(--paper);margin:32px 0 0;text-wrap:balance}
+.finalcta h2 .em{color:#9FE4B3;font-style:italic}
+.finalcta-sub{font-size:22px;color:rgba(255,255,255,0.78);margin:32px auto 0;max-width:620px;line-height:1.5}
+.finalcta-ctas{margin-top:48px;display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap}
+.finalcta-fine{margin-top:26px;font-size:14px;color:rgba(255,255,255,0.55);letter-spacing:0.04em}
+
+/* ===========================================================
+   STICKY MOBILE CTA
+   =========================================================== */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px;background:rgba(245,242,234,0.96);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-top:1px solid rgba(10,15,12,0.08);box-shadow:0 -6px 24px rgba(14,74,42,0.10);transform:translateY(115%);transition:transform 240ms ease}
+.sticky-cta.on{transform:none}
+.sticky-cta .as-badge{height:44px}
+.sticky-cta .btn{padding:14px 22px}
+@media (max-width:900px){.sticky-cta{display:flex}body{padding-bottom:80px}}
+
+/* ===========================================================
+   FOOTER
+   =========================================================== */
+footer{background:var(--ink-1);color:var(--paper);padding:80px 0 56px}
+.foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:56px}
+@media (max-width:720px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+.foot-tag{font-family:var(--font-serif);font-size:28px;line-height:1.1;color:var(--paper);margin:24px 0 0;letter-spacing:-0.01em;text-wrap:balance;max-width:380px}
+.foot-tag .em{font-style:italic;color:#9FE4B3}
+.foot-h{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:500}
+.foot-links{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+.foot-links a{color:rgba(255,255,255,0.78);font-size:15px}
+.foot-links a:hover{color:#9FE4B3}
+.foot-base{margin-top:72px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,0.5);flex-wrap:wrap;gap:16px}
+
+.sr{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+</style>
+
+<!-- DEV: STORE_URL is the pre-rename slug. Replace with the canonical
+     "Fridge to Table: AI Recipes" URL. No campaign parameters for now. -->
 
 <style>
   /* =========================================================
@@ -2042,13 +2340,10 @@ pintrk('track', 'pagevisit', {
 </head>
 <body>
 
-<!-- =====================================================================
-     NAV
-     ===================================================================== -->
 <nav class="nav" data-screen-label="Nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#">
-      <svg class="mark" viewBox="0 0 38.25 58.486" fill="none">
+    <a class="brand" href="#s1-hero">
+      <svg class="mark" viewBox="0 0 38.25 58.486" fill="none" aria-hidden="true">
         <path d="M 0 5.03 C 0 2.252 2.252 0 5.03 0 L 33.22 0 C 35.998 0 38.25 2.252 38.25 5.03 L 38.25 20.119 L 0 20.119 L 0 5.03 Z" fill="currentColor"></path>
         <path d="M 0 49.83 C 0 52.608 2.252 54.86 5.03 54.86 L 33.22 54.86 C 35.998 54.86 38.25 52.608 38.25 49.83 L 38.25 22.81 L 0 22.81 L 0 49.83 Z" fill="currentColor"></path>
         <path d="M 6.083 6.2 C 6.083 5.489 6.659 4.913 7.369 4.913 C 8.08 4.913 8.656 5.489 8.656 6.2 L 8.656 16.259 C 8.656 16.97 8.08 17.546 7.369 17.546 C 6.659 17.546 6.083 16.97 6.083 16.259 L 6.083 6.2 Z" fill="currentColor"></path>
@@ -2059,20 +2354,16 @@ pintrk('track', 'pagevisit', {
       iEatz <span style="color: var(--ink-3); font-weight: 500;">Healthy</span>
     </a>
     <div class="nav-links">
-      <a href="#how">How it works</a>
-      <a href="#features">Features</a>
-      <a href="#story">Story</a>
-      <a data-cta="nav" class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
-        <img src="assets/app-store-badge.png" alt="Download on the App Store">
+      <a href="#s7-how">How it works</a>
+      <a class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="nav" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+        <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60">
       </a>
     </div>
   </div>
 </nav>
 
-<!-- =====================================================================
-     SECTION 1 — HERO
-     ===================================================================== -->
-<header class="hero" data-screen-label="01 Hero">
+<!-- 1 · HERO -->
+<header id="s1-hero" class="hero" data-section="hero" data-position="1" data-screen-label="01 Hero">
   <div class="arcs"></div>
   <div class="wrap">
     <div class="hero-grid">
@@ -2081,22 +2372,23 @@ pintrk('track', 'pagevisit', {
         <h1>Dinner, <span class="accent">decided.</span></h1>
         <p class="sub" id="heroSub">Tell iEatz what's in your kitchen. Get healthy meals back in seconds. No recipes to search. No groceries to buy. Just cook.</p>
         <div class="hero-ctas">
-          <a data-cta="hero" class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
-            <img src="assets/app-store-badge.png" alt="Download on the App Store">
-          </a>
-          <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
+          <a class="btn btn--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="hero" target="_blank" rel="noopener">Get the app free</a>
+          <a class="textlink" href="#s7-how">See how it works</a>
         </div>
+        <div class="rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span>5.0 on the App Store</span>
+        </div>
+        <p class="rating-quote">"I haven't had any groceries go to waste the last couple of weeks."</p>
         <div class="hero-fine">
-          <span>Free on the App Store.</span>
-          <span class="dot"></span>
-          <span>No credit card.</span>
+          <span>One free receipt scan and one free recipe, every week.</span>
           <span class="dot"></span>
           <span id="androidNote">iOS only, Android coming soon.</span>
         </div>
       </div>
 
-      <div class="hero-photo" aria-hidden="true">
-        <img src="assets/photos/couple-cooking.jpg" alt="A couple cooking together at home, smiling">
+      <div class="hero-photo">
+        <img src="assets/photos/couple-cooking.jpg" alt="A couple cooking together at home">
         <div class="recipe-card">
           <div class="ingredients">
             <span class="ingr">chicken</span>
@@ -2105,10 +2397,6 @@ pintrk('track', 'pagevisit', {
           </div>
           <div class="rname">Honey-garlic chicken with charred broccoli</div>
           <div class="meta">15 min · 480 cal</div>
-        </div>
-        <div class="stat-tag">
-          <div class="num">300+</div>
-          <div class="lbl">recipes / day</div>
         </div>
         <div class="pill">
           <span class="ind"></span>
@@ -2119,17 +2407,15 @@ pintrk('track', 'pagevisit', {
   </div>
 </header>
 
-<!-- =====================================================================
-     SECTION 2 — THE TENSION
-     ===================================================================== -->
-<section class="tension" data-screen-label="02 Tension" id="story">
+<!-- 2 · TENSION (old 2 + old 8) -->
+<section id="s2-tension" class="tension" data-section="tension" data-position="2" data-screen-label="02 Tension">
   <div class="wrap">
     <span class="eyebrow muted">The problem</span>
     <h2>You already have the food.<br>You just don't have a plan for it.</h2>
 
     <div class="tension-body">
       <figure class="tension-photo">
-        <img src="assets/photos/fridge-real-mess.jpg" alt="A real, lived-in fridge: eggs, strawberries, sausages, fresh produce — plenty of food, no obvious dinner">
+        <img src="assets/photos/fridge-real-mess.jpg" alt="A real, lived-in fridge: eggs, strawberries, sausages, fresh produce. Plenty of food, no obvious dinner">
         <div class="timestamp">
           <span class="pulse"></span>
           Tuesday · 6:14 PM
@@ -2156,34 +2442,118 @@ pintrk('track', 'pagevisit', {
       </div>
     </div>
 
-    <div class="cta-strip">
-      <div class="cta-strip-msg">Skip the 6 PM spiral. <span class="em">Download iEatz now.</span></div>
-      <div class="cta-strip-side">
-        <a data-cta="strip-6pm-spiral" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
-          <img src="assets/app-store-badge.png" alt="Download on the App Store">
-        </a>
+    <div class="stat-beat">
+      <div>
+        <div class="num"><span class="currency">$</span>1,500</div>
+        <div class="lbl">Thrown out by the average U.S. household every year</div>
+      </div>
+      <p class="note">Most of it was bought with good intentions on a Sunday and forgotten by Thursday.</p>
+    </div>
+  </div>
+
+  <div class="photo-band photo-band--tall" data-screen-label="Photo · Clean fridge">
+    <img src="assets/photos/fridge-organized.jpg" alt="A clean, well-organized fridge full of produce">
+    <span class="ph-eyebrow">A new picture</span>
+    <div class="caption">
+      <div class="caption-inner">
+        <h3>The same fridge. <span class="em">A different week.</span></h3>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =====================================================================
-     PHOTO BAND — The clean fridge (transformation pivot)
-     ===================================================================== -->
-<section class="photo-band photo-band--tall" data-screen-label="Photo · Clean fridge" aria-hidden="true">
-  <img src="assets/photos/fridge-organized.jpg" alt="A clean, well-organized fridge full of produce">
-  <span class="ph-eyebrow">A new picture</span>
-  <div class="caption">
-    <div class="caption-inner">
-      <h3>The same fridge. <span class="em">A different week.</span></h3>
+<!-- 3 · DEMONSTRATION (old 6 + old 7, moved to position 3) -->
+<section id="s3-demo" class="demo" data-section="demonstration" data-position="3" data-screen-label="03 Demonstration">
+  <div class="wrap">
+    <span class="eyebrow">See it work</span>
+    <h2>Three taps. Here's what it <span class="em">actually looks like.</span></h2>
+
+    <div class="demo-grid">
+      <div class="shot">
+        <div class="shot-frame">
+          <img src="assets/photos/app-receipt.jpg" alt="iEatz receipt scanner: a grocery receipt in the camera view with ten items found and ready to add to the kitchen" width="639" height="1374" loading="lazy">
+        </div>
+        <div class="shot-num">01</div>
+        <p class="shot-cap">Snap the receipt. Ten items into your kitchen in one tap.</p>
+      </div>
+
+      <div class="shot">
+        <div class="shot-frame">
+          <img src="assets/photos/app-buddha-bowl.jpg" alt="iEatz recipe generated from the fridge: a rainbow Buddha bowl, 20 minutes, serves two" width="804" height="1305" loading="lazy">
+        </div>
+        <div class="shot-num">02</div>
+        <p class="shot-cap">Dinner, generated from what's already in there.</p>
+      </div>
+
+      <div class="shot">
+        <div class="shot-frame">
+          <img src="assets/photos/app-chicken.jpg" alt="iEatz recipe detail: lemon herb chicken with carbs, protein and fat per serving, and a start cooking button" width="639" height="1374" loading="lazy">
+        </div>
+        <div class="shot-num">03</div>
+        <p class="shot-cap">Calories and macros on every dish, before you start.</p>
+      </div>
+
+      <div class="shot">
+        <div class="shot-frame">
+          <img src="assets/photos/app-toast.jpg" alt="iEatz recipe detail with a Shop with Instacart hand-off button and add missing ingredients beneath it" width="639" height="1374" loading="lazy">
+        </div>
+        <div class="shot-num">04</div>
+        <p class="shot-cap">Missing two things? Send just the gaps to Instacart.</p>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-demo" target="_blank" rel="noopener">See what you can make tonight</a>
+      <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-demo" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+        <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
+      </a>
     </div>
   </div>
 </section>
 
-<!-- =====================================================================
-     SECTION 3 — THE SHIFT
-     ===================================================================== -->
-<section class="shift" data-screen-label="03 Shift">
+<!-- 4 · PROOF -->
+<section id="s4-proof" class="proof" data-section="proof" data-position="4" data-screen-label="04 Proof">
+  <div class="wrap">
+    <span class="eyebrow">In their words</span>
+
+    <div class="rev">
+      <div class="rev-stars" aria-hidden="true">★★★★★</div>
+      <div class="rev-ttl">Super helpful!</div>
+      <p class="rev-body">"This app has had a real impact on my ability to use the groceries I bought and helps me create tasty meals I wouldn't have ever thought of. I haven't had any groceries go to waste the last couple of weeks!"</p>
+      <div class="rev-attr">SixSocks · App Store review</div>
+    </div>
+
+    <div class="proof-stats">
+      <div class="pstat">
+        <div class="pstat-num">300<span class="unit">+</span></div>
+        <div class="pstat-lbl">Recipes generated daily</div>
+      </div>
+      <div class="pstat">
+        <div class="pstat-num">12<span class="unit">min</span></div>
+        <div class="pstat-lbl">Average cook time</div>
+      </div>
+      <div class="pstat">
+        <div class="pstat-num tbc">000</div>
+        <div class="pstat-lbl">Stat three</div>
+        <div class="pstat-flag">PENDING · verify with product</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-band proof-band" data-screen-label="Photo · Dream meal">
+    <img src="assets/photos/pesto-pasta-bowl.jpg" alt="A bowl of pesto pasta with cherry tomatoes" loading="lazy">
+    <span class="ph-eyebrow">Twenty minutes ago, this was groceries</span>
+    <div class="caption">
+      <div class="caption-inner">
+        <h3>Pesto, pasta, the last of the cherry tomatoes. <span class="em">No store run.</span></h3>
+        <div class="credit">Recipe · 20 min · 410 cal</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · THE SHIFT (old 3, moved down) -->
+<section id="s5-shift" class="shift" data-section="shift" data-position="5" data-screen-label="05 The shift">
   <div class="shift-decor"></div>
   <div class="wrap" style="position:relative;">
     <span class="eyebrow on-dark">The shift</span>
@@ -2220,49 +2590,54 @@ pintrk('track', 'pagevisit', {
     </div>
 
     <div class="cta-strip on-dark">
-      <div class="cta-strip-msg">Make Monday the day it changes. <span class="em">Download now.</span></div>
+      <div class="cta-strip-msg">Make Monday the day it changes.</div>
       <div class="cta-strip-side">
-        <a data-cta="strip-monday" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
-          <img src="assets/app-store-badge.png" alt="Download on the App Store">
+        <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-proof" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+          <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =====================================================================
-     SECTION 4 — PROOF
-     ===================================================================== -->
-<section class="proof" data-screen-label="04 Proof">
+<!-- 6 · OBJECTIONS (old 10, moved up four positions) -->
+<section id="s6-objections" class="obj" data-section="objections" data-position="6" data-screen-label="06 Objections">
   <div class="wrap">
-    <span class="eyebrow">In their words</span>
-    <p class="proof-quote" style="margin-top: 36px;">I haven't ordered takeout in three weeks. The wildest part is I'm cooking from what was already there.</p>
-    <div class="proof-attr">
-      <span class="avatar">M</span>
-      <span>Maya R. · iEatz user, March</span>
+    <span class="eyebrow muted">For the skeptics</span>
+    <h2>Three reasons you think this <span class="em">won't work</span> for you.</h2>
+
+    <div class="obj-list">
+      <div class="obj-item obj-item--shot">
+        <div class="obj-q">I can barely cook.</div>
+        <div class="obj-a"><strong>You don't need to be.</strong> Every recipe has step-by-step instructions written for someone who's never deglazed a pan in their life. If you can follow directions, you can make these meals.</div>
+        <div class="obj-shot">
+          <img src="assets/photos/app-oatmeal.jpg" alt="iEatz directions screen: numbered cooking steps with checkboxes" width="693" height="832" loading="lazy">
+        </div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">I only have random stuff.</div>
+        <div class="obj-a"><strong>That's the point.</strong> Three ingredients, five ingredients, the weird jar from the back of the pantry. The AI works with what you have, not what you should have bought.</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-q">Is this another subscription I'll forget about?</div>
+        <div class="obj-a"><strong>There's no subscription.</strong> Every week you get a free receipt scan and a free recipe, and you don't need an account to try it. Want more than that in a week, extras are 49 cents each, one at a time. Nothing renews. Nothing auto-charges.</div>
+      </div>
     </div>
 
-    <div class="proof-stats">
-      <div class="pstat">
-        <div class="pstat-num">300<span style="font-size:0.6em">+</span></div>
-        <div class="pstat-lbl">Recipes generated daily</div>
-      </div>
-      <div class="pstat">
-        <div class="pstat-num">12<span style="font-size:0.4em; margin-left:6px;">min</span></div>
-        <div class="pstat-lbl">Average cook time</div>
-      </div>
-      <div class="pstat">
-        <div class="pstat-num">$0</div>
-        <div class="pstat-lbl">Extra groceries needed</div>
+    <div class="cta-strip">
+      <div class="cta-strip-msg">No subscription. <span class="em">No account to start.</span></div>
+      <div class="cta-strip-side">
+        <a class="btn" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-objections" target="_blank" rel="noopener">Start with what's in your kitchen</a>
+        <a class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-objections" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+          <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =====================================================================
-     SECTION 5 — HOW IT WORKS
-     ===================================================================== -->
-<section class="how" data-screen-label="05 How it works" id="how">
+<!-- 7 · HOW IT WORKS (old 5, moved down) -->
+<section id="s7-how" class="how" data-section="how-it-works" data-position="7" data-screen-label="07 How it works">
   <div class="wrap">
     <span class="eyebrow">How it works</span>
     <h2>Three steps. No grocery run.</h2>
@@ -2281,7 +2656,7 @@ pintrk('track', 'pagevisit', {
           <div class="step-num">02</div>
           <div>
             <h3 class="step-ttl">Tell iEatz what you have.</h3>
-            <p class="step-body" id="importStepCopy">Type your ingredients in, or snap a photo of your grocery receipt — iEatz imports the whole haul in one tap, down to the half-jar of olives.</p>
+            <p class="step-body" id="importStepCopy">Type your ingredients in, or snap a photo of your grocery receipt. iEatz imports the whole haul in one tap, down to the half-jar of olives.</p>
           </div>
         </div>
         <div class="step">
@@ -2292,389 +2667,45 @@ pintrk('track', 'pagevisit', {
           </div>
         </div>
         <div class="how-cta-row">
-          <a data-cta="how-it-works" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
-            <img src="assets/app-store-badge.png" alt="Download on the App Store">
+          <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-how" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+            <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
           </a>
-          <span style="font-size: 14px; color: var(--ink-4);">Free, forever — no account needed to try.</span>
+          <span style="font-size: 14px; color: var(--ink-4);">No account needed to try.</span>
         </div>
       </div>
 
-      <div class="phone-stage">
-        <div class="phone">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <div class="phone-status">
-              <span>9:41</span>
-              <div class="phone-status-icons">
-                <span class="ph-bars"></span>
-                <span class="ph-bat"></span>
-              </div>
-            </div>
-            <div class="phone-body">
-              <div class="rh">
-                <div class="rh-top">
-                  <div class="rh-av" style="background-image: url(&quot;assets/photos/couple-cooking.jpg&quot;);"></div>
-                  <div class="rh-acts">
-                    <div class="rh-act">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4-4"></path></svg>
-                    </div>
-                    <div class="rh-act">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z"></path></svg>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="rh-cal">
-                  <div class="rh-cal-row">
-                    <span>Today's Calories&nbsp;&nbsp;2300</span>
-                    <span class="chev">›</span>
-                  </div>
-                  <div class="rh-cal-bar"><i></i></div>
-                  <div class="rh-cal-sub">You have consumed 0% of your total caloric intake today.</div>
-                </div>
-
-                <div class="rh-sec">
-                  <h4>Handpicked for you <span class="emo">💚</span></h4>
-                  <a href="#how">View all recipes</a>
-                </div>
-
-                <div class="rh-cards">
-                  <div class="rh-card">
-                    <div class="img" style="background-image: url(&quot;assets/photos/salmon.jpg&quot;);">
-                      <span class="heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"></path></svg></span>
-                    </div>
-                    <div class="bd">
-                      <div class="nm">Pan-Seared Chicken with Asparagus</div>
-                      <div class="mt"><span class="clk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>30 mins</span><span>450 calories</span></div>
-                    </div>
-                  </div>
-                  <div class="rh-card">
-                    <div class="img" style="background-image: url(&quot;assets/photos/tacos.jpg&quot;);">
-                      <span class="heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"></path></svg></span>
-                    </div>
-                    <div class="bd">
-                      <div class="nm">Spicy Garlic Chicken Bites</div>
-                      <div class="mt"><span class="clk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>20 mins</span><span>380 calories</span></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="rh-sec">
-                  <h4>Meal bundles <span class="emo">🍱</span></h4>
-                  <a href="#how">Shop ingredients</a>
-                </div>
-
-                <div class="rh-bundles">
-                  <div class="rh-bundle">
-                    <div class="img" style="background-image: url(&quot;assets/photos/couple-cooking.jpg&quot;);"></div>
-                    <div class="bn">Fitness optimizer</div>
-                    <div class="brow"><span>7 recipes</span><span class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg></span></div>
-                  </div>
-                  <div class="rh-bundle">
-                    <div class="img" style="background-image: url(&quot;assets/photos/meal-prep-spread.jpg&quot;);"></div>
-                    <div class="bn">Holistic wellness explorer</div>
-                    <div class="brow"><span>5 recipes</span><span class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg></span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="phone-tab" style="position: relative;">
-              <div class="phone-tab-item active">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg>
-                Home
-              </div>
-              <div class="phone-tab-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"></path></svg>
-                Favorites
-              </div>
-              <div class="phone-tab-item" aria-hidden="true"></div>
-              <div class="phone-tab-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 21.5c4 .5 9-3 12.5-9.5-2-2-5-2.5-7.5-.5-2 1.6-3 4.4-5 10z"></path><path d="M14 11c1.5-2 3-3 5-3.2"></path><path d="M15.5 9.5C17 7 18.5 5.5 21 5"></path></svg>
-                Inventory
-              </div>
-              <div class="phone-tab-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="10" r="3"></circle><path d="M6.4 18.8a6 6 0 0 1 11.2 0"></path></svg>
-                Profile
-              </div>
-              <div style="position: absolute; left: 50%; top: -24px; transform: translateX(-50%); width: 52px; height: 52px; border-radius: 999px; background: #3BBF4F; box-shadow: 0 8px 20px rgba(59,191,79,0.4); display: flex; align-items: center; justify-content: center; color: #fff;">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                  <rect x="6.35" y="3" width="1.05" height="5" rx="0.52"></rect>
-                  <rect x="8.15" y="3" width="1.05" height="5" rx="0.52"></rect>
-                  <rect x="9.95" y="3" width="1.05" height="5" rx="0.52"></rect>
-                  <path d="M5.5 7.5h6.4a.4.4 0 0 1 .4.45c-.13 1.55-1.16 2.7-2.5 2.93V20.55a1.1 1.1 0 0 1-2.2 0V10.88C6.26 10.65 5.23 9.5 5.1 7.95a.4.4 0 0 1 .4-.45Z"></path>
-                  <path d="M16.95 3c-1.5.35-2.55 2.7-2.55 5.45 0 2.1 1.03 3.62 2.4 4V20.55a1.1 1.1 0 0 0 2.2 0V3.72c0-.52-.52-.85-1-.72Z"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="how-photo">
+        <img src="assets/photos/cooking-window.jpg" alt="A pan of vegetables steaming on the stove" loading="lazy">
+        <div class="tag">Fifteen minutes from here</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =====================================================================
-     SECTION 5b — A LOOK INSIDE (product gallery, 3 in-app screens)
-     ===================================================================== -->
-<section class="gallery" data-screen-label="05b A look inside">
-  <div class="wrap">
-    <div class="gallery-head">
-      <div>
-        <span class="eyebrow">A look inside</span>
-        <h2 data-comment-anchor="913363e67a-h2">From your fridge to dinner, in <span class="em">three taps.</span></h2>
-      </div>
-      <p class="gallery-intro">Tell iEatz what's in your kitchen, pick the recipe it builds around it, and cook in fifteen. No store run, no endless scrolling, no what's-for-dinner spiral.</p>
-    </div>
-
-    <div class="gallery-grid">
-      <!-- ───────── Screen 1: Home — handpicked for you (real screenshot) ───────── -->
-      <div class="gphone-cell">
-        <div class="gphone-num">01</div>
-        <div class="gphone">
-          <div class="gphone-notch"></div>
-          <div class="gphone-screen">
-            <img class="gshot" src="assets/photos/app-home.jpg" alt="iEatz home screen — today's calories and a feed of meals handpicked for you">
-            <div class="gshot-avatar" style="background-image: url(&quot;assets/avatar.png&quot;);" aria-hidden="true"></div>
-            <div class="gshot-avatar" style="background-image: url(&quot;assets/avatar.png&quot;);" aria-hidden="true"></div>
-          </div>
-        </div>
-        <div class="gphone-caption">
-          <div class="tag">Step one</div>
-          <div class="ttl">Open to meals already picked for you.</div>
-          <div class="sub">A home feed built around your goals and today's calories — no blank search bar, no decision paralysis.</div>
-        </div>
-      </div>
-
-      <!-- ───────── Screen 2: Recipe detail with macros (real screenshot) ───────── -->
-      <div class="gphone-cell">
-        <div class="gphone-num">02</div>
-        <div class="gphone">
-          <div class="gphone-notch"></div>
-          <div class="gphone-screen">
-            <img class="gshot" src="assets/photos/app-recipe.jpg" alt="iEatz recipe screen — Pan-Seared Chicken with Asparagus and Spinach, with carbs, protein and fat per serving">
-          </div>
-        </div>
-        <div class="gphone-caption">
-          <div class="tag">Step two</div>
-          <div class="ttl">Cook it — macros already counted.</div>
-          <div class="sub">Time, calories, and a carbs–protein–fat breakdown sit on every dish, so dinner stays on plan.</div>
-        </div>
-      </div>
-
-      <!-- ───────── Screen 3: Shop missing items with Instacart (real screenshot) ───────── -->
-      <div class="gphone-cell">
-        <div class="gphone-num">03</div>
-        <div class="gphone">
-          <div class="gphone-notch"></div>
-          <div class="gphone-screen">
-            <img class="gshot" src="assets/photos/app-instacart.jpg" alt="Instacart screen — your missing items for the recipe, ready to add to cart">
-          </div>
-        </div>
-        <div class="gphone-caption">
-          <div class="tag">Step three</div>
-          <div class="ttl">Missing something? Shop it in a tap.</div>
-          <div class="sub">Send just the gaps straight to Instacart, get them delivered, and you're cooking the same night.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================================
-     PHOTO BAND — The dream meal
-     ===================================================================== -->
-<section class="photo-band" data-screen-label="Photo · Dream meal" aria-hidden="true">
-  <img src="assets/photos/pesto-pasta-bowl.jpg" alt="A bowl of pesto pasta with cherry tomatoes">
-  <span class="ph-eyebrow">Twenty minutes ago, this was groceries</span>
-  <div class="caption">
-    <div class="caption-inner">
-      <h3>Pesto, pasta, the last of the cherry tomatoes. <span class="em">No store run.</span></h3>
-      <div class="credit">Recipe · 20 min · 410 cal</div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================================
-     SECTION 6 — THE MONEY ANGLE
-     ===================================================================== -->
-<section class="money" data-screen-label="06 Money">
-  <div class="wrap">
-    <div class="money-grid">
-      <div>
-        <span class="eyebrow muted" style="color: var(--ie-tomato);">The pantry math</span>
-        <div style="margin-top: 24px;">
-          <div class="money-stat"><span class="currency">$</span>1,500</div>
-          <div class="money-stat-lbl">Wasted by the average U.S. household each year</div>
-        </div>
-      </div>
-      <div>
-        <h2>You're not bad at cooking. You're bad at <span class="em">not wasting food.</span></h2>
-        <p>You buy food. You forget about it. You order takeout. The food goes bad. Repeat.</p>
-        <p><span class="pop">iEatz reverses the cycle.</span> Instead of buying food for recipes, you get recipes for your food. You cook what you have. You waste less. You spend less.</p>
-        <div style="margin-top: 36px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
-          <a data-cta="story-cycle" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
-            <img src="assets/app-store-badge.png" alt="Download on the App Store">
-          </a>
-          <span style="font-size: 14px; color: var(--ink-4); letter-spacing: 0.02em;">Stop the cycle. Free, forever.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================================
-     SECTION 7 — FEATURES
-     ===================================================================== -->
-<section class="features" data-screen-label="07 Features" id="features">
-  <div class="wrap">
-    <div class="features-head">
-      <div>
-        <span class="eyebrow">What's inside</span>
-        <h2>Built for how you actually eat.</h2>
-      </div>
-      <p class="features-intro">Not a cookbook. Not a tracker. Not a meal-kit. A small set of tools that meet you at the fridge door.</p>
-    </div>
-
-    <div class="feat-grid">
-      <!-- BIG card -->
-      <article class="feat-card feat-hero">
-        <span class="feat-tag">AI recipe generation</span>
-        <h3>Type three ingredients. Get a complete recipe.</h3>
-        <p>Every meal starts from what's in your kitchen, not someone else's shopping list. Instructions, cook time, macros — all in one card.</p>
-
-        <div class="feat-recipe-preview">
-          <div class="ttl">You typed</div>
-          <div class="frp-chips">
-            <span class="frp-chip">cucumber</span>
-            <span class="frp-chip">chickpeas</span>
-            <span class="frp-chip">lemon</span>
-          </div>
-          <div class="frp-arrow">↓ iEatz returned</div>
-          <div class="frp-recipe">Lemon-tahini chickpea bowls with crisp cucumber.</div>
-          <div class="frp-meta">
-            <span><strong>15</strong>min</span>
-            <span><strong>410</strong>cal</span>
-            <span><strong>18g</strong>protein</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Smaller cards -->
-      <article class="feat-card feat-meal">
-        <span class="feat-tag">Personalized meal plans</span>
-        <h3>Pick your style. Get a week.</h3>
-        <p>Keto. Vegetarian. Fitness. Time-starved parent. Choose a goal — iEatz builds the full week around what's already in your kitchen.</p>
-        <div class="feat-photo"></div>
-      </article>
-
-      <article class="feat-card feat-grocery">
-        <span class="feat-tag">Smart grocery + Instacart</span>
-        <h3>Missing one thing? One tap.</h3>
-        <p>iEatz figures out what's short, builds the list, and sends it to Instacart. No wandering the aisles. No "where do they keep the harissa."</p>
-        <span class="feat-instacart-badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#FAF1E0"></circle><path d="M8 13l3 3 6-7" stroke="#0E4A2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          Sends to Instacart in one tap
-        </span>
-      </article>
-
-      <article class="feat-card feat-macro">
-        <span class="feat-tag">Calorie + macro tracking</span>
-        <h3>Nutrition on every plate.</h3>
-        <p>Full breakdown on every recipe. Log meals as you cook. Track your day. No separate app, no spreadsheet.</p>
-        <div class="feat-macros">
-          <div class="m">
-            <div class="m-num">480</div>
-            <div class="m-lbl">cal</div>
-          </div>
-          <div class="m">
-            <div class="m-num">42g</div>
-            <div class="m-lbl">protein</div>
-          </div>
-          <div class="m">
-            <div class="m-num">54g</div>
-            <div class="m-lbl">carb</div>
-          </div>
-          <div class="m">
-            <div class="m-num">14g</div>
-            <div class="m-lbl">fat</div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="cta-strip on-paper">
-      <div class="cta-strip-msg">Every feature, free on the starter plan. <span class="em">Download now.</span></div>
-      <div class="cta-strip-side">
-        <a data-cta="strip-features" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
-          <img src="assets/app-store-badge.png" alt="Download on the App Store">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================================
-     SECTION 8 — OBJECTIONS
-     ===================================================================== -->
-<section class="obj" data-screen-label="08 Objections">
-  <div class="wrap">
-    <span class="eyebrow muted">For the skeptics</span>
-    <h2>Three reasons you think this <span class="em">won't work</span> for you.</h2>
-
-    <div class="obj-list">
-      <div class="obj-item">
-        <div class="obj-q">I can barely cook.</div>
-        <div class="obj-a"><strong>You don't need to be.</strong> Every recipe has step-by-step instructions written for someone who's never deglazed a pan in their life. If you can follow directions, you can make these meals.</div>
-      </div>
-      <div class="obj-item">
-        <div class="obj-q">I only have random stuff.</div>
-        <div class="obj-a"><strong>That's the point.</strong> Three ingredients, five ingredients, the weird jar from the back of the pantry. The AI works with what you have — not what you should have bought.</div>
-      </div>
-      <div class="obj-item">
-        <div class="obj-q">Is this another subscription I'll forget about?</div>
-        <div class="obj-a"><strong>The starter plan is free, forever.</strong> No trial that auto-charges. No gotcha. If iEatz Pro is worth it for you later, you decide later.</div>
-      </div>
-    </div>
-
-    <div class="cta-strip">
-      <div class="cta-strip-msg">No risk. No credit card. <span class="em">Just download.</span></div>
-      <div class="cta-strip-side">
-        <a data-cta="strip-no-risk" class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
-          <img src="assets/app-store-badge.png" alt="Download on the App Store">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================================
-     SECTION 9 — FINAL CTA
-     ===================================================================== -->
-<section class="finalcta" data-screen-label="09 Final CTA" id="download">
+<!-- 8 · CLOSE -->
+<section id="s8-close" class="finalcta" data-section="close" data-position="8" data-screen-label="08 Close">
   <div class="decor-left"></div>
   <div class="decor-right"></div>
   <div class="finalcta-inner">
-    <span class="eyebrow on-dark">Download iEatz Healthy</span>
+    <span class="eyebrow on-dark">Dinner, decided.</span>
     <h2>Dinner shouldn't take <span class="em">this much energy.</span></h2>
     <p class="finalcta-sub">iEatz is free on the App Store. Open the fridge. We'll handle the rest.</p>
     <div class="finalcta-ctas">
-      <a data-cta="final-cta" class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" aria-label="Download on the App Store" target="_blank" rel="noopener">
-        <img src="assets/app-store-badge.png" alt="Download on the App Store">
+      <a class="btn btn--paper btn--xl" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="close" target="_blank" rel="noopener">Get the app free</a>
+      <a class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="close" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+        <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
       </a>
     </div>
-    <p class="finalcta-fine">iOS only · iPhone 11 and newer · Free, forever plan</p>
+    <p class="finalcta-fine">iOS only · iPhone 11 and newer · Free every week</p>
   </div>
 </section>
 
-<!-- =====================================================================
-     FOOTER
-     ===================================================================== -->
 <footer data-screen-label="Footer">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="#" style="color: var(--paper);">
-          <svg class="mark" viewBox="0 0 38.25 58.486" fill="none" style="color: #9FE4B3;">
+        <a class="brand" href="#s1-hero" style="color: var(--paper);">
+          <svg class="mark" viewBox="0 0 38.25 58.486" fill="none" style="color: #9FE4B3;" aria-hidden="true">
             <path d="M 0 5.03 C 0 2.252 2.252 0 5.03 0 L 33.22 0 C 35.998 0 38.25 2.252 38.25 5.03 L 38.25 20.119 L 0 20.119 L 0 5.03 Z" fill="currentColor"></path>
             <path d="M 0 49.83 C 0 52.608 2.252 54.86 5.03 54.86 L 33.22 54.86 C 35.998 54.86 38.25 52.608 38.25 49.83 L 38.25 22.81 L 0 22.81 L 0 49.83 Z" fill="currentColor"></path>
             <path d="M 6.083 6.2 C 6.083 5.489 6.659 4.913 7.369 4.913 C 8.08 4.913 8.656 5.489 8.656 6.2 L 8.656 16.259 C 8.656 16.97 8.08 17.546 7.369 17.546 C 6.659 17.546 6.083 16.97 6.083 16.259 L 6.083 6.2 Z" fill="currentColor"></path>
@@ -2689,19 +2720,16 @@ pintrk('track', 'pagevisit', {
       <div>
         <div class="foot-h">Product</div>
         <div class="foot-links">
-          <a href="#how">How it works</a>
-          <a href="#features">Features</a>
-          <a href="#download">Download</a>
-          <a href="#">Pro plan</a>
+          <a href="#s7-how">How it works</a>
+          <a href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="close" target="_blank" rel="noopener">Get the app free</a>
         </div>
       </div>
       <div>
         <div class="foot-h">Company</div>
         <div class="foot-links">
           <a href="#">About</a>
-          <a href="#">Blog</a>
-          <a href="#">Careers</a>
-          <a href="#">Press</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
         </div>
       </div>
       <div>
@@ -2709,8 +2737,6 @@ pintrk('track', 'pagevisit', {
         <div class="foot-links">
           <a href="#">@ieatzhealthy</a>
           <a href="#">Newsletter</a>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -2720,5 +2746,33 @@ pintrk('track', 'pagevisit', {
     </div>
   </div>
 </footer>
+
+<!-- Sticky mobile CTA: appears once the hero scrolls out, persists to the close -->
+<div class="sticky-cta" id="stickyCta" data-screen-label="Sticky CTA">
+  <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="sticky" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+    <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60">
+  </a>
+  <a class="btn" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="sticky" target="_blank" rel="noopener">Get the app free</a>
+</div>
+
+<script>
+(function () {
+  var hero = document.getElementById('s1-hero');
+  var bar = document.getElementById('stickyCta');
+  if (!hero || !bar || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (entries) {
+    bar.classList.toggle('on', !entries[0].isIntersecting);
+  }, { threshold: 0 }).observe(hero);
+})();
+</script>
+
+<div id="tweaks-root"></div>
+
+
+
+
+
+
+
 
 </body></html>
