@@ -71,6 +71,12 @@ const TEMPLATES = {
     <div class="ad-foot">${badge}</div></div>
   </div>` },
 
+  addevice: { surface: 'mint', render: (p, PHOTOS) => `<div class="pin ad-device">
+    <h1 class="head">${p.head}</h1><p class="sub">${p.sub}</p>
+    <div class="stage"><div class="phone"><img src="${PHOTOS}/${p.photo}" alt=""></div></div>
+    <div class="ad-row"><div class="ad-badges"><img src="${PHOTOS}/../app-store-badge.png" alt="Download on the App Store"><span class="free">Free on iOS</span></div>${badge}</div>
+  </div>` },
+
   // ---------- mint surface ----------
   device: { surface: 'mint', render: (p, PHOTOS) => `<div class="pin t-device">
     <div class="dhead"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1><p class="dcap">${p.cap}</p></div>

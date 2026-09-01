@@ -19,26 +19,6 @@
       "sub": "With iEatz, something does — a healthy dinner made from what's already in there."
     },
     {
-      "file": "tof-c2-dinner-decided-sq",
-      "w": 1080,
-      "h": 1080,
-      "template": "adphoto",
-      "photo": "lifestyle/couple-cooking-ad.jpg",
-      "objPos": "center 35%",
-      "head": "Dinner, <span class=\"accent\">decided.</span>",
-      "sub": "Never wonder what's for dinner again — iEatz picks tonight's recipe from what you already bought."
-    },
-    {
-      "file": "tof-c2-dinner-decided-45",
-      "w": 1080,
-      "h": 1350,
-      "template": "adphoto",
-      "photo": "lifestyle/couple-cooking-ad.jpg",
-      "objPos": "center 35%",
-      "head": "Dinner, <span class=\"accent\">decided.</span>",
-      "sub": "Never wonder what's for dinner again — iEatz picks tonight's recipe from what you already bought."
-    },
-    {
       "file": "tof-c3-hidden-dinners-sq",
       "w": 1080,
       "h": 1080,
@@ -55,6 +35,24 @@
       "photo": "food/healthy-bowls-table.jpg",
       "head": "Your fridge is hiding <span class=\"accent\">a week of dinners.</span>",
       "sub": "iEatz finds them — healthy, fast, made from what you already bought."
+    },
+    {
+      "file": "tof-c2b-phone-knows-sq",
+      "w": 1080,
+      "h": 1080,
+      "template": "addevice",
+      "photo": "app-recipe.jpg",
+      "head": "Your phone already knows <span class=\"accent\">what's for dinner.</span>",
+      "sub": "iEatz reads your groceries and picks tonight's recipe — before you've even thought about it."
+    },
+    {
+      "file": "tof-c2b-phone-knows-45",
+      "w": 1080,
+      "h": 1350,
+      "template": "addevice",
+      "photo": "app-recipe.jpg",
+      "head": "Your phone already knows <span class=\"accent\">what's for dinner.</span>",
+      "sub": "iEatz reads your groceries and picks tonight's recipe — before you've even thought about it."
     }
   ]
 }

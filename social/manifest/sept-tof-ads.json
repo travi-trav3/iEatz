@@ -2,7 +2,7 @@
   "adSet": "sept-tof-meta",
   "createdAt": "2026-08-18",
   "placement": "Meta feed (1:1 + 4:5 per concept); story 9:16 not yet built",
-  "note": "TOF ads built from the Claude Design canvas concepts, brand-corrected in the render harness. C2 uses couple-cooking-ad.jpg, a derivative crop that removes a Jimmy Dean package visible in the original (paid-media blocker; the organic jul31-ig post used the full frame). C3 uses the healthy-bowls-table abundance overhead per the canvas note. Official app-store-badge.png; safe-zone padded.",
+  "note": "TOF ads built from the Claude Design canvas concepts, brand-corrected in the render harness. C2 uses couple-cooking-ad.jpg, a derivative crop that removes a Jimmy Dean package visible in the original (paid-media blocker; the organic jul31-ig post used the full frame). C3 uses the healthy-bowls-table abundance overhead per the canvas note. Official app-store-badge.png; safe-zone padded. FUNNEL RULE: a TOF ad must open the loop the landing page closes — never reuse the LP hero's headline or image in the ad; the ad earns the click, the LP hero pays it off ('Dinner, decided.' is the destination, not the ad).",
   "concepts": [
     {
       "id": "c1",
@@ -18,16 +18,16 @@
       }
     },
     {
-      "id": "c2",
-      "angle": "Brand promise (Dinner, decided.)",
+      "id": "c2b",
+      "angle": "Product proof (phone already knows) — opens the loop the LP hero closes",
       "files": [
-        "assets/ads/sept-tof/tof-c2-dinner-decided-sq.png",
-        "assets/ads/sept-tof/tof-c2-dinner-decided-45.png"
+        "assets/ads/sept-tof/tof-c2b-phone-knows-sq.png",
+        "assets/ads/sept-tof/tof-c2b-phone-knows-45.png"
       ],
       "meta": {
-        "primaryText": "Never wonder what's for dinner again. iEatz reads your grocery receipt and picks tonight's recipe from what you already bought — healthy, fast, and already in your kitchen.",
-        "headline": "Dinner, decided.",
-        "description": "Free on iOS. Scan a receipt, get a week of dinners."
+        "primaryText": "Somewhere between the grocery run and 6 p.m., dinner becomes a question again. iEatz answers it before you ask: it reads your groceries and picks tonight's recipe — macros included, gaps filled by Instacart in one tap.",
+        "headline": "Your phone already knows what's for dinner",
+        "description": "Free on the App Store."
       }
     },
     {
@@ -42,6 +42,16 @@
         "headline": "Your fridge is hiding a week of dinners",
         "description": "Free on the App Store."
       }
+    }
+  ],
+  "retired": [
+    {
+      "id": "c2-v1",
+      "files": [
+        "assets/ads/sept-tof/tof-c2-dinner-decided-sq.png",
+        "assets/ads/sept-tof/tof-c2-dinner-decided-45.png"
+      ],
+      "reason": "RETIRED before launch (operator call, 2026-08-18): duplicated the ieatzhealthy.com hero exactly (same 'Dinner, decided.' headline + same couple photo) — the click delivered no new information. Keep as brand asset; do not run against the current LP."
     }
   ]
 }
