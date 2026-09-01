@@ -1,0 +1,47 @@
+{
+  "adSet": "sept-tof-meta",
+  "createdAt": "2026-08-18",
+  "placement": "Meta feed (1:1 + 4:5 per concept); story 9:16 not yet built",
+  "note": "TOF ads built from the Claude Design canvas concepts, brand-corrected in the render harness. C2 uses couple-cooking-ad.jpg, a derivative crop that removes a Jimmy Dean package visible in the original (paid-media blocker; the organic jul31-ig post used the full frame). C3 uses the healthy-bowls-table abundance overhead per the canvas note. Official app-store-badge.png; safe-zone padded.",
+  "concepts": [
+    {
+      "id": "c1",
+      "angle": "Insight hook (fridge-staring)",
+      "files": [
+        "assets/ads/sept-tof/tof-c1-fridge-hook-sq.png",
+        "assets/ads/sept-tof/tof-c1-fridge-hook-45.png"
+      ],
+      "meta": {
+        "primaryText": "You keep opening the fridge like something new is going to appear. With iEatz, something does: scan your grocery receipt once and it builds a week of healthy dinners from what's already in there — macros included, gaps filled by Instacart in one tap.",
+        "headline": "Dinner from what you already bought",
+        "description": "Free on the App Store."
+      }
+    },
+    {
+      "id": "c2",
+      "angle": "Brand promise (Dinner, decided.)",
+      "files": [
+        "assets/ads/sept-tof/tof-c2-dinner-decided-sq.png",
+        "assets/ads/sept-tof/tof-c2-dinner-decided-45.png"
+      ],
+      "meta": {
+        "primaryText": "Never wonder what's for dinner again. iEatz reads your grocery receipt and picks tonight's recipe from what you already bought — healthy, fast, and already in your kitchen.",
+        "headline": "Dinner, decided.",
+        "description": "Free on iOS. Scan a receipt, get a week of dinners."
+      }
+    },
+    {
+      "id": "c3",
+      "angle": "Hidden-value promise (week of dinners)",
+      "files": [
+        "assets/ads/sept-tof/tof-c3-hidden-dinners-sq.png",
+        "assets/ads/sept-tof/tof-c3-hidden-dinners-45.png"
+      ],
+      "meta": {
+        "primaryText": "Your fridge is hiding a week of dinners. iEatz finds them: scan your grocery receipt and it turns what you already bought into healthy 20-minute meals — before anything goes to waste.",
+        "headline": "Your fridge is hiding a week of dinners",
+        "description": "Free on the App Store."
+      }
+    }
+  ]
+}

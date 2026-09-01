@@ -58,6 +58,19 @@ const TEMPLATES = {
     <div class="method"><span class="rule"></span><p>${p.method}</p></div><div class="spacer"></div>${foot}</div>
   </div>` },
 
+  adtype: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin ad-type">
+    <span class="rule"></span><h1 class="head">${p.head}</h1><p class="sub">${p.sub}</p>
+    <div class="ad-badges"><img src="${PHOTOS}/../app-store-badge.png" alt="Download on the App Store"><span class="free">Free on iOS</span></div>
+    <div class="ad-foot">${badge}</div>
+  </div>` },
+
+  adphoto: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin ad-photo">
+    <div class="hero"><img src="${PHOTOS}/${p.photo}" alt="" style="object-position:${p.objPos || 'center'}"></div>
+    <div class="panel"><h1 class="head">${p.head}</h1><p class="sub">${p.sub}</p>
+    <div class="ad-badges"><img src="${PHOTOS}/../app-store-badge.png" alt="Download on the App Store"><span class="free">Free on iOS</span></div>
+    <div class="ad-foot">${badge}</div></div>
+  </div>` },
+
   // ---------- mint surface ----------
   device: { surface: 'mint', render: (p, PHOTOS) => `<div class="pin t-device">
     <div class="dhead"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1><p class="dcap">${p.cap}</p></div>

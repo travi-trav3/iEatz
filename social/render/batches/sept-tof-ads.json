@@ -1,0 +1,60 @@
+{
+  "name": "sept-tof-ads",
+  "note": "Meta TOF ad set, Sept 2026. 3 concepts x 2 feed sizes (1:1, 4:5). C2 photo cropped to remove Jimmy Dean package (bottom of frame).",
+  "posts": [
+    {
+      "file": "tof-c1-fridge-hook-sq",
+      "w": 1080,
+      "h": 1080,
+      "template": "adtype",
+      "head": "You keep opening the fridge like something new is going to <span class=\"accent\">appear.</span>",
+      "sub": "With iEatz, something does — a healthy dinner made from what's already in there."
+    },
+    {
+      "file": "tof-c1-fridge-hook-45",
+      "w": 1080,
+      "h": 1350,
+      "template": "adtype",
+      "head": "You keep opening the fridge like something new is going to <span class=\"accent\">appear.</span>",
+      "sub": "With iEatz, something does — a healthy dinner made from what's already in there."
+    },
+    {
+      "file": "tof-c2-dinner-decided-sq",
+      "w": 1080,
+      "h": 1080,
+      "template": "adphoto",
+      "photo": "lifestyle/couple-cooking-ad.jpg",
+      "objPos": "center 35%",
+      "head": "Dinner, <span class=\"accent\">decided.</span>",
+      "sub": "Never wonder what's for dinner again — iEatz picks tonight's recipe from what you already bought."
+    },
+    {
+      "file": "tof-c2-dinner-decided-45",
+      "w": 1080,
+      "h": 1350,
+      "template": "adphoto",
+      "photo": "lifestyle/couple-cooking-ad.jpg",
+      "objPos": "center 35%",
+      "head": "Dinner, <span class=\"accent\">decided.</span>",
+      "sub": "Never wonder what's for dinner again — iEatz picks tonight's recipe from what you already bought."
+    },
+    {
+      "file": "tof-c3-hidden-dinners-sq",
+      "w": 1080,
+      "h": 1080,
+      "template": "adphoto",
+      "photo": "food/healthy-bowls-table.jpg",
+      "head": "Your fridge is hiding <span class=\"accent\">a week of dinners.</span>",
+      "sub": "iEatz finds them — healthy, fast, made from what you already bought."
+    },
+    {
+      "file": "tof-c3-hidden-dinners-45",
+      "w": 1080,
+      "h": 1350,
+      "template": "adphoto",
+      "photo": "food/healthy-bowls-table.jpg",
+      "head": "Your fridge is hiding <span class=\"accent\">a week of dinners.</span>",
+      "sub": "iEatz finds them — healthy, fast, made from what you already bought."
+    }
+  ]
+}

@@ -151,3 +151,21 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
 .t-recipephoto .method .rule{width:42px;height:3px;background:var(--green);margin-top:16px;flex:none}
 .t-recipephoto .method p{font-family:var(--serif);font-size:36px;line-height:1.2;color:var(--ink)}
 .t-recipephoto .spacer{flex:1;min-height:12px}
+/* Meta TOF ad shells (Sept 2026): 1080x1080 + 1080x1350, safe-zone padded */
+.ad-type{background:var(--paper);display:flex;flex-direction:column;padding:88px 92px 72px}
+.ad-type .rule{width:68px;height:5px;background:var(--green);flex:none}
+.ad-type .head{font-size:104px;line-height:1.05;margin-top:48px}
+.ad-type .sub{font-family:var(--sans);font-size:35px;line-height:1.4;color:var(--ink-med);margin-top:38px;max-width:840px}
+.ad-badges{display:flex;align-items:center;gap:28px;margin-top:auto;padding-top:40px}
+.ad-badges img{height:66px;width:auto;display:block}
+.ad-badges .free{font-family:var(--sans);font-weight:600;font-size:27px;color:var(--ink-med)}
+.ad-foot{display:flex;justify-content:flex-start;margin-top:36px}
+.ad-photo{display:flex;flex-direction:column;background:var(--paper)}
+.ad-photo .hero{height:52%;overflow:hidden;flex:none;position:relative}
+.ad-photo .hero img{width:100%;height:100%;object-fit:cover;display:block}
+.ad-photo .panel{flex:1;padding:52px 76px 44px;display:flex;flex-direction:column}
+.ad-photo .head{font-size:82px;line-height:1.04}
+.ad-photo .sub{font-family:var(--sans);font-size:31px;line-height:1.38;color:var(--ink-med);margin-top:20px}
+.ad-photo .ad-badges{padding-top:22px}
+.ad-photo .ad-foot{margin-top:22px}
+.ad-photo .ad-badges img{height:58px}
