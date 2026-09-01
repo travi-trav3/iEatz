@@ -53,6 +53,26 @@
       "photo": "app-recipe.jpg",
       "head": "Your phone already knows <span class=\"accent\">what's for dinner.</span>",
       "sub": "iEatz reads your groceries and picks tonight's recipe — before you've even thought about it."
+    },
+    {
+      "file": "tof-c2c-six-pm-sq",
+      "w": 1080,
+      "h": 1080,
+      "template": "adphoto",
+      "photo": "lifestyle/pan-steam.jpg",
+      "objPos": "center 42%",
+      "head": "It's 6 p.m. and nobody's asking <span class=\"accent\">what's for dinner.</span>",
+      "sub": "By the time you'd normally start wondering, iEatz has already picked tonight's recipe from what you bought."
+    },
+    {
+      "file": "tof-c2c-six-pm-45",
+      "w": 1080,
+      "h": 1350,
+      "template": "adphoto",
+      "photo": "lifestyle/pan-steam.jpg",
+      "objPos": "center 42%",
+      "head": "It's 6 p.m. and nobody's asking <span class=\"accent\">what's for dinner.</span>",
+      "sub": "By the time you'd normally start wondering, iEatz has already picked tonight's recipe from what you bought."
     }
   ]
 }

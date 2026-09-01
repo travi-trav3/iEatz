@@ -42,6 +42,19 @@
         "headline": "Your fridge is hiding a week of dinners",
         "description": "Free on the App Store."
       }
+    },
+    {
+      "id": "c2c",
+      "angle": "Human proof (the question never asked) — same slot as c2b, no UI; A/B them",
+      "files": [
+        "assets/ads/sept-tof/tof-c2c-six-pm-sq.png",
+        "assets/ads/sept-tof/tof-c2c-six-pm-45.png"
+      ],
+      "meta": {
+        "primaryText": "It's 6 p.m. and nobody's asking what's for dinner — because iEatz already picked tonight's recipe from the groceries you bought. Healthy, twenty minutes, zero deciding.",
+        "headline": "The 6 p.m. question, retired",
+        "description": "Free on the App Store."
+      }
     }
   ],
   "retired": [
