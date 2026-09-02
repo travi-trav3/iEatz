@@ -73,6 +73,66 @@
       "objPos": "center 42%",
       "head": "It's 6 p.m. and nobody's asking <span class=\"accent\">what's for dinner.</span>",
       "sub": "By the time you'd normally start wondering, iEatz has already picked tonight's recipe from what you bought."
+    },
+    {
+      "file": "tof-c4-shop-shelves-sq",
+      "template": "adbleed",
+      "photo": "pantry/pantry-open-spice.jpg",
+      "eyebrow": "Pantry-first cooking",
+      "head": "Shop your <span class=\"accent\">shelves</span> first.",
+      "sub": "Half of tonight's dinner is already behind this door — iEatz finds it and builds the recipe around it.",
+      "w": 1080,
+      "h": 1080
+    },
+    {
+      "file": "tof-c4-shop-shelves-45",
+      "template": "adbleed",
+      "photo": "pantry/pantry-open-spice.jpg",
+      "eyebrow": "Pantry-first cooking",
+      "head": "Shop your <span class=\"accent\">shelves</span> first.",
+      "sub": "Half of tonight's dinner is already behind this door — iEatz finds it and builds the recipe around it.",
+      "w": 1080,
+      "h": 1350
+    },
+    {
+      "file": "tof-c5-taco-night-sq",
+      "template": "adbleed",
+      "photo": "food/tacos-lime.jpg",
+      "eyebrow": "Zero-shopping dinners",
+      "head": "Taco night, <span class=\"accent\">zero shopping.</span>",
+      "sub": "Chickpeas, sweet potato, slaw — it was all on the receipt. iEatz just spotted it first.",
+      "w": 1080,
+      "h": 1080
+    },
+    {
+      "file": "tof-c5-taco-night-45",
+      "template": "adbleed",
+      "photo": "food/tacos-lime.jpg",
+      "eyebrow": "Zero-shopping dinners",
+      "head": "Taco night, <span class=\"accent\">zero shopping.</span>",
+      "sub": "Chickpeas, sweet potato, slaw — it was all on the receipt. iEatz just spotted it first.",
+      "w": 1080,
+      "h": 1350
+    },
+    {
+      "file": "tof-c6-grocery-math-sq",
+      "template": "adstatdark",
+      "stat": "$1,500",
+      "eyebrow": "The grocery math",
+      "sub": "of groceries per household, tossed every year.",
+      "body": "iEatz turns what you already bought into the week’s dinners — before any of it becomes waste.",
+      "w": 1080,
+      "h": 1080
+    },
+    {
+      "file": "tof-c6-grocery-math-45",
+      "template": "adstatdark",
+      "stat": "$1,500",
+      "eyebrow": "The grocery math",
+      "sub": "of groceries per household, tossed every year.",
+      "body": "iEatz turns what you already bought into the week’s dinners — before any of it becomes waste.",
+      "w": 1080,
+      "h": 1350
     }
   ]
 }

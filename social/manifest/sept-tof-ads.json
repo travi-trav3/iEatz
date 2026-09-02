@@ -2,7 +2,7 @@
   "adSet": "sept-tof-meta",
   "createdAt": "2026-08-18",
   "placement": "Meta feed (1:1 + 4:5 per concept); story 9:16 not yet built",
-  "note": "TOF ads built from the Claude Design canvas concepts, brand-corrected in the render harness. C2 uses couple-cooking-ad.jpg, a derivative crop that removes a Jimmy Dean package visible in the original (paid-media blocker; the organic jul31-ig post used the full frame). C3 uses the healthy-bowls-table abundance overhead per the canvas note. Official app-store-badge.png; safe-zone padded. FUNNEL RULE: a TOF ad must open the loop the landing page closes — never reuse the LP hero's headline or image in the ad; the ad earns the click, the LP hero pays it off ('Dinner, decided.' is the destination, not the ad).",
+  "note": "TOF ads built from the Claude Design canvas concepts, brand-corrected in the render harness. C2 uses couple-cooking-ad.jpg, a derivative crop that removes a Jimmy Dean package visible in the original (paid-media blocker; the organic jul31-ig post used the full frame). C3 uses the healthy-bowls-table abundance overhead per the canvas note. Official app-store-badge.png; safe-zone padded. FUNNEL RULE: a TOF ad must open the loop the landing page closes — never reuse the LP hero's headline or image in the ad; the ad earns the click, the LP hero pays it off ('Dinner, decided.' is the destination, not the ad). C4-C6 carry an on-creative Learn more pill (match the Meta CTA button to 'Learn More' for these; C1-C3 use App Store badge -> 'Download').",
   "concepts": [
     {
       "id": "c1",
@@ -53,6 +53,45 @@
       "meta": {
         "primaryText": "It's 6 p.m. and nobody's asking what's for dinner — because iEatz already picked tonight's recipe from the groceries you bought. Healthy, twenty minutes, zero deciding.",
         "headline": "The 6 p.m. question, retired",
+        "description": "Free on the App Store."
+      }
+    },
+    {
+      "id": "c4",
+      "angle": "Pantry-first behavior shift (proven organic creative, promoted) — on-creative Learn more CTA",
+      "files": [
+        "assets/ads/sept-tof/tof-c4-shop-shelves-sq.png",
+        "assets/ads/sept-tof/tof-c4-shop-shelves-45.png"
+      ],
+      "meta": {
+        "primaryText": "Before the next grocery run, open the pantry. Half of tonight's dinner is usually already on the shelf — iEatz finds it, builds the recipe around it, and only sends you shopping for what's actually missing.",
+        "headline": "Shop your shelves first",
+        "description": "Free on the App Store."
+      }
+    },
+    {
+      "id": "c5",
+      "angle": "Appetite + zero-shopping proof — on-creative Learn more CTA",
+      "files": [
+        "assets/ads/sept-tof/tof-c5-taco-night-sq.png",
+        "assets/ads/sept-tof/tof-c5-taco-night-45.png"
+      ],
+      "meta": {
+        "primaryText": "Taco night without a store run: roasted chickpeas, sweet potato, slaw, a squeeze of lime — all from groceries you already bought. iEatz reads your receipt and finds the dinners hiding in it.",
+        "headline": "Taco night, zero shopping",
+        "description": "Free on iOS."
+      }
+    },
+    {
+      "id": "c6",
+      "angle": "Money/waste stat (proven anchor) — on-creative Learn more CTA",
+      "files": [
+        "assets/ads/sept-tof/tof-c6-grocery-math-sq.png",
+        "assets/ads/sept-tof/tof-c6-grocery-math-45.png"
+      ],
+      "meta": {
+        "primaryText": "About $1,500 of groceries per household gets tossed every year — most of it bought with good intentions on a Sunday. iEatz turns the good intentions into the week's actual dinners.",
+        "headline": "Stop paying for food you throw away",
         "description": "Free on the App Store."
       }
     }

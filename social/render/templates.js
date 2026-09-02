@@ -77,6 +77,20 @@ const TEMPLATES = {
     <div class="ad-row"><div class="ad-badges"><img src="${PHOTOS}/../app-store-badge.png" alt="Download on the App Store"><span class="free">Free on iOS</span></div>${badge}</div>
   </div>` },
 
+  adbleed: { surface: 'photo-bleed', render: (p, PHOTOS) => `<div class="pin ad-bleed">
+    <img class="bg" src="${PHOTOS}/${p.photo}" alt="" style="object-position:${p.objPos || 'center'}"><div class="scrim2"></div>
+    <div class="bwrap"><div class="eyebrow">${p.eyebrow}</div><h1 class="bhead">${p.head}</h1><p class="bsub">${p.sub}</p>
+    <span class="ad-btn">${p.btn || 'Learn more'}</span></div>
+    <div class="foot-ad">${badgeDark}<span class="url" style="color:rgba(255,255,255,0.75)">ieatzhealthy.com</span></div>
+  </div>` },
+
+  adstatdark: { surface: 'dark', render: (p) => `<div class="pin ad-statdark">
+    <div class="eyebrow">${p.eyebrow}</div><div class="stat">${p.stat}</div>
+    <h1 class="ssub">${p.sub}</h1><p class="sbody">${p.body}</p>
+    <span class="ad-btn">${p.btn || 'Learn more'}</span>
+    <div class="foot-row">${badgeDark}<span class="url" style="color:rgba(255,255,255,0.7)">ieatzhealthy.com</span></div>
+  </div>` },
+
   // ---------- mint surface ----------
   device: { surface: 'mint', render: (p, PHOTOS) => `<div class="pin t-device">
     <div class="dhead"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1><p class="dcap">${p.cap}</p></div>
