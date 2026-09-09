@@ -260,6 +260,10 @@ with zero duplicates:
 8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
+- **Sep 10–16 week fully scheduled (Sep 9):** 7 pins + 4 IG, fall/soup-season spine, board-routed,
+  alerts + first comments attached. Ledger: `social/manifest/sep-10-16-batch.json`. Aug batches
+  fully published; the queue was EMPTY Sep 1–9 — a coverage gap. Schedule batches to end past the
+  next expected session, or set up a recurring reminder.
 - **Aug 18–31 batch fully scheduled (Aug 18):** 12 pins + 8 IG incl. second carousel. Ledger:
   `social/manifest/aug-18-31-batch.json`. Aug 1–14 fully published.
 - **PINTEREST RECONNECTED (Aug 2026): new channel id `6a7a4b64b2d9d577435279f6`** — all pre-reconnect
