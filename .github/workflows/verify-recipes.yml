@@ -1,0 +1,44 @@
+# Verifies recipe landing pages are live after a push to main.
+# Cloudflare Pages deploys main; this job polls each page's final URL until it
+# returns 200 with the right body (og:title present, JSON-LD parses), then
+# records a commit status "recipes/verify-live" on the deploy commit. The
+# pages pipeline in ieatz-social reads that status, so verification works
+# from environments that cannot reach the domain themselves.
+name: verify-recipes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "recipes/**"
+      - "sitemap.xml"
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: "Comma-separated recipe slugs to verify (default: pages changed in the triggering commit)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  statuses: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify live
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLUGS: ${{ github.event.inputs.slugs }}
+          ORIGIN: https://ieatzhealthy.com
+          TIMEOUT_MINUTES: "20"
+          INTERVAL_SECONDS: "30"
+        run: node .github/scripts/verify-live.js
