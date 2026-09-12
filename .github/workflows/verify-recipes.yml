@@ -22,6 +22,10 @@ on:
         description: "Diagnostic: comma-separated URLs to fetch once and report (status, headers, title). Skips verification."
         required: false
         default: ""
+      cf_action:
+        description: "Cloudflare Pages: inspect (settings + recent deployments) or deploy (new production deployment). Needs the CLOUDFLARE_API_TOKEN secret. Skips verification."
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -42,7 +46,15 @@ jobs:
           git clone --depth 2 --branch "${GITHUB_REF_NAME}" "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" .
           git checkout --quiet "${GITHUB_SHA}"
           node --version
+      - name: Cloudflare Pages
+        if: ${{ github.event.inputs.cf_action != '' }}
+        env:
+          CF_ACTION: ${{ github.event.inputs.cf_action }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node .github/scripts/cf-pages.js
       - name: Verify live
+        if: ${{ github.event.inputs.cf_action == '' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SLUGS: ${{ github.event.inputs.slugs }}
