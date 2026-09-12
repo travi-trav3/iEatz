@@ -27,13 +27,17 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    # No marketplace actions: the repo's Actions policy may allow only
+    # first-party workflows, so the checkout is a plain git clone with the job
+    # token and Node comes preinstalled on the runner.
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
+      - name: Checkout
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git clone --depth 2 --branch "${GITHUB_REF_NAME}" "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" .
+          git checkout --quiet "${GITHUB_SHA}"
+          node --version
       - name: Verify live
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
