@@ -8,6 +8,9 @@
 //                      environment (production or preview).
 //   CF_ACTION=deploy   create a new production deployment from the
 //                      production branch (same as Retry in the dashboard).
+//   CF_ACTION=set-production-branch
+//                      point the project's production branch at
+//                      CF_PRODUCTION_BRANCH (default main), then deploy.
 
 const ACCOUNT = process.env.CLOUDFLARE_ACCOUNT_ID || '5ad6af2a00cb0c3aa12ea9f2919524c9';
 const PROJECT = process.env.CF_PAGES_PROJECT || 'ieatz';
@@ -42,9 +45,21 @@ function line(d) {
   const deployments = await cf('/deployments?per_page=10');
   console.log('recent deployments:');
   for (const d of deployments) console.log('  ' + line(d));
-  if (action === 'deploy') {
+  let productionBranch = project.production_branch;
+  if (action === 'set-production-branch') {
+    const want = process.env.CF_PRODUCTION_BRANCH || 'main';
+    if (productionBranch === want) console.log(`production branch is already ${want}`);
+    else {
+      const body = { production_branch: want };
+      if (project.source) body.source = { type: project.source.type, config: { ...project.source.config, production_branch: want } };
+      const updated = await cf('', { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+      console.log(`production branch changed: ${productionBranch} -> ${updated.production_branch}`);
+      productionBranch = updated.production_branch;
+    }
+  }
+  if (action === 'deploy' || action === 'set-production-branch') {
     const form = new FormData();
-    form.set('branch', project.production_branch);
+    form.set('branch', productionBranch);
     const d = await cf('/deployments', { method: 'POST', body: form });
     console.log(`created deployment: ${line(d)}`);
   }

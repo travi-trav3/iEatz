@@ -23,7 +23,7 @@ on:
         required: false
         default: ""
       cf_action:
-        description: "Cloudflare Pages: inspect (settings + recent deployments) or deploy (new production deployment). Needs the CLOUDFLARE_API_TOKEN secret. Skips verification."
+        description: "Cloudflare Pages: inspect (settings + recent deployments), deploy (new production deployment), or set-production-branch (point production at main, then deploy). Needs the CLOUDFLARE_API_TOKEN secret. Skips verification."
         required: false
         default: ""
 
