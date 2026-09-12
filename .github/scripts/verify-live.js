@@ -97,7 +97,7 @@ async function probe(urls) {
       const keep = ['server', 'cf-cache-status', 'cf-ray', 'age', 'cache-control', 'etag', 'last-modified', 'content-type', 'location', 'x-robots-tag'];
       const h = keep.filter((k) => res.headers.get(k)).map((k) => `${k}=${res.headers.get(k)}`).join(' ');
       console.log(`${url}\n  HTTP ${res.status} ${body.length} bytes\n  title: ${title}\n  og:title: ${og}\n  ${h}`);
-      if (/sitemap\.xml$/.test(url)) console.log('  locs: ' + [...body.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]).join(' | '));
+      if (/sitemap\.xml$/.test(url)) console.log('  locs: ' + [...body.matchAll(/<url><loc>([^<]*)<\/loc><lastmod>([^<]*)<\/lastmod>/g)].map((m) => `${m[1]} @${m[2]}`).join(' | '));
       if (/\/recipes\/$/.test(url)) console.log('  hrefs: ' + [...body.matchAll(/href="(\/recipes\/[^"]*)"/g)].map((m) => m[1]).join(' | '));
     } catch (e) { console.log(`${url}\n  fetch error: ${e.message}`); }
   }
