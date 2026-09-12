@@ -84,7 +84,30 @@ async function verify(slug) {
   return { ok: false, attempts, url, reason: `timeout after ${attempts} attempts; last: ${last}` };
 }
 
+// Diagnostic mode: fetch each URL once and print what the origin serves.
+// Used to tell "not deployed" from "deployed to a hostname the custom
+// domain does not point at" from "cached fallback" without dashboard access.
+async function probe(urls) {
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { redirect: 'manual', headers: { 'user-agent': 'ieatz-verify-live probe', 'cache-control': 'no-cache' } });
+      const body = await res.text();
+      const title = (/<title>([^<]*)<\/title>/.exec(body) || [])[1] || '(no title)';
+      const og = (/<meta property="og:title" content="([^"]*)"/.exec(body) || [])[1] || '(no og:title)';
+      const keep = ['server', 'cf-cache-status', 'cf-ray', 'age', 'cache-control', 'etag', 'last-modified', 'content-type', 'location', 'x-robots-tag'];
+      const h = keep.filter((k) => res.headers.get(k)).map((k) => `${k}=${res.headers.get(k)}`).join(' ');
+      console.log(`${url}\n  HTTP ${res.status} ${body.length} bytes\n  title: ${title}\n  og:title: ${og}\n  ${h}`);
+      if (/sitemap\.xml$/.test(url)) console.log('  locs: ' + [...body.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]).join(' | '));
+      if (/\/recipes\/$/.test(url)) console.log('  hrefs: ' + [...body.matchAll(/href="(\/recipes\/[^"]*)"/g)].map((m) => m[1]).join(' | '));
+    } catch (e) { console.log(`${url}\n  fetch error: ${e.message}`); }
+  }
+}
+
 (async () => {
+  if (process.env.PROBE_URLS && process.env.PROBE_URLS.trim()) {
+    await probe(process.env.PROBE_URLS.split(',').map((s) => s.trim()).filter(Boolean));
+    process.exit(0);
+  }
   const slugs = changedSlugs();
   console.log(`verifying: ${slugs.join(', ') || '(none)'}`);
   let failed = false;

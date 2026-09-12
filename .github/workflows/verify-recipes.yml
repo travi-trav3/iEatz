@@ -18,6 +18,10 @@ on:
         description: "Comma-separated recipe slugs to verify (default: pages changed in the triggering commit)"
         required: false
         default: ""
+      probe_urls:
+        description: "Diagnostic: comma-separated URLs to fetch once and report (status, headers, title). Skips verification."
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -42,6 +46,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SLUGS: ${{ github.event.inputs.slugs }}
+          PROBE_URLS: ${{ github.event.inputs.probe_urls }}
           ORIGIN: https://ieatzhealthy.com
           TIMEOUT_MINUTES: "20"
           INTERVAL_SECONDS: "30"
