@@ -72,6 +72,10 @@ async function verify(slug) {
         const reasons = checkBody(body, og);
         if (!reasons.length) return { ok: true, attempts, url };
         last = `200 but ${reasons.join('; ')}`;
+        if (attempts === 1 || attempts % 10 === 0) {
+          const title = (/<title>([^<]*)<\/title>/.exec(body) || [])[1] || '(no title)';
+          console.log(`  served: <title>${title}</title>, ${body.length} bytes, server=${res.headers.get('server') || '?'}, cf-cache=${res.headers.get('cf-cache-status') || '?'}`);
+        }
       } else last = `HTTP ${res.status}`;
     } catch (e) { last = `fetch error: ${e.message}`; }
     console.log(`${url}: attempt ${attempts}: ${last}`);
