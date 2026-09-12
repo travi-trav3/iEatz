@@ -1,4 +1,4 @@
-# Verifies recipe landing pages are live after a push to main.
+# Verifies recipe landing pages are live after a push to main. Registered 2026-09-12.
 # Cloudflare Pages deploys main; this job polls each page's final URL until it
 # returns 200 with the right body (og:title present, JSON-LD parses), then
 # records a commit status "recipes/verify-live" on the deploy commit. The
