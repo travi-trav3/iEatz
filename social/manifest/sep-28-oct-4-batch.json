@@ -26,14 +26,14 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "First v2 batch (creative direction refresh, Sep 2026). IG 5: receipt, sharpie, carousel (four dinners from one chicken), thread over a fridge, receipt reel. Pinterest 6: poster, split, recipephoto, collage, list, sharpie. Scheduled as Buffer DRAFTS for operator review. Receipt math in the render batch note. Photos chosen for photoClaim honesty: the library has no soup or chicken-taco photo, so the chicken carousel is carve / saucy rice / rice and bean bowl / fried rice. Generic store name on receipts (no real retailer).",
+  "note": "First v2 batch (creative direction refresh, Sep 2026). IG 5: receipt, sharpie, carousel (four dinners from one chicken), thread over a fridge, receipt reel. Pinterest 6: poster, split, recipephoto, collage, list, sharpie. Scheduled as Buffer DRAFTS for operator review. Receipt math in the render batch note. Photos chosen for photoClaim honesty: the library has no soup or chicken-taco photo, so the chicken carousel is carve / saucy rice / rice and bean bowl / fried rice. Generic store name on receipts (no real retailer). [rev 2026-09-25: all 11 created in Buffer as DRAFTS with dueAt kept (approve each draft in Buffer to schedule it); 5 IG first comments set via create_post and echoed; reel accepted as video/mp4 8000 ms; 11 Slack alerts armed at dueAt, which fire whether or not the drafts are approved.]",
   "formulaicCtas": [
     "receipt-scan"
   ],
   "posts": [
     {
       "id": "s28-ig",
-      "status": "pending",
+      "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-09-28T12:40:00-07:00",
       "file": "assets/social/sep28/s28-ig-receipt.png",
@@ -48,11 +48,13 @@
       "cta": "receipt-scan",
       "alt": "Receipt tape on deep green listing eggs, black beans, flour tortillas, baby spinach, feta and salsa for $19.93, with four dinners printed below and a yellow sticker reading $4.98 a dinner. Headline: $19.93 of groceries. Four dinners.",
       "text": "Sunday's receipt: a dozen eggs, two cans of black beans, tortillas, spinach, feta and a jar of salsa. $19.93.\n\nScan it and iEatz builds recipes from exactly that: black bean quesadillas, a spinach and feta scramble, huevos rancheros, bean and spinach burritos. That's about $4.98 a dinner, with nothing extra to buy.\n\n#budgetmeals #mealplanning #groceryhaul #weeknightdinner #ieatzhealthy",
-      "firstComment": "Huevos rancheros on a Wednesday is the correct use of a salsa jar. We will not be taking questions."
+      "firstComment": "Huevos rancheros on a Wednesday is the correct use of a salsa jar. We will not be taking questions.",
+      "bufferId": "6ab6bf1bb8ab85e8c36e0dfb",
+      "slackAlert": "Dr0C4D4CSU3V"
     },
     {
       "id": "s29-ig",
-      "status": "pending",
+      "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-09-29T19:25:00-07:00",
       "file": "assets/social/sep28/s29-ig-sharpie.png",
@@ -70,11 +72,13 @@
       "cta": "engagement",
       "alt": "Photo of an open, crowded fridge marked up in black marker: sausages and a jar of garlic circled on the second shelf, a bag of greens circled in the drawer. Handwritten headline: Tonight is on shelf two.",
       "text": "Tuesday, 7 PM, fridge open, nothing to eat. Look again: shelf two has sausages and a jar of chopped garlic, and there's a bag of greens in the drawer.\n\nThat's sausage and greens pasta in twenty minutes, and it's already paid for. Tell iEatz what's in there and it does the same thing.\n\n#whatsfordinner #fridgecleanout #weeknightdinner #pantrymeals #ieatzhealthy",
-      "firstComment": "The strawberries are dessert. Dessert is between you and the strawberries."
+      "firstComment": "The strawberries are dessert. Dessert is between you and the strawberries.",
+      "bufferId": "6ab6bf525c3761cdae7f5e5c",
+      "slackAlert": "Dr0C4P16BX36"
     },
     {
       "id": "o01-ig",
-      "status": "pending",
+      "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-10-01T08:15:00-07:00",
       "file": "assets/social/sep28/o01-ig-carousel--01.png",
@@ -99,11 +103,13 @@
       "cta": "app-value",
       "alt": "Five-slide carousel. Slide one, cream poster: Four dinners from one chicken, with a readout of $8.99 bird, 4 dinners, $2.25 chicken per dinner. Slides two to five: carving a roast chicken, shredded chicken in tomato sauce over rice, a bowl of sliced chicken with rice, corn and kidney beans, and fried rice stirred in a pan, each with ingredients and a one-line method.",
       "text": "One $8.99 rotisserie chicken, four dinners. Swipe for the plan.\n\nNight one you carve it hot and box the rest. Night two it goes saucy over rice with crushed tomatoes and garlic. Night three is a rice and bean bowl with the sliced chicken on top. Night four, the last shreds go into fried rice.\n\nSave this for the next time you walk past the rotisserie case.\n\n#rotisseriechicken #mealprep #budgetmeals #weeknightdinner #ieatzhealthy",
-      "firstComment": "Night two is the sleeper hit. Crushed tomatoes and garlic make leftover chicken taste like it was the plan all along."
+      "firstComment": "Night two is the sleeper hit. Crushed tomatoes and garlic make leftover chicken taste like it was the plan all along.",
+      "bufferId": "6ab6bf5525fe0dd5edcbda0e",
+      "slackAlert": "Dr0C4K72A6JW"
     },
     {
       "id": "o02-ig",
-      "status": "pending",
+      "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-10-02T21:10:00-07:00",
       "file": "assets/social/sep28/o02-ig-thread.png",
@@ -121,11 +127,13 @@
       "cta": "follow",
       "alt": "Full-bleed photo of an open fridge in warm light with bread, two juice jugs and heads of cabbage and lettuce. Text-message bubbles float over it: are we out of everything; nope, cabbage, bread, two lettuces; iEatz found three dinners in there; which one uses the cabbage; all three lol; ok im in.",
       "text": "Friday, 5:48 PM. The fridge looks empty until somebody actually reads it: a cabbage, a loaf of bread, two heads of lettuce.\n\nThat's three dinners. Tell iEatz what's in there and it builds them for you.\n\n#whatsfordinner #fridgecleanout #familydinner #ieatzhealthy",
-      "firstComment": "We stand by 'all three lol' as the most honest cabbage review ever written."
+      "firstComment": "We stand by 'all three lol' as the most honest cabbage review ever written.",
+      "bufferId": "6ab6bf559c15eda27741cdb1",
+      "slackAlert": "Dr0C4P16MGH2"
     },
     {
       "id": "o04-ig",
-      "status": "pending",
+      "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-10-04T17:50:00-07:00",
       "file": "assets/social/sep28/o04-ig-reel.mp4",
@@ -141,11 +149,13 @@
       "cta": "receipt-scan",
       "alt": "Eight-second video on deep green: a receipt prints line by line with spinach, ricotta, crushed tomatoes, penne, garlic and lemons for $15.26, then three dinners appear, a yellow sticker reads $5.09 a dinner, and the headline rises: Cooked in order of what wilts first.",
       "text": "Thursday's run: spinach, ricotta, crushed tomatoes, penne, garlic and lemons. $15.26 for three dinners.\n\nCook in the order things wilt. The spinach goes first, into Thursday's soup. The ricotta holds for baked penne on Friday and lemon pasta on Saturday. Scan the receipt and iEatz builds the recipes.\n\n#foodwaste #mealplanning #pastanight #budgetmeals #ieatzhealthy",
-      "firstComment": "Lemon ricotta pasta on a Saturday is what a clean fridge looks like."
+      "firstComment": "Lemon ricotta pasta on a Saturday is what a clean fridge looks like.",
+      "bufferId": "6ab6bf565c3761cdae7f5e9e",
+      "slackAlert": "Dr0C5DMEULE4"
     },
     {
       "id": "s28-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-09-28T07:35:00-07:00",
       "file": "assets/pinterest/sep28/s28-pin-poster.png",
@@ -162,11 +172,13 @@
       "boardServiceId": "1011339728762228750",
       "title": "Turn your grocery receipt into a week of dinners: 4 dinners from $19.93",
       "alt": "Cream typographic pin: Your grocery receipt is already a meal plan, with a red underline under already and meal plan in green italic, plus a readout of 6 items, 4 dinners, $4.98 per dinner.",
-      "text": "Your grocery receipt is already a meal plan. Six items, $19.93: eggs, black beans, flour tortillas, baby spinach, feta and salsa cover four dinners at about $4.98 each. Black bean quesadillas, a spinach and feta scramble, huevos rancheros and bean and spinach burritos. Snap the receipt in the iEatz app and it builds recipes from exactly what you bought."
+      "text": "Your grocery receipt is already a meal plan. Six items, $19.93: eggs, black beans, flour tortillas, baby spinach, feta and salsa cover four dinners at about $4.98 each. Black bean quesadillas, a spinach and feta scramble, huevos rancheros and bean and spinach burritos. Snap the receipt in the iEatz app and it builds recipes from exactly what you bought.",
+      "bufferId": "6ab6bf570fe9479c65b59f74",
+      "slackAlert": "Dr0C4E8AFJDB"
     },
     {
       "id": "s29-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-09-29T13:05:00-07:00",
       "file": "assets/pinterest/sep28/s29-pin-split.png",
@@ -186,11 +198,13 @@
       "boardServiceId": "1011339728762228744",
       "title": "Fridge clean out dinner: greens, soft eggs and avocado from what you already have",
       "alt": "Split pin: an open, stocked fridge labelled Sunday 6:02 PM above a bowl of greens with soft eggs, avocado and radish. Middle label: Same fridge, Tuesday. Caption: Nothing new came home. $0.00 spent.",
-      "text": "Same fridge, two days apart. Sunday it looked like there was nothing for dinner. Tuesday it was a bowl of greens, soft boiled eggs, avocado and radish, and nobody went to the store. Tell iEatz what's in your fridge and it builds the recipe around it."
+      "text": "Same fridge, two days apart. Sunday it looked like there was nothing for dinner. Tuesday it was a bowl of greens, soft boiled eggs, avocado and radish, and nobody went to the store. Tell iEatz what's in your fridge and it builds the recipe around it.",
+      "bufferId": "6ab6bf585c3761cdae7f5ef0",
+      "slackAlert": "Dr0C4E8ALFKP"
     },
     {
       "id": "s30-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-09-30T20:20:00-07:00",
       "file": "assets/pinterest/sep28/s30-pin-tacos.png",
@@ -210,11 +224,13 @@
       "boardServiceId": "1011339728762228746",
       "title": "Roasted sweet potato and chickpea tacos: an easy meatless weeknight dinner",
       "alt": "Recipe pin with a photo of tacos filled with roasted chickpeas, sweet potato, avocado and jalapeño as lime is squeezed over them, plus ingredient chips and a one-line method.",
-      "text": "Roasted sweet potato and chickpea tacos. Toss diced sweet potato and a can of chickpeas with oil, cumin and salt, roast at 425°F for about 20 minutes until crisp, then pile into warm tortillas with avocado, jalapeño and a squeeze of lime. Estimated per serving (2 tacos): about 590 kcal, 16 g protein, 86 g carbs, 20 g fat. Estimated per serving, verify for allergens. Save it for a meatless weeknight, or let iEatz build dinners like this from what's already in your kitchen."
+      "text": "Roasted sweet potato and chickpea tacos. Toss diced sweet potato and a can of chickpeas with oil, cumin and salt, roast at 425°F for about 20 minutes until crisp, then pile into warm tortillas with avocado, jalapeño and a squeeze of lime. Estimated per serving (2 tacos): about 590 kcal, 16 g protein, 86 g carbs, 20 g fat. Estimated per serving, verify for allergens. Save it for a meatless weeknight, or let iEatz build dinners like this from what's already in your kitchen.",
+      "bufferId": "6ab6bf580fe9479c65b59f92",
+      "slackAlert": "Dr0C4E8ANTAR"
     },
     {
       "id": "o01-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-10-01T11:45:00-07:00",
       "file": "assets/pinterest/sep28/o01-pin-collage.png",
@@ -234,11 +250,13 @@
       "boardServiceId": "1011339728762228747",
       "title": "Pantry pesto pasta for about $2 a plate: a 15-minute budget dinner",
       "alt": "Collage pin on warm paper: a photo of crowded pantry shelves and a photo of farfalle with pesto, cherry tomatoes and greens, taped on at angles with handwritten notes and a red price tag reading $2.07 / plate. Headline: Pantry to plate in fifteen.",
-      "text": "Pantry to plate in fifteen minutes. A $1.79 box of farfalle, a $3.99 jar of pesto and $2.49 of cherry tomatoes make four plates for $8.27, about $2.07 each. Toss the hot pasta with pesto, halve the tomatoes, add a handful of greens if you have them. iEatz finds dinners like this on the shelf you forgot about."
+      "text": "Pantry to plate in fifteen minutes. A $1.79 box of farfalle, a $3.99 jar of pesto and $2.49 of cherry tomatoes make four plates for $8.27, about $2.07 each. Toss the hot pasta with pesto, halve the tomatoes, add a handful of greens if you have them. iEatz finds dinners like this on the shelf you forgot about.",
+      "bufferId": "6ab6bf599c15eda27741ce20",
+      "slackAlert": "Dr0C4E8B52CD"
     },
     {
       "id": "o03-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-10-03T09:30:00-07:00",
       "file": "assets/pinterest/sep28/o03-pin-chicken-list.png",
@@ -255,11 +273,13 @@
       "boardServiceId": "1011339728762228752",
       "title": "Four dinners from one rotisserie chicken: an easy weeknight meal prep plan",
       "alt": "Numbered list pin on cream paper: Four dinners from one rotisserie chicken. 1 Carve it while it's hot. 2 Saucy chicken over rice. 3 Chicken, rice and bean bowl. 4 Fried rice with the last of it.",
-      "text": "One $8.99 rotisserie chicken, four weeknight dinners. Night one, carve it while it's hot and box the rest. Night two, saucy chicken over rice with crushed tomatoes and garlic. Night three, a chicken, rice and bean bowl. Night four, fried rice with the last of it. About $2.25 of chicken per dinner."
+      "text": "One $8.99 rotisserie chicken, four weeknight dinners. Night one, carve it while it's hot and box the rest. Night two, saucy chicken over rice with crushed tomatoes and garlic. Night three, a chicken, rice and bean bowl. Night four, fried rice with the last of it. About $2.25 of chicken per dinner.",
+      "bufferId": "6ab6bf5a0fe9479c65b59fb0",
+      "slackAlert": "Dr0C4E8B8M45"
     },
     {
       "id": "o04-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-10-04T22:05:00-07:00",
       "file": "assets/pinterest/sep28/o04-pin-kale.png",
@@ -279,7 +299,9 @@
       "boardServiceId": "1011339728762228744",
       "title": "Eat the kale first: the fridge order that stops greens going to waste",
       "alt": "Photo of a bright fridge shelf with kale, strawberries, raspberries and stacked meal prep containers, marked up in black marker: the kale circled with wilts first, the containers circled with then these. Handwritten headline: Eat the kale first.",
-      "text": "Kale wilts before anything else in this fridge, so it goes into tonight's dinner with garlic and olive oil. The containers of cut vegetables go next, then the strawberries and lemons, which keep for days. Cook in the order things wilt and the greens stop ending up in the trash. iEatz builds dinners from what you already have."
+      "text": "Kale wilts before anything else in this fridge, so it goes into tonight's dinner with garlic and olive oil. The containers of cut vegetables go next, then the strawberries and lemons, which keep for days. Cook in the order things wilt and the greens stop ending up in the trash. iEatz builds dinners from what you already have.",
+      "bufferId": "6ab6bf5a5c3761cdae7f5f35",
+      "slackAlert": "Dr0C4HC9HNMU"
     }
   ]
 }

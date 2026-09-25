@@ -284,6 +284,16 @@ with zero duplicates:
 8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
+- **Sep 28 – Oct 4 week = first v2 batch, created as Buffer DRAFTS (Sep 25):** IG 5 (receipt,
+  sharpie, carousel, thread, receipt reel) + Pinterest 6 (poster, split, recipephoto, collage, list,
+  sharpie), board-routed, IG first comments attached, 11 Slack alerts armed. Ledger:
+  `social/manifest/sep-28-oct-4-batch.json` (status `draft` + `bufferId` + `slackAlert`). **Drafts
+  do not publish until approved in Buffer**; the Slack alerts fire at `dueAt` regardless, so approve
+  before Mon Sep 28 07:35 PT. The queue
+  was EMPTY Sep 17–27: another coverage gap.
+- **First comments:** `create_post`/`edit_post` now accept `metadata.instagram.firstComment` directly
+  (verified Sep 25, echoed on create). The GraphQL `editPost` recipe in §8.4 is only needed for
+  posts created without it.
 - **Sep 10–16 week fully scheduled (Sep 9):** 7 pins + 4 IG, fall/soup-season spine, board-routed,
   alerts + first comments attached. Ledger: `social/manifest/sep-10-16-batch.json`. Aug batches
   fully published; the queue was EMPTY Sep 1–9 — a coverage gap. Schedule batches to end past the
