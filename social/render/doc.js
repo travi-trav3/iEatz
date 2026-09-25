@@ -56,6 +56,18 @@ function photosOf(p) {
   return out;
 }
 
+// Deep copy of a post with every photo field passed through fn (used by the grade step).
+function mapPhotos(p, fn) {
+  const q = JSON.parse(JSON.stringify(p));
+  if (q.photo) q.photo = fn(q.photo);
+  (q.cards || []).forEach(c => { if (c.photo) c.photo = fn(c.photo); });
+  if (q.top && q.top.photo) q.top.photo = fn(q.top.photo);
+  if (q.bottom && q.bottom.photo) q.bottom.photo = fn(q.bottom.photo);
+  if (q.bg && typeof q.bg === 'object' && q.bg.photo) q.bg.photo = fn(q.bg.photo);
+  (q.msgs || []).forEach(m => { if (m.photo) m.photo = fn(m.photo); });
+  return q;
+}
+
 function htmlDoc(p, PHOTOS) {
   const t = TEMPLATES[p.template];
   if (!t) throw new Error(`unknown template "${p.template}" for ${p.file}`);
@@ -96,4 +108,4 @@ function chromePath() {
   return require('child_process').execSync('ls -d /opt/pw-browsers/chromium*/chrome-linux/chrome 2>/dev/null').toString().trim().split('\n')[0];
 }
 
-module.exports = { FONT_CHECKS, CAROUSEL_COVERS, expand, photosOf, htmlDoc, prepare, chromePath, DIR };
+module.exports = { FONT_CHECKS, CAROUSEL_COVERS, expand, photosOf, mapPhotos, htmlDoc, prepare, chromePath, DIR };
