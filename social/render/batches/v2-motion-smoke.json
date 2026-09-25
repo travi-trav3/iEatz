@@ -1,0 +1,21 @@
+{
+  "name": "v2-motion-smoke",
+  "createdAt": "2026-09-25",
+  "note": "Motion smoke: one post per motion-capable shell (receipt, poster, bleed) at 1080x1920. node render-motion.js batches/v2-motion-smoke.json -> three MP4s + covers.",
+  "posts": [
+    { "file": "motion-receipt", "w": 1080, "h": 1920, "template": "receipt", "motion": { "duration": 8, "fps": 24 },
+      "store": "Corner Market", "meta": "Sun 09/14 · 4:32 PM · 23 items",
+      "lines": [ { "item": "Rotisserie chicken", "price": "8.99" }, { "item": "Corn tortillas 30ct", "price": "3.49" }, { "item": "Jasmine rice 2lb", "price": "4.29" }, { "item": "Cabbage green", "price": "1.87" }, { "item": "Limes 4", "price": "1.00" } ],
+      "moreCount": 18, "total": "$19.64",
+      "dishes": [ { "name": "Chicken tacos with slaw", "when": "Mon · 15m" }, { "name": "Chicken fried rice", "when": "Tue · 20m" }, { "name": "Big chopped salad", "when": "Wed · 10m" }, { "name": "Sunday soup from the bones", "when": "Sun · 40m" } ],
+      "sticker": "Tuesday, sorted", "head": "One receipt. <em>Four dinners.</em>", "footer": "badge-br" },
+    { "file": "motion-poster", "w": 1080, "h": 1920, "template": "poster", "motion": { "duration": 7, "fps": 24 },
+      "head": "Ten dinners are <span class=\"u\">already</span> on your <span class=\"i\">shelves.</span>",
+      "body": "Scan the receipt and iEatz reads your kitchen back to you, starting with what expires first.",
+      "readout": [ { "label": "Avg dinners found", "value": "9.6 / scan" }, { "label": "Est. per serving", "value": "$6" } ],
+      "strip": true, "footer": "badge-tr" },
+    { "file": "motion-bleed", "w": 1080, "h": 1920, "template": "bleed", "motion": { "duration": 7, "fps": 24 },
+      "photo": "lifestyle/pan-steam.jpg", "objPos": "50% 40%", "photoClaim": "hands stirring fried rice in a pan by a kitchen window",
+      "eyebrow": "Tuesday, 6:40 PM", "head": "Fried rice from whatever the fridge had left", "sub": "Day-old rice, two eggs, the last of the peas. Twenty minutes.", "footer": "badge-bl" }
+  ]
+}

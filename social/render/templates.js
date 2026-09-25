@@ -109,6 +109,77 @@ const penArrow = (a, rnd) => {
   const h = (s) => { const t = ang + Math.PI + s * (0.45 + (rnd() - 0.5) * 0.1); return `M${a.x2.toFixed(1)},${a.y2.toFixed(1)} L${(a.x2 + L * Math.cos(t)).toFixed(1)},${(a.y2 + L * Math.sin(t)).toFixed(1)}`; };
   return `${smooth(pts)} ${h(1)} ${h(-1)}`;
 };
+// ---------- motion (render-motion.js) ----------
+// A motion-capable shell exposes motion(p) -> <script> that defines window.setT(t) (t in seconds).
+// setT is a pure function of t: no CSS transitions, no timers, so every frame is reproducible.
+// The static render never loads these scripts, so the final motion frame IS the static post.
+// Timelines default to fractions of the duration; p.motion.timeline overrides any phase
+// with [start, end] seconds.
+const MOTION_LIB = `const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=(x)=>1-Math.pow(1-clamp(x),3);
+const back=(x)=>{x=clamp(x);const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2);};
+const prog=(t,r)=>clamp((t-r[0])/Math.max(0.0001,r[1]-r[0]));`;
+const timeline = (p, defs) => {
+  const D = (p.motion && p.motion.duration) || 8;
+  const tl = {};
+  for (const [k, [a, b]] of Object.entries(defs)) tl[k] = [a * D, b * D];
+  return Object.assign(tl, (p.motion && p.motion.timeline) || {});
+};
+const motionScript = (p, tl, body) => `<script>(()=>{${MOTION_LIB}
+const TL=${JSON.stringify(tl)},D=${(p.motion && p.motion.duration) || 8};let ready=false;
+${body}})();</script>`;
+
+// receipt: the tape prints top-down line by line, then the dishes, then the sticker, then the headline.
+const receiptMotion = (p) => motionScript(p, timeline(p, { print: [0.04, 0.45], dishes: [0.48, 0.66], sticker: [0.69, 0.74], head: [0.76, 0.84] }), `
+let tape, items, dishes, sticker, head, em, H, bottoms, dishBottoms;
+function setup(){tape=document.querySelector('.rc-tape');H=tape.offsetHeight;
+items=[...tape.querySelectorAll('.rc-store,.rc-meta,.rc-line,.rc-total,.rc-read')];
+dishes=[...tape.querySelectorAll('.rc-dish')];sticker=document.querySelector('.rc-sticker');
+head=document.querySelector('.rc-head');em=head&&head.querySelector('em');
+const bot=(el)=>el.offsetTop+el.offsetHeight-tape.offsetTop+10;
+bottoms=items.map(bot);dishBottoms=dishes.map(bot);ready=true;}
+window.setT=(t)=>{if(!ready)setup();
+const f=prog(t,TL.print)*items.length;
+items.forEach((el,i)=>{el.style.opacity=clamp((f-i)*2.5);});
+const k=Math.min(items.length-1,Math.floor(f));const prev=k>0?bottoms[k-1]:36;
+let reveal=f>=items.length?bottoms[items.length-1]:prev+(bottoms[k]-prev)*clamp(f-k);
+const d=prog(t,TL.dishes)*dishes.length;
+dishes.forEach((el,i)=>{const a=ease(d-i);el.style.opacity=a;el.style.transform='translateX('+((1-a)*-18)+'px)';});
+if(d>0){const j=Math.min(dishes.length-1,Math.floor(d));const from=j>0?dishBottoms[j-1]:bottoms[items.length-1];reveal=d>=dishes.length?H:from+(dishBottoms[j]-from)*clamp(d-j);}
+if(d>=dishes.length)reveal=H;
+tape.style.clipPath='inset(0 0 '+Math.max(0,H-reveal)+'px 0)';
+if(sticker){const s=prog(t,TL.sticker);sticker.style.opacity=clamp(s*3);sticker.style.transform='rotate(8deg) scale('+(0.55+0.45*back(s))+')';}
+if(head){const h=prog(t,TL.head);head.style.opacity=ease(h*1.4);head.style.transform='translateY('+((1-ease(h))*26)+'px)';
+if(em){em.style.opacity=ease((h-0.35)*2);}}};`);
+
+// poster: headline holds from frame 0 (silent-safe), the tomato underline draws in, body fades,
+// the readout counts up to its values, the ticker strip fills left to right.
+const posterMotion = (p) => motionScript(p, timeline(p, { underline: [0.08, 0.22], body: [0.2, 0.3], count: [0.26, 0.55], strip: [0.36, 0.56] }), `
+let u, body, vals, bars;
+function setup(){u=document.querySelector('.po-head .u');body=document.querySelector('.po-body');
+vals=[...document.querySelectorAll('.po-readout .v')].map(el=>({el,src:el.textContent}));
+bars=[...document.querySelectorAll('.po-strip i')];ready=true;}
+const count=(src,a)=>src.replace(/\\d+(?:\\.\\d+)?/g,(m)=>{const dec=(m.split('.')[1]||'').length;return (parseFloat(m)*a).toFixed(dec);});
+window.setT=(t)=>{if(!ready)setup();
+if(u)u.style.backgroundSize=(ease(prog(t,TL.underline))*100)+'% 0.075em';
+if(body)body.style.opacity=ease(prog(t,TL.body));
+const c=ease(prog(t,TL.count));vals.forEach(v=>{v.el.textContent=count(v.src,c);});
+const s=prog(t,TL.strip)*bars.length;bars.forEach((b,i)=>{b.style.transformOrigin='0 50%';b.style.transform='scaleX('+ease(s-i)+')';});};`);
+
+// bleed: 1.06x slow zoom on the photo while the headline reveals word by word, sub after.
+const bleedMotion = (p) => motionScript(p, timeline(p, { eyebrow: [0.03, 0.1], head: [0.1, 0.5], sub: [0.52, 0.62] }), `
+let bg, eb, words, sub;
+function split(el){const out=[];const walk=(n)=>{for(const c of [...n.childNodes]){if(c.nodeType===3){const parts=c.textContent.split(/(\\s+)/);const frag=document.createDocumentFragment();
+parts.forEach(w=>{if(!w)return;if(/^\\s+$/.test(w)){frag.appendChild(document.createTextNode(w));return;}const s=document.createElement('span');s.textContent=w;s.style.display='inline-block';frag.appendChild(s);out.push(s);});
+n.replaceChild(frag,c);}else walk(c);}};walk(el);return out;}
+function setup(){bg=document.querySelector('.ig-bleed .bg');eb=document.querySelector('.ig-bleed .eyebrow');
+words=split(document.querySelector('.ig-bleed .bhead'));sub=document.querySelector('.ig-bleed .bsub');ready=true;}
+window.setT=(t)=>{if(!ready)setup();
+bg.style.transformOrigin='50% 45%';bg.style.transform='scale('+(1+0.06*clamp(t/D))+')';
+if(eb)eb.style.opacity=ease(prog(t,TL.eyebrow));
+const w=prog(t,TL.head)*words.length;words.forEach((s,i)=>{const a=ease((w-i)*1.6);s.style.opacity=a;s.style.transform='translateY('+((1-a)*22)+'px)';});
+if(sub)sub.style.opacity=ease(prog(t,TL.sub));};`);
+
 // Row helper for shells whose bottom row carries its own caption/headline: badge left or right of it.
 const withBadge = (content, b, h) => h === 'l' ? `${b}${content}` : `${content}${b}`;
 
@@ -205,7 +276,7 @@ const TEMPLATES = {
   </div>` },
 
   // ---------- photo-bleed surface ----------
-  bleed: { surface: 'photo-bleed', render: (p, PHOTOS) => `<div class="pin ig-bleed">
+  bleed: { surface: 'photo-bleed', motion: bleedMotion, render: (p, PHOTOS) => `<div class="pin ig-bleed">
     <img class="bg" src="${PHOTOS}/${p.photo}" alt="" style="object-position:${p.objPos || 'center'}"><div class="scrim"></div>
     <div class="bwrap">${eyebrow(p, ' mint')}<h1 class="bhead">${p.head}</h1>${p.sub ? `<p class="bsub">${p.sub}</p>` : ''}</div>${footer(p, F_BLEED)}
   </div>` },
@@ -213,7 +284,7 @@ const TEMPLATES = {
   // ---------- v2 shells (Sep 2026 creative refresh) ----------
   // receipt: the product mechanic on screen. Receipt tape on deep green, mono line items,
   // "iEatz read this as" and the dinners it maps to. Motion-capable (tape prints line by line).
-  receipt: { surface: 'dark', motion: true, render: (p) => {
+  receipt: { surface: 'dark', motion: receiptMotion, render: (p) => {
     need(p, 'store', 'total', 'head'); cap(p, 'lines', 6, 1); cap(p, 'dishes', 4, 1);
     if ((p.head.match(/<em>/g) || []).length > 1) throw new Error(`${p.file}: receipt head allows one <em>`);
     const f = p.footer || 'badge-br';
@@ -237,7 +308,7 @@ const TEMPLATES = {
   // poster: type is the picture. One tomato underline (.u), one green italic (.i), mono readout,
   // optional ticker strip. Replaces statdark as the type-only shell. Motion: readout counts up,
   // underline draws in.
-  poster: { surface: 'paper', motion: true, render: (p) => {
+  poster: { surface: 'paper', motion: posterMotion, render: (p) => {
     need(p, 'head'); once(p, p.head, 'u'); once(p, p.head, 'i'); cap(p, 'readout', 3);
     const hasU = /class="u"/.test(p.head);
     const bars = Array.from({ length: 8 }, (_, i) => `<i class="${i % 2 ? (hasU ? 'k' : 't') : 'g'}"></i>`).join('');

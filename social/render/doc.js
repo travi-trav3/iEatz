@@ -68,7 +68,8 @@ function mapPhotos(p, fn) {
   return q;
 }
 
-function htmlDoc(p, PHOTOS) {
+// opts.motion: append the shell's setT script (render-motion.js only).
+function htmlDoc(p, PHOTOS, opts = {}) {
   const t = TEMPLATES[p.template];
   if (!t) throw new Error(`unknown template "${p.template}" for ${p.file}`);
   const grain = p.grain === true && !t.ownGrain ? '<div class="grain-layer fixed"></div>' : '';
@@ -80,7 +81,7 @@ html,body{width:${p.w}px;height:${p.h}px;margin:0}.pin{width:${p.w}px;height:${p
 :root{--s:${p.w / 1080}}
 ${p.statSize ? `.ig-statdark .bignum{font-size:${p.statSize}px}` : ''}
 ${p.headSize ? `.ig-bleed .bhead{font-size:${p.headSize}px}.po-head,.rc-head,.cc-head{font-size:${p.headSize}px}` : ''}
-</style></head><body>${t.render(p, PHOTOS)}${grain}${pager}${FIT_SCRIPT}</body></html>`;
+</style></head><body>${t.render(p, PHOTOS)}${grain}${pager}${FIT_SCRIPT}${opts.motion ? t.motion(p) : ''}</body></html>`;
 }
 
 // Wait for fonts + images, force-load and check every face, then fit text. Returns QA facts.
