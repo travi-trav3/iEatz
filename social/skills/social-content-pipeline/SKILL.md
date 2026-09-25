@@ -106,6 +106,16 @@ Plan the full batch before rendering:
    consecutive posts.
 6. **Platform specs:** Instagram 1080×1350 (4:5), conversational, hashtags at end; Pinterest
    1000×1500 (2:3), SEO/keyword description, destination URL required, on-image text LARGER than IG.
+7. **Rotate the anatomy, not just the surface (learned Sep 2026).** A feed where every post has an
+   eyebrow, a serif headline ending in an italic accent, and the same badge-plus-URL footer reads as
+   one post repeated, whatever the background. Treat eyebrow, accent tail and badge position as
+   props: eyebrow on at most half a batch, accent tail on at most 40%, the badge moves between
+   corners (never the same position on adjacent posts or on more than half the batch), and the URL
+   footer never runs on Instagram. Give each batch utility type (a mono price, readout or
+   timestamp), keep secondary accents to one element per slide, keep plated food to 30% of photo
+   posts, and ship at least one carousel and one reel per Instagram week. Write `format`, `footer`,
+   `eyebrow`, `accentTail`, `photoStyle` and `photoClaim` into the ledger at planning time so the
+   gate can enforce all of it.
 
 ### Phase 3: Copy writing
 
@@ -167,6 +177,13 @@ wrong photos, logo collisions, and a math error. Check:
 7. **Spelling** (names too) + **brand voice** (sentence case, no emoji unless allowed).
 8. **Partner-brand compliance** (if the post co-markets a partner — see Hard constraints): host brand
    leads, partner is small attribution only, official mark, correct clear-space/color, not recolored.
+9. **photoClaim: the photo is checked against the copy in code, not from memory.** Every
+   photo-bearing post, and every photo slide in a carousel, carries `photoClaim`: one plain sentence
+   of what the photo literally shows, written after opening it ("skillet of spaghetti with peas,
+   onion and cherry tomatoes; olives and red wine on the table"), not the dish the copy wishes it
+   were. At least one noun from the claim must appear in the headline or caption, and the copy gate
+   fails the batch with both strings printed when none does. If the honest claim makes the copy
+   false (the recipe has no peas), change the photo or the recipe; never soften the claim to pass.
 Fix and re-render until clean.
 
 ### Phase 6: Hosting

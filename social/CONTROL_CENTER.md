@@ -74,6 +74,9 @@ Design tokens: `index.html` `:root` block and `social/render/base.css`
 6. **QA gate is mandatory** (section 6). No exceptions.
 
 ## 4. Render pipeline (`social/render/`)
+- **v2 engine (Sep 2026): `social/README.md` is the reference** for every shell, its props and
+  surface, the footer/eyebrow props, carousels, motion, the photo grade, and the gates. The list
+  of templates further down this section is historical.
 - Stack: `playwright-core` + `sharp` (`npm install` in `social/render/`).
 - Chromium: `export PW_CHROMIUM=$(ls -d /opt/pw-browsers/chromium*/chrome-linux/chrome | head -1)`.
   **Never run `playwright install`** (pinned browser is pre-installed).
@@ -247,9 +250,9 @@ with zero duplicates:
 - **Carousel:** one `create_post` with every slide as an `image` asset in slide order (2 to 10),
   `metadata.instagram.type:"post"`. The ledger keeps `slides:[...]` (file paths, slide order).
 - **Instagram channel was DISCONNECTED on Sep 25 2026** (`list_channels` → `isDisconnected:true`
-  for `6a14b495c687a22dd4267bfc`). Scheduled IG posts will not publish until the operator
-  reconnects it in Buffer (Channels → ieatzhealthy → Reconnect). Drafts can still be created.
-  Check `isDisconnected` at the start of every scheduling run.
+  for `6a14b495c687a22dd4267bfc`); the operator reconnected it the same day (`get_channel` →
+  `isDisconnected:false`). Disconnected channels still accept drafts but never publish, so check
+  `isDisconnected` at the start of every scheduling run.
 
 ## 9. Other connections
 - **Google Drive** MCP — how the user hands you logo assets / design zips (egress-safe).
@@ -334,6 +337,16 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Sep 25 2026 — v2 engine (creative direction refresh):** the feed read as one post repeated
+  because every shell shared one anatomy (eyebrow, italic tail, badge+URL footer). Engine now:
+  footer and eyebrow are props; six new shells (receipt, poster, collage, split, thread, sharpie)
+  plus a carousel container; JetBrains Mono (utility) and Permanent Marker (sharpie only) added;
+  every shell renders at 1080x1350, 1000x1500 and 1080x1920; `render-motion.js` makes reels from
+  the same templates; photos carry a `style` tag and get a render-time grade; `photoClaim` is
+  required; diversity gate v2 caps accent tails, eyebrows, footers and plated photos and requires
+  a carousel and a reel per IG week; a copy gate fails em dashes, "not X, it's Y" and Title Case.
+  statdark/recipe/quote are deprecated. Legacy batches still re-render byte-identical
+  (`compat-check.js`).
 - **Jul 20 2026 — diversity audit executed (root-cause fix for monoculture):** operator flagged
   that pillars/templates weren't actually rotating. Findings: 11/12 July pins shipped on one
   tPhoto shell; 3 near-duplicate "one grocery run" messages; every caption a product pitch, 13/20

@@ -2,11 +2,16 @@
   "name": "ieatz-social-render",
   "version": "1.0.0",
   "private": true,
-  "description": "iEatz Healthy social graphics render harness (Playwright + sharp)",
+  "description": "iEatz Healthy social render harness: static shells, reels, gates (Playwright + sharp + ffmpeg)",
   "type": "commonjs",
   "scripts": {
-    "render": "node render.js",
-    "batch": "node batch-render.js"
+    "render": "node render-batch.js",
+    "motion": "node render-motion.js",
+    "gate": "node diversity-gate.js",
+    "copy": "node copy-gate.js",
+    "sheet": "node contact-sheet.js",
+    "compat": "node compat-check.js",
+    "smoke": "node render-batch.js batches/v2-smoke.json && node diversity-gate.js batches/v2-smoke.json && node compat-check.js"
   },
   "dependencies": {
     "playwright-core": "1.49.1",
