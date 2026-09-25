@@ -6,15 +6,20 @@
 // Per-post fields (written at planning time, derived from the render batch when missing):
 //   pillar, topic, template, surface, heroPhoto, cta, title/text                  (v1)
 //   format static|carousel|reel, footer, eyebrow, accentTail, photoStyle, photoClaim  (v2)
+// Also runs the copy gate (copy-gate.js) on the same posts; its failures are prefixed "copy:".
 // Exit 1 on any failure. Warnings never fail. --soft-format turns the Instagram
 // carousel/reel-per-week rule into a warning (allowed for the first two v2 batches only).
 // Pair with contact-sheet.js --with-live and eyeball the montage.
 const { load } = require('./ledger');
 const { TEMPLATES } = require('./templates');
+const copyGate = require('./copy-gate');
 
 function gate(file, opts = {}) {
-  const { batch, posts, mismatches } = load(file);
+  const loaded = load(file);
+  const { batch, posts, mismatches } = loaded;
   const fails = [...mismatches.map(m => `ledger/render mismatch: ${m}`)];
+  // The copy gate runs as part of this gate (and standalone as copy-gate.js).
+  fails.push(...copyGate.check(loaded).map(f => `copy: ${f}`));
   const warns = [];
   const lines = [];
   const byChannel = {};

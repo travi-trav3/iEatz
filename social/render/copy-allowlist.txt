@@ -1,0 +1,53 @@
+# Words (or phrases) allowed to keep an initial capital mid-headline. One per line; # comments.
+# Sentence starts, the pronoun I, and all-caps acronyms are always allowed.
+iEatz
+iEatz Healthy
+Instacart
+App Store
+Apple
+iPhone
+iOS
+Instagram
+Pinterest
+TikTok
+Google
+# days
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+# months
+January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December
+# brands and retailers that may appear in copy
+Chipotle
+Costco
+Trader Joe's
+Whole Foods
+Kroger
+Walmart
+Target
+Safeway
+Aldi
+Ralphs
+DoorDash
+Uber Eats
+Parmesan
+# approved testimonial names
+Ashly
+Maya
+Leoactionz
+SixSocks

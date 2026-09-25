@@ -104,7 +104,9 @@ function load(file) {
     post.coverTemplate = d.coverTemplate || post.template;
     post.photoStyle = raw.photoStyle || (r && r.photoStyle) || styleOf(post.heroPhoto);
     post.headline = d.headline || strip(raw.head || '');
-    post.copy = [...copyOf({ title: post.title, text: post.text, firstComment: post.firstComment }), ...(r ? copyOf(r) : [])];
+    const seenCopy = new Set();
+    post.copy = [...copyOf({ title: post.title, text: post.text, firstComment: post.firstComment }), ...(r ? copyOf(r) : [])]
+      .filter(c => { const k = c.field + '\u0000' + c.text; if (seenCopy.has(k)) return false; seenCopy.add(k); return true; });
     posts.push(post);
   }
   return { batch, render, posts, mismatches, isRender, source: path.relative(REPO, abs) };
