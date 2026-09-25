@@ -284,7 +284,7 @@ const TEMPLATES = {
   // ---------- v2 shells (Sep 2026 creative refresh) ----------
   // receipt: the product mechanic on screen. Receipt tape on deep green, mono line items,
   // "iEatz read this as" and the dinners it maps to. Motion-capable (tape prints line by line).
-  receipt: { surface: 'dark', motion: receiptMotion, render: (p) => {
+  receipt: { surface: 'dark', defaultFooter: 'badge-br', motion: receiptMotion, render: (p) => {
     need(p, 'store', 'total', 'head'); cap(p, 'lines', 6, 1); cap(p, 'dishes', 4, 1);
     if ((p.head.match(/<em>/g) || []).length > 1) throw new Error(`${p.file}: receipt head allows one <em>`);
     const f = p.footer || 'badge-br';
@@ -308,7 +308,7 @@ const TEMPLATES = {
   // poster: type is the picture. One tomato underline (.u), one green italic (.i), mono readout,
   // optional ticker strip. Replaces statdark as the type-only shell. Motion: readout counts up,
   // underline draws in.
-  poster: { surface: 'paper', motion: posterMotion, render: (p) => {
+  poster: { surface: 'paper', defaultFooter: 'badge-tr', motion: posterMotion, render: (p) => {
     need(p, 'head'); once(p, p.head, 'u'); once(p, p.head, 'i'); cap(p, 'readout', 3);
     const hasU = /class="u"/.test(p.head);
     const bars = Array.from({ length: 8 }, (_, i) => `<i class="${i % 2 ? (hasU ? 'k' : 't') : 'g'}"></i>`).join('');
@@ -322,7 +322,7 @@ const TEMPLATES = {
   // collage: 2-3 photos as cut cards on deep paper, saffron tape, serif annotations, one tomato
   // price tag, film grain. Positions are px on a 1080x1350 stage, scaled by frame width and
   // centered vertically at other sizes.
-  collage: { surface: 'paper-deep', ownGrain: true, render: (p, PHOTOS) => {
+  collage: { surface: 'paper-deep', defaultFooter: 'badge-tl', ownGrain: true, render: (p, PHOTOS) => {
     need(p, 'head'); cap(p, 'cards', 3, 2); cap(p, 'notes', 4);
     const s = p.w / 1080, top = Math.round((p.h - 1350 * s) / 2);
     const tape = (t) => !t ? '' : `<i class="cc-tape ${t === true ? 'c' : t}"></i>`;
@@ -340,7 +340,7 @@ const TEMPLATES = {
 
   // split: before over after in one frame. Top photo + mono label, bottom photo under a dark
   // scrim, paper seam label on the cut, caption bottom (<b> renders mono saffron).
-  split: { surface: 'photo-bleed', render: (p, PHOTOS) => {
+  split: { surface: 'photo-bleed', defaultFooter: 'badge-br', render: (p, PHOTOS) => {
     need(p, 'top', 'bottom', 'seam');
     const f = p.footer || 'badge-br';
     const labelSide = f === 'badge-tl' ? 'r' : 'l';
@@ -360,7 +360,7 @@ const TEMPLATES = {
   // thread: the 5:45 "what do you want for dinner" text exchange. A messaging UI, not iEatz UI.
   // bg: "mint" (panel) or {photo, objPos} (bubbles float over a full-bleed photo, "Delivered"
   // under the last me bubble, one white line at the bottom).
-  thread: { surface: (p) => (p.bg && typeof p.bg === 'object' ? 'photo-bleed' : 'mint'), render: (p, PHOTOS) => {
+  thread: { defaultFooter: 'badge-br', surface: (p) => (p.bg && typeof p.bg === 'object' ? 'photo-bleed' : 'mint'), render: (p, PHOTOS) => {
     const onPhoto = p.bg && typeof p.bg === 'object';
     const bubbles = (p.msgs || []).filter(m => m.who);
     if (!bubbles.length) throw new Error(`${p.file}: thread needs at least one message`);
@@ -388,7 +388,7 @@ const TEMPLATES = {
   // sharpie: a photo marked up with a pen. Marks are ellipses/arrows in 1080x1350 photo space on
   // a 4:5 stage that COVERS the frame, so marks stay on the thing they circle at every size.
   // Pen paths are seeded from the post file name: re-renders are identical.
-  sharpie: { surface: 'photo-bleed', render: (p, PHOTOS) => {
+  sharpie: { surface: 'photo-bleed', defaultFooter: 'badge-br', render: (p, PHOTOS) => {
     need(p, 'photo', 'head'); cap(p, 'marks', 4, 1);
     const headText = String(p.head).replace(/<[^>]+>/g, '');
     if (headText.length > 24) throw new Error(`${p.file}: sharpie head is ${headText.length} chars, max 24`);
@@ -424,5 +424,7 @@ const TEMPLATES = {
 };
 
 const surfaceOf = (p) => { const t = TEMPLATES[p.template]; if (!t) return null; return typeof t.surface === 'function' ? t.surface(p) : t.surface; };
+// Footer a post actually renders with (legacy shells default to badge-url; ad shells have their own).
+const footerOf = (p) => { const t = TEMPLATES[p.template]; if (!t) return null; if (/^ad/.test(p.template)) return 'ad'; return p.footer || t.defaultFooter || 'badge-url'; };
 
-module.exports = { TEMPLATES, MARK, badge, badgeDark, foot, footDark, FOOTERS, surfaceOf };
+module.exports = { TEMPLATES, MARK, badge, badgeDark, foot, footDark, FOOTERS, surfaceOf, footerOf };
