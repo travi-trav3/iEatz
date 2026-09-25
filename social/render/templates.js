@@ -18,44 +18,81 @@ const footDark = `<div class="foot-dark abs">${badgeDark}<span class="url">ieatz
 
 const chips = (p) => p.chips ? `<div class="chips">${p.chips.map(c => `<span class="chip">${c}</span>`).join('')}</div>` : '';
 
+// eyebrow prop: absent or empty -> no element (base.css zeroes the next element's top margin).
+const eyebrow = (p, cls = '') => p.eyebrow ? `<div class="eyebrow${cls}">${p.eyebrow}</div>` : '';
+
+// footer prop: where the brand badge sits.
+//   badge-url  today's row: badge left, ieatzhealthy.com right (never on Instagram; the gate enforces it)
+//   badge-bl / badge-br  badge alone in the shell's bottom row, left or right
+//   badge-tl / badge-tr  badge alone, pinned to a top corner
+//   none       no badge (carousel inner slides, mostly)
+// Each shell says what its corners sit on so the badge picks a legible variant:
+//   paper -> ink badge, dark -> paper badge, photo -> stamp (paper pill, readable on any photo).
+const FOOTERS = ['badge-bl', 'badge-br', 'badge-tl', 'badge-tr', 'badge-url', 'none'];
+const badgeAs = (on, extra = '') => {
+  const cls = on === 'photo' ? ' stamp' : on === 'dark' ? ' on-dark' : '';
+  return `<div class="badge${cls}${extra}">${MARK}<span>iEatz Healthy</span></div>`;
+};
+// o = { url: badge-url markup, row: (badgeHtml, side) => bottom-row markup,
+//       bottom: 'paper'|'dark'|'photo', top: 'paper'|'dark'|'photo', def: shell default }
+function footer(p, o) {
+  const f = p.footer || o.def || 'badge-url';
+  if (!FOOTERS.includes(f)) throw new Error(`${p.file}: unknown footer "${f}" (one of ${FOOTERS.join(', ')})`);
+  if (f === 'none') return '';
+  if (f === 'badge-url') {
+    if (!o.url) throw new Error(`${p.file}: footer "badge-url" is not available on template "${p.template}"`);
+    return o.url;
+  }
+  const v = f[6], h = f[7];
+  if (v === 'b' && o.row) return o.row(badgeAs(o.bottom), h);
+  return badgeAs(v === 't' ? o.top : o.bottom, ` corner ${v}${h}`);
+}
+const rowPaper = (b, h) => `<div class="foot solo-${h}">${b}</div>`;
+const rowDark = (b, h) => `<div class="foot-dark solo-${h}">${b}</div>`;
+const rowDarkAbs = (b, h) => `<div class="foot-dark abs solo-${h}">${b}</div>`;
+// Shared footer configs for the legacy shells.
+const F_PAPER = { url: foot, row: rowPaper, bottom: 'paper', top: 'paper' };
+const F_PHOTO_TOP = { url: foot, row: rowPaper, bottom: 'paper', top: 'photo' };
+const F_BLEED = { url: footDark, row: rowDarkAbs, bottom: 'dark', top: 'photo' };
+
 const TEMPLATES = {
   // ---------- paper surfaces ----------
   photo: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin t-photo">
     <div class="hero"><img src="${PHOTOS}/${p.photo}" alt=""></div>
-    <div class="panel"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1>${chips(p)}<div class="spacer"></div>${foot}</div>
+    <div class="panel">${eyebrow(p)}<h1 class="head">${p.head}</h1>${chips(p)}<div class="spacer"></div>${footer(p, F_PHOTO_TOP)}</div>
   </div>` },
 
   igphoto: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin ig-photo">
     <div class="hero"><img src="${PHOTOS}/${p.photo}" alt=""></div>
-    <div class="panel"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1>${chips(p)}<div class="spacer"></div>${foot}</div>
+    <div class="panel">${eyebrow(p)}<h1 class="head">${p.head}</h1>${chips(p)}<div class="spacer"></div>${footer(p, F_PHOTO_TOP)}</div>
   </div>` },
 
   list: { surface: 'paper', render: (p) => `<div class="pin t-list">
-    <div class="list-wrap"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1>
-    <div class="list">${p.items.map((it, i) => `<div class="item"><div class="num">${i + 1}</div><div class="lab"><span class="t">${it.t}</span><span class="s">${it.s}</span></div></div>`).join('')}</div></div>${foot}
+    <div class="list-wrap">${eyebrow(p)}<h1 class="head">${p.head}</h1>
+    <div class="list">${p.items.map((it, i) => `<div class="item"><div class="num">${i + 1}</div><div class="lab"><span class="t">${it.t}</span><span class="s">${it.s}</span></div></div>`).join('')}</div></div>${footer(p, F_PAPER)}
   </div>` },
 
   recipe: { surface: 'paper', render: (p) => `<div class="pin ig-recipe">
-    <div class="rwrap"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1>
+    <div class="rwrap">${eyebrow(p)}<h1 class="head">${p.head}</h1>
     <div class="need">You need</div><div class="ings">${p.ings.map(x => `<span class="ing">${x}</span>`).join('')}</div>
-    <div class="method"><span class="rule"></span><p>${p.method}</p></div></div>${foot}
+    <div class="method"><span class="rule"></span><p>${p.method}</p></div></div>${footer(p, F_PAPER)}
   </div>` },
 
   quote: { surface: 'paper', render: (p) => `<div class="pin ig-quote">
-    <div class="qwrap"><div class="eyebrow">${p.eyebrow}</div><blockquote class="quote">${p.quote}</blockquote>
-    <div class="attr"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="name">${p.name}</span></div></div>${foot}
+    <div class="qwrap">${eyebrow(p)}<blockquote class="quote">${p.quote}</blockquote>
+    <div class="attr"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="name">${p.name}</span></div></div>${footer(p, F_PAPER)}
   </div>` },
 
   stat: { surface: 'paper', render: (p) => `<div class="pin t-stat">
-    <div class="stat-wrap"><div class="eyebrow">${p.eyebrow}</div><div class="stat">${p.stat}</div>
-    <div class="stat-sub">${p.statSub}</div><div class="stat-body"><span class="rule"></span><p>${p.statBody}</p></div></div>${foot}
+    <div class="stat-wrap">${eyebrow(p)}<div class="stat">${p.stat}</div>
+    <div class="stat-sub">${p.statSub}</div><div class="stat-body"><span class="rule"></span><p>${p.statBody}</p></div></div>${footer(p, F_PAPER)}
   </div>` },
 
   recipephoto: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin t-recipephoto">
     <div class="hero"><img src="${PHOTOS}/${p.photo}" alt="" style="object-position:${p.objPos || 'center'}"></div>
-    <div class="panel"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1>
+    <div class="panel">${eyebrow(p)}<h1 class="head">${p.head}</h1>
     <div class="need">You need</div><div class="ings">${p.ings.map(x => `<span class="ing">${x}</span>`).join('')}</div>
-    <div class="method"><span class="rule"></span><p>${p.method}</p></div><div class="spacer"></div>${foot}</div>
+    <div class="method"><span class="rule"></span><p>${p.method}</p></div><div class="spacer"></div>${footer(p, F_PHOTO_TOP)}</div>
   </div>` },
 
   adtype: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin ad-type">
@@ -93,28 +130,28 @@ const TEMPLATES = {
 
   // ---------- mint surface ----------
   device: { surface: 'mint', render: (p, PHOTOS) => `<div class="pin t-device">
-    <div class="dhead"><div class="eyebrow">${p.eyebrow}</div><h1 class="head">${p.head}</h1><p class="dcap">${p.cap}</p></div>
+    <div class="dhead">${eyebrow(p)}<h1 class="head">${p.head}</h1><p class="dcap">${p.cap}</p></div>
     <div class="stage"><div class="phone"><span class="screen"><img src="${PHOTOS}/${p.photo}" alt=""></span></div></div>
-    <div class="foot">${badge}<span class="url">ieatzhealthy.com</span></div>
+    ${footer(p, { url: foot, row: rowPaper, bottom: 'paper', top: 'paper' })}
   </div>` },
 
   // ---------- dark surface ----------
   statdark: { surface: 'dark', render: (p) => `<div class="pin ig-statdark">
-    <div class="swrap"><div class="eyebrow mint">${p.eyebrow}</div><div class="bignum">${p.stat}</div>
+    <div class="swrap">${eyebrow(p, ' mint')}<div class="bignum">${p.stat}</div>
     <h1 class="subhead">${p.sub}</h1><div class="stat-body"><span class="rule"></span><p>${p.body}</p></div></div>
-    <div class="foot-dark">${badgeDark}<span class="url">ieatzhealthy.com</span></div>
+    ${footer(p, { url: `<div class="foot-dark">${badgeDark}<span class="url">ieatzhealthy.com</span></div>`, row: rowDark, bottom: 'dark', top: 'dark' })}
   </div>` },
 
   quotedark: { surface: 'dark', render: (p, PHOTOS) => `<div class="pin ig-quotedark">
     <img class="bg" src="${PHOTOS}/${p.photo}" alt=""><div class="scrim heavy"></div>
-    <div class="qwrap"><div class="eyebrow mint">${p.eyebrow}</div><h1 class="quote">${p.quote}</h1><div class="attr">${p.attr}</div></div>${footDark}
+    <div class="qwrap">${eyebrow(p, ' mint')}<h1 class="quote">${p.quote}</h1><div class="attr">${p.attr}</div></div>${footer(p, { ...F_BLEED, top: 'dark' })}
   </div>` },
 
   // ---------- photo-bleed surface ----------
   bleed: { surface: 'photo-bleed', render: (p, PHOTOS) => `<div class="pin ig-bleed">
     <img class="bg" src="${PHOTOS}/${p.photo}" alt="" style="object-position:${p.objPos || 'center'}"><div class="scrim"></div>
-    <div class="bwrap"><div class="eyebrow mint">${p.eyebrow}</div><h1 class="bhead">${p.head}</h1>${p.sub ? `<p class="bsub">${p.sub}</p>` : ''}</div>${footDark}
+    <div class="bwrap">${eyebrow(p, ' mint')}<h1 class="bhead">${p.head}</h1>${p.sub ? `<p class="bsub">${p.sub}</p>` : ''}</div>${footer(p, F_BLEED)}
   </div>` },
 };
 
-module.exports = { TEMPLATES, MARK, badge, badgeDark, foot, footDark };
+module.exports = { TEMPLATES, MARK, badge, badgeDark, foot, footDark, FOOTERS };

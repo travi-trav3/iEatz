@@ -198,3 +198,27 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
 .ad-statdark .ssub{font-family:var(--serif);color:#fff;font-size:64px;line-height:1.1;margin-top:16px}
 .ad-statdark .sbody{font-family:var(--sans);font-size:31px;line-height:1.4;color:rgba(255,255,255,0.82);margin-top:30px;max-width:820px}
 .ad-statdark .foot-row{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:36px}
+
+/* ---------- v2 anatomy (Sep 2026): footer + eyebrow are props ----------
+   footer: badge-url (legacy row) | badge-bl | badge-br | badge-tl | badge-tr | none.
+   Bottom badges reuse the shell's own footer row so spacing never shifts; top badges pin
+   to a corner and the paper shells below push their content down to clear it. */
+.foot.solo-l,.foot-dark.solo-l{justify-content:flex-start}
+.foot.solo-r,.foot-dark.solo-r{justify-content:flex-end}
+.badge.corner{position:absolute;z-index:6}
+.badge.corner.tl{top:52px;left:64px}
+.badge.corner.tr{top:52px;right:64px}
+.badge.corner.bl{bottom:52px;left:64px}
+.badge.corner.br{bottom:52px;right:64px}
+/* stamp: paper pill so the badge reads on any photo */
+.badge.stamp{background:rgba(245,242,234,0.95);color:var(--ink);padding:11px 22px 11px 16px;border-radius:999px;box-shadow:0 6px 20px rgba(10,15,12,0.20)}
+.badge.stamp .mark{width:28px}
+.badge.stamp span{font-size:24px}
+.t-list:has(> .badge.corner.tl, > .badge.corner.tr){padding-top:150px}
+.t-stat:has(> .badge.corner.tl, > .badge.corner.tr){padding-top:150px}
+.ig-recipe:has(> .badge.corner.tl, > .badge.corner.tr){padding-top:140px}
+.ig-quote:has(> .badge.corner.tl, > .badge.corner.tr){padding-top:150px}
+.ig-statdark:has(> .badge.corner.tl, > .badge.corner.tr){padding-top:150px}
+.t-device:has(> .badge.corner.tl, > .badge.corner.tr){padding-top:140px}
+/* no eyebrow -> the headline (or numeral) is first and drops its top margin */
+.pin :is(.panel,.list-wrap,.rwrap,.qwrap,.stat-wrap,.swrap,.bwrap,.dhead) > :first-child{margin-top:0}
