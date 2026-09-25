@@ -6,6 +6,8 @@
   --tomato:#C9412B; --saffron:#E4A93C;
   --serif:"Instrument Serif","Times New Roman",Georgia,serif;
   --sans:"Inter Tight","Helvetica Neue",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace; /* utility: prices, readouts, pagers. Never a headline. */
+  --marker:"Permanent Marker",cursive; /* handwriting: sharpie shell only. Never a headline elsewhere. */
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1000px;height:1500px}

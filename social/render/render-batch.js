@@ -9,6 +9,14 @@ const { chromium } = require('playwright-core');
 const sharp = require('sharp');
 const { TEMPLATES } = require('./templates');
 
+const FONT_CHECKS = {
+  serif: '400 80px "Instrument Serif"',
+  italic: 'italic 400 80px "Instrument Serif"',
+  sans: '600 27px "Inter Tight"',
+  mono: '400 27px "JetBrains Mono"',
+  marker: '400 60px "Permanent Marker"',
+};
+
 const DIR = __dirname;
 const PHOTOS = 'file://' + path.resolve(DIR, '../../assets/photos');
 const batchPath = process.argv[2];
@@ -46,19 +54,26 @@ ${p.headSize ? `.ig-bleed .bhead{font-size:${p.headSize}px}` : ''}
       await Promise.all(a.map(i => i.complete && i.naturalWidth ? 0 : new Promise(r => { i.onload = i.onerror = r; })));
       return a.map(i => ({ w: i.naturalWidth, ok: i.naturalWidth > 0 }));
     });
-    const fc = await page.evaluate(() => ({
-      serif: document.fonts.check('400 80px "Instrument Serif"'),
-      italic: document.fonts.check('italic 400 80px "Instrument Serif"'),
-      sans: document.fonts.check('600 27px "Inter Tight"'),
-    }));
+    // Every face the kit ships is force-loaded then checked, used on this slide or not:
+    // an unused @font-face stays "unloaded" and check() reports false for it.
+    const fc = await page.evaluate(async (checks) => {
+      const r = {};
+      for (const [k, f] of Object.entries(checks)) {
+        try { await document.fonts.load(f); } catch (e) {}
+        r[k] = document.fonts.check(f);
+      }
+      return r;
+    }, FONT_CHECKS);
     const buf = await page.screenshot({ clip: { x: 0, y: 0, width: p.w, height: p.h } });
     const outPath = path.join(OUT, p.file + '.png');
     await sharp(buf).resize(p.w, p.h, { fit: 'fill', kernel: 'lanczos3' }).png({ compressionLevel: 9 }).toFile(outPath);
     const m = await sharp(outPath).metadata();
     const photoOk = p.photo ? imgs.some(i => i.ok) : true;
-    const ok = m.width === p.w && m.height === p.h && fc.serif && fc.italic && fc.sans && photoOk;
+    const fontsOk = Object.values(fc).every(Boolean);
+    const ok = m.width === p.w && m.height === p.h && fontsOk && photoOk;
     if (!ok) bad++;
-    console.log(`${ok ? 'OK ' : '!! '}${p.file}.png ${m.width}x${m.height} serif=${fc.serif} italic=${fc.italic} sans=${fc.sans} photo=${p.photo || '(none)'}${p.photo ? '(' + (photoOk ? 'ok' : 'FAIL') + ')' : ''}`);
+    const fonts = Object.entries(fc).map(([k, v]) => `${k}=${v}`).join(' ');
+    console.log(`${ok ? 'OK ' : '!! '}${p.file}.png ${m.width}x${m.height} ${fonts} photo=${p.photo || '(none)'}${p.photo ? '(' + (photoOk ? 'ok' : 'FAIL') + ')' : ''}`);
     await page.close();
   }
   await browser.close();
