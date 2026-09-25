@@ -230,6 +230,27 @@ with zero duplicates:
 - **Preview gate:** show rendered images before scheduling live unless told otherwise. Recipe
   captions carry the full short recipe + estimated macros; alt text is descriptive.
 
+### 8.5 Reels and carousels (v2 engine, Sep 2026)
+- **Reel:** `create_post` with `assets:[{video:{url, metadata:{thumbnailOffset:<ms>, title}}}]` and
+  `metadata.instagram = {type:"reel", shouldShareToFeed:true}`. Video = `render-motion.js` output
+  (`out/<batch>/<file>.mp4`, 1080x1920 H.264), hosted on raw.githubusercontent like the PNGs. Set
+  `thumbnailOffset` near the end (the final frame is the full post; `<file>-cover.png` is that frame).
+- **Verified Sep 25 2026:** Buffer accepted an Instagram Reel **draft** by public MP4 URL
+  (raw.githubusercontent serves it as `application/octet-stream`; Buffer still detected `video/mp4`,
+  8000 ms, and generated a thumbnail). The test draft was deleted. This proves the Buffer API layer
+  only: Instagram validates the video at publish time, so watch the first real reel for
+  `status:"error"` and read `error` on `get_post`.
+- **Fallback if Buffer or Instagram rejects a reel:** manual upload in the Buffer web app. Download
+  the MP4 (raw URL or `out/<batch>/<file>.mp4`), Buffer → New post → Instagram → Reel → upload,
+  paste caption and first comment from the ledger, pick the last frame as cover, schedule at the
+  ledger `dueAt`, then write the new post id to the ledger as `bufferId` with `via:"manual"`.
+- **Carousel:** one `create_post` with every slide as an `image` asset in slide order (2 to 10),
+  `metadata.instagram.type:"post"`. The ledger keeps `slides:[...]` (file paths, slide order).
+- **Instagram channel was DISCONNECTED on Sep 25 2026** (`list_channels` → `isDisconnected:true`
+  for `6a14b495c687a22dd4267bfc`). Scheduled IG posts will not publish until the operator
+  reconnects it in Buffer (Channels → ieatzhealthy → Reconnect). Drafts can still be created.
+  Check `isDisconnected` at the start of every scheduling run.
+
 ## 9. Other connections
 - **Google Drive** MCP — how the user hands you logo assets / design zips (egress-safe).
 - **Slack** — team channel **#social `C0BATGA438T`**. **Mandatory, immediately after every Buffer
