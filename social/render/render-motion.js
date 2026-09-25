@@ -91,7 +91,8 @@ function encoder(ff, fps, out, movflags) {
       await enc.write(await page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: W, height: H } }));
     }
     await enc.end();
-    // Cover = the fully-built final state (identical to the static render of the same post).
+    // Cover = the fully-built final state; matches the static render of the same post to within
+    // a few 1-level pixel differences (inline transforms at rest), i.e. visually identical.
     await page.evaluate((tt) => window.setT(tt), duration);
     const cover = path.join(OUT, p.file + '-cover.png');
     await sharp(await page.screenshot({ clip: { x: 0, y: 0, width: W, height: H } })).resize(W, H, { fit: 'fill', kernel: 'lanczos3' }).png({ compressionLevel: 9 }).toFile(cover);

@@ -414,10 +414,10 @@ const TEMPLATES = {
     return `<div class="pin sh-sharpie" style="--ink-pen:${ink}">
     <div class="sk-stage" style="transform:translate(-50%,-50%) scale(${c})">
       ${img(PHOTOS, p.photo, p.objPos)}
+      ${shade ? `<div class="sk-shade" style="top:${vy.toFixed(1)}px;height:${(0.34 * p.h / c).toFixed(1)}px"></div>` : ''}
       <svg class="sk-pen" viewBox="0 0 1080 1350" fill="none" stroke="${ink}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>
       ${labels}
     </div>
-    ${shade ? '<div class="sk-shade"></div>' : ''}
     <h1 class="sk-head">${p.head}</h1>
     ${footer(p, { url: footDark, row: rowDarkAbs, top: 'photo', bottom: 'photo', def: 'badge-br' })}
   </div>`; } },

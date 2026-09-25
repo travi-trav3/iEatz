@@ -338,6 +338,7 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
 .sh-thread.on-photo .th-b.them{background:rgba(255,255,255,0.94);box-shadow:0 8px 24px rgba(10,15,12,0.22)}
 .sh-thread.on-photo .th-b.me{box-shadow:0 8px 24px rgba(10,15,12,0.28)}
 .sh-thread.on-photo .th-time,.sh-thread.on-photo .th-dlv{color:rgba(255,255,255,0.86);text-shadow:0 1px 6px rgba(0,0,0,0.5)}
+.sh-thread.on-photo .th-time{background:rgba(10,15,12,0.58);color:#fff;text-shadow:none;padding:7px 16px;border-radius:999px}
 .sh-thread.on-photo .th-line{color:#fff;font-size:27px}
 
 /* sharpie: a photo marked up with a pen */
@@ -346,7 +347,7 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
 .sk-stage img{width:100%;height:100%;object-fit:cover;display:block}
 .sk-pen{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .sk-label{position:absolute;font-family:var(--marker);color:var(--ink-pen);line-height:1;white-space:nowrap}
-.sk-shade{position:absolute;left:0;right:0;top:0;height:34%;background:linear-gradient(180deg,rgba(245,242,234,0.78) 0%,rgba(245,242,234,0.40) 52%,rgba(245,242,234,0) 100%)}
+.sk-shade{position:absolute;left:0;right:0;background:linear-gradient(180deg,rgba(245,242,234,0.78) 0%,rgba(245,242,234,0.40) 52%,rgba(245,242,234,0) 100%)}
 .sk-head{position:absolute;left:64px;right:64px;top:64px;z-index:3;font-family:var(--marker);font-weight:400;font-size:calc(86px * var(--s));line-height:1.02;text-transform:uppercase;color:var(--ink-pen);transform:rotate(-1.6deg);transform-origin:0 50%}
 
 /* legacy t-photo hero follows the frame width (identical at its native 1000px) */
