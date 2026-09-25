@@ -1,0 +1,1898 @@
+{
+  "name": "v2-smoke",
+  "createdAt": "2026-09-25",
+  "note": "Smoke batch for the v2 engine: every non-ad shell (legacy + v2) at 1080x1350 (instagram), 1000x1500 (pinterest) and 1080x1920 (story), plus a carousel and a receipt reel entry. Sequenced as a valid plan per channel so the diversity and copy gates run on it. Never scheduled.",
+  "posts": [
+    {
+      "id": "smoke-instagram-receipt",
+      "channel": "instagram",
+      "dueAt": "2026-11-02T07:05:00-08:00",
+      "file": "smoke-instagram-receipt",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Product/Feature",
+      "cta": "receipt-scan",
+      "template": "receipt",
+      "store": "Corner Market",
+      "meta": "Sun 09/14 · 4:32 PM · 23 items",
+      "lines": [
+        {
+          "item": "Rotisserie chicken",
+          "price": "8.99"
+        },
+        {
+          "item": "Corn tortillas 30ct",
+          "price": "3.49"
+        },
+        {
+          "item": "Jasmine rice 2lb",
+          "price": "4.29"
+        },
+        {
+          "item": "Cabbage green",
+          "price": "1.87"
+        },
+        {
+          "item": "Limes 4",
+          "price": "1.00"
+        }
+      ],
+      "moreCount": 18,
+      "total": "$19.64",
+      "dishes": [
+        {
+          "name": "Chicken tacos with slaw",
+          "when": "Mon · 15m"
+        },
+        {
+          "name": "Chicken fried rice",
+          "when": "Tue · 20m"
+        },
+        {
+          "name": "Big chopped salad",
+          "when": "Wed · 10m"
+        },
+        {
+          "name": "Sunday soup from the bones",
+          "when": "Sun · 40m"
+        }
+      ],
+      "sticker": "Tuesday, sorted",
+      "head": "One receipt. <em>Four dinners.</em>",
+      "footer": "badge-br",
+      "title": "One grocery receipt, four weeknight dinners",
+      "text": "Scan the receipt from Sunday and iEatz maps it to the week: tacos Monday, fried rice Tuesday, a big salad Wednesday, soup from the bones on Sunday."
+    },
+    {
+      "id": "smoke-instagram-poster",
+      "channel": "instagram",
+      "dueAt": "2026-11-02T12:22:00-08:00",
+      "file": "smoke-instagram-poster",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Money/Waste",
+      "cta": "app-value",
+      "template": "poster",
+      "head": "Ten dinners are <span class=\"u\">already</span> on your <span class=\"i\">shelves.</span>",
+      "body": "Scan the receipt and iEatz reads your kitchen back to you, starting with what expires first.",
+      "readout": [
+        {
+          "label": "Avg dinners found",
+          "value": "9.6 / scan"
+        },
+        {
+          "label": "Est. per serving",
+          "value": "$6"
+        }
+      ],
+      "strip": true,
+      "footer": "badge-tr",
+      "title": "Ten dinners hiding on your pantry shelves",
+      "text": "The average scan finds about ten dinners in groceries people already own. The shelves were full the whole time."
+    },
+    {
+      "id": "smoke-instagram-split",
+      "channel": "instagram",
+      "dueAt": "2026-11-02T17:39:00-08:00",
+      "file": "smoke-instagram-split",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Transformation",
+      "cta": "other",
+      "template": "split",
+      "top": {
+        "photo": "fridge/fridge-full-produce.jpg",
+        "objPos": "50% 45%",
+        "label": "Sunday 6:02 PM"
+      },
+      "bottom": {
+        "photo": "food/veggie-bowl-eggs.jpg",
+        "objPos": "50% 50%"
+      },
+      "seam": "Same fridge, <em>Tuesday.</em>",
+      "cap": "Nothing new came home. <b>$0.00</b> spent. The bowl was on the top shelf.",
+      "footer": "badge-bl",
+      "photoClaim": "open fridge full of produce above a bowl of greens with eggs and avocado",
+      "title": "Same fridge, two days later: a bowl of greens and eggs",
+      "text": "Sunday the fridge looked like nothing. Tuesday it was a bowl of greens, soft eggs and avocado, and nobody went to the store."
+    },
+    {
+      "id": "smoke-instagram-recipephoto",
+      "channel": "instagram",
+      "dueAt": "2026-11-03T08:56:00-08:00",
+      "file": "smoke-instagram-recipephoto",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Recipe/Food",
+      "cta": "engagement",
+      "template": "recipephoto",
+      "photo": "food/pesto-pasta-bowl.jpg",
+      "objPos": "50% 50%",
+      "eyebrow": "Lunch for the week",
+      "head": "Pesto pasta salad that keeps till Friday",
+      "ings": [
+        "Farfalle",
+        "Pesto",
+        "Cherry tomatoes",
+        "Greens"
+      ],
+      "method": "Cook the pasta, toss it warm with pesto, fold in tomatoes and greens once it cools.",
+      "footer": "badge-br",
+      "photoClaim": "bowl of farfalle with pesto, cherry tomatoes and greens",
+      "title": "Pesto pasta salad for weekday lunches",
+      "text": "Farfalle, pesto, cherry tomatoes, a handful of greens. Make it Sunday and it still tastes right on Friday."
+    },
+    {
+      "id": "smoke-instagram-thread",
+      "channel": "instagram",
+      "dueAt": "2026-11-03T13:13:00-08:00",
+      "file": "smoke-instagram-thread",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Lifestyle",
+      "cta": "follow",
+      "template": "thread",
+      "bg": "mint",
+      "head": "The 5:45 text, <span class=\"accent\">retired.</span>",
+      "msgs": [
+        {
+          "time": "Tue 5:45 PM"
+        },
+        {
+          "who": "them",
+          "text": "what do u want for dinner"
+        },
+        {
+          "who": "me",
+          "text": "idk what do we have"
+        },
+        {
+          "who": "them",
+          "text": "no idea. chipotle?"
+        },
+        {
+          "who": "me",
+          "text": "wait hold on"
+        },
+        {
+          "who": "me",
+          "photo": "lifestyle/pan-steam.jpg",
+          "objPos": "50% 40%"
+        },
+        {
+          "who": "me",
+          "text": "it says we have everything for fried rice. 20 min"
+        },
+        {
+          "who": "them",
+          "text": "...who are you"
+        }
+      ],
+      "foot": "iEatz reads the receipt so the 5:45 text ends in a pan.",
+      "footer": "badge-bl",
+      "photoClaim": "hands stirring fried rice in a pan by a kitchen window",
+      "title": "The 5:45 what-do-you-want-for-dinner text, answered",
+      "text": "Every household has this text thread. Ours now ends with fried rice in a pan twenty minutes later."
+    },
+    {
+      "id": "smoke-instagram-reel",
+      "channel": "instagram",
+      "dueAt": "2026-11-03T18:30:00-08:00",
+      "file": "smoke-instagram-reel",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Product/Feature",
+      "cta": "receipt-scan",
+      "template": "receipt",
+      "format": "reel",
+      "store": "Corner Market",
+      "meta": "Thu 09/18 · 6:10 PM · 14 items",
+      "lines": [
+        {
+          "item": "Penne 1lb",
+          "price": "1.79"
+        },
+        {
+          "item": "Crushed tomatoes",
+          "price": "2.49"
+        },
+        {
+          "item": "Spinach 10oz",
+          "price": "3.99"
+        },
+        {
+          "item": "Ricotta",
+          "price": "4.29"
+        },
+        {
+          "item": "Garlic 3ct",
+          "price": "1.50"
+        },
+        {
+          "item": "Lemons 2",
+          "price": "1.20"
+        }
+      ],
+      "moreCount": 8,
+      "total": "$28.40",
+      "dishes": [
+        {
+          "name": "Baked penne with spinach",
+          "when": "Thu · 35m"
+        },
+        {
+          "name": "Lemon ricotta pasta",
+          "when": "Fri · 15m"
+        },
+        {
+          "name": "Tomato soup and toast",
+          "when": "Sat · 20m"
+        }
+      ],
+      "head": "Receipt in, <em>dinners out.</em>",
+      "footer": "badge-br",
+      "motion": {
+        "duration": 8,
+        "fps": 24
+      },
+      "title": "Watch a grocery receipt turn into three dinners",
+      "text": "Fourteen items from Thursday: baked penne, lemon ricotta pasta and tomato soup, printed in order of what goes off first."
+    },
+    {
+      "id": "smoke-instagram-stat",
+      "channel": "instagram",
+      "dueAt": "2026-11-04T09:47:00-08:00",
+      "file": "smoke-instagram-stat",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Money/Waste",
+      "cta": "app-value",
+      "template": "stat",
+      "eyebrow": "Budget dinners",
+      "stat": "$6",
+      "statSub": "Healthy dinner, per serving.",
+      "statBody": "When the recipe starts from groceries you already bought, the math works.",
+      "footer": "badge-tr",
+      "title": "About $6 a serving for a healthy dinner",
+      "text": "Dinner from what you already bought comes out around six dollars a serving. The expensive meal is the one you order after forgetting what was in the fridge."
+    },
+    {
+      "id": "smoke-instagram-sharpie",
+      "channel": "instagram",
+      "dueAt": "2026-11-04T14:04:00-08:00",
+      "file": "smoke-instagram-sharpie",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Pantry/Fridge",
+      "cta": "engagement",
+      "template": "sharpie",
+      "photo": "fridge/fridge-real-mess.jpg",
+      "objPos": "50% 50%",
+      "head": "Dinner is in here",
+      "footer": "badge-br",
+      "marks": [
+        {
+          "x": 735,
+          "y": 235,
+          "rx": 130,
+          "ry": 88,
+          "label": "eggs",
+          "labelSide": "below"
+        },
+        {
+          "x": 470,
+          "y": 720,
+          "rx": 165,
+          "ry": 92,
+          "label": "use these first",
+          "labelSide": "below"
+        }
+      ],
+      "photoClaim": "open fridge with eggs, sausages, a jar of garlic and strawberries",
+      "title": "Dinner is already in your fridge",
+      "text": "Eggs up top, sausages and a jar of garlic in the middle. That is a frittata, and it is already paid for."
+    },
+    {
+      "id": "smoke-instagram-list",
+      "channel": "instagram",
+      "dueAt": "2026-11-04T19:21:00-08:00",
+      "file": "smoke-instagram-list",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Recipe/Food",
+      "cta": "other",
+      "template": "list",
+      "head": "Four dinners from one rotisserie chicken",
+      "items": [
+        {
+          "t": "Tacos with slaw",
+          "s": "Night one, fifteen minutes"
+        },
+        {
+          "t": "Fried rice with peas",
+          "s": "Night two, one wok"
+        },
+        {
+          "t": "Big chopped salad",
+          "s": "Night three, no stove"
+        },
+        {
+          "t": "Broth for Sunday soup",
+          "s": "The carcass earns its keep"
+        }
+      ],
+      "footer": "badge-tl",
+      "title": "Four dinners from one rotisserie chicken",
+      "text": "Tacos, fried rice, a chopped salad, then broth from the bones. One nine-dollar bird covers four weeknights."
+    },
+    {
+      "id": "smoke-instagram-quotedark",
+      "channel": "instagram",
+      "dueAt": "2026-11-05T10:38:00-08:00",
+      "file": "smoke-instagram-quotedark",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Transformation",
+      "cta": "follow",
+      "template": "quotedark",
+      "photo": "lifestyle/kitchen-prep-scene.jpg",
+      "quote": "Three weeks in and I haven't ordered takeout once.",
+      "attr": "Ashly H., iEatz user",
+      "footer": "badge-br",
+      "photoClaim": "person slicing vegetables at a kitchen counter",
+      "title": "Three weeks without takeout",
+      "text": "Ashly H. on three weeks of cooking what was already in her kitchen, from the App Store reviews."
+    },
+    {
+      "id": "smoke-instagram-photo",
+      "channel": "instagram",
+      "dueAt": "2026-11-05T15:55:00-08:00",
+      "file": "smoke-instagram-photo",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Health/Diet",
+      "cta": "engagement",
+      "template": "photo",
+      "photo": "lifestyle/chop-cilantro.jpg",
+      "eyebrow": "Small habit",
+      "head": "Chop the cilantro before it wilts",
+      "chips": [
+        "Two minutes",
+        "Freezes well"
+      ],
+      "footer": "badge-tl",
+      "photoClaim": "hands chopping cilantro on a wooden board",
+      "title": "Chop the cilantro before it wilts",
+      "text": "Two minutes with a knife on Sunday and the cilantro lasts into next week. Freeze the rest in olive oil."
+    },
+    {
+      "id": "smoke-instagram-device",
+      "channel": "instagram",
+      "dueAt": "2026-11-05T20:12:00-08:00",
+      "file": "smoke-instagram-device",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Product/Feature",
+      "cta": "app-value",
+      "template": "device",
+      "photo": "app-instacart.jpg",
+      "head": "Soup night, minus the <span class=\"accent\">missing onion.</span>",
+      "cap": "When a recipe needs one thing you don't have, iEatz sends it to an Instacart cart in a tap.",
+      "footer": "badge-br",
+      "photoClaim": "real iEatz screen listing missing items next to an Instacart cart",
+      "title": "The missing onion goes straight to an Instacart cart",
+      "text": "One missing item used to stall the whole recipe. Now it goes to a cart and the soup keeps going."
+    },
+    {
+      "id": "smoke-instagram-igphoto",
+      "channel": "instagram",
+      "dueAt": "2026-11-06T11:29:00-08:00",
+      "file": "smoke-instagram-igphoto",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Recipe/Food",
+      "cta": "other",
+      "template": "igphoto",
+      "photo": "food/spaghetti-plate.jpg",
+      "eyebrow": "Midweek",
+      "head": "Wednesday spaghetti, twenty minutes flat",
+      "chips": [
+        "One skillet",
+        "All pantry"
+      ],
+      "footer": "badge-bl",
+      "photoClaim": "plate of spaghetti with mushrooms and herbs",
+      "title": "Twenty-minute Wednesday spaghetti",
+      "text": "Spaghetti, mushrooms, garlic and whatever herbs are left. One skillet, twenty minutes, Wednesday handled."
+    },
+    {
+      "id": "smoke-instagram-collage",
+      "channel": "instagram",
+      "dueAt": "2026-11-06T16:46:00-08:00",
+      "file": "smoke-instagram-collage",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Pantry/Fridge",
+      "cta": "receipt-scan",
+      "template": "collage",
+      "head": "Pantry to <span class=\"accent\">plate</span> in fifteen.",
+      "cards": [
+        {
+          "photo": "pantry/pantry-real-shelves.jpg",
+          "w": 540,
+          "h": 500,
+          "x": 70,
+          "y": 180,
+          "rot": -3,
+          "tape": "left"
+        },
+        {
+          "photo": "food/tacos-lime.jpg",
+          "w": 420,
+          "h": 540,
+          "x": 580,
+          "y": 500,
+          "rot": 3.5,
+          "tape": "right",
+          "objPos": "50% 60%"
+        }
+      ],
+      "notes": [
+        {
+          "text": "the shelf nobody looks at",
+          "x": 660,
+          "y": 200
+        }
+      ],
+      "arrow": {
+        "text": "&larr; that shelf, tonight",
+        "x": 110,
+        "y": 720
+      },
+      "price": {
+        "text": "$2.10 / plate",
+        "x": 690,
+        "y": 1010
+      },
+      "footer": "badge-tl",
+      "photoClaim": "pantry shelves of packaged groceries and tacos with chickpeas and lime",
+      "title": "Pantry to plate in fifteen minutes",
+      "text": "The shelf nobody looks at has tacos on it. Chickpeas, a lime and tortillas, about two dollars a plate."
+    },
+    {
+      "id": "smoke-instagram-recipe",
+      "channel": "instagram",
+      "dueAt": "2026-11-06T07:03:00-08:00",
+      "file": "smoke-instagram-recipe",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Recipe/Food",
+      "cta": "engagement",
+      "template": "recipe",
+      "eyebrow": "Keeps a week",
+      "head": "Green sauce for everything",
+      "ings": [
+        "Soft herbs",
+        "Yogurt",
+        "Lemon",
+        "Garlic"
+      ],
+      "method": "Blitz everything until smooth and spoon it over anything beige.",
+      "footer": "badge-br",
+      "title": "Green herb yogurt sauce that keeps a week",
+      "text": "Soft herbs, yogurt, lemon and garlic in a blender. It rescues the herbs and every plain dinner after."
+    },
+    {
+      "id": "smoke-instagram-bleed",
+      "channel": "instagram",
+      "dueAt": "2026-11-07T12:20:00-08:00",
+      "file": "smoke-instagram-bleed",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Lifestyle",
+      "cta": "app-value",
+      "template": "bleed",
+      "photo": "lifestyle/woman-in-kitchen.jpg",
+      "eyebrow": "Back to routine",
+      "head": "The 6:30 kitchen, back on schedule",
+      "sub": "Evenings run smoother when nobody has to decide what dinner is.",
+      "footer": "badge-tr",
+      "photoClaim": "woman cooking at a stove in a white kitchen",
+      "title": "The 6:30 kitchen, back on schedule",
+      "text": "A school-night kitchen at 6:30 with dinner already decided. The quiet part is nobody asking what we are having."
+    },
+    {
+      "id": "smoke-instagram-quote",
+      "channel": "instagram",
+      "dueAt": "2026-11-07T17:37:00-08:00",
+      "file": "smoke-instagram-quote",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Transformation",
+      "cta": "other",
+      "template": "quote",
+      "quote": "I just cook what's already in my kitchen.",
+      "name": "Ashly H.",
+      "footer": "badge-bl",
+      "title": "Cooking what is already in the kitchen",
+      "text": "The second half of Ashly H.'s review, and the whole idea of the app in one line."
+    },
+    {
+      "id": "smoke-instagram-statdark",
+      "channel": "instagram",
+      "dueAt": "2026-11-07T08:54:00-08:00",
+      "file": "smoke-instagram-statdark",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Health/Diet",
+      "cta": "engagement",
+      "template": "statdark",
+      "eyebrow": "Fridge to table",
+      "stat": "15 min",
+      "sub": "Fridge to table.",
+      "body": "Most weeknight dinners land in about fifteen minutes when they start from what you have.",
+      "footer": "badge-tl",
+      "title": "Fridge to table in about fifteen minutes",
+      "text": "Most iEatz weeknight dinners land in about fifteen minutes because the shopping step is gone."
+    },
+    {
+      "id": "smoke-instagram-carousel",
+      "channel": "instagram",
+      "dueAt": "2026-11-08T13:11:00-08:00",
+      "file": "smoke-instagram-carousel",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Grocery/Instacart",
+      "cta": "app-value",
+      "title": "Four weeknight bowls from one grocery run",
+      "text": "Swipe for four bowls: grain bowl, kimchi rice, chickpea bowl and a green bean power bowl. Save it for the next grocery run.",
+      "slides": [
+        {
+          "template": "poster",
+          "head": "Four bowls from <span class=\"i\">one</span> grocery run.",
+          "body": "Swipe. Same bag of groceries, four weeknights, no repeats.",
+          "readout": [
+            {
+              "label": "Bowls",
+              "value": "4"
+            },
+            {
+              "label": "Store trips",
+              "value": "1"
+            }
+          ],
+          "strip": true,
+          "footer": "badge-br"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/grain-bowl-burlap.jpg",
+          "head": "Monday: chicken grain bowl",
+          "ings": [
+            "Chicken",
+            "Rice",
+            "Chickpeas",
+            "Greens"
+          ],
+          "method": "Warm the rice, slice the chicken, pile it all in one bowl.",
+          "photoClaim": "wooden bowl of sliced chicken, rice and chickpeas"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/rice-bowl-in-hands.jpg",
+          "head": "Tuesday: kimchi rice bowl",
+          "ings": [
+            "Rice",
+            "Kimchi",
+            "Egg",
+            "Scallion"
+          ],
+          "method": "Leftover rice under a heap of kimchi. Fry an egg if you have one.",
+          "photoClaim": "hands holding a bowl of rice topped with kimchi"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/chickpea-power-bowl.jpg",
+          "head": "Wednesday: chickpea bowl",
+          "ings": [
+            "Chickpeas",
+            "Cucumber",
+            "Tomato",
+            "Yogurt"
+          ],
+          "method": "Crisp the chickpeas in a hot pan, then everything cold on top.",
+          "photoClaim": "bowl of chickpeas, cucumber, tomato and greens"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/power-bowl-veg.jpg",
+          "head": "Thursday: green bean power bowl",
+          "ings": [
+            "Green beans",
+            "Couscous",
+            "Tomatoes",
+            "Herbs"
+          ],
+          "method": "Blanch the beans, fluff the couscous, dress it all with lemon.",
+          "photoClaim": "plate of green beans, couscous and tomatoes"
+        }
+      ]
+    },
+    {
+      "id": "smoke-instagram-threadphoto",
+      "channel": "instagram",
+      "dueAt": "2026-11-08T18:28:00-08:00",
+      "file": "smoke-instagram-threadphoto",
+      "w": 1080,
+      "h": 1350,
+      "pillar": "Lifestyle",
+      "cta": "follow",
+      "template": "thread",
+      "bg": {
+        "photo": "fridge/fridge-stocked.jpg",
+        "objPos": "50% 50%"
+      },
+      "msgs": [
+        {
+          "who": "them",
+          "text": "are we out of everything"
+        },
+        {
+          "who": "me",
+          "text": "nope. eggs, yogurt, half a box of veg"
+        },
+        {
+          "who": "me",
+          "text": "iEatz says shakshuka"
+        },
+        {
+          "who": "them",
+          "text": "ok im in"
+        }
+      ],
+      "foot": "The fridge had dinner in it the whole time.",
+      "footer": "badge-tr",
+      "photoClaim": "open fridge with stocked shelves, yogurt cups and a box of vegetables",
+      "title": "The fridge had dinner in it the whole time",
+      "text": "Eggs, yogurt and half a box of vegetables is shakshuka. The fridge was never empty."
+    },
+    {
+      "id": "smoke-pinterest-receipt",
+      "channel": "pinterest",
+      "dueAt": "2026-11-02T07:05:00-08:00",
+      "file": "smoke-pinterest-receipt",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Product/Feature",
+      "cta": "receipt-scan",
+      "template": "receipt",
+      "store": "Corner Market",
+      "meta": "Sun 09/14 · 4:32 PM · 23 items",
+      "lines": [
+        {
+          "item": "Rotisserie chicken",
+          "price": "8.99"
+        },
+        {
+          "item": "Corn tortillas 30ct",
+          "price": "3.49"
+        },
+        {
+          "item": "Jasmine rice 2lb",
+          "price": "4.29"
+        },
+        {
+          "item": "Cabbage green",
+          "price": "1.87"
+        },
+        {
+          "item": "Limes 4",
+          "price": "1.00"
+        }
+      ],
+      "moreCount": 18,
+      "total": "$19.64",
+      "dishes": [
+        {
+          "name": "Chicken tacos with slaw",
+          "when": "Mon · 15m"
+        },
+        {
+          "name": "Chicken fried rice",
+          "when": "Tue · 20m"
+        },
+        {
+          "name": "Big chopped salad",
+          "when": "Wed · 10m"
+        },
+        {
+          "name": "Sunday soup from the bones",
+          "when": "Sun · 40m"
+        }
+      ],
+      "sticker": "Tuesday, sorted",
+      "head": "One receipt. <em>Four dinners.</em>",
+      "footer": "badge-br",
+      "title": "One grocery receipt, four weeknight dinners",
+      "text": "Scan the receipt from Sunday and iEatz maps it to the week: tacos Monday, fried rice Tuesday, a big salad Wednesday, soup from the bones on Sunday."
+    },
+    {
+      "id": "smoke-pinterest-poster",
+      "channel": "pinterest",
+      "dueAt": "2026-11-02T12:22:00-08:00",
+      "file": "smoke-pinterest-poster",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Money/Waste",
+      "cta": "app-value",
+      "template": "poster",
+      "head": "Ten dinners are <span class=\"u\">already</span> on your <span class=\"i\">shelves.</span>",
+      "body": "Scan the receipt and iEatz reads your kitchen back to you, starting with what expires first.",
+      "readout": [
+        {
+          "label": "Avg dinners found",
+          "value": "9.6 / scan"
+        },
+        {
+          "label": "Est. per serving",
+          "value": "$6"
+        }
+      ],
+      "strip": true,
+      "footer": "badge-tr",
+      "title": "Ten dinners hiding on your pantry shelves",
+      "text": "The average scan finds about ten dinners in groceries people already own. The shelves were full the whole time."
+    },
+    {
+      "id": "smoke-pinterest-split",
+      "channel": "pinterest",
+      "dueAt": "2026-11-02T17:39:00-08:00",
+      "file": "smoke-pinterest-split",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Transformation",
+      "cta": "other",
+      "template": "split",
+      "top": {
+        "photo": "fridge/fridge-full-produce.jpg",
+        "objPos": "50% 45%",
+        "label": "Sunday 6:02 PM"
+      },
+      "bottom": {
+        "photo": "food/veggie-bowl-eggs.jpg",
+        "objPos": "50% 50%"
+      },
+      "seam": "Same fridge, <em>Tuesday.</em>",
+      "cap": "Nothing new came home. <b>$0.00</b> spent. The bowl was on the top shelf.",
+      "footer": "badge-bl",
+      "photoClaim": "open fridge full of produce above a bowl of greens with eggs and avocado",
+      "title": "Same fridge, two days later: a bowl of greens and eggs",
+      "text": "Sunday the fridge looked like nothing. Tuesday it was a bowl of greens, soft eggs and avocado, and nobody went to the store."
+    },
+    {
+      "id": "smoke-pinterest-recipephoto",
+      "channel": "pinterest",
+      "dueAt": "2026-11-03T08:56:00-08:00",
+      "file": "smoke-pinterest-recipephoto",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Recipe/Food",
+      "cta": "engagement",
+      "template": "recipephoto",
+      "photo": "food/pesto-pasta-bowl.jpg",
+      "objPos": "50% 50%",
+      "eyebrow": "Lunch for the week",
+      "head": "Pesto pasta salad that keeps till Friday",
+      "ings": [
+        "Farfalle",
+        "Pesto",
+        "Cherry tomatoes",
+        "Greens"
+      ],
+      "method": "Cook the pasta, toss it warm with pesto, fold in tomatoes and greens once it cools.",
+      "footer": "badge-br",
+      "photoClaim": "bowl of farfalle with pesto, cherry tomatoes and greens",
+      "title": "Pesto pasta salad for weekday lunches",
+      "text": "Farfalle, pesto, cherry tomatoes, a handful of greens. Make it Sunday and it still tastes right on Friday."
+    },
+    {
+      "id": "smoke-pinterest-thread",
+      "channel": "pinterest",
+      "dueAt": "2026-11-03T13:13:00-08:00",
+      "file": "smoke-pinterest-thread",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Lifestyle",
+      "cta": "follow",
+      "template": "thread",
+      "bg": "mint",
+      "head": "The 5:45 text, <span class=\"accent\">retired.</span>",
+      "msgs": [
+        {
+          "time": "Tue 5:45 PM"
+        },
+        {
+          "who": "them",
+          "text": "what do u want for dinner"
+        },
+        {
+          "who": "me",
+          "text": "idk what do we have"
+        },
+        {
+          "who": "them",
+          "text": "no idea. chipotle?"
+        },
+        {
+          "who": "me",
+          "text": "wait hold on"
+        },
+        {
+          "who": "me",
+          "photo": "lifestyle/pan-steam.jpg",
+          "objPos": "50% 40%"
+        },
+        {
+          "who": "me",
+          "text": "it says we have everything for fried rice. 20 min"
+        },
+        {
+          "who": "them",
+          "text": "...who are you"
+        }
+      ],
+      "foot": "iEatz reads the receipt so the 5:45 text ends in a pan.",
+      "footer": "badge-bl",
+      "photoClaim": "hands stirring fried rice in a pan by a kitchen window",
+      "title": "The 5:45 what-do-you-want-for-dinner text, answered",
+      "text": "Every household has this text thread. Ours now ends with fried rice in a pan twenty minutes later."
+    },
+    {
+      "id": "smoke-pinterest-stat",
+      "channel": "pinterest",
+      "dueAt": "2026-11-03T18:30:00-08:00",
+      "file": "smoke-pinterest-stat",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Money/Waste",
+      "cta": "app-value",
+      "template": "stat",
+      "eyebrow": "Budget dinners",
+      "stat": "$6",
+      "statSub": "Healthy dinner, per serving.",
+      "statBody": "When the recipe starts from groceries you already bought, the math works.",
+      "footer": "badge-url",
+      "title": "About $6 a serving for a healthy dinner",
+      "text": "Dinner from what you already bought comes out around six dollars a serving. The expensive meal is the one you order after forgetting what was in the fridge."
+    },
+    {
+      "id": "smoke-pinterest-sharpie",
+      "channel": "pinterest",
+      "dueAt": "2026-11-04T09:47:00-08:00",
+      "file": "smoke-pinterest-sharpie",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Pantry/Fridge",
+      "cta": "engagement",
+      "template": "sharpie",
+      "photo": "fridge/fridge-real-mess.jpg",
+      "objPos": "50% 50%",
+      "head": "Dinner is in here",
+      "footer": "badge-br",
+      "marks": [
+        {
+          "x": 735,
+          "y": 235,
+          "rx": 130,
+          "ry": 88,
+          "label": "eggs",
+          "labelSide": "below"
+        },
+        {
+          "x": 470,
+          "y": 720,
+          "rx": 165,
+          "ry": 92,
+          "label": "use these first",
+          "labelSide": "below"
+        }
+      ],
+      "photoClaim": "open fridge with eggs, sausages, a jar of garlic and strawberries",
+      "title": "Dinner is already in your fridge",
+      "text": "Eggs up top, sausages and a jar of garlic in the middle. That is a frittata, and it is already paid for."
+    },
+    {
+      "id": "smoke-pinterest-list",
+      "channel": "pinterest",
+      "dueAt": "2026-11-04T14:04:00-08:00",
+      "file": "smoke-pinterest-list",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Recipe/Food",
+      "cta": "other",
+      "template": "list",
+      "head": "Four dinners from one rotisserie chicken",
+      "items": [
+        {
+          "t": "Tacos with slaw",
+          "s": "Night one, fifteen minutes"
+        },
+        {
+          "t": "Fried rice with peas",
+          "s": "Night two, one wok"
+        },
+        {
+          "t": "Big chopped salad",
+          "s": "Night three, no stove"
+        },
+        {
+          "t": "Broth for Sunday soup",
+          "s": "The carcass earns its keep"
+        }
+      ],
+      "footer": "badge-tl",
+      "title": "Four dinners from one rotisserie chicken",
+      "text": "Tacos, fried rice, a chopped salad, then broth from the bones. One nine-dollar bird covers four weeknights."
+    },
+    {
+      "id": "smoke-pinterest-quotedark",
+      "channel": "pinterest",
+      "dueAt": "2026-11-04T19:21:00-08:00",
+      "file": "smoke-pinterest-quotedark",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Transformation",
+      "cta": "follow",
+      "template": "quotedark",
+      "photo": "lifestyle/kitchen-prep-scene.jpg",
+      "quote": "Three weeks in and I haven't ordered takeout once.",
+      "attr": "Ashly H., iEatz user",
+      "footer": "badge-br",
+      "photoClaim": "person slicing vegetables at a kitchen counter",
+      "title": "Three weeks without takeout",
+      "text": "Ashly H. on three weeks of cooking what was already in her kitchen, from the App Store reviews."
+    },
+    {
+      "id": "smoke-pinterest-photo",
+      "channel": "pinterest",
+      "dueAt": "2026-11-05T10:38:00-08:00",
+      "file": "smoke-pinterest-photo",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Health/Diet",
+      "cta": "engagement",
+      "template": "photo",
+      "photo": "lifestyle/chop-cilantro.jpg",
+      "eyebrow": "Small habit",
+      "head": "Chop the cilantro before it wilts",
+      "chips": [
+        "Two minutes",
+        "Freezes well"
+      ],
+      "footer": "badge-tl",
+      "photoClaim": "hands chopping cilantro on a wooden board",
+      "title": "Chop the cilantro before it wilts",
+      "text": "Two minutes with a knife on Sunday and the cilantro lasts into next week. Freeze the rest in olive oil."
+    },
+    {
+      "id": "smoke-pinterest-device",
+      "channel": "pinterest",
+      "dueAt": "2026-11-05T15:55:00-08:00",
+      "file": "smoke-pinterest-device",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Product/Feature",
+      "cta": "app-value",
+      "template": "device",
+      "photo": "app-instacart.jpg",
+      "head": "Soup night, minus the <span class=\"accent\">missing onion.</span>",
+      "cap": "When a recipe needs one thing you don't have, iEatz sends it to an Instacart cart in a tap.",
+      "footer": "badge-br",
+      "photoClaim": "real iEatz screen listing missing items next to an Instacart cart",
+      "title": "The missing onion goes straight to an Instacart cart",
+      "text": "One missing item used to stall the whole recipe. Now it goes to a cart and the soup keeps going."
+    },
+    {
+      "id": "smoke-pinterest-igphoto",
+      "channel": "pinterest",
+      "dueAt": "2026-11-05T20:12:00-08:00",
+      "file": "smoke-pinterest-igphoto",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Recipe/Food",
+      "cta": "other",
+      "template": "igphoto",
+      "photo": "food/spaghetti-plate.jpg",
+      "eyebrow": "Midweek",
+      "head": "Wednesday spaghetti, twenty minutes flat",
+      "chips": [
+        "One skillet",
+        "All pantry"
+      ],
+      "footer": "badge-url",
+      "photoClaim": "plate of spaghetti with mushrooms and herbs",
+      "title": "Twenty-minute Wednesday spaghetti",
+      "text": "Spaghetti, mushrooms, garlic and whatever herbs are left. One skillet, twenty minutes, Wednesday handled."
+    },
+    {
+      "id": "smoke-pinterest-collage",
+      "channel": "pinterest",
+      "dueAt": "2026-11-06T11:29:00-08:00",
+      "file": "smoke-pinterest-collage",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Pantry/Fridge",
+      "cta": "receipt-scan",
+      "template": "collage",
+      "head": "Pantry to <span class=\"accent\">plate</span> in fifteen.",
+      "cards": [
+        {
+          "photo": "pantry/pantry-real-shelves.jpg",
+          "w": 540,
+          "h": 500,
+          "x": 70,
+          "y": 180,
+          "rot": -3,
+          "tape": "left"
+        },
+        {
+          "photo": "food/tacos-lime.jpg",
+          "w": 420,
+          "h": 540,
+          "x": 580,
+          "y": 500,
+          "rot": 3.5,
+          "tape": "right",
+          "objPos": "50% 60%"
+        }
+      ],
+      "notes": [
+        {
+          "text": "the shelf nobody looks at",
+          "x": 660,
+          "y": 200
+        }
+      ],
+      "arrow": {
+        "text": "&larr; that shelf, tonight",
+        "x": 110,
+        "y": 720
+      },
+      "price": {
+        "text": "$2.10 / plate",
+        "x": 690,
+        "y": 1010
+      },
+      "footer": "badge-tl",
+      "photoClaim": "pantry shelves of packaged groceries and tacos with chickpeas and lime",
+      "title": "Pantry to plate in fifteen minutes",
+      "text": "The shelf nobody looks at has tacos on it. Chickpeas, a lime and tortillas, about two dollars a plate."
+    },
+    {
+      "id": "smoke-pinterest-recipe",
+      "channel": "pinterest",
+      "dueAt": "2026-11-06T16:46:00-08:00",
+      "file": "smoke-pinterest-recipe",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Recipe/Food",
+      "cta": "engagement",
+      "template": "recipe",
+      "eyebrow": "Keeps a week",
+      "head": "Green sauce for everything",
+      "ings": [
+        "Soft herbs",
+        "Yogurt",
+        "Lemon",
+        "Garlic"
+      ],
+      "method": "Blitz everything until smooth and spoon it over anything beige.",
+      "footer": "badge-br",
+      "title": "Green herb yogurt sauce that keeps a week",
+      "text": "Soft herbs, yogurt, lemon and garlic in a blender. It rescues the herbs and every plain dinner after."
+    },
+    {
+      "id": "smoke-pinterest-bleed",
+      "channel": "pinterest",
+      "dueAt": "2026-11-06T07:03:00-08:00",
+      "file": "smoke-pinterest-bleed",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Lifestyle",
+      "cta": "app-value",
+      "template": "bleed",
+      "photo": "lifestyle/woman-in-kitchen.jpg",
+      "eyebrow": "Back to routine",
+      "head": "The 6:30 kitchen, back on schedule",
+      "sub": "Evenings run smoother when nobody has to decide what dinner is.",
+      "footer": "badge-tr",
+      "photoClaim": "woman cooking at a stove in a white kitchen",
+      "title": "The 6:30 kitchen, back on schedule",
+      "text": "A school-night kitchen at 6:30 with dinner already decided. The quiet part is nobody asking what we are having."
+    },
+    {
+      "id": "smoke-pinterest-quote",
+      "channel": "pinterest",
+      "dueAt": "2026-11-07T12:20:00-08:00",
+      "file": "smoke-pinterest-quote",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Transformation",
+      "cta": "other",
+      "template": "quote",
+      "quote": "I just cook what's already in my kitchen.",
+      "name": "Ashly H.",
+      "footer": "badge-url",
+      "title": "Cooking what is already in the kitchen",
+      "text": "The second half of Ashly H.'s review, and the whole idea of the app in one line."
+    },
+    {
+      "id": "smoke-pinterest-statdark",
+      "channel": "pinterest",
+      "dueAt": "2026-11-07T17:37:00-08:00",
+      "file": "smoke-pinterest-statdark",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Health/Diet",
+      "cta": "engagement",
+      "template": "statdark",
+      "eyebrow": "Fridge to table",
+      "stat": "15 min",
+      "sub": "Fridge to table.",
+      "body": "Most weeknight dinners land in about fifteen minutes when they start from what you have.",
+      "footer": "badge-tl",
+      "title": "Fridge to table in about fifteen minutes",
+      "text": "Most iEatz weeknight dinners land in about fifteen minutes because the shopping step is gone."
+    },
+    {
+      "id": "smoke-pinterest-carousel",
+      "channel": "pinterest",
+      "dueAt": "2026-11-07T08:54:00-08:00",
+      "file": "smoke-pinterest-carousel",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Grocery/Instacart",
+      "cta": "app-value",
+      "title": "Four weeknight bowls from one grocery run",
+      "text": "Swipe for four bowls: grain bowl, kimchi rice, chickpea bowl and a green bean power bowl. Save it for the next grocery run.",
+      "slides": [
+        {
+          "template": "poster",
+          "head": "Four bowls from <span class=\"i\">one</span> grocery run.",
+          "body": "Swipe. Same bag of groceries, four weeknights, no repeats.",
+          "readout": [
+            {
+              "label": "Bowls",
+              "value": "4"
+            },
+            {
+              "label": "Store trips",
+              "value": "1"
+            }
+          ],
+          "strip": true,
+          "footer": "badge-br"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/grain-bowl-burlap.jpg",
+          "head": "Monday: chicken grain bowl",
+          "ings": [
+            "Chicken",
+            "Rice",
+            "Chickpeas",
+            "Greens"
+          ],
+          "method": "Warm the rice, slice the chicken, pile it all in one bowl.",
+          "photoClaim": "wooden bowl of sliced chicken, rice and chickpeas"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/rice-bowl-in-hands.jpg",
+          "head": "Tuesday: kimchi rice bowl",
+          "ings": [
+            "Rice",
+            "Kimchi",
+            "Egg",
+            "Scallion"
+          ],
+          "method": "Leftover rice under a heap of kimchi. Fry an egg if you have one.",
+          "photoClaim": "hands holding a bowl of rice topped with kimchi"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/chickpea-power-bowl.jpg",
+          "head": "Wednesday: chickpea bowl",
+          "ings": [
+            "Chickpeas",
+            "Cucumber",
+            "Tomato",
+            "Yogurt"
+          ],
+          "method": "Crisp the chickpeas in a hot pan, then everything cold on top.",
+          "photoClaim": "bowl of chickpeas, cucumber, tomato and greens"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/power-bowl-veg.jpg",
+          "head": "Thursday: green bean power bowl",
+          "ings": [
+            "Green beans",
+            "Couscous",
+            "Tomatoes",
+            "Herbs"
+          ],
+          "method": "Blanch the beans, fluff the couscous, dress it all with lemon.",
+          "photoClaim": "plate of green beans, couscous and tomatoes"
+        }
+      ]
+    },
+    {
+      "id": "smoke-pinterest-threadphoto",
+      "channel": "pinterest",
+      "dueAt": "2026-11-08T13:11:00-08:00",
+      "file": "smoke-pinterest-threadphoto",
+      "w": 1000,
+      "h": 1500,
+      "pillar": "Lifestyle",
+      "cta": "follow",
+      "template": "thread",
+      "bg": {
+        "photo": "fridge/fridge-stocked.jpg",
+        "objPos": "50% 50%"
+      },
+      "msgs": [
+        {
+          "who": "them",
+          "text": "are we out of everything"
+        },
+        {
+          "who": "me",
+          "text": "nope. eggs, yogurt, half a box of veg"
+        },
+        {
+          "who": "me",
+          "text": "iEatz says shakshuka"
+        },
+        {
+          "who": "them",
+          "text": "ok im in"
+        }
+      ],
+      "foot": "The fridge had dinner in it the whole time.",
+      "footer": "badge-tr",
+      "photoClaim": "open fridge with stocked shelves, yogurt cups and a box of vegetables",
+      "title": "The fridge had dinner in it the whole time",
+      "text": "Eggs, yogurt and half a box of vegetables is shakshuka. The fridge was never empty."
+    },
+    {
+      "id": "smoke-story-receipt",
+      "channel": "story",
+      "dueAt": "2026-11-02T07:05:00-08:00",
+      "file": "smoke-story-receipt",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Product/Feature",
+      "cta": "receipt-scan",
+      "template": "receipt",
+      "store": "Corner Market",
+      "meta": "Sun 09/14 · 4:32 PM · 23 items",
+      "lines": [
+        {
+          "item": "Rotisserie chicken",
+          "price": "8.99"
+        },
+        {
+          "item": "Corn tortillas 30ct",
+          "price": "3.49"
+        },
+        {
+          "item": "Jasmine rice 2lb",
+          "price": "4.29"
+        },
+        {
+          "item": "Cabbage green",
+          "price": "1.87"
+        },
+        {
+          "item": "Limes 4",
+          "price": "1.00"
+        }
+      ],
+      "moreCount": 18,
+      "total": "$19.64",
+      "dishes": [
+        {
+          "name": "Chicken tacos with slaw",
+          "when": "Mon · 15m"
+        },
+        {
+          "name": "Chicken fried rice",
+          "when": "Tue · 20m"
+        },
+        {
+          "name": "Big chopped salad",
+          "when": "Wed · 10m"
+        },
+        {
+          "name": "Sunday soup from the bones",
+          "when": "Sun · 40m"
+        }
+      ],
+      "sticker": "Tuesday, sorted",
+      "head": "One receipt. <em>Four dinners.</em>",
+      "footer": "badge-br",
+      "title": "One grocery receipt, four weeknight dinners",
+      "text": "Scan the receipt from Sunday and iEatz maps it to the week: tacos Monday, fried rice Tuesday, a big salad Wednesday, soup from the bones on Sunday."
+    },
+    {
+      "id": "smoke-story-poster",
+      "channel": "story",
+      "dueAt": "2026-11-02T12:22:00-08:00",
+      "file": "smoke-story-poster",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Money/Waste",
+      "cta": "app-value",
+      "template": "poster",
+      "head": "Ten dinners are <span class=\"u\">already</span> on your <span class=\"i\">shelves.</span>",
+      "body": "Scan the receipt and iEatz reads your kitchen back to you, starting with what expires first.",
+      "readout": [
+        {
+          "label": "Avg dinners found",
+          "value": "9.6 / scan"
+        },
+        {
+          "label": "Est. per serving",
+          "value": "$6"
+        }
+      ],
+      "strip": true,
+      "footer": "badge-tr",
+      "title": "Ten dinners hiding on your pantry shelves",
+      "text": "The average scan finds about ten dinners in groceries people already own. The shelves were full the whole time."
+    },
+    {
+      "id": "smoke-story-split",
+      "channel": "story",
+      "dueAt": "2026-11-02T17:39:00-08:00",
+      "file": "smoke-story-split",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Transformation",
+      "cta": "other",
+      "template": "split",
+      "top": {
+        "photo": "fridge/fridge-full-produce.jpg",
+        "objPos": "50% 45%",
+        "label": "Sunday 6:02 PM"
+      },
+      "bottom": {
+        "photo": "food/veggie-bowl-eggs.jpg",
+        "objPos": "50% 50%"
+      },
+      "seam": "Same fridge, <em>Tuesday.</em>",
+      "cap": "Nothing new came home. <b>$0.00</b> spent. The bowl was on the top shelf.",
+      "footer": "badge-bl",
+      "photoClaim": "open fridge full of produce above a bowl of greens with eggs and avocado",
+      "title": "Same fridge, two days later: a bowl of greens and eggs",
+      "text": "Sunday the fridge looked like nothing. Tuesday it was a bowl of greens, soft eggs and avocado, and nobody went to the store."
+    },
+    {
+      "id": "smoke-story-recipephoto",
+      "channel": "story",
+      "dueAt": "2026-11-03T08:56:00-08:00",
+      "file": "smoke-story-recipephoto",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Recipe/Food",
+      "cta": "engagement",
+      "template": "recipephoto",
+      "photo": "food/pesto-pasta-bowl.jpg",
+      "objPos": "50% 50%",
+      "eyebrow": "Lunch for the week",
+      "head": "Pesto pasta salad that keeps till Friday",
+      "ings": [
+        "Farfalle",
+        "Pesto",
+        "Cherry tomatoes",
+        "Greens"
+      ],
+      "method": "Cook the pasta, toss it warm with pesto, fold in tomatoes and greens once it cools.",
+      "footer": "badge-br",
+      "photoClaim": "bowl of farfalle with pesto, cherry tomatoes and greens",
+      "title": "Pesto pasta salad for weekday lunches",
+      "text": "Farfalle, pesto, cherry tomatoes, a handful of greens. Make it Sunday and it still tastes right on Friday."
+    },
+    {
+      "id": "smoke-story-thread",
+      "channel": "story",
+      "dueAt": "2026-11-03T13:13:00-08:00",
+      "file": "smoke-story-thread",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Lifestyle",
+      "cta": "follow",
+      "template": "thread",
+      "bg": "mint",
+      "head": "The 5:45 text, <span class=\"accent\">retired.</span>",
+      "msgs": [
+        {
+          "time": "Tue 5:45 PM"
+        },
+        {
+          "who": "them",
+          "text": "what do u want for dinner"
+        },
+        {
+          "who": "me",
+          "text": "idk what do we have"
+        },
+        {
+          "who": "them",
+          "text": "no idea. chipotle?"
+        },
+        {
+          "who": "me",
+          "text": "wait hold on"
+        },
+        {
+          "who": "me",
+          "photo": "lifestyle/pan-steam.jpg",
+          "objPos": "50% 40%"
+        },
+        {
+          "who": "me",
+          "text": "it says we have everything for fried rice. 20 min"
+        },
+        {
+          "who": "them",
+          "text": "...who are you"
+        }
+      ],
+      "foot": "iEatz reads the receipt so the 5:45 text ends in a pan.",
+      "footer": "badge-bl",
+      "photoClaim": "hands stirring fried rice in a pan by a kitchen window",
+      "title": "The 5:45 what-do-you-want-for-dinner text, answered",
+      "text": "Every household has this text thread. Ours now ends with fried rice in a pan twenty minutes later."
+    },
+    {
+      "id": "smoke-story-stat",
+      "channel": "story",
+      "dueAt": "2026-11-03T18:30:00-08:00",
+      "file": "smoke-story-stat",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Money/Waste",
+      "cta": "app-value",
+      "template": "stat",
+      "eyebrow": "Budget dinners",
+      "stat": "$6",
+      "statSub": "Healthy dinner, per serving.",
+      "statBody": "When the recipe starts from groceries you already bought, the math works.",
+      "footer": "badge-tr",
+      "title": "About $6 a serving for a healthy dinner",
+      "text": "Dinner from what you already bought comes out around six dollars a serving. The expensive meal is the one you order after forgetting what was in the fridge."
+    },
+    {
+      "id": "smoke-story-sharpie",
+      "channel": "story",
+      "dueAt": "2026-11-04T09:47:00-08:00",
+      "file": "smoke-story-sharpie",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Pantry/Fridge",
+      "cta": "engagement",
+      "template": "sharpie",
+      "photo": "fridge/fridge-real-mess.jpg",
+      "objPos": "50% 50%",
+      "head": "Dinner is in here",
+      "footer": "badge-br",
+      "marks": [
+        {
+          "x": 735,
+          "y": 235,
+          "rx": 130,
+          "ry": 88,
+          "label": "eggs",
+          "labelSide": "below"
+        },
+        {
+          "x": 470,
+          "y": 720,
+          "rx": 165,
+          "ry": 92,
+          "label": "use these first",
+          "labelSide": "below"
+        }
+      ],
+      "photoClaim": "open fridge with eggs, sausages, a jar of garlic and strawberries",
+      "title": "Dinner is already in your fridge",
+      "text": "Eggs up top, sausages and a jar of garlic in the middle. That is a frittata, and it is already paid for."
+    },
+    {
+      "id": "smoke-story-list",
+      "channel": "story",
+      "dueAt": "2026-11-04T14:04:00-08:00",
+      "file": "smoke-story-list",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Recipe/Food",
+      "cta": "other",
+      "template": "list",
+      "head": "Four dinners from one rotisserie chicken",
+      "items": [
+        {
+          "t": "Tacos with slaw",
+          "s": "Night one, fifteen minutes"
+        },
+        {
+          "t": "Fried rice with peas",
+          "s": "Night two, one wok"
+        },
+        {
+          "t": "Big chopped salad",
+          "s": "Night three, no stove"
+        },
+        {
+          "t": "Broth for Sunday soup",
+          "s": "The carcass earns its keep"
+        }
+      ],
+      "footer": "badge-tl",
+      "title": "Four dinners from one rotisserie chicken",
+      "text": "Tacos, fried rice, a chopped salad, then broth from the bones. One nine-dollar bird covers four weeknights."
+    },
+    {
+      "id": "smoke-story-quotedark",
+      "channel": "story",
+      "dueAt": "2026-11-04T19:21:00-08:00",
+      "file": "smoke-story-quotedark",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Transformation",
+      "cta": "follow",
+      "template": "quotedark",
+      "photo": "lifestyle/kitchen-prep-scene.jpg",
+      "quote": "Three weeks in and I haven't ordered takeout once.",
+      "attr": "Ashly H., iEatz user",
+      "footer": "badge-br",
+      "photoClaim": "person slicing vegetables at a kitchen counter",
+      "title": "Three weeks without takeout",
+      "text": "Ashly H. on three weeks of cooking what was already in her kitchen, from the App Store reviews."
+    },
+    {
+      "id": "smoke-story-photo",
+      "channel": "story",
+      "dueAt": "2026-11-05T10:38:00-08:00",
+      "file": "smoke-story-photo",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Health/Diet",
+      "cta": "engagement",
+      "template": "photo",
+      "photo": "lifestyle/chop-cilantro.jpg",
+      "eyebrow": "Small habit",
+      "head": "Chop the cilantro before it wilts",
+      "chips": [
+        "Two minutes",
+        "Freezes well"
+      ],
+      "footer": "badge-tl",
+      "photoClaim": "hands chopping cilantro on a wooden board",
+      "title": "Chop the cilantro before it wilts",
+      "text": "Two minutes with a knife on Sunday and the cilantro lasts into next week. Freeze the rest in olive oil."
+    },
+    {
+      "id": "smoke-story-device",
+      "channel": "story",
+      "dueAt": "2026-11-05T15:55:00-08:00",
+      "file": "smoke-story-device",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Product/Feature",
+      "cta": "app-value",
+      "template": "device",
+      "photo": "app-instacart.jpg",
+      "head": "Soup night, minus the <span class=\"accent\">missing onion.</span>",
+      "cap": "When a recipe needs one thing you don't have, iEatz sends it to an Instacart cart in a tap.",
+      "footer": "badge-br",
+      "photoClaim": "real iEatz screen listing missing items next to an Instacart cart",
+      "title": "The missing onion goes straight to an Instacart cart",
+      "text": "One missing item used to stall the whole recipe. Now it goes to a cart and the soup keeps going."
+    },
+    {
+      "id": "smoke-story-igphoto",
+      "channel": "story",
+      "dueAt": "2026-11-05T20:12:00-08:00",
+      "file": "smoke-story-igphoto",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Recipe/Food",
+      "cta": "other",
+      "template": "igphoto",
+      "photo": "food/spaghetti-plate.jpg",
+      "eyebrow": "Midweek",
+      "head": "Wednesday spaghetti, twenty minutes flat",
+      "chips": [
+        "One skillet",
+        "All pantry"
+      ],
+      "footer": "badge-bl",
+      "photoClaim": "plate of spaghetti with mushrooms and herbs",
+      "title": "Twenty-minute Wednesday spaghetti",
+      "text": "Spaghetti, mushrooms, garlic and whatever herbs are left. One skillet, twenty minutes, Wednesday handled."
+    },
+    {
+      "id": "smoke-story-collage",
+      "channel": "story",
+      "dueAt": "2026-11-06T11:29:00-08:00",
+      "file": "smoke-story-collage",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Pantry/Fridge",
+      "cta": "receipt-scan",
+      "template": "collage",
+      "head": "Pantry to <span class=\"accent\">plate</span> in fifteen.",
+      "cards": [
+        {
+          "photo": "pantry/pantry-real-shelves.jpg",
+          "w": 540,
+          "h": 500,
+          "x": 70,
+          "y": 180,
+          "rot": -3,
+          "tape": "left"
+        },
+        {
+          "photo": "food/tacos-lime.jpg",
+          "w": 420,
+          "h": 540,
+          "x": 580,
+          "y": 500,
+          "rot": 3.5,
+          "tape": "right",
+          "objPos": "50% 60%"
+        }
+      ],
+      "notes": [
+        {
+          "text": "the shelf nobody looks at",
+          "x": 660,
+          "y": 200
+        }
+      ],
+      "arrow": {
+        "text": "&larr; that shelf, tonight",
+        "x": 110,
+        "y": 720
+      },
+      "price": {
+        "text": "$2.10 / plate",
+        "x": 690,
+        "y": 1010
+      },
+      "footer": "badge-tl",
+      "photoClaim": "pantry shelves of packaged groceries and tacos with chickpeas and lime",
+      "title": "Pantry to plate in fifteen minutes",
+      "text": "The shelf nobody looks at has tacos on it. Chickpeas, a lime and tortillas, about two dollars a plate."
+    },
+    {
+      "id": "smoke-story-recipe",
+      "channel": "story",
+      "dueAt": "2026-11-06T16:46:00-08:00",
+      "file": "smoke-story-recipe",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Recipe/Food",
+      "cta": "engagement",
+      "template": "recipe",
+      "eyebrow": "Keeps a week",
+      "head": "Green sauce for everything",
+      "ings": [
+        "Soft herbs",
+        "Yogurt",
+        "Lemon",
+        "Garlic"
+      ],
+      "method": "Blitz everything until smooth and spoon it over anything beige.",
+      "footer": "badge-br",
+      "title": "Green herb yogurt sauce that keeps a week",
+      "text": "Soft herbs, yogurt, lemon and garlic in a blender. It rescues the herbs and every plain dinner after."
+    },
+    {
+      "id": "smoke-story-bleed",
+      "channel": "story",
+      "dueAt": "2026-11-06T07:03:00-08:00",
+      "file": "smoke-story-bleed",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Lifestyle",
+      "cta": "app-value",
+      "template": "bleed",
+      "photo": "lifestyle/woman-in-kitchen.jpg",
+      "eyebrow": "Back to routine",
+      "head": "The 6:30 kitchen, back on schedule",
+      "sub": "Evenings run smoother when nobody has to decide what dinner is.",
+      "footer": "badge-tr",
+      "photoClaim": "woman cooking at a stove in a white kitchen",
+      "title": "The 6:30 kitchen, back on schedule",
+      "text": "A school-night kitchen at 6:30 with dinner already decided. The quiet part is nobody asking what we are having."
+    },
+    {
+      "id": "smoke-story-quote",
+      "channel": "story",
+      "dueAt": "2026-11-07T12:20:00-08:00",
+      "file": "smoke-story-quote",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Transformation",
+      "cta": "other",
+      "template": "quote",
+      "quote": "I just cook what's already in my kitchen.",
+      "name": "Ashly H.",
+      "footer": "badge-bl",
+      "title": "Cooking what is already in the kitchen",
+      "text": "The second half of Ashly H.'s review, and the whole idea of the app in one line."
+    },
+    {
+      "id": "smoke-story-statdark",
+      "channel": "story",
+      "dueAt": "2026-11-07T17:37:00-08:00",
+      "file": "smoke-story-statdark",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Health/Diet",
+      "cta": "engagement",
+      "template": "statdark",
+      "eyebrow": "Fridge to table",
+      "stat": "15 min",
+      "sub": "Fridge to table.",
+      "body": "Most weeknight dinners land in about fifteen minutes when they start from what you have.",
+      "footer": "badge-tl",
+      "title": "Fridge to table in about fifteen minutes",
+      "text": "Most iEatz weeknight dinners land in about fifteen minutes because the shopping step is gone."
+    },
+    {
+      "id": "smoke-story-carousel",
+      "channel": "story",
+      "dueAt": "2026-11-07T08:54:00-08:00",
+      "file": "smoke-story-carousel",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Grocery/Instacart",
+      "cta": "app-value",
+      "title": "Four weeknight bowls from one grocery run",
+      "text": "Swipe for four bowls: grain bowl, kimchi rice, chickpea bowl and a green bean power bowl. Save it for the next grocery run.",
+      "slides": [
+        {
+          "template": "poster",
+          "head": "Four bowls from <span class=\"i\">one</span> grocery run.",
+          "body": "Swipe. Same bag of groceries, four weeknights, no repeats.",
+          "readout": [
+            {
+              "label": "Bowls",
+              "value": "4"
+            },
+            {
+              "label": "Store trips",
+              "value": "1"
+            }
+          ],
+          "strip": true,
+          "footer": "badge-br"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/grain-bowl-burlap.jpg",
+          "head": "Monday: chicken grain bowl",
+          "ings": [
+            "Chicken",
+            "Rice",
+            "Chickpeas",
+            "Greens"
+          ],
+          "method": "Warm the rice, slice the chicken, pile it all in one bowl.",
+          "photoClaim": "wooden bowl of sliced chicken, rice and chickpeas"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/rice-bowl-in-hands.jpg",
+          "head": "Tuesday: kimchi rice bowl",
+          "ings": [
+            "Rice",
+            "Kimchi",
+            "Egg",
+            "Scallion"
+          ],
+          "method": "Leftover rice under a heap of kimchi. Fry an egg if you have one.",
+          "photoClaim": "hands holding a bowl of rice topped with kimchi"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/chickpea-power-bowl.jpg",
+          "head": "Wednesday: chickpea bowl",
+          "ings": [
+            "Chickpeas",
+            "Cucumber",
+            "Tomato",
+            "Yogurt"
+          ],
+          "method": "Crisp the chickpeas in a hot pan, then everything cold on top.",
+          "photoClaim": "bowl of chickpeas, cucumber, tomato and greens"
+        },
+        {
+          "template": "recipephoto",
+          "photo": "food/power-bowl-veg.jpg",
+          "head": "Thursday: green bean power bowl",
+          "ings": [
+            "Green beans",
+            "Couscous",
+            "Tomatoes",
+            "Herbs"
+          ],
+          "method": "Blanch the beans, fluff the couscous, dress it all with lemon.",
+          "photoClaim": "plate of green beans, couscous and tomatoes"
+        }
+      ]
+    },
+    {
+      "id": "smoke-story-threadphoto",
+      "channel": "story",
+      "dueAt": "2026-11-08T13:11:00-08:00",
+      "file": "smoke-story-threadphoto",
+      "w": 1080,
+      "h": 1920,
+      "pillar": "Lifestyle",
+      "cta": "follow",
+      "template": "thread",
+      "bg": {
+        "photo": "fridge/fridge-stocked.jpg",
+        "objPos": "50% 50%"
+      },
+      "msgs": [
+        {
+          "who": "them",
+          "text": "are we out of everything"
+        },
+        {
+          "who": "me",
+          "text": "nope. eggs, yogurt, half a box of veg"
+        },
+        {
+          "who": "me",
+          "text": "iEatz says shakshuka"
+        },
+        {
+          "who": "them",
+          "text": "ok im in"
+        }
+      ],
+      "foot": "The fridge had dinner in it the whole time.",
+      "footer": "badge-tr",
+      "photoClaim": "open fridge with stocked shelves, yogurt cups and a box of vegetables",
+      "title": "The fridge had dinner in it the whole time",
+      "text": "Eggs, yogurt and half a box of vegetables is shakshuka. The fridge was never empty."
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 // Single shell registry — ALL templates live here; ALL CSS lives in base.css.
-// Every shell works at both 1080x1350 (IG) and 1000x1500 (Pinterest).
-// Surfaces: paper | mint | dark | photo-bleed. The diversity gate reads these tags.
+// Every shell renders at 1080x1350 (IG feed), 1000x1500 (Pinterest) and 1080x1920 (story/reel).
+// Surfaces: paper | paper-deep | mint | dark | photo-bleed. The diversity gate reads these tags
+// (surfaceOf(p) for shells whose surface depends on props, e.g. thread).
+// deprecated: true = kept so old batches re-render; the gate warns on any new use.
 
 const MARK = `<svg class="mark" viewBox="0 0 38.25 58.486" fill="none">
 <path d="M 0 5.03 C 0 2.252 2.252 0 5.03 0 L 33.22 0 C 35.998 0 38.25 2.252 38.25 5.03 L 38.25 20.119 L 0 20.119 L 0 5.03 Z" fill="currentColor"></path>
@@ -55,6 +57,61 @@ const F_PAPER = { url: foot, row: rowPaper, bottom: 'paper', top: 'paper' };
 const F_PHOTO_TOP = { url: foot, row: rowPaper, bottom: 'paper', top: 'photo' };
 const F_BLEED = { url: footDark, row: rowDarkAbs, bottom: 'dark', top: 'photo' };
 
+// ---------- v2 helpers ----------
+const img = (PHOTOS, f, pos) => `<img src="${PHOTOS}/${f}" alt=""${pos ? ` style="object-position:${pos}"` : ''}>`;
+const need = (p, ...keys) => { for (const k of keys) if (p[k] == null || p[k] === '') throw new Error(`${p.file}: template "${p.template}" needs "${k}"`); };
+const cap = (p, key, max, min = 0) => {
+  const n = (p[key] || []).length;
+  if (n > max) throw new Error(`${p.file}: "${key}" has ${n} entries, max ${max}`);
+  if (n < min) throw new Error(`${p.file}: "${key}" has ${n} entries, min ${min}`);
+};
+const once = (p, html, cls, max = 1) => {
+  const n = (String(html).match(new RegExp(`class="${cls}"`, 'g')) || []).length;
+  if (n > max) throw new Error(`${p.file}: headline has ${n} class="${cls}" spans, max ${max}`);
+};
+// Seeded PRNG (FNV-1a -> mulberry32): same post file name, same pen strokes, every render.
+const seeded = (str) => {
+  let h = 2166136261;
+  for (const c of String(str)) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); }
+  return () => { h = (h + 0x6D2B79F5) | 0; let t = Math.imul(h ^ (h >>> 15), 1 | h); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+};
+// Catmull-Rom through points -> cubic Bezier path (open).
+const smooth = (pts) => {
+  const f = (n) => n.toFixed(1);
+  let d = `M${f(pts[0][0])},${f(pts[0][1])}`;
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+    d += ` C${f(p1[0] + (p2[0] - p0[0]) / 6)},${f(p1[1] + (p2[1] - p0[1]) / 6)} ${f(p2[0] - (p3[0] - p1[0]) / 6)},${f(p2[1] - (p3[1] - p1[1]) / 6)} ${f(p2[0])},${f(p2[1])}`;
+  }
+  return d;
+};
+// One pen pass around an ellipse: 24 points, 2-5 px radial jitter, a slight tilt, and an
+// overshoot past the start the way a hand closes a loop.
+const penEllipse = (m, rnd) => {
+  const N = 24, start = rnd() * Math.PI * 2, tilt = (rnd() - 0.5) * 0.14, pts = [];
+  for (let i = 0; i <= N + 2; i++) {
+    const a = start + (i / N) * Math.PI * 2;
+    const j = (2 + rnd() * 3) * (rnd() < 0.5 ? -1 : 1);
+    const x = (m.rx + j) * Math.cos(a), y = (m.ry + j) * Math.sin(a);
+    pts.push([m.x + x * Math.cos(tilt) - y * Math.sin(tilt), m.y + x * Math.sin(tilt) + y * Math.cos(tilt)]);
+  }
+  return smooth(pts);
+};
+// Pen arrow: a slightly bowed jittered shaft plus two head strokes.
+const penArrow = (a, rnd) => {
+  const dx = a.x2 - a.x1, dy = a.y2 - a.y1, len = Math.hypot(dx, dy), nx = -dy / len, ny = dx / len;
+  const bow = (rnd() - 0.5) * len * 0.12, pts = [];
+  for (let i = 0; i <= 8; i++) {
+    const t = i / 8, b = Math.sin(Math.PI * t) * bow, j = (rnd() - 0.5) * 3;
+    pts.push([a.x1 + dx * t + nx * (b + j), a.y1 + dy * t + ny * (b + j)]);
+  }
+  const ang = Math.atan2(pts[8][1] - pts[7][1], pts[8][0] - pts[7][0]), L = 38;
+  const h = (s) => { const t = ang + Math.PI + s * (0.45 + (rnd() - 0.5) * 0.1); return `M${a.x2.toFixed(1)},${a.y2.toFixed(1)} L${(a.x2 + L * Math.cos(t)).toFixed(1)},${(a.y2 + L * Math.sin(t)).toFixed(1)}`; };
+  return `${smooth(pts)} ${h(1)} ${h(-1)}`;
+};
+// Row helper for shells whose bottom row carries its own caption/headline: badge left or right of it.
+const withBadge = (content, b, h) => h === 'l' ? `${b}${content}` : `${content}${b}`;
+
 const TEMPLATES = {
   // ---------- paper surfaces ----------
   photo: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin t-photo">
@@ -72,13 +129,13 @@ const TEMPLATES = {
     <div class="list">${p.items.map((it, i) => `<div class="item"><div class="num">${i + 1}</div><div class="lab"><span class="t">${it.t}</span><span class="s">${it.s}</span></div></div>`).join('')}</div></div>${footer(p, F_PAPER)}
   </div>` },
 
-  recipe: { surface: 'paper', render: (p) => `<div class="pin ig-recipe">
+  recipe: { surface: 'paper', deprecated: 'text-only recipe cards are feed-dead: use recipephoto', render: (p) => `<div class="pin ig-recipe">
     <div class="rwrap">${eyebrow(p)}<h1 class="head">${p.head}</h1>
     <div class="need">You need</div><div class="ings">${p.ings.map(x => `<span class="ing">${x}</span>`).join('')}</div>
     <div class="method"><span class="rule"></span><p>${p.method}</p></div></div>${footer(p, F_PAPER)}
   </div>` },
 
-  quote: { surface: 'paper', render: (p) => `<div class="pin ig-quote">
+  quote: { surface: 'paper', deprecated: 'paper quote retired: use quotedark', render: (p) => `<div class="pin ig-quote">
     <div class="qwrap">${eyebrow(p)}<blockquote class="quote">${p.quote}</blockquote>
     <div class="attr"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="name">${p.name}</span></div></div>${footer(p, F_PAPER)}
   </div>` },
@@ -136,7 +193,7 @@ const TEMPLATES = {
   </div>` },
 
   // ---------- dark surface ----------
-  statdark: { surface: 'dark', render: (p) => `<div class="pin ig-statdark">
+  statdark: { surface: 'dark', deprecated: 'folded into poster (type-only shell)', render: (p) => `<div class="pin ig-statdark">
     <div class="swrap">${eyebrow(p, ' mint')}<div class="bignum">${p.stat}</div>
     <h1 class="subhead">${p.sub}</h1><div class="stat-body"><span class="rule"></span><p>${p.body}</p></div></div>
     ${footer(p, { url: `<div class="foot-dark">${badgeDark}<span class="url">ieatzhealthy.com</span></div>`, row: rowDark, bottom: 'dark', top: 'dark' })}
@@ -152,6 +209,149 @@ const TEMPLATES = {
     <img class="bg" src="${PHOTOS}/${p.photo}" alt="" style="object-position:${p.objPos || 'center'}"><div class="scrim"></div>
     <div class="bwrap">${eyebrow(p, ' mint')}<h1 class="bhead">${p.head}</h1>${p.sub ? `<p class="bsub">${p.sub}</p>` : ''}</div>${footer(p, F_BLEED)}
   </div>` },
+
+  // ---------- v2 shells (Sep 2026 creative refresh) ----------
+  // receipt: the product mechanic on screen. Receipt tape on deep green, mono line items,
+  // "iEatz read this as" and the dinners it maps to. Motion-capable (tape prints line by line).
+  receipt: { surface: 'dark', motion: true, render: (p) => {
+    need(p, 'store', 'total', 'head'); cap(p, 'lines', 6, 1); cap(p, 'dishes', 4, 1);
+    if ((p.head.match(/<em>/g) || []).length > 1) throw new Error(`${p.file}: receipt head allows one <em>`);
+    const f = p.footer || 'badge-br';
+    const row = (b, h) => `<div class="rc-bottom">${withBadge(`<h1 class="rc-head" data-fit="56">${p.head}</h1>`, b, h)}</div>`;
+    const bottom = f === 'badge-bl' || f === 'badge-br' ? footer(p, { row, bottom: 'dark', def: 'badge-br' })
+      : `<div class="rc-bottom"><h1 class="rc-head" data-fit="56">${p.head}</h1></div>${footer(p, { url: `<div class="foot-dark rc-url">${badgeDark}<span class="url">ieatzhealthy.com</span></div>`, bottom: 'dark', top: 'dark', def: 'badge-br' })}`;
+    return `<div class="pin sh-receipt">
+    <div class="rc-stage"><div class="rc-wrap">
+      <div class="rc-tape">
+        <div class="rc-store">${p.store}</div>${p.meta ? `<div class="rc-meta">${p.meta}</div>` : ''}
+        <div class="rc-lines">${p.lines.map(l => `<div class="rc-line"><span>${l.item}</span><span>${l.price}</span></div>`).join('')}${p.moreCount ? `<div class="rc-line rc-more"><span>+ ${p.moreCount} more</span><span></span></div>` : ''}</div>
+        <div class="rc-total"><span>Total</span><span>${p.total}</span></div>
+        <div class="rc-read">iEatz read this as</div>
+        <div class="rc-dishes">${p.dishes.map(d => `<div class="rc-dish"><span class="n">${d.name}</span><span class="w">${d.when}</span></div>`).join('')}</div>
+      </div>
+      ${p.sticker ? `<div class="rc-sticker">${p.sticker}</div>` : ''}
+    </div></div>
+    ${bottom}
+  </div>`; } },
+
+  // poster: type is the picture. One tomato underline (.u), one green italic (.i), mono readout,
+  // optional ticker strip. Replaces statdark as the type-only shell. Motion: readout counts up,
+  // underline draws in.
+  poster: { surface: 'paper', motion: true, render: (p) => {
+    need(p, 'head'); once(p, p.head, 'u'); once(p, p.head, 'i'); cap(p, 'readout', 3);
+    const hasU = /class="u"/.test(p.head);
+    const bars = Array.from({ length: 8 }, (_, i) => `<i class="${i % 2 ? (hasU ? 'k' : 't') : 'g'}"></i>`).join('');
+    return `<div class="pin sh-poster">
+    <h1 class="po-head" data-fit="84">${p.head}</h1>
+    ${p.body || p.readout ? `<div class="po-row">${p.body ? `<p class="po-body">${p.body}</p>` : '<span></span>'}${p.readout ? `<div class="po-readout">${p.readout.map(r => `<div class="ro"><span class="l">${r.label}</span><span class="v">${r.value}</span></div>`).join('')}</div>` : ''}</div>` : ''}
+    ${p.strip ? `<div class="po-strip">${bars}</div>` : ''}
+    ${footer(p, { url: foot, row: rowPaper, bottom: 'paper', top: 'paper', def: 'badge-tr' })}
+  </div>`; } },
+
+  // collage: 2-3 photos as cut cards on deep paper, saffron tape, serif annotations, one tomato
+  // price tag, film grain. Positions are px on a 1080x1350 stage, scaled by frame width and
+  // centered vertically at other sizes.
+  collage: { surface: 'paper-deep', ownGrain: true, render: (p, PHOTOS) => {
+    need(p, 'head'); cap(p, 'cards', 3, 2); cap(p, 'notes', 4);
+    const s = p.w / 1080, top = Math.round((p.h - 1350 * s) / 2);
+    const tape = (t) => !t ? '' : `<i class="cc-tape ${t === true ? 'c' : t}"></i>`;
+    return `<div class="pin sh-collage">
+    <div class="cc-stage" style="top:${top}px;transform:scale(${s})">
+      ${p.cards.map(c => `<div class="cc-card" style="left:${c.x}px;top:${c.y}px;width:${c.w}px;height:${c.h}px;transform:rotate(${c.rot || 0}deg)">${img(PHOTOS, c.photo, c.objPos)}${tape(c.tape)}</div>`).join('')}
+      ${(p.notes || []).map(n => `<div class="cc-note${n.big ? ' big' : ''}" style="left:${n.x}px;top:${n.y}px">${n.text}</div>`).join('')}
+      ${p.arrow ? `<div class="cc-arrow" style="left:${p.arrow.x}px;top:${p.arrow.y}px">${p.arrow.text}</div>` : ''}
+      ${p.price ? `<div class="cc-price" style="left:${p.price.x}px;top:${p.price.y}px">${p.price.text}</div>` : ''}
+      <h1 class="cc-head">${p.head}</h1>
+    </div>
+    ${p.grain === false ? '' : '<div class="grain-layer"></div>'}
+    ${footer(p, { url: foot, row: rowPaper, bottom: 'paper', top: 'paper', def: 'badge-tl' })}
+  </div>`; } },
+
+  // split: before over after in one frame. Top photo + mono label, bottom photo under a dark
+  // scrim, paper seam label on the cut, caption bottom (<b> renders mono saffron).
+  split: { surface: 'photo-bleed', render: (p, PHOTOS) => {
+    need(p, 'top', 'bottom', 'seam');
+    const f = p.footer || 'badge-br';
+    const labelSide = f === 'badge-tl' ? 'r' : 'l';
+    const capHtml = p.cap ? `<p class="sp-cap">${p.cap}</p>` : '<span></span>';
+    const row = (b, h) => `<div class="sp-row">${withBadge(capHtml, b, h)}</div>`;
+    const bottom = f === 'badge-bl' || f === 'badge-br' ? footer(p, { row, bottom: 'dark', def: 'badge-br' })
+      : `${p.cap ? `<div class="sp-row">${capHtml}</div>` : ''}${f === 'badge-url' ? `<div class="foot-dark sp-url">${badgeDark}<span class="url">ieatzhealthy.com</span></div>` : ''}`;
+    return `<div class="pin sh-split">
+    <div class="sp-half sp-top">${img(PHOTOS, p.top.photo, p.top.objPos)}${p.top.label ? `<div class="sp-label ${labelSide}">${p.top.label}</div>` : ''}</div>
+    <div class="sp-half sp-bot">${img(PHOTOS, p.bottom.photo, p.bottom.objPos)}<div class="sp-scrim"></div></div>
+    <div class="sp-cut"></div>
+    <div class="sp-seam"><div class="sp-pill" data-fit="36">${p.seam}</div></div>
+    <div class="sp-foot">${bottom}</div>
+    ${f === 'badge-tl' || f === 'badge-tr' ? footer(p, { top: 'photo', bottom: 'dark' }) : ''}
+  </div>`; } },
+
+  // thread: the 5:45 "what do you want for dinner" text exchange. A messaging UI, not iEatz UI.
+  // bg: "mint" (panel) or {photo, objPos} (bubbles float over a full-bleed photo, "Delivered"
+  // under the last me bubble, one white line at the bottom).
+  thread: { surface: (p) => (p.bg && typeof p.bg === 'object' ? 'photo-bleed' : 'mint'), render: (p, PHOTOS) => {
+    const onPhoto = p.bg && typeof p.bg === 'object';
+    const bubbles = (p.msgs || []).filter(m => m.who);
+    if (!bubbles.length) throw new Error(`${p.file}: thread needs at least one message`);
+    if (bubbles.length > 8) throw new Error(`${p.file}: thread has ${bubbles.length} messages, max 8`);
+    let lastMe = -1; p.msgs.forEach((m, i) => { if (m.who === 'me') lastMe = i; });
+    const msgs = p.msgs.map((m, i) => {
+      const el = m.time ? `<div class="th-time">${m.time}</div>`
+        : m.photo ? `<div class="th-b me ph">${img(PHOTOS, m.photo, m.objPos)}</div>`
+        : `<div class="th-b ${m.who === 'me' ? 'me' : 'them'}">${m.text}</div>`;
+      return el + (onPhoto && i === lastMe ? '<div class="th-dlv">Delivered</div>' : '');
+    }).join('');
+    const on = onPhoto ? 'dark' : 'paper';
+    const fline = p.foot ? `<p class="th-line">${p.foot}</p>` : '<span></span>';
+    const row = (b, h) => `<div class="th-foot">${withBadge(fline, b, h)}</div>`;
+    const f = p.footer || 'badge-br';
+    const bottom = f === 'badge-bl' || f === 'badge-br' ? footer(p, { row, bottom: on, def: 'badge-br' })
+      : `${p.foot ? `<div class="th-foot">${fline}</div>` : ''}${footer(p, { url: onPhoto ? `<div class="foot-dark th-url">${badgeDark}<span class="url">ieatzhealthy.com</span></div>` : foot.replace('class="foot"', 'class="foot th-url"'), top: onPhoto ? 'photo' : 'paper', bottom: on, def: 'badge-br' })}`;
+    return `<div class="pin sh-thread${onPhoto ? ' on-photo' : ''}">
+    ${onPhoto ? `<img class="bg" src="${PHOTOS}/${p.bg.photo}" alt="" style="object-position:${p.bg.objPos || 'center'}"><div class="th-scrim"></div>` : ''}
+    ${p.head ? `<h1 class="th-head">${p.head}</h1>` : ''}
+    <div class="th-msgs">${msgs}</div>
+    ${bottom}
+  </div>`; } },
+
+  // sharpie: a photo marked up with a pen. Marks are ellipses/arrows in 1080x1350 photo space on
+  // a 4:5 stage that COVERS the frame, so marks stay on the thing they circle at every size.
+  // Pen paths are seeded from the post file name: re-renders are identical.
+  sharpie: { surface: 'photo-bleed', render: (p, PHOTOS) => {
+    need(p, 'photo', 'head'); cap(p, 'marks', 4, 1);
+    const headText = String(p.head).replace(/<[^>]+>/g, '');
+    if (headText.length > 24) throw new Error(`${p.file}: sharpie head is ${headText.length} chars, max 24`);
+    const ink = p.ink || '#0A0F0C';
+    const c = Math.max(p.w / 1080, p.h / 1350);
+    const vx = (1080 * c - p.w) / (2 * c), vy = (1350 * c - p.h) / (2 * c);
+    for (const m of p.marks) {
+      if (m.x - m.rx < vx + 8 || m.x + m.rx > 1080 - vx - 8 || m.y - m.ry < vy + 8 || m.y + m.ry > 1350 - vy - 8)
+        throw new Error(`${p.file}: mark at (${m.x},${m.y}) is cropped out of the ${p.w}x${p.h} frame (visible x ${Math.round(vx)}-${Math.round(1080 - vx)}, y ${Math.round(vy)}-${Math.round(1350 - vy)})`);
+    }
+    const rnd = seeded(p.file);
+    const sw = (6 / c).toFixed(2);
+    const paths = p.marks.map(m => `<path d="${penEllipse(m, rnd)}"/><path d="${penEllipse(m, rnd)}" opacity="0.92"/>`).join('')
+      + (p.arrows || []).map(a => `<path d="${penArrow(a, rnd)}"/>`).join('');
+    const labels = p.marks.filter(m => m.label).map(m => {
+      const side = m.labelSide || 'above';
+      const pos = side === 'right' ? `left:${m.x + m.rx + 26}px;top:${m.y}px;transform:translateY(-50%)`
+        : side === 'below' ? `left:${m.x}px;top:${m.y + m.ry + 18}px;transform:translateX(-50%)`
+        : `left:${m.x}px;top:${m.y - m.ry - 18}px;transform:translate(-50%,-100%)`;
+      return `<div class="sk-label" style="${pos};font-size:${(44 / c).toFixed(1)}px">${m.label}</div>`;
+    }).join('');
+    const shade = p.shade != null ? p.shade : (p._topLum != null && p._topLum > 0.6 && ink !== '#fff' && ink.toLowerCase() !== '#ffffff');
+    return `<div class="pin sh-sharpie" style="--ink-pen:${ink}">
+    <div class="sk-stage" style="transform:translate(-50%,-50%) scale(${c})">
+      ${img(PHOTOS, p.photo, p.objPos)}
+      <svg class="sk-pen" viewBox="0 0 1080 1350" fill="none" stroke="${ink}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>
+      ${labels}
+    </div>
+    ${shade ? '<div class="sk-shade"></div>' : ''}
+    <h1 class="sk-head">${p.head}</h1>
+    ${footer(p, { url: footDark, row: rowDarkAbs, top: 'photo', bottom: 'photo', def: 'badge-br' })}
+  </div>`; } },
 };
 
-module.exports = { TEMPLATES, MARK, badge, badgeDark, foot, footDark, FOOTERS };
+const surfaceOf = (p) => { const t = TEMPLATES[p.template]; if (!t) return null; return typeof t.surface === 'function' ? t.surface(p) : t.surface; };
+
+module.exports = { TEMPLATES, MARK, badge, badgeDark, foot, footDark, FOOTERS, surfaceOf };
