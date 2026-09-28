@@ -11,6 +11,11 @@
 //   CF_ACTION=set-production-branch
 //                      point the project's production branch at
 //                      CF_PRODUCTION_BRANCH (default main), then deploy.
+//   CF_ACTION=add-domain
+//                      add CF_DOMAIN (default www.ieatzhealthy.com) as a
+//                      custom domain on the project. Pages then validates it
+//                      and issues its certificate; run inspect to watch the
+//                      status go from pending to active.
 
 const ACCOUNT = process.env.CLOUDFLARE_ACCOUNT_ID || '5ad6af2a00cb0c3aa12ea9f2919524c9';
 const PROJECT = process.env.CF_PAGES_PROJECT || 'ieatz';
@@ -42,6 +47,12 @@ function line(d) {
   console.log(`source: ${project.source ? `${project.source.type} ${project.source.config && project.source.config.owner}/${project.source.config && project.source.config.repo_name} production_branch=${project.source.config && project.source.config.production_branch} production_deployments_enabled=${project.source.config && project.source.config.production_deployments_enabled} preview_deployment_setting=${project.source.config && project.source.config.preview_deployment_setting}` : 'none (direct upload)'}`);
   if (project.canonical_deployment) console.log(`canonical (production) deployment: ${line(project.canonical_deployment)}`);
   if (project.latest_deployment) console.log(`latest deployment:                ${line(project.latest_deployment)}`);
+  const domains = await cf('/domains');
+  console.log('custom domains:');
+  for (const d of domains) {
+    const v = d.validation_data || {}, ver = d.verification_data || {};
+    console.log(`  ${d.name}  status=${d.status}  validation=${v.status || '-'}${v.error_message ? ` (${v.error_message})` : ''}  verification=${ver.status || '-'}${ver.error_message ? ` (${ver.error_message})` : ''}`);
+  }
   const deployments = await cf('/deployments?per_page=10');
   console.log('recent deployments:');
   for (const d of deployments) console.log('  ' + line(d));
@@ -55,6 +66,14 @@ function line(d) {
       const updated = await cf('', { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
       console.log(`production branch changed: ${productionBranch} -> ${updated.production_branch}`);
       productionBranch = updated.production_branch;
+    }
+  }
+  if (action === 'add-domain') {
+    const name = process.env.CF_DOMAIN || 'www.ieatzhealthy.com';
+    if (domains.some((d) => d.name === name)) console.log(`${name} is already a custom domain on the project`);
+    else {
+      const d = await cf('/domains', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name }) });
+      console.log(`added ${name}: status=${d.status} validation=${JSON.stringify(d.validation_data || {})} verification=${JSON.stringify(d.verification_data || {})}`);
     }
   }
   if (action === 'deploy' || action === 'set-production-branch') {
