@@ -49,6 +49,10 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
    consent mechanism and privacy policy are live. */
 fbq('dataProcessingOptions', ['LDU'], 0, 0);
 
+/* No automatic events. The only click event is AppStoreClick, fired below.
+   autoConfig=false stops the pixel from inventing its own button-click
+   (SubscribedButtonClick) and page-metadata events. */
+fbq('set', 'autoConfig', false, '766649737085123');
 fbq('init', '766649737085123');
 fbq('track', 'PageView');
 
