@@ -284,13 +284,23 @@ with zero duplicates:
 8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
-- **Sep 28 – Oct 4 week = first v2 batch, created as Buffer DRAFTS (Sep 25):** IG 5 (receipt,
-  sharpie, carousel, thread, receipt reel) + Pinterest 6 (poster, split, recipephoto, collage, list,
-  sharpie), board-routed, IG first comments attached, 11 Slack alerts armed. Ledger:
-  `social/manifest/sep-28-oct-4-batch.json` (status `draft` + `bufferId` + `slackAlert`). **Drafts
-  do not publish until approved in Buffer**; the Slack alerts fire at `dueAt` regardless, so approve
-  before Mon Sep 28 07:35 PT. The queue
-  was EMPTY Sep 17–27: another coverage gap.
+- **BASELINE, Aug 14 – Sep 28 (Buffer metrics, pulled Sep 28). Read this before planning.**
+  iEatz IG: 13 posts, avg reach 9, avg views 17, 22 reactions total, **0 saves, 0 shares, 0 follows**
+  (the ~1 comment per post is our own first comment). Pinterest: 21 pins, avg 7.6 impressions (max
+  61, a food-waste stat pin), **0 saves**. IG has posted zero real-footage reels. Every pin links to
+  the App Store, so there is no claimed domain and no recipe Rich Pins. The queue went empty Sep
+  1–9 and Sep 17–28. Conclusion: distribution is the bottleneck, not design. Reach differences
+  between posts (5 vs 12) are noise at this sample size; do not pick "winning formats" from them.
+  Priorities until the numbers move: real-footage reels, daily engagement by the operator, the
+  Content Hub recipe pages (below), no queue gaps. Pause new shells and gates.
+- **Sep 28 – Oct 4 week = first v2 batch.** Created Sep 25 as Buffer DRAFTS (the brief said
+  "schedule as drafts"), so Monday's two posts never published while their Slack alerts fired.
+  Sep 28 review: 10 converted to scheduled (`edit_post` saveToDraft:false + customScheduled +
+  dueAt, verified by list_posts); IG receipt moved to Wed 12:40; the Mon Pinterest poster cut
+  (left as a draft). Content fixes re-rendered and re-hosted with `?v=2`. Two Slack alerts still
+  carry old headlines (s29-pin, o04-pin): scheduled Slack messages cannot be edited via the API.
+  **Rule: never leave a batch as drafts unless the operator will publish by hand; say so in the
+  same message if you do.** Ledger: `social/manifest/sep-28-oct-4-batch.json`.
 - **First comments:** `create_post`/`edit_post` now accept `metadata.instagram.firstComment` directly
   (verified Sep 25, echoed on create). The GraphQL `editPost` recipe in §8.4 is only needed for
   posts created without it.
@@ -331,7 +341,9 @@ with zero duplicates:
   connectors (Buffer, Notion, github, Slack, Gmail, Drive, Calendar, Figma, Stripe, Meta Ads,
   Cloudflare, Claude_Code_Remote) + WebFetch/WebSearch. **Merge this to `main`** so every
   future cloud session inherits it at start — a session only loads settings that exist on
-  its checkout branch at session start (§8.2).
+  its checkout branch at session start (§8.2). Sep 28: operator authorized working without
+  per-action approval; Bash/Edit/Write/Read/Glob/Grep added to the allowlist, and Buffer set
+  to always-allow in the connector settings.
 
 ## 12. Applying this to a new account (portability)
 This file is iEatz-specific; the reusable engine is the **`social-content-pipeline` skill**
@@ -347,6 +359,12 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Sep 28 2026 — first look at the numbers:** six weeks of metrics show near-zero distribution
+  on both channels (see §11 baseline). Every earlier fix (grid variety, diversity gate, v2 shells)
+  improved how the feed looks; none addressed reach. Also this week: a split pin claimed two fridge
+  photos over one fridge and one bowl, and passed both gates and the first QA pass. Gates check
+  form, not whether a photo backs its words, so a person previews the contact sheet before a
+  batch is scheduled.
 - **Sep 25 2026 — v2 engine (creative direction refresh):** the feed read as one post repeated
   because every shell shared one anatomy (eyebrow, italic tail, badge+URL footer). Engine now:
   footer and eyebrow are props; six new shells (receipt, poster, collage, split, thread, sharpie)
