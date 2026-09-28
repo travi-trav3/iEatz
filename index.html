@@ -2304,6 +2304,8 @@ footer{background:var(--ink-1);color:var(--paper);padding:80px 0 56px}
                       data-cta-position) attribute and
                       store=app_store|google_play|onelink, so we can see
                       which CTA and which store actually earns the tap.
+                      Once per visit: repeat taps within 30 minutes of the
+                      counted one don't fire again.
 
      To carry this into the redesign: copy this whole block into <head>, and
      keep data-cta="..." on every store link.
@@ -2334,12 +2336,19 @@ fbq('track', 'PageView');
 /* Store CTA clicks (App Store, Google Play, and the onelink). Every CTA is target="_blank",
    so this page stays alive when the store opens and the beacons complete
    reliably. Fires both the Meta AppStoreClick custom event (name kept so
-   existing custom conversions keep matching) and a Pinterest `lead`. */
+   existing custom conversions keep matching) and a Pinterest `lead`.
+   Counted once per visit, so one visitor is one conversion: a tap, a trip
+   to the store and back, and a second tap within 30 minutes send nothing
+   more. A page reload, or a tap 30+ minutes later, counts again. */
+var STORE_CLICK_WINDOW_MS = 30 * 60 * 1000, lastStoreClickAt = 0;
 document.addEventListener('click', function (e) {
   var t = e.target;
   if (!t || typeof t.closest !== 'function') return;
   var a = t.closest('a[href*="apps.apple.com"], a[href*="play.google.com"], a[href*="onelink.to"]');
   if (!a) return;
+  var now = Date.now();
+  if (now - lastStoreClickAt < STORE_CLICK_WINDOW_MS) return;
+  lastStoreClickAt = now;
   var store = a.href.indexOf('play.google.com') > -1 ? 'google_play'
     : a.href.indexOf('onelink.to') > -1 ? 'onelink' : 'app_store';
   var placement = a.getAttribute('data-cta') || a.getAttribute('data-cta-position') || 'unlabeled';
