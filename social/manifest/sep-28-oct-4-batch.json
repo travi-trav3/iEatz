@@ -26,7 +26,7 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "First v2 batch (creative direction refresh, Sep 2026). IG 5: receipt, sharpie, carousel (four dinners from one chicken), thread over a fridge, receipt reel. Pinterest 6: poster, split, recipephoto, collage, list, sharpie. Scheduled as Buffer DRAFTS for operator review. Receipt math in the render batch note. Photos chosen for photoClaim honesty: the library has no soup or chicken-taco photo, so the chicken carousel is carve / saucy rice / rice and bean bowl / fried rice. Generic store name on receipts (no real retailer). [rev 2026-09-25: all 11 created in Buffer as DRAFTS with dueAt kept (approve each draft in Buffer to schedule it); 5 IG first comments set via create_post and echoed; reel accepted as video/mp4 8000 ms; 11 Slack alerts armed at dueAt, which fire whether or not the drafts are approved.]",
+  "note": "First v2 batch (creative direction refresh, Sep 2026). IG 5: receipt, sharpie, carousel (four dinners from one chicken), thread over a fridge, receipt reel. Pinterest 6: poster, split, recipephoto, collage, list, sharpie. Scheduled as Buffer DRAFTS for operator review. Receipt math in the render batch note. Photos chosen for photoClaim honesty: the library has no soup or chicken-taco photo, so the chicken carousel is carve / saucy rice / rice and bean bowl / fried rice. Generic store name on receipts (no real retailer). [rev 2026-09-25: all 11 created in Buffer as DRAFTS with dueAt kept (approve each draft in Buffer to schedule it); 5 IG first comments set via create_post and echoed; reel accepted as video/mp4 8000 ms; 11 Slack alerts armed at dueAt, which fire whether or not the drafts are approved.] [rev 2026-09-28 review: all 11 were still drafts, so Monday missed both posts (Slack alerts fired anyway). Fixes: split pin said \"Same fridge\" over a bowl photo and its fridge held none of the bowl; kale pin had the spoil order backwards; collage pantry card was a junk-food shelf; thread named dinners the photo could not support; reel hook on screen from frame 0; carousel slides full-bleed plus a save slide; receipt label keeps iEatz casing; caption closers varied. IG receipt moved to Wed 12:40; Pinterest poster cut. Then scheduled for real.]",
   "formulaicCtas": [
     "receipt-scan"
   ],
@@ -35,7 +35,7 @@
       "id": "s28-ig",
       "status": "draft",
       "channel": "instagram",
-      "dueAt": "2026-09-28T12:40:00-07:00",
+      "dueAt": "2026-09-30T12:40:00-07:00",
       "file": "assets/social/sep28/s28-ig-receipt.png",
       "template": "receipt",
       "surface": "dark",
@@ -87,7 +87,8 @@
         "assets/social/sep28/o01-ig-carousel--02.png",
         "assets/social/sep28/o01-ig-carousel--03.png",
         "assets/social/sep28/o01-ig-carousel--04.png",
-        "assets/social/sep28/o01-ig-carousel--05.png"
+        "assets/social/sep28/o01-ig-carousel--05.png",
+        "assets/social/sep28/o01-ig-carousel--06.png"
       ],
       "template": "carousel",
       "surface": "paper",
@@ -101,7 +102,7 @@
       "photoStyle": "process",
       "photoClaim": "hands carving a roast chicken on a tray beside the stove",
       "cta": "app-value",
-      "alt": "Five-slide carousel. Slide one, cream poster: Four dinners from one chicken, with a readout of $8.99 bird, 4 dinners, $2.25 chicken per dinner. Slides two to five: carving a roast chicken, shredded chicken in tomato sauce over rice, a bowl of sliced chicken with rice, corn and kidney beans, and fried rice stirred in a pan, each with ingredients and a one-line method.",
+      "alt": "Six-slide carousel. Slide one, cream poster: Four dinners from one chicken, with a readout of $8.99 bird, 4 dinners, $2.25 chicken per dinner. Slides two to five are full photos with the night and method: carving a roast chicken, shredded chicken in tomato sauce over rice, a bowl of sliced chicken with rice, corn and kidney beans, and fried rice stirred in a pan. Slide six: Save this for the next $8.99 bird.",
       "text": "One $8.99 rotisserie chicken, four dinners. Swipe for the plan.\n\nNight one you carve it hot and box the rest. Night two it goes saucy over rice with crushed tomatoes and garlic. Night three is a rice and bean bowl with the sliced chicken on top. Night four, the last shreds go into fried rice.\n\nSave this for the next time you walk past the rotisserie case.\n\n#rotisseriechicken #mealprep #budgetmeals #weeknightdinner #ieatzhealthy",
       "firstComment": "Night two is the sleeper hit. Crushed tomatoes and garlic make leftover chicken taste like it was the plan all along.",
       "bufferId": "6ab6bf5525fe0dd5edcbda0e",
@@ -123,11 +124,11 @@
       "topic": "Family",
       "heroPhoto": "fridge/fridge-full-produce.jpg",
       "photoStyle": "kitchen",
-      "photoClaim": "open fridge in warm light with bread, two jugs of juice and heads of cabbage and lettuce",
+      "photoClaim": "open fridge in warm light with eggs, bread, two jugs of juice, a cabbage, a bag of green beans and lettuce",
       "cta": "follow",
-      "alt": "Full-bleed photo of an open fridge in warm light with bread, two juice jugs and heads of cabbage and lettuce. Text-message bubbles float over it: are we out of everything; nope, cabbage, bread, two lettuces; iEatz found three dinners in there; which one uses the cabbage; all three lol; ok im in.",
-      "text": "Friday, 5:48 PM. The fridge looks empty until somebody actually reads it: a cabbage, a loaf of bread, two heads of lettuce.\n\nThat's three dinners. Tell iEatz what's in there and it builds them for you.\n\n#whatsfordinner #fridgecleanout #familydinner #ieatzhealthy",
-      "firstComment": "We stand by 'all three lol' as the most honest cabbage review ever written.",
+      "alt": "Full-bleed photo of an open fridge in warm light with eggs, bread, two juice jugs, a cabbage and a bag of green beans. Text-message bubbles float over it: are we out of everything; nope, eggs, cabbage, green beans, bread; iEatz says cabbage fried rice tonight; egg sandwiches tomorrow; wait we have rice?; we always have rice; ok im in.",
+      "text": "Friday, 5:48 PM. The fridge looks empty until somebody reads it: eggs, a cabbage, a bag of green beans, bread. That's cabbage fried rice tonight and egg sandwiches tomorrow.\n\nWhat's the dinner hiding in your fridge right now?\n\n#whatsfordinner #fridgecleanout #familydinner #ieatzhealthy",
+      "firstComment": "The rice lives in the pantry. The rice always lives in the pantry.",
       "bufferId": "6ab6bf559c15eda27741cdb1",
       "slackAlert": "Dr0C4P16MGH2"
     },
@@ -147,7 +148,7 @@
       "pillar": "Product/Feature",
       "topic": "Product",
       "cta": "receipt-scan",
-      "alt": "Eight-second video on deep green: a receipt prints line by line with spinach, ricotta, crushed tomatoes, penne, garlic and lemons for $15.26, then three dinners appear, a yellow sticker reads $5.09 a dinner, and the headline rises: Cooked in order of what wilts first.",
+      "alt": "Eight-second video on deep green with the headline What wilts first gets cooked first on screen from the first frame: a receipt prints line by line with spinach, ricotta, crushed tomatoes, penne, garlic and lemons for $15.26, three dinners appear and a yellow sticker reads $5.09 a dinner.",
       "text": "Thursday's run: spinach, ricotta, crushed tomatoes, penne, garlic and lemons. $15.26 for three dinners.\n\nCook in the order things wilt. The spinach goes first, into Thursday's soup. The ricotta holds for baked penne on Friday and lemon pasta on Saturday. Scan the receipt and iEatz builds the recipes.\n\n#foodwaste #mealplanning #pastanight #budgetmeals #ieatzhealthy",
       "firstComment": "Lemon ricotta pasta on a Saturday is what a clean fridge looks like.",
       "bufferId": "6ab6bf565c3761cdae7f5e9e",
@@ -155,7 +156,7 @@
     },
     {
       "id": "s28-pin",
-      "status": "draft",
+      "status": "cut",
       "channel": "pinterest",
       "dueAt": "2026-09-28T07:35:00-07:00",
       "file": "assets/pinterest/sep28/s28-pin-poster.png",
@@ -174,7 +175,8 @@
       "alt": "Cream typographic pin: Your grocery receipt is already a meal plan, with a red underline under already and meal plan in green italic, plus a readout of 6 items, 4 dinners, $4.98 per dinner.",
       "text": "Your grocery receipt is already a meal plan. Six items, $19.93: eggs, black beans, flour tortillas, baby spinach, feta and salsa cover four dinners at about $4.98 each. Black bean quesadillas, a spinach and feta scramble, huevos rancheros and bean and spinach burritos. Snap the receipt in the iEatz app and it builds recipes from exactly what you bought.",
       "bufferId": "6ab6bf570fe9479c65b59f74",
-      "slackAlert": "Dr0C4E8AFJDB"
+      "slackAlert": "Dr0C4E8AFJDB",
+      "cutReason": "missed its Mon 07:35 slot as a draft; cut in the Sep 28 review: text-only pin that links to the App Store is an ad, not a pin anyone searches for"
     },
     {
       "id": "s29-pin",
@@ -190,15 +192,15 @@
       "accentTail": true,
       "pillar": "Transformation",
       "topic": "Pantry/Fridge",
-      "heroPhoto": "fridge/fridge-stocked.jpg",
+      "heroPhoto": "fridge/fridge-real-mess.jpg",
       "photoStyle": "kitchen",
-      "photoClaim": "open fridge with stocked shelves above a bowl of greens with soft eggs, avocado and radish",
+      "photoClaim": "crowded open fridge with a carton of eggs on the top shelf above a bowl of greens with soft boiled eggs, avocado and radish",
       "cta": "other",
       "board": "Pantry meals and fridge clean out dinners",
       "boardServiceId": "1011339728762228744",
-      "title": "Fridge clean out dinner: greens, soft eggs and avocado from what you already have",
-      "alt": "Split pin: an open, stocked fridge labelled Sunday 6:02 PM above a bowl of greens with soft eggs, avocado and radish. Middle label: Same fridge, Tuesday. Caption: Nothing new came home. $0.00 spent.",
-      "text": "Same fridge, two days apart. Sunday it looked like there was nothing for dinner. Tuesday it was a bowl of greens, soft boiled eggs, avocado and radish, and nobody went to the store. Tell iEatz what's in your fridge and it builds the recipe around it.",
+      "title": "Fridge clean out dinner: a soft egg and greens bowl from what you already have",
+      "alt": "Split pin: a crowded open fridge with a carton of eggs on the top shelf, labelled Sunday 6:02 PM, above a bowl of greens with soft boiled eggs, avocado and radish. Middle label: Sunday's fridge. Tuesday's bowl. Caption: The eggs came off the top shelf. $0.00 spent on dinner.",
+      "text": "Sunday night it was a crowded fridge and no plan. Tuesday the eggs on the top shelf became dinner: greens, soft boiled eggs, avocado and radish in one bowl, and nobody went to the store. Save this for the next time the fridge looks like odds and ends.",
       "bufferId": "6ab6bf585c3761cdae7f5ef0",
       "slackAlert": "Dr0C4E8ALFKP"
     },
@@ -242,14 +244,14 @@
       "accentTail": false,
       "pillar": "Pantry/Fridge",
       "topic": "Pantry/Fridge",
-      "heroPhoto": "pantry/pantry-real-shelves.jpg",
+      "heroPhoto": "pantry/pantry-open-spice.jpg",
       "photoStyle": "kitchen",
-      "photoClaim": "pantry shelves of packaged groceries and a bowl of farfalle with pesto, cherry tomatoes and greens",
+      "photoClaim": "open pantry cupboard of jars, spices and a jar of pasta, and a bowl of farfalle with pesto, cherry tomatoes and greens",
       "cta": "engagement",
       "board": "Cheap healthy dinners on a budget",
       "boardServiceId": "1011339728762228747",
       "title": "Pantry pesto pasta for about $2 a plate: a 15-minute budget dinner",
-      "alt": "Collage pin on warm paper: a photo of crowded pantry shelves and a photo of farfalle with pesto, cherry tomatoes and greens, taped on at angles with handwritten notes and a red price tag reading $2.07 / plate. Headline: Pantry to plate in fifteen.",
+      "alt": "Collage pin on warm paper: a photo of an open pantry cupboard of jars and spices and a photo of farfalle with pesto, cherry tomatoes and greens, taped on at angles with handwritten notes and a red price tag reading $2.07 / plate. Headline: Pantry to plate in fifteen.",
       "text": "Pantry to plate in fifteen minutes. A $1.79 box of farfalle, a $3.99 jar of pesto and $2.49 of cherry tomatoes make four plates for $8.27, about $2.07 each. Toss the hot pasta with pesto, halve the tomatoes, add a handful of greens if you have them. iEatz finds dinners like this on the shelf you forgot about.",
       "bufferId": "6ab6bf599c15eda27741ce20",
       "slackAlert": "Dr0C4E8B52CD"
@@ -273,7 +275,7 @@
       "boardServiceId": "1011339728762228752",
       "title": "Four dinners from one rotisserie chicken: an easy weeknight meal prep plan",
       "alt": "Numbered list pin on cream paper: Four dinners from one rotisserie chicken. 1 Carve it while it's hot. 2 Saucy chicken over rice. 3 Chicken, rice and bean bowl. 4 Fried rice with the last of it.",
-      "text": "One $8.99 rotisserie chicken, four weeknight dinners. Night one, carve it while it's hot and box the rest. Night two, saucy chicken over rice with crushed tomatoes and garlic. Night three, a chicken, rice and bean bowl. Night four, fried rice with the last of it. About $2.25 of chicken per dinner.",
+      "text": "One $8.99 rotisserie chicken, four weeknight dinners. Night one, carve it while it's hot and box the rest. Night two, saucy chicken over rice with crushed tomatoes and garlic. Night three, a chicken, rice and bean bowl. Night four, fried rice with the last of it. About $2.25 of chicken per dinner. Save it for your next grocery run.",
       "bufferId": "6ab6bf5a0fe9479c65b59fb0",
       "slackAlert": "Dr0C4E8B8M45"
     },
@@ -297,9 +299,9 @@
       "cta": "app-value",
       "board": "Pantry meals and fridge clean out dinners",
       "boardServiceId": "1011339728762228744",
-      "title": "Eat the kale first: the fridge order that stops greens going to waste",
-      "alt": "Photo of a bright fridge shelf with kale, strawberries, raspberries and stacked meal prep containers, marked up in black marker: the kale circled with wilts first, the containers circled with then these. Handwritten headline: Eat the kale first.",
-      "text": "Kale wilts before anything else in this fridge, so it goes into tonight's dinner with garlic and olive oil. The containers of cut vegetables go next, then the strawberries and lemons, which keep for days. Cook in the order things wilt and the greens stop ending up in the trash. iEatz builds dinners from what you already have.",
+      "title": "Berries first, kale next: the fridge order that stops produce going to waste",
+      "alt": "Photo of a bright fridge shelf with kale, strawberries, raspberries and stacked meal prep containers, marked up in black marker: the berries circled with first, the kale circled with next. Handwritten headline: Berries first, kale next.",
+      "text": "Raspberries go soft in a day or two and strawberries soon after, so they're breakfast and dessert this week. The kale holds until the weekend, and the lemons will outlast everything in here. Eat in the order things spoil and the produce stops ending up in the trash. iEatz builds dinners from what you already have.",
       "bufferId": "6ab6bf5a5c3761cdae7f5f35",
       "slackAlert": "Dr0C4HC9HNMU"
     }

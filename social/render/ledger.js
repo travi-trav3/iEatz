@@ -80,6 +80,7 @@ function load(file) {
   const posts = [];
   const mismatches = [];
   for (const raw of batch.posts) {
+    if (raw.status === 'cut') continue; // cut from the plan: not published, not part of the set
     const r = render ? byStem[stem(raw.file)] : (raw.template || raw.slides ? raw : null);
     const d = r ? derive(r) : {};
     const post = {
