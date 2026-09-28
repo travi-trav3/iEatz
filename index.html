@@ -831,6 +831,10 @@ footer{background:var(--ink-1);color:var(--paper);padding:80px 0 56px}
     margin: 32px 0 0; max-width: 540px;
   }
   .hero-ctas { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+  /* Hero button names the store for Android visitors (it already links there) */
+  .cta-lbl-android { display: none; }
+  html.is-android .cta-lbl { display: none; }
+  html.is-android .cta-lbl-android { display: inline; }
   .hero-fine {
     margin-top: 18px; font-size: 14px; color: var(--ink-4);
     display: flex; align-items: center; gap: 10px;
@@ -2407,7 +2411,7 @@ pintrk('track', 'pagevisit', {
         <h1>Dinner, <span class="accent">decided.</span></h1>
         <p class="sub" id="heroSub">Tell iEatz what's in your kitchen. Get healthy meals back in seconds. No recipes to search. No groceries to buy. Just cook.</p>
         <div class="hero-ctas">
-          <a class="btn btn--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="hero" target="_blank" rel="noopener">Get the app free</a>
+          <a class="btn btn--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="hero" target="_blank" rel="noopener"><span class="cta-lbl">Get the app free</span><span class="cta-lbl-android">Get it free on Google Play</span></a>
           <a class="textlink" href="#s7-how">See how it works</a>
         </div>
         <div class="rating">
