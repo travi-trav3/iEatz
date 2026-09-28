@@ -2269,18 +2269,24 @@ footer{background:var(--ink-1);color:var(--paper);padding:80px 0 56px}
   @media (max-width: 1180px) { .obj-item--shot { grid-template-columns: 1fr 1.1fr 250px; gap: 36px; } }
   @media (max-width: 820px)  { .obj-item--shot { grid-template-columns: 1fr; } }
 </style>
-<!-- Android visitors: tag <html> (the sticky bar swaps to the Google Play
-     badge) and point the generic "Get the app free" buttons at Google Play.
-     Store badges carry data-store and always keep their own store. -->
+<!-- Store-agnostic buttons ("Get the app free" etc.) link to the onelink,
+     which covers desktop and anything we can't identify. On a phone we skip
+     that hop and link straight to its store. Android also tags <html> (the
+     sticky bar and hero label switch to Google Play). Store badges carry
+     data-store and always keep their own store. -->
 <script>
 (function () {
-  if (!/Android/i.test(navigator.userAgent)) return;
-  document.documentElement.classList.add('is-android');
+  var ua = navigator.userAgent;
+  var android = /Android/i.test(ua);
+  var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (!android && !ios) return;
+  if (android) document.documentElement.classList.add('is-android');
+  var url = android
+    ? 'https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&utm_source=ieatzhealthy.com&utm_campaign=landing_page'
+    : 'https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706';
   document.addEventListener('DOMContentLoaded', function () {
-    var links = document.querySelectorAll('a[href*="apps.apple.com"]:not([data-store])');
-    for (var i = 0; i < links.length; i++) {
-      links[i].href = 'https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&utm_source=ieatzhealthy.com&utm_campaign=landing_page';
-    }
+    var links = document.querySelectorAll('a[href*="onelink.to"]:not([data-store])');
+    for (var i = 0; i < links.length; i++) links[i].href = url;
   });
 })();
 </script>
@@ -2291,10 +2297,11 @@ footer{background:var(--ink-1);color:var(--paper);padding:80px 0 56px}
 
      Fires:
        PageView       on every page load
-       AppStoreClick  on any App Store or Google Play CTA, with the placement
-                      label from the link's data-cta (or data-cta-position)
-                      attribute and store=app_store|google_play, so we can
-                      see which CTA and which store actually earns the tap.
+       AppStoreClick  on any App Store, Google Play or onelink CTA, with the
+                      placement label from the link's data-cta (or
+                      data-cta-position) attribute and
+                      store=app_store|google_play|onelink, so we can see
+                      which CTA and which store actually earns the tap.
 
      To carry this into the redesign: copy this whole block into <head>, and
      keep data-cta="..." on every store link.
@@ -2318,16 +2325,17 @@ fbq('dataProcessingOptions', ['LDU'], 0, 0);
 fbq('init', '766649737085123');
 fbq('track', 'PageView');
 
-/* Store CTA clicks (App Store and Google Play). Every CTA is target="_blank",
+/* Store CTA clicks (App Store, Google Play, and the onelink). Every CTA is target="_blank",
    so this page stays alive when the store opens and the beacons complete
    reliably. Fires both the Meta AppStoreClick custom event (name kept so
    existing custom conversions keep matching) and a Pinterest `lead`. */
 document.addEventListener('click', function (e) {
   var t = e.target;
   if (!t || typeof t.closest !== 'function') return;
-  var a = t.closest('a[href*="apps.apple.com"], a[href*="play.google.com"]');
+  var a = t.closest('a[href*="apps.apple.com"], a[href*="play.google.com"], a[href*="onelink.to"]');
   if (!a) return;
-  var store = a.href.indexOf('play.google.com') > -1 ? 'google_play' : 'app_store';
+  var store = a.href.indexOf('play.google.com') > -1 ? 'google_play'
+    : a.href.indexOf('onelink.to') > -1 ? 'onelink' : 'app_store';
   var placement = a.getAttribute('data-cta') || a.getAttribute('data-cta-position') || 'unlabeled';
   if (typeof window.fbq === 'function') {
     fbq('trackCustom', 'AppStoreClick', { placement: placement, store: store, page: location.pathname });
@@ -2335,7 +2343,8 @@ document.addEventListener('click', function (e) {
   if (typeof window.pintrk === 'function') {
     pintrk('track', 'lead', {
       event_id: store + '-' + placement + '-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
-      lead_type: store === 'google_play' ? 'Google Play Download' : 'App Store Download'
+      lead_type: store === 'google_play' ? 'Google Play Download'
+        : store === 'onelink' ? 'App Download' : 'App Store Download'
     });
   }
 }, true);
@@ -2411,7 +2420,7 @@ pintrk('track', 'pagevisit', {
         <h1>Dinner, <span class="accent">decided.</span></h1>
         <p class="sub" id="heroSub">Tell iEatz what's in your kitchen. Get healthy meals back in seconds. No recipes to search. No groceries to buy. Just cook.</p>
         <div class="hero-ctas">
-          <a class="btn btn--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="hero" target="_blank" rel="noopener"><span class="cta-lbl">Get the app free</span><span class="cta-lbl-android">Get it free on Google Play</span></a>
+          <a class="btn btn--lg" href="https://onelink.to/2xynd2" data-cta-position="hero" target="_blank" rel="noopener"><span class="cta-lbl">Get the app free</span><span class="cta-lbl-android">Get it free on Google Play</span></a>
           <a class="textlink" href="#s7-how">See how it works</a>
         </div>
         <div class="rating">
@@ -2544,7 +2553,7 @@ pintrk('track', 'pagevisit', {
     </div>
 
     <div class="cta-row">
-      <a class="btn btn--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-demo" target="_blank" rel="noopener">See what you can make tonight</a>
+      <a class="btn btn--lg" href="https://onelink.to/2xynd2" data-cta-position="after-demo" target="_blank" rel="noopener">See what you can make tonight</a>
       <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="after-demo" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
         <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
       </a>
@@ -2673,7 +2682,7 @@ pintrk('track', 'pagevisit', {
     <div class="cta-strip">
       <div class="cta-strip-msg">No subscription. <span class="em">No account to start.</span></div>
       <div class="cta-strip-side">
-        <a class="btn" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-objections" target="_blank" rel="noopener">Start with what's in your kitchen</a>
+        <a class="btn" href="https://onelink.to/2xynd2" data-cta-position="after-objections" target="_blank" rel="noopener">Start with what's in your kitchen</a>
         <a class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="after-objections" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
           <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
         </a>
@@ -2743,7 +2752,7 @@ pintrk('track', 'pagevisit', {
     <h2>Dinner shouldn't take <span class="em">this much energy.</span></h2>
     <p class="finalcta-sub">iEatz is free on the App Store and Google Play. Open the fridge. We'll handle the rest.</p>
     <div class="finalcta-ctas">
-      <a class="btn btn--paper btn--xl" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="close" target="_blank" rel="noopener">Get the app free</a>
+      <a class="btn btn--paper btn--xl" href="https://onelink.to/2xynd2" data-cta-position="close" target="_blank" rel="noopener">Get the app free</a>
       <a class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="close" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
         <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
       </a>
@@ -2811,7 +2820,7 @@ pintrk('track', 'pagevisit', {
   <a class="as-badge" href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="sticky" aria-label="Get the app free on Google Play" target="_blank" rel="noopener">
     <img src="assets/google-play-badge.svg" alt="Get it on Google Play" width="202" height="60">
   </a>
-  <a class="btn" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="sticky" target="_blank" rel="noopener">Get the app free</a>
+  <a class="btn" href="https://onelink.to/2xynd2" data-cta-position="sticky" target="_blank" rel="noopener">Get the app free</a>
 </div>
 
 <script>
