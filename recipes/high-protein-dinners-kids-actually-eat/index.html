@@ -29,6 +29,21 @@
 :root{--accent:#1F8B4C;--accent-ink:#0E4A2A}
 html[data-accent="forest"]{--accent:#0E4A2A;--accent-ink:#08311B}
 html[data-accent="deep"]{--accent:#08311B;--accent-ink:#08311B}</style>
+<!-- Store routing. Text buttons ("Get the free app") carry data-store="auto":
+     they point at the App Store and switch to Google Play on Android. Badges
+     carry data-store="ios" or "android" and always keep their own store. -->
+<script>
+(function () {
+  var android = /Android/i.test(navigator.userAgent);
+  window.__storePlatform = android ? 'android' : 'ios';
+  if (!android) return;
+  document.documentElement.classList.add('is-android');
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('a[data-store="auto"]');
+    for (var i = 0; i < links.length; i++) links[i].href = 'https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&utm_source=ieatzhealthy.com&utm_campaign=recipes';
+  });
+})();
+</script>
 <meta name="facebook-domain-verification" content="4vsll065anwfckfjcq90owsoxcprqg" />
 
 <script>
@@ -47,22 +62,25 @@ fbq('dataProcessingOptions', ['LDU'], 0, 0);
 fbq('init', '766649737085123');
 fbq('track', 'PageView');
 
-/* App Store CTA clicks. Every CTA is target="_blank", so this page stays
-   alive when the store opens and the beacons complete reliably. Fires both
-   the Meta AppStoreClick custom event and a Pinterest `lead` conversion. */
+/* Store CTA clicks (App Store and Google Play). Every CTA is target="_blank",
+   so this page stays alive when the store opens and the beacons complete
+   reliably. Fires the Meta AppStoreClick custom event (name kept so the
+   Store Click custom conversion keeps matching) with store=app_store|google_play,
+   and a Pinterest `lead` conversion. */
 document.addEventListener('click', function (e) {
   var t = e.target;
   if (!t || typeof t.closest !== 'function') return;
-  var a = t.closest('a[href*="apps.apple.com"]');
+  var a = t.closest('a[href*="apps.apple.com"], a[href*="play.google.com"]');
   if (!a) return;
+  var store = a.href.indexOf('play.google.com') > -1 ? 'google_play' : 'app_store';
   var placement = a.getAttribute('data-cta') || 'unlabeled';
   if (typeof window.fbq === 'function') {
-    fbq('trackCustom', 'AppStoreClick', { placement: placement, page: location.pathname });
+    fbq('trackCustom', 'AppStoreClick', { placement: placement, store: store, page: location.pathname });
   }
   if (typeof window.pintrk === 'function') {
     pintrk('track', 'lead', {
-      event_id: 'appstore-' + placement + '-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
-      lead_type: 'App Store Download'
+      event_id: store + '-' + placement + '-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
+      lead_type: store === 'google_play' ? 'Google Play Download' : 'App Store Download'
     });
   }
 }, true);
@@ -102,7 +120,7 @@ pintrk('track', 'pagevisit', {
 <header style="position:sticky;top:0;z-index:40;background:rgba(245,242,234,0.94);border-bottom:1px solid rgba(10,15,12,0.08)">
 <div style="max-width:1140px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px">
 <a href="https://ieatzhealthy.com/" class="hdr-logo" style="display:inline-flex;align-items:center;gap:9px;text-decoration:none;flex:none;background:#FFFFFF;border:1px solid rgba(10,15,12,0.14);border-radius:999px;padding:8px 18px 8px 12px;white-space:nowrap"><span style="width:24px;height:24px;display:block;color:#1F8B4C" aria-hidden="true"><svg viewBox="0 0 38.25 58.486" fill="none" aria-hidden="true" style="width:100%;height:100%;display:block"><path d="M 0 5.03 C 0 2.252 2.252 0 5.03 0 L 33.22 0 C 35.998 0 38.25 2.252 38.25 5.03 L 38.25 20.119 L 0 20.119 L 0 5.03 Z" fill="currentColor"></path><path d="M 0 49.83 C 0 52.608 2.252 54.86 5.03 54.86 L 33.22 54.86 C 35.998 54.86 38.25 52.608 38.25 49.83 L 38.25 22.81 L 0 22.81 L 0 49.83 Z" fill="currentColor"></path><path d="M 6.083 6.2 C 6.083 5.489 6.659 4.913 7.369 4.913 C 8.08 4.913 8.656 5.489 8.656 6.2 L 8.656 16.259 C 8.656 16.97 8.08 17.546 7.369 17.546 C 6.659 17.546 6.083 16.97 6.083 16.259 L 6.083 6.2 Z" fill="currentColor"></path><path d="M 6.083 26.787 C 6.083 26.076 6.659 25.5 7.369 25.5 C 8.08 25.5 8.656 26.076 8.656 26.787 L 8.656 36.846 C 8.656 37.557 8.08 38.133 7.369 38.133 C 6.659 38.133 6.083 37.557 6.083 36.846 L 6.083 26.787 Z" fill="currentColor"></path><path d="M 5.264 54.86 L 10.878 54.86 L 9.892 57.771 C 9.748 58.199 9.347 58.486 8.895 58.486 L 7.2 58.486 C 6.743 58.486 6.338 58.192 6.198 57.757 L 5.264 54.86 Z" fill="currentColor"></path><path d="M 27.489 54.86 L 33.103 54.86 L 32.117 57.771 C 31.972 58.199 31.571 58.486 31.12 58.486 L 29.425 58.486 C 28.968 58.486 28.563 58.192 28.423 57.757 L 27.489 54.86 Z" fill="currentColor"></path></svg></span><span style="font-weight:600;font-size:16px;letter-spacing:-0.01em;color:#0A0F0C">iEatz Healthy</span></a>
-<a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="ios" data-cta="header" onclick="track('app_store_click',{cta_position:'header',platform:'ios'})" class="cta-dark" style="display:inline-flex;align-items:center;gap:9px;background:#0E4A2A;color:#F5F2EA;font-weight:600;font-size:15px;letter-spacing:-0.005em;padding:12px 22px;border-radius:999px;text-decoration:none;box-shadow:0 2px 6px rgba(14,74,42,.18)">Get the free app<span style="font-size:15px">&rarr;</span></a>
+<a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="auto" data-cta="header" onclick="track('app_store_click',{cta_position:'header',platform:window.__storePlatform||'ios'})" class="cta-dark" style="display:inline-flex;align-items:center;gap:9px;background:#0E4A2A;color:#F5F2EA;font-weight:600;font-size:15px;letter-spacing:-0.005em;padding:12px 22px;border-radius:999px;text-decoration:none;box-shadow:0 2px 6px rgba(14,74,42,.18)">Get the free app<span style="font-size:15px">&rarr;</span></a>
 </div>
 </header>
 
@@ -179,6 +197,7 @@ pintrk('track', 'pagevisit', {
 </div>
 <div style="margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:16px">
 <a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="ios" data-cta="bridge" onclick="track('app_store_click',{cta_position:'bridge',platform:'ios'})" style="display:inline-block;text-decoration:none;line-height:0"><img src="/assets/app-store-badge.png" alt="Download on the App Store" style="height:54px;display:block"></a>
+<a href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=recipes" data-store="android" data-cta="bridge" onclick="typeof track==='function'&&track('app_store_click',{cta_position:'bridge',platform:'android'})" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;line-height:0"><img src="/assets/google-play-badge.svg" alt="Get it on Google Play" style="height:54px;width:auto;display:block"></a>
 </div>
 </div>
 </section>
@@ -312,7 +331,7 @@ pintrk('track', 'pagevisit', {
 <div style="position:relative;max-width:1140px;margin:0 auto;padding:60px 28px;width:100%">
 <p style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(28px,3.4vw,44px);line-height:1.08;letter-spacing:-0.014em;color:#F5F2EA;margin:0;max-width:22ch;text-wrap:balance">Three things you already have. That is the whole input.</p>
 <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:28px">
-<a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="ios" data-cta="photo_break" onclick="track('app_store_click',{cta_position:'photo_break',platform:'ios'})" class="cta-light" style="display:inline-flex;align-items:center;gap:9px;background:#F5F2EA;color:#0E4A2A;font-weight:600;font-size:17px;padding:16px 28px;border-radius:999px;text-decoration:none">Get the free app<span>&rarr;</span></a>
+<a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="auto" data-cta="photo_break" onclick="track('app_store_click',{cta_position:'photo_break',platform:window.__storePlatform||'ios'})" class="cta-light" style="display:inline-flex;align-items:center;gap:9px;background:#F5F2EA;color:#0E4A2A;font-weight:600;font-size:17px;padding:16px 28px;border-radius:999px;text-decoration:none">Get the free app<span>&rarr;</span></a>
 <span style="font-size:15px;color:#E6F4EC;opacity:0.85">Free to try.</span>
 </div>
 </div>
@@ -369,7 +388,7 @@ pintrk('track', 'pagevisit', {
 <section style="background:#0E4A2A;padding:40px 28px">
 <div style="max-width:1140px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px">
 <p style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(24px,2.6vw,32px);line-height:1.15;color:#F5F2EA;margin:0;max-width:26ch">Same plate refused tomorrow at 5:45?</p>
-<a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="ios" data-cta="mid_strip" onclick="track('app_store_click',{cta_position:'mid_strip',platform:'ios'})" class="cta-light" style="display:inline-flex;align-items:center;gap:9px;background:#F5F2EA;color:#0E4A2A;font-weight:600;font-size:17px;padding:16px 28px;border-radius:999px;text-decoration:none;flex:none">Get the free app<span>&rarr;</span></a>
+<a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="auto" data-cta="mid_strip" onclick="track('app_store_click',{cta_position:'mid_strip',platform:window.__storePlatform||'ios'})" class="cta-light" style="display:inline-flex;align-items:center;gap:9px;background:#F5F2EA;color:#0E4A2A;font-weight:600;font-size:17px;padding:16px 28px;border-radius:999px;text-decoration:none;flex:none">Get the free app<span>&rarr;</span></a>
 </div>
 </section>
 
@@ -514,6 +533,7 @@ pintrk('track', 'pagevisit', {
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
 <a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="ios" data-cta="footer" onclick="track('app_store_click',{cta_position:'footer',platform:'ios'})" style="display:inline-block;text-decoration:none;line-height:0"><img src="/assets/app-store-badge.png" alt="Download on the App Store" style="height:54px;display:block"></a>
+<a href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=recipes" data-store="android" data-cta="footer" onclick="typeof track==='function'&&track('app_store_click',{cta_position:'footer',platform:'android'})" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;line-height:0"><img src="/assets/google-play-badge.svg" alt="Get it on Google Play" style="height:54px;width:auto;display:block"></a>
 </div>
 </div>
 </section>
@@ -521,12 +541,12 @@ pintrk('track', 'pagevisit', {
 <footer style="max-width:1140px;margin:0 auto;padding:44px 28px 96px;display:grid;gap:18px">
 <div style="display:flex;align-items:center;gap:10px"><span style="width:22px;height:22px;display:block;color:#1F8B4C" aria-hidden="true"><svg viewBox="0 0 38.25 58.486" fill="none" aria-hidden="true" style="width:100%;height:100%;display:block"><path d="M 0 5.03 C 0 2.252 2.252 0 5.03 0 L 33.22 0 C 35.998 0 38.25 2.252 38.25 5.03 L 38.25 20.119 L 0 20.119 L 0 5.03 Z" fill="currentColor"></path><path d="M 0 49.83 C 0 52.608 2.252 54.86 5.03 54.86 L 33.22 54.86 C 35.998 54.86 38.25 52.608 38.25 49.83 L 38.25 22.81 L 0 22.81 L 0 49.83 Z" fill="currentColor"></path><path d="M 6.083 6.2 C 6.083 5.489 6.659 4.913 7.369 4.913 C 8.08 4.913 8.656 5.489 8.656 6.2 L 8.656 16.259 C 8.656 16.97 8.08 17.546 7.369 17.546 C 6.659 17.546 6.083 16.97 6.083 16.259 L 6.083 6.2 Z" fill="currentColor"></path><path d="M 6.083 26.787 C 6.083 26.076 6.659 25.5 7.369 25.5 C 8.08 25.5 8.656 26.076 8.656 26.787 L 8.656 36.846 C 8.656 37.557 8.08 38.133 7.369 38.133 C 6.659 38.133 6.083 37.557 6.083 36.846 L 6.083 26.787 Z" fill="currentColor"></path><path d="M 5.264 54.86 L 10.878 54.86 L 9.892 57.771 C 9.748 58.199 9.347 58.486 8.895 58.486 L 7.2 58.486 C 6.743 58.486 6.338 58.192 6.198 57.757 L 5.264 54.86 Z" fill="currentColor"></path><path d="M 27.489 54.86 L 33.103 54.86 L 32.117 57.771 C 31.972 58.199 31.571 58.486 31.12 58.486 L 29.425 58.486 C 28.968 58.486 28.563 58.192 28.423 57.757 L 27.489 54.86 Z" fill="currentColor"></path></svg></span><span style="font-weight:600;font-size:15px;color:#0A0F0C">iEatz Healthy</span></div>
 <p style="font-size:14px;line-height:1.6;color:#9CA29F;margin:0;max-width:70ch">Recipes on this page are developed with the iEatz recipe engine. Times, servings and protein figures are estimates checked against the written method.</p>
-<div style="display:flex;flex-wrap:wrap;gap:18px;font-size:14px"><a href="https://ieatzhealthy.com/recipes/" class="foot-link" style="color:#5C625E;text-decoration:none">All recipes</a><a href="https://ieatzhealthy.com/" class="foot-link" style="color:#5C625E;text-decoration:none">iEatz Healthy</a><a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="ios" data-cta="footer_link" class="foot-link" style="color:#5C625E;text-decoration:none">App Store</a></div>
+<div style="display:flex;flex-wrap:wrap;gap:18px;font-size:14px"><a href="https://ieatzhealthy.com/recipes/" class="foot-link" style="color:#5C625E;text-decoration:none">All recipes</a><a href="https://ieatzhealthy.com/" class="foot-link" style="color:#5C625E;text-decoration:none">iEatz Healthy</a><a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="ios" data-cta="footer_link" class="foot-link" style="color:#5C625E;text-decoration:none">App Store</a><a href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=recipes" data-store="android" data-cta="footer_link" target="_blank" rel="noopener" class="foot-link" style="color:#5C625E;text-decoration:none">Google Play</a></div>
 </footer>
 
 <div id="sticky-cta" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:45;background:rgba(245,242,234,0.97);border-top:1px solid rgba(10,15,12,0.08);box-shadow:0 -8px 24px rgba(14,74,42,.10);padding:12px 20px;align-items:center;justify-content:space-between;gap:16px">
 <span style="font-size:15px;font-weight:500;letter-spacing:-0.005em;color:#0A0F0C;line-height:1.3">Cook from what you already have</span>
-<a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="ios" data-cta="sticky" onclick="track('app_store_click',{cta_position:'sticky',platform:'ios'})" class="cta-dark" style="flex:none;background:#0E4A2A;color:#F5F2EA;font-weight:600;font-size:15px;padding:13px 24px;border-radius:999px;text-decoration:none">Get the free app</a>
+<a href="https://apps.apple.com/us/app/id6475559706?mt=8" data-store="auto" data-cta="sticky" onclick="track('app_store_click',{cta_position:'sticky',platform:window.__storePlatform||'ios'})" class="cta-dark" style="flex:none;background:#0E4A2A;color:#F5F2EA;font-weight:600;font-size:15px;padding:13px 24px;border-radius:999px;text-decoration:none">Get the free app</a>
 </div>
 
 </div>
