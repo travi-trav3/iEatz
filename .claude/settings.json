@@ -14,7 +14,13 @@
       "mcp__Cloudflare_Developer_Platform",
       "mcp__Claude_Code_Remote",
       "WebFetch",
-      "WebSearch"
+      "WebSearch",
+      "Bash",
+      "Edit",
+      "Write",
+      "Read",
+      "Glob",
+      "Grep"
     ]
   }
 }
