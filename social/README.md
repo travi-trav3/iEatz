@@ -43,8 +43,9 @@ libx264: `$FFMPEG`, else Playwright's bundled build (VP8 only, so it is skipped)
 `ffmpeg` (`brew install ffmpeg` / `apt-get install ffmpeg`). Photos resolve from `../../assets/photos`.
 
 Smoke tests: `node render-batch.js batches/v2-smoke.json` (every shell at 1080x1350, 1000x1500,
-1080x1920: 70 PNGs, all `OK`), `node render-motion.js batches/v2-motion-smoke.json` (three MP4s under
-2 MB), and both gates pass on `batches/v2-smoke.json` and fail on `batches/fixtures/bad.json`.
+1080x1920: 70 PNGs, all `OK`), `node render-motion.js batches/v2-motion-smoke.json` (three silent MP4s
+under 2 MB), `node render-motion.js batches/v2-audio-smoke.json` (bed+voice, bed only, voice only; all
+`OK` with AAC audio), and both gates pass on `batches/v2-smoke.json` and fail on `batches/fixtures/bad.json`.
 
 ## Batch JSON
 ```json
@@ -93,8 +94,10 @@ ledger carries `slides: [...]` in order.
 **Motion**: `motion: { duration, fps, timeline? }` on a `receipt`, `poster` or `bleed` post at 1080x1920.
 Each shell's `setT(t)` is a pure function of time: receipt prints line by line, then dishes, sticker,
 headline; poster draws the underline, counts the readout up, fills the strip; bleed zooms 1.06x while
-the headline reveals word by word. Silent-safe: every word is on screen by the end; no audio track.
-`timeline` overrides any phase with `[start, end]` seconds.
+the headline reveals word by word. Silent-safe: every word is on screen by the end.
+`timeline` overrides any phase with `[start, end]` seconds. `audio: { bed, license, voice, voiceAt,
+bedDb }` bakes a Meta Sound Collection bed and/or a voiceover into the file (rules and licensing in
+`assets/audio/README.md`); without it the reel has no audio track.
 
 **Deprecated** (kept so old batches re-render; the gate warns on any use): `statdark` (use `poster`),
 `recipe` (text-only; use `recipephoto`), `quote` (paper; use `quotedark`).
