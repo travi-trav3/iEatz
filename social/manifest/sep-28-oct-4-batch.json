@@ -26,14 +26,14 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "First v2 batch (creative direction refresh, Sep 2026). IG 5: receipt, sharpie, carousel (four dinners from one chicken), thread over a fridge, receipt reel. Pinterest 6: poster, split, recipephoto, collage, list, sharpie. Scheduled as Buffer DRAFTS for operator review. Receipt math in the render batch note. Photos chosen for photoClaim honesty: the library has no soup or chicken-taco photo, so the chicken carousel is carve / saucy rice / rice and bean bowl / fried rice. Generic store name on receipts (no real retailer). [rev 2026-09-25: all 11 created in Buffer as DRAFTS with dueAt kept (approve each draft in Buffer to schedule it); 5 IG first comments set via create_post and echoed; reel accepted as video/mp4 8000 ms; 11 Slack alerts armed at dueAt, which fire whether or not the drafts are approved.] [rev 2026-09-28 review: all 11 were still drafts, so Monday missed both posts (Slack alerts fired anyway). Fixes: split pin said \"Same fridge\" over a bowl photo and its fridge held none of the bowl; kale pin had the spoil order backwards; collage pantry card was a junk-food shelf; thread named dinners the photo could not support; reel hook on screen from frame 0; carousel slides full-bleed plus a save slide; receipt label keeps iEatz casing; caption closers varied. IG receipt moved to Wed 12:40; Pinterest poster cut. Then scheduled for real.]",
+  "note": "First v2 batch (creative direction refresh, Sep 2026). IG 5: receipt, sharpie, carousel (four dinners from one chicken), thread over a fridge, receipt reel. Pinterest 6: poster, split, recipephoto, collage, list, sharpie. Scheduled as Buffer DRAFTS for operator review. Receipt math in the render batch note. Photos chosen for photoClaim honesty: the library has no soup or chicken-taco photo, so the chicken carousel is carve / saucy rice / rice and bean bowl / fried rice. Generic store name on receipts (no real retailer). [rev 2026-09-25: all 11 created in Buffer as DRAFTS with dueAt kept (approve each draft in Buffer to schedule it); 5 IG first comments set via create_post and echoed; reel accepted as video/mp4 8000 ms; 11 Slack alerts armed at dueAt, which fire whether or not the drafts are approved.] [rev 2026-09-28 review: all 11 were still drafts, so Monday missed both posts (Slack alerts fired anyway). Fixes: split pin said \"Same fridge\" over a bowl photo and its fridge held none of the bowl; kale pin had the spoil order backwards; collage pantry card was a junk-food shelf; thread named dinners the photo could not support; reel hook on screen from frame 0; carousel slides full-bleed plus a save slide; receipt label keeps iEatz casing; caption closers varied. IG receipt moved to Wed 12:40; Pinterest poster cut. Then scheduled for real.] [rev 2026-09-28b: 10 posts converted from draft to scheduled in Buffer (status verified); s28-pin left as an unscheduled draft (cut). New Slack alert for s28-ig at Wed 12:40. Slack alerts for s29-pin and o04-pin still carry the old headlines (scheduled Slack messages cannot be edited via API).]",
   "formulaicCtas": [
     "receipt-scan"
   ],
   "posts": [
     {
       "id": "s28-ig",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-09-30T12:40:00-07:00",
       "file": "assets/social/sep28/s28-ig-receipt.png",
@@ -50,11 +50,12 @@
       "text": "Sunday's receipt: a dozen eggs, two cans of black beans, tortillas, spinach, feta and a jar of salsa. $19.93.\n\nScan it and iEatz builds recipes from exactly that: black bean quesadillas, a spinach and feta scramble, huevos rancheros, bean and spinach burritos. That's about $4.98 a dinner, with nothing extra to buy.\n\n#budgetmeals #mealplanning #groceryhaul #weeknightdinner #ieatzhealthy",
       "firstComment": "Huevos rancheros on a Wednesday is the correct use of a salsa jar. We will not be taking questions.",
       "bufferId": "6ab6bf1bb8ab85e8c36e0dfb",
-      "slackAlert": "Dr0C4D4CSU3V"
+      "slackAlert": "Dr0C5806A4J0",
+      "slackAlertStale": "Dr0C4D4CSU3V fired Mon 12:40 for the unpublished draft"
     },
     {
       "id": "s29-ig",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-09-29T19:25:00-07:00",
       "file": "assets/social/sep28/s29-ig-sharpie.png",
@@ -78,7 +79,7 @@
     },
     {
       "id": "o01-ig",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-01T08:15:00-07:00",
       "file": "assets/social/sep28/o01-ig-carousel--01.png",
@@ -110,7 +111,7 @@
     },
     {
       "id": "o02-ig",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-02T21:10:00-07:00",
       "file": "assets/social/sep28/o02-ig-thread.png",
@@ -134,7 +135,7 @@
     },
     {
       "id": "o04-ig",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-04T17:50:00-07:00",
       "file": "assets/social/sep28/o04-ig-reel.mp4",
@@ -180,7 +181,7 @@
     },
     {
       "id": "s29-pin",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-09-29T13:05:00-07:00",
       "file": "assets/pinterest/sep28/s29-pin-split.png",
@@ -206,7 +207,7 @@
     },
     {
       "id": "s30-pin",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-09-30T20:20:00-07:00",
       "file": "assets/pinterest/sep28/s30-pin-tacos.png",
@@ -232,7 +233,7 @@
     },
     {
       "id": "o01-pin",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-01T11:45:00-07:00",
       "file": "assets/pinterest/sep28/o01-pin-collage.png",
@@ -258,7 +259,7 @@
     },
     {
       "id": "o03-pin",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-03T09:30:00-07:00",
       "file": "assets/pinterest/sep28/o03-pin-chicken-list.png",
@@ -281,7 +282,7 @@
     },
     {
       "id": "o04-pin",
-      "status": "draft",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-04T22:05:00-07:00",
       "file": "assets/pinterest/sep28/o04-pin-kale.png",
@@ -305,5 +306,8 @@
       "bufferId": "6ab6bf5a5c3761cdae7f5f35",
       "slackAlert": "Dr0C4HC9HNMU"
     }
-  ]
+  ],
+  "assetVersion": {
+    "note": "Buffer URLs for re-rendered assets carry ?v=2 (cache-bust after the Sep 28 review): s28-ig, o01-ig (all 6 slides), o02-ig, o04-ig, s29-pin, o01-pin, o04-pin."
+  }
 }
