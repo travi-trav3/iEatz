@@ -275,7 +275,15 @@ with zero duplicates:
    `heroPhoto`/`cta` fields. Pillar rotation, SURFACE rotation (both channels), CTA rotation,
    photo usage (avoid repeats), message dedupe.
 3. Write copy (+ recipe + estimated macros where relevant); cross-check hard constraints.
-4. Render (`render-batch.js batches/<batch>.json`) → **QA gate every image** → fix until clean.
+3a. **Pages phase (Pinterest).** In a checkout of `travi-trav3/ieatz-social`, follow
+   `pages/RUNBOOK-pages.md`: `node pages/run.js --batch batch-NN` scores every pin, builds and
+   deploys a recipe roundup page at `ieatzhealthy.com/recipes/<slug>/` for the ones that earn one
+   (cap 3 a week), verifies it live, and writes the page URL into the pin. Pins without a live
+   page keep the store link. Page-backed pins go out 7+ days after planning, so plan the batch
+   early. Live pages today: `/recipes/10-minute-breakfasts-busy-mornings/`,
+   `/recipes/high-protein-dinners-kids-actually-eat/`.
+4. Render (`render-batch.js batches/<batch>.json`; reels `render-motion.js` with `motion.audio`,
+   see `assets/audio/README.md`) → **QA gate every image, and listen to every reel** → fix until clean.
 5. **Batch diversity gate:** `node diversity-gate.js ../manifest/<batch>.json` must PASS, and
    eyeball `contact-sheet.js` output next to already-published tiles. No scheduling until clean.
 6. Host, verify 200.
@@ -291,8 +299,9 @@ with zero duplicates:
   the App Store, so there is no claimed domain and no recipe Rich Pins. The queue went empty Sep
   1–9 and Sep 17–28. Conclusion: distribution is the bottleneck, not design. Reach differences
   between posts (5 vs 12) are noise at this sample size; do not pick "winning formats" from them.
-  Priorities until the numbers move: real-footage reels, daily engagement by the operator, the
-  Content Hub recipe pages (below), no queue gaps. Pause new shells and gates.
+  Priorities until the numbers move: real-footage reels, daily engagement by the operator, run the
+  pages phase (§10 step 3a) on every batch so pins land on recipe pages, no queue gaps. Pause new
+  shells and gates.
 - **Sep 28 – Oct 4 week = first v2 batch.** Created Sep 25 as Buffer DRAFTS (the brief said
   "schedule as drafts"), so Monday's two posts never published while their Slack alerts fired.
   Sep 28 review: 10 converted to scheduled (`edit_post` saveToDraft:false + customScheduled +
@@ -332,11 +341,15 @@ with zero duplicates:
 - **Cadence reworked (Jul 13 IG / Jul 16 Pinterest):** both channels now fully on the
   humanized schedule — all 7 weekdays covered, dayparts spread, irregular non-repeating
   minutes. All 12 Pinterest pins re-timed via `edit_post` Jul 16 and confirmed in Buffer. See §8.1.
-- **August plan:** SEO/AEO recipe-page **Content Hub** (`social/CONTENT_HUB.md`) — page-backed
-  Pinterest growth; KPI is total-install trend (per-post attribution descoped; optional
-  Onelink/deeplink UTMs). Needs the website repo added via `add_repo` and 7 Pinterest keyword boards.
-- **Open follow-ups:** create the 7 Pinterest keyword boards (Buffer API can't — native only),
-  then re-home Quick-Saves pins for Rich Pins.
+- **Recipe pages are LIVE (built Sep 9–21 in `travi-trav3/ieatz-social/pages`):** Pinterest
+  roundup pages at `ieatzhealthy.com/recipes/<slug>/` with Recipe/FAQ schema, deployed by
+  Cloudflare Pages from this repo's `main`, verified by the `verify-recipes` Action. Two pages so
+  far (Sep 12). No routine runs the pages phase yet; it only runs when a batch runs it (§10 step
+  3a). The Sep 28 batch did not, so its pins still link to the App Store. `www.` returns
+  Cloudflare 525; pages and pins use the apex only.
+- **Open follow-ups:** the keyword boards exist (8, see the Pinterest bullet below); re-homing
+  old Quick-Saves pins is still open. Confirm the ieatzhealthy.com domain is claimed in Pinterest
+  (no `p:domain_verify` tag in `index.html`; it may be claimed by DNS or file instead).
 - **Permissions (Jul 16):** `.claude/settings.json` expanded from Buffer-only to ALL
   connectors (Buffer, Notion, github, Slack, Gmail, Drive, Calendar, Figma, Stripe, Meta Ads,
   Cloudflare, Claude_Code_Remote) + WebFetch/WebSearch. **Merge this to `main`** so every

@@ -116,6 +116,14 @@ Plan the full batch before rendering:
    posts, and ship at least one carousel and one reel per Instagram week. Write `format`, `footer`,
    `eyebrow`, `accentTail`, `photoStyle` and `photoClaim` into the ledger at planning time so the
    gate can enforce all of it.
+8. **Pins earn a landing page before they earn a store link (learned Sep 2026).** If the brand has
+   a page pipeline (iEatz: `travi-trav3/ieatz-social`, `pages/RUNBOOK-pages.md`), run its phase
+   after planning and before scheduling: every Pinterest post is scored, the ones that earn a page
+   get one built and verified live, and only then is the pin scheduled with the page URL (7+ days
+   out). A pin whose recipe exists on the site never points at the App Store. The Sep 28 batch
+   skipped this step and sent five recipe pins to the store while two live pages sat unused.
+9. **Reels carry sound.** Bake it into the file (`motion.audio`: a commercially cleared bed and/or a
+   voiceover) so the reel still auto-publishes; listen to it before scheduling.
 
 ### Phase 3: Copy writing
 
