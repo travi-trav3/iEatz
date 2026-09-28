@@ -1,7 +1,7 @@
 # iEatz Healthy — Landing Page
 
-Marketing landing page for **iEatz Healthy** ("Dinner, decided.") — an iOS app
-that turns whatever's in your kitchen into healthy meals in three taps.
+Marketing landing page for **iEatz Healthy** ("Dinner, decided.") — an iOS and
+Android app that turns whatever's in your kitchen into healthy meals in three taps.
 
 ## Run it
 
@@ -18,6 +18,7 @@ python3 -m http.server 8000
 index.html                       # the landing page — all CSS (design tokens + page) inline
 assets/
   app-store-badge.png            # App Store download badge
+  google-play-badge.svg          # Google Play download badge (official artwork, English, cropped to the badge edge)
   avatar.png                     # testimonial avatar
   photos/
     couple-cooking.jpg           # hero

@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iEatz Healthy | Fridge to Table: AI Recipes</title>
-<meta name="description" content="Tell iEatz what's in your kitchen and get healthy meals back in seconds. Available on the App Store as Fridge to Table: AI Recipes.">
+<meta name="description" content="Tell iEatz what's in your kitchen and get healthy meals back in seconds. Available on the App Store as Fridge to Table: AI Recipes, and on Google Play.">
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -661,6 +661,9 @@ a:hover{color:var(--brand-green)}
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px;background:rgba(245,242,234,0.96);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-top:1px solid rgba(10,15,12,0.08);box-shadow:0 -6px 24px rgba(14,74,42,0.10);transform:translateY(115%);transition:transform 240ms ease}
 .sticky-cta.on{transform:none}
 .sticky-cta .as-badge{height:44px}
+.sticky-cta .as-badge[data-store="android"]{display:none}
+html.is-android .sticky-cta .as-badge[data-store="ios"]{display:none}
+html.is-android .sticky-cta .as-badge[data-store="android"]{display:inline-block}
 .sticky-cta .btn{padding:14px 22px}
 @media (max-width:900px){.sticky-cta{display:flex}body{padding-bottom:80px}}
 
@@ -833,6 +836,8 @@ footer{background:var(--ink-1);color:var(--paper);padding:80px 0 56px}
     display: flex; align-items: center; gap: 10px;
   }
   .hero-fine .dot { width: 4px; height: 4px; border-radius: 999px; background: var(--ink-5); }
+  .hero-fine a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+  .hero-fine a:hover { color: var(--ink-1); }
 
   .hero-photo {
     position: relative; aspect-ratio: 4 / 5;
@@ -2260,18 +2265,35 @@ footer{background:var(--ink-1);color:var(--paper);padding:80px 0 56px}
   @media (max-width: 1180px) { .obj-item--shot { grid-template-columns: 1fr 1.1fr 250px; gap: 36px; } }
   @media (max-width: 820px)  { .obj-item--shot { grid-template-columns: 1fr; } }
 </style>
+<!-- Android visitors: tag <html> (the sticky bar swaps to the Google Play
+     badge) and point the generic "Get the app free" buttons at Google Play.
+     Store badges carry data-store and always keep their own store. -->
+<script>
+(function () {
+  if (!/Android/i.test(navigator.userAgent)) return;
+  document.documentElement.classList.add('is-android');
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('a[href*="apps.apple.com"]:not([data-store])');
+    for (var i = 0; i < links.length; i++) {
+      links[i].href = 'https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&utm_source=ieatzhealthy.com&utm_campaign=landing_page';
+    }
+  });
+})();
+</script>
+
 <!-- ==========================================================================
      Meta Pixel — iEatz Healthy
      Dataset 766649737085123 ("iEatzHealthy's Pixel", Business Mgr 106110620475071)
 
      Fires:
        PageView       on every page load
-       AppStoreClick  on any App Store CTA, with the placement label from the
-                      link's data-cta attribute, so we can see which of the
-                      nine CTAs actually earns the tap.
+       AppStoreClick  on any App Store or Google Play CTA, with the placement
+                      label from the link's data-cta (or data-cta-position)
+                      attribute and store=app_store|google_play, so we can
+                      see which CTA and which store actually earns the tap.
 
      To carry this into the redesign: copy this whole block into <head>, and
-     keep data-cta="..." on every App Store link.
+     keep data-cta="..." on every store link.
      ========================================================================== -->
 
 <meta name="facebook-domain-verification" content="4vsll065anwfckfjcq90owsoxcprqg" />
@@ -2292,22 +2314,24 @@ fbq('dataProcessingOptions', ['LDU'], 0, 0);
 fbq('init', '766649737085123');
 fbq('track', 'PageView');
 
-/* App Store CTA clicks. Every CTA is target="_blank", so this page stays
-   alive when the store opens and the beacons complete reliably. Fires both
-   the Meta AppStoreClick custom event and a Pinterest `lead` conversion. */
+/* Store CTA clicks (App Store and Google Play). Every CTA is target="_blank",
+   so this page stays alive when the store opens and the beacons complete
+   reliably. Fires both the Meta AppStoreClick custom event (name kept so
+   existing custom conversions keep matching) and a Pinterest `lead`. */
 document.addEventListener('click', function (e) {
   var t = e.target;
   if (!t || typeof t.closest !== 'function') return;
-  var a = t.closest('a[href*="apps.apple.com"]');
+  var a = t.closest('a[href*="apps.apple.com"], a[href*="play.google.com"]');
   if (!a) return;
-  var placement = a.getAttribute('data-cta') || 'unlabeled';
+  var store = a.href.indexOf('play.google.com') > -1 ? 'google_play' : 'app_store';
+  var placement = a.getAttribute('data-cta') || a.getAttribute('data-cta-position') || 'unlabeled';
   if (typeof window.fbq === 'function') {
-    fbq('trackCustom', 'AppStoreClick', { placement: placement, page: location.pathname });
+    fbq('trackCustom', 'AppStoreClick', { placement: placement, store: store, page: location.pathname });
   }
   if (typeof window.pintrk === 'function') {
     pintrk('track', 'lead', {
-      event_id: 'appstore-' + placement + '-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
-      lead_type: 'App Store Download'
+      event_id: store + '-' + placement + '-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
+      lead_type: store === 'google_play' ? 'Google Play Download' : 'App Store Download'
     });
   }
 }, true);
@@ -2363,8 +2387,11 @@ pintrk('track', 'pagevisit', {
     </a>
     <div class="nav-links">
       <a href="#s7-how">How it works</a>
-      <a class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="nav" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+      <a class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="nav" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
         <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60">
+      </a>
+      <a class="as-badge as-badge--sm" href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="nav" aria-label="Get the app free on Google Play" target="_blank" rel="noopener">
+        <img src="assets/google-play-badge.svg" alt="Get it on Google Play" width="202" height="60">
       </a>
     </div>
   </div>
@@ -2393,7 +2420,7 @@ pintrk('track', 'pagevisit', {
           <span class="dot"></span>
           <span>One free receipt scan and one free recipe, every week.</span>
           <span class="dot"></span>
-          <span id="androidNote">iOS only, Android coming soon.</span>
+          <a id="androidNote" href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="hero-note" target="_blank" rel="noopener">Now on Google Play for Android.</a>
         </div>
       </div>
 
@@ -2514,8 +2541,11 @@ pintrk('track', 'pagevisit', {
 
     <div class="cta-row">
       <a class="btn btn--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-demo" target="_blank" rel="noopener">See what you can make tonight</a>
-      <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-demo" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+      <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="after-demo" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
         <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
+      </a>
+      <a class="as-badge" href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="after-demo" aria-label="Get the app free on Google Play" target="_blank" rel="noopener">
+        <img src="assets/google-play-badge.svg" alt="Get it on Google Play" width="202" height="60" loading="lazy">
       </a>
     </div>
   </div>
@@ -2601,8 +2631,11 @@ pintrk('track', 'pagevisit', {
     <div class="cta-strip on-dark">
       <div class="cta-strip-msg">Make Monday the day it changes.</div>
       <div class="cta-strip-side">
-        <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-proof" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+        <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="after-proof" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
           <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
+        </a>
+        <a class="as-badge" href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="after-proof" aria-label="Get the app free on Google Play" target="_blank" rel="noopener">
+          <img src="assets/google-play-badge.svg" alt="Get it on Google Play" width="202" height="60" loading="lazy">
         </a>
       </div>
     </div>
@@ -2637,8 +2670,11 @@ pintrk('track', 'pagevisit', {
       <div class="cta-strip-msg">No subscription. <span class="em">No account to start.</span></div>
       <div class="cta-strip-side">
         <a class="btn" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-objections" target="_blank" rel="noopener">Start with what's in your kitchen</a>
-        <a class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-objections" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+        <a class="as-badge as-badge--sm" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="after-objections" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
           <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
+        </a>
+        <a class="as-badge as-badge--sm" href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="after-objections" aria-label="Get the app free on Google Play" target="_blank" rel="noopener">
+          <img src="assets/google-play-badge.svg" alt="Get it on Google Play" width="202" height="60" loading="lazy">
         </a>
       </div>
     </div>
@@ -2676,8 +2712,11 @@ pintrk('track', 'pagevisit', {
           </div>
         </div>
         <div class="how-cta-row">
-          <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="after-how" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+          <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="after-how" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
             <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
+          </a>
+          <a class="as-badge" href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="after-how" aria-label="Get the app free on Google Play" target="_blank" rel="noopener">
+            <img src="assets/google-play-badge.svg" alt="Get it on Google Play" width="202" height="60" loading="lazy">
           </a>
           <span style="font-size: 14px; color: var(--ink-4);">No account needed to try.</span>
         </div>
@@ -2698,14 +2737,17 @@ pintrk('track', 'pagevisit', {
   <div class="finalcta-inner">
     <span class="eyebrow on-dark">Dinner, decided.</span>
     <h2>Dinner shouldn't take <span class="em">this much energy.</span></h2>
-    <p class="finalcta-sub">iEatz is free on the App Store. Open the fridge. We'll handle the rest.</p>
+    <p class="finalcta-sub">iEatz is free on the App Store and Google Play. Open the fridge. We'll handle the rest.</p>
     <div class="finalcta-ctas">
       <a class="btn btn--paper btn--xl" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="close" target="_blank" rel="noopener">Get the app free</a>
-      <a class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="close" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+      <a class="as-badge as-badge--lg" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="close" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
         <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60" loading="lazy">
       </a>
+      <a class="as-badge as-badge--lg" href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="close" aria-label="Get the app free on Google Play" target="_blank" rel="noopener">
+        <img src="assets/google-play-badge.svg" alt="Get it on Google Play" width="202" height="60" loading="lazy">
+      </a>
     </div>
-    <p class="finalcta-fine">iOS only · iPhone 11 and newer · Free every week</p>
+    <p class="finalcta-fine">iPhone 11 and newer · Android · Free every week</p>
   </div>
 </section>
 
@@ -2730,7 +2772,8 @@ pintrk('track', 'pagevisit', {
         <div class="foot-h">Product</div>
         <div class="foot-links">
           <a href="#s7-how">How it works</a>
-          <a href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="close" target="_blank" rel="noopener">Get the app free</a>
+          <a href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="footer" target="_blank" rel="noopener">Get it on the App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="footer" target="_blank" rel="noopener">Get it on Google Play</a>
         </div>
       </div>
       <div>
@@ -2751,15 +2794,18 @@ pintrk('track', 'pagevisit', {
     </div>
     <div class="foot-base">
       <div>© 2026 iEatz Healthy · Made for people who already own a fridge.</div>
-      <div>App Store · iOS</div>
+      <div>App Store · Google Play</div>
     </div>
   </div>
 </footer>
 
 <!-- Sticky mobile CTA: appears once the hero scrolls out, persists to the close -->
 <div class="sticky-cta" id="stickyCta" data-screen-label="Sticky CTA">
-  <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="sticky" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
+  <a class="as-badge" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-store="ios" data-cta-position="sticky" aria-label="Get the app free on the App Store" target="_blank" rel="noopener">
     <img src="assets/app-store-badge.png" alt="Download on the App Store" width="180" height="60">
+  </a>
+  <a class="as-badge" href="https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable&amp;utm_source=ieatzhealthy.com&amp;utm_campaign=landing_page" data-store="android" data-cta-position="sticky" aria-label="Get the app free on Google Play" target="_blank" rel="noopener">
+    <img src="assets/google-play-badge.svg" alt="Get it on Google Play" width="202" height="60">
   </a>
   <a class="btn" href="https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706" data-cta-position="sticky" target="_blank" rel="noopener">Get the app free</a>
 </div>
