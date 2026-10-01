@@ -23,7 +23,7 @@ on:
         required: false
         default: ""
       cf_action:
-        description: "Cloudflare Pages: inspect (settings + recent deployments), deploy (new production deployment), set-production-branch (point production at main, then deploy), or add-domain (add www.ieatzhealthy.com as a custom domain). Needs the CLOUDFLARE_API_TOKEN secret. Skips verification."
+        description: "Cloudflare Pages: inspect (settings + recent deployments), deploy (new production deployment), set-production-branch (point production at main, then deploy), add-domain (add www.ieatzhealthy.com as a custom domain), or fix-dns (point the zone's www record at the project; needs DNS Edit on the token). Needs the CLOUDFLARE_API_TOKEN secret. Skips verification."
         required: false
         default: ""
 

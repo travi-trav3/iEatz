@@ -16,20 +16,50 @@
 //                      custom domain on the project. Pages then validates it
 //                      and issues its certificate; run inspect to watch the
 //                      status go from pending to active.
+//   CF_ACTION=fix-dns  point the zone's DNS record for CF_DOMAIN (default
+//                      www.ieatzhealthy.com) at the project: a proxied CNAME
+//                      to <project>.pages.dev, created or replaced. Needs the
+//                      token to carry Zone > DNS > Edit for the zone as well;
+//                      without it the API answers with a permission error
+//                      and nothing changes.
 
 const ACCOUNT = process.env.CLOUDFLARE_ACCOUNT_ID || '5ad6af2a00cb0c3aa12ea9f2919524c9';
 const PROJECT = process.env.CF_PAGES_PROJECT || 'ieatz';
 const token = process.env.CLOUDFLARE_API_TOKEN;
-const base = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/pages/projects/${PROJECT}`;
+const API = 'https://api.cloudflare.com/client/v4';
+const base = `${API}/accounts/${ACCOUNT}/pages/projects/${PROJECT}`;
 
-async function cf(path, init = {}) {
-  const res = await fetch(base + path, { ...init, headers: { authorization: `Bearer ${token}`, ...(init.headers || {}) } });
+async function cfApi(url, init = {}) {
+  const res = await fetch(url, { ...init, headers: { authorization: `Bearer ${token}`, ...(init.headers || {}) } });
   const json = await res.json().catch(() => ({}));
   if (!res.ok || json.success === false) {
     const errs = (json.errors || []).map((e) => `${e.code}: ${e.message}`).join('; ');
-    throw new Error(`Cloudflare API ${res.status} on ${path}: ${errs || 'no error body'}`);
+    throw new Error(`Cloudflare API ${res.status} on ${url.replace(API, '')}: ${errs || 'no error body'}`);
   }
   return json.result;
+}
+const cf = (path, init) => cfApi(base + path, init);
+
+async function fixDns(name) {
+  const zoneName = name.split('.').slice(-2).join('.');
+  const zones = await cfApi(`${API}/zones?name=${zoneName}`);
+  if (!zones.length) throw new Error(`zone ${zoneName} not visible to this token (needs Zone > DNS > Edit on it)`);
+  const zone = zones[0];
+  const records = await cfApi(`${API}/zones/${zone.id}/dns_records?name=${name}`);
+  const want = { type: 'CNAME', name, content: `${PROJECT}.pages.dev`, proxied: true, ttl: 1, comment: 'Cloudflare Pages project ' + PROJECT };
+  for (const r of records) console.log(`current ${name}: ${r.type} -> ${r.content} proxied=${r.proxied} id=${r.id}`);
+  const same = records.find((r) => r.type === 'CNAME' && r.content === want.content && r.proxied);
+  if (same) { console.log(`${name} already points at ${want.content} (proxied); nothing to change`); return; }
+  // One record for the host: replace the first, delete any others (an A/AAAA
+  // pair from the old origin, for example).
+  if (records.length) {
+    const r = await cfApi(`${API}/zones/${zone.id}/dns_records/${records[0].id}`, { method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify(want) });
+    console.log(`replaced ${name}: ${r.type} -> ${r.content} proxied=${r.proxied}`);
+    for (const extra of records.slice(1)) { await cfApi(`${API}/zones/${zone.id}/dns_records/${extra.id}`, { method: 'DELETE' }); console.log(`deleted extra ${extra.type} record ${extra.id}`); }
+  } else {
+    const r = await cfApi(`${API}/zones/${zone.id}/dns_records`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(want) });
+    console.log(`created ${name}: ${r.type} -> ${r.content} proxied=${r.proxied}`);
+  }
 }
 
 function line(d) {
@@ -75,6 +105,16 @@ function line(d) {
       const d = await cf('/domains', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name }) });
       console.log(`added ${name}: status=${d.status} validation=${JSON.stringify(d.validation_data || {})} verification=${JSON.stringify(d.verification_data || {})}`);
     }
+  }
+  if (action === 'fix-dns') {
+    const name = process.env.CF_DOMAIN || 'www.ieatzhealthy.com';
+    await fixDns(name);
+    if (!domains.some((d) => d.name === name)) {
+      const d = await cf('/domains', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name }) });
+      console.log(`added ${name} to the project: status=${d.status}`);
+    }
+    const after = await cf('/domains');
+    for (const d of after.filter((x) => x.name === name)) console.log(`${d.name} on the project: status=${d.status} validation=${(d.validation_data || {}).status || '-'} verification=${(d.verification_data || {}).status || '-'}`);
   }
   if (action === 'deploy' || action === 'set-production-branch') {
     const form = new FormData();
