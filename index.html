@@ -2333,19 +2333,23 @@ fbq('set', 'autoConfig', false, '766649737085123');
 fbq('init', '766649737085123');
 fbq('track', 'PageView');
 
-/* Store CTA clicks (App Store, Google Play, and the onelink). Every CTA is target="_blank",
-   so this page stays alive when the store opens and the beacons complete
-   reliably. Fires both the Meta AppStoreClick custom event (name kept so
-   existing custom conversions keep matching) and a Pinterest `lead`.
+/* Store CTA clicks (App Store, Google Play, and the onelink). Fires the Meta
+   AppStoreClick custom event (name kept so existing custom conversions keep
+   matching), the Meta standard Lead event (so ad sets can optimize on store
+   clicks), and a Pinterest `lead`.
    Counted once per visit, so one visitor is one conversion: a tap, a trip
    to the store and back, and a second tap within 30 minutes send nothing
-   more. A page reload, or a tap 30+ minutes later, counts again. */
-var STORE_CLICK_WINDOW_MS = 30 * 60 * 1000, lastStoreClickAt = 0;
-document.addEventListener('click', function (e) {
-  var t = e.target;
-  if (!t || typeof t.closest !== 'function') return;
-  var a = t.closest('a[href*="apps.apple.com"], a[href*="play.google.com"], a[href*="onelink.to"]');
-  if (!a) return;
+   more. A page reload, or a tap 30+ minutes later, counts again.
+   Fired from the tap itself (a primary-button pointerdown followed by a
+   pointerup within 10px, so a scroll that starts on a CTA does not count)
+   and from click; the window dedupes the pair, and click alone covers
+   keyboard activation. */
+var STORE_CLICK_WINDOW_MS = 30 * 60 * 1000, lastStoreClickAt = 0, pdStart = null;
+function storeLink(t) {
+  return t && typeof t.closest === 'function'
+    ? t.closest('a[href*="apps.apple.com"], a[href*="play.google.com"], a[href*="onelink.to"]') : null;
+}
+function fireStoreClick(a) {
   var now = Date.now();
   if (now - lastStoreClickAt < STORE_CLICK_WINDOW_MS) return;
   lastStoreClickAt = now;
@@ -2354,14 +2358,30 @@ document.addEventListener('click', function (e) {
   var placement = a.getAttribute('data-cta') || a.getAttribute('data-cta-position') || 'unlabeled';
   if (typeof window.fbq === 'function') {
     fbq('trackCustom', 'AppStoreClick', { placement: placement, store: store, page: location.pathname });
+    fbq('track', 'Lead', { placement: placement, store: store, page: location.pathname });
   }
   if (typeof window.pintrk === 'function') {
     pintrk('track', 'lead', {
-      event_id: store + '-' + placement + '-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
+      event_id: store + '-' + placement + '-' + now + '-' + Math.random().toString(36).slice(2, 8),
       lead_type: store === 'google_play' ? 'Google Play Download'
         : store === 'onelink' ? 'App Download' : 'App Store Download'
     });
   }
+}
+document.addEventListener('pointerdown', function (e) {
+  var a = e.isPrimary && e.button === 0 ? storeLink(e.target) : null;
+  pdStart = a ? { a: a, x: e.clientX, y: e.clientY } : null;
+}, true);
+document.addEventListener('pointercancel', function () { pdStart = null; }, true);
+document.addEventListener('pointerup', function (e) {
+  if (!pdStart) return;
+  var s = pdStart; pdStart = null;
+  if (Math.abs(e.clientX - s.x) + Math.abs(e.clientY - s.y) > 10) return;
+  fireStoreClick(s.a);
+}, true);
+document.addEventListener('click', function (e) {
+  var a = storeLink(e.target);
+  if (a) fireStoreClick(a);
 }, true);
 </script>
 <noscript><img height="1" width="1" style="display:none" alt=""
@@ -2396,6 +2416,25 @@ pintrk('track', 'pagevisit', {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-12ZB2TGF7R');
+</script>
+<!-- Android store switch for text CTAs on the recipe pages (this block is
+     copied into every recipe page at render time). A text button carrying
+     data-store="ios" goes to Google Play on Android; badge links hold an
+     <img> and always keep their own store. The Play URL comes from the
+     page's own Play badge so campaign tags stay consistent. -->
+<script>
+(function () {
+  if (!/Android/i.test(navigator.userAgent)) return;
+  document.documentElement.classList.add('is-android');
+  document.addEventListener('DOMContentLoaded', function () {
+    var play = document.querySelector('a[data-store="android"]');
+    var href = play ? play.href : 'https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable';
+    var links = document.querySelectorAll('a[data-store="ios"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].querySelector('img')) links[i].href = href;
+    }
+  });
+})();
 </script>
 </head>
 <body>
