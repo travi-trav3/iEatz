@@ -1,0 +1,3 @@
+# Phrases the copy gate fails on, anywhere in a caption or on an image.
+# One per line: a plain phrase (matched as whole words, case-insensitive) or a /regex/.
+# End each line with "# F-NNN" naming the rule in RULES.md it came from.

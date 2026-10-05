@@ -9,6 +9,7 @@
 //      sentence start, the pronoun I, an acronym, or on copy-allowlist.txt
 //   5. photoClaim: required on every photo post/slide, and at least one noun from it must
 //      appear in the headline or caption (both strings are printed so the fix is obvious)
+//   6. any phrase on ../feedback/banned-phrases.txt (operator feedback turned into a hard rule)
 const fs = require('fs');
 const path = require('path');
 const { load, strip, headlineOf } = require('./ledger');
@@ -16,6 +17,16 @@ const { photosOf } = require('./doc');
 
 const ALLOW = fs.readFileSync(path.join(__dirname, 'copy-allowlist.txt'), 'utf8')
   .split('\n').map(l => l.replace(/#.*/, '').trim()).filter(Boolean).sort((a, b) => b.length - a.length);
+
+// One phrase or /regex/ per line; "# F-003" comments name the feedback rule it came from.
+const BANNED = (() => {
+  const f = path.join(__dirname, '../feedback/banned-phrases.txt');
+  if (!fs.existsSync(f)) return [];
+  return fs.readFileSync(f, 'utf8').split('\n').map(l => l.replace(/\s+#.*$|^#.*$/, '').trim()).filter(Boolean).map(l => {
+    const m = l.match(/^\/(.+)\/([a-z]*)$/);
+    return { label: l, re: m ? new RegExp(m[1], m[2].includes('i') ? m[2] : m[2] + 'i') : new RegExp(`\\b${l.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i') };
+  });
+})();
 
 const NOT_X = /\bnot\b[^.]{3,60}[,.]\s*(it's|its|it is|but)\b/i;
 const NOT_X_PARALLEL = /\bnot\s+(by|for|to|about|from|with)\b[^.,]{2,40},\s*\1\b/i;
@@ -60,6 +71,10 @@ function check(loaded) {
       else if (EN_DASH_AS_DASH.test(s)) fails.push(`${p.id}: en dash used as a dash in ${field}: "${strip(s).slice(0, 90)}"`);
       const nx = strip(s).match(NOT_X) || strip(s).match(NOT_X_PARALLEL);
       if (nx) fails.push(`${p.id}: "not X, Y" construction in ${field}: "...${nx[0]}..."`);
+      for (const b of BANNED) {
+        const hit = strip(s).match(b.re);
+        if (hit) fails.push(`${p.id}: banned phrase "${hit[0]}" in ${field} (feedback/banned-phrases.txt: ${b.label})`);
+      }
     }
     // 4: sentence case in headlines (post head/seam and every slide head)
     const r = p.render || {};

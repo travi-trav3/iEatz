@@ -10,6 +10,7 @@ social/
   CONTROL_CENTER.md     ← master prompt for a new session (brand, rules, IDs, workflow)
   README.md             ← this file
   manifest/             ← Buffer ledgers, one per batch (the scheduling source of truth)
+  feedback/             ← Travis's Buffer notes → RULES.md (read before every batch), banned phrases, log
   render/               ← the render harness (Playwright + sharp + ffmpeg)
     templates.js        ← THE shell registry (every shell, its surface, default footer, motion)
     base.css            ← design tokens + ALL shell CSS (single source)

@@ -124,6 +124,9 @@ Plan the full batch before rendering:
    skipped this step and sent five recipe pins to the store while two live pages sat unused.
 9. **Reels carry sound.** Bake it into the file (`motion.audio`: a commercially cleared bed and/or a
    voiceover) so the reel still auto-publishes; listen to it before scheduling.
+10. **Operator feedback is a rules source.** Before planning, read the brand's feedback rules
+   (iEatz: `social/feedback/RULES.md`, fed from Buffer post notes by `social/feedback/README.md`).
+   Every lasting point becomes a numbered rule, enforced by a gate wherever it can be counted.
 
 ### Phase 3: Copy writing
 

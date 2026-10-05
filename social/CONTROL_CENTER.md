@@ -270,6 +270,8 @@ with zero duplicates:
 - **GitHub** MCP — scoped to `travi-trav3/iEatz` only.
 
 ## 10. Workflow each batch
+0. **Feedback first.** Run the review in `social/feedback/README.md` (Travis's Buffer notes),
+   then read `social/feedback/RULES.md`. Those rules outrank the defaults in this file.
 1. Confirm "now" (`get_account`). Read this file + `index.html` tokens.
 2. Plan the batch **in the ledger first**: per-post `pillar`/`topic`/`template`/`surface`/
    `heroPhoto`/`cta` fields. Pillar rotation, SURFACE rotation (both channels), CTA rotation,
