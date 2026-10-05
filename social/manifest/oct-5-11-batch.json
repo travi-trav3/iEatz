@@ -1,0 +1,221 @@
+{
+  "batch": "oct-5-11",
+  "createdAt": "2026-10-05",
+  "organization": {
+    "name": "Applied Intelligence Co.",
+    "id": "6a138b7d82bb2ed009fed356"
+  },
+  "channels": {
+    "pinterest": {
+      "id": "6a7a4b64b2d9d577435279f6"
+    },
+    "instagram": {
+      "id": "6a14b495c687a22dd4267bfc"
+    }
+  },
+  "urlBase": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/",
+  "appStoreUrl": "https://apps.apple.com/us/app/id6475559706",
+  "renderBatch": "social/render/batches/oct-5-11.json",
+  "igMetadata": {
+    "post": {
+      "type": "post",
+      "shouldShareToFeed": true
+    },
+    "reel": {
+      "type": "reel",
+      "shouldShareToFeed": true
+    }
+  },
+  "note": "Second v2 batch. Feedback review run first (no notes yet). Pinterest: six of seven pins go to the two live recipe pages (verify-recipes Action LIVE on Oct 2 for both), recipe pins deep-linked to their anchors, UTMs per pin (utm_content = render file). The Friday device pin links to the App Store because it is a product pin. Every recipe number is copied from ieatz-social pages/content/*.json. App screen = real app-receipt.jpg cropped below the retailer header. Reel is silent (no Meta Sound Collection track supplied); swap in a track via motion.audio before Sat 17:45 if one arrives. Scheduled for real (not drafts).",
+  "formulaicCtas": [
+    "receipt-scan"
+  ],
+  "posts": [
+    {
+      "id": "o05-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-10-05T21:10:00-07:00",
+      "file": "assets/pinterest/oct5/o05-pin-list.png",
+      "pillar": "Health/Diet",
+      "topic": "Family",
+      "cta": "other",
+      "board": "School lunch and family dinner ideas",
+      "boardServiceId": "1011339728762228742",
+      "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=persona-spotlight&utm_content=o05-pin-list",
+      "title": "High protein dinners for picky kids: 4 easy one-pan recipes",
+      "text": "Four high protein dinners picky kids will actually eat, each made in one pan with the protein hidden in food they already like: cheesy egg and black bean quesadillas (24 g protein, 12 minutes), crispy yogurt ranch chicken tenders (34 g), pasta with a lentil and turkey sauce (29 g) and stovetop cottage cheese mac and cheese (22 g). Every recipe has a kid plate and a grown-up plate. Full recipes free on the site.",
+      "alt": "Numbered list pin on cream paper: High protein dinners picky kids will actually eat. 1 Cheesy egg and black bean quesadillas, 24 g protein, 12 minutes. 2 Crispy yogurt ranch chicken tenders, 34 g, 25 minutes. 3 Pasta with lentil and turkey sauce, 29 g, 25 minutes. 4 Stovetop cottage cheese mac and cheese, 22 g, 20 minutes."
+    },
+    {
+      "id": "o06-ig",
+      "status": "planned",
+      "channel": "instagram",
+      "dueAt": "2026-10-06T12:20:00-07:00",
+      "file": "assets/social/oct5/o06-ig-carousel--01.png",
+      "slides": [
+        "assets/social/oct5/o06-ig-carousel--01.png",
+        "assets/social/oct5/o06-ig-carousel--02.png",
+        "assets/social/oct5/o06-ig-carousel--03.png",
+        "assets/social/oct5/o06-ig-carousel--04.png",
+        "assets/social/oct5/o06-ig-carousel--05.png",
+        "assets/social/oct5/o06-ig-carousel--06.png"
+      ],
+      "pillar": "Health/Diet",
+      "topic": "Family",
+      "cta": "other",
+      "text": "What high protein dinners will kids actually eat? The ones where the protein is already inside something they like. Swipe for four, with the steps:\n\n1. Cheesy egg and black bean quesadillas: 24 g protein, 12 minutes\n2. Crispy yogurt ranch chicken tenders: 34 g, 25 minutes\n3. Pasta with lentil and turkey sauce: 29 g, 25 minutes\n4. Stovetop cottage cheese mac and cheese: 22 g, 20 minutes\n\nEach one has a kid plate and a grown-up plate. Full recipes are free on ieatzhealthy.com/recipes. Protein is estimated per serving.\n\n#highproteinmeals #pickyeaters #kidsdinner #familydinner #ieatzhealthy",
+      "firstComment": "Which one would get refused at your table? Tell us and we'll find you a swap.",
+      "alt": "Six-slide carousel on cream paper. Slide one: What high protein dinners will my kids actually eat? with a readout of 4 dinners, 22 to 34 g protein per serving, 12 to 25 minutes. Slides two to five: numbered steps for cheesy egg and black bean quesadillas, crispy yogurt ranch chicken tenders, pasta with lentil and turkey sauce, and stovetop cottage cheese mac and cheese, each with protein, minutes and servings. Slide six: All four, with a kid plate and a grown-up plate, free at ieatzhealthy.com/recipes."
+    },
+    {
+      "id": "o06-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-10-06T14:35:00-07:00",
+      "file": "assets/pinterest/oct5/o06-pin-receipt.png",
+      "pillar": "Grocery/Instacart",
+      "topic": "Breakfast",
+      "cta": "other",
+      "board": "High protein meals and macro friendly recipes",
+      "boardServiceId": "1011339728762228748",
+      "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/?utm_source=pinterest&utm_medium=organic&utm_campaign=ingredient-idea&utm_content=o06-pin-receipt",
+      "title": "High protein breakfast meal prep: a $21 grocery run for ten-minute breakfasts",
+      "text": "One $21.07 grocery run (cottage cheese, eggs, rolled oats, Greek yogurt, frozen berries and bananas) covers a week of ten-minute high protein breakfasts: whipped cottage cheese toast, savory oats with a jammy egg, a warm berry yogurt bowl and a peanut banana shake, each over 20 g of protein. Recipes free on the site.",
+      "alt": "Receipt tape on deep green from Corner Market listing cottage cheese, eggs, rolled oats, Greek yogurt, frozen mixed berries and bananas for $21.07, with four breakfasts printed below and a yellow sticker reading 20 g+ protein each. Headline: $21.07 of groceries. Ten-minute breakfasts."
+    },
+    {
+      "id": "o07-ig",
+      "status": "planned",
+      "channel": "instagram",
+      "dueAt": "2026-10-07T19:35:00-07:00",
+      "file": "assets/social/oct5/o07-ig-sharpie.png",
+      "pillar": "Grocery/Instacart",
+      "topic": "Grocery",
+      "cta": "receipt-scan",
+      "text": "Before anything goes in the fridge, give it a job. The bananas get frozen as they spot, for peanut banana shakes. The cabbage covers a slaw one night and a fried rice another. The apples go straight to lunchboxes.\n\nScan the receipt and iEatz builds recipes from exactly what came home.\n\n#groceryhaul #mealplanning #foodwaste #budgetmeals #ieatzhealthy",
+      "firstComment": "What's the first thing that goes bad in your kitchen every week? Bananas win here.",
+      "alt": "Photo of paper grocery bags holding bananas, a head of cabbage and red apples, marked up in black marker: the cabbage circled with slaw + fried rice, the bananas circled with freeze as they spot, the apples circled with lunchboxes. Handwritten headline: Plan the bag first."
+    },
+    {
+      "id": "o07-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-10-07T20:50:00-07:00",
+      "file": "assets/pinterest/oct5/o07-pin-sharpie.png",
+      "pillar": "Recipe/Food",
+      "topic": "Family",
+      "cta": "other",
+      "board": "Easy weeknight dinner ideas",
+      "boardServiceId": "1011339728762228746",
+      "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=persona-spotlight&utm_content=o07-pin-sharpie#yogurt-ranch-chicken-tenders",
+      "title": "Crispy yogurt ranch chicken tenders: a high protein kids dinner with 34 g of protein",
+      "text": "The dinner kids already ask for, made higher in protein: chicken tenders marinated in Greek yogurt and ranch seasoning, pressed into panko and parmesan, and baked at 425°F until crisp. 34 g of protein per serving, 25 minutes, and the marinade doubles as the dip. Full recipe on the site.",
+      "alt": "Photo of a father and daughter at a dinner table, the girl holding a bowl of chicken tenders and fries, marked up in black marker: the bowl circled with make it yogurt ranch. Handwritten headline: The dinner they ask for."
+    },
+    {
+      "id": "o08-ig",
+      "status": "planned",
+      "channel": "instagram",
+      "dueAt": "2026-10-08T08:10:00-07:00",
+      "file": "assets/social/oct5/o08-ig-reel.mp4",
+      "cover": "assets/social/oct5/o08-ig-reel-cover.png",
+      "pillar": "Money/Waste",
+      "topic": "Waste",
+      "cta": "app-value",
+      "videoTitle": "$1,500 of groceries a year goes in the trash",
+      "text": "The average household throws out about $1,500 of groceries a year. That's about $29 a week, or $4 a day.\n\nThe cheapest fix is the boring one: cook what's already in the fridge before the next grocery run. iEatz builds recipes from what you have.\n\n#foodwaste #budgetmeals #mealplanning #savemoney #ieatzhealthy",
+      "firstComment": "What do you throw out most? Herbs and half bags of spinach top our list."
+    },
+    {
+      "id": "o08-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-10-08T11:25:00-07:00",
+      "file": "assets/pinterest/oct5/o08-pin-poster.png",
+      "pillar": "Health/Diet",
+      "topic": "Breakfast",
+      "cta": "other",
+      "board": "Healthy meal prep for the week",
+      "boardServiceId": "1011339728762228752",
+      "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/?utm_source=pinterest&utm_medium=organic&utm_campaign=ingredient-idea&utm_content=o08-pin-poster",
+      "title": "10-minute high protein breakfasts: 5 easy recipes with 20 g of protein or more",
+      "text": "Five breakfasts that take ten minutes or less, each with at least 21 g of protein and made from things already in the kitchen: whipped cottage cheese toast with chili crisp, savory oats with a jammy egg, a freezer-berry yogurt bowl, a black bean and egg skillet wrapped in tortillas, and a peanut banana shake with no protein powder. Full recipes free on the site.",
+      "alt": "Cream typographic pin: Breakfast in ten minutes, with 20 g of protein or more, with a readout of 5 breakfasts, 10 minutes for the longest, 21 g for the least protein."
+    },
+    {
+      "id": "o09-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-10-09T16:15:00-07:00",
+      "file": "assets/pinterest/oct5/o09-pin-device.png",
+      "pillar": "Product/Feature",
+      "topic": "Product",
+      "cta": "app-value",
+      "board": "Grocery list ideas and meal planning",
+      "boardServiceId": "1011339728762228750",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Turn a grocery receipt into recipes: iEatz finds the ingredients for you",
+      "text": "Snap a grocery receipt and the iEatz app pulls out the ingredients (this one found ten: cilantro, romaine, limes, avocados, tortillas, bananas, eggs, apples, a sweet onion and cherry tomatoes), then builds recipes from what you actually bought. Free on the App Store.",
+      "alt": "Mint pin with a phone showing the iEatz receipt import screen: a scanned grocery receipt above the words Found 10 items and ten ingredient chips, with an Add 10 to inventory button. Headline: One receipt in. Ten ingredients out."
+    },
+    {
+      "id": "o10-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-10-10T09:40:00-07:00",
+      "file": "assets/pinterest/oct5/o10-pin-poster.png",
+      "pillar": "Recipe/Food",
+      "topic": "Family",
+      "cta": "other",
+      "board": "High protein meals and macro friendly recipes",
+      "boardServiceId": "1011339728762228748",
+      "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=persona-spotlight&utm_content=o10-pin-poster#cottage-cheese-mac",
+      "title": "High protein mac and cheese for kids: cottage cheese blended into the sauce, 22 g protein",
+      "text": "Stovetop mac and cheese with 22 g of protein per serving: blend a cup of cottage cheese with half a cup of milk until completely smooth, then stir it into the macaroni with sharp cheddar. It tastes like a creamier cheese sauce. 20 minutes, serves 4. Full recipe on the site.",
+      "alt": "Cream typographic pin: Mac and cheese with 22 g of protein, with a readout of 22 g protein per serving, 20 minutes, 4 servings."
+    },
+    {
+      "id": "o10-ig",
+      "status": "planned",
+      "channel": "instagram",
+      "dueAt": "2026-10-10T17:45:00-07:00",
+      "file": "assets/social/oct5/o10-ig-device.png",
+      "pillar": "Product/Feature",
+      "topic": "Product",
+      "cta": "app-value",
+      "text": "This is what the iEatz app shows after a grocery receipt goes in: cilantro, romaine hearts, limes, Hass avocados, whole wheat tortillas, bananas, brown eggs, Gala apples, a sweet onion and cherry tomatoes, found and ready to cook with.\n\nNo typing out a list. The recipes start from what you actually bought.\n\n#mealplanning #recipeapp #groceryhaul #weeknightdinner #ieatzhealthy",
+      "firstComment": "Free on the App Store and Google Play as Fridge to Table: AI Recipes, by iEatz Healthy.",
+      "alt": "Mint card with a phone showing the iEatz receipt import screen: a scanned grocery receipt above the words Found 10 items and chips for cilantro, romaine hearts, limes, Hass avocados, whole wheat tortillas, bananas, brown eggs, Gala apples, sweet onion and cherry tomatoes, with an Add 10 to inventory button. Headline: One receipt in. Ten ingredients out."
+    },
+    {
+      "id": "o11-ig",
+      "status": "planned",
+      "channel": "instagram",
+      "dueAt": "2026-10-11T18:55:00-07:00",
+      "file": "assets/social/oct5/o11-ig-receipt.png",
+      "pillar": "Recipe/Food",
+      "topic": "Breakfast",
+      "cta": "other",
+      "text": "Sunday's run for the week's breakfasts: cottage cheese, a dozen eggs, rolled oats, Greek yogurt, frozen berries and bananas. $21.07.\n\nMonday is whipped cottage cheese toast (5 minutes). Tuesday, savory oats with a jammy egg (10). Wednesday, a warm berry yogurt bowl (6). Thursday, a peanut banana shake (4). Every one is over 20 g of protein, and the bread, peanut butter, milk and cheese were already home.\n\nThese four and a black bean and egg wrap are free on ieatzhealthy.com/recipes.\n\n#highproteinbreakfast #breakfastideas #groceryhaul #mealprep #ieatzhealthy",
+      "firstComment": "Which day are you starting with? The shake is the easiest win: four minutes, one blender jar.",
+      "alt": "Receipt tape on deep green from Corner Market listing cottage cheese, eggs, rolled oats, Greek yogurt, frozen mixed berries and bananas for $21.07, with four breakfasts printed below (cottage cheese toast, savory oats with a jammy egg, berry yogurt bowl, peanut banana shake) and a yellow sticker reading 20 g+ protein each. Headline: $21.07 of groceries. Ten-minute breakfasts."
+    },
+    {
+      "id": "o11-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-10-11T21:30:00-07:00",
+      "file": "assets/pinterest/oct5/o11-pin-sharpie.png",
+      "pillar": "Money/Waste",
+      "topic": "Breakfast",
+      "cta": "other",
+      "board": "Quick Saves",
+      "boardServiceId": "1011339728760978564",
+      "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/?utm_source=pinterest&utm_medium=organic&utm_campaign=ingredient-idea&utm_content=o11-pin-sharpie#peanut-banana-shake",
+      "title": "Peanut butter banana shake with no protein powder: 21 g of protein in 4 minutes",
+      "text": "Freeze bananas as they spot and breakfast is a four-minute shake: a frozen banana, 2 tbsp peanut butter, a cup of milk and half a cup of cottage cheese, blended. 21 g of protein with no protein powder. The recipe and four more ten-minute breakfasts are on the site.",
+      "alt": "Photo of paper grocery bags with bananas, a head of cabbage and apples, marked up in black marker: the bananas circled with 4-minute shake. Handwritten headline: Freeze them as they spot."
+    }
+  ]
+}

@@ -1,0 +1,452 @@
+{
+  "name": "oct-5-11",
+  "createdAt": "2026-10-05",
+  "note": "Week of Oct 5. Pinterest leans on the two live recipe pages (ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/ and /10-minute-breakfasts-busy-mornings/); every recipe number (protein, minutes, servings) is copied from pages/content/*.json in ieatz-social. Neither page has recipe photos, so page pins are typographic or use a photo for what it literally shows. Receipt math: 3.49 + 3.29 + 3.19 + 5.49 + 3.99 + 1.62 = 21.07. Waste stat: $1,500 per household per year (verified-facts proof.waste_stat, index.html); 1500/52 = 28.85 (about $29 a week), 1500/365 = 4.11 (about $4 a day). Derived crops: app-receipt-scan.jpg is the real app-receipt.jpg screen from main cut below the store header (no retailer logo or address); grocery/grocery-bag-unpacked.jpg is grocery-bag-produce.jpg cut to exclude a bagel brand logo and a printed retailer URL.",
+  "posts": [
+    {
+      "file": "o06-ig-carousel",
+      "w": 1080,
+      "h": 1350,
+      "slides": [
+        {
+          "template": "poster",
+          "footer": "badge-tr",
+          "head": "What high protein dinners will my kids <span class=\"u\">actually</span> eat?",
+          "body": "Four one-pan dinners with the protein hidden inside food they already like. Swipe for all four.",
+          "readout": [
+            {
+              "label": "Dinners",
+              "value": "4"
+            },
+            {
+              "label": "Protein per serving",
+              "value": "22 to 34 g"
+            },
+            {
+              "label": "Minutes",
+              "value": "12 to 25"
+            }
+          ],
+          "strip": true
+        },
+        {
+          "template": "list",
+          "eyebrow": "24 g protein · 12 minutes · serves 2",
+          "head": "Cheesy egg and black bean quesadillas",
+          "items": [
+            {
+              "t": "Mash the beans into the eggs",
+              "s": "1/2 cup black beans and 3 eggs with a pinch of salt. Mashed in, nobody picks them out."
+            },
+            {
+              "t": "Scramble until just set",
+              "s": "Butter, medium heat, about 2 minutes."
+            },
+            {
+              "t": "Fold into tortillas with cheese",
+              "s": "1/2 cup cheddar, 2 minutes a side until golden."
+            },
+            {
+              "t": "Cut the kid one into triangles",
+              "s": "Salsa on the side. Spinach and jalapeño go in the grown-up one."
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "34 g protein · 25 minutes · serves 4",
+          "head": "Crispy yogurt ranch chicken tenders",
+          "items": [
+            {
+              "t": "Mix yogurt and ranch seasoning",
+              "s": "3/4 cup Greek yogurt, 1 tbsp ranch. Save a third for the dip."
+            },
+            {
+              "t": "Coat the chicken, press into panko",
+              "s": "1 lb chicken strips, 1 cup panko, 1/4 cup parmesan, 1 tbsp oil."
+            },
+            {
+              "t": "Bake at 425°F on a rack",
+              "s": "15 to 18 minutes, until golden and cooked through."
+            },
+            {
+              "t": "Two plates from one pan",
+              "s": "Tenders with the dip, or sliced over greens with a lemony dressing."
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "29 g protein · 25 minutes · serves 4",
+          "head": "Pasta with lentil and turkey sauce",
+          "items": [
+            {
+              "t": "Brown the turkey",
+              "s": "1/2 lb ground turkey in olive oil, broken up small."
+            },
+            {
+              "t": "Simmer it with red lentils",
+              "s": "1/2 cup red lentils, a 24 oz jar of marinara, 1 cup water. 15 minutes, until thick."
+            },
+            {
+              "t": "Toss with any pasta they eat",
+              "s": "12 oz pasta. Chili flakes, parmesan and basil on the grown-up bowl."
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "22 g protein · 20 minutes · serves 4",
+          "head": "Stovetop cottage cheese mac and cheese",
+          "items": [
+            {
+              "t": "Cook the macaroni",
+              "s": "12 oz elbows in salted water. Keep a cup of the pasta water."
+            },
+            {
+              "t": "Blend the cottage cheese smooth",
+              "s": "1 cup cottage cheese with 1/2 cup milk. This step is the whole trick."
+            },
+            {
+              "t": "Stir it in with the cheddar",
+              "s": "1 1/2 cups sharp cheddar and 1 tbsp butter over low heat, until glossy."
+            },
+            {
+              "t": "Peas for the grown-ups",
+              "s": "A handful of frozen peas in the last minute, hot sauce on top."
+            }
+          ]
+        },
+        {
+          "template": "poster",
+          "footer": "badge-bl",
+          "head": "All four, with a kid plate and a <span class=\"i\">grown-up plate</span>",
+          "body": "The full recipes are free on ieatzhealthy.com/recipes. Save this for the next refused dinner.",
+          "strip": true
+        }
+      ]
+    },
+    {
+      "file": "o07-ig-sharpie",
+      "w": 1080,
+      "h": 1350,
+      "template": "sharpie",
+      "footer": "badge-bl",
+      "photo": "grocery/grocery-bag-unpacked.jpg",
+      "objPos": "50% 50%",
+      "shade": true,
+      "photoClaim": "paper grocery bags holding bananas, a head of cabbage and red apples",
+      "head": "Plan the bag first",
+      "marks": [
+        {
+          "x": 800,
+          "y": 420,
+          "rx": 215,
+          "ry": 205,
+          "label": "slaw + fried rice",
+          "labelSide": "above"
+        },
+        {
+          "x": 620,
+          "y": 900,
+          "rx": 330,
+          "ry": 200,
+          "label": "freeze as they spot",
+          "labelSide": "below"
+        },
+        {
+          "x": 135,
+          "y": 470,
+          "rx": 120,
+          "ry": 190,
+          "label": "lunchboxes",
+          "labelSide": "right"
+        }
+      ]
+    },
+    {
+      "file": "o10-ig-device",
+      "w": 1080,
+      "h": 1350,
+      "template": "device",
+      "footer": "badge-tl",
+      "photo": "app-receipt-scan.jpg",
+      "photoClaim": "iEatz app screen: a grocery receipt being imported as ingredients, with ten items found",
+      "eyebrow": "Receipt import",
+      "head": "One receipt in. Ten ingredients out.",
+      "cap": "Snap the receipt and iEatz turns it into ingredients you can cook with, then builds recipes from them.",
+      "phoneW": 600
+    },
+    {
+      "file": "o08-ig-reel",
+      "w": 1080,
+      "h": 1920,
+      "template": "poster",
+      "footer": "badge-tr",
+      "motion": {
+        "duration": 7,
+        "fps": 24
+      },
+      "head": "Every year, <span class=\"u\">$1,500</span> of groceries goes in the trash",
+      "body": "That is the average household. The cheapest fix is cooking what is already in the fridge before the next grocery run.",
+      "readout": [
+        {
+          "label": "Per household, per year",
+          "value": "$1,500"
+        },
+        {
+          "label": "About a week",
+          "value": "$29"
+        },
+        {
+          "label": "About a day",
+          "value": "$4"
+        }
+      ],
+      "strip": true
+    },
+    {
+      "file": "o11-ig-receipt",
+      "w": 1080,
+      "h": 1350,
+      "template": "receipt",
+      "footer": "badge-br",
+      "store": "Corner Market",
+      "meta": "Sunday · 10:20 AM · 6 items",
+      "lines": [
+        {
+          "item": "Cottage cheese 24 oz",
+          "price": "3.49"
+        },
+        {
+          "item": "Large eggs, dozen",
+          "price": "3.29"
+        },
+        {
+          "item": "Rolled oats",
+          "price": "3.19"
+        },
+        {
+          "item": "Greek yogurt 32 oz",
+          "price": "5.49"
+        },
+        {
+          "item": "Frozen mixed berries",
+          "price": "3.99"
+        },
+        {
+          "item": "Bananas",
+          "price": "1.62"
+        }
+      ],
+      "total": "$21.07",
+      "dishes": [
+        {
+          "name": "Cottage cheese toast",
+          "when": "Mon · 5m"
+        },
+        {
+          "name": "Savory oats, jammy egg",
+          "when": "Tue · 10m"
+        },
+        {
+          "name": "Berry yogurt bowl",
+          "when": "Wed · 6m"
+        },
+        {
+          "name": "Peanut banana shake",
+          "when": "Thu · 4m"
+        }
+      ],
+      "sticker": "20 g+ protein each",
+      "head": "$21.07 of groceries. <em>Ten-minute breakfasts.</em>"
+    },
+    {
+      "file": "o05-pin-list",
+      "w": 1000,
+      "h": 1500,
+      "template": "list",
+      "footer": "badge-br",
+      "eyebrow": "One pan each, protein inside",
+      "head": "High protein dinners picky kids will actually eat",
+      "items": [
+        {
+          "t": "Cheesy egg and black bean quesadillas",
+          "s": "24 g protein · 12 minutes"
+        },
+        {
+          "t": "Crispy yogurt ranch chicken tenders",
+          "s": "34 g protein · 25 minutes"
+        },
+        {
+          "t": "Pasta with lentil and turkey sauce",
+          "s": "29 g protein · 25 minutes"
+        },
+        {
+          "t": "Stovetop cottage cheese mac and cheese",
+          "s": "22 g protein · 20 minutes"
+        }
+      ]
+    },
+    {
+      "file": "o06-pin-receipt",
+      "w": 1000,
+      "h": 1500,
+      "template": "receipt",
+      "footer": "badge-tl",
+      "store": "Corner Market",
+      "meta": "Sunday · 10:20 AM · 6 items",
+      "lines": [
+        {
+          "item": "Cottage cheese 24 oz",
+          "price": "3.49"
+        },
+        {
+          "item": "Large eggs, dozen",
+          "price": "3.29"
+        },
+        {
+          "item": "Rolled oats",
+          "price": "3.19"
+        },
+        {
+          "item": "Greek yogurt 32 oz",
+          "price": "5.49"
+        },
+        {
+          "item": "Frozen mixed berries",
+          "price": "3.99"
+        },
+        {
+          "item": "Bananas",
+          "price": "1.62"
+        }
+      ],
+      "total": "$21.07",
+      "dishes": [
+        {
+          "name": "Cottage cheese toast",
+          "when": "5 min"
+        },
+        {
+          "name": "Savory oats, jammy egg",
+          "when": "10 min"
+        },
+        {
+          "name": "Berry yogurt bowl",
+          "when": "6 min"
+        },
+        {
+          "name": "Peanut banana shake",
+          "when": "4 min"
+        }
+      ],
+      "sticker": "20 g+ protein each",
+      "head": "$21.07 of groceries. <em>Ten-minute breakfasts.</em>"
+    },
+    {
+      "file": "o07-pin-sharpie",
+      "w": 1000,
+      "h": 1500,
+      "template": "sharpie",
+      "footer": "badge-bl",
+      "photo": "lifestyle/family-meal-at-table.jpg",
+      "objPos": "96% 50%",
+      "photoClaim": "a father and daughter at a dinner table, the girl holding a bowl of chicken tenders and fries",
+      "head": "The dinner they ask for",
+      "marks": [
+        {
+          "x": 483,
+          "y": 1000,
+          "rx": 150,
+          "ry": 95,
+          "label": "make it yogurt ranch",
+          "labelSide": "above"
+        }
+      ]
+    },
+    {
+      "file": "o08-pin-poster",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-tr",
+      "head": "Breakfast in <span class=\"u\">ten minutes</span>, with 20&nbsp;g of protein or more",
+      "body": "Whipped cottage cheese toast, savory oats with a jammy egg, a warm berry yogurt bowl, a black bean and egg wrap and a peanut banana shake, all from things already in the kitchen.",
+      "readout": [
+        {
+          "label": "Breakfasts",
+          "value": "5"
+        },
+        {
+          "label": "Longest one",
+          "value": "10 min"
+        },
+        {
+          "label": "Least protein",
+          "value": "21 g"
+        }
+      ],
+      "strip": true
+    },
+    {
+      "file": "o09-pin-device",
+      "w": 1000,
+      "h": 1500,
+      "template": "device",
+      "footer": "badge-url",
+      "photo": "app-receipt-scan.jpg",
+      "photoClaim": "iEatz app screen: a grocery receipt being imported as ingredients, with ten items found",
+      "eyebrow": "Receipt import",
+      "head": "One receipt in. Ten ingredients out.",
+      "cap": "Snap the receipt and iEatz turns it into ingredients you can cook with, then builds recipes from them.",
+      "phoneW": 580
+    },
+    {
+      "file": "o10-pin-poster",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-bl",
+      "head": "Mac and cheese with <span class=\"i\">22&nbsp;g of protein</span>",
+      "body": "Blend cottage cheese into the sauce. It tastes like a creamier cheese sauce and carries most of the protein. Stovetop, 20 minutes.",
+      "readout": [
+        {
+          "label": "Protein per serving",
+          "value": "22 g"
+        },
+        {
+          "label": "Minutes",
+          "value": "20"
+        },
+        {
+          "label": "Servings",
+          "value": "4"
+        }
+      ],
+      "strip": true
+    },
+    {
+      "file": "o11-pin-sharpie",
+      "w": 1000,
+      "h": 1500,
+      "template": "sharpie",
+      "footer": "badge-br",
+      "photo": "grocery/grocery-bag-unpacked.jpg",
+      "objPos": "50% 50%",
+      "shade": true,
+      "photoClaim": "paper grocery bags holding bananas, a head of cabbage and red apples",
+      "head": "Freeze them as they spot",
+      "marks": [
+        {
+          "x": 620,
+          "y": 900,
+          "rx": 300,
+          "ry": 200,
+          "label": "4-minute shake",
+          "labelSide": "above"
+        }
+      ]
+    }
+  ]
+}

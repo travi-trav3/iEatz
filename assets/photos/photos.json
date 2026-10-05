@@ -6,15 +6,17 @@
     "fridge",
     "grocery",
     "lifestyle",
-    "pantry"
+    "pantry",
+    "app"
   ],
-  "count": 75,
+  "count": 77,
   "countByCategory": {
     "food": 39,
     "fridge": 8,
-    "grocery": 5,
+    "grocery": 6,
     "lifestyle": 19,
-    "pantry": 4
+    "pantry": 4,
+    "app": 1
   },
   "styles": [
     "kitchen",
@@ -25,11 +27,11 @@
     "receipt"
   ],
   "countByStyle": {
-    "kitchen": 15,
+    "kitchen": 16,
     "process": 7,
     "people": 15,
     "plated": 38,
-    "product": 0,
+    "product": 1,
     "receipt": 0
   },
   "styleNote": "style is what the frame documents, tagged by opening every photo (Sep 2026): kitchen = fridge/pantry/counter/stock as a place; process = hands or tools mid-task; people = a person is the subject; plated = finished food styled for camera (every styled overhead bowl or flat lay); product = a phone showing the real iEatz app; receipt = a grocery receipt in frame. app-*.jpg screenshots are not indexed here and count as product.",
@@ -498,6 +500,20 @@
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/couple-cooking-ad.jpg",
       "style": "people",
       "note": "wide crop of couple-cooking.jpg made for the Meta ad set"
+    },
+    {
+      "file": "app-receipt-scan.jpg",
+      "category": "app",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/app-receipt-scan.jpg",
+      "style": "product",
+      "note": "Real iEatz receipt-import screen (app-receipt.jpg on main, in verified-facts app_screens_allowlist) cropped below the store header so no retailer logo or address shows. Device shell only; never graded."
+    },
+    {
+      "file": "grocery/grocery-bag-unpacked.jpg",
+      "category": "grocery",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-bag-unpacked.jpg",
+      "style": "kitchen",
+      "note": "4:5 crop of grocery-bag-produce.jpg (bananas, cabbage, apples) cut to exclude a bagel brand logo and a printed retailer URL. Use this, not the original, for 4:5 and 2:3 frames."
     }
   ]
 }

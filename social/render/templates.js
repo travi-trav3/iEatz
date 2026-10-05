@@ -159,7 +159,7 @@ let u, body, vals, bars;
 function setup(){u=document.querySelector('.po-head .u');body=document.querySelector('.po-body');
 vals=[...document.querySelectorAll('.po-readout .v')].map(el=>({el,src:el.textContent}));
 bars=[...document.querySelectorAll('.po-strip i')];ready=true;}
-const count=(src,a)=>src.replace(/\\d+(?:\\.\\d+)?/g,(m)=>{const dec=(m.split('.')[1]||'').length;return (parseFloat(m)*a).toFixed(dec);});
+const count=(src,a)=>src.replace(/\\d{1,3}(?:,\\d{3})+(?:\\.\\d+)?|\\d+(?:\\.\\d+)?/g,(m)=>{const dec=(m.split('.')[1]||'').length;const n=parseFloat(m.replace(/,/g,''))*a;return m.includes(',')?n.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec}):n.toFixed(dec);});
 window.setT=(t)=>{if(!ready)setup();
 if(u)u.style.backgroundSize=(ease(prog(t,TL.underline))*100)+'% 0.075em';
 if(body)body.style.opacity=ease(prog(t,TL.body));
@@ -259,7 +259,7 @@ const TEMPLATES = {
   // ---------- mint surface ----------
   device: { surface: 'mint', render: (p, PHOTOS) => `<div class="pin t-device">
     <div class="dhead">${eyebrow(p)}<h1 class="head">${p.head}</h1><p class="dcap">${p.cap}</p></div>
-    <div class="stage"><div class="phone"><span class="screen"><img src="${PHOTOS}/${p.photo}" alt=""></span></div></div>
+    <div class="stage"><div class="phone"${p.phoneW ? ` style="width:${p.phoneW}px"` : ''}><span class="screen"><img src="${PHOTOS}/${p.photo}" alt=""></span></div></div>
     ${footer(p, { url: foot, row: rowPaper, bottom: 'paper', top: 'paper' })}
   </div>` },
 
@@ -408,7 +408,7 @@ const TEMPLATES = {
       const pos = side === 'right' ? `left:${m.x + m.rx + 26}px;top:${m.y}px;transform:translateY(-50%)`
         : side === 'below' ? `left:${m.x}px;top:${m.y + m.ry + 18}px;transform:translateX(-50%)`
         : `left:${m.x}px;top:${m.y - m.ry - 18}px;transform:translate(-50%,-100%)`;
-      return `<div class="sk-label" style="${pos};font-size:${(44 / c).toFixed(1)}px">${m.label}</div>`;
+      return `<div class="sk-label" style="${pos};font-size:${(50 / c).toFixed(1)}px">${m.label}</div>`;
     }).join('');
     const shade = p.shade != null ? p.shade : (p._topLum != null && p._topLum > 0.6 && ink !== '#fff' && ink.toLowerCase() !== '#ffffff');
     return `<div class="pin sh-sharpie" style="--ink-pen:${ink}">
