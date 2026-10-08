@@ -51,7 +51,11 @@ fbq('set', 'autoConfig', false, '766649737085123');
 fbq('init', '766649737085123');
 fbq('track', 'PageView');
 
-/* Store CTA clicks (App Store, Google Play, and the onelink). Fires the Meta
+/* Store CTA clicks (App Store, Google Play, and the store-agnostic buttons).
+   A store CTA is an <a> with data-store="ios" | "android" | "auto"; the
+   href is not consulted because the AppsFlyer Smart Script points every one
+   of them at the OneLink. Links that still carry a bare store URL without
+   data-store are matched by href as a safety net. Fires the Meta
    AppStoreClick custom event (name kept so existing custom conversions keep
    matching), the Meta standard Lead event (so ad sets can optimize on store
    clicks), and a Pinterest `lead`.
@@ -65,14 +69,25 @@ fbq('track', 'PageView');
 var STORE_CLICK_WINDOW_MS = 30 * 60 * 1000, lastStoreClickAt = 0, pdStart = null;
 function storeLink(t) {
   return t && typeof t.closest === 'function'
-    ? t.closest('a[href*="apps.apple.com"], a[href*="play.google.com"], a[href*="onelink.to"]') : null;
+    ? t.closest('a[data-store], a[href*="apps.apple.com"], a[href*="play.google.com"], a[href*="onelink"]') : null;
+}
+/* store=app_store|google_play|onelink, same values as before. ios/android
+   come straight from data-store. A store-agnostic button (data-store="auto")
+   is labeled by the device class the phone script above sets on <html>, and
+   "onelink" on desktop, which is where its click actually went before. */
+function storeOf(a) {
+  var ds = a.getAttribute('data-store'), h = document.documentElement.classList;
+  if (ds === 'android') return 'google_play';
+  if (ds === 'ios') return 'app_store';
+  if (ds === 'auto') return h.contains('is-android') ? 'google_play' : h.contains('is-ios') ? 'app_store' : 'onelink';
+  return a.href.indexOf('play.google.com') > -1 ? 'google_play'
+    : a.href.indexOf('apps.apple.com') > -1 ? 'app_store' : 'onelink';
 }
 function fireStoreClick(a) {
   var now = Date.now();
   if (now - lastStoreClickAt < STORE_CLICK_WINDOW_MS) return;
   lastStoreClickAt = now;
-  var store = a.href.indexOf('play.google.com') > -1 ? 'google_play'
-    : a.href.indexOf('onelink.to') > -1 ? 'onelink' : 'app_store';
+  var store = storeOf(a);
   var placement = a.getAttribute('data-cta') || a.getAttribute('data-cta-position') || 'unlabeled';
   if (typeof window.fbq === 'function') {
     fbq('trackCustom', 'AppStoreClick', { placement: placement, store: store, page: location.pathname });
@@ -131,18 +146,70 @@ pintrk('track', 'pagevisit', {
   gtag('config', 'G-12ZB2TGF7R');
 </script>
 
+<script async src="https://onelinksmartscript.appsflyer.com/onelink-smart-script-latest.js" id="af-smart-script"></script>
 <script>
 (function () {
-  if (!/Android/i.test(navigator.userAgent)) return;
-  document.documentElement.classList.add('is-android');
-  document.addEventListener('DOMContentLoaded', function () {
+  var android = /Android/i.test(navigator.userAgent);
+  if (android) document.documentElement.classList.add('is-android');
+  var domReady = false, applied = false;
+
+  /* Fallback, the pre-OneLink behavior: on Android a text CTA marked
+     data-store="ios" goes to Google Play; badge links hold an <img> and keep
+     their own store. The Play URL comes from the page's own Play link so
+     campaign tags stay consistent. Runs first on DOM ready, so if the
+     OneLink never arrives this is the end state. */
+  function androidFallback() {
+    if (!android) return;
     var play = document.querySelector('a[data-store="android"]');
     var href = play ? play.href : 'https://play.google.com/store/apps/details?id=com.ieatzhealthy.fridgetotable';
     var links = document.querySelectorAll('a[data-store="ios"]');
     for (var i = 0; i < links.length; i++) {
       if (!links[i].querySelector('img')) links[i].href = href;
     }
+  }
+
+  function oneLinkURL() {
+    var af = window.AF_SMART_SCRIPT;
+    if (!af || typeof af.generateOneLinkURL !== 'function') return null;
+    try {
+      var result = af.generateOneLinkURL({
+        oneLinkURL: 'https://ieatz.onelink.me/paiG',
+        afParameters: {
+          mediaSource: {
+            keys: ['utm_source'],
+            overrideValues: { facebook: 'meta_web', instagram: 'meta_web' },
+            defaultValue: 'website'
+          },
+          campaign: { keys: ['utm_campaign'], defaultValue: 'lp_direct' },
+          channel:  { keys: ['utm_medium'] },
+          adSet:    { keys: ['utm_term'] },
+          ad:       { keys: ['utm_content'] }
+        }
+      });
+      return result && result.clickURL ? String(result.clickURL) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /* Runs on DOM ready and on script load; whichever comes second does the
+     work, so the result is the same regardless of load order. */
+  function applyOneLink() {
+    if (applied || !domReady) return;
+    var url = oneLinkURL();
+    if (!url) return;
+    var links = document.querySelectorAll('a[data-store]');
+    for (var i = 0; i < links.length; i++) links[i].href = url;
+    applied = true;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    domReady = true;
+    androidFallback();
+    applyOneLink();
   });
+  var s = document.getElementById('af-smart-script');
+  if (s) s.addEventListener('load', applyOneLink);
 })();
 </script>
 </head>
