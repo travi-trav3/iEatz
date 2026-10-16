@@ -26,14 +26,14 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "Fri Oct 16 to Sun Oct 25, requested Oct 16 ('today through end of next week', both channels). Feedback review ran Oct 12 and at batch start: no notes, RULES.md empty. Pages phase: no new page can be live inside this window (7-day rule, and the pages pipeline deploys from iEatz main), so pins go to the two live pages or the App Store. Gate runs with --with ../manifest/send-this.json (st01 lands Thu Oct 22 inside window 1). Reels are silent: no Meta Sound Collection track supplied. Scheduled for real (not drafts).",
+  "note": "Fri Oct 16 to Sun Oct 25, requested Oct 16 ('today through end of next week', both channels). Feedback review ran Oct 12 and at batch start: no notes, RULES.md empty. Pages phase: no new page can be live inside this window (7-day rule, and the pages pipeline deploys from iEatz main), so pins go to the two live pages or the App Store. Gate runs with --with ../manifest/send-this.json (st01 lands Thu Oct 22 inside window 1). Reels are silent: no Meta Sound Collection track supplied. Scheduled for real (not drafts). [2026-10-16 14:45 PT: all 17 created as scheduled posts (first comments echoed on create, both reels accepted by URL with 7000/8000 ms detected), 17 Slack alerts armed in #social.]",
   "formulaicCtas": [
     "receipt-scan"
   ],
   "posts": [
     {
       "id": "o16-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-16T20:10:00-07:00",
       "file": "assets/social/oct16/o16-ig-reel.mp4",
@@ -44,11 +44,13 @@
       "videoTitle": "Take a photo of what's on the counter. Dinner is in there.",
       "text": "Cherry tomatoes, scallions, corn, a head of cauliflower. That's a photo, and the photo is a recipe.\n\nPoint the camera at the counter or the fridge, and iEatz lists what it sees, then builds tonight's dinner from exactly those ingredients. No typing, no list.\n\n#whatsfordinner #fridgecooking #weeknightdinner #recipeapp #ieatzhealthy",
       "firstComment": "The cauliflower is the one everybody forgets they bought. It roasts in 20 minutes.",
-      "alt": "Vertical reel: a cook slicing cherry tomatoes on a wooden board with scallions, corn and a cauliflower on the counter. Headline over the photo: Take a photo of what's on the counter. Dinner is in there."
+      "alt": "Vertical reel: a cook slicing cherry tomatoes on a wooden board with scallions, corn and a cauliflower on the counter. Headline over the photo: Take a photo of what's on the counter. Dinner is in there.",
+      "bufferId": "6ad298e387c49357709bdd02",
+      "slackAlert": "Dr0CA0HH4TG9"
     },
     {
       "id": "o17-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-17T09:25:00-07:00",
       "file": "assets/social/oct16/o17-ig-collage.png",
@@ -57,11 +59,13 @@
       "cta": "none",
       "text": "The jars first, then the bowl. Red lentils, bulgur, split peas and rice keep for a year; the bowl takes 20 minutes.\n\nRoasted chickpea and bulgur bowl, serves 2: drain a can of chickpeas, toss with olive oil, cumin and salt, roast at 425°F for 18 minutes. Meanwhile cook 1/2 cup bulgur in a cup of water, 12 minutes. Pile both over a handful of greens with whatever is open (edamame, olives, chopped tomato and cucumber), a spoon of yogurt and a squeeze of lemon. About 18 g of protein per bowl, estimated. Verify for allergens.\n\n#pantrymeals #chickpeas #mealprep #budgetmeals #ieatzhealthy",
       "firstComment": "The figs in the bowl were a bonus from the fruit drawer. Not required, strongly encouraged.",
-      "alt": "Collage on deep cream paper: a photo of glass pantry jars of red lentils, bulgur, split peas and rice, taped at an angle, and a photo of a bowl of roasted chickpeas with greens, edamame, olives, tomato and naan. Handwritten notes: lentils, bulgur, peas; then the bowl. Headline: Shelf-stable, still dinner."
+      "alt": "Collage on deep cream paper: a photo of glass pantry jars of red lentils, bulgur, split peas and rice, taped at an angle, and a photo of a bowl of roasted chickpeas with greens, edamame, olives, tomato and naan. Handwritten notes: lentils, bulgur, peas; then the bowl. Headline: Shelf-stable, still dinner.",
+      "bufferId": "6ad299068ac6cfe5441a654c",
+      "slackAlert": "Dr0C9YEYCP26"
     },
     {
       "id": "o18-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-18T17:05:00-07:00",
       "file": "assets/social/oct16/o18-ig-carousel--01.png",
@@ -78,11 +82,13 @@
       "cta": "other",
       "text": "Soup season starts on the pantry shelf. Four soups, one pot each, every one built from a can or a cup of something dry plus broth and one green thing:\n\n1. White bean and kale, 20 minutes, est. 15 g protein\n2. Tomato and chickpea, 25 minutes, est. 12 g\n3. Red lentil and coconut, 30 minutes, est. 17 g\n4. Black bean, 20 minutes, est. 16 g\n\nSteps on the slides. Protein and time are estimates per serving; verify for allergens. Save this for the first cold night.\n\n#soupseason #pantrymeals #highproteinmeals #mealprep #ieatzhealthy",
       "firstComment": "Which one first? The red lentil coconut is the one that converts people who say they don't like lentils.",
-      "alt": "Six-slide carousel on cream paper. Slide one: Four soups that start on the pantry shelf, with a readout of 4 soups, 20 to 30 minutes, 12 to 17 g protein per bowl estimated. Slides two to five: numbered steps for white bean and kale soup, tomato and chickpea soup, red lentil and coconut soup, and black bean soup, each with estimated protein, minutes and servings. Slide six: Four cans, four soups, one pot."
+      "alt": "Six-slide carousel on cream paper. Slide one: Four soups that start on the pantry shelf, with a readout of 4 soups, 20 to 30 minutes, 12 to 17 g protein per bowl estimated. Slides two to five: numbered steps for white bean and kale soup, tomato and chickpea soup, red lentil and coconut soup, and black bean soup, each with estimated protein, minutes and servings. Slide six: Four cans, four soups, one pot.",
+      "bufferId": "6ad2990a52adf2bfae623f8a",
+      "slackAlert": "Dr0C9YEYNRT4"
     },
     {
       "id": "o20-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-20T12:35:00-07:00",
       "file": "assets/social/oct16/o20-ig-device.png",
@@ -91,11 +97,13 @@
       "cta": "app-value",
       "text": "You picked pan-seared chicken with asparagus and spinach. You have the chicken. iEatz checks the recipe against what's in your kitchen, finds the six things missing, and hands them to Instacart as a cart at the store you already use.\n\nNo retyping the list. No wandering the aisles for the one thing.\n\n#instacart #grocerylist #mealplanning #weeknightdinner #ieatzhealthy",
       "firstComment": "Yes, asparagus in October. It was on sale. The app does not judge.",
-      "alt": "Mint card with a phone showing the iEatz hand-off to Instacart: the missing items for pan-seared chicken with asparagus and spinach, with a button to add six items to a Ralphs cart. Headline: The missing six go to Instacart."
+      "alt": "Mint card with a phone showing the iEatz hand-off to Instacart: the missing items for pan-seared chicken with asparagus and spinach, with a button to add six items to a Ralphs cart. Headline: The missing six go to Instacart.",
+      "bufferId": "6ad2990e52adf2bfae6242d1",
+      "slackAlert": "Dr0C9TBWH1T7"
     },
     {
       "id": "o23-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-23T07:50:00-07:00",
       "file": "assets/social/oct16/o23-ig-quotedark.png",
@@ -104,11 +112,13 @@
       "cta": "follow",
       "text": "From an App Store review. Two weeks, nothing in the bin: the lemons and the parsley on the counter get cooked instead of composted, because the recipe starts from what is already there.\n\nIf you cook from the fridge too, follow along. Reviews like this one are why we keep building.\n\n#foodwaste #zerowastekitchen #fridgecooking #homecooking #ieatzhealthy",
       "firstComment": "Thank you, SixSocks. The half-bag of spinach salutes you.",
-      "alt": "Dark card over a photo of a white kitchen counter with a bowl of lemons, bread and parsley. Quote in cream serif: I haven't had any groceries go to waste the last couple of weeks. Attribution: SixSocks, App Store review."
+      "alt": "Dark card over a photo of a white kitchen counter with a bowl of lemons, bread and parsley. Quote in cream serif: I haven't had any groceries go to waste the last couple of weeks. Attribution: SixSocks, App Store review.",
+      "bufferId": "6ad29911c34368e4b094f1a8",
+      "slackAlert": "Dr0C9SDR8EP5"
     },
     {
       "id": "o24-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-24T10:15:00-07:00",
       "file": "assets/social/oct16/o24-ig-carousel--01.png",
@@ -124,11 +134,13 @@
       "cta": "none",
       "text": "One dozen eggs, three meals, 22 to 24 g of protein each. The eggs, the avocado and the spinach on this board cover a dinner and two breakfasts:\n\n1. Cheesy egg and black bean quesadillas, 12 minutes (dinner, serves 2)\n2. Savory oats with a jammy egg, 10 minutes\n3. Black bean and egg skillet, rolled into a wrap, 9 minutes\n\nSteps on the slides, full recipes free on ieatzhealthy.com/recipes. Protein is per serving.\n\n#eggs #highproteinbreakfast #kidsdinner #cheapmeals #ieatzhealthy",
       "firstComment": "The jalapeño is for the grown-up quesadilla only. We learned that one the hard way.",
-      "alt": "Five-slide carousel. Slide one: a photo of two eggs, half an avocado, cherry tomatoes, mushrooms, spinach and scallions on a cutting board, marked up in white marker: the eggs circled with the quesadilla, the spinach circled with grown-up plate. Handwritten headline: One dozen, three meals. Slides two to four: numbered steps for cheesy egg and black bean quesadillas, savory oats with a jammy egg, and the black bean and egg skillet wrap, each with protein, minutes and servings. Slide five: Eggs are the cheapest protein in the fridge."
+      "alt": "Five-slide carousel. Slide one: a photo of two eggs, half an avocado, cherry tomatoes, mushrooms, spinach and scallions on a cutting board, marked up in white marker: the eggs circled with the quesadilla, the spinach circled with grown-up plate. Handwritten headline: One dozen, three meals. Slides two to four: numbered steps for cheesy egg and black bean quesadillas, savory oats with a jammy egg, and the black bean and egg skillet wrap, each with protein, minutes and servings. Slide five: Eggs are the cheapest protein in the fridge.",
+      "bufferId": "6ad2991a1694d771d5099177",
+      "slackAlert": "Dr0CA2BGCV8U"
     },
     {
       "id": "o25-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-25T18:20:00-07:00",
       "file": "assets/social/oct16/o25-ig-reel.mp4",
@@ -139,11 +151,13 @@
       "videoTitle": "Half the week is on this receipt",
       "text": "$25.24 at the register: a dozen eggs, a can of black beans, tortillas, cheddar, a pound of chicken tenders and a tub of Greek yogurt.\n\niEatz read it as four meals. Monday, cheesy egg and black bean quesadillas (12 minutes). Tuesday, crispy yogurt ranch tenders (25). Wednesday, the leftover tenders rolled into lunchbox wraps. Thursday, black bean and egg breakfast wraps (9). The panko, salt and ranch seasoning were already home.\n\nThe quesadillas, the tenders and the breakfast wrap are free on ieatzhealthy.com/recipes.\n\n#groceryhaul #budgetmeals #kidsdinner #mealplanning #ieatzhealthy",
       "firstComment": "The yogurt does double duty: it's the tender marinade on Tuesday and the dip on the side.",
-      "alt": "Vertical reel: a receipt from Corner Market prints line by line on deep green, listing eggs, black beans, tortillas, cheddar, chicken tenders and Greek yogurt for $25.24, then four meals appear below it with a yellow sticker reading 4 meals. Headline: Half the week is on this receipt."
+      "alt": "Vertical reel: a receipt from Corner Market prints line by line on deep green, listing eggs, black beans, tortillas, cheddar, chicken tenders and Greek yogurt for $25.24, then four meals appear below it with a yellow sticker reading 4 meals. Headline: Half the week is on this receipt.",
+      "bufferId": "6ad2991e1c7e49ea4c25c5f4",
+      "slackAlert": "Dr0CA0HKKPT3"
     },
     {
       "id": "p16-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-16T19:05:00-07:00",
       "file": "assets/pinterest/oct16/p16-pin-poster.png",
@@ -155,11 +169,13 @@
       "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/?utm_source=pinterest&utm_medium=organic&utm_campaign=ingredient-idea&utm_content=p16-pin-poster#savory-oats-jammy-egg",
       "title": "Savory oats with a jammy egg: 10-minute high protein breakfast (24 g)",
       "text": "Savory oatmeal cooked like risotto with parmesan and a splash of soy, topped with a seven-minute jammy egg, scallion and black pepper. 24 g of protein, ten minutes, one pot: the egg boils in the same water the oats cook in. A high protein breakfast from rolled oats and one egg.",
-      "alt": "Cream typographic pin: Savory oats with a jammy egg, with a readout of 24 g protein, 10 minutes, serves 1."
+      "alt": "Cream typographic pin: Savory oats with a jammy egg, with a readout of 24 g protein, 10 minutes, serves 1.",
+      "bufferId": "6ad29924c34368e4b094f32e",
+      "slackAlert": "Dr0CAT1ZLEM6"
     },
     {
       "id": "p17-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-17T10:50:00-07:00",
       "file": "assets/pinterest/oct16/p17-pin-sharpie.png",
@@ -171,11 +187,13 @@
       "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=persona-spotlight&utm_content=p17-pin-sharpie#cheesy-egg-bean-quesadillas",
       "title": "Cheesy egg and black bean quesadillas: a 12 minute high protein kids dinner (24 g)",
       "text": "Everything for dinner is already on the board: eggs scrambled with mashed black beans and folded into a cheese quesadilla, cut into triangles for small hands. The spinach and jalapeño go into the grown-up one. 24 g of protein per serving, 12 minutes, one pan. Full recipe on the site.",
-      "alt": "Photo of eggs, half an avocado, cherry tomatoes, mushrooms, spinach and scallions on a cutting board, marked up in white marker: the eggs circled with the quesadilla, the spinach circled with grown-up plate. Handwritten headline: Dinner on one board."
+      "alt": "Photo of eggs, half an avocado, cherry tomatoes, mushrooms, spinach and scallions on a cutting board, marked up in white marker: the eggs circled with the quesadilla, the spinach circled with grown-up plate. Handwritten headline: Dinner on one board.",
+      "bufferId": "6ad2992a8ac6cfe5441a6a5e",
+      "slackAlert": "Dr0C9TBVT0AZ"
     },
     {
       "id": "p18-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-18T20:15:00-07:00",
       "file": "assets/pinterest/oct16/p18-pin-quotedark.png",
@@ -187,11 +205,13 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "Stop wasting groceries: cook from what's already in the fridge and pantry",
       "text": "An App Store review of iEatz Healthy: two weeks without a single grocery going to waste. The recipes start from what is already in the kitchen, the jars of lentils and rice included, so the wilting thing becomes tonight's dinner instead of Sunday's bin. Free on iOS and Android.",
-      "alt": "Dark pin over a photo of glass pantry jars of lentils, bulgur and rice. Quote in cream serif: I haven't had any groceries go to waste the last couple of weeks. Attribution: SixSocks, App Store review."
+      "alt": "Dark pin over a photo of glass pantry jars of lentils, bulgur and rice. Quote in cream serif: I haven't had any groceries go to waste the last couple of weeks. Attribution: SixSocks, App Store review.",
+      "bufferId": "6ad2992f1c7e49ea4c25c855",
+      "slackAlert": "Dr0CA0HHTATT"
     },
     {
       "id": "p19-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-19T13:05:00-07:00",
       "file": "assets/pinterest/oct16/p19-pin-device.png",
@@ -203,11 +223,13 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "Recipe app that estimates calories and macros for you: iEatz Healthy, free on iOS",
       "text": "Every iEatz recipe comes with estimated calories, protein, carbs and fat per serving (this pan-seared chicken with asparagus and spinach: 30 minutes, 450 calories, 45 g protein), plus a Shop with Instacart button for the ingredients you are missing. Recipes are built from what is already in your kitchen. Free on the App Store.",
-      "alt": "Mint pin with a phone showing the iEatz recipe screen: pan-seared chicken with asparagus and spinach, 30 minutes, 450 calories, carbs 10 g, protein 45 g, fat 25 g, and a Shop with Instacart button. Headline: Calories and macros, already counted."
+      "alt": "Mint pin with a phone showing the iEatz recipe screen: pan-seared chicken with asparagus and spinach, 30 minutes, 450 calories, carbs 10 g, protein 45 g, fat 25 g, and a Shop with Instacart button. Headline: Calories and macros, already counted.",
+      "bufferId": "6ad299348ac6cfe5441a6b0f",
+      "slackAlert": "Dr0C9YEZ5K50"
     },
     {
       "id": "p20-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-20T07:40:00-07:00",
       "file": "assets/pinterest/oct16/p20-pin-list.png",
@@ -219,11 +241,13 @@
       "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=persona-spotlight&utm_content=p20-pin-list",
       "title": "Kids lunchbox ideas from last night's high protein dinner: 4 easy packs",
       "text": "Cook one high protein dinner, pack the leftovers for school: egg and black bean quesadilla triangles served cold with salsa in a tub, yogurt ranch chicken tenders sliced over greens with the dip as dressing, lentil and turkey pasta reheated into a thermos, and cottage cheese mac and cheese with peas. All four dinner recipes, 22 to 34 g of protein per serving, are free on the site.",
-      "alt": "Numbered list pin on cream paper: Four dinners that pack as lunch. 1 Quesadilla triangles, cold. 2 Tenders over greens. 3 Lentil pasta in a thermos. 4 Mac and cheese, same thermos."
+      "alt": "Numbered list pin on cream paper: Four dinners that pack as lunch. 1 Quesadilla triangles, cold. 2 Tenders over greens. 3 Lentil pasta in a thermos. 4 Mac and cheese, same thermos.",
+      "bufferId": "6ad2993a8ac6cfe5441a6bbd",
+      "slackAlert": "Dr0C9YEZ71R8"
     },
     {
       "id": "p21-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-21T18:30:00-07:00",
       "file": "assets/pinterest/oct16/p21-pin-bleed.png",
@@ -235,11 +259,13 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "What to cook with what's on the counter: mushrooms, scallions and asparagus into dinner",
       "text": "Mushrooms on the board, scallions beside them, asparagus in a jar. Tell iEatz what is on the counter and it writes the weeknight recipe from exactly those ingredients, with estimated calories and protein per serving, then lists anything missing for Instacart. Free on iOS and Android.",
-      "alt": "Full-bleed photo of a woman in a pink apron chopping mushrooms on a board, with asparagus and scallions beside her. Headline over the photo: Tonight is already on the board."
+      "alt": "Full-bleed photo of a woman in a pink apron chopping mushrooms on a board, with asparagus and scallions beside her. Headline over the photo: Tonight is already on the board.",
+      "bufferId": "6ad29a09c34368e4b0951c20",
+      "slackAlert": "Dr0C9YEZJ2M8"
     },
     {
       "id": "p22-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-22T12:10:00-07:00",
       "file": "assets/pinterest/oct16/p22-pin-recipephoto.png",
@@ -251,11 +277,13 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "Pesto salmon with cauliflower rice: 20 minute high protein dinner (est. 38 g)",
       "text": "Seared salmon over cauliflower rice with green beans, cherry tomatoes, pesto and pine nuts, one pan, 20 minutes. Sear the salmon skin side down 4 minutes and flip for 3; steam the beans and the cauliflower rice in the same pan with a splash of water; spoon pesto over, scatter tomatoes and pine nuts. About 38 g of protein per serving, estimated; verify for allergens. iEatz builds dinners like this from what is in your fridge, free on the App Store.",
-      "alt": "Pin with a photo of seared salmon over cauliflower rice with green beans, cherry tomatoes and pesto, above a cream recipe panel: Pesto salmon over cauliflower rice, you need salmon fillet, frozen cauliflower rice, green beans, cherry tomatoes, pesto, pine nuts, with the method."
+      "alt": "Pin with a photo of seared salmon over cauliflower rice with green beans, cherry tomatoes and pesto, above a cream recipe panel: Pesto salmon over cauliflower rice, you need salmon fillet, frozen cauliflower rice, green beans, cherry tomatoes, pesto, pine nuts, with the method.",
+      "bufferId": "6ad29a0b8ac6cfe5441a94fe",
+      "slackAlert": "Dr0C9H9EMVBR"
     },
     {
       "id": "p23-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-23T21:05:00-07:00",
       "file": "assets/pinterest/oct16/p23-pin-split.png",
@@ -267,11 +295,13 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "Blistered tomato and pea spaghetti from what's on the counter, 20 minutes",
       "text": "Before and after: cherry tomatoes on the cutting board at 5:40, a skillet of spaghetti with blistered tomatoes, frozen peas and basil by 6. Blister the tomatoes in olive oil and garlic while the pasta cooks, add the peas for the last two minutes, toss with the pasta and a ladle of its water, tear basil over. iEatz wrote it from a photo of the counter. Free on iOS and Android.",
-      "alt": "Split pin: top, a cook slicing cherry tomatoes on a wooden board with a mono label reading 5:40 PM, the counter; bottom, a cast iron skillet of spaghetti with blistered tomatoes, peas and basil. Seam label: Counter to pan. Caption: Cherry tomatoes, frozen peas, half a box of spaghetti. iEatz wrote the recipe from a photo of the counter. 20 min."
+      "alt": "Split pin: top, a cook slicing cherry tomatoes on a wooden board with a mono label reading 5:40 PM, the counter; bottom, a cast iron skillet of spaghetti with blistered tomatoes, peas and basil. Seam label: Counter to pan. Caption: Cherry tomatoes, frozen peas, half a box of spaghetti. iEatz wrote the recipe from a photo of the counter. 20 min.",
+      "bufferId": "6ad29a0d1694d771d509c97e",
+      "slackAlert": "Dr0C9SDRCJ1H"
     },
     {
       "id": "p24-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-24T09:15:00-07:00",
       "file": "assets/pinterest/oct16/p24-pin-thread.png",
@@ -283,11 +313,13 @@
       "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=persona-spotlight&utm_content=p24-pin-thread#lentil-turkey-pasta-sauce",
       "title": "Hidden lentil pasta sauce with ground turkey: a picky eater dinner with 29 g protein",
       "text": "The 5:52 text: what's for dinner. Pasta with the meat sauce, the one where half a cup of red lentils simmers into the marinara with the ground turkey until nobody can tell. 29 g of protein per serving, 25 minutes, any pasta shape the kids will eat; chili flakes, parmesan and basil on the grown-up bowl. Full recipe free on the site, with three more picky eater dinners.",
-      "alt": "Mint pin styled as a text thread at Tue 5:52 PM: whats for dinner; pasta with the meat sauce; the one with lentils in it??; you can't taste them. don't tell your brother; ...fine; 25 minutes. set the table. Footer line: Pasta with lentil and turkey sauce, 29 g of protein, 25 minutes, the lentils cook down into the tomato."
+      "alt": "Mint pin styled as a text thread at Tue 5:52 PM: whats for dinner; pasta with the meat sauce; the one with lentils in it??; you can't taste them. don't tell your brother; ...fine; 25 minutes. set the table. Footer line: Pasta with lentil and turkey sauce, 29 g of protein, 25 minutes, the lentils cook down into the tomato.",
+      "bufferId": "6ad29a1052adf2bfae626426",
+      "slackAlert": "Dr0CA0HK67S5"
     },
     {
       "id": "p25-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-25T15:50:00-07:00",
       "file": "assets/pinterest/oct16/p25-pin-poster.png",
@@ -299,7 +331,9 @@
       "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/?utm_source=pinterest&utm_medium=organic&utm_campaign=ingredient-idea&utm_content=p25-pin-poster#black-bean-egg-skillet",
       "title": "9 minute breakfast burrito: smashed black beans and eggs rolled in a tortilla (22 g protein)",
       "text": "A high protein breakfast burrito from a can and two eggs: warm the black beans in a dry skillet with cumin and smash half, crack the eggs into the empty side and cover for 3 minutes, warm the tortillas on the same burner, fill, add salsa, roll tight. 22 g of protein per serving, 9 minutes, serves 2.",
-      "alt": "Cream typographic pin: Black bean and egg skillet, rolled into a wrap, with a readout of 22 g protein, 9 minutes, serves 2."
+      "alt": "Cream typographic pin: Black bean and egg skillet, rolled into a wrap, with a readout of 22 g protein, 9 minutes, serves 2.",
+      "bufferId": "6ad29a128ac6cfe5441a9564",
+      "slackAlert": "Dr0C9TBXU069"
     }
   ]
 }
