@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <style>/* ==========================================================================
    iEatz Healthy — Design System Tokens
@@ -459,16 +459,6 @@ a:hover{color:var(--brand-green)}
 .hero-fine{margin-top:16px;font-size:14px;color:var(--ink-4);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .hero-fine .dot{width:4px;height:4px;border-radius:999px;background:var(--ink-5);flex:none}
 
-.hero-photo{position:relative;aspect-ratio:4/5;border-radius:24px;background:var(--ie-green-light)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;border-radius:24px;box-shadow:var(--shadow-lg);display:block}
-.hero-photo .pill{position:absolute;bottom:24px;left:24px;display:inline-flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(245,242,234,0.94);backdrop-filter:blur(8px);border-radius:999px;font-size:14px;font-weight:600;color:var(--ink-1)}
-.hero-photo .pill .ind{width:8px;height:8px;border-radius:999px;background:var(--brand-green);box-shadow:0 0 0 4px rgba(31,139,76,0.18)}
-.hero-photo .recipe-card{position:absolute;bottom:-32px;right:-32px;width:268px;background:var(--white);border-radius:20px;padding:20px 22px 22px;box-shadow:var(--shadow-lg);border:1px solid rgba(10,15,12,0.04)}
-.hero-photo .recipe-card .ingredients{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.hero-photo .recipe-card .ingr{font-size:12px;font-weight:500;padding:5px 10px;border-radius:999px;background:var(--ie-green-light);color:var(--ie-green-dark);letter-spacing:0.02em}
-.hero-photo .recipe-card .rname{font-family:var(--font-serif);font-size:21px;line-height:1.12;letter-spacing:-0.01em;color:var(--ink-1);margin:4px 0 10px;text-wrap:balance}
-.hero-photo .recipe-card .meta{font-size:12px;color:var(--ink-4);letter-spacing:0.06em;text-transform:uppercase;font-weight:600}
-@media (max-width:980px){.hero-photo .recipe-card{right:-12px;bottom:-24px;width:236px}}
 
 @media (max-width:720px){.hero{padding:44px 0 96px}.hero .sub{font-size:19px;margin-top:22px}.hero-ctas{margin-top:28px;gap:16px 24px}.hero h1{margin-top:18px}}
 
@@ -845,88 +835,88 @@ footer{background:var(--ink-1);color:var(--paper);padding:80px 0 56px}
   .hero-fine a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
   .hero-fine a:hover { color: var(--ink-1); }
 
-  .hero-photo {
-    position: relative; aspect-ratio: 4 / 5;
-    border-radius: 24px;
-    background: var(--ie-green-light);
-  }
-  .hero-photo img {
-    width: 100%; height: 100%; object-fit: cover;
-    border-radius: 24px;
+  /* Hero visual · text thread: the full fridge, the excuse, and the dinner
+     iEatz makes from it. Text inside the photo is sized in cqw (1cqw = 1% of
+     the frame's width) so it scales with the frame like the 1080x1350 source
+     design: 62px on that canvas = 5.74cqw. The recipe card overhangs the
+     frame's right edge on wide screens and tucks under it on phones. */
+  /* The card starts at 57% of the frame (clear of the caption) and is at least
+     256px wide; on narrow desktop columns the frame shrinks so the card still
+     fits inside the column plus the page gutter. */
+  .hero-visual { position: relative; width: min(460px, 85%, calc((100% + 40px - 256px) / 0.57)); }
+  @media (max-width: 980px) { .hero-visual { width: min(460px, 82%); } }
+  .hv-photo {
+    position: relative; aspect-ratio: 4 / 5; overflow: hidden;
+    border-radius: 28px; background: #111;
     box-shadow: var(--shadow-lg);
-    display: block;
+    container-type: inline-size;
+  }
+  .hv-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hv-photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 34%, rgba(0,0,0,0) 62%, rgba(0,0,0,0.72) 100%);
+  }
+  .hv-thread {
+    position: absolute; z-index: 1; left: 5.19cqw; right: 5.19cqw; top: 4.81cqw;
+    display: flex; flex-direction: column; gap: 1.85cqw;
+    font-family: -apple-system, BlinkMacSystemFont, var(--font-sans);
+  }
+  .hv-time { align-self: center; font-size: 2.78cqw; color: #FFFFFF; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+  .hv-bubble {
+    margin: 0; white-space: nowrap;
+    font-size: 5.74cqw; line-height: 1.15;
+    padding: 2.22cqw 3.52cqw; border-radius: 4.26cqw;
+    box-shadow: 0 0.74cqw 2.78cqw rgba(0,0,0,0.22);
+  }
+  .hv-them { align-self: flex-start; background: #E9E9EB; color: #0A0F0C; border-bottom-left-radius: 1.3cqw; }
+  .hv-me { align-self: flex-end; background: #0A84FF; color: #FFFFFF; border-bottom-right-radius: 1.3cqw; }
+  .hv-caption {
+    position: absolute; z-index: 1; left: 5.56cqw; bottom: 5.93cqw; width: 55.6cqw; margin: 0;
+    font-family: var(--font-sans); font-weight: 700;
+    font-size: 5.56cqw; line-height: 1.06; letter-spacing: -0.02em;
+    color: #FFFFFF; text-shadow: 0 0.19cqw 1.67cqw rgba(0,0,0,0.45);
   }
 
-  .hero-photo .pill {
-    position: absolute; bottom: 24px; left: 24px;
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 12px 18px;
-    background: rgba(245,242,234,0.94);
-    backdrop-filter: blur(8px);
-    border-radius: 999px;
-    font-size: 14px; font-weight: 600;
-    color: var(--ink-1);
+  .hv-card {
+    position: absolute; z-index: 2; left: 57%; top: 64.7%;
+    width: max(256px, 60.9%);
+    display: flex; flex-direction: column; gap: 12px;
+    padding: 16px; background: var(--white); border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(14,74,42,.08), 0 16px 40px rgba(14,74,42,.14), 0 32px 72px rgba(14,74,42,.08);
+    font-family: 'Plus Jakarta Sans', var(--font-sans); color: var(--ie-ink);
+    text-decoration: none;
+    transition: transform 140ms ease;
   }
-  .hero-photo .pill .ind {
-    width: 8px; height: 8px; border-radius: 999px;
-    background: var(--brand-green);
-    box-shadow: 0 0 0 4px rgba(31,139,76,0.18);
+  .hv-card:hover { transform: translateY(-2px); }
+  .hv-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 11px; }
+  .hv-tag { display: flex; align-items: center; gap: 6px; white-space: nowrap; font-weight: 700; letter-spacing: 0.04em; color: var(--brand-green); }
+  .hv-mins { white-space: nowrap; font-weight: 600; color: #6B716D; }
+  .hv-title { font-weight: 800; font-size: 20px; line-height: 1.18; letter-spacing: -0.01em; text-wrap: balance; }
+  .hv-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .hv-chips > span {
+    display: flex; align-items: center; gap: 4px;
+    background: #E3F2E8; color: var(--ie-green-dark);
+    font-weight: 600; font-size: 11px; padding: 4px 9px; border-radius: 999px;
   }
-
-  /* Floating "card" of generated dinner — overlaps bottom-right edge */
-  .hero-photo .recipe-card {
-    position: absolute; bottom: -32px; right: -32px;
-    width: 268px;
-    background: var(--white);
-    border-radius: 20px;
-    padding: 20px 22px 22px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(10,15,12,0.04);
+  .hv-macros { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  .hv-macros > span {
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    padding: 8px 0; background: #F1FCF3; border-radius: 10px;
+    font-weight: 500; font-size: 10px; color: #6B716D;
   }
-  .hero-photo .recipe-card .ingredients {
-    display: flex; flex-wrap: wrap; gap: 6px;
-    margin-bottom: 12px;
+  .hv-macros b { font-weight: 700; font-size: 15px; color: var(--ie-ink); }
+  .hv-go {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    background: var(--ie-green-dark); color: #FFFFFF;
+    font-weight: 700; font-size: 15px; padding: 13px 0; border-radius: 14px;
+    transition: background 120ms ease;
   }
-  .hero-photo .recipe-card .ingr {
-    font-size: 12px; font-weight: 500;
-    padding: 5px 10px; border-radius: 999px;
-    background: var(--ie-green-light);
-    color: var(--ie-green-dark);
-    letter-spacing: 0.02em;
+  .hv-card:hover .hv-go { background: var(--brand-green); }
+  @media (max-width: 560px) {
+    .hero-visual { width: 100%; }
+    .hv-caption { bottom: 16cqw; }
+    .hv-card { position: relative; left: auto; top: auto; width: min(300px, 88%); margin: -44px 0 0 auto; }
   }
-  .hero-photo .recipe-card .rname {
-    font-family: var(--font-serif);
-    font-size: 21px;
-    line-height: 1.12;
-    letter-spacing: -0.01em;
-    color: var(--ink-1);
-    margin: 4px 0 10px;
-    text-wrap: balance;
-  }
-  .hero-photo .recipe-card .meta {
-    font-size: 12px; color: var(--ink-4);
-    letter-spacing: 0.06em; text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  .hero-photo .stat-tag {
-    position: absolute; left: -28px; top: 48px;
-    background: var(--ie-green-dark);
-    color: var(--paper);
-    border-radius: 14px;
-    padding: 14px 20px;
-    box-shadow: var(--shadow-md);
-    font-family: var(--font-sans);
-  }
-  .stat-tag .num {
-    font-family: var(--font-serif);
-    font-style: italic; font-size: 40px;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: #9FE4B3;
-    padding-right: 4px;
-  }
-  .stat-tag .lbl { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 8px; opacity: 0.85; font-weight: 600; }
 
   /* Background accent — concentric arcs (subtle) */
   .arcs {
@@ -2575,21 +2565,23 @@ pintrk('track', 'pagevisit', {
         </div>
       </div>
 
-      <div class="hero-photo">
-        <img src="assets/photos/couple-cooking.jpg" alt="A couple cooking together at home">
-        <div class="recipe-card">
-          <div class="ingredients">
-            <span class="ingr">chicken</span>
-            <span class="ingr">rice</span>
-            <span class="ingr">broccoli</span>
+      <div class="hero-visual">
+        <div class="hv-photo" role="img" aria-label="An open fridge full of groceries, with a text thread: &ldquo;what do u want for dinner&rdquo;, &ldquo;idk there&rsquo;s nothing to eat&rdquo;. Said in front of $200 in groceries.">
+          <img src="assets/photos/fridge-full.jpg" alt="" width="920" height="1150" fetchpriority="high">
+          <div class="hv-thread">
+            <span class="hv-time">Today 6:04 PM</span>
+            <p class="hv-bubble hv-them">what do u want for dinner</p>
+            <p class="hv-bubble hv-me">idk there&rsquo;s nothing to eat</p>
           </div>
-          <div class="rname">Honey-garlic chicken with charred broccoli</div>
-          <div class="meta">15 min · 480 cal</div>
+          <p class="hv-caption">Said in front of<br>$200 in groceries.</p>
         </div>
-        <div class="pill">
-          <span class="ind"></span>
-          7 ingredients imported
-        </div>
+        <a class="hv-card" href="https://onelink.to/2xynd2" data-store="auto" data-cta-position="hero-card" target="_blank" rel="noopener" aria-label="Crispy mushroom tacos with charred corn salsa, made from your fridge in 25 minutes. Get the app free to start cooking.">
+          <span class="hv-card-top"><span class="hv-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path></svg>MADE FROM YOUR FRIDGE</span><span class="hv-mins">25 min</span></span>
+          <span class="hv-title">Crispy mushroom tacos with charred corn salsa</span>
+          <span class="hv-chips"><span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1F8B4C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>mushrooms</span><span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1F8B4C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>corn</span><span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1F8B4C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>avocado</span></span>
+          <span class="hv-macros"><span><b>520</b>kcal</span><span><b>24g</b>protein</span><span><b>58g</b>carbs</span><span><b>21g</b>fat</span></span>
+          <span class="hv-go">Start cooking<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+        </a>
       </div>
     </div>
   </div>

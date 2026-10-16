@@ -24,7 +24,8 @@ assets/
   google-play-badge.svg          # Google Play download badge (official artwork, English, cropped to the badge edge)
   avatar.png                     # testimonial avatar
   photos/
-    couple-cooking.jpg           # hero
+    fridge-full.jpg              # hero ("text thread" concept 2a); metadata stripped
+    couple-cooking.jpg           # recipe pages
     fridge-real-mess.jpg         # "the tension" — a full but planless fridge
     fridge-organized.jpg         # transformation photo band
     pesto-pasta-bowl.jpg         # "dream meal" photo band
