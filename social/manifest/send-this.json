@@ -1,0 +1,78 @@
+{
+  "batch": "send-this",
+  "series": "send-this",
+  "createdAt": "2026-10-16",
+  "organization": {
+    "name": "Applied Intelligence Co.",
+    "id": "6a138b7d82bb2ed009fed356"
+  },
+  "channels": {
+    "instagram": {
+      "id": "6a14b495c687a22dd4267bfc"
+    }
+  },
+  "urlBase": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/",
+  "appStoreUrl": "https://apps.apple.com/us/app/id6475559706",
+  "renderBatch": "social/render/batches/send-this.json",
+  "igMetadata": {
+    "post": {
+      "type": "post",
+      "shouldShareToFeed": true
+    }
+  },
+  "note": "The 'Send this to' pillar (series ledger: one shell by design, one post a week, Instagram only; no Pinterest variant, no ad variant yet). Copy is final per the Oct 2026 brief and rendered exactly as written. Default slots are the next four Thursdays at 11:00 PT as the brief asked (Travis moves them in Buffer); the two November slots are after the DST change (-08:00). Weekly batches run the diversity gate with `--with ../manifest/send-this.json` so these posts count in the Instagram set rules. Hashtag #ieatzhealthy replaces the brief's #ieatz (the account's tag on every other post).",
+  "posts": [
+    {
+      "id": "st01",
+      "status": "pending",
+      "channel": "instagram",
+      "dueAt": "2026-10-22T11:00:00-07:00",
+      "file": "assets/social/send-this/st01-full-fridge.png",
+      "pillar": "Send this to",
+      "topic": "Delivery",
+      "cta": "send",
+      "text": "you know exactly who. send it.\n\n#ieatzhealthy #whatsfordinner #sendthis",
+      "firstComment": "iEatz is on the App Store. link in bio.",
+      "alt": "Cream card with dark green serif type: send this to the person who has a full fridge and still orders DoorDash every night. Below, in italics: the food is right there. we built an app for this. iEatz Healthy badge at the bottom."
+    },
+    {
+      "id": "st02",
+      "status": "pending",
+      "channel": "instagram",
+      "dueAt": "2026-10-29T11:00:00-07:00",
+      "file": "assets/social/send-this/st02-sunday-to-tuesday.png",
+      "pillar": "Send this to",
+      "topic": "Takeout",
+      "cta": "send",
+      "text": "the groceries had a plan. tuesday didn't. send this to your sunday shopper.\n\n#ieatzhealthy #whatsfordinner #sendthis",
+      "firstComment": "iEatz is on the App Store. link in bio.",
+      "alt": "Deep green card with cream serif type: send this to whoever grocery shops on Sunday and orders takeout by Tuesday. Below, in pale green italics: the groceries are still in the fridge. iEatz turns them into dinner. iEatz Healthy badge at the bottom."
+    },
+    {
+      "id": "st03",
+      "status": "pending",
+      "channel": "instagram",
+      "dueAt": "2026-11-05T11:00:00-08:00",
+      "file": "assets/social/send-this/st03-trader-joes.png",
+      "pillar": "Send this to",
+      "topic": "Grocery",
+      "cta": "send",
+      "text": "rip to the cucumbers. send this to your trader joe's person.\n\n#ieatzhealthy #traderjoes #sendthis",
+      "firstComment": "iEatz is on the App Store. link in bio.",
+      "alt": "Cream card with dark green serif type: send this to whoever spent $60 at Trader Joe's and ate cereal for dinner. A short hairline, then in italics: the Persian cucumbers deserved better. iEatz Healthy badge at the bottom."
+    },
+    {
+      "id": "st04",
+      "status": "pending",
+      "channel": "instagram",
+      "dueAt": "2026-11-12T11:00:00-08:00",
+      "file": "assets/social/send-this/st04-fridge-stare.png",
+      "pillar": "Send this to",
+      "topic": "Fridge",
+      "cta": "send",
+      "text": "staring doesn't make dinner. iEatz does. send this to your fridge starer.\n\n#ieatzhealthy #whatsfordinner #sendthis",
+      "firstComment": "iEatz is on the App Store. link in bio.",
+      "alt": "Deep green card with cream serif type: send this to whoever opens the fridge, stares for a full minute, and closes it again. Below, in pale green italics: it's not empty. you just can't see dinner yet. iEatz can. iEatz Healthy badge at the bottom."
+    }
+  ]
+}

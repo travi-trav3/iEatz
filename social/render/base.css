@@ -1,6 +1,7 @@
 :root{
   --green:#1F8B4C; --green-dark:#0E4A2A; --green-deep:#08311B;
   --green-light:#E6F4EC; --green-mint:#F2FAF6; --mark-mint:#9FE4B3;
+  --green-pale:#BBE3C8; /* secondary text on --green-dark (sendthis payoff, tagline); from the Oct 2026 design export */
   --ink:#0A0F0C; --ink-medium:#5C625E; --ink-light:#9CA29F; --ink-faint:#C8CDCA;
   --paper:#F5F2EA; --paper-deep:#ECE7D8; --white:#FFFFFF;
   --tomato:#C9412B; --saffron:#E4A93C;
@@ -205,6 +206,7 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
    to a corner and the paper shells below push their content down to clear it. */
 .foot.solo-l,.foot-dark.solo-l{justify-content:flex-start}
 .foot.solo-r,.foot-dark.solo-r{justify-content:flex-end}
+.foot.solo-c,.foot-dark.solo-c{justify-content:center}
 .badge.corner{position:absolute;z-index:6}
 .badge.corner.tl{top:52px;left:64px}
 .badge.corner.tr{top:52px;right:64px}
@@ -351,6 +353,26 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
 .sh-sharpie[style*="--ink-pen:#fff"]{--pen-halo:rgba(10,15,12,0.7)}
 .sk-shade{position:absolute;left:0;right:0;background:linear-gradient(180deg,rgba(245,242,234,0.78) 0%,rgba(245,242,234,0.40) 52%,rgba(245,242,234,0) 100%)}
 .sk-head{position:absolute;left:64px;right:64px;top:64px;z-index:3;font-family:var(--marker);font-weight:400;font-size:calc(86px * var(--s));line-height:1.02;text-transform:uppercase;color:var(--ink-pen);transform:rotate(-1.6deg);transform-origin:0 50%}
+
+/* sendthis: the "send this to" series. Type only, Instagram 1080x1350 only. Export spec: hook
+   124/0.94/-0.028em, payoff italic 54/1.1, 80px safe zone, bottom 15% clear of copy. */
+.sh-sendthis{background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 80px 250px}
+.sh-sendthis.green{background:var(--green-dark)}
+.st-copy{display:flex;flex-direction:column;align-items:center;max-width:920px}
+.st-hook{font-family:var(--serif);font-weight:400;font-size:124px;line-height:0.94;letter-spacing:-0.028em;color:var(--green-dark);text-align:center;text-wrap:balance;max-width:920px}
+.sh-sendthis.green .st-hook{color:var(--paper)}
+.st-rule{display:block;width:120px;height:2px;background:var(--green-dark);opacity:0.22;margin:64px 0 44px}
+.sh-sendthis.green .st-rule{background:var(--paper);opacity:0.3}
+.st-payoff{font-family:var(--serif);font-style:italic;font-weight:400;font-size:54px;line-height:1.1;letter-spacing:-0.01em;color:var(--ink-medium);text-align:center;text-wrap:balance;max-width:780px;margin-top:72px}
+.st-rule + .st-payoff{margin-top:0}
+.sh-sendthis.green .st-payoff{color:var(--green-pale)}
+.st-sign{position:absolute;left:80px;right:80px;bottom:84px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.st-sign.solo-l{align-items:flex-start}
+.st-sign.solo-r{align-items:flex-end}
+.st-sign .badge{font-size:34px;gap:16px}
+.st-sign .badge .mark{width:42px}
+.st-tag{font-family:var(--sans);font-weight:500;font-size:20px;line-height:1;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-medium)}
+.sh-sendthis.green .st-tag{color:var(--green-pale)}
 
 /* legacy t-photo hero follows the frame width (identical at its native 1000px) */
 .t-photo .hero{width:100%}

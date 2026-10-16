@@ -110,6 +110,32 @@ list of 8 for rotation. Cycle all 8 before repeating.
 7. **Health/Diet** — high-protein, gluten-free, keto, macros (label estimates).
 8. **Grocery/Instacart** — grocery run → week of dinners, one-tap cart.
 
+*Series pillar (Oct 2026), outside the cycle-all-before-repeating rotation: it runs once a week.*
+9. **Send this to** (schema key `send-this`, shell `sendthis`, Instagram only, no Pinterest and
+   no ad variant yet). **Formula:** `send this to [someone defined by one specific food habit]` +
+   an italic payoff that calls the habit out and points back at the fridge + the brand badge.
+   Backgrounds alternate cream and deep green post to post. **Intention:** the reader pictures one
+   real person in under two seconds and forwards the post to them; the payoff always lands on the
+   one iEatz truth (the food you already bought can be dinner); the app is the punchline, never
+   the setup. Casual, playful, a bit of a roast, never mean. Sends (DMs and shares) are the reach
+   driver; the hooks that pull the most sends get recut as static ads later.
+   **Hook QA, every new hook before it enters the batch** (fix the copy or drop the hook on a fail):
+   1. Specific habit: a store, a day, a dollar amount or a dish beats a category.
+   2. Nameable person: the reader can picture who to send it to in under two seconds.
+   3. Roast the habit, not the person: a friend could send it without it landing mean.
+   4. The fridge truth: the payoff resolves to "the food is already there, it can be dinner". If
+      the problem is not food sitting uncooked (meal prep nobody eats), it is not this pillar.
+   5. Perishable sanity: a named food must be something that goes bad; frozen or shelf-stable breaks the joke.
+   6. Only claim what ships: scan a receipt or add what you have, get healthy recipes, fill the
+      gaps with an Instacart cart. No meal plans, calorie tracking, delivery or anything not in the app.
+   7. Fits the frame: hook 14 words or fewer (the shell refuses above 16 / 120 chars; the four
+      approved posts run 13 to 16), payoff 12 words or fewer, two lines max. The payoff is the only
+      place the app or wordmark appears in copy.
+   8. House style: all lowercase (brand names keep their capitals: DoorDash, Trader Joe's,
+      iEatz), hyphens never dashes, no emoji, no hashtags on the image.
+   Backlog of unapproved hooks: `social/hooks-backlog.md`. Ledger: `social/manifest/send-this.json`
+   (a *series* ledger; weekly batches run the gate with `--with` it, see `social/README.md`).
+
 Per batch: rotate all 8; alternate templates (photo hero / stat / list / quote / device / recipe card)
 and CTAs. Carousel arc: hook (editorial photo) → how-it-works/steps → app-screen proof → testimonial → CTA.
 Seasonal lens layers on top (e.g. back-to-school / busy-weeknight for Aug — seed 4–6 wks early).
@@ -294,6 +320,11 @@ with zero duplicates:
 8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
+- **Oct 16: "Send this to" pillar live.** Four posts rendered from the prop-driven `sendthis`
+  shell, hosted under `assets/social/send-this/`, scheduled on Instagram for Thu Oct 22, Oct 29,
+  Nov 5 and Nov 12 at 11:00 PT (the brief's default; Travis moves them). Ledger
+  `social/manifest/send-this.json`. The design export that defined the layout is kept read-only in
+  `social/reference/design-system/ig-send-this/` (Claude Design retires in December).
 - **BASELINE, Aug 14 – Sep 28 (Buffer metrics, pulled Sep 28). Read this before planning.**
   iEatz IG: 13 posts, avg reach 9, avg views 17, 22 reactions total, **0 saves, 0 shares, 0 follows**
   (the ~1 comment per post is our own first comment). Pinterest: 21 pins, avg 7.6 impressions (max
@@ -374,6 +405,19 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Oct 16 2026 — "Send this to" pillar (the brief's task 0, done):** first prop-driven series
+  shell, `sendthis` (hook, payoff, variant, showRule), ported from Korian's text-only posts via the
+  Claude Design export. Two mechanics it establishes are the pattern for the steps, persona and
+  CTA templates still to come: **font-size tiers by character count** (three tiers in the shell,
+  never a silent shrink past the smallest) and a **render-time safe-zone assertion**
+  (`data-safe="<pad>,<max bottom fraction>"` on any element; `doc.js` fails the render line when
+  the box leaves the safe zone, crosses the bottom-15% caption band, or a word overflows). Also:
+  footer value `badge-bc` (badge centred), token `--green-pale`, *series ledgers* (`"series"` in a
+  ledger demotes the set rules to warnings; weekly batches merge them with `--with`), and the
+  lowercase house style enforced from `copy-allowlist.txt`. The brief named `ieatz-social`,
+  `content.json`, `manifest.json` and `CONTENT-ENGINE-UPDATE.md`: none of those exist (that repo
+  is the Pinterest pages repo only), so the work landed in this pipeline and this file carries the
+  task-0 note.
 - **Sep 28 2026 — first look at the numbers:** six weeks of metrics show near-zero distribution
   on both channels (see §11 baseline). Every earlier fix (grid variety, diversity gate, v2 shells)
   improved how the feed looks; none addressed reach. Also this week: a split pin claimed two fridge

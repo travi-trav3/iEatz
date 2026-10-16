@@ -1,0 +1,45 @@
+{
+  "name": "send-this",
+  "createdAt": "2026-10-16",
+  "series": "send-this",
+  "note": "The 'send this to' pillar, posts 01 to 04, copy final per the Oct 2026 brief (rendered exactly as written; 01 and 04 run 16 words). Instagram only, one a week, backgrounds alternate cream and green. 03 is the only post with the hairline rule. Reference export: social/reference/design-system/ig-send-this/.",
+  "posts": [
+    {
+      "file": "st01-full-fridge",
+      "w": 1080,
+      "h": 1350,
+      "template": "sendthis",
+      "variant": "cream",
+      "hook": "send this to the person who has a full fridge and still orders DoorDash every night",
+      "payoff": "the food is right there. we built an app for this."
+    },
+    {
+      "file": "st02-sunday-to-tuesday",
+      "w": 1080,
+      "h": 1350,
+      "template": "sendthis",
+      "variant": "green",
+      "hook": "send this to whoever grocery shops on Sunday and orders takeout by Tuesday",
+      "payoff": "the groceries are still in the fridge. iEatz turns them into dinner."
+    },
+    {
+      "file": "st03-trader-joes",
+      "w": 1080,
+      "h": 1350,
+      "template": "sendthis",
+      "variant": "cream",
+      "showRule": true,
+      "hook": "send this to whoever spent $60 at Trader Joe's and ate cereal for dinner",
+      "payoff": "the Persian cucumbers deserved better."
+    },
+    {
+      "file": "st04-fridge-stare",
+      "w": 1080,
+      "h": 1350,
+      "template": "sendthis",
+      "variant": "green",
+      "hook": "send this to whoever opens the fridge, stares for a full minute, and closes it again",
+      "payoff": "it's not empty. you just can't see dinner yet. iEatz can."
+    }
+  ]
+}

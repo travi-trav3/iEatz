@@ -19,7 +19,7 @@ const stem = (f) => path.basename(String(f || '')).replace(/\.(png|mp4|jpe?g)$/i
 const strip = (h) => String(h || '').replace(/<[^>]+>/g, '').replace(/&[a-z]+;/g, ' ').replace(/\s+/g, ' ').trim();
 
 // The line a viewer reads as the headline, per shell.
-const headlineOf = (r) => r.head || r.seam || r.quote || (r.stat && r.sub ? `${r.stat} ${r.sub}` : r.stat || r.sub) || '';
+const headlineOf = (r) => r.head || r.hook || r.seam || r.quote || (r.stat && r.sub ? `${r.stat} ${r.sub}` : r.stat || r.sub) || '';
 // Headline ends in an italic accent span (the "green italic tail").
 const ACCENT_TAIL = /<(em|i)\b[^>]*>[^<]*<\/\1>\s*[.!?]?\s*$|<span class="(accent|i)"[^>]*>[^<]*<\/span>\s*[.!?]?\s*$/;
 const accentTailOf = (html) => ACCENT_TAIL.test(String(html || '').trim());
@@ -52,7 +52,7 @@ function derive(r) {
 
 // Copy a gate should read: [{field, text}] for every rendered string plus caption fields.
 const SKIP = new Set(['file', 'photo', 'objPos', 'template', 'footer', 'channel', 'dueAt', 'id', 'status', 'bufferId', 'slackAlert',
-  'surface', 'pillar', 'topic', 'cta', 'heroPhoto', 'format', 'photoStyle', 'board', 'boardServiceId', 'labelSide', 'ink', 'bg', 'createdAt', 'url', 'alt']);
+  'surface', 'pillar', 'topic', 'cta', 'heroPhoto', 'format', 'photoStyle', 'board', 'boardServiceId', 'labelSide', 'ink', 'bg', 'createdAt', 'url', 'alt', 'variant']);
 function copyOf(obj, prefix = '', out = []) {
   if (Array.isArray(obj)) { obj.forEach((v, i) => copyOf(v, `${prefix}[${i}]`, out)); return out; }
   if (obj && typeof obj === 'object') {

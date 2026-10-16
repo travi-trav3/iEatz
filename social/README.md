@@ -11,6 +11,8 @@ social/
   README.md             ← this file
   manifest/             ← Buffer ledgers, one per batch (the scheduling source of truth)
   feedback/             ← Travis's Buffer notes → RULES.md (read before every batch), banned phrases, log
+  hooks-backlog.md      ← "Send this to" hooks waiting for approval (nothing renders from here)
+  reference/            ← design exports kept read-only (ig-send-this: the approved layout; nothing renders from here)
   render/               ← the render harness (Playwright + sharp + ffmpeg)
     templates.js        ← THE shell registry (every shell, its surface, default footer, motion)
     base.css            ← design tokens + ALL shell CSS (single source)
@@ -61,8 +63,11 @@ under 2 MB), `node render-motion.js batches/v2-audio-smoke.json` (bed+voice, bed
   `app-*.jpg` never graded), `"grain": true` adds the film grain layer, and every photo-bearing post or
   slide needs `photoClaim` (what the photo literally shows) or the render line fails. Older batches
   render exactly as before.
-- **footer** (every shell except `ad*`): `badge-url` (legacy row) | `badge-bl` | `badge-br` | `badge-tl` |
+- **footer** (every shell except `ad*`): `badge-url` (legacy row) | `badge-bl` | `badge-br` | `badge-bc` | `badge-tl` |
   `badge-tr` | `none`. Never `badge-url` on Instagram; no position on two adjacent posts or > 50% of a batch.
+- **Safe zone:** any element with `data-safe="<pad px>[,<max bottom fraction>]"` must sit inside the pad
+  and above that fraction of the frame after fonts load, and no word may overflow its box; a violation
+  fails the render line (`safe=FAIL: ...`). Shells use it instead of shrinking copy silently.
 - **eyebrow**: optional on every shell; absent or empty omits it and its margin.
 - **headSize** overrides the headline size on bleed/poster/receipt/collage. Headlines marked
   `data-fit` (poster, receipt, split seam) shrink to fit their box automatically.
@@ -78,6 +83,7 @@ Current kit (surface in brackets; the gate reads it):
 | `split` | photo-bleed | `top{photo,objPos,label}`, `bottom{photo,objPos}`, `seam`, `cap` (`<b>` = mono saffron) | badge-br |
 | `thread` | mint / photo-bleed | `bg`: `"mint"` or `{photo,objPos}`, `head`?, `msgs[]` ≤8 bubbles: `{who,text}` (who = them or me), `{who:"me",photo}`, `{time}`; `foot` | badge-br |
 | `sharpie` | photo-bleed | `photo`, `objPos`, `head` (≤24 chars, marker caps), `marks[{x,y,rx,ry,label,labelSide}]` 1–4, `arrows[{x1,y1,x2,y2}]`?, `ink` (`#0A0F0C` or `#fff`), `shade`? (auto). Marks are in 1080x1350 photo space; a mark cropped out at another size throws | badge-br |
+| `sendthis` | paper (cream) / dark (green) | `hook` (plain text, ≤16 words / 120 chars, `\n` = intentional break, never names the app), `payoff` (italic, ≤12 words, ≤2 lines), `variant` `cream` \| `green`, `showRule`? (hairline between them). Lowercase except `copy-allowlist.txt` capitals; no dashes, emoji or hashtags. Hook size tiers 124/110/98 px by length, then the safe-zone assertion. **1080x1350 only** (the pillar has no Pinterest variant). Reference: `../reference/design-system/ig-send-this/` | badge-bc |
 | `bleed` | photo-bleed | `photo`, `objPos`, `eyebrow`, `head`, `sub`, `headSize` | badge-url · **motion** |
 | `recipephoto` | paper | `photo`, `objPos`, `eyebrow`, `head`, `ings[]`, `method` | badge-url |
 | `list` | paper | `eyebrow`, `head`, `items[{t,s}]` | badge-url |
@@ -114,6 +120,11 @@ bedDb }` bakes a Meta Sound Collection bed and/or a voiceover into the file (rul
 - **Ledger fields** written at planning time: `pillar, topic, template, surface, heroPhoto, cta,
   format, footer, eyebrow, accentTail, photoStyle, photoClaim`. A ledger with `"renderBatch"` gets any
   missing field derived from the render batch, and a written field that disagrees with it fails.
+- **Series ledgers** (`"series": "send-this"` in `manifest/send-this.json`): one shell by design, one post a
+  week, interleaved with the weekly batches. On its own the gate runs the copy, dedupe, hero and CTA
+  rules and prints the set rules as warnings. Every weekly batch runs
+  `node diversity-gate.js ../manifest/<batch>.json --with ../manifest/send-this.json` so the series posts
+  count in that week's adjacency, cap, pillar and format rules.
 
 ## Non-negotiables (see CONTROL_CENTER.md for the full list)
 - Self-host fonts; never ship a fallback-font render (the render line checks every face).

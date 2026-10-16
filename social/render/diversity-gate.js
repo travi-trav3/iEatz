@@ -9,6 +9,12 @@
 // Also runs the copy gate (copy-gate.js) on the same posts; its failures are prefixed "copy:".
 // Exit 1 on any failure. Warnings never fail. --soft-format turns the Instagram
 // carousel/reel-per-week rule into a warning (allowed for the first two v2 batches only).
+// --with <ledger> (repeatable) merges another ledger's posts into the set before the checks: a
+// weekly batch runs with every live series ledger (e.g. ../manifest/send-this.json) so the
+// adjacency and cap rules see the feed as it will actually publish.
+// A ledger with "series": "<name>" is one shell by design (one post a week, interleaved with the
+// weekly batches): the copy gate, message dedupe, hero reuse and CTA rules still run on it alone;
+// the set rules (adjacency, caps, pillars, anatomy, formats) run where it is merged with --with.
 // Pair with contact-sheet.js --with-live and eyeball the montage.
 const { load } = require('./ledger');
 const { TEMPLATES } = require('./templates');
@@ -16,12 +22,19 @@ const copyGate = require('./copy-gate');
 
 function gate(file, opts = {}) {
   const loaded = load(file);
+  for (const w of opts.with || []) {
+    const extra = load(w);
+    loaded.posts.push(...extra.posts);
+    loaded.mismatches.push(...extra.mismatches.map(m => `${extra.source}: ${m}`));
+  }
   const { batch, posts, mismatches } = loaded;
+  const series = !!batch.series;
   const fails = [...mismatches.map(m => `ledger/render mismatch: ${m}`)];
   // The copy gate runs as part of this gate (and standalone as copy-gate.js).
   fails.push(...copyGate.check(loaded).map(f => `copy: ${f}`));
   const warns = [];
   const lines = [];
+  if (series) lines.push(`series ledger "${batch.series}": one shell by design; set rules apply where a weekly batch merges it with --with`);
   const byChannel = {};
   for (const p of posts) (byChannel[p.channel] = byChannel[p.channel] || []).push(p);
 
@@ -37,24 +50,25 @@ function gate(file, opts = {}) {
   for (const [channel, list] of Object.entries(byChannel)) {
     const ps = [...list].sort((a, b) => (a.dueAt || '').localeCompare(b.dueAt || ''));
     const n = ps.length, cap = Math.ceil(n / 3);
+    const set = (arr, msg) => (series ? warns : arr).push(series ? `${msg} [series: set rule, checked at merge]` : msg);
 
     // 1. No two ADJACENT posts share a template, surface or footer position
     for (let i = 1; i < n; i++) {
       const a = ps[i - 1], b = ps[i];
-      if (b.template && b.template === a.template) fails.push(`${channel}: adjacent template "${b.template}" (${a.id} -> ${b.id})`);
-      if (b.surface && b.surface === a.surface) fails.push(`${channel}: adjacent surface "${b.surface}" (${a.id} -> ${b.id})`);
-      if (b.footer && b.footer === a.footer && b.footer !== 'ad') fails.push(`${channel}: adjacent footer "${b.footer}" (${a.id} -> ${b.id})`);
+      if (b.template && b.template === a.template) set(fails, `${channel}: adjacent template "${b.template}" (${a.id} -> ${b.id})`);
+      if (b.surface && b.surface === a.surface) set(fails, `${channel}: adjacent surface "${b.surface}" (${a.id} -> ${b.id})`);
+      if (b.footer && b.footer === a.footer && b.footer !== 'ad') set(fails, `${channel}: adjacent footer "${b.footer}" (${a.id} -> ${b.id})`);
     }
     // 2. No template exceeds ~1/3 of the batch; deprecated shells warn on any use
     const tCount = {};
     ps.forEach(p => { if (p.template) tCount[p.template] = (tCount[p.template] || 0) + 1; });
-    for (const [t, c] of Object.entries(tCount)) if (c > cap) fails.push(`${channel}: template "${t}" used ${c}/${n} (cap ${cap})`);
+    for (const [t, c] of Object.entries(tCount)) if (c > cap) set(fails, `${channel}: template "${t}" used ${c}/${n} (cap ${cap})`);
     ps.forEach(p => { const t = TEMPLATES[p.coverTemplate || p.template]; if (t && t.deprecated) warns.push(`${channel}: ${p.id} uses deprecated "${p.coverTemplate || p.template}" (${t.deprecated})`); });
     // 3. No pillar back-to-back; batch covers >=3 pillars (when n >= 6)
     for (let i = 1; i < n; i++)
-      if (ps[i].pillar && ps[i].pillar === ps[i - 1].pillar) fails.push(`${channel}: adjacent pillar "${ps[i].pillar}" (${ps[i - 1].id} -> ${ps[i].id})`);
+      if (ps[i].pillar && ps[i].pillar === ps[i - 1].pillar) set(fails, `${channel}: adjacent pillar "${ps[i].pillar}" (${ps[i - 1].id} -> ${ps[i].id})`);
     const pillars = new Set(ps.map(p => p.pillar).filter(Boolean));
-    if (n >= 6 && pillars.size < 3) fails.push(`${channel}: only ${pillars.size} pillars across ${n} posts (need >=3)`);
+    if (n >= 6 && pillars.size < 3) set(fails, `${channel}: only ${pillars.size} pillars across ${n} posts (need >=3)`);
     // 4. No repeated message: headline/title word-overlap > 60% between any two posts
     for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) {
       const o = overlap(ps[i].title || ps[i].text, ps[j].title || ps[j].text);
@@ -75,14 +89,14 @@ function gate(file, opts = {}) {
     // ---------- v2 anatomy rules (Sep 2026) ----------
     // 7. Italic accent tail on <= 40% of posts; eyebrow on <= 50%
     const tails = ps.filter(p => p.accentTail === true).length;
-    if (tails / n > 0.4) fails.push(`${channel}: accentTail on ${pct(tails, n)} (cap 40%)`);
+    if (tails / n > 0.4) set(fails, `${channel}: accentTail on ${pct(tails, n)} (cap 40%)`);
     const brows = ps.filter(p => p.eyebrow === true).length;
-    if (brows / n > 0.5) fails.push(`${channel}: eyebrow on ${pct(brows, n)} (cap 50%)`);
+    if (brows / n > 0.5) set(fails, `${channel}: eyebrow on ${pct(brows, n)} (cap 50%)`);
     // 8. Footer: never badge-url on Instagram; no single position on > 50% of the batch
     if (channel === 'instagram') ps.forEach(p => { if (p.footer === 'badge-url') fails.push(`instagram: ${p.id} footer "badge-url" (the URL is dead weight on Instagram; move the badge)`); });
     const fCount = {};
     ps.forEach(p => { if (p.footer && p.footer !== 'ad') fCount[p.footer] = (fCount[p.footer] || 0) + 1; });
-    for (const [f, c] of Object.entries(fCount)) if (c / n > 0.5) fails.push(`${channel}: footer "${f}" on ${pct(c, n)} (cap 50%)`);
+    for (const [f, c] of Object.entries(fCount)) if (c / n > 0.5) set(fails, `${channel}: footer "${f}" on ${pct(c, n)} (cap 50%)`);
     // 9. Plated photography on <= 30% of photo posts
     const photoPosts = ps.filter(p => p.heroPhoto);
     const plated = photoPosts.filter(p => p.photoStyle === 'plated').length;
@@ -98,7 +112,7 @@ function gate(file, opts = {}) {
         for (const fmt of ['carousel', 'reel']) {
           if (!wp.some(p => p.format === fmt)) {
             const msg = `instagram: no ${fmt} in 7-day window ${+w + 1} (${wp[0].dueAt.slice(0, 10)} .. ${wp[wp.length - 1].dueAt.slice(0, 10)}, ${wp.length} posts)`;
-            (opts.softFormat ? warns : fails).push(msg + (opts.softFormat ? ' [--soft-format]' : ''));
+            if (opts.softFormat) warns.push(msg + ' [--soft-format]'); else set(fails, msg);
           }
         }
       }
@@ -111,9 +125,11 @@ function gate(file, opts = {}) {
 
 if (require.main === module) {
   const args = process.argv.slice(2);
+  const withs = [];
+  for (let i = 0; i < args.length; i++) if (args[i] === '--with') withs.push(args.splice(i, 2)[1]), i--;
   const file = args.find(a => !a.startsWith('--'));
-  if (!file) { console.error('usage: node diversity-gate.js <ledger or render batch> [--soft-format]'); process.exit(1); }
-  const { fails, warns, lines } = gate(file, { softFormat: args.includes('--soft-format') });
+  if (!file) { console.error('usage: node diversity-gate.js <ledger or render batch> [--soft-format] [--with <ledger>]...'); process.exit(1); }
+  const { fails, warns, lines } = gate(file, { softFormat: args.includes('--soft-format'), with: withs });
   lines.forEach(l => console.log(l));
   if (warns.length) { console.log('\nWarnings:'); warns.forEach(w => console.log(' ~ ' + w)); }
   if (fails.length) { console.error('\nDIVERSITY GATE FAILED:'); fails.forEach(f => console.error(' - ' + f)); process.exit(1); }

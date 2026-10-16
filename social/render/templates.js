@@ -3,8 +3,10 @@
 // Surfaces: paper | paper-deep | mint | dark | photo-bleed. The diversity gate reads these tags
 // (surfaceOf(p) for shells whose surface depends on props, e.g. thread).
 // deprecated: true = kept so old batches re-render; the gate warns on any new use.
+const fs = require('fs');
+const path = require('path');
 
-const MARK = `<svg class="mark" viewBox="0 0 38.25 58.486" fill="none">
+const MARK =`<svg class="mark" viewBox="0 0 38.25 58.486" fill="none">
 <path d="M 0 5.03 C 0 2.252 2.252 0 5.03 0 L 33.22 0 C 35.998 0 38.25 2.252 38.25 5.03 L 38.25 20.119 L 0 20.119 L 0 5.03 Z" fill="currentColor"></path>
 <path d="M 0 49.83 C 0 52.608 2.252 54.86 5.03 54.86 L 33.22 54.86 C 35.998 54.86 38.25 52.608 38.25 49.83 L 38.25 22.81 L 0 22.81 L 0 49.83 Z" fill="currentColor"></path>
 <path d="M 6.083 6.2 C 6.083 5.489 6.659 4.913 7.369 4.913 C 8.08 4.913 8.656 5.489 8.656 6.2 L 8.656 16.259 C 8.656 16.97 8.08 17.546 7.369 17.546 C 6.659 17.546 6.083 16.97 6.083 16.259 L 6.083 6.2 Z" fill="currentColor"></path>
@@ -27,10 +29,11 @@ const eyebrow = (p, cls = '') => p.eyebrow ? `<div class="eyebrow${cls}">${p.eye
 //   badge-url  today's row: badge left, ieatzhealthy.com right (never on Instagram; the gate enforces it)
 //   badge-bl / badge-br  badge alone in the shell's bottom row, left or right
 //   badge-tl / badge-tr  badge alone, pinned to a top corner
+//   badge-bc   badge alone, centred in the bottom row (sendthis)
 //   none       no badge (carousel inner slides, mostly)
 // Each shell says what its corners sit on so the badge picks a legible variant:
 //   paper -> ink badge, dark -> paper badge, photo -> stamp (paper pill, readable on any photo).
-const FOOTERS = ['badge-bl', 'badge-br', 'badge-tl', 'badge-tr', 'badge-url', 'none'];
+const FOOTERS = ['badge-bl', 'badge-br', 'badge-bc', 'badge-tl', 'badge-tr', 'badge-url', 'none'];
 const badgeAs = (on, extra = '') => {
   const cls = on === 'photo' ? ' stamp' : on === 'dark' ? ' on-dark' : '';
   return `<div class="badge${cls}${extra}">${MARK}<span>iEatz Healthy</span></div>`;
@@ -47,6 +50,7 @@ function footer(p, o) {
   }
   const v = f[6], h = f[7];
   if (v === 'b' && o.row) return o.row(badgeAs(o.bottom), h);
+  if (h === 'c') throw new Error(`${p.file}: footer "${f}" needs a bottom row on template "${p.template}"`);
   return badgeAs(v === 't' ? o.top : o.bottom, ` corner ${v}${h}`);
 }
 const rowPaper = (b, h) => `<div class="foot solo-${h}">${b}</div>`;
@@ -182,6 +186,25 @@ if(sub)sub.style.opacity=ease(prog(t,TL.sub));};`);
 
 // Row helper for shells whose bottom row carries its own caption/headline: badge left or right of it.
 const withBadge = (content, b, h) => h === 'l' ? `${b}${content}` : `${content}${b}`;
+
+// ---------- sendthis helpers ----------
+// Words allowed to keep a capital in the all-lowercase series (brand names, days, proper nouns):
+// the copy gate's own allowlist, so the two never disagree.
+const LOWER_ALLOW = fs.readFileSync(path.join(__dirname, 'copy-allowlist.txt'), 'utf8')
+  .split('\n').map(l => l.replace(/#.*/, '').trim()).filter(Boolean);
+const plain = (s) => String(s).replace(/<[^>]+>/g, '').replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
+// Typeset a plain string: escape, curly apostrophes, explicit \n = intentional line break.
+const typeset = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/(\w)'(?=\w)/g, '$1’').replace(/\n/g, '<br>');
+// The series is lowercase except brand names and proper nouns from the allowlist.
+const notLower = (s) => {
+  let t = plain(s).replace(/’/g, "'");
+  for (const a of LOWER_ALLOW) t = t.split(a).join(a.toLowerCase());
+  return (t.match(/\b[A-Z][\w']*/g) || []).filter(w => !/^I('|$)/.test(w));
+};
+// Hook font size by length: three tiers, never a silent shrink past the smallest. The four
+// approved posts (72 to 84 chars) all sit in tier 1, as in the design export.
+const hookSize = (n) => n <= 90 ? 124 : n <= 105 ? 110 : 98;
 
 const TEMPLATES = {
   // ---------- paper surfaces ----------
@@ -420,6 +443,37 @@ const TEMPLATES = {
     </div>
     <h1 class="sk-head">${p.head}</h1>
     ${footer(p, { url: footDark, row: rowDarkAbs, top: 'photo', bottom: 'photo', def: 'badge-br' })}
+  </div>`; } },
+
+  // sendthis: the "send this to ___" series (Oct 2026). Type only: a lowercase serif hook, an
+  // italic payoff, the badge centred at the bottom. Instagram 1080x1350 only; the pillar has no
+  // Pinterest variant by design. variant "cream" | "green" alternates post to post; showRule adds
+  // the short hairline between hook and payoff. Props are plain text: \n is an intentional break.
+  // Reference render: social/reference/design-system/ig-send-this/ (the approved export).
+  // TODO(ads): an App Store badge / CTA variant waits on two to four weeks of send data.
+  sendthis: { defaultFooter: 'badge-bc', surface: (p) => (p.variant === 'green' ? 'dark' : 'paper'), render: (p) => {
+    need(p, 'hook', 'payoff', 'variant');
+    if (!['cream', 'green'].includes(p.variant)) throw new Error(`${p.file}: sendthis variant is "cream" or "green", got "${p.variant}"`);
+    if (p.w !== 1080 || p.h !== 1350) throw new Error(`${p.file}: sendthis renders Instagram 1080x1350 only, got ${p.w}x${p.h}`);
+    const hook = plain(p.hook), pay = plain(p.payoff);
+    const hw = hook.split(' ').length, pw = pay.split(' ').length;
+    // The approved posts 01 and 04 run 16 words; the brief's "14 or fewer" is the writing target.
+    if (hw > 16 || hook.length > 120) throw new Error(`${p.file}: hook is ${hw} words / ${hook.length} chars (max 16 / 120)`);
+    if (pw > 12) throw new Error(`${p.file}: payoff is ${pw} words (max 12)`);
+    if ((String(p.payoff).match(/\n/g) || []).length > 1) throw new Error(`${p.file}: payoff is two lines at most`);
+    if (/ieatz/i.test(hook)) throw new Error(`${p.file}: the hook names the app; the payoff is the only place for iEatz`);
+    if (/[—–#]|\p{Extended_Pictographic}/u.test(hook + pay)) throw new Error(`${p.file}: no dashes, hashtags or emoji on the image`);
+    const caps = [...notLower(hook), ...notLower(pay)];
+    if (caps.length) throw new Error(`${p.file}: series copy is lowercase; ${caps.map(w => `"${w}"`).join(', ')} not on copy-allowlist.txt`);
+    const on = p.variant === 'green' ? 'dark' : 'paper';
+    const row = (b, h) => `<div class="st-sign solo-${h}" data-safe="80">${b}<span class="st-tag">Fridge to Table</span></div>`;
+    return `<div class="pin sh-sendthis ${p.variant}">
+    <div class="st-copy" data-safe="80,0.85">
+      <h1 class="st-hook" style="font-size:${hookSize(hook.length)}px">${typeset(p.hook)}</h1>
+      ${p.showRule ? '<span class="st-rule"></span>' : ''}
+      <p class="st-payoff">${typeset(p.payoff)}</p>
+    </div>
+    ${footer(p, { row, bottom: on, top: on, def: 'badge-bc' })}
   </div>`; } },
 };
 

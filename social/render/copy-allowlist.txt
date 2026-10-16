@@ -46,6 +46,8 @@ Ralphs
 DoorDash
 Uber Eats
 Parmesan
+# proper adjectives
+Persian
 # approved testimonial names
 Ashly
 Maya

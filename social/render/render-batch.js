@@ -56,18 +56,19 @@ async function annotate(p) {
       const hp = path.join(HTMLD, p.file + '.html');
       fs.writeFileSync(hp, html);
       await page.goto('file://' + hp, { waitUntil: 'load' });
-      const { imgs, fc } = await prepare(page);
+      const { imgs, fc, safe } = await prepare(page);
       const buf = await page.screenshot({ clip: { x: 0, y: 0, width: p.w, height: p.h } });
       const outPath = path.join(OUT, p.file + '.png');
       await sharp(buf).resize(p.w, p.h, { fit: 'fill', kernel: 'lanczos3' }).png({ compressionLevel: 9 }).toFile(outPath);
       const m = await sharp(outPath).metadata();
       const photoOk = imgs.every(i => i.ok) && (!photos.length || imgs.length > 0);
       const fontsOk = Object.values(fc).every(Boolean);
-      const ok = m.width === p.w && m.height === p.h && fontsOk && photoOk && !claimMissing;
+      const ok = m.width === p.w && m.height === p.h && fontsOk && photoOk && !claimMissing && !safe.length;
       if (!ok) bad++;
       const fonts = Object.entries(fc).map(([k, v]) => `${k}=${v}`).join(' ');
       const dep = t.deprecated ? ` [deprecated: ${t.deprecated}]` : '';
-      const extra = (graded ? ' grade=on' : '') + (p.grain === true || (p.template === 'collage' && p.grain !== false) ? ' grain=on' : '') + (claimMissing ? ' photoClaim=MISSING' : '');
+      const extra = (graded ? ' grade=on' : '') + (p.grain === true || (p.template === 'collage' && p.grain !== false) ? ' grain=on' : '') + (claimMissing ? ' photoClaim=MISSING' : '')
+        + (safe.length ? ` safe=FAIL: ${safe.join('; ')}` : '');
       console.log(`${ok ? 'OK ' : '!! '}${p.file}.png ${m.width}x${m.height} ${fonts} photo=${photos.join(',') || '(none)'}${photos.length ? '(' + (photoOk ? 'ok' : 'FAIL') + ')' : ''}${extra}${dep}`);
       await page.close();
     }

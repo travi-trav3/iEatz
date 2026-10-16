@@ -81,10 +81,20 @@ html,body{width:${p.w}px;height:${p.h}px;margin:0}.pin{width:${p.w}px;height:${p
 :root{--s:${p.w / 1080}}
 ${p.statSize ? `.ig-statdark .bignum{font-size:${p.statSize}px}` : ''}
 ${p.headSize ? `.ig-bleed .bhead{font-size:${p.headSize}px}.po-head,.rc-head,.cc-head{font-size:${p.headSize}px}` : ''}
-</style></head><body>${t.render(p, PHOTOS)}${grain}${pager}${FIT_SCRIPT}${opts.motion ? t.motion(p) : ''}</body></html>`;
+</style></head><body>${t.render(p, PHOTOS)}${grain}${pager}${FIT_SCRIPT}${SAFE_SCRIPT}${opts.motion ? t.motion(p) : ''}</body></html>`;
 }
 
-// Wait for fonts + images, force-load and check every face, then fit text. Returns QA facts.
+// [data-safe="<pad px>[,<max bottom fraction>]"]: after fitting, the element's box must sit inside
+// the frame's safe zone and above the given fraction of the height, and nothing inside it may
+// overflow horizontally (a word wider than its box). Violations fail the render line: a shell that
+// cannot fit its copy says so instead of shrinking it past its smallest tier.
+const SAFE_SCRIPT = `<script>window.__safe=()=>{const W=innerWidth,H=innerHeight,out=[];for(const el of document.querySelectorAll('[data-safe]')){const [pad=80,frac=1]=el.dataset.safe.split(',').map(Number);const r=el.getBoundingClientRect();const n=(el.className||el.tagName).toString().split(' ')[0];
+if(r.left<pad-0.5||r.right>W-pad+0.5||r.top<pad-0.5||r.bottom>H-pad+0.5)out.push(n+' breaks the '+pad+'px safe zone (x '+Math.round(r.left)+'-'+Math.round(r.right)+', y '+Math.round(r.top)+'-'+Math.round(r.bottom)+')');
+if(r.bottom>H*frac+0.5)out.push(n+' bottom '+Math.round(r.bottom)+'px is below the '+Math.round(frac*100)+'% line ('+Math.round(H*frac)+'px)');
+for(const t of [el,...el.querySelectorAll('*')])if(t.scrollWidth>t.clientWidth+1){out.push(((t.className||t.tagName).toString().split(' ')[0])+' overflows its box ('+t.scrollWidth+'px in '+t.clientWidth+'px)');break;}}return out;};</script>`;
+
+// Wait for fonts + images, force-load and check every face, then fit text and check safe zones.
+// Returns QA facts: imgs, fc (font checks) and safe (violations, empty when clean).
 async function prepare(page) {
   await page.evaluate(async () => { await document.fonts.ready; });
   const imgs = await page.evaluate(async () => {
@@ -101,7 +111,8 @@ async function prepare(page) {
     return r;
   }, FONT_CHECKS);
   await page.evaluate(() => window.__fit && window.__fit());
-  return { imgs, fc };
+  const safe = await page.evaluate(() => (window.__safe ? window.__safe() : []));
+  return { imgs, fc, safe };
 }
 
 function chromePath() {
