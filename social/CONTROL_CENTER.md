@@ -320,6 +320,12 @@ with zero duplicates:
 8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
+- **Oct 16–25 batch scheduled (Oct 16):** 7 IG (two silent reels, two carousels, device, collage,
+  SixSocks quote) + 10 pins (five to the two live recipe pages, five to the App Store). Gate run
+  with `--with ../manifest/send-this.json`. Ledger `social/manifest/oct-16-25-batch.json`. Queue
+  now runs to Sun Oct 25 (plus send-this Thursdays to Nov 12); next batch must be planned by Oct 22
+  so page-backed pins (7-day rule) can land in it. Candidate pages: rotisserie chicken, sweet potato
+  tacos, pantry pasta, the four pantry soups from the Oct 18 carousel.
 - **Oct 16: "Send this to" pillar live.** Four posts rendered from the prop-driven `sendthis`
   shell, hosted under `assets/social/send-this/`, scheduled on Instagram for Thu Oct 22, Oct 29,
   Nov 5 and Nov 12 at 11:00 PT (the brief's default; Travis moves them). Ledger
