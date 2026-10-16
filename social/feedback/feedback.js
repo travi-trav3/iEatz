@@ -59,9 +59,24 @@ for (let i = 0; i < argv.length; i++) {
 const days = Number(flags.days || DAYS);
 const since = new Date(NOW.getTime() - days * 864e5);
 
+// The first JSON value in a string: the Buffer tool prints the result, then {"rateLimit": ...}.
+function firstJson(s) {
+  try { return JSON.parse(s); } catch (e) { /* fall through */ }
+  const start = s.search(/[[{]/);
+  let depth = 0, str = false;
+  for (let i = start; start >= 0 && i < s.length; i++) {
+    const c = s[i];
+    if (str) { if (c === '\\') i++; else if (c === '"') str = false; continue; }
+    if (c === '"') str = true;
+    else if (c === '{' || c === '[') depth++;
+    else if ((c === '}' || c === ']') && --depth === 0) return JSON.parse(s.slice(start, i + 1));
+  }
+  throw new Error('no JSON value found');
+}
 // Accepts the bare query result, {result: ...}, {data: ...}, or a saved MCP tool result ([{type, text}, ...]).
 function read(f) {
-  let j = JSON.parse(fs.readFileSync(f, 'utf8'));
+  let j;
+  try { j = firstJson(fs.readFileSync(f, 'utf8')); } catch (e) { throw new Error(`${f}: not JSON (${e.message})`); }
   if (Array.isArray(j)) j = j.map(x => { try { return JSON.parse(x.text); } catch (e) { return null; } }).find(x => x && (x.posts || x.ideas || x.data || x.result)) || {};
   return j.result || j.data || j;
 }
@@ -156,7 +171,9 @@ function inbox(files) {
   // Caption edits: queued posts only (sent posts cannot change). Expected text is the baseline
   // for this post if the first run recorded one, else the ledger.
   const queued = [...posts.values()].filter(p => typeof p.text === 'string' && QUEUED.has(p.status) && idx[p.id] && typeof idx[p.id].post.text === 'string');
-  if (!state.baseline) {
+  const hasQueue = [...posts.values()].some(p => typeof p.text === 'string');
+  if (!hasQueue) warnings.push('no Queue query dump: caption edits not checked');
+  else if (!state.baseline) {
     state.captions = {};
     for (const p of queued) if (norm(p.text) !== norm(idx[p.id].post.text)) state.captions[p.id] = p.text;
     baseline = { at: NOW.toISOString(), posts: queued.length, differ: Object.keys(state.captions).length };
@@ -170,9 +187,10 @@ function inbox(files) {
       const id = `caption:${p.id}:${hash(p.text)}`;
       if (!open(id)) continue;
       const s = span(was, p.text);
+      // Same cut: equal, or one contains the other and the shorter is a real phrase (8+ chars).
       const key = s.removed.toLowerCase();
-      const repeatOf = key ? Object.entries(state.processed).filter(([k, v]) => k.startsWith('caption:') && v.removed &&
-        (v.removed.toLowerCase().includes(key) || key.includes(v.removed.toLowerCase()))).map(([k]) => k) : [];
+      const same = (r) => r === key || (Math.min(r.length, key.length) >= 8 && (r.includes(key) || key.includes(r)));
+      const repeatOf = key ? Object.entries(state.processed).filter(([k, v]) => k.startsWith('caption:') && v.removed && same(v.removed.toLowerCase())).map(([k]) => k) : [];
       items.push({ kind: 'caption', id, at: p.updatedAt || NOW.toISOString(), post: postOf(p), ledger: brief(idx[p.id]),
         removed: s.removed, added: s.added, before: s.before, after: s.after, repeatOf });
     }

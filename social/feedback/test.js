@@ -211,6 +211,27 @@ test('a post whose caption Travis edited is flagged travisEdited on later items'
   assert.strictEqual(s.inbox().items.find(i => i.id === '6b0000000000000000000e05').ledger.travisEdited, false);
 });
 
+test('no baseline is recorded from a run without the Queue dump', () => {
+  const s = sandbox(null);
+  const r = s.inbox([fx('window.json')]);
+  assert.strictEqual(r.baseline, null);
+  assert(r.warnings.some(x => /caption edits not checked/.test(x)));
+  assert(!fs.existsSync(path.join(s.dir, 'state.json')) || !s.state().baseline, 'baseline written without a Queue dump');
+});
+
+test('a short earlier cut does not make every later cut a repeat', () => {
+  const s = sandbox({ ...BASELINE, processed: { [`caption:${A}:11111111`]: { outcome: 'logged', at: NOW, removed: 'no', added: '' } } });
+  assert.deepStrictEqual(s.inbox().items.find(i => i.kind === 'caption').repeatOf, []);
+});
+
+test('a dump saved with the tool\'s trailing rateLimit block still reads', () => {
+  const s = sandbox(BASELINE);
+  const raw = fs.readFileSync(fx('window.json'), 'utf8').trim() + '{"rateLimit":[{"remaining":97,"resetSeconds":495}]}';
+  const p = path.join(s.dir, 'w.json');
+  fs.writeFileSync(p, raw);
+  assert(ids(s.inbox([p, fx('queue.json')])).includes('6b0000000000000000000a01'));
+});
+
 test('the inbox lists nothing else: exactly the expected items', () => {
   const s = sandbox({ ...BASELINE, processed: { '6b0000000000000000000b03': { outcome: 'fix', at: NOW }, '6b0000000000000000000b04': { outcome: 'question', at: NOW } } });
   assert.deepStrictEqual(ids(s.inbox()).sort(), ['6a1000000000000000000001', '6b0000000000000000000a01', '6b0000000000000000000b04', '6b0000000000000000000e05',
