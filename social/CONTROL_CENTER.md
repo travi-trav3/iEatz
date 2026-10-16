@@ -188,7 +188,7 @@ logo collisions, and a math error.
 Org **"Applied Intelligence Co."** = `6a138b7d82bb2ed009fed356`.
 - **Instagram** channel `6a14b495c687a22dd4267bfc` — `create_post` needs
   `metadata.instagram = {type:"post", shouldShareToFeed:true}`. **Cap ≈ 4–5 posts/week.**
-- **Pinterest** channel `6a14637fc687a22dd424eee8`, board **Quick Saves**
+- **Pinterest** channel `6a7a4b64b2d9d577435279f6` (the old `6a14637fc687a22dd424eee8` is retired, no longer in Buffer; get boards from `get_channel`), board **Quick Saves**
   `boardServiceId "1011339728760978564"` — `create_post` needs
   `metadata.pinterest = {boardServiceId, title (<100 chars, keyword), url (App Store)}`.
   Pinterest can post daily. (Keyword boards TBD — pins land in Quick Saves until they exist;

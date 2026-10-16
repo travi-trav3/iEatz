@@ -48,7 +48,7 @@ What Travis values, in priority order — this is the quality bar you're held to
   `file`, `text`, `status`. It matches Buffer exactly as of this handover. Keep it that way:
   after ANY Buffer mutation, update the ledger and push.
 - **Key IDs** (also in the ledger header): org **Applied Intelligence Co.**
-  `6a138b7d82bb2ed009fed356` · Pinterest channel `6a14637fc687a22dd424eee8`, board Quick Saves
+  `6a138b7d82bb2ed009fed356` · Pinterest channel `6a7a4b64b2d9d577435279f6` (old `6a14637…` retired), board Quick Saves
   `boardServiceId "1011339728760978564"` · Instagram channel `6a14b495c687a22dd4267bfc` ·
   App Store URL `https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706` ·
   timezone America/Los_Angeles · Slack #social `C0BATGA438T`.

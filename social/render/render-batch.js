@@ -1,4 +1,5 @@
-// Single render entrypoint. Usage: node render-batch.js batches/<batch>.json
+// Single render entrypoint. Usage: node render-batch.js batches/<batch>.json [--only <file>]
+// --only renders one post (its "file", e.g. p25-pin-poster; a carousel renders all its slides).
 // Batch JSON: { "name": "...", "posts": [{ "file", "w", "h", "template", ...fields,
 //   "footer"?, "statSize"?, "headSize"? } | { "file", "w", "h", "slides": [{ "template", ... }] }] }
 // Outputs to out/<name>/ (carousels as <file>--01.png ...), HTML to html/<name>/.
@@ -18,8 +19,12 @@ const { isV2, gradeOn, applyGrade } = require('./grade');
 const PHOTO_DIR = path.resolve(DIR, '../../assets/photos');
 const PHOTOS = 'file://' + PHOTO_DIR;
 const batchPath = process.argv[2];
-if (!batchPath) { console.error('usage: node render-batch.js <batch.json>'); process.exit(1); }
+if (!batchPath) { console.error('usage: node render-batch.js <batch.json> [--only <file>]'); process.exit(1); }
 const batch = JSON.parse(fs.readFileSync(batchPath, 'utf8'));
+const oi = process.argv.indexOf('--only');
+const only = oi > 0 ? process.argv[oi + 1] : null;
+const posts = only ? batch.posts.filter(p => p.file === only) : batch.posts;
+if (only && !posts.length) { console.error(`!! no post with file "${only}" in ${batchPath}`); process.exit(1); }
 const OUT = path.join(DIR, 'out', batch.name);
 const HTMLD = path.join(DIR, 'html', batch.name);
 fs.mkdirSync(OUT, { recursive: true });
@@ -40,7 +45,7 @@ async function annotate(p) {
 (async () => {
   const browser = await chromium.launch({ executablePath: chromePath(), args: ['--no-sandbox', '--force-color-profile=srgb'] });
   let bad = 0, n = 0;
-  for (const post of batch.posts) {
+  for (const post of posts) {
     let jobs;
     try { jobs = expand(post); } catch (e) { console.error(`!! ${e.message}`); bad++; continue; }
     for (const p of jobs) {
