@@ -22,9 +22,18 @@ const copyGate = require('./copy-gate');
 
 function gate(file, opts = {}) {
   const loaded = load(file);
+  // --with merges only the series posts that fall inside this batch's own publish window per
+  // channel (first to last dueAt): a post three weeks out is not part of this set.
+  const span = {};
+  for (const p of loaded.posts) {
+    if (!p.dueAt) continue;
+    const s = span[p.channel] = span[p.channel] || { lo: p.dueAt, hi: p.dueAt };
+    if (p.dueAt < s.lo) s.lo = p.dueAt; if (p.dueAt > s.hi) s.hi = p.dueAt;
+  }
   for (const w of opts.with || []) {
     const extra = load(w);
-    loaded.posts.push(...extra.posts);
+    const inside = extra.posts.filter(p => span[p.channel] && p.dueAt >= span[p.channel].lo && p.dueAt <= span[p.channel].hi);
+    loaded.posts.push(...inside);
     loaded.mismatches.push(...extra.mismatches.map(m => `${extra.source}: ${m}`));
   }
   const { batch, posts, mismatches } = loaded;

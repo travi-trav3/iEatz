@@ -1,0 +1,583 @@
+{
+  "name": "oct-16-25",
+  "createdAt": "2026-10-16",
+  "note": "Fri Oct 16 to Sun Oct 25, both channels. Instagram: two 7-day windows, each with a reel and a carousel; the Thursday send-this post (manifest/send-this.json) sits in window 1 and is merged with --with for the gate. Pinterest: one pin a day; five pins go to the two live recipe pages (kids dinners, 10-minute breakfasts; every number copied from ieatz-social pages/content/*.json), five are product or recipe pins to the App Store because no new page can go live inside 9 days. Rejected photos this batch (opened, not used): fridge-warm-open and fridge-stocked (soda, Cheez Whiz, wine box, brand labels), mother-child-cooking and mother-child-meal (Hillshire Farm pack in frame), pantry-real-shelves (Nutella, Senseo, Kinder), counter-eggs-prep and woman-in-kitchen (a third-party recipe site on a tablet), family-cooking-together (no 2:3 or 4:5 crop keeps every face). Receipt math: 3.29 + 0.99 + 2.99 + 4.49 + 7.99 + 5.49 = 25.24. Soup and salmon and chickpea bowl recipes are generated here; their protein figures are labeled estimates. Reels are silent: no Meta Sound Collection track has been supplied. Device screens are derived crops of the real app-instacart.jpg and app-recipe.jpg (browser chrome and bottom nav removed, nothing added) so the full screen fits the phone frame.",
+  "posts": [
+    {
+      "file": "o16-ig-reel",
+      "w": 1080,
+      "h": 1920,
+      "template": "bleed",
+      "footer": "badge-bl",
+      "motion": {
+        "duration": 7,
+        "fps": 24
+      },
+      "photo": "lifestyle/chop-tomatoes.jpg",
+      "objPos": "42% 50%",
+      "photoClaim": "a cook slicing cherry tomatoes on a wooden board, with scallions, tomatoes, corn and a head of cauliflower on the counter",
+      "head": "Take a photo of what's on the counter. <span class=\"accent\">Dinner is in there.</span>",
+      "sub": "iEatz reads the photo, lists the ingredients and builds tonight's recipe from them."
+    },
+    {
+      "file": "o17-ig-collage",
+      "w": 1080,
+      "h": 1350,
+      "template": "collage",
+      "footer": "badge-tl",
+      "photoClaim": "glass jars of red lentils, bulgur, split peas and rice on a pantry shelf, and a bowl of roasted chickpeas with greens, edamame, olives, tomato and a wedge of naan",
+      "head": "Shelf-stable, still dinner",
+      "cards": [
+        {
+          "photo": "pantry/pantry-jars.jpg",
+          "x": 70,
+          "y": 120,
+          "w": 560,
+          "h": 560,
+          "rot": -3,
+          "tape": true
+        },
+        {
+          "photo": "food/chickpea-power-bowl.jpg",
+          "x": 560,
+          "y": 520,
+          "w": 480,
+          "h": 600,
+          "rot": 2.5,
+          "tape": "right",
+          "objPos": "50% 55%"
+        }
+      ],
+      "notes": [
+        {
+          "text": "lentils, bulgur, peas",
+          "x": 70,
+          "y": 705
+        },
+        {
+          "text": "then the bowl",
+          "x": 700,
+          "y": 1150
+        }
+      ]
+    },
+    {
+      "file": "o18-ig-carousel",
+      "w": 1080,
+      "h": 1350,
+      "slides": [
+        {
+          "template": "poster",
+          "footer": "badge-tr",
+          "eyebrow": "Soup season",
+          "head": "Four soups that start on the <span class=\"u\">pantry shelf</span>",
+          "body": "A can of beans or a cup of lentils, broth, one thing green. Swipe for all four.",
+          "readout": [
+            {
+              "label": "Soups",
+              "value": "4"
+            },
+            {
+              "label": "Minutes",
+              "value": "20 to 30"
+            },
+            {
+              "label": "Protein per bowl, est.",
+              "value": "12 to 17 g"
+            }
+          ],
+          "strip": true
+        },
+        {
+          "template": "list",
+          "eyebrow": "est. 15 g protein · 20 minutes · serves 4",
+          "head": "White bean and kale soup",
+          "items": [
+            {
+              "t": "Soften garlic in olive oil",
+              "s": "3 cloves, sliced, 1 minute. Chili flakes if you have them."
+            },
+            {
+              "t": "Add two cans of white beans and 4 cups broth",
+              "s": "Drained. Simmer 10 minutes, then mash a ladleful against the pot to thicken it."
+            },
+            {
+              "t": "Wilt in a bunch of kale",
+              "s": "Stems off, torn. 3 minutes. Finish with lemon and parmesan."
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "est. 12 g protein · 25 minutes · serves 4",
+          "head": "Tomato and chickpea soup",
+          "items": [
+            {
+              "t": "Cook an onion with a spoon of cumin",
+              "s": "Diced, in olive oil, 6 minutes until soft."
+            },
+            {
+              "t": "Add crushed tomatoes, chickpeas and broth",
+              "s": "A 28 oz can, a drained can of chickpeas, 3 cups broth. Simmer 15 minutes."
+            },
+            {
+              "t": "Stir in spinach at the end",
+              "s": "Two big handfuls. A spoon of yogurt on top if there is some."
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "est. 17 g protein · 30 minutes · serves 4",
+          "head": "Red lentil and coconut soup",
+          "items": [
+            {
+              "t": "Toast curry powder in oil",
+              "s": "1 tbsp, 30 seconds, with a chopped onion and 2 cloves garlic."
+            },
+            {
+              "t": "Add a cup of red lentils, a can of coconut milk, 3 cups broth",
+              "s": "Simmer 20 minutes, until the lentils fall apart."
+            },
+            {
+              "t": "Lime at the end",
+              "s": "Juice of one. Salt to taste. It thickens as it sits."
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "est. 16 g protein · 20 minutes · serves 4",
+          "head": "Black bean soup",
+          "items": [
+            {
+              "t": "Onion, cumin, a little chipotle",
+              "s": "In oil, 5 minutes."
+            },
+            {
+              "t": "Two cans of black beans, 3 cups broth",
+              "s": "Drained. Simmer 10 minutes."
+            },
+            {
+              "t": "Blend half, pour it back",
+              "s": "Lime juice, and whatever is open: cheese, cilantro, tortilla chips."
+            }
+          ]
+        },
+        {
+          "template": "poster",
+          "footer": "badge-bl",
+          "head": "Four cans, four soups, <span class=\"i\">one pot</span>",
+          "body": "Save this for the first cold night. Protein and time are estimates per serving.",
+          "strip": true
+        }
+      ]
+    },
+    {
+      "file": "o20-ig-device",
+      "w": 1080,
+      "h": 1350,
+      "template": "device",
+      "footer": "badge-br",
+      "photo": "app-instacart-handoff.jpg",
+      "photoClaim": "iEatz hand-off to Instacart: the missing items for pan-seared chicken with asparagus and spinach, six items ready to add to a Ralphs cart",
+      "eyebrow": "Instacart hand-off",
+      "head": "The missing six go to Instacart",
+      "cap": "Pick the recipe. iEatz lists what you don't have and hands the cart to Instacart, at the store you already use.",
+      "phoneW": 520
+    },
+    {
+      "file": "o25-ig-reel",
+      "w": 1080,
+      "h": 1920,
+      "template": "receipt",
+      "footer": "badge-bl",
+      "motion": {
+        "duration": 8,
+        "fps": 24
+      },
+      "store": "Corner Market",
+      "meta": "Sunday · 4:15 PM · 6 items",
+      "lines": [
+        {
+          "item": "Large eggs, dozen",
+          "price": "3.29"
+        },
+        {
+          "item": "Black beans, can",
+          "price": "0.99"
+        },
+        {
+          "item": "Flour tortillas",
+          "price": "2.99"
+        },
+        {
+          "item": "Shredded cheddar",
+          "price": "4.49"
+        },
+        {
+          "item": "Chicken tenders 1 lb",
+          "price": "7.99"
+        },
+        {
+          "item": "Greek yogurt 32 oz",
+          "price": "5.49"
+        }
+      ],
+      "total": "$25.24",
+      "dishes": [
+        {
+          "name": "Egg and bean quesadillas",
+          "when": "Mon · 12m"
+        },
+        {
+          "name": "Yogurt ranch tenders",
+          "when": "Tue · 25m"
+        },
+        {
+          "name": "Tender wraps, lunchbox",
+          "when": "Wed · 5m"
+        },
+        {
+          "name": "Black bean egg wraps",
+          "when": "Thu · 9m"
+        }
+      ],
+      "sticker": "4 meals",
+      "head": "Half the week is <em>on this receipt</em>"
+    },
+    {
+      "file": "o24-ig-carousel",
+      "w": 1080,
+      "h": 1350,
+      "slides": [
+        {
+          "template": "sharpie",
+          "footer": "badge-br",
+          "photo": "food/cutting-board-veg.jpg",
+          "ink": "#fff",
+          "photoClaim": "two eggs, half an avocado, cherry tomatoes, mushrooms, spinach, arugula, a jalapeño and scallions on a cutting board",
+          "head": "One dozen, three meals",
+          "marks": [
+            {
+              "x": 613,
+              "y": 489,
+              "rx": 200,
+              "ry": 130,
+              "label": "the quesadilla",
+              "labelSide": "above"
+            },
+            {
+              "x": 480,
+              "y": 930,
+              "rx": 180,
+              "ry": 120,
+              "label": "grown-up plate",
+              "labelSide": "below"
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "24 g protein · 12 minutes · serves 2 · dinner",
+          "head": "Cheesy egg and black bean quesadillas",
+          "items": [
+            {
+              "t": "Mash the beans into the eggs",
+              "s": "1/2 cup black beans, 3 eggs, a pinch of salt. Mashed in, nobody picks them out."
+            },
+            {
+              "t": "Scramble until just set",
+              "s": "Butter, medium heat, about 2 minutes. Scrape it out."
+            },
+            {
+              "t": "Fold into tortillas with cheese",
+              "s": "1/2 cup cheddar, 2 minutes a side. Spinach and jalapeño in the grown-up one."
+            },
+            {
+              "t": "Cut the kid one into triangles",
+              "s": "Salsa on the side, not on top."
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "24 g protein · 10 minutes · serves 1 · breakfast",
+          "head": "Savory oats with a jammy egg",
+          "items": [
+            {
+              "t": "Boil an egg for 7 minutes",
+              "s": "Then into cold water. Keep the pot boiling."
+            },
+            {
+              "t": "Cook 1/2 cup oats in the same water",
+              "s": "5 minutes, stirring, until thick."
+            },
+            {
+              "t": "Cheese, soy, the egg on top",
+              "s": "2 tbsp parmesan, a splash of soy, scallion and a lot of pepper."
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "22 g protein · 9 minutes · serves 2 · breakfast",
+          "head": "Black bean and egg skillet, wrapped",
+          "items": [
+            {
+              "t": "Warm a can of beans with cumin",
+              "s": "Dry skillet, smash about half of them."
+            },
+            {
+              "t": "Crack two eggs into the empty half",
+              "s": "Cover, 3 minutes."
+            },
+            {
+              "t": "Warm the tortillas, fill, roll tight",
+              "s": "Salsa, cheese, cilantro, whatever is open."
+            }
+          ]
+        },
+        {
+          "template": "poster",
+          "footer": "badge-bl",
+          "head": "Eggs are the cheapest protein in the <span class=\"i\">fridge</span>",
+          "body": "All three recipes are free on ieatzhealthy.com/recipes. Protein is per serving.",
+          "strip": true
+        }
+      ]
+    },
+    {
+      "file": "o23-ig-quotedark",
+      "w": 1080,
+      "h": 1350,
+      "template": "quotedark",
+      "footer": "badge-tl",
+      "photo": "lifestyle/kitchen-wide.jpg",
+      "objPos": "40% 60%",
+      "photoClaim": "a white kitchen counter with a bowl of lemons, a loaf of bread, parsley and a tomato beside the stove",
+      "quote": "I haven't had any groceries go to waste the last couple of weeks",
+      "attr": "SixSocks, App Store review"
+    },
+    {
+      "file": "p16-pin-poster",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-tr",
+      "head": "Savory oats with a <span class=\"u\">jammy egg</span>",
+      "body": "Oats cooked like risotto with a little cheese and soy, topped with a seven-minute egg. One pot, ten minutes, and the egg goes in the same water as the oats.",
+      "readout": [
+        {
+          "label": "Protein",
+          "value": "24 g"
+        },
+        {
+          "label": "Minutes",
+          "value": "10"
+        },
+        {
+          "label": "Serves",
+          "value": "1"
+        }
+      ],
+      "strip": true
+    },
+    {
+      "file": "p17-pin-sharpie",
+      "w": 1000,
+      "h": 1500,
+      "template": "sharpie",
+      "footer": "badge-bl",
+      "photo": "food/cutting-board-veg.jpg",
+      "ink": "#fff",
+      "photoClaim": "two eggs, half an avocado, cherry tomatoes, mushrooms, spinach, arugula, a jalapeño and scallions on a cutting board",
+      "head": "Dinner on one board",
+      "marks": [
+        {
+          "x": 613,
+          "y": 489,
+          "rx": 200,
+          "ry": 130,
+          "label": "the quesadilla",
+          "labelSide": "above"
+        },
+        {
+          "x": 480,
+          "y": 930,
+          "rx": 180,
+          "ry": 120,
+          "label": "grown-up plate",
+          "labelSide": "below"
+        }
+      ]
+    },
+    {
+      "file": "p18-pin-quotedark",
+      "w": 1000,
+      "h": 1500,
+      "template": "quotedark",
+      "footer": "badge-url",
+      "photo": "pantry/pantry-jars.jpg",
+      "objPos": "50% 70%",
+      "photoClaim": "glass jars of red lentils, bulgur, split peas and rice on a pantry shelf",
+      "quote": "I haven't had any groceries go to waste the last couple of weeks",
+      "attr": "SixSocks, App Store review"
+    },
+    {
+      "file": "p19-pin-device",
+      "w": 1000,
+      "h": 1500,
+      "template": "device",
+      "footer": "badge-br",
+      "photo": "app-recipe-macros.jpg",
+      "photoClaim": "iEatz app screen: pan-seared chicken with asparagus and spinach, 30 minutes, 450 calories, with carbs, protein and fat per serving and a Shop with Instacart button",
+      "eyebrow": "Real app screen",
+      "head": "Calories and macros, <span class=\"accent\">already counted</span>",
+      "cap": "Every recipe comes with estimated calories, protein, carbs and fat per serving, and one button that sends the missing items to Instacart.",
+      "phoneW": 520
+    },
+    {
+      "file": "p20-pin-list",
+      "w": 1000,
+      "h": 1500,
+      "template": "list",
+      "footer": "badge-tl",
+      "eyebrow": "Last night's dinner, today's lunchbox",
+      "head": "Four dinners that pack as lunch",
+      "items": [
+        {
+          "t": "Quesadilla triangles, cold",
+          "s": "Cut small, they travel. Salsa in a tiny tub."
+        },
+        {
+          "t": "Tenders over greens",
+          "s": "Sliced, with the yogurt ranch as the dressing."
+        },
+        {
+          "t": "Lentil pasta in a thermos",
+          "s": "Reheat it hot in the morning. It holds till noon."
+        },
+        {
+          "t": "Mac and cheese, same thermos",
+          "s": "A handful of peas before the lid goes on."
+        }
+      ]
+    },
+    {
+      "file": "p21-pin-bleed",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-url",
+      "photo": "lifestyle/kitchen-prep-scene.jpg",
+      "objPos": "64% 50%",
+      "photoClaim": "a woman in a pink apron chopping mushrooms on a board, with asparagus in a jar and scallions beside her",
+      "head": "Tonight is already <span class=\"accent\">on the board</span>",
+      "sub": "Mushrooms, scallions, asparagus. Tell iEatz what is on the counter and it writes the recipe from there."
+    },
+    {
+      "file": "p22-pin-recipephoto",
+      "w": 1000,
+      "h": 1500,
+      "template": "recipephoto",
+      "footer": "badge-br",
+      "photo": "food/power-bowl-veg.jpg",
+      "objPos": "55% 50%",
+      "photoClaim": "a bowl of seared salmon over cauliflower rice with green beans, cherry tomatoes and pesto, pine nuts scattered around",
+      "eyebrow": "Weeknight · 20 minutes · est. 38 g protein",
+      "head": "Pesto salmon over cauliflower rice",
+      "ings": [
+        "Salmon fillet",
+        "Frozen cauliflower rice",
+        "Green beans",
+        "Cherry tomatoes",
+        "Pesto",
+        "Pine nuts"
+      ],
+      "method": "Sear the salmon skin side down for 4 minutes, flip for 3. Steam the beans and the cauliflower rice in the same pan with a splash of water, 5 minutes. Spoon pesto over the salmon, scatter the tomatoes and pine nuts."
+    },
+    {
+      "file": "p23-pin-split",
+      "w": 1000,
+      "h": 1500,
+      "template": "split",
+      "footer": "badge-bl",
+      "top": {
+        "photo": "lifestyle/chop-tomatoes.jpg",
+        "objPos": "45% 50%",
+        "label": "5:40 PM, the counter"
+      },
+      "bottom": {
+        "photo": "food/tomato-pasta-skillet.jpg",
+        "objPos": "50% 45%"
+      },
+      "photoClaim": "a cook slicing cherry tomatoes on a board, with scallions, corn and a cauliflower on the counter; below, a skillet of spaghetti with blistered tomatoes, peas and basil",
+      "seam": "Counter to <em>pan</em>",
+      "cap": "Cherry tomatoes, frozen peas, half a box of spaghetti. iEatz wrote the recipe from a photo of the counter. <b>20 min</b>"
+    },
+    {
+      "file": "p24-pin-thread",
+      "w": 1000,
+      "h": 1500,
+      "template": "thread",
+      "footer": "badge-tr",
+      "bg": "mint",
+      "msgs": [
+        {
+          "time": "Tue 5:52 PM"
+        },
+        {
+          "who": "them",
+          "text": "whats for dinner"
+        },
+        {
+          "who": "me",
+          "text": "pasta with the meat sauce"
+        },
+        {
+          "who": "them",
+          "text": "the one with lentils in it??"
+        },
+        {
+          "who": "me",
+          "text": "you can't taste them. don't tell your brother"
+        },
+        {
+          "who": "them",
+          "text": "...fine"
+        },
+        {
+          "who": "me",
+          "text": "25 minutes. set the table"
+        }
+      ],
+      "foot": "Pasta with lentil and turkey sauce: 29 g of protein, 25 minutes, the lentils cook down into the tomato. Recipe free on the site.",
+      "head": "The 5:52 text, answered"
+    },
+    {
+      "file": "p25-pin-poster",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-tl",
+      "head": "Black bean and egg skillet, <span class=\"i\">rolled into a wrap</span>",
+      "body": "Smash half a can of beans with cumin, crack two eggs into the empty side of the pan, roll it all into warm tortillas with whatever is open.",
+      "readout": [
+        {
+          "label": "Protein",
+          "value": "22 g"
+        },
+        {
+          "label": "Minutes",
+          "value": "9"
+        },
+        {
+          "label": "Serves",
+          "value": "2"
+        }
+      ],
+      "strip": true
+    }
+  ]
+}

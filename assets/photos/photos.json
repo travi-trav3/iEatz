@@ -514,6 +514,20 @@
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-bag-unpacked.jpg",
       "style": "kitchen",
       "note": "4:5 crop of grocery-bag-produce.jpg (bananas, cabbage, apples) cut to exclude a bagel brand logo and a printed retailer URL. Use this, not the original, for 4:5 and 2:3 frames."
+    },
+    {
+      "file": "app-instacart-handoff.jpg",
+      "category": "app",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/app-instacart-handoff.jpg",
+      "style": "product",
+      "note": "derived crop of app-instacart.jpg (the real Instacart hand-off screen) without the Safari status and URL bars and the bottom browser nav; content untouched"
+    },
+    {
+      "file": "app-recipe-macros.jpg",
+      "category": "app",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/app-recipe-macros.jpg",
+      "style": "product",
+      "note": "derived crop of app-recipe.jpg (the real recipe screen with calories and macros) without the status bar and the bottom Add missing ingredients button; content untouched"
     }
   ]
 }
