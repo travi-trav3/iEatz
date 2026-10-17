@@ -111,20 +111,26 @@ function gate(file, opts = {}) {
     const plated = photoPosts.filter(p => p.photoStyle === 'plated').length;
     if (photoPosts.length && plated / photoPosts.length > 0.3) fails.push(`${channel}: photoStyle "plated" on ${pct(plated, photoPosts.length)} of photo posts (cap 30%)`);
     ps.forEach(p => { if (p.heroPhoto && (!p.photoStyle || p.photoStyle === 'unknown')) warns.push(`${channel}: ${p.id} hero ${p.heroPhoto} has no style in photos.json`); });
-    // 10. Instagram: at least one carousel and one reel in every 7-day window of the batch
+    // 10. Instagram: at least one carousel and one reel in every 7-day window of the batch, and
+    //     (since Oct 17 2026) at least one post whose cta is "cookbook-dm": the "comment COOKBOOK"
+    //     line that runs the ManyChat flow. Never two of those back to back.
     if (channel === 'instagram' && n) {
       const day = (s) => Date.parse(s) || 0;
       const t0 = day(ps[0].dueAt);
       const windows = {};
       ps.forEach(p => { const w = Math.floor((day(p.dueAt) - t0) / (7 * 864e5)); (windows[w] = windows[w] || []).push(p); });
       for (const [w, wp] of Object.entries(windows)) {
+        const span = `${wp[0].dueAt.slice(0, 10)} .. ${wp[wp.length - 1].dueAt.slice(0, 10)}, ${wp.length} posts`;
         for (const fmt of ['carousel', 'reel']) {
           if (!wp.some(p => p.format === fmt)) {
-            const msg = `instagram: no ${fmt} in 7-day window ${+w + 1} (${wp[0].dueAt.slice(0, 10)} .. ${wp[wp.length - 1].dueAt.slice(0, 10)}, ${wp.length} posts)`;
+            const msg = `instagram: no ${fmt} in 7-day window ${+w + 1} (${span})`;
             if (opts.softFormat) warns.push(msg + ' [--soft-format]'); else set(fails, msg);
           }
         }
+        if (wp[0].dueAt >= '2026-10-17' && !wp.some(p => p.cta === 'cookbook-dm'))
+          set(fails, `instagram: no "comment COOKBOOK" post (cta cookbook-dm) in 7-day window ${+w + 1} (${span})`);
       }
+      for (let i = 1; i < n; i++) if (ps[i].cta === 'cookbook-dm' && ps[i - 1].cta === 'cookbook-dm') set(fails, `instagram: cookbook-dm cta on two posts in a row (${ps[i - 1].id} -> ${ps[i].id})`);
     }
     const fm = {}; ps.forEach(p => { fm[p.format] = (fm[p.format] || 0) + 1; });
     lines.push(`${channel}: ${n} posts | templates ${JSON.stringify(tCount)} | pillars [${[...pillars]}] | formats ${JSON.stringify(fm)} | footers ${JSON.stringify(fCount)} | accentTail ${pct(tails, n)} eyebrow ${pct(brows, n)} plated ${photoPosts.length ? pct(plated, photoPosts.length) : '0/0'}`);

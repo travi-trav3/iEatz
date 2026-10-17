@@ -1,7 +1,7 @@
 {
   "name": "oct-16-25",
   "createdAt": "2026-10-16",
-  "note": "Fri Oct 16 to Sun Oct 25, both channels. Instagram: two 7-day windows, each with a reel and a carousel; the Thursday send-this post (manifest/send-this.json) sits in window 1 and is merged with --with for the gate. Pinterest: one pin a day; five pins go to the two live recipe pages (kids dinners, 10-minute breakfasts; every number copied from ieatz-social pages/content/*.json), five are product or recipe pins to the App Store because no new page can go live inside 9 days. Rejected photos this batch (opened, not used): fridge-warm-open and fridge-stocked (soda, Cheez Whiz, wine box, brand labels), mother-child-cooking and mother-child-meal (Hillshire Farm pack in frame), pantry-real-shelves (Nutella, Senseo, Kinder), counter-eggs-prep and woman-in-kitchen (a third-party recipe site on a tablet), family-cooking-together (no 2:3 or 4:5 crop keeps every face). Receipt math: 3.29 + 0.99 + 2.99 + 4.49 + 7.99 + 5.49 = 25.24. Soup and salmon and chickpea bowl recipes are generated here; their protein figures are labeled estimates. Reels are silent: no Meta Sound Collection track has been supplied. Device screens are derived crops of the real app-instacart.jpg and app-recipe.jpg (browser chrome and bottom nav removed, nothing added) so the full screen fits the phone frame.",
+  "note": "Fri Oct 16 to Sun Oct 25, both channels. Instagram: two 7-day windows, each with a reel and a carousel; the Thursday send-this post (manifest/send-this.json) sits in window 1 and is merged with --with for the gate. Pinterest: one pin a day; five pins go to the two live recipe pages (kids dinners, 10-minute breakfasts; every number copied from ieatz-social pages/content/*.json), five are product or recipe pins to the App Store because no new page can go live inside 9 days. Rejected photos this batch (opened, not used): fridge-warm-open and fridge-stocked (soda, Cheez Whiz, wine box, brand labels), mother-child-cooking and mother-child-meal (Hillshire Farm pack in frame), pantry-real-shelves (Nutella, Senseo, Kinder), counter-eggs-prep and woman-in-kitchen (a third-party recipe site on a tablet), family-cooking-together (no 2:3 or 4:5 crop keeps every face). Receipt math: 3.29 + 0.99 + 2.99 + 4.49 + 7.99 + 5.49 = 25.24. Soup and salmon and chickpea bowl recipes are generated here; their protein figures are labeled estimates. F-001 (Oct 17): the o16 reel claimed the app reads a photo of the counter and was retracted after publishing; p23 split cap rewritten. The claim rules now live in feedback/banned-phrases.txt. Reels are silent: no Meta Sound Collection track has been supplied. Device screens are derived crops of the real app-instacart.jpg and app-recipe.jpg (browser chrome and bottom nav removed, nothing added) so the full screen fits the phone frame.",
   "posts": [
     {
       "file": "o16-ig-reel",
@@ -20,29 +20,29 @@
       "sub": "iEatz reads the photo, lists the ingredients and builds tonight's recipe from them."
     },
     {
-      "file": "o17-ig-collage",
+      "file": "o17-ig-collage-v2",
       "w": 1080,
       "h": 1350,
       "template": "collage",
       "footer": "badge-tl",
       "photoClaim": "glass jars of red lentils, bulgur, split peas and rice on a pantry shelf, and a bowl of roasted chickpeas with greens, edamame, olives, tomato and a wedge of naan",
-      "head": "Shelf-stable, still dinner",
+      "head": "Shelf stable ingredients, fresh dinner in 30",
       "cards": [
         {
           "photo": "pantry/pantry-jars.jpg",
-          "x": 70,
-          "y": 120,
-          "w": 560,
-          "h": 560,
+          "x": 60,
+          "y": 110,
+          "w": 470,
+          "h": 470,
           "rot": -3,
           "tape": true
         },
         {
           "photo": "food/chickpea-power-bowl.jpg",
           "x": 560,
-          "y": 520,
-          "w": 480,
-          "h": 600,
+          "y": 150,
+          "w": 450,
+          "h": 560,
           "rot": 2.5,
           "tape": "right",
           "objPos": "50% 55%"
@@ -51,15 +51,16 @@
       "notes": [
         {
           "text": "lentils, bulgur, peas",
-          "x": 70,
-          "y": 705
+          "x": 60,
+          "y": 610
         },
         {
           "text": "then the bowl",
-          "x": 700,
-          "y": 1150
+          "x": 600,
+          "y": 740
         }
-      ]
+      ],
+      "headSize": 84
     },
     {
       "file": "o18-ig-carousel",
@@ -247,35 +248,30 @@
       "head": "Half the week is <em>on this receipt</em>"
     },
     {
-      "file": "o24-ig-carousel",
+      "file": "o24-ig-carousel-v2",
       "w": 1080,
       "h": 1350,
       "slides": [
         {
-          "template": "sharpie",
+          "template": "poster",
           "footer": "badge-br",
-          "photo": "food/cutting-board-veg.jpg",
-          "ink": "#fff",
-          "photoClaim": "two eggs, half an avocado, cherry tomatoes, mushrooms, spinach, arugula, a jalapeño and scallions on a cutting board",
-          "head": "One dozen, three meals",
-          "marks": [
+          "head": "One dozen eggs, <span class=\"u\">three meals</span>",
+          "body": "A dinner and two breakfasts, 22 to 24 g of protein each. Swipe for the steps.",
+          "readout": [
             {
-              "x": 613,
-              "y": 489,
-              "rx": 200,
-              "ry": 130,
-              "label": "the quesadilla",
-              "labelSide": "above"
+              "label": "Meals",
+              "value": "3"
             },
             {
-              "x": 480,
-              "y": 930,
-              "rx": 180,
-              "ry": 120,
-              "label": "grown-up plate",
-              "labelSide": "below"
+              "label": "Protein per serving",
+              "value": "22 to 24 g"
+            },
+            {
+              "label": "Minutes",
+              "value": "9 to 12"
             }
-          ]
+          ],
+          "strip": true
         },
         {
           "template": "list",
@@ -384,33 +380,43 @@
       "strip": true
     },
     {
-      "file": "p17-pin-sharpie",
+      "file": "p17-pin-thread",
       "w": 1000,
       "h": 1500,
-      "template": "sharpie",
+      "template": "thread",
       "footer": "badge-bl",
-      "photo": "food/cutting-board-veg.jpg",
-      "ink": "#fff",
-      "photoClaim": "two eggs, half an avocado, cherry tomatoes, mushrooms, spinach, arugula, a jalapeño and scallions on a cutting board",
-      "head": "Dinner on one board",
-      "marks": [
+      "bg": "mint",
+      "head": "Lunch was already in the fridge",
+      "msgs": [
         {
-          "x": 613,
-          "y": 489,
-          "rx": 200,
-          "ry": 130,
-          "label": "the quesadilla",
-          "labelSide": "above"
+          "time": "Sat 12:10 PM"
         },
         {
-          "x": 480,
-          "y": 930,
-          "rx": 180,
-          "ry": 120,
-          "label": "grown-up plate",
-          "labelSide": "below"
+          "who": "them",
+          "text": "is there food"
+        },
+        {
+          "who": "me",
+          "text": "eggs, a can of beans, tortillas, cheddar"
+        },
+        {
+          "who": "them",
+          "text": "so quesadillas"
+        },
+        {
+          "who": "me",
+          "text": "so quesadillas. 12 minutes"
+        },
+        {
+          "who": "them",
+          "text": "triangles?"
+        },
+        {
+          "who": "me",
+          "text": "triangles. salsa on the side, not on top"
         }
-      ]
+      ],
+      "foot": "Cheesy egg and black bean quesadillas: 24 g of protein, 12 minutes, a kid plate and a grown-up plate. Recipe free on the site."
     },
     {
       "file": "p18-pin-quotedark",
@@ -498,7 +504,7 @@
       "method": "Sear the salmon skin side down for 4 minutes, flip for 3. Steam the beans and the cauliflower rice in the same pan with a splash of water, 5 minutes. Spoon pesto over the salmon, scatter the tomatoes and pine nuts."
     },
     {
-      "file": "p23-pin-split",
+      "file": "p23-pin-split-v2",
       "w": 1000,
       "h": 1500,
       "template": "split",
@@ -514,7 +520,7 @@
       },
       "photoClaim": "a cook slicing cherry tomatoes on a board, with scallions, corn and a cauliflower on the counter; below, a skillet of spaghetti with blistered tomatoes, peas and basil",
       "seam": "Counter to <em>pan</em>",
-      "cap": "Cherry tomatoes, frozen peas, half a box of spaghetti. iEatz wrote the recipe from a photo of the counter. <b>20 min</b>"
+      "cap": "Cherry tomatoes, frozen peas, half a box of spaghetti. Add the three to iEatz and it writes the recipe. <b>20 min</b>"
     },
     {
       "file": "p24-pin-thread",

@@ -72,6 +72,14 @@ Design tokens: `index.html` `:root` block and `social/render/base.css`
 5. **Self-host fonts.** `await document.fonts.ready` + `document.fonts.check('400 88px "Instrument Serif"')`.
    A Georgia fallback render is a broken render.
 6. **QA gate is mandatory** (section 6). No exceptions.
+7. **The app does not read photos of food (F-001, Oct 17 2026).** Never say or show that iEatz
+   reads, scans, recognises or sees a photo of a fridge, counter, pantry, plate or ingredients, or
+   that pointing a camera at anything produces a recipe. What ships today: **receipt import** (a
+   photo of a receipt, yes), **add what you have by hand**, recipes with **estimated calories and
+   macros** and **step by step instructions**, and the **Instacart hand-off** for what is missing.
+   "Tell iEatz what's on the counter" is fine; "take a photo of the counter" is not. The copy gate
+   fails the batch on the phrases in `social/feedback/banned-phrases.txt` (F-001 block). The Oct 16
+   reel shipped this claim and had to be retracted.
 
 ## 4. Render pipeline (`social/render/`)
 - **v2 engine (Sep 2026): `social/README.md` is the reference** for every shell, its props and

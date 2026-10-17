@@ -8,3 +8,9 @@ One entry per note or idea, newest last. Format:
 
 ## 2026-10-05 (batch start + 16:50 routine)
 - Batch-start review for oct-5-11 (checked again at 21:55 PT, after the first Monday routine fired): all 197 iEatz posts (both query pages) have no notes, and no idea is titled "Feedback". Nothing to apply.
+
+## 2026-10-12 (routine)
+- Weekly review: 198 posts, 33 ideas, no notes, nothing titled Feedback. Nothing to apply.
+
+## 2026-10-17
+- 2026-10-17 · in session (not a Buffer note) · instagram o16-ig reel, sent Oct 16 20:10 PT, and pinterest p23-pin, scheduled Oct 23 · "it says you can 'point the camera at the fridge' and 'iEatz reads what's in the fridge/counter'. FALSE, that's not the state of the product and I've already communicated that" → rule+fix: F-001 written; 13 phrase patterns added to banned-phrases.txt; CONTROL_CENTER §3 hard constraint 7; p23 re-rendered and re-scheduled without the claim; o16 is already published and cannot be edited through Buffer: it needs deleting on Instagram by hand (ledger status `retracted`). Queue audit: no other scheduled post carries the claim. Published history: aug-18-31 "iEatz reads the stragglers" (Aug 22) is the only earlier near-miss.

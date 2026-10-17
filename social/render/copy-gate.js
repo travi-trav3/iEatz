@@ -71,7 +71,8 @@ function check(loaded) {
       else if (EN_DASH_AS_DASH.test(s)) fails.push(`${p.id}: en dash used as a dash in ${field}: "${strip(s).slice(0, 90)}"`);
       const nx = strip(s).match(NOT_X) || strip(s).match(NOT_X_PARALLEL);
       if (nx) fails.push(`${p.id}: "not X, Y" construction in ${field}: "...${nx[0]}..."`);
-      for (const b of BANNED) {
+      // photoClaim describes the picture ("a photo of two eggs"), it is not a claim to the audience
+      if (!/photoClaim$/.test(field)) for (const b of BANNED) {
         const hit = strip(s).match(b.re);
         if (hit) fails.push(`${p.id}: banned phrase "${hit[0]}" in ${field} (feedback/banned-phrases.txt: ${b.label})`);
       }

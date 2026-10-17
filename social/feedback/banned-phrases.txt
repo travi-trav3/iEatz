@@ -1,3 +1,19 @@
 # Phrases the copy gate fails on, anywhere in a caption or on an image.
 # One per line: a plain phrase (matched as whole words, case-insensitive) or a /regex/.
 # End each line with "# F-NNN" naming the rule in RULES.md it came from.
+
+# F-001 (2026-10-17): iEatz does not read photos of a fridge, counter, pantry or plate. Travis, after the
+# Oct 16 reel. Receipt import is real: "snap the receipt" / "scan the receipt" stay allowed.
+/point(s|ing|ed)? (the |your )?camera/
+/camera at (the|your)/
+/photo of (the |your |what)/
+/(snap|take|shoot|upload)s? (a |the |one )?(photo|picture|pic)\b/
+/snap(s|ped)? (the |your )?(fridge|pantry|counter|kitchen|shelves|ingredients)/
+/reads? (the |a |your |that )?(photo|picture|pic|camera)/
+/scan(s|ned|ning)? (the |your )?(fridge|pantry|counter|kitchen|shelves|ingredients|plate)/
+/fridge scan/
+/from a (photo|picture|pic)\b/
+/photo is a recipe/
+/sees what('s| is) (in|on)/
+/identif(y|ies|ied) (everything|what)/
+/recogni[sz]es? (the |your )?(food|ingredients|fridge)/

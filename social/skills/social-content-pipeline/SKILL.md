@@ -131,6 +131,11 @@ Plan the full batch before rendering:
 ### Phase 3: Copy writing
 
 - **Read every line of copy aloud.** Adjectives must be used the way people actually speak: "jammy egg" is a real phrase, "jammy-boil" is an invented verb; "soft-egg power bowl" reads like a SKU, "the ten-minute power bowl" reads like a person. If a phrase would sound odd said across a kitchen counter, rewrite it before it ships.
+0. **A product claim comes from the product, not from what the line wants to say.** Keep a written
+   list of what ships today and what never to claim (iEatz: CONTROL_CENTER §3 item 7 and
+   `social/feedback/banned-phrases.txt`), and put every never-claim into the copy gate as a phrase
+   so it fails the batch. Learned Oct 2026: a reel said the app reads a photo of the counter. It
+   does not. It published and had to be pulled.
 1. **Match the pillar's purpose** (Transformation → story/testimonial; Money/Waste → stat + solution;
    Lifestyle → aspirational moment; Recipe/Food → dish + ease + ingredients; Product/Feature → what
    it does + why).

@@ -33,7 +33,7 @@
   "posts": [
     {
       "id": "o16-ig",
-      "status": "scheduled",
+      "status": "retracted",
       "channel": "instagram",
       "dueAt": "2026-10-16T20:10:00-07:00",
       "file": "assets/social/oct16/o16-ig-reel.mp4",
@@ -46,22 +46,24 @@
       "firstComment": "The cauliflower is the one everybody forgets they bought. It roasts in 20 minutes.",
       "alt": "Vertical reel: a cook slicing cherry tomatoes on a wooden board with scallions, corn and a cauliflower on the counter. Headline over the photo: Take a photo of what's on the counter. Dinner is in there.",
       "bufferId": "6ad298e387c49357709bdd02",
-      "slackAlert": "Dr0CA0HH4TG9"
+      "slackAlert": "Dr0CA0HH4TG9",
+      "retracted": "2026-10-17: published Oct 16 20:10 PT with a false product claim (photo of the counter read by the app; F-001). Buffer cannot edit or delete a sent post: delete the reel on Instagram by hand. Not part of the set for the gates."
     },
     {
       "id": "o17-ig",
       "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-17T09:25:00-07:00",
-      "file": "assets/social/oct16/o17-ig-collage.png",
+      "file": "assets/social/oct16/o17-ig-collage-v2.png",
       "pillar": "Recipe/Food",
       "topic": "Pantry",
       "cta": "none",
       "text": "The jars first, then the bowl. Red lentils, bulgur, split peas and rice keep for a year; the bowl takes 20 minutes.\n\nRoasted chickpea and bulgur bowl, serves 2: drain a can of chickpeas, toss with olive oil, cumin and salt, roast at 425°F for 18 minutes. Meanwhile cook 1/2 cup bulgur in a cup of water, 12 minutes. Pile both over a handful of greens with whatever is open (edamame, olives, chopped tomato and cucumber), a spoon of yogurt and a squeeze of lemon. About 18 g of protein per bowl, estimated. Verify for allergens.\n\n#pantrymeals #chickpeas #mealprep #budgetmeals #ieatzhealthy",
       "firstComment": "The figs in the bowl were a bonus from the fruit drawer. Not required, strongly encouraged.",
-      "alt": "Collage on deep cream paper: a photo of glass pantry jars of red lentils, bulgur, split peas and rice, taped at an angle, and a photo of a bowl of roasted chickpeas with greens, edamame, olives, tomato and naan. Handwritten notes: lentils, bulgur, peas; then the bowl. Headline: Shelf-stable, still dinner.",
+      "alt": "Collage on deep cream paper: a photo of glass pantry jars of red lentils, bulgur, split peas and rice, taped at an angle, and a photo of a bowl of roasted chickpeas with greens, edamame, olives, tomato and naan. Handwritten notes: lentils, bulgur, peas; then the bowl. Headline: Shelf stable ingredients, fresh dinner in 30.",
       "bufferId": "6ad299068ac6cfe5441a654c",
-      "slackAlert": "Dr0C9YEYCP26"
+      "slackAlert": "Dr0C9YEYCP26",
+      "fixed": "2026-10-17: headline per Travis, cards moved so the type sits on clean paper (v2)"
     },
     {
       "id": "o18-ig",
@@ -121,22 +123,23 @@
       "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-24T10:15:00-07:00",
-      "file": "assets/social/oct16/o24-ig-carousel--01.png",
+      "file": "assets/social/oct16/o24-ig-carousel-v2--01.png",
       "slides": [
-        "assets/social/oct16/o24-ig-carousel--01.png",
-        "assets/social/oct16/o24-ig-carousel--02.png",
-        "assets/social/oct16/o24-ig-carousel--03.png",
-        "assets/social/oct16/o24-ig-carousel--04.png",
-        "assets/social/oct16/o24-ig-carousel--05.png"
+        "assets/social/oct16/o24-ig-carousel-v2--01.png",
+        "assets/social/oct16/o24-ig-carousel-v2--02.png",
+        "assets/social/oct16/o24-ig-carousel-v2--03.png",
+        "assets/social/oct16/o24-ig-carousel-v2--04.png",
+        "assets/social/oct16/o24-ig-carousel-v2--05.png"
       ],
       "pillar": "Health/Diet",
       "topic": "Eggs",
       "cta": "none",
-      "text": "One dozen eggs, three meals, 22 to 24 g of protein each. The eggs, the avocado and the spinach on this board cover a dinner and two breakfasts:\n\n1. Cheesy egg and black bean quesadillas, 12 minutes (dinner, serves 2)\n2. Savory oats with a jammy egg, 10 minutes\n3. Black bean and egg skillet, rolled into a wrap, 9 minutes\n\nSteps on the slides, full recipes free on ieatzhealthy.com/recipes. Protein is per serving.\n\n#eggs #highproteinbreakfast #kidsdinner #cheapmeals #ieatzhealthy",
+      "text": "One dozen eggs, three meals, 22 to 24 g of protein each. A dinner and two breakfasts from one carton:\n\n1. Cheesy egg and black bean quesadillas, 12 minutes (dinner, serves 2)\n2. Savory oats with a jammy egg, 10 minutes\n3. Black bean and egg skillet, rolled into a wrap, 9 minutes\n\nSteps on the slides, full recipes free on ieatzhealthy.com/recipes. Protein is per serving.\n\n#eggs #highproteinbreakfast #kidsdinner #cheapmeals #ieatzhealthy",
       "firstComment": "The jalapeño is for the grown-up quesadilla only. We learned that one the hard way.",
-      "alt": "Five-slide carousel. Slide one: a photo of two eggs, half an avocado, cherry tomatoes, mushrooms, spinach and scallions on a cutting board, marked up in white marker: the eggs circled with the quesadilla, the spinach circled with grown-up plate. Handwritten headline: One dozen, three meals. Slides two to four: numbered steps for cheesy egg and black bean quesadillas, savory oats with a jammy egg, and the black bean and egg skillet wrap, each with protein, minutes and servings. Slide five: Eggs are the cheapest protein in the fridge.",
+      "alt": "Five-slide carousel. Slide one: One dozen eggs, three meals, with a readout of 3 meals, 22 to 24 g protein per serving, 9 to 12 minutes. Slides two to four: numbered steps for cheesy egg and black bean quesadillas, savory oats with a jammy egg, and the black bean and egg skillet wrap, each with protein, minutes and servings. Slide five: Eggs are the cheapest protein in the fridge.",
       "bufferId": "6ad2991a1694d771d5099177",
-      "slackAlert": "Dr0CA2BGCV8U"
+      "slackAlert": "Dr0CA2BGCV8U",
+      "fixed": "2026-10-17: cover changed from the marked-up cutting board to a typographic poster (same reason as p17)"
     },
     {
       "id": "o25-ig",
@@ -178,18 +181,19 @@
       "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-17T10:50:00-07:00",
-      "file": "assets/pinterest/oct16/p17-pin-sharpie.png",
-      "pillar": "Pantry/Fridge",
+      "file": "assets/pinterest/oct16/p17-pin-thread.png",
+      "pillar": "Lifestyle",
       "topic": "Family",
       "cta": "other",
       "board": "School lunch and family dinner ideas",
       "boardServiceId": "1011339728762228742",
       "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=persona-spotlight&utm_content=p17-pin-sharpie#cheesy-egg-bean-quesadillas",
       "title": "Cheesy egg and black bean quesadillas: a 12 minute high protein kids dinner (24 g)",
-      "text": "Everything for dinner is already on the board: eggs scrambled with mashed black beans and folded into a cheese quesadilla, cut into triangles for small hands. The spinach and jalapeño go into the grown-up one. 24 g of protein per serving, 12 minutes, one pan. Full recipe on the site.",
-      "alt": "Photo of eggs, half an avocado, cherry tomatoes, mushrooms, spinach and scallions on a cutting board, marked up in white marker: the eggs circled with the quesadilla, the spinach circled with grown-up plate. Handwritten headline: Dinner on one board.",
+      "text": "The Saturday lunch text, answered from the fridge: eggs, a can of black beans, tortillas and cheddar are a quesadilla. Scramble the eggs with the mashed beans, fold into a cheese quesadilla, cut into triangles for small hands; spinach and jalapeño in the grown-up one. 24 g of protein per serving, 12 minutes, one pan. Full recipe on the site.",
+      "alt": "Mint pin styled as a text thread at Sat 12:10 PM: is there food; eggs, a can of beans, tortillas, cheddar; so quesadillas; so quesadillas. 12 minutes; triangles?; triangles. salsa on the side, not on top. Headline: Lunch was already in the fridge. Footer line: Cheesy egg and black bean quesadillas, 24 g of protein, 12 minutes, a kid plate and a grown-up plate.",
       "bufferId": "6ad2992a8ac6cfe5441a6a5e",
-      "slackAlert": "Dr0C9TBVT0AZ"
+      "slackAlert": "Dr0C9TBVT0AZ",
+      "fixed": "2026-10-17: the sharpie board (eggs circled as the quesadilla on a board someone was already prepping) replaced with a thread, per Travis"
     },
     {
       "id": "p18-pin",
@@ -286,7 +290,7 @@
       "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-23T21:05:00-07:00",
-      "file": "assets/pinterest/oct16/p23-pin-split.png",
+      "file": "assets/pinterest/oct16/p23-pin-split-v2.png",
       "pillar": "Pantry/Fridge",
       "topic": "Counter",
       "cta": "none",
@@ -294,10 +298,11 @@
       "boardServiceId": "1011339728762228744",
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "Blistered tomato and pea spaghetti from what's on the counter, 20 minutes",
-      "text": "Before and after: cherry tomatoes on the cutting board at 5:40, a skillet of spaghetti with blistered tomatoes, frozen peas and basil by 6. Blister the tomatoes in olive oil and garlic while the pasta cooks, add the peas for the last two minutes, toss with the pasta and a ladle of its water, tear basil over. iEatz wrote it from a photo of the counter. Free on iOS and Android.",
-      "alt": "Split pin: top, a cook slicing cherry tomatoes on a wooden board with a mono label reading 5:40 PM, the counter; bottom, a cast iron skillet of spaghetti with blistered tomatoes, peas and basil. Seam label: Counter to pan. Caption: Cherry tomatoes, frozen peas, half a box of spaghetti. iEatz wrote the recipe from a photo of the counter. 20 min.",
+      "text": "Before and after: cherry tomatoes on the cutting board at 5:40, a skillet of spaghetti with blistered tomatoes, frozen peas and basil by 6. Blister the tomatoes in olive oil and garlic while the pasta cooks, add the peas for the last two minutes, toss with the pasta and a ladle of its water, tear basil over. Add the three ingredients to iEatz and it writes a recipe like this one, with estimated calories and protein. Free on iOS and Android.",
+      "alt": "Split pin: top, a cook slicing cherry tomatoes on a wooden board with a mono label reading 5:40 PM, the counter; bottom, a cast iron skillet of spaghetti with blistered tomatoes, peas and basil. Seam label: Counter to pan. Caption: Cherry tomatoes, frozen peas, half a box of spaghetti. Add the three to iEatz and it writes the recipe. 20 min.",
       "bufferId": "6ad29a0d1694d771d509c97e",
-      "slackAlert": "Dr0C9SDRCJ1H"
+      "slackAlert": "Dr0C9SDRCJ1H",
+      "fixed": "2026-10-17: F-001, the counter-photo claim removed from the caption and the image (v2)"
     },
     {
       "id": "p24-pin",
