@@ -333,9 +333,14 @@ with zero duplicates:
 8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
-- **Oct 16–25 batch scheduled (Oct 16):** 7 IG (two silent reels, two carousels, device, collage,
-  SixSocks quote) + 10 pins (five to the two live recipe pages, five to the App Store). Gate run
-  with `--with ../manifest/send-this.json`. Ledger `social/manifest/oct-16-25-batch.json`. Queue
+- **Oct 17 corrections:** the Oct 16 reel (`o16-ig`) claimed the app reads a photo of the counter;
+  it published and is marked `retracted` (delete on Instagram by hand). Rules F-001 to F-003 written
+  (`feedback/RULES.md`); p17, p23, o17 and the o24 cover re-rendered and re-scheduled; a pesto salmon
+  reel (`o21-ig`, Wed Oct 21 18:45 PT) keeps a reel in the week. o18 (Sun) and o24 (Sat) carry the
+  "comment COOKBOOK" line for the ManyChat flow; one per week is now a gate rule.
+- **Oct 16–25 batch scheduled (Oct 16):** 8 IG (two silent reels, two carousels, device, collage,
+  SixSocks quote, salmon reel) + 10 pins (five to the two live recipe pages, five to the App Store).
+  Gate run with `--with ../manifest/send-this.json`. Ledger `social/manifest/oct-16-25-batch.json`. Queue
   now runs to Sun Oct 25 (plus send-this Thursdays to Nov 12); next batch must be planned by Oct 22
   so page-backed pins (7-day rule) can land in it. Candidate pages: rotisserie chicken, sweet potato
   tacos, pantry pasta, the four pantry soups from the Oct 18 carousel.

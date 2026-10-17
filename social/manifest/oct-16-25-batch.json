@@ -106,7 +106,7 @@
     },
     {
       "id": "o21-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-21T18:45:00-07:00",
       "file": "assets/social/oct16/o21-ig-reel.mp4",
@@ -118,7 +118,9 @@
       "text": "Salmon, a bag of frozen cauliflower rice, green beans, a spoon of pesto. Add the four to iEatz and it writes this one: sear the salmon skin side down 4 minutes, flip for 3; steam the beans and the cauliflower rice in the same pan with a splash of water, 5 minutes; pesto over the top, cherry tomatoes and pine nuts if there are any.\n\nAbout 38 g of protein per serving, estimated. Verify for allergens.\n\n#salmonrecipes #weeknightdinner #highproteinmeals #20minutemeals #ieatzhealthy",
       "firstComment": "The pine nuts are the only thing on this plate that counts as optional. Everything else is the dinner.",
       "alt": "Vertical reel: a bowl of seared salmon over cauliflower rice with green beans, cherry tomatoes and pesto. Headline over the photo: Pesto salmon over cauliflower rice, twenty minutes.",
-      "added": "2026-10-17: replaces the retracted o16 reel so the week keeps a reel; copy stays inside F-001"
+      "added": "2026-10-17: replaces the retracted o16 reel so the week keeps a reel; copy stays inside F-001",
+      "bufferId": "6ad3a42f0b0d72757ae71b3f",
+      "slackAlert": "Dr0CA42EBY73"
     },
     {
       "id": "o23-ig",
