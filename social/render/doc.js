@@ -91,7 +91,11 @@ ${p.headSize ? `.ig-bleed .bhead{font-size:${p.headSize}px}.po-head,.rc-head,.cc
 const SAFE_SCRIPT = `<script>window.__safe=()=>{const W=innerWidth,H=innerHeight,out=[];for(const el of document.querySelectorAll('[data-safe]')){const [pad=80,frac=1]=el.dataset.safe.split(',').map(Number);const r=el.getBoundingClientRect();const n=(el.className||el.tagName).toString().split(' ')[0];
 if(r.left<pad-0.5||r.right>W-pad+0.5||r.top<pad-0.5||r.bottom>H-pad+0.5)out.push(n+' breaks the '+pad+'px safe zone (x '+Math.round(r.left)+'-'+Math.round(r.right)+', y '+Math.round(r.top)+'-'+Math.round(r.bottom)+')');
 if(r.bottom>H*frac+0.5)out.push(n+' bottom '+Math.round(r.bottom)+'px is below the '+Math.round(frac*100)+'% line ('+Math.round(H*frac)+'px)');
-for(const t of [el,...el.querySelectorAll('*')])if(t.scrollWidth>t.clientWidth+1){out.push(((t.className||t.tagName).toString().split(' ')[0])+' overflows its box ('+t.scrollWidth+'px in '+t.clientWidth+'px)');break;}}return out;};</script>`;
+for(const t of [el,...el.querySelectorAll('*')])if(t.scrollWidth>t.clientWidth+1){out.push(((t.className||t.tagName).toString().split(' ')[0])+' overflows its box ('+t.scrollWidth+'px in '+t.clientWidth+'px)');break;}}
+for(const el of document.querySelectorAll('[data-clear]')){const r=el.getBoundingClientRect();const n=(el.className||el.tagName).toString().split(' ')[0];
+for(const o of document.querySelectorAll(el.dataset.clear)){if(o===el||el.contains(o)||o.contains(el))continue;const q=o.getBoundingClientRect();
+if(r.left<q.right-1&&r.right>q.left+1&&r.top<q.bottom-1&&r.bottom>q.top+1){out.push(n+' sits over '+((o.className||o.tagName).toString().split(' ')[0])+' (F-003: type on clean paper)');break;}}}
+return out;};</script>`;
 
 // Wait for fonts + images, force-load and check every face, then fit text and check safe zones.
 // Returns QA facts: imgs, fc (font checks) and safe (violations, empty when clean).

@@ -182,6 +182,11 @@ Open the actual image (Read tool). Do not rely on alt text/dimensions. Check:
    badge kissing the phone, footer badge/URL overlapping).
 5. **Every number verified** (macros, stats, price math).
 6. **Spelling** (names too) + **brand voice** (sentence case, one green emphasis word, no emoji).
+7. **Annotations agree with the photo (F-002).** A sharpie mark or label names what the thing is or
+   a step that fits the scene. Never relabel an ingredient as a dish, and never mark up a scene where
+   the person has visibly decided what they are making (a prepped board, a pan on the heat).
+8. **Type on paper shells sits on clean background (F-003).** The render fails a collage headline or
+   note that overlaps a card; eyeball every other paper shell for the same thing.
 Fix and re-render until clean. This gate exists because a prior batch shipped wrong photos,
 logo collisions, and a math error.
 

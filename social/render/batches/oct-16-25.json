@@ -188,6 +188,22 @@
       "phoneW": 520
     },
     {
+      "file": "o21-ig-reel",
+      "w": 1080,
+      "h": 1920,
+      "template": "bleed",
+      "footer": "badge-bl",
+      "motion": {
+        "duration": 7,
+        "fps": 24
+      },
+      "photo": "food/power-bowl-veg.jpg",
+      "objPos": "52% 50%",
+      "photoClaim": "a bowl of seared salmon over cauliflower rice with green beans, cherry tomatoes and pesto, pine nuts scattered around",
+      "head": "Pesto salmon over cauliflower rice, <span class=\"accent\">twenty minutes</span>",
+      "sub": "Salmon, frozen cauliflower rice, green beans, pesto. Add the four to iEatz and it writes the recipe."
+    },
+    {
       "file": "o25-ig-reel",
       "w": 1080,
       "h": 1920,

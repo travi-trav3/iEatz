@@ -127,7 +127,8 @@ function gate(file, opts = {}) {
             if (opts.softFormat) warns.push(msg + ' [--soft-format]'); else set(fails, msg);
           }
         }
-        if (wp[0].dueAt >= '2026-10-17' && !wp.some(p => p.cta === 'cookbook-dm'))
+        // Only a Buffer ledger (posts carry a status) is a plan; render batches and fixtures are not.
+        if (wp[0].status && wp[0].dueAt >= '2026-10-17' && !wp.some(p => p.cta === 'cookbook-dm'))
           set(fails, `instagram: no "comment COOKBOOK" post (cta cookbook-dm) in 7-day window ${+w + 1} (${span})`);
       }
       for (let i = 1; i < n; i++) if (ps[i].cta === 'cookbook-dm' && ps[i - 1].cta === 'cookbook-dm') set(fails, `instagram: cookbook-dm cta on two posts in a row (${ps[i - 1].id} -> ${ps[i].id})`);

@@ -352,10 +352,10 @@ const TEMPLATES = {
     return `<div class="pin sh-collage">
     <div class="cc-stage" style="top:${top}px;transform:scale(${s})">
       ${p.cards.map(c => `<div class="cc-card" style="left:${c.x}px;top:${c.y}px;width:${c.w}px;height:${c.h}px;transform:rotate(${c.rot || 0}deg)">${img(PHOTOS, c.photo, c.objPos)}${tape(c.tape)}</div>`).join('')}
-      ${(p.notes || []).map(n => `<div class="cc-note${n.big ? ' big' : ''}" style="left:${n.x}px;top:${n.y}px">${n.text}</div>`).join('')}
+      ${(p.notes || []).map(n => `<div class="cc-note${n.big ? ' big' : ''}" data-clear=".cc-card,.cc-head" style="left:${n.x}px;top:${n.y}px">${n.text}</div>`).join('')}
       ${p.arrow ? `<div class="cc-arrow" style="left:${p.arrow.x}px;top:${p.arrow.y}px">${p.arrow.text}</div>` : ''}
       ${p.price ? `<div class="cc-price" style="left:${p.price.x}px;top:${p.price.y}px">${p.price.text}</div>` : ''}
-      <h1 class="cc-head">${p.head}</h1>
+      <h1 class="cc-head" data-clear=".cc-card,.cc-note">${p.head}</h1>
     </div>
     ${p.grain === false ? '' : '<div class="grain-layer"></div>'}
     ${footer(p, { url: foot, row: rowPaper, bottom: 'paper', top: 'paper', def: 'badge-tl' })}
