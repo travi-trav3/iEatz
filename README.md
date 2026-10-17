@@ -24,7 +24,7 @@ assets/
   google-play-badge.svg          # Google Play download badge (official artwork, English, cropped to the badge edge)
   avatar.png                     # testimonial avatar
   photos/
-    fridge-full.jpg              # hero ("text thread" concept 2a); metadata stripped
+    fridge-full.jpg              # hero ("text thread" concept 2a); metadata stripped, 365 badge on the carton blurred
     couple-cooking.jpg           # recipe pages
     fridge-real-mess.jpg         # "the tension" — a full but planless fridge
     fridge-organized.jpg         # transformation photo band
