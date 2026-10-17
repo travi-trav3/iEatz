@@ -1,0 +1,61 @@
+{
+  "batch": "fixture",
+  "createdAt": "2026-10-10",
+  "posts": [
+    {
+      "id": "a-ig",
+      "status": "scheduled",
+      "channel": "instagram",
+      "dueAt": "2026-10-20T18:10:00-07:00",
+      "file": "assets/social/fixture/a-ig-sharpie.png",
+      "pillar": "Pantry/Fridge",
+      "topic": "Counter",
+      "text": "Cherry tomatoes, scallions, corn. That's a photo, and the photo is a recipe. No typing, no list.\n\n#whatsfordinner #ieatzhealthy",
+      "bufferId": "aaaaaaaaaaaaaaaaaaaaaaa1"
+    },
+    {
+      "id": "b-pin",
+      "status": "scheduled",
+      "channel": "pinterest",
+      "dueAt": "2026-10-21T08:15:00-07:00",
+      "file": "assets/pinterest/fixture/b-pin-poster.png",
+      "pillar": "Recipe/Food",
+      "topic": "Breakfast",
+      "text": "Savory oats with a jammy egg, 24 g of protein in ten minutes. No typing, no list. Full recipe on the site.",
+      "bufferId": "bbbbbbbbbbbbbbbbbbbbbbb2"
+    },
+    {
+      "id": "c-ig",
+      "status": "scheduled",
+      "channel": "instagram",
+      "dueAt": "2026-10-22T12:40:00-07:00",
+      "file": "assets/social/fixture/c-ig-receipt.png",
+      "pillar": "Budget",
+      "topic": "Receipt",
+      "text": "$21.07 for a week of breakfasts.",
+      "bufferId": "ccccccccccccccccccccccc3"
+    },
+    {
+      "id": "d-pin",
+      "status": "scheduled",
+      "channel": "pinterest",
+      "dueAt": "2026-10-23T19:05:00-07:00",
+      "file": "assets/pinterest/fixture/d-pin-list.png",
+      "pillar": "Recipe/Food",
+      "topic": "Kids",
+      "text": "It's the dinner kids ask for. 34 g of protein, 25 minutes.",
+      "bufferId": "ddddddddddddddddddddddd4"
+    },
+    {
+      "id": "e-ig",
+      "status": "scheduled",
+      "channel": "instagram",
+      "dueAt": "2026-10-12T17:55:00-07:00",
+      "file": "assets/social/fixture/e-ig-device.png",
+      "pillar": "Product",
+      "topic": "Scan",
+      "text": "Scan the receipt and iEatz builds the recipes.",
+      "bufferId": "eeeeeeeeeeeeeeeeeeeeeee5"
+    }
+  ]
+}

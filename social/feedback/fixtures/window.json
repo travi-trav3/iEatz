@@ -1,0 +1,13 @@
+{"posts":{"edges":[
+  {"node":{"id":"aaaaaaaaaaaaaaaaaaaaaaa1","status":"scheduled","channelId":"6a14b495c687a22dd4267bfc","notes":[
+    {"id":"6b0000000000000000000a01","type":"userGenerated","text":"Headline is too small on this one, make it bigger.","createdAt":"2026-10-16T17:00:00.000Z","updatedAt":"2026-10-16T17:00:00.000Z","author":{"name":"Travis Enos","email":"travis@example.com"}},
+    {"id":"6b0000000000000000000a02","type":"bufferGenerated","text":"Post scheduled for Oct 20.","createdAt":"2026-10-16T16:00:00.000Z","updatedAt":null,"author":{"name":"Buffer","email":"hello@buffer.com"}}]}},
+  {"node":{"id":"bbbbbbbbbbbbbbbbbbbbbbb2","status":"scheduled","channelId":"6a7a4b64b2d9d577435279f6","notes":[
+    {"id":"6b0000000000000000000b03","type":"userGenerated","text":"Use grams, not g.","createdAt":"2026-10-14T09:00:00.000Z","updatedAt":"2026-10-14T09:00:00.000Z","author":{"name":"Travis Enos","email":"travis@example.com"}},
+    {"id":"6b0000000000000000000b04","type":"userGenerated","text":"Should pins ever link to the App Store?","createdAt":"2026-10-15T09:00:00.000Z","updatedAt":"2026-10-15T09:00:00.000Z","author":{"name":"Travis Enos","email":"travis@example.com"}}]}},
+  {"node":{"id":"ddddddddddddddddddddddd4","status":"scheduled","channelId":"6a7a4b64b2d9d577435279f6","notes":[]}},
+  {"node":{"id":"eeeeeeeeeeeeeeeeeeeeeee5","status":"sent","channelId":"6a14b495c687a22dd4267bfc","notes":[
+    {"id":"6b0000000000000000000e05","type":"userGenerated","text":"This one works. More real receipts.","createdAt":"2026-10-13T20:00:00.000Z","updatedAt":"2026-10-13T20:00:00.000Z","author":{"name":"Travis Enos","email":"travis@example.com"}}]}},
+  {"node":{"id":"99999999999999999999999a","status":"scheduled","channelId":"6a6113cde2638b94d7b6d917","notes":[
+    {"id":"6b0000000000000000000c06","type":"userGenerated","text":"Club Pilot: tighten the copy.","createdAt":"2026-10-16T12:00:00.000Z","updatedAt":"2026-10-16T12:00:00.000Z","author":{"name":"Byron White","email":"byron@example.com"}}]}}
+],"pageInfo":{"hasNextPage":false,"endCursor":"end"}}}

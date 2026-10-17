@@ -2,7 +2,8 @@
 // Input is either a Buffer ledger (social/manifest/<batch>.json) or a render batch
 // (render/batches/<batch>.json). A ledger may point at its render batch with
 // "renderBatch": "social/render/batches/<batch>.json"; posts are joined on the file stem
-// (assets/.../x.png, x--01.png, x.mp4, x-cover.png all join to render post "x").
+// (assets/.../x.png, x--01.png, x.mp4, x-cover.png all join to render post "x"; so do re-renders
+// re-hosted as x-r2.png, x-r2--01.png, x-r2-cover.png).
 // Anatomy fields written at planning time win; anything missing is derived from the render
 // post, and a written field that disagrees with the render is reported as a mismatch.
 const fs = require('fs');
@@ -15,7 +16,7 @@ const STYLE = {};
 for (const p of JSON.parse(fs.readFileSync(path.join(REPO, 'assets/photos/photos.json'), 'utf8')).photos) STYLE[p.file] = p.style;
 const styleOf = (f) => !f ? null : /^app-/.test(path.basename(f)) ? 'product' : (STYLE[f] || 'unknown');
 
-const stem = (f) => path.basename(String(f || '')).replace(/\.(png|mp4|jpe?g)$/i, '').replace(/-cover$/, '').replace(/--\d+$/, '');
+const stem = (f) => path.basename(String(f || '')).replace(/\.(png|mp4|jpe?g)$/i, '').replace(/-cover$/, '').replace(/--\d+$/, '').replace(/-r\d+$/, '');
 const strip = (h) => String(h || '').replace(/<[^>]+>/g, '').replace(/&[a-z]+;/g, ' ').replace(/\s+/g, ' ').trim();
 
 // The line a viewer reads as the headline, per shell.

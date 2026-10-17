@@ -1,0 +1,4 @@
+{"ideas":{"edges":[
+  {"node":{"id":"6a1000000000000000000001","groupId":"g1","createdAt":1792000000,"updatedAt":1792000000,"content":{"title":"Feedback: photos","text":"Lighter, warmer photos on every pin."}}},
+  {"node":{"id":"6a1000000000000000000002","groupId":"g1","createdAt":1792000000,"updatedAt":1792000000,"content":{"title":"Soup week","text":"Five soups."}}}
+],"pageInfo":{"hasNextPage":false,"endCursor":"end"}}}

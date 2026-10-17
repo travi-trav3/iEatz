@@ -1,0 +1,15 @@
+{
+  "batch": "fixture-old",
+  "createdAt": "2026-07-01",
+  "posts": [
+    {
+      "id": "f-pin",
+      "status": "scheduled",
+      "channel": "pinterest",
+      "dueAt": "2026-07-10T10:00:00-07:00",
+      "file": "assets/pinterest/jul/f-pin.png",
+      "text": "An old pin, created before the 45-day window.",
+      "bufferId": "fffffffffffffffffffffff6"
+    }
+  ]
+}
