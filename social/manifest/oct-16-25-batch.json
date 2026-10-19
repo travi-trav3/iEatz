@@ -68,7 +68,7 @@
     },
     {
       "id": "o18-ig",
-      "status": "scheduled",
+      "status": "error",
       "channel": "instagram",
       "dueAt": "2026-10-18T17:05:00-07:00",
       "file": "assets/social/oct16/o18-ig-carousel--01.png",
@@ -83,11 +83,12 @@
       "pillar": "Health/Diet",
       "topic": "Soup",
       "cta": "cookbook-dm",
-      "text": "Soup season starts on the pantry shelf. Four soups, one pot each, every one built from a can or a cup of something dry plus broth and one green thing:\n\n1. White bean and kale, 20 minutes, est. 15 g protein\n2. Tomato and chickpea, 25 minutes, est. 12 g\n3. Red lentil and coconut, 30 minutes, est. 17 g\n4. Black bean, 20 minutes, est. 16 g\n\nSteps on the slides. Protein and time are estimates per serving; verify for allergens. Save this for the first cold night.\n\n#soupseason #pantrymeals #highproteinmeals #mealprep #ieatzhealthy",
+      "text": "Soup season starts on the pantry shelf. Four soups, one pot each, every one built from a can or a cup of something dry plus broth and one green thing:\n\n1. White bean and kale, 20 minutes, est. 15 g protein\n2. Tomato and chickpea, 25 minutes, est. 12 g\n3. Red lentil and coconut, 30 minutes, est. 17 g\n4. Black bean, 20 minutes, est. 16 g\n\nSteps on the slides. Protein and time are estimates per serving; verify for allergens.\n\nWant 30 more like these? Comment COOKBOOK and we'll DM you The Real Food Cookbook: 30 healthy meals, all under 30 minutes, built for a week of eating under $50. Free.\n\n#soupseason #pantrymeals #highproteinmeals #mealprep #ieatzhealthy",
       "firstComment": "Which one first? The red lentil coconut is the one that converts people who say they don't like lentils.",
       "alt": "Six-slide carousel on cream paper. Slide one: Four soups that start on the pantry shelf, with a readout of 4 soups, 20 to 30 minutes, 12 to 17 g protein per bowl estimated. Slides two to five: numbered steps for white bean and kale soup, tomato and chickpea soup, red lentil and coconut soup, and black bean soup, each with estimated protein, minutes and servings. Slide six: Four cans, four soups, one pot.",
       "bufferId": "6ad2990a52adf2bfae623f8a",
-      "slackAlert": "Dr0C9YEYNRT4"
+      "slackAlert": "Dr0C9YEYNRT4",
+      "errorNote": "2026-10-18 17:05 PT: Buffer: lost authorization to post on your behalf (Instagram channel disconnected). Not published. Re-slot after Travis reconnects the channel."
     },
     {
       "id": "o20-ig",
@@ -153,7 +154,7 @@
       "pillar": "Health/Diet",
       "topic": "Eggs",
       "cta": "cookbook-dm",
-      "text": "One dozen eggs, three meals, 22 to 24 g of protein each. A dinner and two breakfasts from one carton:\n\n1. Cheesy egg and black bean quesadillas, 12 minutes (dinner, serves 2)\n2. Savory oats with a jammy egg, 10 minutes\n3. Black bean and egg skillet, rolled into a wrap, 9 minutes\n\nSteps on the slides, full recipes free on ieatzhealthy.com/recipes. Protein is per serving.\n\n#eggs #highproteinbreakfast #kidsdinner #cheapmeals #ieatzhealthy",
+      "text": "One dozen eggs, three meals, 22 to 24 g of protein each. A dinner and two breakfasts from one carton:\n\n1. Cheesy egg and black bean quesadillas, 12 minutes (dinner, serves 2)\n2. Savory oats with a jammy egg, 10 minutes\n3. Black bean and egg skillet, rolled into a wrap, 9 minutes\n\nSteps on the slides, full recipes free on ieatzhealthy.com/recipes. Protein is per serving.\n\nSix more egg breakfasts live in The Real Food Cookbook, with 24 other meals under 30 minutes. Comment COOKBOOK and we'll DM you the link. Free.\n\n#eggs #highproteinbreakfast #kidsdinner #cheapmeals #ieatzhealthy",
       "firstComment": "The jalapeño is for the grown-up quesadilla only. We learned that one the hard way.",
       "alt": "Five-slide carousel. Slide one: One dozen eggs, three meals, with a readout of 3 meals, 22 to 24 g protein per serving, 9 to 12 minutes. Slides two to four: numbered steps for cheesy egg and black bean quesadillas, savory oats with a jammy egg, and the black bean and egg skillet wrap, each with protein, minutes and servings. Slide five: Eggs are the cheapest protein in the fridge.",
       "bufferId": "6ad2991a1694d771d5099177",
