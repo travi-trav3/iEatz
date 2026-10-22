@@ -220,7 +220,8 @@ const TEMPLATES = {
 
   list: { surface: 'paper', render: (p) => `<div class="pin t-list">
     <div class="list-wrap">${eyebrow(p)}<h1 class="head">${p.head}</h1>
-    <div class="list">${p.items.map((it, i) => `<div class="item"><div class="num">${i + 1}</div><div class="lab"><span class="t">${it.t}</span><span class="s">${it.s}</span></div></div>`).join('')}</div></div>${footer(p, F_PAPER)}
+    <div class="list">${p.items.map((it, i) => `<div class="item"><div class="num">${i + 1}</div><div class="lab"><span class="t">${it.t}</span><span class="s">${it.s}</span></div></div>`).join('')}</div>
+    ${p.readout ? `<div class="po-readout li-ro">${p.readout.map(r => `<span class="ro"><span class="l">${r.label}</span><span class="v">${r.value}</span></span>`).join('')}</div>` : ''}</div>${footer(p, F_PAPER)}
   </div>` },
 
   recipe: { surface: 'paper', deprecated: 'text-only recipe cards are feed-dead: use recipephoto', render: (p) => `<div class="pin ig-recipe">

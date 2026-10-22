@@ -75,6 +75,7 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
 .t-list .lab .t{font-family:var(--sans);font-weight:600;font-size:36px;letter-spacing:-0.01em;color:var(--ink)}
 .t-list .lab .s{font-family:var(--sans);font-weight:400;font-size:24px;color:var(--ink-medium)}
 .t-list .spacer{flex:1;min-height:20px}
+.t-list .li-ro{text-align:left;margin-top:44px;display:flex;flex-wrap:wrap;gap:8px 30px}
 
 /* footer row shared */
 .foot{display:flex;align-items:center;justify-content:space-between}

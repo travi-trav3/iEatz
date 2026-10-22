@@ -193,7 +193,7 @@
       "file": "food/greens-flatlay-mint.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/greens-flatlay-mint.jpg",
-      "style": "plated"
+      "style": "process"
     },
     {
       "file": "food/green-bowl-floral.jpg",
@@ -284,13 +284,15 @@
       "file": "fridge/fridge-stocked.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-stocked.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "brand-in-frame: Coulommiers, Gervais, Martini, wine box"
     },
     {
       "file": "fridge/fridge-full-produce.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-full-produce.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "brand-in-frame: Tip Top Sunblest bread bag"
     },
     {
       "file": "fridge/fridge-warm-open.jpg",
@@ -303,13 +305,15 @@
       "file": "fridge/fridge-real-mess.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-real-mess.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "brand-in-frame: Eggland's Best, Spice World, Fresh Keeper"
     },
     {
       "file": "fridge/fridge-organized.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-organized.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "brand-in-frame: ello containers and produce bag"
     },
     {
       "file": "fridge/anti-fridge-smeg.jpg",
@@ -334,7 +338,8 @@
       "file": "grocery/woman-grocery-shopping.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/woman-grocery-shopping.jpg",
-      "style": "people"
+      "style": "people",
+      "flag": "brand-in-frame: Boxed Water"
     },
     {
       "file": "grocery/kid-in-grocery-cart.jpg",
@@ -384,13 +389,15 @@
       "file": "lifestyle/mother-child-meal.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/mother-child-meal.jpg",
-      "style": "people"
+      "style": "people",
+      "flag": "brand-in-frame: Hillshire Farm, OshKosh"
     },
     {
       "file": "lifestyle/mother-child-cooking.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/mother-child-cooking.jpg",
-      "style": "people"
+      "style": "people",
+      "flag": "brand-in-frame: Hillshire Farm, OshKosh"
     },
     {
       "file": "lifestyle/kitchen-prep-scene.jpg",
@@ -432,7 +439,8 @@
       "file": "lifestyle/couple-cooking.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/couple-cooking.jpg",
-      "style": "people"
+      "style": "people",
+      "flag": "brand-in-frame: Jimmy Dean"
     },
     {
       "file": "lifestyle/cook-snap-1.png",
@@ -534,6 +542,13 @@
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/app-recipe-macros.jpg",
       "style": "product",
       "note": "derived crop of app-recipe.jpg (the real recipe screen with calories and macros) without the status bar and the bottom Add missing ingredients button; content untouched"
+    },
+    {
+      "file": "lifestyle/cooking-roast-at-stove-carve.jpg",
+      "category": "lifestyle",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/cooking-roast-at-stove-carve.jpg",
+      "style": "process",
+      "note": "derived crop of cooking-roast-at-stove.jpg (bottom 58%): the carving, not the shirt; nothing added"
     }
   ]
 }

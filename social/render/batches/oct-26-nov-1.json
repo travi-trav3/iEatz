@@ -1,0 +1,497 @@
+{
+  "name": "oct-26-nov-1",
+  "createdAt": "2026-10-22",
+  "note": "Bridge batch, Mon Oct 26 to Sun Nov 1, both channels, planned Oct 22 under the round-one composition rules (steps interiors, one badge home per surface, underline never wraps, flagged photos refused). Instagram: a Monday board reel, a Tuesday three-dinner carousel from the same board, the Wednesday COOKBOOK receipt reel (the week's comment-COOKBOOK post, a reel because the ask has to be earned by content), the Thursday send-this (series ledger), a Friday herbs-to-pesto split and a Sunday text thread. Pinterest: two pins a weekday; five to the two live recipe pages, one to the cookbook with the password in the URL and description, four to the App Store. Every photo opened before use: fridge-stocked, fridge-real-mess, fridge-organized, fridge-full-produce, mother-child-cooking, mother-child-meal, couple-cooking and woman-grocery-shopping are now flagged brand-in-frame (the fridge category is down to two anti-fridge shots: the photo brief needs clean fridge shelves first). Receipt math: 6.49 + 2.29 + 5.99 + 3.49 + 1.98 + 0.99 + 2.99 + 7.99 + 1.79 = 34.00. All four receipt dishes are real cookbook recipes. Reels are silent until a Meta Sound Collection bed arrives in the Drive inbox; they can be re-rendered and swapped in Buffer by URL.",
+  "posts": [
+    {
+      "file": "o26-ig-reel",
+      "w": 1080,
+      "h": 1920,
+      "template": "bleed",
+      "footer": "badge-br",
+      "motion": {
+        "duration": 7,
+        "fps": 24
+      },
+      "photo": "food/prep-spread-greens.jpg",
+      "objPos": "50% 42%",
+      "photoClaim": "an outdoor prep table seen from above: hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of toasted pine nuts",
+      "head": "Peppers, lettuce, an avocado, a bowl of tomatoes. That is dinner.",
+      "sub": "Add what is on the board to iEatz and it writes the recipe, calories and protein worked out."
+    },
+    {
+      "file": "o27-ig-carousel",
+      "w": 1080,
+      "h": 1350,
+      "slides": [
+        {
+          "template": "poster",
+          "footer": "badge-bl",
+          "head": "What is on the board, <span class=\"u\">three ways</span>",
+          "body": "One cutting board, eight things on it, three dinners. Steps on the slides.",
+          "readout": [
+            {
+              "label": "on the board",
+              "value": "8"
+            },
+            {
+              "label": "dinners",
+              "value": "3"
+            },
+            {
+              "label": "longest",
+              "value": "20 min"
+            }
+          ]
+        },
+        {
+          "template": "bleed",
+          "photo": "food/cutting-board-veg.jpg",
+          "objPos": "50% 55%",
+          "photoClaim": "a wooden cutting board with half an avocado, cherry tomatoes, two eggs, three mushrooms, a sliced jalapeno, spinach, arugula and scallions, with a frying pan above it",
+          "head": "Avocado, eggs, tomatoes, mushrooms, <span class=\"accent\">greens</span>",
+          "sub": "The board. Three dinners follow."
+        },
+        {
+          "template": "steps",
+          "photo": "food/veggie-bowl-eggs.jpg",
+          "objPos": "50% 40%",
+          "photoClaim": "a blue bowl of dressed greens with sesame, half an avocado topped with grated carrot, tomatoes, cucumber ribbons, jammy egg halves and watermelon radish, on a wooden table",
+          "eyebrow": "Dinner one, 15 minutes",
+          "head": "Greens, egg and avocado bowl",
+          "steps": [
+            "Jammy <b>eggs</b>: 7 minutes in boiling water, then straight into cold.",
+            "Dress the <b>greens</b> with lemon, oil and sesame; add the tomatoes and cucumber.",
+            "Egg halves on top, <b>avocado</b> on the side with a little salt."
+          ],
+          "readout": [
+            {
+              "label": "protein",
+              "value": "20 g"
+            },
+            {
+              "label": "time",
+              "value": "15 min"
+            },
+            {
+              "label": "serves",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "template": "steps",
+          "photo": "food/tomato-toast.jpg",
+          "objPos": "50% 82%",
+          "photoClaim": "roasted cherry tomatoes with sesame and parsley on a thick slice of toast spread with ricotta, on a grey plate with a fork and knife",
+          "eyebrow": "Dinner two, 20 minutes",
+          "head": "Roasted tomato ricotta toast",
+          "steps": [
+            "Roast the <b>tomatoes</b> with oil, salt and a pinch of chilli, 15 minutes at 425.",
+            "Toast thick bread, spread it with <b>ricotta</b>.",
+            "Tomatoes on top, sesame and parsley over."
+          ],
+          "readout": [
+            {
+              "label": "protein",
+              "value": "16 g"
+            },
+            {
+              "label": "time",
+              "value": "20 min"
+            },
+            {
+              "label": "serves",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "eyebrow": "Dinner three, 10 minutes",
+          "head": "Mushroom, scallion and <span class=\"accent\">spinach eggs</span>",
+          "items": [
+            {
+              "t": "Mushrooms first",
+              "s": "sliced, hot pan with oil, 4 minutes"
+            },
+            {
+              "t": "Scallions and spinach",
+              "s": "in for one minute"
+            },
+            {
+              "t": "Eggs over the top",
+              "s": "lid on, 3 minutes, jalapeno if you want it"
+            }
+          ],
+          "readout": [
+            {
+              "label": "protein",
+              "value": "22 g"
+            },
+            {
+              "label": "pans",
+              "value": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "o28-ig-reel",
+      "w": 1080,
+      "h": 1920,
+      "template": "receipt",
+      "footer": "badge-bl",
+      "motion": {
+        "duration": 8,
+        "fps": 24
+      },
+      "store": "Market",
+      "meta": "Wednesday · 5:40 PM · 9 items",
+      "lines": [
+        {
+          "item": "Chicken breast 1 lb",
+          "price": "6.49"
+        },
+        {
+          "item": "Broccoli crowns",
+          "price": "2.29"
+        },
+        {
+          "item": "Ground beef 1 lb",
+          "price": "5.99"
+        },
+        {
+          "item": "Sweet potatoes 3 lb",
+          "price": "3.49"
+        },
+        {
+          "item": "Black beans, 2 cans",
+          "price": "1.98"
+        },
+        {
+          "item": "Corn, can",
+          "price": "0.99"
+        }
+      ],
+      "total": "$34.00",
+      "dishes": [
+        {
+          "name": "One-pan garlic chicken & broccoli",
+          "when": "Mon · 25m"
+        },
+        {
+          "name": "Ground beef & sweet potato skillet",
+          "when": "Tue · 25m"
+        },
+        {
+          "name": "Black bean & corn quesadillas",
+          "when": "Wed · 15m"
+        },
+        {
+          "name": "Shrimp & zucchini stir-fry",
+          "when": "Thu · 15m"
+        }
+      ],
+      "sticker": "4 dinners",
+      "head": "$34. <em>Four cookbook dinners.</em>",
+      "moreCount": 3
+    },
+    {
+      "file": "o30-ig-split",
+      "w": 1080,
+      "h": 1350,
+      "template": "split",
+      "footer": "badge-br",
+      "top": {
+        "photo": "lifestyle/chop-cilantro.jpg",
+        "objPos": "50% 62%",
+        "label": "6:05 PM, the last of the cilantro"
+      },
+      "bottom": {
+        "photo": "food/pasta-dark-fork.jpg",
+        "objPos": "50% 50%"
+      },
+      "photoClaim": "hands chopping a bunch of cilantro on a wooden board with a glass jar beside it; below, a fork lifting linguine coated in green herb pesto against a dark background",
+      "seam": "Herbs to <em>pesto</em>",
+      "cap": "The wilting bunch, the parmesan end, olive oil, a lemon, a bag of linguine. Add the five to iEatz. <b>15 min</b>"
+    },
+    {
+      "file": "o01-ig-thread",
+      "w": 1080,
+      "h": 1350,
+      "template": "thread",
+      "footer": "badge-bl",
+      "bg": "mint",
+      "head": "Sunday: every green gets a job",
+      "msgs": [
+        {
+          "time": "Sun 4:12 PM"
+        },
+        {
+          "who": "them",
+          "text": "what do I do with all this kale"
+        },
+        {
+          "who": "me",
+          "text": "soup. the spinach goes in the eggs"
+        },
+        {
+          "who": "them",
+          "text": "and the lemons"
+        },
+        {
+          "who": "me",
+          "text": "dressing. cucumber is lunch. nothing goes soft by thursday"
+        }
+      ],
+      "foot": "Add the week's produce to iEatz on Sunday and it writes the dinners around it."
+    },
+    {
+      "file": "p26a-pin-poster",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-bl",
+      "head": "Five breakfasts, <span class=\"u\">ten minutes</span>",
+      "body": "Cottage cheese toast, savory oats with a jammy egg, a freezer berry yogurt bowl, a black bean and egg skillet, a peanut banana shake.",
+      "readout": [
+        {
+          "label": "recipes",
+          "value": "5"
+        },
+        {
+          "label": "minutes",
+          "value": "10 or less"
+        },
+        {
+          "label": "protein",
+          "value": "15 g plus"
+        }
+      ]
+    },
+    {
+      "file": "p26b-pin-bleed",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "food/cutting-board-veg.jpg",
+      "objPos": "50% 55%",
+      "photoClaim": "a wooden cutting board with half an avocado, cherry tomatoes, two eggs, three mushrooms, a sliced jalapeno, spinach, arugula and scallions, with a frying pan above it",
+      "head": "<span class=\"accent\">Add the board,</span> get the recipe",
+      "sub": "Avocado, eggs, tomatoes, mushrooms, greens. Tell iEatz what is on the board and it writes dinner, calories and protein included."
+    },
+    {
+      "file": "p27a-pin-steps",
+      "w": 1000,
+      "h": 1500,
+      "template": "steps",
+      "footer": "badge-bl",
+      "photo": "food/tomato-toast.jpg",
+      "objPos": "50% 82%",
+      "photoClaim": "roasted cherry tomatoes with sesame and parsley on a thick slice of toast spread with ricotta, on a grey plate with a fork and knife",
+      "eyebrow": "Dinner, 20 minutes",
+      "head": "Roasted tomato ricotta toast",
+      "steps": [
+        "Roast the <b>tomatoes</b> with oil, salt and a pinch of chilli, 15 minutes at 425.",
+        "Toast thick bread, spread it with <b>ricotta</b>.",
+        "Tomatoes on top, sesame and parsley over."
+      ],
+      "readout": [
+        {
+          "label": "protein",
+          "value": "16 g"
+        },
+        {
+          "label": "time",
+          "value": "20 min"
+        },
+        {
+          "label": "serves",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "file": "p27b-pin-thread",
+      "w": 1000,
+      "h": 1500,
+      "template": "thread",
+      "footer": "badge-bl",
+      "bg": "mint",
+      "head": "Tuesday, <span class=\"accent\">requested</span>",
+      "msgs": [
+        {
+          "time": "Tue 4:48 PM"
+        },
+        {
+          "who": "them",
+          "text": "can we have the cheesy quesadillas again"
+        },
+        {
+          "who": "me",
+          "text": "the egg and black bean ones?"
+        },
+        {
+          "who": "them",
+          "text": "yes those"
+        },
+        {
+          "who": "me",
+          "text": "12 minutes. wash your hands."
+        }
+      ],
+      "foot": "Cheesy egg and black bean quesadillas, 24 g of protein, 12 minutes."
+    },
+    {
+      "file": "p28a-pin-poster",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-bl",
+      "head": "30 dinners. Every one <span class=\"u\">shops itself.</span>",
+      "body": "The Real Food Cookbook: 30 healthy meals under 30 minutes, each with a tap-to-shop Instacart list. Free.",
+      "readout": [
+        {
+          "label": "recipes",
+          "value": "30"
+        },
+        {
+          "label": "each under",
+          "value": "30 min"
+        },
+        {
+          "label": "instacart lists",
+          "value": "30"
+        }
+      ],
+      "strip": true
+    },
+    {
+      "file": "p28b-pin-bleed",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "lifestyle/cooking-roast-at-stove-carve.jpg",
+      "objPos": "45% 50%",
+      "photoClaim": "hands carving a roast chicken on a sheet pan at the stove, a pot of corn and a small saucepan beside it",
+      "head": "One roast chicken, four dinners",
+      "sub": "Carve it, add the meat to iEatz with whatever else is in the fridge, and it writes the rest of the week."
+    },
+    {
+      "file": "p29a-pin-list",
+      "w": 1000,
+      "h": 1500,
+      "template": "list",
+      "footer": "badge-bl",
+      "eyebrow": "Breakfast, 10 minutes",
+      "head": "Savory oats with a <span class=\"accent\">jammy egg</span>",
+      "items": [
+        {
+          "t": "Oats like risotto",
+          "s": "rolled oats, broth, a knob of butter, 6 minutes"
+        },
+        {
+          "t": "Parmesan and pepper",
+          "s": "stirred in off the heat"
+        },
+        {
+          "t": "The egg",
+          "s": "7 minutes boiled, halved on top"
+        }
+      ],
+      "readout": [
+        {
+          "label": "protein",
+          "value": "18 g"
+        },
+        {
+          "label": "time",
+          "value": "10 min"
+        }
+      ]
+    },
+    {
+      "file": "p29b-pin-bleed",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "food/prep-spread-greens.jpg",
+      "objPos": "50% 40%",
+      "photoClaim": "an outdoor prep table seen from above: hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of toasted pine nuts",
+      "head": "Peppers, lettuce, avocado, tomatoes. Name them, get dinner.",
+      "sub": "Tell iEatz what is out on the board and it writes the recipe from exactly those, calories and protein included."
+    },
+    {
+      "file": "p30a-pin-poster",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-bl",
+      "head": "Mac and cheese, <span class=\"u\">22 g protein</span>",
+      "body": "Cottage cheese blended into the sauce. Nobody at the table can tell. Free recipe, with three more picky eater dinners.",
+      "readout": [
+        {
+          "label": "protein",
+          "value": "22 g"
+        },
+        {
+          "label": "minutes",
+          "value": "20"
+        },
+        {
+          "label": "serves",
+          "value": "4"
+        }
+      ]
+    },
+    {
+      "file": "p30b-pin-collage",
+      "w": 1000,
+      "h": 1500,
+      "template": "collage",
+      "footer": "badge-bl",
+      "photoClaim": "a card of hands chopping cilantro on a board beside a glass jar, and a card of a fork lifting linguine coated in green herb pesto against a dark background, taped to deep paper",
+      "head": "The herbs went in before they went off",
+      "cards": [
+        {
+          "photo": "lifestyle/chop-cilantro.jpg",
+          "x": 60,
+          "y": 100,
+          "w": 470,
+          "h": 400,
+          "rot": -3,
+          "tape": true,
+          "objPos": "50% 60%"
+        },
+        {
+          "photo": "food/pasta-dark-fork.jpg",
+          "x": 560,
+          "y": 160,
+          "w": 450,
+          "h": 600,
+          "rot": 2.5,
+          "tape": "right",
+          "objPos": "50% 50%"
+        }
+      ],
+      "notes": [
+        {
+          "text": "the last of the bunch",
+          "x": 60,
+          "y": 540
+        },
+        {
+          "text": "blitzed, tossed, done",
+          "x": 600,
+          "y": 800
+        }
+      ],
+      "headSize": 84
+    }
+  ]
+}
