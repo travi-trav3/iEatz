@@ -51,7 +51,7 @@
     },
     {
       "id": "o17-ig",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "instagram",
       "dueAt": "2026-10-17T09:40:00-07:00",
       "file": "assets/social/oct16/o17-ig-collage-v2.png",
@@ -68,9 +68,9 @@
     },
     {
       "id": "o18-ig",
-      "status": "error",
+      "status": "sent",
       "channel": "instagram",
-      "dueAt": "2026-10-18T17:05:00-07:00",
+      "dueAt": "2026-10-22T11:50:00-07:00",
       "file": "assets/social/oct16/o18-ig-carousel--01.png",
       "slides": [
         "assets/social/oct16/o18-ig-carousel--01.png",
@@ -88,13 +88,13 @@
       "alt": "Six-slide carousel on cream paper. Slide one: Four soups that start on the pantry shelf, with a readout of 4 soups, 20 to 30 minutes, 12 to 17 g protein per bowl estimated. Slides two to five: numbered steps for white bean and kale soup, tomato and chickpea soup, red lentil and coconut soup, and black bean soup, each with estimated protein, minutes and servings. Slide six: Four cans, four soups, one pot.",
       "bufferId": "6ad2990a52adf2bfae623f8a",
       "slackAlert": "Dr0C9YEYNRT4",
-      "errorNote": "2026-10-18 17:05 PT: Buffer: lost authorization to post on your behalf (Instagram channel disconnected). Not published. Re-slot after Travis reconnects the channel."
+      "errorNote": "2026-10-18 17:05 PT: Buffer: lost authorization to post on your behalf (Instagram channel disconnected). Not published. Re-slot after Travis reconnects the channel. Published when the channel reconnected, Oct 22 ~11:50 PT."
     },
     {
       "id": "o20-ig",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "instagram",
-      "dueAt": "2026-10-20T12:35:00-07:00",
+      "dueAt": "2026-10-22T11:50:00-07:00",
       "file": "assets/social/oct16/o20-ig-device.png",
       "pillar": "Grocery/Instacart",
       "topic": "Product",
@@ -103,13 +103,14 @@
       "firstComment": "Yes, asparagus in October. It was on sale. The app does not judge.",
       "alt": "Mint card with a phone showing the iEatz hand-off to Instacart: the missing items for pan-seared chicken with asparagus and spinach, with a button to add six items to a Ralphs cart. Headline: The missing six go to Instacart.",
       "bufferId": "6ad2990e52adf2bfae6242d1",
-      "slackAlert": "Dr0C9TBWH1T7"
+      "slackAlert": "Dr0C9TBWH1T7",
+      "note": "Failed Oct 20 (Instagram disconnected); published on reconnect, Oct 22 ~11:50 PT."
     },
     {
       "id": "o21-ig",
       "status": "scheduled",
       "channel": "instagram",
-      "dueAt": "2026-10-21T18:45:00-07:00",
+      "dueAt": "2026-10-23T07:00:00-07:00",
       "file": "assets/social/oct16/o21-ig-reel.mp4",
       "cover": "assets/social/oct16/o21-ig-reel-cover.png",
       "pillar": "Recipe/Food",
@@ -121,13 +122,14 @@
       "alt": "Vertical reel: a bowl of seared salmon over cauliflower rice with green beans, cherry tomatoes and pesto. Headline over the photo: Pesto salmon over cauliflower rice, twenty minutes.",
       "added": "2026-10-17: replaces the retracted o16 reel so the week keeps a reel; copy stays inside F-001",
       "bufferId": "6ad3a42f0b0d72757ae71b3f",
-      "slackAlert": "Dr0CA42EBY73"
+      "slackAlert": "Dr0CA42EBY73",
+      "note": "Failed Oct 21 (Instagram disconnected); Buffer re-slotted it to Fri Oct 23 07:00 PT. Its Oct 21 alert fired for nothing."
     },
     {
       "id": "o23-ig",
       "status": "scheduled",
       "channel": "instagram",
-      "dueAt": "2026-10-23T07:50:00-07:00",
+      "dueAt": "2026-10-23T17:30:00-07:00",
       "file": "assets/social/oct16/o23-ig-quotedark.png",
       "pillar": "Transformation",
       "topic": "Waste",
@@ -136,7 +138,8 @@
       "firstComment": "Thank you, SixSocks. The half-bag of spinach salutes you.",
       "alt": "Dark card over a photo of a white kitchen counter with a bowl of lemons, bread and parsley. Quote in cream serif: I haven't had any groceries go to waste the last couple of weeks. Attribution: SixSocks, App Store review.",
       "bufferId": "6ad29911c34368e4b094f1a8",
-      "slackAlert": "Dr0C9SDR8EP5"
+      "slackAlert": "Dr0C9SDR8EP5",
+      "note": "Moved from 07:50 to 17:30 PT so it does not sit 50 minutes after the re-slotted reel. Its 07:35 alert is stale."
     },
     {
       "id": "o24-ig",

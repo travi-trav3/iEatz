@@ -26,7 +26,7 @@
       "id": "st01",
       "status": "scheduled",
       "channel": "instagram",
-      "dueAt": "2026-10-22T11:00:00-07:00",
+      "dueAt": "2026-10-29T11:00:00-07:00",
       "file": "assets/social/send-this/st01-full-fridge.png",
       "pillar": "Send this to",
       "topic": "Delivery",
@@ -35,13 +35,14 @@
       "firstComment": "iEatz is on the App Store. link in bio.",
       "alt": "Cream card with dark green serif type: send this to the person who has a full fridge and still orders DoorDash every night. Below, in italics: the food is right there. we built an app for this. iEatz Healthy badge at the bottom.",
       "bufferId": "6ad284da186b9df91d5b7f97",
-      "slackAlert": "Dr0C9XT2DFMY"
+      "slackAlert": "Dr0C9XT2DFMY",
+      "note": "2026-10-22: failed at 11:00 PT (Instagram disconnected in Buffer, Oct 18 to Oct 22 11:50 PT); moved to Thu Oct 29. Its Oct 22 Slack alert fired for nothing."
     },
     {
       "id": "st02",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "instagram",
-      "dueAt": "2026-10-29T11:00:00-07:00",
+      "dueAt": "2026-10-22T11:50:00-07:00",
       "file": "assets/social/send-this/st02-sunday-to-tuesday.png",
       "pillar": "Send this to",
       "topic": "Takeout",
@@ -50,7 +51,8 @@
       "firstComment": "iEatz is on the App Store. link in bio.",
       "alt": "Deep green card with cream serif type: send this to whoever grocery shops on Sunday and orders takeout by Tuesday. Below, in pale green italics: the groceries are still in the fridge. iEatz turns them into dinner. iEatz Healthy badge at the bottom.",
       "bufferId": "6ad2857bf90ad606a6f5087c",
-      "slackAlert": "Dr0C9SQ0CBUM"
+      "slackAlert": "Dr0C9SQ0CBUM",
+      "note": "Travis moved it to Mon Oct 19 19:44 PT in Buffer; it failed (Instagram disconnected) and published when the channel reconnected, Oct 22 ~11:50 PT."
     },
     {
       "id": "st03",

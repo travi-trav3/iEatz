@@ -25,3 +25,6 @@ One entry per note or idea, newest last. Format:
 
 ## 2026-10-19 (routine)
 - Weekly review: 59 posts in the window, 33 ideas, no notes, nothing titled Feedback. Two caption diffs were Claude's own Oct 17 COOKBOOK edits on o18-ig and o24-ig (set-text had not been run); ledger text synced, no Travis edits. Found in passing: o18-ig (Sun Oct 18 17:05 PT) is in `error`: "Buffer has lost authorization to post on your behalf", the Instagram channel is disconnected, so every Instagram post fails until Travis reconnects it in Buffer. Pinterest unaffected. Reported in Slack.
+
+## 2026-10-22 (queue repair after the Instagram reconnect)
+- Instagram reconnected in Buffer around 11:50 PT. Buffer then published the three held posts at once (o18 soup carousel, o20 device, st02 send-this), left st01 (Thu 11:00) in error and re-slotted the o21 reel to Fri Oct 23 07:00. Moves: st01 to Thu Oct 29 11:00 PT (the slot st02 vacated); o23 from Fri 07:50 to Fri 17:30 so it is not stacked on the reel. New alerts scheduled for o21, o23 and st01. Lesson for the plan: a disconnected channel is invisible until a post fails; the Monday routine should check `isDisconnected` on both channels first.
