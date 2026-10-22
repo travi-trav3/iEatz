@@ -110,6 +110,13 @@ bedDb }` bakes a Meta Sound Collection bed and/or a voiceover into the file (rul
 **Deprecated** (kept so old batches re-render; the gate warns on any use): `statdark` (use `poster`),
 `recipe` (text-only; use `recipephoto`), `quote` (paper; use `quotedark`).
 
+### Rationale fields (F-004, Oct 22 2026)
+Every post in a batch created from Oct 22 carries `why` (the insight or joke in one sentence) and
+`app` (where a real capability enters: receipt import, add what you have, a recipe with calories
+and protein, the Instacart hand-off, the cookbook). `copy-gate.js` refuses a post without them,
+refuses an `app` line that names no capability, and refuses a `thread` whose reply bubbles never
+show what iEatz did. The gate prints the rationale table; read it before the renders.
+
 ### Composition rules enforced at render (Oct 22 2026)
 - **Carousel interiors show the food.** Every slide after the cover carries a photo or a
   `readout`; at most one slide is a bare `list`. `expand()` in `doc.js` refuses the carousel

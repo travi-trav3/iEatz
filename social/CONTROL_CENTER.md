@@ -187,6 +187,11 @@ Open the actual image (Read tool). Do not rely on alt text/dimensions. Check:
    the person has visibly decided what they are making (a prepped board, a pan on the heat).
 8. **Type on paper shells sits on clean background (F-003).** The render fails a collage headline or
    note that overlaps a card; eyeball every other paper shell for the same thing.
+9. **Read the rationale table before the renders (F-004).** `node copy-gate.js <ledger>` prints
+   every post's `why` and `app`. If the `why` would not make a stranger stop, or the `app` line is
+   generic ("links to the page"), the post is a sketch: rewrite the idea, do not restyle the shell.
+   A quote card over a bare room, a text thread where iEatz never appears, a photo chosen for
+   "variety": all fail here even when every automated gate passes.
 Fix and re-render until clean. This gate exists because a prior batch shipped wrong photos,
 logo collisions, and a math error.
 
@@ -429,6 +434,13 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Oct 22 2026 — F-004, the rationale gate:** Travis caught two scheduled posts the same
+  afternoon the first round shipped: the SixSocks quote over an empty kitchen ("just a photo of
+  cabinets") and a text-thread sketch about pasta ("not funny or insightful or relevant to the value
+  prop"). Both were shells picked to satisfy rotation, with content written to fit the shell. Every
+  render-batch post now carries `why` and `app`, the copy gate refuses a post without them or a
+  thread where iEatz never appears, the rationale table prints for the human review, and hotfixes
+  beat rotation. Four posts replaced before publishing (o23, p24, and two from the new batch).
 - **Oct 22 2026 — composition fixes, round one (from the render audit; the full overhaul plan is
   with Travis for approval):** Buffer metrics for Sep 22 to Oct 22 showed 173 people reached on
   Instagram and 42 impressions on Pinterest, and the audit found the last three batches were

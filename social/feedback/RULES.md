@@ -52,6 +52,26 @@ Why: "letters over the pic and isn't very readable. BAD."
 Enforced by: doc.js `data-clear`: the collage headline and notes fail the render if their box
 overlaps a card (render line prints `sits over cc-card (F-003)`).
 
+### F-004 · 2026-10-22 · Every post has a reason, and the app is in it
+Source: Travis, in session, on `o23-ig` (the SixSocks quote over an empty white kitchen: "just a
+photo of cabinets. I thought we gated ugly posts?") and `p24-pin` (a text-thread sketch about a
+pasta dinner: "not funny or insightful or relevant to the value prop of the app at all. Can you
+tell me what the rationale of this post was?"). The honest rationale for both was the diversity
+gate: the shell and the photo were picked to satisfy rotation rules, and the content followed.
+Rule: A post is planned from its reason, then given a shell. Every render-batch post carries two
+lines before it can be scheduled: `why`, the insight or joke in one sentence (what makes this worth
+a stranger's second), and `app`, where a real capability enters (receipt import, add what you
+have, a recipe with calories and protein, the Instacart hand-off, the cookbook). A post whose
+`app` line cannot be written is not an iEatz post. A text thread is a product moment, not a bit:
+the reply side shows what iEatz did, or the shell is wrong for the idea. A quote card's photo
+shows food or cooking, never a bare room. Variety rules never pick the shell; when the right post
+breaks rotation, the right post wins (a `fixed` hotfix is exempt from adjacency).
+Why: "this is the kind of stuff we need to fix in the system so it doesn't keep happening."
+Enforced by: copy-gate.js rule 7 (`why` and `app` required on batches from Oct 22 2026, `app`
+must name a capability, thread replies must show the app); the rationale table the copy gate
+prints is read at the QA gate (CONTROL_CENTER §6 item 9); `empty-scene` photo flag refused at
+render; diversity-gate.js rule 1 skips hotfixed posts.
+
 ## Keep doing
 _Things Travis called out as working._
 
