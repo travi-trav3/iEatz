@@ -26,14 +26,14 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "Mon Oct 26 to Sun Nov 1, planned Oct 22 (the Oct 16-25 queue ends Sunday). First batch under the round-one composition rules. The Thursday send-this (st01, moved to Oct 29 after the Instagram disconnect) lives in manifest/send-this.json and is merged with --with for the gate. The COOKBOOK post is the Wednesday receipt reel; o24 (Sat Oct 24) was the previous window's. Pinterest cookbook pin links to /cookbook/?key=REALFOOD and prints the password: the gate is not deployed yet, so the key is inert until it is. Reels are silent until a Meta Sound Collection bed arrives.",
+  "note": "Mon Oct 26 to Sun Nov 1, planned Oct 22 (the Oct 16-25 queue ends Sunday). First batch under the round-one composition rules. The Thursday send-this (st01, moved to Oct 29 after the Instagram disconnect) lives in manifest/send-this.json and is merged with --with for the gate. The COOKBOOK post is the Wednesday receipt reel; o24 (Sat Oct 24) was the previous window's. Pinterest cookbook pin links to /cookbook/?key=REALFOOD and prints the password: the gate is not deployed yet, so the key is inert until it is. Reels are silent until a Meta Sound Collection bed arrives. [2026-10-22 12:21 PT: all 15 created as scheduled posts (first comments echoed on create, both reels accepted by URL with 7000/8000 ms detected), 15 Slack alerts armed in #social.]",
   "formulaicCtas": [
     "receipt-scan"
   ],
   "posts": [
     {
       "id": "o26-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-26T18:40:00-07:00",
       "file": "assets/social/oct26/o26-ig-reel.mp4",
@@ -44,11 +44,13 @@
       "videoTitle": "Peppers, lettuce, an avocado, a bowl of tomatoes. That is dinner.",
       "text": "Red peppers, a head of lettuce, an avocado, a bowl of cherry tomatoes, a cucumber, a handful of pine nuts. Add the board to iEatz and it writes tonight: peppers and tomatoes blistered in the pan, lettuce and cucumber dressed underneath, avocado on top, pine nuts toasted dry and scattered over. With a can of chickpeas from the shelf, about 18 g of protein per serving, estimated. Verify for allergens.\n\n#weeknightdinner #whatsfordinner #saladfordinner #highproteinmeals #ieatzhealthy",
       "firstComment": "The pine nuts are the only thing on this table that counts as optional.",
-      "alt": "Vertical reel: an overhead photo of an outdoor prep table, hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of pine nuts. Headline over the photo: Peppers, lettuce, an avocado, a bowl of tomatoes. That is dinner."
+      "alt": "Vertical reel: an overhead photo of an outdoor prep table, hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of pine nuts. Headline over the photo: Peppers, lettuce, an avocado, a bowl of tomatoes. That is dinner.",
+      "bufferId": "6ada61d12f4faf5f79630579",
+      "slackAlert": "Dr0CBGENB16D"
     },
     {
       "id": "o27-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-27T12:15:00-07:00",
       "file": "assets/social/oct26/o27-ig-carousel--01.png",
@@ -64,11 +66,13 @@
       "cta": "other",
       "text": "One cutting board, eight things on it, three dinners:\n\n1. Greens, egg and avocado bowl, 15 minutes, est. 20 g protein\n2. Roasted tomato ricotta toast, 20 minutes, est. 16 g\n3. Mushroom, scallion and spinach eggs, 10 minutes, est. 22 g\n\nSteps on the slides. Add what is on your board to iEatz and it writes the version for what you actually have, calories and protein included. Protein is per serving, estimated; verify for allergens.\n\n#weeknightdinner #eggrecipes #whatsfordinner #highproteinmeals #ieatzhealthy",
       "firstComment": "Save this for the night the board looks like that and the plan does not exist yet.",
-      "alt": "Carousel. Slide one: What is on the board, three ways, with a readout of 8 on the board, 3 dinners, 20 minutes longest. Slide two: the cutting board with avocado, eggs, tomatoes, mushrooms and greens. Slide three: a greens, egg and avocado bowl with three steps. Slide four: roasted tomato ricotta toast with three steps. Slide five: mushroom, scallion and spinach eggs, three numbered steps."
+      "alt": "Carousel. Slide one: What is on the board, three ways, with a readout of 8 on the board, 3 dinners, 20 minutes longest. Slide two: the cutting board with avocado, eggs, tomatoes, mushrooms and greens. Slide three: a greens, egg and avocado bowl with three steps. Slide four: roasted tomato ricotta toast with three steps. Slide five: mushroom, scallion and spinach eggs, three numbered steps.",
+      "bufferId": "6ada61d543a2d9ebee144ebd",
+      "slackAlert": "Dr0CBJ8Q2ZKN"
     },
     {
       "id": "o28-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-28T18:45:00-07:00",
       "file": "assets/social/oct26/o28-ig-reel.mp4",
@@ -79,11 +83,13 @@
       "videoTitle": "$34. Four cookbook dinners.",
       "text": "$34.00 at the register: chicken breast, broccoli, ground beef, sweet potatoes, two cans of black beans, a can of corn, tortillas, a bag of frozen shrimp and a zucchini.\n\nFour dinners from The Real Food Cookbook, every one under 30 minutes: one-pan garlic chicken and broccoli, ground beef and sweet potato skillet, black bean and corn quesadillas, shrimp and zucchini stir-fry. The garlic, oil and spices were already home. Every recipe in the book has a tap-to-shop Instacart list, so the receipt builds itself.\n\nWant the other 26? Comment COOKBOOK and we'll DM you the cookbook. Free.\n\n#mealplanning #weeknightdinner #30minutemeals #budgetmeals #ieatzhealthy",
       "firstComment": "COOKBOOK, one word in the comments, and the link lands in your DMs.",
-      "alt": "Vertical reel: a receipt from Market prints line by line on deep green, listing chicken breast, broccoli, ground beef, sweet potatoes, black beans, corn, tortillas, shrimp and zucchini for $34.00, then four cookbook dinners appear below it with a yellow sticker reading 4 dinners. Headline: $34. Four cookbook dinners."
+      "alt": "Vertical reel: a receipt from Market prints line by line on deep green, listing chicken breast, broccoli, ground beef, sweet potatoes, black beans, corn, tortillas, shrimp and zucchini for $34.00, then four cookbook dinners appear below it with a yellow sticker reading 4 dinners. Headline: $34. Four cookbook dinners.",
+      "bufferId": "6ada61dae374ecc98220e596",
+      "slackAlert": "Dr0CBEC8CM6W"
     },
     {
       "id": "o30-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-30T12:00:00-07:00",
       "file": "assets/social/oct26/o30-ig-split.png",
@@ -92,11 +98,13 @@
       "cta": "other",
       "text": "6:05 PM, the last of the cilantro going soft in the drawer. Blitz it with the parmesan end, olive oil, a squeeze of lemon and a clove of garlic; toss with linguine and a ladle of the pasta water. 15 minutes, about 17 g of protein per serving, estimated.\n\nAdd the five to iEatz and it writes this one, or whatever your fridge version is. Verify for allergens.\n\n#pastarecipes #foodwaste #15minutemeals #pantrymeals #ieatzhealthy",
       "firstComment": "Works with parsley, basil, the top of the carrots. Anything green and going.",
-      "alt": "Split image: top, hands chopping cilantro on a wooden board with a mono label reading 6:05 PM, the last of the cilantro; bottom, a fork lifting linguine coated in green herb pesto against a dark background. Seam label: Herbs to pesto. Caption: The wilting bunch, the parmesan end, olive oil, a lemon, a bag of linguine. Add the five to iEatz. 15 min."
+      "alt": "Split image: top, hands chopping cilantro on a wooden board with a mono label reading 6:05 PM, the last of the cilantro; bottom, a fork lifting linguine coated in green herb pesto against a dark background. Seam label: Herbs to pesto. Caption: The wilting bunch, the parmesan end, olive oil, a lemon, a bag of linguine. Add the five to iEatz. 15 min.",
+      "bufferId": "6ada61de43a2d9ebee144fef",
+      "slackAlert": "Dr0CB992KRN1"
     },
     {
       "id": "o01-ig",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-11-01T10:00:00-08:00",
       "file": "assets/social/oct26/o01-ig-thread.png",
@@ -105,11 +113,13 @@
       "cta": "other",
       "text": "Sunday, 4:12 PM: every green gets a job. Kale is soup. Spinach goes in the eggs. Lemons are the dressing. Cucumber is lunch. Decide it now and nothing goes soft by Thursday.\n\nAdd the week's produce to iEatz on Sunday and it writes the dinners around it, calories and protein included.\n\n#mealprep #sundayreset #foodwaste #weeknightdinner #ieatzhealthy",
       "firstComment": "The kale soup is in the cookbook. Comment COOKBOOK on Wednesday's reel if you missed it.",
-      "alt": "Mint card styled as a text thread at Sun 4:12 PM: what do I do with all this kale; soup. the spinach goes in the eggs; and the lemons; dressing. cucumber is lunch. nothing goes soft by thursday. Headline: Sunday: every green gets a job. Footer line: Add the week's produce to iEatz on Sunday and it writes the dinners around it."
+      "alt": "Mint card styled as a text thread at Sun 4:12 PM: what do I do with all this kale; soup. the spinach goes in the eggs; and the lemons; dressing. cucumber is lunch. nothing goes soft by thursday. Headline: Sunday: every green gets a job. Footer line: Add the week's produce to iEatz on Sunday and it writes the dinners around it.",
+      "bufferId": "6ada61e39a872e86219d4edd",
+      "slackAlert": "Dr0CC8URSUBS"
     },
     {
       "id": "p26a-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-26T07:40:00-07:00",
       "file": "assets/pinterest/oct26/p26a-pin-poster.png",
@@ -121,11 +131,13 @@
       "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/?utm_source=pinterest&utm_medium=organic&utm_campaign=recipe-pages&utm_content=p26a-pin-poster",
       "title": "5 high protein breakfasts in 10 minutes or less (free recipes)",
       "text": "Five breakfasts that take ten minutes or less, each with 15 g of protein or more: cottage cheese toast, savory oats with a jammy egg, a freezer berry yogurt bowl, a black bean and egg skillet, a peanut banana shake. Full recipes free on the site, with the protein per serving on every one.",
-      "alt": "Cream typographic pin: Five breakfasts, ten minutes, with ten minutes underlined in red, a line naming the five recipes, and a readout of 5 recipes, 10 minutes or less, 15 g protein plus."
+      "alt": "Cream typographic pin: Five breakfasts, ten minutes, with ten minutes underlined in red, a line naming the five recipes, and a readout of 5 recipes, 10 minutes or less, 15 g protein plus.",
+      "bufferId": "6ada61e9e374ecc98220ecb2",
+      "slackAlert": "Dr0CBGEM9ABT"
     },
     {
       "id": "p26b-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-26T12:10:00-07:00",
       "file": "assets/pinterest/oct26/p26b-pin-bleed.png",
@@ -137,11 +149,13 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "What to cook with eggs, avocado and spinach: iEatz writes the recipe from what you have",
       "text": "Half an avocado, two eggs, cherry tomatoes, mushrooms, spinach, arugula, scallions. Tell iEatz what is on the board and it writes the dinner from exactly those, with estimated calories and protein per serving, then sends anything missing to Instacart. Free on iOS and Android.",
-      "alt": "Pin with a photo of a wooden cutting board holding half an avocado, cherry tomatoes, two eggs, mushrooms, a sliced jalapeno, spinach, arugula and scallions. Headline: Add the board, get the recipe."
+      "alt": "Pin with a photo of a wooden cutting board holding half an avocado, cherry tomatoes, two eggs, mushrooms, a sliced jalapeno, spinach, arugula and scallions. Headline: Add the board, get the recipe.",
+      "bufferId": "6ada61ece391db54dafa187f",
+      "slackAlert": "Dr0CBJ8NRBK6"
     },
     {
       "id": "p27a-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-27T07:40:00-07:00",
       "file": "assets/pinterest/oct26/p27a-pin-steps.png",
@@ -153,11 +167,13 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "Roasted tomato ricotta toast: 20 minute dinner, 16 g protein",
       "text": "Roast cherry tomatoes with olive oil, salt and a pinch of chilli, 15 minutes at 425. Toast thick bread, spread with ricotta, tomatoes on top, sesame and parsley over. About 16 g of protein per serving, estimated, serves 2. iEatz writes dinners like this from what is in your fridge, free on the App Store.",
-      "alt": "Pin with a photo of roasted cherry tomatoes on ricotta toast above a cream panel: Roasted tomato ricotta toast, three numbered steps, and a readout of 16 g protein, 20 minutes, serves 2."
+      "alt": "Pin with a photo of roasted cherry tomatoes on ricotta toast above a cream panel: Roasted tomato ricotta toast, three numbered steps, and a readout of 16 g protein, 20 minutes, serves 2.",
+      "bufferId": "6ada61fa9a872e86219d568b",
+      "slackAlert": "Dr0CB9905KQV"
     },
     {
       "id": "p27b-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-27T12:10:00-07:00",
       "file": "assets/pinterest/oct26/p27b-pin-thread.png",
@@ -169,11 +185,13 @@
       "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=recipe-pages&utm_content=p27b-pin-thread#cheesy-egg-bean-quesadillas",
       "title": "Cheesy egg and black bean quesadillas kids ask for again (24 g protein, 12 minutes)",
       "text": "The dinner that gets requested: eggs scrambled with mashed black beans, folded into a cheddar quesadilla, cut into triangles. 24 g of protein per serving, 12 minutes, one pan, with a grown-up version with spinach and jalapeno. Full recipe free on the site, with three more high protein dinners picky eaters actually eat.",
-      "alt": "Mint pin styled as a text thread at Tue 4:48 PM: can we have the cheesy quesadillas again; the egg and black bean ones?; yes those; 12 minutes. wash your hands. Headline: Tuesday, requested. Footer line: Cheesy egg and black bean quesadillas, 24 g of protein, 12 minutes."
+      "alt": "Mint pin styled as a text thread at Tue 4:48 PM: can we have the cheesy quesadillas again; the egg and black bean ones?; yes those; 12 minutes. wash your hands. Headline: Tuesday, requested. Footer line: Cheesy egg and black bean quesadillas, 24 g of protein, 12 minutes.",
+      "bufferId": "6ada61ffe374ecc98220f980",
+      "slackAlert": "Dr0CB8AWLKB5"
     },
     {
       "id": "p28a-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-28T07:40:00-07:00",
       "file": "assets/pinterest/oct26/p28a-pin-poster.png",
@@ -185,11 +203,13 @@
       "url": "https://ieatzhealthy.com/cookbook/?key=REALFOOD&utm_source=pinterest&utm_medium=organic&utm_campaign=cookbook&utm_content=p28a-pin-poster",
       "title": "Free cookbook: 30 healthy dinners under 30 minutes, each with an Instacart list",
       "text": "The Real Food Cookbook: 30 healthy meals under 30 minutes, built for a week of eating under $50, with a tap-to-shop Instacart list on every recipe so the cart builds itself. Free. Password: REALFOOD.",
-      "alt": "Cream typographic pin: 30 dinners. Every one shops itself, with shops itself underlined in red, a line about The Real Food Cookbook, a readout of 30 recipes, each under 30 minutes, 30 Instacart lists, and a green and red strip."
+      "alt": "Cream typographic pin: 30 dinners. Every one shops itself, with shops itself underlined in red, a line about The Real Food Cookbook, a readout of 30 recipes, each under 30 minutes, 30 Instacart lists, and a green and red strip.",
+      "bufferId": "6ada6204e374ecc98220fa3e",
+      "slackAlert": "Dr0CBJ8QGC2G"
     },
     {
       "id": "p28b-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-28T12:10:00-07:00",
       "file": "assets/pinterest/oct26/p28b-pin-bleed.png",
@@ -201,11 +221,13 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "One roast chicken, four weeknight dinners: iEatz plans the leftovers",
       "text": "Carve the roast chicken, add the meat to iEatz with whatever else is in the fridge, and it writes the rest of the week: a grain bowl, a soup, tacos, a fried rice. Estimated calories and protein on every recipe, missing items to Instacart. Free on iOS and Android.",
-      "alt": "Pin with a photo of hands carving a roast chicken on a sheet pan at the stove, a pot of corn beside it. Headline: One roast chicken, four dinners."
+      "alt": "Pin with a photo of hands carving a roast chicken on a sheet pan at the stove, a pot of corn beside it. Headline: One roast chicken, four dinners.",
+      "bufferId": "6ada6209e374ecc98220fac4",
+      "slackAlert": "Dr0CBGEPKG65"
     },
     {
       "id": "p29a-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-29T07:40:00-07:00",
       "file": "assets/pinterest/oct26/p29a-pin-list.png",
@@ -217,11 +239,13 @@
       "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/?utm_source=pinterest&utm_medium=organic&utm_campaign=recipe-pages&utm_content=p29a-pin-list#savory-oats-jammy-egg",
       "title": "Savory oatmeal with a jammy egg: 10 minute high protein breakfast (18 g)",
       "text": "Rolled oats cooked like risotto in broth with a knob of butter, parmesan and pepper stirred in off the heat, a jammy egg halved on top. 18 g of protein, 10 minutes. Full recipe free on the site with four more 10-minute breakfasts.",
-      "alt": "Cream pin: Breakfast, 10 minutes. Savory oats with a jammy egg, three numbered items: oats like risotto, parmesan and pepper, the egg, and a readout of 18 g protein, 10 minutes."
+      "alt": "Cream pin: Breakfast, 10 minutes. Savory oats with a jammy egg, three numbered items: oats like risotto, parmesan and pepper, the egg, and a readout of 18 g protein, 10 minutes.",
+      "bufferId": "6ada620d9a872e86219d6343",
+      "slackAlert": "Dr0CBCJV471U"
     },
     {
       "id": "p29b-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-29T12:10:00-07:00",
       "file": "assets/pinterest/oct26/p29b-pin-bleed.png",
@@ -233,11 +257,13 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "Name what is on the counter and iEatz writes dinner: peppers, lettuce, avocado, tomatoes",
       "text": "Red peppers, lettuce, avocado, cherry tomatoes, cucumber, a handful of pine nuts. Tell iEatz what is out on the board and it writes the recipe from exactly those, with estimated calories and protein, and sends anything missing to Instacart. Free on iOS and Android.",
-      "alt": "Pin with an overhead photo of an outdoor prep table: hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of pine nuts. Headline: Peppers, lettuce, avocado, tomatoes. Name them, get dinner."
+      "alt": "Pin with an overhead photo of an outdoor prep table: hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of pine nuts. Headline: Peppers, lettuce, avocado, tomatoes. Name them, get dinner.",
+      "bufferId": "6ada62109a872e86219d6442",
+      "slackAlert": "Dr0CB991TMNZ"
     },
     {
       "id": "p30a-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-30T07:40:00-07:00",
       "file": "assets/pinterest/oct26/p30a-pin-poster.png",
@@ -249,11 +275,13 @@
       "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=recipe-pages&utm_content=p30a-pin-poster#cottage-cheese-mac",
       "title": "High protein mac and cheese with cottage cheese in the sauce (22 g per serving)",
       "text": "Stovetop mac and cheese with cottage cheese blended into the sauce: 22 g of protein per serving, 20 minutes, serves 4, and nobody at the table can tell. Full recipe free on the site, with three more high protein dinners picky eaters actually eat.",
-      "alt": "Cream typographic pin: Mac and cheese, 22 g protein, with 22 g protein underlined in red, a line about cottage cheese in the sauce, and a readout of 22 g protein, 20 minutes, serves 4."
+      "alt": "Cream typographic pin: Mac and cheese, 22 g protein, with 22 g protein underlined in red, a line about cottage cheese in the sauce, and a readout of 22 g protein, 20 minutes, serves 4.",
+      "bufferId": "6ada62132f4faf5f79632277",
+      "slackAlert": "Dr0CC8UPR6BS"
     },
     {
       "id": "p30b-pin",
-      "status": "pending",
+      "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-30T12:10:00-07:00",
       "file": "assets/pinterest/oct26/p30b-pin-collage.png",
@@ -265,7 +293,9 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "Wilting herbs into pesto pasta in 15 minutes: use the bunch before it goes off",
       "text": "The last of the cilantro, the parmesan end, olive oil, a lemon and a clove of garlic, blitzed and tossed with linguine. 15 minutes, about 17 g of protein per serving, estimated. Add what is going soft to iEatz and it writes the recipe that uses it first. Free on iOS and Android.",
-      "alt": "Deep paper collage: a taped photo card of hands chopping cilantro, a second card of a fork lifting linguine in green herb pesto, handwritten notes reading the last of the bunch and blitzed, tossed, done. Headline: The herbs went in before they went off."
+      "alt": "Deep paper collage: a taped photo card of hands chopping cilantro, a second card of a fork lifting linguine in green herb pesto, handwritten notes reading the last of the bunch and blitzed, tossed, done. Headline: The herbs went in before they went off.",
+      "bufferId": "6ada6217e374ecc982210342",
+      "slackAlert": "Dr0CB8AZPJ2X"
     }
   ]
 }
