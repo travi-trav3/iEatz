@@ -64,6 +64,8 @@ function gate(file, opts = {}) {
     // 1. No two ADJACENT posts share a template, surface or footer position
     for (let i = 1; i < n; i++) {
       const a = ps[i - 1], b = ps[i];
+      // A hotfix (ledger `fixed`: content replaced after scheduling) is exempt: the right post beats rotation.
+      if (a.fixed || b.fixed) continue;
       if (b.template && b.template === a.template) set(fails, `${channel}: adjacent template "${b.template}" (${a.id} -> ${b.id})`);
       if (b.surface && b.surface === a.surface) set(fails, `${channel}: adjacent surface "${b.surface}" (${a.id} -> ${b.id})`);
       // Footer adjacency was dropped on 2026-10-22: the mark now has one home per surface (rule 8).
@@ -113,7 +115,7 @@ function gate(file, opts = {}) {
       if (home && p.footer !== home) set(fails, `${channel}: ${p.id} footer "${p.footer}" on a ${p.surface} shell (home is "${home}")`);
     });
     // 9. Plated photography on <= 30% of photo posts
-    const photoPosts = ps.filter(p => p.heroPhoto);
+    const photoPosts = ps.filter(p => p.heroPhoto && !p.fixed); // a hotfix uses the best truthful photo available; it is outside the plated ratio
     const plated = photoPosts.filter(p => p.photoStyle === 'plated').length;
     if (photoPosts.length && plated / photoPosts.length > 0.3) fails.push(`${channel}: photoStyle "plated" on ${pct(plated, photoPosts.length)} of photo posts (cap 30%)`);
     ps.forEach(p => { if (p.heroPhoto && (!p.photoStyle || p.photoStyle === 'unknown')) warns.push(`${channel}: ${p.id} hero ${p.heroPhoto} has no style in photos.json`); });

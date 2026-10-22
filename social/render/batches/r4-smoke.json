@@ -25,7 +25,9 @@
           "label": "per plate",
           "value": "$4.98"
         }
-      ]
+      ],
+      "why": "smoke fixture: exercises the shell",
+      "app": "fixture: iEatz writes the recipe"
     },
     {
       "file": "r4-poster-short",
@@ -33,7 +35,9 @@
       "h": 1500,
       "template": "poster",
       "footer": "badge-bl",
-      "head": "Soup season starts on the <span class=\"i\">pantry shelf</span>"
+      "head": "Soup season starts on the <span class=\"i\">pantry shelf</span>",
+      "why": "smoke fixture: exercises the shell",
+      "app": "fixture: iEatz writes the recipe"
     },
     {
       "file": "r4-thread",
@@ -63,7 +67,9 @@
           "text": "you can't taste them. 25 minutes. set the table."
         }
       ],
-      "foot": "Pasta with lentil and turkey sauce, 29 g of protein, 25 minutes."
+      "foot": "Pasta with lentil and turkey sauce, 29 g of protein, 25 minutes.",
+      "why": "smoke fixture: exercises the shell",
+      "app": "fixture: iEatz writes the recipe"
     },
     {
       "file": "r4-steps",
@@ -94,7 +100,9 @@
           "label": "serves",
           "value": "2"
         }
-      ]
+      ],
+      "why": "smoke fixture: exercises the shell",
+      "app": "fixture: iEatz writes the recipe"
     },
     {
       "file": "r4-carousel",
@@ -161,7 +169,9 @@
             }
           ]
         }
-      ]
+      ],
+      "why": "smoke fixture: exercises the shell",
+      "app": "fixture: iEatz writes the recipe"
     },
     {
       "file": "r4-carousel-bad",
@@ -201,7 +211,9 @@
             }
           ]
         }
-      ]
+      ],
+      "why": "smoke fixture: exercises the shell",
+      "app": "fixture: iEatz writes the recipe"
     }
   ]
 }

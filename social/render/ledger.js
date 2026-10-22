@@ -91,6 +91,7 @@ function load(file) {
       pillar: raw.pillar || (r && r.pillar), topic: raw.topic || (r && r.topic), cta: raw.cta || (r && r.cta),
       title: raw.title || (r && r.title) || '', text: raw.text || (r && r.text) || '', firstComment: raw.firstComment || (r && r.firstComment) || '',
       render: r,
+      fixed: raw.fixed || null,
     };
     for (const k of ['template', 'surface', 'format', 'footer', 'eyebrow', 'accentTail', 'heroPhoto', 'photoClaim']) {
       // A render batch read directly has no separate ledger: its props (eyebrow text, footer

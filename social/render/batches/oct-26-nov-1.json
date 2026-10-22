@@ -17,7 +17,9 @@
       "objPos": "50% 42%",
       "photoClaim": "an outdoor prep table seen from above: hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of toasted pine nuts",
       "head": "Peppers, lettuce, an avocado, a bowl of tomatoes. That is dinner.",
-      "sub": "Add what is on the board to iEatz and it writes the recipe, calories and protein worked out."
+      "sub": "Add what is on the board to iEatz and it writes the recipe, calories and protein worked out.",
+      "why": "A prep table is a recipe nobody has written yet; the hook names four things and calls it dinner.",
+      "app": "Add what is on the board to iEatz and it writes the recipe with calories and protein."
     },
     {
       "file": "o27-ig-carousel",
@@ -135,7 +137,9 @@
             }
           ]
         }
-      ]
+      ],
+      "why": "One board, three different dinners: the same eight things are not one meal, they are a week.",
+      "app": "Add the board to iEatz and it writes the version for what you actually have, protein counted."
     },
     {
       "file": "o28-ig-reel",
@@ -196,7 +200,9 @@
       ],
       "sticker": "4 dinners",
       "head": "$34. <em>Four cookbook dinners.</em>",
-      "moreCount": 3
+      "moreCount": 3,
+      "why": "A $34 receipt read as four named cookbook dinners, with the week printed under the total.",
+      "app": "Receipt-to-meals plus the cookbook: every recipe has an Instacart list, comment COOKBOOK to get it."
     },
     {
       "file": "o30-ig-split",
@@ -215,38 +221,34 @@
       },
       "photoClaim": "hands chopping a bunch of cilantro on a wooden board with a glass jar beside it; below, a fork lifting linguine coated in green herb pesto against a dark background",
       "seam": "Herbs to <em>pesto</em>",
-      "cap": "The wilting bunch, the parmesan end, olive oil, a lemon, a bag of linguine. Add the five to iEatz. <b>15 min</b>"
+      "cap": "The wilting bunch, the parmesan end, olive oil, a lemon, a bag of linguine. Add the five to iEatz. <b>15 min</b>",
+      "why": "Before and after on one frame: the bunch going soft becomes the dinner.",
+      "app": "Add the five to iEatz and it writes the pesto pasta, with the protein estimated."
     },
     {
-      "file": "o01-ig-thread",
+      "file": "o01-ig-poster",
       "w": 1080,
       "h": 1350,
-      "template": "thread",
+      "template": "poster",
       "footer": "badge-bl",
-      "bg": "mint",
-      "head": "Sunday: every green gets a job",
-      "msgs": [
+      "head": "Sunday: every green <span class=\"u\">gets a job</span>",
+      "body": "Kale is soup. Spinach is the eggs. Lemons are the dressing. Cucumber is lunch. Add the week's produce to iEatz on Sunday and it writes the dinners around it before anything goes soft.",
+      "readout": [
         {
-          "time": "Sun 4:12 PM"
+          "label": "produce",
+          "value": "5 things"
         },
         {
-          "who": "them",
-          "text": "what do I do with all this kale"
+          "label": "dinners",
+          "value": "4"
         },
         {
-          "who": "me",
-          "text": "soup. the spinach goes in the eggs"
-        },
-        {
-          "who": "them",
-          "text": "and the lemons"
-        },
-        {
-          "who": "me",
-          "text": "dressing. cucumber is lunch. nothing goes soft by thursday"
+          "label": "wasted",
+          "value": "0"
         }
       ],
-      "foot": "Add the week's produce to iEatz on Sunday and it writes the dinners around it."
+      "why": "Deciding on Sunday is the whole trick; the app does the deciding.",
+      "app": "Add the week's produce and iEatz writes the dinners around it."
     },
     {
       "file": "p26a-pin-poster",
@@ -269,7 +271,9 @@
           "label": "protein",
           "value": "15 g plus"
         }
-      ]
+      ],
+      "why": "Five named breakfasts, each under ten minutes and over 15 g: the numbers are the pitch.",
+      "app": "Recipes on the breakfasts page, protein per serving on every one."
     },
     {
       "file": "p26b-pin-bleed",
@@ -281,7 +285,9 @@
       "objPos": "50% 55%",
       "photoClaim": "a wooden cutting board with half an avocado, cherry tomatoes, two eggs, three mushrooms, a sliced jalapeno, spinach, arugula and scallions, with a frying pan above it",
       "head": "<span class=\"accent\">Add the board,</span> get the recipe",
-      "sub": "Avocado, eggs, tomatoes, mushrooms, greens. Tell iEatz what is on the board and it writes dinner, calories and protein included."
+      "sub": "Avocado, eggs, tomatoes, mushrooms, greens. Tell iEatz what is on the board and it writes dinner, calories and protein included.",
+      "why": "The board is the input; naming what is on it is the whole workflow.",
+      "app": "Tell iEatz what is on the board and it writes dinner with calories and protein, missing items to Instacart."
     },
     {
       "file": "p27a-pin-steps",
@@ -312,38 +318,48 @@
           "label": "serves",
           "value": "2"
         }
-      ]
+      ],
+      "why": "A 20-minute dinner that is mostly roasting tomatoes; the photo is the proof.",
+      "app": "iEatz writes dinners like this from what is in the fridge, protein estimated."
     },
     {
-      "file": "p27b-pin-thread",
+      "file": "p27b-pin-list",
       "w": 1000,
       "h": 1500,
-      "template": "thread",
+      "template": "list",
       "footer": "badge-bl",
-      "bg": "mint",
-      "head": "Tuesday, <span class=\"accent\">requested</span>",
-      "msgs": [
+      "eyebrow": "Kids dinner, 12 minutes",
+      "head": "Cheesy egg and black bean <span class=\"accent\">quesadillas</span>",
+      "items": [
         {
-          "time": "Tue 4:48 PM"
+          "t": "Mash half a can of black beans",
+          "s": "scramble into four eggs"
         },
         {
-          "who": "them",
-          "text": "can we have the cheesy quesadillas again"
+          "t": "Cheddar in a tortilla, eggs on top, fold",
+          "s": "3 minutes a side"
         },
         {
-          "who": "me",
-          "text": "the egg and black bean ones?"
-        },
-        {
-          "who": "them",
-          "text": "yes those"
-        },
-        {
-          "who": "me",
-          "text": "12 minutes. wash your hands."
+          "t": "Triangles for small hands",
+          "s": "spinach and jalapeno in the grown-up one"
         }
       ],
-      "foot": "Cheesy egg and black bean quesadillas, 24 g of protein, 12 minutes."
+      "readout": [
+        {
+          "label": "protein",
+          "value": "24 g"
+        },
+        {
+          "label": "time",
+          "value": "12 min"
+        },
+        {
+          "label": "pans",
+          "value": "1"
+        }
+      ],
+      "why": "The highest-protein dinner on the page that kids ask for again, in three moves.",
+      "app": "Recipe on the kids dinners page; iEatz counts the protein on versions built from what you have."
     },
     {
       "file": "p28a-pin-poster",
@@ -367,7 +383,9 @@
           "value": "30"
         }
       ],
-      "strip": true
+      "strip": true,
+      "why": "Thirty dinners that each shop themselves: the Instacart list is the feature.",
+      "app": "The cookbook: 30 recipes, each with a tap-to-shop Instacart list."
     },
     {
       "file": "p28b-pin-bleed",
@@ -379,7 +397,9 @@
       "objPos": "45% 50%",
       "photoClaim": "hands carving a roast chicken on a sheet pan at the stove, a pot of corn and a small saucepan beside it",
       "head": "One roast chicken, four dinners",
-      "sub": "Carve it, add the meat to iEatz with whatever else is in the fridge, and it writes the rest of the week."
+      "sub": "Carve it, add the meat to iEatz with whatever else is in the fridge, and it writes the rest of the week.",
+      "why": "One roast becomes four dinners when something plans the leftovers.",
+      "app": "Add the carved meat to iEatz with the rest of the fridge and it writes the week."
     },
     {
       "file": "p29a-pin-list",
@@ -412,7 +432,9 @@
           "label": "time",
           "value": "10 min"
         }
-      ]
+      ],
+      "why": "Oats cooked like risotto with an egg on top is breakfast with 18 g in ten minutes.",
+      "app": "Recipe on the breakfasts page with protein per serving."
     },
     {
       "file": "p29b-pin-bleed",
@@ -424,7 +446,9 @@
       "objPos": "50% 40%",
       "photoClaim": "an outdoor prep table seen from above: hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of toasted pine nuts",
       "head": "Peppers, lettuce, avocado, tomatoes. Name them, get dinner.",
-      "sub": "Tell iEatz what is out on the board and it writes the recipe from exactly those, calories and protein included."
+      "sub": "Tell iEatz what is out on the board and it writes the recipe from exactly those, calories and protein included.",
+      "why": "Four named ingredients and the instruction to name them: the app in one line.",
+      "app": "Tell iEatz what is on the board and it writes the recipe, calories and protein included, Instacart for the rest."
     },
     {
       "file": "p30a-pin-poster",
@@ -447,7 +471,9 @@
           "label": "serves",
           "value": "4"
         }
-      ]
+      ],
+      "why": "Cottage cheese hidden in the sauce turns mac and cheese into 22 g of protein.",
+      "app": "Recipe on the kids dinners page with the protein counted."
     },
     {
       "file": "p30b-pin-collage",
@@ -491,7 +517,9 @@
           "y": 800
         }
       ],
-      "headSize": 84
+      "headSize": 84,
+      "why": "The herbs went in before they went off: the fridge-first habit in two photos.",
+      "app": "Add what is going soft to iEatz and it writes the recipe that uses it first."
     }
   ]
 }

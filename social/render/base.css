@@ -101,7 +101,7 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
 .ig-bleed{background:var(--ink)}
 .ig-bleed .bg,.ig-quotedark .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,12,0.10) 0%,rgba(10,15,12,0.06) 34%,rgba(10,15,12,0.82) 86%)}
-.scrim.heavy{background:linear-gradient(180deg,rgba(10,15,12,0.46) 0%,rgba(10,15,12,0.52) 40%,rgba(10,15,12,0.88) 88%)}
+.scrim.heavy{background:linear-gradient(180deg,rgba(10,15,12,0.14) 0%,rgba(10,15,12,0.30) 42%,rgba(10,15,12,0.90) 86%)}
 .ig-bleed .bwrap{position:absolute;left:72px;right:72px;bottom:170px}
 .ig-bleed .bhead{font-family:var(--serif);font-weight:400;font-size:92px;line-height:0.99;letter-spacing:-0.01em;color:var(--paper)}
 .ig-bleed .bhead .accent{color:var(--mark-mint);font-style:italic}

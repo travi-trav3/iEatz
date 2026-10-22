@@ -433,7 +433,8 @@
       "file": "lifestyle/kitchen-wide.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/kitchen-wide.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "empty-scene: cabinets and a bare counter, no food in frame"
     },
     {
       "file": "lifestyle/couple-cooking.jpg",

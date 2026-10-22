@@ -11,7 +11,9 @@
       "template": "sendthis",
       "variant": "cream",
       "hook": "send this to the person who has a full fridge and still orders DoorDash every night",
-      "payoff": "the food is right there. we built an app for this."
+      "payoff": "the food is right there. we built an app for this.",
+      "why": "Everyone knows the full-fridge DoorDash person; naming them is the share.",
+      "app": "iEatz writes dinner from what is already in the fridge."
     },
     {
       "file": "st02-sunday-to-tuesday",
@@ -20,7 +22,9 @@
       "template": "sendthis",
       "variant": "green",
       "hook": "send this to whoever grocery shops on Sunday and orders takeout by Tuesday",
-      "payoff": "the groceries are still in the fridge. iEatz turns them into dinner."
+      "payoff": "the groceries are still in the fridge. iEatz turns them into dinner.",
+      "why": "The groceries had a plan and Tuesday did not: the gap the app closes.",
+      "app": "Add the groceries to iEatz and it writes the week."
     },
     {
       "file": "st03-trader-joes",
@@ -30,7 +34,9 @@
       "variant": "cream",
       "showRule": true,
       "hook": "send this to whoever spent $60 at Trader Joe's and ate cereal for dinner",
-      "payoff": "the Persian cucumbers deserved better."
+      "payoff": "the Persian cucumbers deserved better.",
+      "why": "The Trader Joe's haul that ended in cereal: a shareable confession.",
+      "app": "Add the haul to iEatz and it writes dinner before the cucumbers go."
     },
     {
       "file": "st04-fridge-stare",
@@ -39,7 +45,9 @@
       "template": "sendthis",
       "variant": "green",
       "hook": "send this to whoever opens the fridge, stares for a full minute, and closes it again",
-      "payoff": "it's not empty. you just can't see dinner yet. iEatz can."
+      "payoff": "it's not empty. you just can't see dinner yet. iEatz can.",
+      "why": "The fridge stare is universal; the app is the thing that sees dinner in it.",
+      "app": "Tell iEatz what is in there and it writes the recipe."
     }
   ]
 }

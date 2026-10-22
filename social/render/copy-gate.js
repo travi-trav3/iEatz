@@ -59,6 +59,8 @@ function sentenceCase(html) {
   return bad;
 }
 
+const APP_CAPABILITY = /receipt|add(s|ed|ing)? (what|the|it|them|those|everything)|tell(s)? ieatz|name (them|it|what)|writes?|wrote|recipe|calories|protein|macros|instacart|cookbook|hand(s|ed)? (it|them|the rest|off)|counts? the/i;
+
 function check(loaded) {
   const fails = [];
   const byChannel = {};
@@ -99,6 +101,25 @@ function check(loaded) {
         fails.push(`${u.id}: photoClaim shares no noun with the headline or caption\n     photoClaim: "${claim}"\n     headline:   "${strip(u.head)}"\n     caption:    "${strip(p.text).slice(0, 160)}"`);
     }
   }
+  // 7 (F-004, Oct 22 2026): every post states its rationale before it can be scheduled.
+  //    `why`: the insight or joke in one line (what makes this worth a stranger's second).
+  //    `app`: where a real capability enters: receipt import, add what you have, a recipe with
+  //    calories and protein, the Instacart hand-off, the cookbook. A post with no `app` line is a
+  //    sketch about food, not a post about iEatz. A text thread is a product moment, not a bit:
+  //    the reply side has to show what iEatz did. Batches created before Oct 22 2026 are exempt.
+  const created = (loaded.batch && loaded.batch.createdAt) || '';
+  if (created >= '2026-10-22') for (const p of loaded.posts) {
+    const r = p.render; if (!r) continue;
+    if (!r.why || String(r.why).trim().length < 12) fails.push(`${p.id}: no "why" (the insight or joke in one line; F-004)`);
+    if (!r.app || !APP_CAPABILITY.test(String(r.app)))
+      fails.push(`${p.id}: "app" missing or names no real capability (receipt import, add what you have, recipe with calories and protein, Instacart hand-off, cookbook; F-004)`);
+    const threads = r.template === 'thread' ? [r] : (r.slides || []).filter(s => s.template === 'thread');
+    for (const t of threads) {
+      const me = (t.msgs || []).filter(m => m.who === 'me').map(m => m.text || '').join(' ');
+      if (!/ieatz|recipe|instacart|cookbook|wrote|writes|protein|calories/i.test(me))
+        fails.push(`${p.id}: thread is a sketch: no reply bubble shows what iEatz did (F-004)`);
+    }
+  }
   // 3: two-beat aphorism cap, per channel
   for (const [channel, ps] of Object.entries(byChannel)) {
     const hs = ps.map(p => p.headline).filter(Boolean);
@@ -116,6 +137,9 @@ if (require.main === module) {
   const fails = check(loaded);
   const n = loaded.posts.length, strings = loaded.posts.reduce((a, p) => a + p.copy.length, 0);
   console.log(`${loaded.source}: ${n} posts, ${strings} strings checked`);
+  // The rationale table is for the human review: read it before the renders.
+  const withWhy = loaded.posts.filter(p => p.render && (p.render.why || p.render.app));
+  if (withWhy.length) { console.log('\nRationale (why / app):'); for (const p of withWhy) console.log(`  ${p.id}\n    why: ${p.render.why || '(none)'}\n    app: ${p.render.app || '(none)'}`); }
   if (fails.length) { console.error('\nCOPY GATE FAILED:'); fails.forEach(f => console.error(' - ' + f)); process.exit(1); }
   console.log('\nCopy gate PASSED.');
 }

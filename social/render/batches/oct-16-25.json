@@ -600,6 +600,59 @@
         }
       ],
       "strip": true
+    },
+    {
+      "file": "o23-ig-quotedark-v2",
+      "w": 1080,
+      "h": 1350,
+      "template": "quotedark",
+      "footer": "badge-bl",
+      "photo": "food/tomato-pasta-skillet.jpg",
+      "objPos": "50% 35%",
+      "photoClaim": "a cast iron skillet of spaghetti with blistered cherry tomatoes, peas and basil",
+      "quote": "I haven't had any groceries go to waste <span class=\"accent\">the last couple of weeks</span>",
+      "attr": "SixSocks, App Store review",
+      "why": "A real review that says the one thing the app is for: the food gets cooked instead of thrown out.",
+      "app": "iEatz writes the recipe from what is already in the fridge, so the tomatoes get used."
+    },
+    {
+      "file": "p24-pin-list-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "list",
+      "footer": "badge-bl",
+      "eyebrow": "Kids dinner, 25 minutes",
+      "head": "The meat sauce with lentils hidden in it",
+      "items": [
+        {
+          "t": "Brown the turkey",
+          "s": "onion and garlic in with it, 6 minutes"
+        },
+        {
+          "t": "Half a cup of red lentils into the marinara",
+          "s": "simmer 15, they disappear into the sauce"
+        },
+        {
+          "t": "Toss with whatever shape they will eat",
+          "s": "chili flakes and parmesan on the grown-up bowl"
+        }
+      ],
+      "readout": [
+        {
+          "label": "protein",
+          "value": "29 g"
+        },
+        {
+          "label": "time",
+          "value": "25 min"
+        },
+        {
+          "label": "serves",
+          "value": "4"
+        }
+      ],
+      "why": "Hidden protein: lentils vanish into a sauce picky kids already eat.",
+      "app": "Recipe lives on the kids dinners page; iEatz writes versions like it with the protein counted."
     }
   ]
 }

@@ -107,15 +107,16 @@
       "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-11-01T10:00:00-08:00",
-      "file": "assets/social/oct26/o01-ig-thread.png",
+      "file": "assets/social/oct26/o01-ig-poster.png",
       "pillar": "Pantry/Fridge",
       "topic": "Produce",
       "cta": "other",
       "text": "Sunday, 4:12 PM: every green gets a job. Kale is soup. Spinach goes in the eggs. Lemons are the dressing. Cucumber is lunch. Decide it now and nothing goes soft by Thursday.\n\nAdd the week's produce to iEatz on Sunday and it writes the dinners around it, calories and protein included.\n\n#mealprep #sundayreset #foodwaste #weeknightdinner #ieatzhealthy",
       "firstComment": "The kale soup is in the cookbook. Comment COOKBOOK on Wednesday's reel if you missed it.",
-      "alt": "Mint card styled as a text thread at Sun 4:12 PM: what do I do with all this kale; soup. the spinach goes in the eggs; and the lemons; dressing. cucumber is lunch. nothing goes soft by thursday. Headline: Sunday: every green gets a job. Footer line: Add the week's produce to iEatz on Sunday and it writes the dinners around it.",
+      "alt": "Cream typographic post: Sunday: every green gets a job, with gets a job underlined in red; a line assigning kale, spinach, lemons and cucumber and telling the reader to add the week's produce to iEatz; a readout of 5 things of produce, 4 dinners, 0 wasted.",
       "bufferId": "6ada61e39a872e86219d4edd",
-      "slackAlert": "Dr0CC8URSUBS"
+      "slackAlert": "Dr0CC8URSUBS",
+      "fixed": "2026-10-22: thread sketch replaced with a poster that says what the app does; F-004"
     },
     {
       "id": "p26a-pin",
@@ -176,7 +177,7 @@
       "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-27T12:10:00-07:00",
-      "file": "assets/pinterest/oct26/p27b-pin-thread.png",
+      "file": "assets/pinterest/oct26/p27b-pin-list.png",
       "pillar": "Lifestyle",
       "topic": "Family",
       "cta": "page",
@@ -185,9 +186,10 @@
       "url": "https://ieatzhealthy.com/recipes/high-protein-dinners-kids-actually-eat/?utm_source=pinterest&utm_medium=organic&utm_campaign=recipe-pages&utm_content=p27b-pin-thread#cheesy-egg-bean-quesadillas",
       "title": "Cheesy egg and black bean quesadillas kids ask for again (24 g protein, 12 minutes)",
       "text": "The dinner that gets requested: eggs scrambled with mashed black beans, folded into a cheddar quesadilla, cut into triangles. 24 g of protein per serving, 12 minutes, one pan, with a grown-up version with spinach and jalapeno. Full recipe free on the site, with three more high protein dinners picky eaters actually eat.",
-      "alt": "Mint pin styled as a text thread at Tue 4:48 PM: can we have the cheesy quesadillas again; the egg and black bean ones?; yes those; 12 minutes. wash your hands. Headline: Tuesday, requested. Footer line: Cheesy egg and black bean quesadillas, 24 g of protein, 12 minutes.",
+      "alt": "Cream pin: Kids dinner, 12 minutes. Cheesy egg and black bean quesadillas, three numbered steps: mash half a can of black beans, cheddar in a tortilla, triangles for small hands. Readout: 24 g protein, 12 minutes, 1 pan.",
       "bufferId": "6ada61ffe374ecc98220f980",
-      "slackAlert": "Dr0CB8AWLKB5"
+      "slackAlert": "Dr0CB8AWLKB5",
+      "fixed": "2026-10-22: thread sketch replaced with the recipe as steps before it published; F-004"
     },
     {
       "id": "p28a-pin",
