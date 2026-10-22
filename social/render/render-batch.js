@@ -17,6 +17,8 @@ const { expand, photosOf, htmlDoc, prepare, chromePath, DIR } = require('./doc')
 const { isV2, gradeOn, applyGrade } = require('./grade');
 
 const PHOTO_DIR = path.resolve(DIR, '../../assets/photos');
+const PHOTO_FLAG = {};
+for (const ph of JSON.parse(fs.readFileSync(path.join(PHOTO_DIR, 'photos.json'), 'utf8')).photos) if (ph.flag) PHOTO_FLAG[ph.file] = ph.flag;
 const PHOTOS = 'file://' + PHOTO_DIR;
 const batchPath = process.argv[2];
 if (!batchPath) { console.error('usage: node render-batch.js <batch.json> [--only <file>]'); process.exit(1); }
@@ -47,12 +49,17 @@ async function annotate(p) {
   let bad = 0, n = 0;
   for (const post of posts) {
     let jobs;
-    try { jobs = expand(post); } catch (e) { console.error(`!! ${e.message}`); bad++; continue; }
+    try { jobs = expand({ createdAt: batch.createdAt, ...post }); } catch (e) { console.error(`!! ${e.message}`); bad++; continue; }
     for (const p of jobs) {
       n++;
       const t = TEMPLATES[p.template];
       if (!t) { console.error(`!! unknown template "${p.template}" for ${p.file}`); bad++; continue; }
       const photos = photosOf(p);
+      // photos.json flags "low-res" (under 1600 px) and "brand-in-frame" (a logo, a retailer, a
+      // third-party screen) refuse the photo at render (R10, Oct 22 2026): the batch has to pick
+      // another shot instead of shipping a soft or off-brand frame.
+      const refused = photos.map(f => [f, PHOTO_FLAG[f]]).filter(([, fl]) => fl && /low-res|brand-in-frame/.test(fl));
+      if (refused.length) { console.error(`!! ${p.file}: photo refused: ${refused.map(([f, fl]) => `${f} (${fl})`).join(', ')}`); bad++; continue; }
       const graded = photos.some(f => !/^app-/.test(path.basename(f))) && gradeOn(p, batch);
       const claimMissing = isV2(batch, p) && photos.length > 0 && !p.photoClaim;
       let html;

@@ -37,6 +37,14 @@ with Club Pilot: never read, edit or comment on any other channel. (Pinterest
 1. **Set up.** In the repo: `git fetch origin add-food-photography && git checkout
    add-food-photography && git pull --ff-only origin add-food-photography`. This branch also
    serves the live post images; never delete or rewrite it.
+1b. **Channel health (added Oct 22, after Instagram sat disconnected from Oct 18 to Oct 22 and
+   four posts failed before anyone noticed).** `get_channel` for Instagram
+   `6a14b495c687a22dd4267bfc` and Pinterest `6a7a4b64b2d9d577435279f6`. If either returns
+   `isDisconnected: true` or `isLocked: true`, post one line to Slack #social naming the channel
+   and the next three scheduled posts that will fail, with the fix (Buffer > Channels >
+   Reconnect), then carry on with the review. Also list posts with `status: error` in the Queue
+   query result (step 2) and name them in the summary: an errored post is a post that did not go
+   out, whatever the ledger says.
 2. **Pull.** `fb since` prints the window start; use it as `$since` in the Window and Queue
    queries (below), with `$org` = `6a138b7d82bb2ed009fed356`. Follow `pageInfo.endCursor` until
    `hasNextPage` is false. Run the Ideas query once. Save each result **exactly as returned**

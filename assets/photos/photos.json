@@ -296,7 +296,8 @@
       "file": "fridge/fridge-warm-open.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-warm-open.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "brand-in-frame: Cheez Whiz jar"
     },
     {
       "file": "fridge/fridge-real-mess.jpg",
@@ -314,7 +315,8 @@
       "file": "fridge/anti-fridge-smeg.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/anti-fridge-smeg.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "brand-in-frame: Smeg logo"
     },
     {
       "file": "fridge/anti-fridge-shoe.jpg",
@@ -338,7 +340,8 @@
       "file": "grocery/kid-in-grocery-cart.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/kid-in-grocery-cart.jpg",
-      "style": "people"
+      "style": "people",
+      "flag": "brand-in-frame: Cheez-It box"
     },
     {
       "file": "grocery/grocery-storefront.jpg",
@@ -356,7 +359,8 @@
       "file": "grocery/grocery-bag-produce.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-bag-produce.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "brand-in-frame: bakery brand and retailer URL"
     },
     {
       "file": "lifestyle/woman-in-kitchen.jpg",
@@ -474,13 +478,15 @@
       "file": "pantry/counter-eggs-prep.jpg",
       "category": "pantry",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/counter-eggs-prep.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "brand-in-frame: tablet running a third-party app"
     },
     {
       "file": "pantry/pantry-real-shelves.jpg",
       "category": "pantry",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/pantry-real-shelves.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "flag": "brand-in-frame: Nutella, Senseo, dog food"
     },
     {
       "file": "pantry/pantry-open-spice.jpg",

@@ -17,7 +17,7 @@
 // the set rules (adjacency, caps, pillars, anatomy, formats) run where it is merged with --with.
 // Pair with contact-sheet.js --with-live and eyeball the montage.
 const { load } = require('./ledger');
-const { TEMPLATES } = require('./templates');
+const { TEMPLATES, footerHome } = require('./templates');
 const copyGate = require('./copy-gate');
 
 function gate(file, opts = {}) {
@@ -66,7 +66,7 @@ function gate(file, opts = {}) {
       const a = ps[i - 1], b = ps[i];
       if (b.template && b.template === a.template) set(fails, `${channel}: adjacent template "${b.template}" (${a.id} -> ${b.id})`);
       if (b.surface && b.surface === a.surface) set(fails, `${channel}: adjacent surface "${b.surface}" (${a.id} -> ${b.id})`);
-      if (b.footer && b.footer === a.footer && b.footer !== 'ad') set(fails, `${channel}: adjacent footer "${b.footer}" (${a.id} -> ${b.id})`);
+      // Footer adjacency was dropped on 2026-10-22: the mark now has one home per surface (rule 8).
     }
     // 2. No template exceeds ~1/3 of the batch; deprecated shells warn on any use
     const tCount = {};
@@ -101,11 +101,17 @@ function gate(file, opts = {}) {
     if (tails / n > 0.4) set(fails, `${channel}: accentTail on ${pct(tails, n)} (cap 40%)`);
     const brows = ps.filter(p => p.eyebrow === true).length;
     if (brows / n > 0.5) set(fails, `${channel}: eyebrow on ${pct(brows, n)} (cap 50%)`);
-    // 8. Footer: never badge-url on Instagram; no single position on > 50% of the batch
+    // 8. Footer: never badge-url on Instagram. From 2026-10-26 the mark sits in its home position
+    //    for the surface (templates.js FOOTER_HOME); only "none" (carousel interiors), "badge-bc"
+    //    (sendthis) and "ad" are also allowed. Until Oct 22 this rule forced the badge to rotate.
     if (channel === 'instagram') ps.forEach(p => { if (p.footer === 'badge-url') fails.push(`instagram: ${p.id} footer "badge-url" (the URL is dead weight on Instagram; move the badge)`); });
     const fCount = {};
     ps.forEach(p => { if (p.footer && p.footer !== 'ad') fCount[p.footer] = (fCount[p.footer] || 0) + 1; });
-    for (const [f, c] of Object.entries(fCount)) if (c / n > 0.5) set(fails, `${channel}: footer "${f}" on ${pct(c, n)} (cap 50%)`);
+    ps.forEach(p => {
+      if (!p.footer || p.footer === 'ad' || p.footer === 'none' || p.footer === 'badge-bc' || p.dueAt < '2026-10-26') return;
+      const home = footerHome(p.surface);
+      if (home && p.footer !== home) set(fails, `${channel}: ${p.id} footer "${p.footer}" on a ${p.surface} shell (home is "${home}")`);
+    });
     // 9. Plated photography on <= 30% of photo posts
     const photoPosts = ps.filter(p => p.heroPhoto);
     const plated = photoPosts.filter(p => p.photoStyle === 'plated').length;

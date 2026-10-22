@@ -59,7 +59,7 @@
       ],
       "sticker": "Tuesday, sorted",
       "head": "One receipt. <em>Four dinners.</em>",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "title": "One grocery receipt, four weeknight dinners",
       "text": "Scan the receipt from Sunday and iEatz maps it to the week: tacos Monday, fried rice Tuesday, a big salad Wednesday, soup from the bones on Sunday."
     },
@@ -86,7 +86,7 @@
         }
       ],
       "strip": true,
-      "footer": "badge-tr",
+      "footer": "badge-bl",
       "title": "Ten dinners hiding on your pantry shelves",
       "text": "The average scan finds about ten dinners in groceries people already own. The shelves were full the whole time."
     },
@@ -111,7 +111,7 @@
       },
       "seam": "Same fridge, <em>Tuesday.</em>",
       "cap": "Nothing new came home. <b>$0.00</b> spent. The bowl was on the top shelf.",
-      "footer": "badge-bl",
+      "footer": "badge-br",
       "photoClaim": "open fridge full of produce above a bowl of greens with eggs and avocado",
       "title": "Same fridge, two days later: a bowl of greens and eggs",
       "text": "Sunday the fridge looked like nothing. Tuesday it was a bowl of greens, soft eggs and avocado, and nobody went to the store."
@@ -137,7 +137,7 @@
         "Greens"
       ],
       "method": "Cook the pasta, toss it warm with pesto, fold in tomatoes and greens once it cools.",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "photoClaim": "bowl of farfalle with pesto, cherry tomatoes and greens",
       "title": "Pesto pasta salad for weekday lunches",
       "text": "Farfalle, pesto, cherry tomatoes, a handful of greens. Make it Sunday and it still tastes right on Friday."
@@ -250,7 +250,7 @@
         }
       ],
       "head": "Receipt in, <em>dinners out.</em>",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "motion": {
         "duration": 8,
         "fps": 24
@@ -272,7 +272,7 @@
       "stat": "$6",
       "statSub": "Healthy dinner, per serving.",
       "statBody": "When the recipe starts from groceries you already bought, the math works.",
-      "footer": "badge-tr",
+      "footer": "badge-bl",
       "title": "About $6 a serving for a healthy dinner",
       "text": "Dinner from what you already bought comes out around six dollars a serving. The expensive meal is the one you order after forgetting what was in the fridge."
     },
@@ -341,7 +341,7 @@
           "s": "The carcass earns its keep"
         }
       ],
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "title": "Four dinners from one rotisserie chicken",
       "text": "Tacos, fried rice, a chopped salad, then broth from the bones. One nine-dollar bird covers four weeknights."
     },
@@ -358,7 +358,7 @@
       "photo": "lifestyle/kitchen-prep-scene.jpg",
       "quote": "Three weeks in and I haven't ordered takeout once.",
       "attr": "Ashly H., iEatz user",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "photoClaim": "person slicing vegetables at a kitchen counter",
       "title": "Three weeks without takeout",
       "text": "Ashly H. on three weeks of cooking what was already in her kitchen, from the App Store reviews."
@@ -380,7 +380,7 @@
         "Two minutes",
         "Freezes well"
       ],
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "photoClaim": "hands chopping cilantro on a wooden board",
       "title": "Chop the cilantro before it wilts",
       "text": "Two minutes with a knife on Sunday and the cilantro lasts into next week. Freeze the rest in olive oil."
@@ -398,7 +398,7 @@
       "photo": "app-instacart.jpg",
       "head": "Soup night, minus the <span class=\"accent\">missing onion.</span>",
       "cap": "When a recipe needs one thing you don't have, iEatz sends it to an Instacart cart in a tap.",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "photoClaim": "real iEatz screen listing missing items next to an Instacart cart",
       "title": "The missing onion goes straight to an Instacart cart",
       "text": "One missing item used to stall the whole recipe. Now it goes to a cart and the soup keeps going."
@@ -474,7 +474,7 @@
         "x": 690,
         "y": 1010
       },
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "photoClaim": "pantry shelves of packaged groceries and tacos with chickpeas and lime",
       "title": "Pantry to plate in fifteen minutes",
       "text": "The shelf nobody looks at has tacos on it. Chickpeas, a lime and tortillas, about two dollars a plate."
@@ -498,7 +498,7 @@
         "Garlic"
       ],
       "method": "Blitz everything until smooth and spoon it over anything beige.",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "title": "Green herb yogurt sauce that keeps a week",
       "text": "Soft herbs, yogurt, lemon and garlic in a blender. It rescues the herbs and every plain dinner after."
     },
@@ -516,7 +516,7 @@
       "eyebrow": "Back to routine",
       "head": "The 6:30 kitchen, back on schedule",
       "sub": "Evenings run smoother when nobody has to decide what dinner is.",
-      "footer": "badge-tr",
+      "footer": "badge-br",
       "photoClaim": "woman cooking at a stove in a white kitchen",
       "title": "The 6:30 kitchen, back on schedule",
       "text": "A school-night kitchen at 6:30 with dinner already decided. The quiet part is nobody asking what we are having."
@@ -551,7 +551,7 @@
       "stat": "15 min",
       "sub": "Fridge to table.",
       "body": "Most weeknight dinners land in about fifteen minutes when they start from what you have.",
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "title": "Fridge to table in about fifteen minutes",
       "text": "Most iEatz weeknight dinners land in about fifteen minutes because the shopping step is gone."
     },
@@ -582,7 +582,7 @@
             }
           ],
           "strip": true,
-          "footer": "badge-br"
+          "footer": "badge-bl"
         },
         {
           "template": "recipephoto",
@@ -671,7 +671,7 @@
         }
       ],
       "foot": "The fridge had dinner in it the whole time.",
-      "footer": "badge-tr",
+      "footer": "badge-br",
       "photoClaim": "open fridge with stocked shelves, yogurt cups and a box of vegetables",
       "title": "The fridge had dinner in it the whole time",
       "text": "Eggs, yogurt and half a box of vegetables is shakshuka. The fridge was never empty."
@@ -732,7 +732,7 @@
       ],
       "sticker": "Tuesday, sorted",
       "head": "One receipt. <em>Four dinners.</em>",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "title": "One grocery receipt, four weeknight dinners",
       "text": "Scan the receipt from Sunday and iEatz maps it to the week: tacos Monday, fried rice Tuesday, a big salad Wednesday, soup from the bones on Sunday."
     },
@@ -759,7 +759,7 @@
         }
       ],
       "strip": true,
-      "footer": "badge-tr",
+      "footer": "badge-bl",
       "title": "Ten dinners hiding on your pantry shelves",
       "text": "The average scan finds about ten dinners in groceries people already own. The shelves were full the whole time."
     },
@@ -784,7 +784,7 @@
       },
       "seam": "Same fridge, <em>Tuesday.</em>",
       "cap": "Nothing new came home. <b>$0.00</b> spent. The bowl was on the top shelf.",
-      "footer": "badge-bl",
+      "footer": "badge-br",
       "photoClaim": "open fridge full of produce above a bowl of greens with eggs and avocado",
       "title": "Same fridge, two days later: a bowl of greens and eggs",
       "text": "Sunday the fridge looked like nothing. Tuesday it was a bowl of greens, soft eggs and avocado, and nobody went to the store."
@@ -810,7 +810,7 @@
         "Greens"
       ],
       "method": "Cook the pasta, toss it warm with pesto, fold in tomatoes and greens once it cools.",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "photoClaim": "bowl of farfalle with pesto, cherry tomatoes and greens",
       "title": "Pesto pasta salad for weekday lunches",
       "text": "Farfalle, pesto, cherry tomatoes, a handful of greens. Make it Sunday and it still tastes right on Friday."
@@ -881,7 +881,7 @@
       "stat": "$6",
       "statSub": "Healthy dinner, per serving.",
       "statBody": "When the recipe starts from groceries you already bought, the math works.",
-      "footer": "badge-url",
+      "footer": "badge-bl",
       "title": "About $6 a serving for a healthy dinner",
       "text": "Dinner from what you already bought comes out around six dollars a serving. The expensive meal is the one you order after forgetting what was in the fridge."
     },
@@ -950,7 +950,7 @@
           "s": "The carcass earns its keep"
         }
       ],
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "title": "Four dinners from one rotisserie chicken",
       "text": "Tacos, fried rice, a chopped salad, then broth from the bones. One nine-dollar bird covers four weeknights."
     },
@@ -967,7 +967,7 @@
       "photo": "lifestyle/kitchen-prep-scene.jpg",
       "quote": "Three weeks in and I haven't ordered takeout once.",
       "attr": "Ashly H., iEatz user",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "photoClaim": "person slicing vegetables at a kitchen counter",
       "title": "Three weeks without takeout",
       "text": "Ashly H. on three weeks of cooking what was already in her kitchen, from the App Store reviews."
@@ -989,7 +989,7 @@
         "Two minutes",
         "Freezes well"
       ],
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "photoClaim": "hands chopping cilantro on a wooden board",
       "title": "Chop the cilantro before it wilts",
       "text": "Two minutes with a knife on Sunday and the cilantro lasts into next week. Freeze the rest in olive oil."
@@ -1007,7 +1007,7 @@
       "photo": "app-instacart.jpg",
       "head": "Soup night, minus the <span class=\"accent\">missing onion.</span>",
       "cap": "When a recipe needs one thing you don't have, iEatz sends it to an Instacart cart in a tap.",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "photoClaim": "real iEatz screen listing missing items next to an Instacart cart",
       "title": "The missing onion goes straight to an Instacart cart",
       "text": "One missing item used to stall the whole recipe. Now it goes to a cart and the soup keeps going."
@@ -1029,7 +1029,7 @@
         "One skillet",
         "All pantry"
       ],
-      "footer": "badge-url",
+      "footer": "badge-bl",
       "photoClaim": "plate of spaghetti with mushrooms and herbs",
       "title": "Twenty-minute Wednesday spaghetti",
       "text": "Spaghetti, mushrooms, garlic and whatever herbs are left. One skillet, twenty minutes, Wednesday handled."
@@ -1083,7 +1083,7 @@
         "x": 690,
         "y": 1010
       },
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "photoClaim": "pantry shelves of packaged groceries and tacos with chickpeas and lime",
       "title": "Pantry to plate in fifteen minutes",
       "text": "The shelf nobody looks at has tacos on it. Chickpeas, a lime and tortillas, about two dollars a plate."
@@ -1107,7 +1107,7 @@
         "Garlic"
       ],
       "method": "Blitz everything until smooth and spoon it over anything beige.",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "title": "Green herb yogurt sauce that keeps a week",
       "text": "Soft herbs, yogurt, lemon and garlic in a blender. It rescues the herbs and every plain dinner after."
     },
@@ -1125,7 +1125,7 @@
       "eyebrow": "Back to routine",
       "head": "The 6:30 kitchen, back on schedule",
       "sub": "Evenings run smoother when nobody has to decide what dinner is.",
-      "footer": "badge-tr",
+      "footer": "badge-br",
       "photoClaim": "woman cooking at a stove in a white kitchen",
       "title": "The 6:30 kitchen, back on schedule",
       "text": "A school-night kitchen at 6:30 with dinner already decided. The quiet part is nobody asking what we are having."
@@ -1142,7 +1142,7 @@
       "template": "quote",
       "quote": "I just cook what's already in my kitchen.",
       "name": "Ashly H.",
-      "footer": "badge-url",
+      "footer": "badge-bl",
       "title": "Cooking what is already in the kitchen",
       "text": "The second half of Ashly H.'s review, and the whole idea of the app in one line."
     },
@@ -1160,7 +1160,7 @@
       "stat": "15 min",
       "sub": "Fridge to table.",
       "body": "Most weeknight dinners land in about fifteen minutes when they start from what you have.",
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "title": "Fridge to table in about fifteen minutes",
       "text": "Most iEatz weeknight dinners land in about fifteen minutes because the shopping step is gone."
     },
@@ -1191,7 +1191,7 @@
             }
           ],
           "strip": true,
-          "footer": "badge-br"
+          "footer": "badge-bl"
         },
         {
           "template": "recipephoto",
@@ -1280,7 +1280,7 @@
         }
       ],
       "foot": "The fridge had dinner in it the whole time.",
-      "footer": "badge-tr",
+      "footer": "badge-br",
       "photoClaim": "open fridge with stocked shelves, yogurt cups and a box of vegetables",
       "title": "The fridge had dinner in it the whole time",
       "text": "Eggs, yogurt and half a box of vegetables is shakshuka. The fridge was never empty."
@@ -1341,7 +1341,7 @@
       ],
       "sticker": "Tuesday, sorted",
       "head": "One receipt. <em>Four dinners.</em>",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "title": "One grocery receipt, four weeknight dinners",
       "text": "Scan the receipt from Sunday and iEatz maps it to the week: tacos Monday, fried rice Tuesday, a big salad Wednesday, soup from the bones on Sunday."
     },
@@ -1368,7 +1368,7 @@
         }
       ],
       "strip": true,
-      "footer": "badge-tr",
+      "footer": "badge-bl",
       "title": "Ten dinners hiding on your pantry shelves",
       "text": "The average scan finds about ten dinners in groceries people already own. The shelves were full the whole time."
     },
@@ -1393,7 +1393,7 @@
       },
       "seam": "Same fridge, <em>Tuesday.</em>",
       "cap": "Nothing new came home. <b>$0.00</b> spent. The bowl was on the top shelf.",
-      "footer": "badge-bl",
+      "footer": "badge-br",
       "photoClaim": "open fridge full of produce above a bowl of greens with eggs and avocado",
       "title": "Same fridge, two days later: a bowl of greens and eggs",
       "text": "Sunday the fridge looked like nothing. Tuesday it was a bowl of greens, soft eggs and avocado, and nobody went to the store."
@@ -1419,7 +1419,7 @@
         "Greens"
       ],
       "method": "Cook the pasta, toss it warm with pesto, fold in tomatoes and greens once it cools.",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "photoClaim": "bowl of farfalle with pesto, cherry tomatoes and greens",
       "title": "Pesto pasta salad for weekday lunches",
       "text": "Farfalle, pesto, cherry tomatoes, a handful of greens. Make it Sunday and it still tastes right on Friday."
@@ -1490,7 +1490,7 @@
       "stat": "$6",
       "statSub": "Healthy dinner, per serving.",
       "statBody": "When the recipe starts from groceries you already bought, the math works.",
-      "footer": "badge-tr",
+      "footer": "badge-bl",
       "title": "About $6 a serving for a healthy dinner",
       "text": "Dinner from what you already bought comes out around six dollars a serving. The expensive meal is the one you order after forgetting what was in the fridge."
     },
@@ -1559,7 +1559,7 @@
           "s": "The carcass earns its keep"
         }
       ],
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "title": "Four dinners from one rotisserie chicken",
       "text": "Tacos, fried rice, a chopped salad, then broth from the bones. One nine-dollar bird covers four weeknights."
     },
@@ -1576,7 +1576,7 @@
       "photo": "lifestyle/kitchen-prep-scene.jpg",
       "quote": "Three weeks in and I haven't ordered takeout once.",
       "attr": "Ashly H., iEatz user",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "photoClaim": "person slicing vegetables at a kitchen counter",
       "title": "Three weeks without takeout",
       "text": "Ashly H. on three weeks of cooking what was already in her kitchen, from the App Store reviews."
@@ -1598,7 +1598,7 @@
         "Two minutes",
         "Freezes well"
       ],
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "photoClaim": "hands chopping cilantro on a wooden board",
       "title": "Chop the cilantro before it wilts",
       "text": "Two minutes with a knife on Sunday and the cilantro lasts into next week. Freeze the rest in olive oil."
@@ -1616,7 +1616,7 @@
       "photo": "app-instacart.jpg",
       "head": "Soup night, minus the <span class=\"accent\">missing onion.</span>",
       "cap": "When a recipe needs one thing you don't have, iEatz sends it to an Instacart cart in a tap.",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "photoClaim": "real iEatz screen listing missing items next to an Instacart cart",
       "title": "The missing onion goes straight to an Instacart cart",
       "text": "One missing item used to stall the whole recipe. Now it goes to a cart and the soup keeps going."
@@ -1692,7 +1692,7 @@
         "x": 690,
         "y": 1010
       },
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "photoClaim": "pantry shelves of packaged groceries and tacos with chickpeas and lime",
       "title": "Pantry to plate in fifteen minutes",
       "text": "The shelf nobody looks at has tacos on it. Chickpeas, a lime and tortillas, about two dollars a plate."
@@ -1716,7 +1716,7 @@
         "Garlic"
       ],
       "method": "Blitz everything until smooth and spoon it over anything beige.",
-      "footer": "badge-br",
+      "footer": "badge-bl",
       "title": "Green herb yogurt sauce that keeps a week",
       "text": "Soft herbs, yogurt, lemon and garlic in a blender. It rescues the herbs and every plain dinner after."
     },
@@ -1734,7 +1734,7 @@
       "eyebrow": "Back to routine",
       "head": "The 6:30 kitchen, back on schedule",
       "sub": "Evenings run smoother when nobody has to decide what dinner is.",
-      "footer": "badge-tr",
+      "footer": "badge-br",
       "photoClaim": "woman cooking at a stove in a white kitchen",
       "title": "The 6:30 kitchen, back on schedule",
       "text": "A school-night kitchen at 6:30 with dinner already decided. The quiet part is nobody asking what we are having."
@@ -1769,7 +1769,7 @@
       "stat": "15 min",
       "sub": "Fridge to table.",
       "body": "Most weeknight dinners land in about fifteen minutes when they start from what you have.",
-      "footer": "badge-tl",
+      "footer": "badge-bl",
       "title": "Fridge to table in about fifteen minutes",
       "text": "Most iEatz weeknight dinners land in about fifteen minutes because the shopping step is gone."
     },
@@ -1800,7 +1800,7 @@
             }
           ],
           "strip": true,
-          "footer": "badge-br"
+          "footer": "badge-bl"
         },
         {
           "template": "recipephoto",
@@ -1889,7 +1889,7 @@
         }
       ],
       "foot": "The fridge had dinner in it the whole time.",
-      "footer": "badge-tr",
+      "footer": "badge-br",
       "photoClaim": "open fridge with stocked shelves, yogurt cups and a box of vegetables",
       "title": "The fridge had dinner in it the whole time",
       "text": "Eggs, yogurt and half a box of vegetables is shakshuka. The fridge was never empty."

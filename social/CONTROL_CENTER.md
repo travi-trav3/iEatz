@@ -429,6 +429,18 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Oct 22 2026 — composition fixes, round one (from the render audit; the full overhaul plan is
+  with Travis for approval):** Buffer metrics for Sep 22 to Oct 22 showed 173 people reached on
+  Instagram and 42 impressions on Pinterest, and the audit found the last three batches were
+  about 60 percent type-only cream frames from `poster` and `list`, with recipe carousels that
+  showed no food. Shipped: the `steps` shell (photo band + numbered steps + readout) and a
+  carousel interior rule in `expand()`; the poster fit bug (every poster had been shrinking to
+  the 84 px floor because line-height 0.9 overflowed the box) and the underline that fragmented
+  when a phrase wrapped; poster and thread recomposed as one centred block; one badge home per
+  surface (`FOOTER_HOME`) and the footer-rotation rules removed from the diversity gate; six
+  brand-in-frame photos flagged and refused at render with the nine low-res ones; a channel
+  health step in the Monday routine. `batches/r4-smoke.json` renders the lot. Next: type scale
+  tokens, the composition gate (`layout-gate.js`), the reference board, reels with a sound bed.
 - **Oct 16 2026 — "Send this to" pillar (the brief's task 0, done):** first prop-driven series
   shell, `sendthis` (hook, payoff, variant, showRule), ported from Korian's text-only posts via the
   Claude Design export. Two mechanics it establishes are the pattern for the steps, persona and

@@ -307,7 +307,7 @@ const TEMPLATES = {
   // ---------- v2 shells (Sep 2026 creative refresh) ----------
   // receipt: the product mechanic on screen. Receipt tape on deep green, mono line items,
   // "iEatz read this as" and the dinners it maps to. Motion-capable (tape prints line by line).
-  receipt: { surface: 'dark', defaultFooter: 'badge-br', motion: receiptMotion, render: (p) => {
+  receipt: { surface: 'dark', defaultFooter: 'badge-bl', motion: receiptMotion, render: (p) => {
     need(p, 'store', 'total', 'head'); cap(p, 'lines', 6, 1); cap(p, 'dishes', 4, 1);
     if ((p.head.match(/<em>/g) || []).length > 1) throw new Error(`${p.file}: receipt head allows one <em>`);
     const f = p.footer || 'badge-br';
@@ -339,13 +339,28 @@ const TEMPLATES = {
     <h1 class="po-head" data-fit="84">${p.head}</h1>
     ${p.body || p.readout ? `<div class="po-row">${p.body ? `<p class="po-body">${p.body}</p>` : '<span></span>'}${p.readout ? `<div class="po-readout">${p.readout.map(r => `<div class="ro"><span class="l">${r.label}</span><span class="v">${r.value}</span></div>`).join('')}</div>` : ''}</div>` : ''}
     ${p.strip ? `<div class="po-strip">${bars}</div>` : ''}
-    ${footer(p, { url: foot, row: rowPaper, bottom: 'paper', top: 'paper', def: 'badge-tr' })}
+    <div class="po-fill"></div>
+    ${footer(p, { url: foot, row: rowPaper, bottom: 'paper', top: 'paper', def: 'badge-bl' })}
+  </div>`; } },
+
+  // steps: a recipe interior slide that shows the dish. Photo band, the recipe name, 2 to 4
+  // numbered steps (<b> for the key ingredient), and a readout (protein, minutes, serves).
+  // The carousel rule in doc.js wants every interior slide to carry a photo or a readout;
+  // this is the shell that does both.
+  steps: { surface: 'paper', defaultFooter: 'none', render: (p, PHOTOS) => {
+    need(p, 'photo', 'head'); cap(p, 'steps', 4, 2); cap(p, 'readout', 3);
+    return `<div class="pin t-steps">
+    <div class="hero">${img(PHOTOS, p.photo, p.objPos)}</div>
+    <div class="panel">${eyebrow(p)}<h1 class="head" data-fit="48">${p.head}</h1>
+    <div class="steps">${p.steps.map((s, i) => `<div class="step"><div class="num">${i + 1}</div><div class="txt">${s}</div></div>`).join('')}</div>
+    <div class="ro-row">${p.readout ? `<div class="readout">${p.readout.map(r => `<span class="ro"><span class="l">${r.label}</span><span class="v">${r.value}</span></span>`).join('')}</div>` : '<span></span>'}</div>
+    ${footer(p, { url: foot, row: rowPaper, bottom: 'paper', top: 'photo', def: 'none' })}</div>
   </div>`; } },
 
   // collage: 2-3 photos as cut cards on deep paper, saffron tape, serif annotations, one tomato
   // price tag, film grain. Positions are px on a 1080x1350 stage, scaled by frame width and
   // centered vertically at other sizes.
-  collage: { surface: 'paper-deep', defaultFooter: 'badge-tl', ownGrain: true, render: (p, PHOTOS) => {
+  collage: { surface: 'paper-deep', defaultFooter: 'badge-bl', ownGrain: true, render: (p, PHOTOS) => {
     need(p, 'head'); cap(p, 'cards', 3, 2); cap(p, 'notes', 4);
     const s = p.w / 1080, top = Math.round((p.h - 1350 * s) / 2);
     const tape = (t) => !t ? '' : `<i class="cc-tape ${t === true ? 'c' : t}"></i>`;
@@ -405,6 +420,7 @@ const TEMPLATES = {
     ${onPhoto ? `<img class="bg" src="${PHOTOS}/${p.bg.photo}" alt="" style="object-position:${p.bg.objPos || 'center'}"><div class="th-scrim"></div>` : ''}
     ${p.head ? `<h1 class="th-head">${p.head}</h1>` : ''}
     <div class="th-msgs">${msgs}</div>
+    <div class="th-fill"></div>
     ${bottom}
   </div>`; } },
 
@@ -480,5 +496,12 @@ const TEMPLATES = {
 const surfaceOf = (p) => { const t = TEMPLATES[p.template]; if (!t) return null; return typeof t.surface === 'function' ? t.surface(p) : t.surface; };
 // Footer a post actually renders with (legacy shells default to badge-url; ad shells have their own).
 const footerOf = (p) => { const t = TEMPLATES[p.template]; if (!t) return null; if (/^ad/.test(p.template)) return 'ad'; return p.footer || t.defaultFooter || 'badge-url'; };
+// The brand mark has one home per surface (R4, Oct 22 2026). Paper, deep paper, mint and dark
+// shells carry it bottom-left; photo shells stamp it bottom-right. Carousel interiors carry none
+// and sendthis keeps its centred badge. The diversity gate fails any other position on posts
+// scheduled from 2026-10-26; before that the gate rotated the mark on purpose, which is why the
+// October grids look like a template pack.
+const FOOTER_HOME = { paper: 'badge-bl', 'paper-deep': 'badge-bl', mint: 'badge-bl', dark: 'badge-bl', 'photo-bleed': 'badge-br' };
+const footerHome = (surface) => FOOTER_HOME[surface] || null;
 
-module.exports = { TEMPLATES, MARK, badge, badgeDark, foot, footDark, FOOTERS, surfaceOf, footerOf };
+module.exports = { TEMPLATES, MARK, badge, badgeDark, foot, footDark, FOOTERS, surfaceOf, footerOf, footerHome, FOOTER_HOME };

@@ -86,7 +86,8 @@ Current kit (surface in brackets; the gate reads it):
 | `sendthis` | paper (cream) / dark (green) | `hook` (plain text, ≤16 words / 120 chars, `\n` = intentional break, never names the app), `payoff` (italic, ≤12 words, ≤2 lines), `variant` `cream` \| `green`, `showRule`? (hairline between them). Lowercase except `copy-allowlist.txt` capitals; no dashes, emoji or hashtags. Hook size tiers 124/110/98 px by length, then the safe-zone assertion. **1080x1350 only** (the pillar has no Pinterest variant). Reference: `../reference/design-system/ig-send-this/` | badge-bc |
 | `bleed` | photo-bleed | `photo`, `objPos`, `eyebrow`, `head`, `sub`, `headSize` | badge-url · **motion** |
 | `recipephoto` | paper | `photo`, `objPos`, `eyebrow`, `head`, `ings[]`, `method` | badge-url |
-| `list` | paper | `eyebrow`, `head`, `items[{t,s}]` | badge-url |
+| `steps` | paper | `photo`, `objPos`, `photoClaim`, `eyebrow`?, `head`, `steps[]` 2–4 (`<b>` = key ingredient), `readout[{label,value}]` ≤3. The carousel interior that shows the dish: photo band on top, numbered steps, mono readout | none (interior) · badge-bl standalone |
+| `list` | paper | `eyebrow`, `head`, `items[{t,s}]`, `readout[]`? Interior rule (Oct 22): at most one `list` slide per carousel, and only with a `readout` | badge-url |
 | `device` | mint | `photo` (`app-*.jpg` only: real screens), `eyebrow`, `head`, `cap` | badge-url |
 | `photo` / `igphoto` | paper | `photo`, `eyebrow`, `head`, `chips[]` | badge-url |
 | `stat` | paper | `eyebrow`, `stat`, `statSub`, `statBody` | badge-url |
@@ -108,6 +109,23 @@ bedDb }` bakes a Meta Sound Collection bed and/or a voiceover into the file (rul
 
 **Deprecated** (kept so old batches re-render; the gate warns on any use): `statdark` (use `poster`),
 `recipe` (text-only; use `recipephoto`), `quote` (paper; use `quotedark`).
+
+### Composition rules enforced at render (Oct 22 2026)
+- **Carousel interiors show the food.** Every slide after the cover carries a photo or a
+  `readout`; at most one slide is a bare `list`. `expand()` in `doc.js` refuses the carousel
+  otherwise (batches created before Oct 22 are exempt so they still re-render).
+- **An underlined phrase never wraps.** `.u` is `white-space:nowrap`; the fit script shrinks the
+  headline until the phrase sits on one line, and the render fails if it still wraps.
+- **Headlines run to 4 lines at most** (`.po-head`, `.th-head`, `.bhead`, `.cc-head`, list and
+  steps heads); longer fails the render line.
+- **Poster and thread are one block.** The headline and its body row are centred in the frame
+  (`po-fill` / `th-fill` take the slack) instead of headline top, void, footnote bottom.
+- **The badge has one home per surface** (`FOOTER_HOME` in `templates.js`): paper, deep paper,
+  mint and dark shells bottom-left; photo shells stamp bottom-right; carousel interiors none;
+  sendthis centred. The diversity gate fails any other position on posts from Oct 26; the old
+  "rotate the footer" rules (adjacency, 50% cap) are gone.
+- **Flagged photos are refused.** `photos.json` `flag` of `low-res` (under 1600 px) or
+  `brand-in-frame` (logo, retailer, third-party screen) fails the render; pick another shot.
 
 ## Gates
 - **Diversity gate** (`diversity-gate.js`): per channel, in publish order. Adjacent template, surface,

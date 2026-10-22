@@ -1,0 +1,207 @@
+{
+  "name": "r4-smoke",
+  "v2": true,
+  "createdAt": "2026-10-22",
+  "note": "Smoke batch for the Oct 22 composition fixes: poster block centred and an underlined phrase that never wraps, thread block centred, the new steps interior, the carousel interior rule, badge homes. Render only; never schedule.",
+  "posts": [
+    {
+      "file": "r4-poster-long-u",
+      "w": 1080,
+      "h": 1350,
+      "template": "poster",
+      "footer": "badge-bl",
+      "head": "Half the week is <span class=\"u\">on this receipt</span>",
+      "body": "Six items, four dinners. The receipt is the meal plan.",
+      "readout": [
+        {
+          "label": "items",
+          "value": "6"
+        },
+        {
+          "label": "dinners",
+          "value": "4"
+        },
+        {
+          "label": "per plate",
+          "value": "$4.98"
+        }
+      ]
+    },
+    {
+      "file": "r4-poster-short",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-bl",
+      "head": "Soup season starts on the <span class=\"i\">pantry shelf</span>"
+    },
+    {
+      "file": "r4-thread",
+      "w": 1080,
+      "h": 1350,
+      "template": "thread",
+      "footer": "badge-bl",
+      "head": "The 5:52 text, <span class=\"accent\">answered</span>",
+      "msgs": [
+        {
+          "time": "Tue 5:52 PM"
+        },
+        {
+          "who": "them",
+          "text": "whats for dinner"
+        },
+        {
+          "who": "me",
+          "text": "pasta with the meat sauce"
+        },
+        {
+          "who": "them",
+          "text": "the one with lentils in it??"
+        },
+        {
+          "who": "me",
+          "text": "you can't taste them. 25 minutes. set the table."
+        }
+      ],
+      "foot": "Pasta with lentil and turkey sauce, 29 g of protein, 25 minutes."
+    },
+    {
+      "file": "r4-steps",
+      "w": 1080,
+      "h": 1350,
+      "template": "steps",
+      "footer": "badge-bl",
+      "photo": "food/power-bowl-veg.jpg",
+      "objPos": "52% 50%",
+      "photoClaim": "a bowl of seared salmon over cauliflower rice with green beans, cherry tomatoes and pesto",
+      "eyebrow": "Dinner, 20 minutes",
+      "head": "Pesto salmon over cauliflower rice",
+      "steps": [
+        "Sear the <b>salmon</b> skin side down 4 minutes, flip for 3.",
+        "Steam the <b>green beans</b> and <b>cauliflower rice</b> in the same pan, 5 minutes.",
+        "Pesto over the top, tomatoes and pine nuts if there are any."
+      ],
+      "readout": [
+        {
+          "label": "protein",
+          "value": "38 g"
+        },
+        {
+          "label": "time",
+          "value": "20 min"
+        },
+        {
+          "label": "serves",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "file": "r4-carousel",
+      "w": 1080,
+      "h": 1350,
+      "slides": [
+        {
+          "template": "poster",
+          "footer": "badge-bl",
+          "head": "One dozen eggs, <span class=\"u\">three meals</span>",
+          "readout": [
+            {
+              "label": "meals",
+              "value": "3"
+            },
+            {
+              "label": "protein",
+              "value": "22 to 24 g"
+            }
+          ]
+        },
+        {
+          "template": "steps",
+          "photo": "food/veggie-bowl-eggs.jpg",
+          "photoClaim": "a bowl of vegetables topped with eggs",
+          "head": "Black bean and egg skillet",
+          "steps": [
+            "Warm the <b>black beans</b> in a dry skillet with cumin, smash half.",
+            "Crack the <b>eggs</b> into the empty side, cover 3 minutes.",
+            "Warm the tortillas on the same burner, fill, roll."
+          ],
+          "readout": [
+            {
+              "label": "protein",
+              "value": "22 g"
+            },
+            {
+              "label": "time",
+              "value": "9 min"
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "head": "The carton, <span class=\"accent\">used up</span>",
+          "items": [
+            {
+              "t": "Quesadillas",
+              "s": "dinner, 12 minutes"
+            },
+            {
+              "t": "Savory oats",
+              "s": "breakfast, 10 minutes"
+            },
+            {
+              "t": "Egg skillet",
+              "s": "breakfast, 9 minutes"
+            }
+          ],
+          "readout": [
+            {
+              "label": "from one carton",
+              "value": "3 meals"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "r4-carousel-bad",
+      "w": 1080,
+      "h": 1350,
+      "slides": [
+        {
+          "template": "poster",
+          "footer": "badge-bl",
+          "head": "Four <span class=\"i\">soups</span>"
+        },
+        {
+          "template": "list",
+          "head": "White bean and kale",
+          "items": [
+            {
+              "t": "Saute",
+              "s": "garlic"
+            },
+            {
+              "t": "Simmer",
+              "s": "beans"
+            }
+          ]
+        },
+        {
+          "template": "list",
+          "head": "Tomato and chickpea",
+          "items": [
+            {
+              "t": "Saute",
+              "s": "onion"
+            },
+            {
+              "t": "Simmer",
+              "s": "chickpeas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

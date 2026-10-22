@@ -30,6 +30,19 @@ function expand(p) {
   if (n < 2 || n > 10) throw new Error(`${p.file}: carousel has ${n} slides (2 to 10)`);
   if (!CAROUSEL_COVERS.includes(p.slides[0].template))
     throw new Error(`${p.file}: carousel cover must be ${CAROUSEL_COVERS.join(' | ')}, got "${p.slides[0].template}"`);
+  // Interior rule (R3, Oct 22 2026): a recipe carousel shows the food. Every slide after the
+  // cover carries a photo or a readout, and at most one slide is a bare `list`. The October
+  // batches shipped seven near-identical list slides in a row ("four soups", zero soup).
+  // Batches created before 2026-10-22 (already published) are exempt so they still re-render.
+  if (!p.createdAt || p.createdAt >= '2026-10-22') {
+    const lists = p.slides.slice(1).filter(s => s.template === 'list').length;
+    if (lists > 1) throw new Error(`${p.file}: ${lists} list slides; a carousel gets at most one (use "steps" for recipe slides: photo + numbered steps)`);
+    p.slides.slice(1).forEach((s, i) => {
+      const hasPhoto = !!(s.photo || s.top || s.bottom || (s.cards || []).length || (s.bg && s.bg.photo) || (s.msgs || []).some(m => m.photo));
+      if (!hasPhoto && !(s.readout || []).length && s.template !== 'receipt')
+        throw new Error(`${p.file}: slide ${i + 2} ("${s.template}") shows no food: give it a photo or a readout`);
+    });
+  }
   return p.slides.map((s, i) => {
     const q = { w: p.w, h: p.h, grade: p.grade, grain: p.grain, createdAt: p.createdAt, ...s };
     q.file = `${p.file}--${String(i + 1).padStart(2, '0')}`;
@@ -95,6 +108,8 @@ for(const t of [el,...el.querySelectorAll('*')])if(t.scrollWidth>t.clientWidth+1
 for(const el of document.querySelectorAll('[data-clear]')){const r=el.getBoundingClientRect();const n=(el.className||el.tagName).toString().split(' ')[0];
 for(const o of document.querySelectorAll(el.dataset.clear)){if(o===el||el.contains(o)||o.contains(el))continue;const q=o.getBoundingClientRect();
 if(r.left<q.right-1&&r.right>q.left+1&&r.top<q.bottom-1&&r.bottom>q.top+1){out.push(n+' sits over '+((o.className||o.tagName).toString().split(' ')[0])+' (F-003: type on clean paper)');break;}}}
+for(const u of document.querySelectorAll('.u')){if(u.getClientRects().length>1){out.push('underlined phrase "'+u.textContent.trim()+'" wraps onto two lines (shorten it or the headline)');break;}}
+for(const h of document.querySelectorAll('.po-head,.th-head,.t-steps .head,.t-list .head,.bhead,.cc-head')){const lh=parseFloat(getComputedStyle(h).lineHeight)||1;const lines=Math.round(h.getBoundingClientRect().height/lh);if(lines>4){out.push(((h.className||h.tagName).toString().split(' ')[0])+' runs to '+lines+' lines (max 4: cut the headline)');break;}}
 return out;};</script>`;
 
 // Wait for fonts + images, force-load and check every face, then fit text and check safe zones.
