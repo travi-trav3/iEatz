@@ -653,6 +653,20 @@
       ],
       "why": "Hidden protein: lentils vanish into a sauce picky kids already eat.",
       "app": "Recipe lives on the kids dinners page; iEatz writes versions like it with the protein counted."
+    },
+    {
+      "file": "o23-ig-quotedark-v3",
+      "w": 1080,
+      "h": 1350,
+      "template": "quotedark",
+      "footer": "badge-bl",
+      "photo": "lifestyle/kitchen-prep-scene.jpg",
+      "objPos": "64% 45%",
+      "photoClaim": "a woman in a pink apron chopping mushrooms on a board, with asparagus in a jar and scallions beside her",
+      "quote": "I haven't had any groceries go to waste <span class=\"accent\">the last couple of weeks</span>",
+      "attr": "SixSocks, App Store review",
+      "why": "A real review that says the one thing the app is for: the food gets cooked instead of thrown out.",
+      "app": "iEatz writes the recipe from what is already on the counter, so the mushrooms and scallions get used."
     }
   ]
 }

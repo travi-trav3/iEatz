@@ -115,7 +115,7 @@ function gate(file, opts = {}) {
       if (home && p.footer !== home) set(fails, `${channel}: ${p.id} footer "${p.footer}" on a ${p.surface} shell (home is "${home}")`);
     });
     // 9. Plated photography on <= 30% of photo posts
-    const photoPosts = ps.filter(p => p.heroPhoto && !p.fixed); // a hotfix uses the best truthful photo available; it is outside the plated ratio
+    const photoPosts = ps.filter(p => p.heroPhoto);
     const plated = photoPosts.filter(p => p.photoStyle === 'plated').length;
     if (photoPosts.length && plated / photoPosts.length > 0.3) fails.push(`${channel}: photoStyle "plated" on ${pct(plated, photoPosts.length)} of photo posts (cap 30%)`);
     ps.forEach(p => { if (p.heroPhoto && (!p.photoStyle || p.photoStyle === 'unknown')) warns.push(`${channel}: ${p.id} hero ${p.heroPhoto} has no style in photos.json`); });
