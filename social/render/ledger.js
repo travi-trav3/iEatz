@@ -41,7 +41,7 @@ function derive(r) {
     template: r.slides ? 'carousel' : r.template,
     coverTemplate: cover.template,
     surface: surfaceOf(cover),
-    format: r.slides ? 'carousel' : r.motion ? 'reel' : 'static',
+    format: r.slides ? 'carousel' : (r.motion || r.template === 'footage') ? 'reel' : 'static',
     footer: footerOf(cover),
     eyebrow: !!cover.eyebrow,
     accentTail: accentTailOf(headlineOf(cover)),
@@ -81,7 +81,7 @@ function load(file) {
   const posts = [];
   const mismatches = [];
   for (const raw of batch.posts) {
-    if (raw.status === 'cut' || raw.status === 'retracted') continue; // cut from the plan, or published and pulled: not part of the set
+    if (raw.status === 'cut' || raw.status === 'retracted' || raw.status === 'draft') continue; // drafts are out of the plan until restored // cut from the plan, or published and pulled: not part of the set
     const r = render ? byStem[stem(raw.file)] : (raw.template || raw.slides ? raw : null);
     const d = r ? derive(r) : {};
     const post = {
