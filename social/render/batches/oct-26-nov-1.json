@@ -544,6 +544,36 @@
       ],
       "why": "A real cart with no plan is the moment the app exists for; the second line turns the cart into dinner before the checkout.",
       "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein."
+    },
+    {
+      "file": "p26b-pin-bleed-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "food/cutting-board-veg.jpg",
+      "objPos": "50% 55%",
+      "photoClaim": "a wooden cutting board with half an avocado, cherry tomatoes, two eggs, three mushrooms, a sliced jalapeno, spinach, arugula and scallions, with a frying pan above it",
+      "head": "This is a <span class=\"accent\">12-minute dinner.</span> You just can't see it yet.",
+      "sub": "Type the eight things on the board into iEatz. It writes the recipe, counts the protein, and Instacarts anything missing.",
+      "why": "The problem in four words (nothing to make?) over the exact proof that it is not true: eight random things that are already a dinner.",
+      "app": "Type what you have into iEatz; it writes the recipe with protein counted and sends missing items to Instacart.",
+      "eyebrow": "Nothing to make?"
+    },
+    {
+      "file": "p29b-pin-bleed-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "food/prep-spread-greens.jpg",
+      "objPos": "50% 40%",
+      "photoClaim": "an outdoor prep table seen from above: hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of toasted pine nuts",
+      "head": "Four things on the board. <span class=\"accent\">Dinner in 15.</span>",
+      "sub": "Peppers, lettuce, avocado, tomatoes: type them into iEatz and it writes the recipe from exactly those. Missing something? It goes to Instacart.",
+      "why": "The anxiety (no recipe, no plan) answered by a number (dinner in 15) over the real board.",
+      "app": "Type the four into iEatz; it writes the recipe and sends the missing items to Instacart.",
+      "eyebrow": "No recipe, no plan"
     }
   ]
 }
