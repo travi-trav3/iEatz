@@ -19,3 +19,14 @@ Stock b-roll, if filming slips: Pexels and Pixabay (free, commercial use), Mixki
 Artgrid, Storyblocks, Envato Elements. Instagram's 2026 originality rule treats pure stock
 reposts as non-original, so stock is always cut with our own type, app screens or voice, never
 posted as is.
+
+## How a clip becomes a reel (Oct 25 2026)
+1. Drop the clip in folder 2 (or send it in chat). It is copied to `assets/video/raw/` (gitignored).
+2. The batch gets a `footage` post: the clip, a `hold` for the last frame, two or three `overlays`
+   (a line each, with the second from the moment the shot changes), `footageClaim` (what the clip
+   literally shows), `why` and `app`.
+3. `node render-footage.js batches/<batch>.json --only <file>` writes the reel and its cover; the
+   clip's own sound is kept at -14 LUFS. Only the finished mp4 is committed and hosted.
+First one: `o26-ig-footage` (grocery aisle, tilt to the cart, 7.3 s), Mon Oct 26 6:40 PM PT.
+What makes a clip easy to use: vertical, 6 to 20 seconds, one movement (walk, tilt, pour, flip),
+the food or the receipt filling the frame by the end, no faces you do not want posted.

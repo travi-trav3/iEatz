@@ -33,7 +33,7 @@
   "posts": [
     {
       "id": "o26-ig",
-      "status": "scheduled",
+      "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-10-26T18:40:00-07:00",
       "file": "assets/social/oct26/o26-ig-reel.mp4",
@@ -46,11 +46,31 @@
       "firstComment": "The pine nuts are the only thing on this table that counts as optional.",
       "alt": "Vertical reel: an overhead photo of an outdoor prep table, hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of pine nuts. Headline over the photo: Peppers, lettuce, an avocado, a bowl of tomatoes. That is dinner.",
       "bufferId": "6ada61d12f4faf5f79630579",
-      "slackAlert": "Dr0CBGENB16D"
+      "slackAlert": "Dr0CBGENB16D",
+      "note": "2026-10-25 21:10 PT: moved to draft in Buffer after Travis's review (\"a lot of poor quality ones scheduled, it all feels the same\"): rendered prep-table reel replaced by the real-footage reel. Restore with edit_post saveToDraft:false, mode customScheduled, the original dueAt."
+    },
+    {
+      "id": "o26f-ig",
+      "status": "scheduled",
+      "channel": "instagram",
+      "dueAt": "2026-10-26T18:40:00-07:00",
+      "file": "assets/social/oct26/o26-ig-footage.mp4",
+      "cover": "assets/social/oct26/o26-ig-footage-cover.png",
+      "pillar": "Grocery/Instacart",
+      "topic": "Grocery run",
+      "cta": "other",
+      "format": "reel",
+      "videoTitle": "This isn't dinner yet.",
+      "text": "Walking the aisle with no plan, which is how it usually goes. Green beans, a pouch of jasmine rice, a dozen eggs, bananas, a lemonade for the drive home.\n\nSnap the receipt at the register, or add the five to iEatz, and tonight is green bean and egg fried rice: rice into the hot pan first, beans in for 3 minutes, eggs scrambled through, soy and a squeeze of lemon. 15 minutes, about 20 g of protein per serving, estimated. Verify for allergens.\n\n#groceryhaul #whatsfordinner #friedrice #15minutemeals #ieatzhealthy",
+      "firstComment": "Filmed on the real shopping run. The bananas are breakfast.",
+      "alt": "Vertical reel from a real phone clip: walking down a grocery aisle behind a cart, headline This isn't dinner yet; then the cart from above with green beans, jasmine rice, eggs, bananas and a lemonade, headline Green beans, rice, eggs. Fried rice, tonight, and a line about snapping the receipt or adding the five to iEatz.",
+      "bufferId": "6aded3250b5343d0700bf2a0",
+      "slackAlert": "Dr0CBW6D49CK",
+      "note": "First real-footage reel (render-footage.js). Source clip: Travis, Oct 25, 720x1280, 5.7 s, kept in assets/video/raw (gitignored). The 18:25 alert for the drafted o26 still fires; the 18:26 correction names this reel (its Buffer link points at the wrong post, p26a; the time and slot are right)."
     },
     {
       "id": "o27-ig",
-      "status": "scheduled",
+      "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-10-27T12:15:00-07:00",
       "file": "assets/social/oct26/o27-ig-carousel--01.png",
@@ -68,7 +88,8 @@
       "firstComment": "Save this for the night the board looks like that and the plan does not exist yet.",
       "alt": "Carousel. Slide one: What is on the board, three ways, with a readout of 8 on the board, 3 dinners, 20 minutes longest. Slide two: the cutting board with avocado, eggs, tomatoes, mushrooms and greens. Slide three: a greens, egg and avocado bowl with three steps. Slide four: roasted tomato ricotta toast with three steps. Slide five: mushroom, scallion and spinach eggs, three numbered steps.",
       "bufferId": "6ada61d543a2d9ebee144ebd",
-      "slackAlert": "Dr0CBJ8Q2ZKN"
+      "slackAlert": "Dr0CBJ8Q2ZKN",
+      "note": "2026-10-25 21:10 PT: moved to draft in Buffer after Travis's review (\"a lot of poor quality ones scheduled, it all feels the same\"): type-led carousel. Restore with edit_post saveToDraft:false, mode customScheduled, the original dueAt."
     },
     {
       "id": "o28-ig",
@@ -104,7 +125,7 @@
     },
     {
       "id": "o01-ig",
-      "status": "scheduled",
+      "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-11-01T10:00:00-08:00",
       "file": "assets/social/oct26/o01-ig-poster.png",
@@ -116,11 +137,12 @@
       "alt": "Cream typographic post: Sunday: every green gets a job, with gets a job underlined in red; a line assigning kale, spinach, lemons and cucumber and telling the reader to add the week's produce to iEatz; a readout of 5 things of produce, 4 dinners, 0 wasted.",
       "bufferId": "6ada61e39a872e86219d4edd",
       "slackAlert": "Dr0CC8URSUBS",
-      "fixed": "2026-10-22: thread sketch replaced with a poster that says what the app does; F-004"
+      "fixed": "2026-10-22: thread sketch replaced with a poster that says what the app does; F-004",
+      "note": "2026-10-25 21:10 PT: moved to draft in Buffer after Travis's review (\"a lot of poor quality ones scheduled, it all feels the same\"): poster. Restore with edit_post saveToDraft:false, mode customScheduled, the original dueAt."
     },
     {
       "id": "p26a-pin",
-      "status": "scheduled",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-10-26T07:40:00-07:00",
       "file": "assets/pinterest/oct26/p26a-pin-poster.png",
@@ -134,7 +156,8 @@
       "text": "Five breakfasts that take ten minutes or less, each with 15 g of protein or more: cottage cheese toast, savory oats with a jammy egg, a freezer berry yogurt bowl, a black bean and egg skillet, a peanut banana shake. Full recipes free on the site, with the protein per serving on every one.",
       "alt": "Cream typographic pin: Five breakfasts, ten minutes, with ten minutes underlined in red, a line naming the five recipes, and a readout of 5 recipes, 10 minutes or less, 15 g protein plus.",
       "bufferId": "6ada61e9e374ecc98220ecb2",
-      "slackAlert": "Dr0CBGEM9ABT"
+      "slackAlert": "Dr0CBGEM9ABT",
+      "note": "2026-10-25 21:10 PT: moved to draft in Buffer after Travis's review (\"a lot of poor quality ones scheduled, it all feels the same\"): poster. Restore with edit_post saveToDraft:false, mode customScheduled, the original dueAt."
     },
     {
       "id": "p26b-pin",
@@ -174,7 +197,7 @@
     },
     {
       "id": "p27b-pin",
-      "status": "scheduled",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-10-27T12:10:00-07:00",
       "file": "assets/pinterest/oct26/p27b-pin-list.png",
@@ -189,11 +212,12 @@
       "alt": "Cream pin: Kids dinner, 12 minutes. Cheesy egg and black bean quesadillas, three numbered steps: mash half a can of black beans, cheddar in a tortilla, triangles for small hands. Readout: 24 g protein, 12 minutes, 1 pan.",
       "bufferId": "6ada61ffe374ecc98220f980",
       "slackAlert": "Dr0CB8AWLKB5",
-      "fixed": "2026-10-22: thread sketch replaced with the recipe as steps before it published; F-004"
+      "fixed": "2026-10-22: thread sketch replaced with the recipe as steps before it published; F-004",
+      "note": "2026-10-25 21:10 PT: moved to draft in Buffer after Travis's review (\"a lot of poor quality ones scheduled, it all feels the same\"): list. Restore with edit_post saveToDraft:false, mode customScheduled, the original dueAt."
     },
     {
       "id": "p28a-pin",
-      "status": "scheduled",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-10-28T07:40:00-07:00",
       "file": "assets/pinterest/oct26/p28a-pin-poster.png",
@@ -207,7 +231,8 @@
       "text": "The Real Food Cookbook: 30 healthy meals under 30 minutes, built for a week of eating under $50, with a tap-to-shop Instacart list on every recipe so the cart builds itself. Free. Password: REALFOOD.",
       "alt": "Cream typographic pin: 30 dinners. Every one shops itself, with shops itself underlined in red, a line about The Real Food Cookbook, a readout of 30 recipes, each under 30 minutes, 30 Instacart lists, and a green and red strip.",
       "bufferId": "6ada6204e374ecc98220fa3e",
-      "slackAlert": "Dr0CBJ8QGC2G"
+      "slackAlert": "Dr0CBJ8QGC2G",
+      "note": "2026-10-25 21:10 PT: moved to draft in Buffer after Travis's review (\"a lot of poor quality ones scheduled, it all feels the same\"): poster (cookbook). Restore with edit_post saveToDraft:false, mode customScheduled, the original dueAt."
     },
     {
       "id": "p28b-pin",
@@ -229,7 +254,7 @@
     },
     {
       "id": "p29a-pin",
-      "status": "scheduled",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-10-29T07:40:00-07:00",
       "file": "assets/pinterest/oct26/p29a-pin-list.png",
@@ -243,7 +268,8 @@
       "text": "Rolled oats cooked like risotto in broth with a knob of butter, parmesan and pepper stirred in off the heat, a jammy egg halved on top. 18 g of protein, 10 minutes. Full recipe free on the site with four more 10-minute breakfasts.",
       "alt": "Cream pin: Breakfast, 10 minutes. Savory oats with a jammy egg, three numbered items: oats like risotto, parmesan and pepper, the egg, and a readout of 18 g protein, 10 minutes.",
       "bufferId": "6ada620d9a872e86219d6343",
-      "slackAlert": "Dr0CBCJV471U"
+      "slackAlert": "Dr0CBCJV471U",
+      "note": "2026-10-25 21:10 PT: moved to draft in Buffer after Travis's review (\"a lot of poor quality ones scheduled, it all feels the same\"): list. Restore with edit_post saveToDraft:false, mode customScheduled, the original dueAt."
     },
     {
       "id": "p29b-pin",
@@ -265,7 +291,7 @@
     },
     {
       "id": "p30a-pin",
-      "status": "scheduled",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-10-30T07:40:00-07:00",
       "file": "assets/pinterest/oct26/p30a-pin-poster.png",
@@ -279,7 +305,8 @@
       "text": "Stovetop mac and cheese with cottage cheese blended into the sauce: 22 g of protein per serving, 20 minutes, serves 4, and nobody at the table can tell. Full recipe free on the site, with three more high protein dinners picky eaters actually eat.",
       "alt": "Cream typographic pin: Mac and cheese, 22 g protein, with 22 g protein underlined in red, a line about cottage cheese in the sauce, and a readout of 22 g protein, 20 minutes, serves 4.",
       "bufferId": "6ada62132f4faf5f79632277",
-      "slackAlert": "Dr0CC8UPR6BS"
+      "slackAlert": "Dr0CC8UPR6BS",
+      "note": "2026-10-25 21:10 PT: moved to draft in Buffer after Travis's review (\"a lot of poor quality ones scheduled, it all feels the same\"): poster. Restore with edit_post saveToDraft:false, mode customScheduled, the original dueAt."
     },
     {
       "id": "p30b-pin",

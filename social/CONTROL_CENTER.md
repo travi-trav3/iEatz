@@ -434,6 +434,14 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Oct 25 2026 — the honest review and the first real footage:** Travis on the Oct 26 to Nov 1
+  queue: "a lot of poor quality ones, it all feels the same, not appetizing." Eight posts pulled to
+  drafts; the real-photo posts stay. His first phone clip (grocery aisle, tilt to the cart) became
+  the Monday reel through the new `footage` shell and `render-footage.js`. Diagnosis written into
+  the reply and the log: copy written to the gates instead of to appetite, half the posts with no
+  food in them, no photo in the library that matches a recipe we write about, two visual families
+  however many shells exist. Next batch is planned from his footage and a reference board he picks,
+  and the rationale table is reviewed by him before anything is scheduled.
 - **Oct 22 2026 — F-004, the rationale gate:** Travis caught two scheduled posts the same
   afternoon the first round shipped: the SixSocks quote over an empty kitchen ("just a photo of
   cabinets") and a text-thread sketch about pasta ("not funny or insightful or relevant to the value
