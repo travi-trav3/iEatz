@@ -683,7 +683,73 @@
         }
       ],
       "why": "Three beats in seven seconds: the problem (no list, no plan) over the aisle at speed, the surprise (this isn't dinner yet) as the camera tilts into the cart, the promise with a number (fried rice, 15 minutes) over the cart in slow motion.",
-      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein."
+      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein.",
+      "status": "retracted",
+      "note": "2026-10-26 17:00 PT, Travis: \"sped up and shaky in the opening frames, 3x is too fast\"; recut as v3 with his beats"
+    },
+    {
+      "file": "o26-ig-footage-v3",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "style": "center",
+      "video": "assets/video/raw/2026-10-25-grocery-aisle-cart.mp4",
+      "segments": [
+        {
+          "trim": [
+            0,
+            2.9
+          ],
+          "speed": 1.5
+        },
+        {
+          "trim": [
+            2.9,
+            4.3
+          ],
+          "speed": 1.0
+        },
+        {
+          "trim": [
+            4.3,
+            5.7
+          ],
+          "speed": 0.6
+        }
+      ],
+      "hold": 3.2,
+      "audioLevel": -20,
+      "cover": 5.0,
+      "footageClaim": "Travis's phone clip, Oct 25: walking down a grocery aisle behind a green cart, then tilting down into the cart: a bag of green beans, a pouch of jasmine rice, a carton of eggs, bananas and a bottle of strawberry lemonade",
+      "overlays": [
+        {
+          "head": "No list.<br>No plan.<br><span class=\"accent\">Just ingredients.</span>",
+          "from": 0,
+          "to": 1.9
+        },
+        {
+          "head": "This isn't dinner...",
+          "from": 1.9,
+          "to": 3.1
+        },
+        {
+          "head": "<span class=\"accent\">yet.</span>",
+          "from": 3.4,
+          "to": 4.4,
+          "at": "top"
+        },
+        {
+          "head": "Your cart is <span class=\"accent\">tonight's dinner.</span>",
+          "sub": "Tell iEatz what you've got, or snap the receipt, and it writes a recipe you can cook tonight. No more what's-for-dinner merry-go-round.",
+          "eyebrow": "Fried rice, 15 minutes",
+          "from": 4.6,
+          "at": "top"
+        }
+      ],
+      "why": "Travis's beats: the problem stacked in three lines over the aisle, the sentence left hanging as the camera tilts into the cart, \"yet.\" alone over the groceries, then the promise: what is in the cart is tonight's dinner, and the what's-for-dinner merry-go-round stops.",
+      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein.",
+      "stabilize": true
     }
   ]
 }

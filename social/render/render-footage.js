@@ -3,6 +3,7 @@
 //   "trim": [start, end]?, "hold": seconds (freeze the last frame)?, "speed": 1?, "footer"?,
 //   "segments": [{ "trim": [a, b], "speed": s }, ...]? (a cut: each piece at its own speed, in
 //   order, instead of one trim and one speed), "style": "center"? (type in the middle third),
+//   "stabilize": true? (two-pass vid.stab on the whole clip before the cuts, for handheld walking),
 //   "audioLevel": -14? (loudnorm target; a quiet ambience clip wants -20 so the gain does not
 //   turn room tone into hiss), "cover": 0.6? (the second the cover frame is taken from),
 //   "overlays": [ { "head", "sub"?, "eyebrow"?, "at": "top"?, "from": s, "to": s }, ... ], "footageClaim": "..." }
@@ -84,8 +85,17 @@ const probe = (f) => {
     // atempo takes 0.5 to 2 per stage; chain stages for faster cuts
     const atempo = (s) => { const st = []; let x = s; while (x > 2) { st.push('atempo=2'); x /= 2; } while (x < 0.5) { st.push('atempo=0.5'); x *= 2; } st.push(`atempo=${x.toFixed(4)}`); return st.join(','); };
     const fc = [];
+    let vin = '0:v';
+    if (p.stabilize) {
+      const trf = path.join(OUT, p.file + '.trf');
+      try { execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', src, '-vf', `vidstabdetect=shakiness=7:accuracy=15:result=${trf}`, '-f', 'null', '-'], { stdio: ['ignore', 'ignore', 'pipe'] }); }
+      catch (e) { console.error(`!! ${p.file}: vidstabdetect: ${String(e.stderr || e.message).slice(0, 300)}`); bad++; continue; }
+      fc.push(`[0:v]vidstabtransform=input=${trf}:smoothing=24:zoom=3:optzoom=1:interpol=bicubic,unsharp=5:5:0.6:3:3:0.3[stab]`);
+      fc.push(`[stab]split=${segs.length}${segs.map((s, i) => `[in${i}]`).join('')}`);
+      vin = null;
+    }
     segs.forEach((s, i) => {
-      fc.push(`[0:v]trim=start=${s.trim[0]}:end=${s.trim[1]},setpts=(PTS-STARTPTS)/${s.speed}[sv${i}]`);
+      fc.push(`[${vin || `in${i}`}]trim=start=${s.trim[0]}:end=${s.trim[1]},setpts=(PTS-STARTPTS)/${s.speed}[sv${i}]`);
       if (withAudio) fc.push(`[0:a]atrim=start=${s.trim[0]}:end=${s.trim[1]},asetpts=PTS-STARTPTS,${atempo(s.speed)}[sa${i}]`);
     });
     fc.push(`${segs.map((s, i) => withAudio ? `[sv${i}][sa${i}]` : `[sv${i}]`).join('')}concat=n=${segs.length}:v=1:a=${withAudio ? 1 : 0}${withAudio ? '[cv][ca]' : '[cv]'}`);
@@ -114,7 +124,7 @@ const probe = (f) => {
     fs.unlinkSync(frame);
     const o = probe(out);
     const mb = (fs.statSync(out).size / 1048576).toFixed(2);
-    console.log(`OK ${p.file}.mp4 ${o.w}x${o.h} ${o.duration.toFixed(1)}s (${segs.length > 1 ? `${segs.length} cuts, ` : ''}clip ${clipLen.toFixed(1)}s${hold ? ` + hold ${hold}s` : ''}, source ${info.w}x${info.h}) ${mb}MB audio=${withAudio ? `clip at ${p.audioLevel || -14} LUFS` : 'none'} overlays=${pngs.length} + ${p.file}-cover.png`);
+    console.log(`OK ${p.file}.mp4 ${o.w}x${o.h} ${o.duration.toFixed(1)}s (${segs.length > 1 ? `${segs.length} cuts, ` : ''}${p.stabilize ? 'stabilized, ' : ''}clip ${clipLen.toFixed(1)}s${hold ? ` + hold ${hold}s` : ''}, source ${info.w}x${info.h}) ${mb}MB audio=${withAudio ? `clip at ${p.audioLevel || -14} LUFS` : 'none'} overlays=${pngs.length} + ${p.file}-cover.png`);
   }
   await browser.close();
   console.log(`\n${posts.length} footage post${posts.length === 1 ? '' : 's'}, ${bad} with issues.`);
