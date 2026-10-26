@@ -520,6 +520,30 @@
       "headSize": 84,
       "why": "The herbs went in before they went off: the fridge-first habit in two photos.",
       "app": "Add what is going soft to iEatz and it writes the recipe that uses it first."
+    },
+    {
+      "file": "o26-ig-footage",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "video": "assets/video/raw/2026-10-25-grocery-aisle-cart.mp4",
+      "hold": 1.6,
+      "footageClaim": "Travis's phone clip, Oct 25: walking down a grocery aisle behind a green cart, then tilting down into the cart: a bag of green beans, a pouch of jasmine rice, a carton of eggs, bananas and a bottle of strawberry lemonade",
+      "overlays": [
+        {
+          "head": "This isn't dinner <span class=\"accent\">yet.</span>",
+          "from": 0,
+          "to": 3
+        },
+        {
+          "head": "Green beans, rice, eggs. <span class=\"accent\">Fried rice, tonight.</span>",
+          "sub": "Snap the receipt at the register, or add the five to iEatz, and it writes the recipe.",
+          "from": 3
+        }
+      ],
+      "why": "A real cart with no plan is the moment the app exists for; the second line turns the cart into dinner before the checkout.",
+      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein."
     }
   ]
 }

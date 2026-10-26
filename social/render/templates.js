@@ -377,6 +377,14 @@ const TEMPLATES = {
     ${footer(p, { url: foot, row: rowPaper, bottom: 'paper', top: 'paper', def: 'badge-tl' })}
   </div>`; } },
 
+  // footage: the type layer for a real phone clip (render-footage.js). Same scrim, headline, sub
+  // and badge as bleed, over a transparent frame; the video is composited under it with ffmpeg.
+  // A post lists `overlays` (one per beat: head, sub, from, to) and the renderer makes one PNG each.
+  footage: { surface: 'photo-bleed', defaultFooter: 'badge-br', render: (p) => `<div class="pin ig-bleed footage">
+    <div class="scrim"></div>
+    <div class="bwrap">${eyebrow(p, ' mint')}<h1 class="bhead">${p.head}</h1>${p.sub ? `<p class="bsub">${p.sub}</p>` : ''}</div>${footer(p, F_BLEED)}
+  </div>` },
+
   // split: before over after in one frame. Top photo + mono label, bottom photo under a dark
   // scrim, paper seam label on the cut, caption bottom (<b> renders mono saffron).
   split: { surface: 'photo-bleed', defaultFooter: 'badge-br', render: (p, PHOTOS) => {

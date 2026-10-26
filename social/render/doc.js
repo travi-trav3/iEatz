@@ -136,7 +136,12 @@ async function prepare(page) {
 
 function chromePath() {
   if (process.env.PW_CHROMIUM) return process.env.PW_CHROMIUM;
-  return require('child_process').execSync('ls -d /opt/pw-browsers/chromium*/chrome-linux/chrome 2>/dev/null').toString().trim().split('\n')[0];
+  // Playwright's chromium folder is chrome-linux/ on older builds and chrome-linux64/ on newer ones
+  // (the Oct 2026 container moved); /opt/pw-browsers/chromium is a symlink to the binary when present.
+  const found = require('child_process').execSync('ls -d /opt/pw-browsers/chromium*/chrome-linux*/chrome /opt/pw-browsers/chromium 2>/dev/null').toString().trim().split('\n').filter(Boolean);
+  const bin = found.find(f => /chrome-linux/.test(f)) || found[0];
+  if (!bin) throw new Error('no Chromium under /opt/pw-browsers; set PW_CHROMIUM=<path to chrome>');
+  return bin;
 }
 
 module.exports = { FONT_CHECKS, CAROUSEL_COVERS, expand, photosOf, mapPhotos, htmlDoc, prepare, chromePath, DIR };
