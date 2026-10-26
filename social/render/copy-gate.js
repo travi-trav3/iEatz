@@ -63,6 +63,7 @@ const APP_CAPABILITY = /receipt|add(s|ed|ing)? (what|the|it|them|those|everythin
 
 function check(loaded) {
   const fails = [];
+  const warns = [];
   const byChannel = {};
   for (const p of loaded.posts) (byChannel[p.channel] = byChannel[p.channel] || []).push(p);
   for (const p of loaded.posts) {
@@ -120,6 +121,12 @@ function check(loaded) {
         fails.push(`${p.id}: thread is a sketch: no reply bubble shows what iEatz did (F-004)`);
     }
   }
+  // 8 (F-005, Oct 26 2026): a headline that opens with an instruction verb is our jargon, not a
+  //    hook ("Add the board, get the recipe"). Warning, not failure: the reviewer reads it.
+  for (const p of loaded.posts) {
+    const h = strip(p.headline || '');
+    if (/^(add|tell|name|type|snap|put|enter|open)\b/i.test(h)) warns.push(`${p.id}: headline opens with an instruction ("${h}"): state the problem, the promise or the surprise instead (F-005)`);
+  }
   // 3: two-beat aphorism cap, per channel
   for (const [channel, ps] of Object.entries(byChannel)) {
     const hs = ps.map(p => p.headline).filter(Boolean);
@@ -127,6 +134,7 @@ function check(loaded) {
     if (hs.length && short.length / hs.length > 0.5)
       fails.push(`${channel}: ${short.length}/${hs.length} headlines are under five words (cap 50%): ${short.map(h => `"${h}"`).join(', ')}`);
   }
+  check.warns = warns;
   return fails;
 }
 
@@ -140,6 +148,7 @@ if (require.main === module) {
   // The rationale table is for the human review: read it before the renders.
   const withWhy = loaded.posts.filter(p => p.render && (p.render.why || p.render.app));
   if (withWhy.length) { console.log('\nRationale (why / app):'); for (const p of withWhy) console.log(`  ${p.id}\n    why: ${p.render.why || '(none)'}\n    app: ${p.render.app || '(none)'}`); }
+  if (check.warns && check.warns.length) { console.log('\nCopy warnings:'); check.warns.forEach(w => console.log(' - ' + w)); }
   if (fails.length) { console.error('\nCOPY GATE FAILED:'); fails.forEach(f => console.error(' - ' + f)); process.exit(1); }
   console.log('\nCopy gate PASSED.');
 }

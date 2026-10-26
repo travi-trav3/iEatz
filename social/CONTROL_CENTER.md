@@ -187,6 +187,11 @@ Open the actual image (Read tool). Do not rely on alt text/dimensions. Check:
    the person has visibly decided what they are making (a prepped board, a pan on the heat).
 8. **Type on paper shells sits on clean background (F-003).** The render fails a collage headline or
    note that overlaps a card; eyeball every other paper shell for the same thing.
+10. **Every headline is a problem, a promise or a surprise (F-005).** Eight words or fewer. If
+   the headline is an instruction in our own jargon ("add the board", "name them", "tell iEatz"),
+   it is not a headline; put the how-to in the sub-line and write the hook: the problem the viewer
+   has, the promise with a number, or the line that makes them look twice. Pinterest titles are a
+   search phrase plus the payoff; descriptions open with the problem.
 9. **Read the rationale table before the renders (F-004).** `node copy-gate.js <ledger>` prints
    every post's `why` and `app`. If the `why` would not make a stranger stop, or the `app` line is
    generic ("links to the page"), the post is a sketch: rewrite the idea, do not restyle the shell.

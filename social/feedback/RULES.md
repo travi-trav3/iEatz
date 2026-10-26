@@ -72,6 +72,22 @@ must name a capability, thread replies must show the app); the rationale table t
 prints is read at the QA gate (CONTROL_CENTER §6 item 9); `empty-scene` photo flag refused at
 render; diversity-gate.js rule 1 skips hotfixed posts.
 
+### F-005 · 2026-10-26 · Every headline is a problem, a promise or a surprise
+Source: Travis, on `p26b-pin` ("Add the board, get the recipe" over a cutting board): "this doesn't
+make sense or isn't clear enough. What's the point of this post? All our content should be hard
+hitting, creative, curious, engaging and point towards the value prop or a problem we are solving."
+Rule: The headline is the whole post for a stranger scrolling at speed. It states, in eight words
+or fewer, a problem they have ("Nothing to make?"), a promise with a number ("Dinner in 15"), or a
+surprise that makes them look twice ("This is a 12-minute dinner. You just can't see it yet."). It
+never uses our own jargon or an instruction that only makes sense to us ("add the board", "name
+them", "tell iEatz"): the how-to belongs in the sub-line and the caption, after the hook has done
+its work. On Pinterest the title is a search phrase plus the payoff ("what to cook with eggs,
+avocado, mushrooms and spinach in 12 minutes") and the description opens with the problem.
+Why: a post that is clear only to the people who built the app reaches nobody else.
+Enforced by: this file at the QA gate (CONTROL_CENTER §6 item 10) and the rationale review; the
+copy gate flags a headline that opens with an instruction verb ("Add", "Tell", "Name", "Type",
+"Snap") as a warning so the reviewer looks at it.
+
 ## Keep doing
 _Things Travis called out as working._
 

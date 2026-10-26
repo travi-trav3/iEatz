@@ -26,7 +26,7 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "Mon Oct 26 to Sun Nov 1, planned Oct 22 (the Oct 16-25 queue ends Sunday). First batch under the round-one composition rules. The Thursday send-this (st01, moved to Oct 29 after the Instagram disconnect) lives in manifest/send-this.json and is merged with --with for the gate. The COOKBOOK post is the Wednesday receipt reel; o24 (Sat Oct 24) was the previous window's. Pinterest cookbook pin links to /cookbook/?key=REALFOOD and prints the password: the gate is not deployed yet, so the key is inert until it is. Reels are silent until a Meta Sound Collection bed arrives. [2026-10-22 12:21 PT: all 15 created as scheduled posts (first comments echoed on create, both reels accepted by URL with 7000/8000 ms detected), 15 Slack alerts armed in #social.]",
+  "note": "Mon Oct 26 to Sun Nov 1, planned Oct 22 (the Oct 16-25 queue ends Sunday). First batch under the round-one composition rules. The Thursday send-this (st01, moved to Oct 29 after the Instagram disconnect) lives in manifest/send-this.json and is merged with --with for the gate. The COOKBOOK post is the Wednesday receipt reel; o24 (Sat Oct 24) was the previous window's. Pinterest cookbook pin links to /cookbook/?key=REALFOOD and prints the password: the gate is not deployed yet, so the key is inert until it is. Reels are silent until a Meta Sound Collection bed arrives. [2026-10-22 12:21 PT: all 15 created as scheduled posts (first comments echoed on create, both reels accepted by URL with 7000/8000 ms detected), 15 Slack alerts armed in #social.] [2026-10-26: eight posts drafted after the Oct 25 review and two pins rewritten problem-first (F-005). The thinned week fails the rotation rules on purpose (no carousel, three bleeds, adjacent pillars): the right posts beat the rotation, and the next batch is planned from scratch under F-004 and F-005.]",
   "formulaicCtas": [
     "receipt-scan"
   ],
@@ -164,18 +164,19 @@
       "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-26T12:10:00-07:00",
-      "file": "assets/pinterest/oct26/p26b-pin-bleed.png",
+      "file": "assets/pinterest/oct26/p26b-pin-bleed-v2.png",
       "pillar": "Product/Feature",
       "topic": "Dinner",
       "cta": "app-value",
       "board": "Easy weeknight dinner ideas",
       "boardServiceId": "1011339728762228746",
       "url": "https://apps.apple.com/us/app/id6475559706",
-      "title": "What to cook with eggs, avocado and spinach: iEatz writes the recipe from what you have",
-      "text": "Half an avocado, two eggs, cherry tomatoes, mushrooms, spinach, arugula, scallions. Tell iEatz what is on the board and it writes the dinner from exactly those, with estimated calories and protein per serving, then sends anything missing to Instacart. Free on iOS and Android.",
-      "alt": "Pin with a photo of a wooden cutting board holding half an avocado, cherry tomatoes, two eggs, mushrooms, a sliced jalapeno, spinach, arugula and scallions. Headline: Add the board, get the recipe.",
+      "title": "Nothing to make for dinner? What to cook with eggs, avocado, mushrooms and spinach in 12 minutes",
+      "text": "Nothing to make? Staring at eggs, half an avocado, a few mushrooms and some greens with no recipe is the whole problem iEatz solves. Type the eight things into the app and it writes a 12-minute dinner from exactly those, with calories and protein per serving, then sends anything missing to Instacart. Free on iOS and Android. Save this for the night the fridge looks like a riddle.",
+      "alt": "Pin with a photo of a wooden cutting board holding half an avocado, cherry tomatoes, two eggs, mushrooms, a sliced jalapeno, spinach, arugula and scallions. Eyebrow: Nothing to make? Headline: This is a 12-minute dinner. You just can't see it yet.",
       "bufferId": "6ada61ece391db54dafa187f",
-      "slackAlert": "Dr0CBJ8NRBK6"
+      "slackAlert": "Dr0CBJ8NRBK6",
+      "fixed": "2026-10-26 10:20 PT: \"Add the board, get the recipe\" (Travis: does not make sense, what is the point) rewritten problem-first; F-005"
     },
     {
       "id": "p27a-pin",
@@ -276,18 +277,19 @@
       "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-29T12:10:00-07:00",
-      "file": "assets/pinterest/oct26/p29b-pin-bleed.png",
+      "file": "assets/pinterest/oct26/p29b-pin-bleed-v2.png",
       "pillar": "Product/Feature",
       "topic": "Dinner",
       "cta": "app-value",
       "board": "Easy weeknight dinner ideas",
       "boardServiceId": "1011339728762228746",
       "url": "https://apps.apple.com/us/app/id6475559706",
-      "title": "Name what is on the counter and iEatz writes dinner: peppers, lettuce, avocado, tomatoes",
-      "text": "Red peppers, lettuce, avocado, cherry tomatoes, cucumber, a handful of pine nuts. Tell iEatz what is out on the board and it writes the recipe from exactly those, with estimated calories and protein, and sends anything missing to Instacart. Free on iOS and Android.",
-      "alt": "Pin with an overhead photo of an outdoor prep table: hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes, a bowl of dressing and a pan of pine nuts. Headline: Peppers, lettuce, avocado, tomatoes. Name them, get dinner.",
+      "title": "No recipe, no plan: what to cook with peppers, lettuce, avocado and tomatoes in 15 minutes",
+      "text": "No recipe, no plan, four things on the board: red peppers, lettuce, an avocado, cherry tomatoes. Type them into iEatz and it writes a 15-minute dinner from exactly those, with calories and protein per serving. Missing the one thing that makes it a meal? It goes to your Instacart cart. Free on iOS and Android.",
+      "alt": "Pin with an overhead photo of an outdoor prep table: hands chopping red peppers and lettuce on a long wooden board, avocado halves, plates of cucumber and cherry tomatoes. Eyebrow: No recipe, no plan. Headline: Four things on the board. Dinner in 15.",
       "bufferId": "6ada62109a872e86219d6442",
-      "slackAlert": "Dr0CB991TMNZ"
+      "slackAlert": "Dr0CB991TMNZ",
+      "fixed": "2026-10-26: \"Name them, get dinner\" rewritten problem-first with the same pattern as p26b; F-005"
     },
     {
       "id": "p30a-pin",
