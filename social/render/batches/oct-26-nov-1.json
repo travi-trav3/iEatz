@@ -547,7 +547,9 @@
         }
       ],
       "why": "A real cart with no plan is the moment the app exists for; the second line turns the cart into dinner before the checkout.",
-      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein."
+      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein.",
+      "status": "retracted",
+      "note": "2026-10-26: recut as o26-ig-footage-v2 before it published (hook over an empty aisle for 3 s, type in the Instagram caption zone, frozen ending, ambience gained to hiss)"
     },
     {
       "file": "p26b-pin-bleed-v2",
@@ -626,6 +628,62 @@
       "sub": "Chickpeas, a sweet potato, tortillas. Type the three into iEatz and it writes these tacos in 25 minutes, protein counted. No avocado in the house? It goes to Instacart.",
       "why": "The surprise is the pantry can: a tin most people already own, reframed as the dinner they would order out, over a photo that looks like the order.",
       "app": "Type what you have into iEatz; it writes the recipe with calories and protein and sends the missing items to Instacart."
+    },
+    {
+      "file": "o26-ig-footage-v2",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "style": "center",
+      "video": "assets/video/raw/2026-10-25-grocery-aisle-cart.mp4",
+      "segments": [
+        {
+          "trim": [
+            0,
+            2.9
+          ],
+          "speed": 3
+        },
+        {
+          "trim": [
+            2.9,
+            4.3
+          ],
+          "speed": 1.1
+        },
+        {
+          "trim": [
+            4.3,
+            5.7
+          ],
+          "speed": 0.55
+        }
+      ],
+      "hold": 2.0,
+      "audioLevel": -20,
+      "cover": 3.4,
+      "footageClaim": "Travis's phone clip, Oct 25: walking down a grocery aisle behind a green cart, then tilting down into the cart: a bag of green beans, a pouch of jasmine rice, a carton of eggs, bananas and a bottle of strawberry lemonade",
+      "overlays": [
+        {
+          "head": "No list. <span class=\"accent\">No plan.</span>",
+          "from": 0,
+          "to": 1.0
+        },
+        {
+          "head": "This isn't dinner <span class=\"accent\">yet.</span>",
+          "from": 1.0,
+          "to": 2.6
+        },
+        {
+          "head": "Fried rice.<br><span class=\"accent\">15 minutes.</span>",
+          "sub": "Green beans, rice, eggs. Snap the receipt at the register and iEatz writes it, protein counted.",
+          "from": 2.6,
+          "at": "top"
+        }
+      ],
+      "why": "Three beats in seven seconds: the problem (no list, no plan) over the aisle at speed, the surprise (this isn't dinner yet) as the camera tilts into the cart, the promise with a number (fried rice, 15 minutes) over the cart in slow motion.",
+      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein."
     }
   ]
 }

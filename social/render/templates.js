@@ -380,7 +380,9 @@ const TEMPLATES = {
   // footage: the type layer for a real phone clip (render-footage.js). Same scrim, headline, sub
   // and badge as bleed, over a transparent frame; the video is composited under it with ffmpeg.
   // A post lists `overlays` (one per beat: head, sub, from, to) and the renderer makes one PNG each.
-  footage: { surface: 'photo-bleed', defaultFooter: 'badge-br', render: (p) => `<div class="pin ig-bleed footage">
+  // style "center" puts the type in the middle third, big and centered (the reel default for a
+  // hook over moving footage; the bottom and right of the frame belong to Instagram's own UI).
+  footage: { surface: 'photo-bleed', defaultFooter: 'badge-br', render: (p) => `<div class="pin ig-bleed footage${p.style === 'center' ? ' center' : ''}${p.at === 'top' ? ' at-top' : ''}">
     <div class="scrim"></div>
     <div class="bwrap">${eyebrow(p, ' mint')}<h1 class="bhead">${p.head}</h1>${p.sub ? `<p class="bsub">${p.sub}</p>` : ''}</div>${footer(p, F_BLEED)}
   </div>` },

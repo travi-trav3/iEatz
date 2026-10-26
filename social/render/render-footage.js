@@ -1,7 +1,13 @@
 // Real-footage reels. Usage: node render-footage.js batches/<batch>.json [--only <file>]
 // A post: { "file", "w": 1080, "h": 1920, "template": "footage", "video": "assets/video/raw/x.mp4",
 //   "trim": [start, end]?, "hold": seconds (freeze the last frame)?, "speed": 1?, "footer"?,
-//   "overlays": [ { "head", "sub"?, "eyebrow"?, "from": s, "to": s }, ... ], "footageClaim": "..." }
+//   "segments": [{ "trim": [a, b], "speed": s }, ...]? (a cut: each piece at its own speed, in
+//   order, instead of one trim and one speed), "style": "center"? (type in the middle third),
+//   "audioLevel": -14? (loudnorm target; a quiet ambience clip wants -20 so the gain does not
+//   turn room tone into hiss), "cover": 0.6? (the second the cover frame is taken from),
+//   "overlays": [ { "head", "sub"?, "eyebrow"?, "at": "top"?, "from": s, "to": s }, ... ], "footageClaim": "..." }
+//   (an overlay's "at": "top" puts that beat's type in the upper third, for a frame whose subject
+//   fills the bottom, like a cart seen from the handle)
 // For every overlay the footage shell renders a transparent PNG (type, scrim, badge); ffmpeg scales
 // and crops the clip to the frame, holds the last frame if asked, fades the overlays in and out at
 // their beats, keeps the clip's own sound (normalised to -14 LUFS) and writes <file>.mp4 plus a
@@ -43,9 +49,10 @@ const probe = (f) => {
     if (!(p.overlays || []).length) { console.error(`!! ${p.file}: no overlays`); bad++; continue; }
     if (!p.footageClaim) { console.error(`!! ${p.file}: footageClaim missing (say what the clip literally shows)`); bad++; continue; }
     const info = probe(src);
-    const trim = p.trim || [0, info.duration];
-    const speed = p.speed || 1;
-    const clipLen = (trim[1] - trim[0]) / speed;
+    const segs = p.segments || [{ trim: p.trim || [0, info.duration], speed: p.speed || 1 }];
+    for (const s of segs) { s.speed = s.speed || 1; if (!s.trim || s.trim[1] <= s.trim[0] || s.trim[1] > info.duration + 0.05) { console.error(`!! ${p.file}: bad segment ${JSON.stringify(s)} (clip is ${info.duration}s)`); bad++; segs.length = 0; break; } }
+    if (!segs.length) continue;
+    const clipLen = segs.reduce((a, s) => a + (s.trim[1] - s.trim[0]) / s.speed, 0);
     const hold = p.hold || 0;
     const total = clipLen + hold;
     // 1. overlays: one transparent PNG per beat
@@ -53,7 +60,7 @@ const probe = (f) => {
     let issues = [];
     for (let i = 0; i < p.overlays.length; i++) {
       const o = p.overlays[i];
-      const q = { file: `${p.file}--ov${i + 1}`, w: p.w, h: p.h, template: 'footage', footer: p.footer, head: o.head, sub: o.sub, eyebrow: o.eyebrow, createdAt: batch.createdAt };
+      const q = { file: `${p.file}--ov${i + 1}`, w: p.w, h: p.h, template: 'footage', footer: p.footer, style: p.style, at: o.at, head: o.head, sub: o.sub, eyebrow: o.eyebrow, createdAt: batch.createdAt };
       let html;
       try { html = htmlDoc(q, PHOTOS); } catch (e) { console.error(`!! ${e.message}`); bad++; issues.push(e.message); break; }
       html = html.replace('<html', '<html class="footage"');
@@ -71,10 +78,19 @@ const probe = (f) => {
     if (issues.length) { console.error(`!! ${p.file}: ${issues.join('; ')}`); bad++; continue; }
     // 2. composite with ffmpeg
     const out = path.join(OUT, p.file + '.mp4');
-    const args = ['-v', 'error', '-y', '-ss', String(trim[0]), '-to', String(trim[1]), '-i', src];
+    const args = ['-v', 'error', '-y', '-i', src];
     for (const o of pngs) args.push('-loop', '1', '-t', String(total), '-i', o.png);
+    const withAudio = info.audio && p.audio !== false;
+    // atempo takes 0.5 to 2 per stage; chain stages for faster cuts
+    const atempo = (s) => { const st = []; let x = s; while (x > 2) { st.push('atempo=2'); x /= 2; } while (x < 0.5) { st.push('atempo=0.5'); x *= 2; } st.push(`atempo=${x.toFixed(4)}`); return st.join(','); };
     const fc = [];
-    fc.push(`[0:v]setpts=PTS/${speed},scale=${p.w}:${p.h}:force_original_aspect_ratio=increase,crop=${p.w}:${p.h},setsar=1,fps=30${hold ? `,tpad=stop_mode=clone:stop_duration=${hold}` : ''}[v0]`);
+    segs.forEach((s, i) => {
+      fc.push(`[0:v]trim=start=${s.trim[0]}:end=${s.trim[1]},setpts=(PTS-STARTPTS)/${s.speed}[sv${i}]`);
+      if (withAudio) fc.push(`[0:a]atrim=start=${s.trim[0]}:end=${s.trim[1]},asetpts=PTS-STARTPTS,${atempo(s.speed)}[sa${i}]`);
+    });
+    fc.push(`${segs.map((s, i) => withAudio ? `[sv${i}][sa${i}]` : `[sv${i}]`).join('')}concat=n=${segs.length}:v=1:a=${withAudio ? 1 : 0}${withAudio ? '[cv][ca]' : '[cv]'}`);
+    fc.push(`[cv]scale=${p.w}:${p.h}:force_original_aspect_ratio=increase,crop=${p.w}:${p.h},setsar=1,fps=30${hold ? `,tpad=stop_mode=clone:stop_duration=${hold}` : ''}[v0]`);
+    if (withAudio) fc.push(`[ca]apad,atrim=0:${total},highpass=f=110,loudnorm=I=${p.audioLevel || -14}:TP=-1.5:LRA=11[aout]`);
     let last = 'v0';
     pngs.forEach((o, i) => {
       const fadeIn = i === 0 ? '' : `,fade=t=in:st=${o.from}:d=0.3:alpha=1`;
@@ -84,19 +100,21 @@ const probe = (f) => {
       last = `v${i + 1}`;
     });
     args.push('-filter_complex', fc.join(';'), '-map', `[${last}]`);
-    if (info.audio && p.audio !== false) args.push('-map', '0:a', '-af', `atempo=${Math.min(2, Math.max(0.5, speed))},apad,atrim=0:${total},loudnorm=I=-14:TP=-1.5:LRA=11`, '-c:a', 'aac', '-b:a', '128k');
+    if (withAudio) args.push('-map', '[aout]', '-c:a', 'aac', '-b:a', '128k');
     else args.push('-an');
     args.push('-t', String(total), '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out);
     try { execFileSync('ffmpeg', args, { stdio: ['ignore', 'ignore', 'pipe'] }); } catch (e) { console.error(`!! ${p.file}: ffmpeg: ${String(e.stderr || e.message).slice(0, 400)}`); bad++; continue; }
-    // 3. cover: frame at 0.6 s under the first overlay
+    // 3. cover: the frame at `cover` seconds (default 0.6) under whichever overlay is on at that moment
+    const coverT = p.cover != null ? p.cover : 0.6;
     const frame = path.join(OUT, p.file + '-frame.png');
-    execFileSync('ffmpeg', ['-v', 'error', '-y', '-ss', '0.6', '-i', out, '-frames:v', '1', frame]);
+    execFileSync('ffmpeg', ['-v', 'error', '-y', '-ss', String(coverT), '-i', out, '-frames:v', '1', frame]);
     const cover = path.join(OUT, p.file + '-cover.png');
-    await sharp(frame).composite([{ input: pngs[0].png }]).png().toFile(cover);
+    const onAt = pngs.find(o => coverT >= o.from && coverT < o.to) || pngs[0];
+    await sharp(frame).composite([{ input: onAt.png }]).png().toFile(cover);
     fs.unlinkSync(frame);
     const o = probe(out);
     const mb = (fs.statSync(out).size / 1048576).toFixed(2);
-    console.log(`OK ${p.file}.mp4 ${o.w}x${o.h} ${o.duration.toFixed(1)}s (clip ${clipLen.toFixed(1)}s${hold ? ` + hold ${hold}s` : ''}, source ${info.w}x${info.h}) ${mb}MB audio=${info.audio && p.audio !== false ? 'clip' : 'none'} overlays=${pngs.length} + ${p.file}-cover.png`);
+    console.log(`OK ${p.file}.mp4 ${o.w}x${o.h} ${o.duration.toFixed(1)}s (${segs.length > 1 ? `${segs.length} cuts, ` : ''}clip ${clipLen.toFixed(1)}s${hold ? ` + hold ${hold}s` : ''}, source ${info.w}x${info.h}) ${mb}MB audio=${withAudio ? `clip at ${p.audioLevel || -14} LUFS` : 'none'} overlays=${pngs.length} + ${p.file}-cover.png`);
   }
   await browser.close();
   console.log(`\n${posts.length} footage post${posts.length === 1 ? '' : 's'}, ${bad} with issues.`);
