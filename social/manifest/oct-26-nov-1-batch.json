@@ -26,7 +26,7 @@
       "shouldShareToFeed": true
     }
   },
-  "note": "Mon Oct 26 to Sun Nov 1, planned Oct 22 (the Oct 16-25 queue ends Sunday). First batch under the round-one composition rules. The Thursday send-this (st01, moved to Oct 29 after the Instagram disconnect) lives in manifest/send-this.json and is merged with --with for the gate. The COOKBOOK post is the Wednesday receipt reel; o24 (Sat Oct 24) was the previous window's. Pinterest cookbook pin links to /cookbook/?key=REALFOOD and prints the password: the gate is not deployed yet, so the key is inert until it is. Reels are silent until a Meta Sound Collection bed arrives. [2026-10-22 12:21 PT: all 15 created as scheduled posts (first comments echoed on create, both reels accepted by URL with 7000/8000 ms detected), 15 Slack alerts armed in #social.] [2026-10-26: eight posts drafted after the Oct 25 review and two pins rewritten problem-first (F-005). The thinned week fails the rotation rules on purpose (no carousel, three bleeds, adjacent pillars): the right posts beat the rotation, and the next batch is planned from scratch under F-004 and F-005.]",
+  "note": "Mon Oct 26 to Sun Nov 1, planned Oct 22 (the Oct 16-25 queue ends Sunday). First batch under the round-one composition rules. The Thursday send-this (st01, moved to Oct 29 after the Instagram disconnect) lives in manifest/send-this.json and is merged with --with for the gate. The COOKBOOK post is the Wednesday receipt reel; o24 (Sat Oct 24) was the previous window's. Pinterest cookbook pin links to /cookbook/?key=REALFOOD and prints the password: the gate is not deployed yet, so the key is inert until it is. Reels are silent until a Meta Sound Collection bed arrives. [2026-10-22 12:21 PT: all 15 created as scheduled posts (first comments echoed on create, both reels accepted by URL with 7000/8000 ms detected), 15 Slack alerts armed in #social.] [2026-10-26: eight posts drafted after the Oct 25 review and two pins rewritten problem-first (F-005). The thinned week fails the rotation rules on purpose (no carousel, four bleeds, adjacent pillars): the right posts beat the rotation, and the next batch is planned from scratch under F-004 and F-005.] [2026-10-26 afternoon: queue review from the F-005 lens. p27a re-headlined (steps-v2), p28b title and description only, p30b collage replaced by p30c tacos bleed (fourth bleed, accepted: the photo is the hero and the shell that shows it is the right shell). o28, o30, o26f, p26b, p29b and the send-this series stand. The eight drafts are retired: nothing in them survives F-005 untouched and the next batch starts from Travis's footage.]",
   "formulaicCtas": [
     "receipt-scan"
   ],
@@ -183,18 +183,19 @@
       "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-27T07:40:00-07:00",
-      "file": "assets/pinterest/oct26/p27a-pin-steps.png",
+      "file": "assets/pinterest/oct26/p27a-pin-steps-v2.png",
       "pillar": "Recipe/Food",
       "topic": "Dinner",
       "cta": "app-value",
       "board": "Cheap healthy dinners",
       "boardServiceId": "1011339728762228747",
       "url": "https://apps.apple.com/us/app/id6475559706",
-      "title": "Roasted tomato ricotta toast: 20 minute dinner, 16 g protein",
-      "text": "Roast cherry tomatoes with olive oil, salt and a pinch of chilli, 15 minutes at 425. Toast thick bread, spread with ricotta, tomatoes on top, sesame and parsley over. About 16 g of protein per serving, estimated, serves 2. iEatz writes dinners like this from what is in your fridge, free on the App Store.",
-      "alt": "Pin with a photo of roasted cherry tomatoes on ricotta toast above a cream panel: Roasted tomato ricotta toast, three numbered steps, and a readout of 16 g protein, 20 minutes, serves 2.",
+      "title": "What to make with tomatoes, bread and ricotta: 20 minute dinner, 16 g protein",
+      "text": "Nothing planned and it is already six? A pint of cherry tomatoes, thick bread and a tub of ricotta are dinner in 20 minutes: roast the tomatoes with oil, salt and a pinch of chilli, toast the bread, spread the ricotta, tomatoes on top, sesame and parsley over. About 16 g of protein per serving, estimated, serves 2. Type what you have into iEatz and it writes dinners like this from your fridge, protein counted, missing items to Instacart. Free on iOS and Android.",
+      "alt": "Pin with a photo of roasted cherry tomatoes on ricotta toast above a cream panel. Eyebrow: Nothing planned tonight? Headline: Tomatoes, bread, ricotta. Dinner in 20. Three numbered steps and a readout of 16 g protein, 20 minutes, serves 2.",
       "bufferId": "6ada61fa9a872e86219d568b",
-      "slackAlert": "Dr0CB9905KQV"
+      "slackAlert": "Dr0CB9905KQV",
+      "fixed": "2026-10-26: \"Roasted tomato ricotta toast\" was a recipe name, not a hook; rewritten as problem plus promise with a number, description opens with the problem; F-005"
     },
     {
       "id": "p27b-pin",
@@ -247,11 +248,12 @@
       "board": "Healthy meal prep",
       "boardServiceId": "1011339728762228752",
       "url": "https://apps.apple.com/us/app/id6475559706",
-      "title": "One roast chicken, four weeknight dinners: iEatz plans the leftovers",
-      "text": "Carve the roast chicken, add the meat to iEatz with whatever else is in the fridge, and it writes the rest of the week: a grain bowl, a soup, tacos, a fried rice. Estimated calories and protein on every recipe, missing items to Instacart. Free on iOS and Android.",
+      "title": "Leftover roast chicken ideas: one chicken, four weeknight dinners",
+      "text": "Half a roast chicken in the fridge and no plan for it? Carve the meat, add it to iEatz with whatever else is in there, and it writes the rest of the week: a grain bowl, a soup, tacos, a fried rice. Estimated calories and protein on every recipe, missing items to Instacart. Free on iOS and Android.",
       "alt": "Pin with a photo of hands carving a roast chicken on a sheet pan at the stove, a pot of corn beside it. Headline: One roast chicken, four dinners.",
       "bufferId": "6ada6209e374ecc98220fac4",
-      "slackAlert": "Dr0CBGEPKG65"
+      "slackAlert": "Dr0CBGEPKG65",
+      "fixed": "2026-10-26: headline kept (a promise with a number); title made a search phrase, description opens with the problem; no re-render; F-005"
     },
     {
       "id": "p29a-pin",
@@ -315,18 +317,19 @@
       "status": "scheduled",
       "channel": "pinterest",
       "dueAt": "2026-10-30T12:10:00-07:00",
-      "file": "assets/pinterest/oct26/p30b-pin-collage.png",
+      "file": "assets/pinterest/oct26/p30c-pin-bleed.png",
       "pillar": "Pantry/Fridge",
-      "topic": "Herbs",
+      "topic": "Tacos",
       "cta": "app-value",
       "board": "Pantry meals and fridge clean out",
       "boardServiceId": "1011339728762228744",
       "url": "https://apps.apple.com/us/app/id6475559706",
-      "title": "Wilting herbs into pesto pasta in 15 minutes: use the bunch before it goes off",
-      "text": "The last of the cilantro, the parmesan end, olive oil, a lemon and a clove of garlic, blitzed and tossed with linguine. 15 minutes, about 17 g of protein per serving, estimated. Add what is going soft to iEatz and it writes the recipe that uses it first. Free on iOS and Android.",
-      "alt": "Deep paper collage: a taped photo card of hands chopping cilantro, a second card of a fork lifting linguine in green herb pesto, handwritten notes reading the last of the bunch and blitzed, tossed, done. Headline: The herbs went in before they went off.",
+      "title": "Chickpea and sweet potato tacos: 25 minute pantry dinner from a can of chickpeas",
+      "text": "No plan for tonight and nothing thawed? A can of chickpeas, a sweet potato and a stack of tortillas are taco night: roast the sweet potato and chickpeas with cumin and chilli, warm the tortillas, pile them up with avocado, tomato, red onion and a squeeze of lime. 25 minutes, about 13 g of protein per serving, estimated. Type the three into iEatz and it writes the recipe, counts the protein and sends the avocado to Instacart if you are out. Free on iOS and Android.",
+      "alt": "Pin with a photo of a hand squeezing lime over soft tacos filled with roasted sweet potato, chickpeas, avocado, tomato and jalapeno on a wooden board. Eyebrow: No plan for tonight? Headline: A can of chickpeas is taco night. Line: type the three into iEatz and it writes these tacos in 25 minutes, protein counted; no avocado, it goes to Instacart.",
       "bufferId": "6ada6217e374ecc982210342",
-      "slackAlert": "Dr0CB8AZPJ2X"
+      "slackAlert": "Dr0CB8AZPJ2X",
+      "fixed": "2026-10-26: the herbs collage (\"The herbs went in before they went off\": a slogan, and the same two photos as the Friday Instagram split) replaced with a fresh pantry pin on the tacos photo, problem-first; F-005"
     }
   ]
 }

@@ -320,7 +320,9 @@
         }
       ],
       "why": "A 20-minute dinner that is mostly roasting tomatoes; the photo is the proof.",
-      "app": "iEatz writes dinners like this from what is in the fridge, protein estimated."
+      "app": "iEatz writes dinners like this from what is in the fridge, protein estimated.",
+      "status": "retracted",
+      "note": "2026-10-26: recipe-name headline (F-005); replaced by p27a-pin-steps-v2 before it published"
     },
     {
       "file": "p27b-pin-list",
@@ -519,7 +521,9 @@
       ],
       "headSize": 84,
       "why": "The herbs went in before they went off: the fridge-first habit in two photos.",
-      "app": "Add what is going soft to iEatz and it writes the recipe that uses it first."
+      "app": "Add what is going soft to iEatz and it writes the recipe that uses it first.",
+      "status": "retracted",
+      "note": "2026-10-26: a slogan over two photos that o30-ig-split already uses on the same day; replaced by p30c-pin-bleed (tacos) before it published"
     },
     {
       "file": "o26-ig-footage",
@@ -574,6 +578,54 @@
       "why": "The anxiety (no recipe, no plan) answered by a number (dinner in 15) over the real board.",
       "app": "Type the four into iEatz; it writes the recipe and sends the missing items to Instacart.",
       "eyebrow": "No recipe, no plan"
+    },
+    {
+      "file": "p27a-pin-steps-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "steps",
+      "footer": "badge-bl",
+      "photo": "food/tomato-toast.jpg",
+      "objPos": "50% 82%",
+      "photoClaim": "roasted cherry tomatoes with sesame and parsley on a thick slice of toast spread with ricotta, on a grey plate with a fork and knife",
+      "eyebrow": "Nothing planned tonight?",
+      "head": "Tomatoes, bread, ricotta. <span class=\"accent\">Dinner in 20.</span>",
+      "steps": [
+        "Roast the <b>tomatoes</b> with oil, salt and a pinch of chilli, 15 minutes at 425.",
+        "Toast thick bread, spread it with <b>ricotta</b>.",
+        "Tomatoes on top, sesame and parsley over."
+      ],
+      "readout": [
+        {
+          "label": "protein",
+          "value": "16 g"
+        },
+        {
+          "label": "time",
+          "value": "20 min"
+        },
+        {
+          "label": "serves",
+          "value": "2"
+        }
+      ],
+      "why": "The problem (nothing planned) answered by three things most kitchens have and a number; the toast photo is the proof it is a real dinner, not a snack.",
+      "app": "Type the three into iEatz and it writes this with the protein counted; missing the ricotta, it goes to Instacart."
+    },
+    {
+      "file": "p30c-pin-bleed",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "food/tacos-lime.jpg",
+      "objPos": "50% 60%",
+      "photoClaim": "a hand squeezing a lime over a row of soft tacos filled with roasted sweet potato, chickpeas, avocado, tomato, red onion and jalapeno on a wooden board",
+      "eyebrow": "No plan for tonight?",
+      "head": "A can of chickpeas is <span class=\"accent\">taco night.</span>",
+      "sub": "Chickpeas, a sweet potato, tortillas. Type the three into iEatz and it writes these tacos in 25 minutes, protein counted. No avocado in the house? It goes to Instacart.",
+      "why": "The surprise is the pantry can: a tin most people already own, reframed as the dinner they would order out, over a photo that looks like the order.",
+      "app": "Type what you have into iEatz; it writes the recipe with calories and protein and sends the missing items to Instacart."
     }
   ]
 }
