@@ -106,11 +106,11 @@
       "cta": "cookbook-dm",
       "videoTitle": "30 dinners, 30 minutes each. Comment COOKBOOK.",
       "text": "Comment COOKBOOK and we DM you the book. Free.\n\n30 real-food dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list, so the cart builds itself. One-pan garlic chicken and broccoli. Ground beef and sweet potato skillet. Black bean and corn quesadillas. Shrimp and zucchini stir-fry. 26 more.\n\nOne word in the comments: COOKBOOK. The link lands in your DMs.\n\n#mealplanning #weeknightdinner #30minutemeals #budgetmeals #ieatzhealthy",
-      "firstComment": "COOKBOOK, one word, and the link is in your DMs within a minute.",
+      "firstComment": "COOKBOOK, one word in the comments, and the link lands in your DMs.",
       "alt": "Vertical reel over an overhead photo of a table of small bowls (chips, yogurt, guacamole, tomatoes, kale, corn salsa, rice, chilli) around a black bowl of all of them. Eyebrow: Free cookbook. Headline: 30 dinners, 30 minutes each. Comment COOKBOOK. Line: every recipe has a tap-to-shop Instacart list; one word in the comments and the link lands in your DMs.",
       "bufferId": "6ada61dae374ecc98220e596",
       "slackAlert": "Dr0CBEC8CM6W",
-      "fixed": "2026-10-28 15:50 PT: receipt reel (\"$34. Four cookbook dinners.\", the ask buried at the end of the caption) replaced before it published. Korian in Slack #marketing: the comment-COOKBOOK intent was too buried; Travis: the next one is cookbook-first and obvious, and gets a small boost. Now the ask is the headline and the first line of the caption."
+      "fixed": "2026-10-28 15:50 PT: receipt reel (\"$34. Four cookbook dinners.\", the ask buried at the end of the caption) replaced before it published. Korian in Slack #marketing: the comment-COOKBOOK intent was too buried; Travis: the next one is cookbook-first and obvious, and gets a small boost. Now the ask is the headline and the first line of the caption. Buffer updated 15:37 PT; the first comment could not be changed (Free plan), the existing one stands."
     },
     {
       "id": "o29f-ig",
@@ -125,9 +125,10 @@
       "format": "reel",
       "videoTitle": "No list. No plan. Just ingredients.",
       "text": "No list, no plan, just ingredients, which is how most grocery runs go. Green beans, a pouch of jasmine rice, a dozen eggs, bananas, a lemonade for the drive home.\n\nTell iEatz what is in the cart, or snap the receipt at the register, and tonight is green bean and egg fried rice: rice into the hot pan first, beans in for 3 minutes, eggs scrambled through, soy and a squeeze of lemon. 15 minutes, about 20 g of protein per serving, estimated. No more what's-for-dinner merry-go-round. Verify for allergens.\n\n#groceryhaul #whatsfordinner #friedrice #15minutemeals #ieatzhealthy",
-      "firstComment": "Filmed on the real shopping run. The bananas are breakfast.",
+      "firstComment": null,
       "alt": "Vertical reel from a real phone clip, stabilized: the grocery aisle under No list. No plan. Just ingredients; the camera tilting into the cart under This isn't dinner...; the cart alone under yet.; then the cart in slow motion (green beans, jasmine rice, eggs, bananas, a lemonade) under Your cart is tonight's dinner, with a line about telling iEatz what you have or snapping the receipt, and no more what's-for-dinner merry-go-round.",
-      "note": "The v3 recut of Monday's footage reel, to Travis's beats (Oct 26 17:00 PT). Scheduled Thu 17:15 PT (8:15 PM ET) as its own post; a Trial Reel if Travis flips the toggle in Buffer (not settable through the API). The clip is the same shopping run as o26f; a Trial Reel goes to non-followers, so the overlap with Monday does not reach the same people."
+      "note": "The v3 recut of Monday's footage reel, to Travis's beats (Oct 26 17:00 PT). Scheduled Thu 17:15 PT (8:15 PM ET) as its own post; a Trial Reel if Travis flips the toggle in Buffer (not settable through the API). The clip is the same shopping run as o26f; a Trial Reel goes to non-followers, so the overlap with Monday does not reach the same people. No first comment: Buffer is on the Free plan on Oct 28 and rejects first comments on create and edit (existing ones are kept).",
+      "bufferId": "6ae2794504f348da40f737c3"
     },
     {
       "id": "o30-ig",
