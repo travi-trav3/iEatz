@@ -53,3 +53,4 @@ Ashly
 Maya
 Leoactionz
 SixSocks
+COOKBOOK   # the ManyChat keyword, always upper case

@@ -1,4 +1,4 @@
-// Motion renderer. Usage: node render-motion.js batches/<batch>.json
+// Motion renderer. Usage: node render-motion.js batches/<batch>.json [--only <file>]
 // Same template registry, CSS, fonts, grade and photoClaim rules as render-batch.js. Every post
 // with "motion": { duration, fps, timeline? } renders 1080x1920 frames by stepping the shell's
 // window.setT(t), then encodes H.264 (yuv420p, crf 20, faststart). No audio track unless
@@ -109,7 +109,10 @@ const volume = (ff, mp4) => {
 };
 
 (async () => {
-  const posts = batch.posts.filter(p => p.motion);
+  const oi = process.argv.indexOf('--only');
+  const only = oi > 0 ? process.argv[oi + 1] : null;
+  const posts = batch.posts.filter(p => p.motion && (!only || p.file === only));
+  if (only && !posts.length) { console.error(`!! no motion post named "${only}"`); process.exit(1); }
   if (!posts.length) { console.error(`no posts with "motion" in ${batchPath}`); process.exit(1); }
   const ff = findFfmpeg();
   const movflags = hasMovflags(ff);

@@ -202,7 +202,9 @@
       "head": "$34. <em>Four cookbook dinners.</em>",
       "moreCount": 3,
       "why": "A $34 receipt read as four named cookbook dinners, with the week printed under the total.",
-      "app": "Receipt-to-meals plus the cookbook: every recipe has an Instacart list, comment COOKBOOK to get it."
+      "app": "Receipt-to-meals plus the cookbook: every recipe has an Instacart list, comment COOKBOOK to get it.",
+      "status": "retracted",
+      "note": "2026-10-28: Korian (Slack #marketing, Oct 26): the comment-COOKBOOK intent was too buried in the last cookbook post; Travis: the next one is cookbook-first and obvious. Replaced by o28-ig-reel-v2 before it published"
     },
     {
       "file": "o30-ig-split",
@@ -750,6 +752,25 @@
       "why": "Travis's beats: the problem stacked in three lines over the aisle, the sentence left hanging as the camera tilts into the cart, \"yet.\" alone over the groceries, then the promise: what is in the cart is tonight's dinner, and the what's-for-dinner merry-go-round stops.",
       "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein.",
       "stabilize": true
+    },
+    {
+      "file": "o28-ig-reel-v2",
+      "w": 1080,
+      "h": 1920,
+      "template": "bleed",
+      "footer": "badge-br",
+      "motion": {
+        "duration": 7,
+        "fps": 24
+      },
+      "photo": "food/mezze-dips-spread.jpg",
+      "objPos": "50% 40%",
+      "photoClaim": "an overhead spread on a wooden table: a black bowl of brown rice, zucchini noodles, chilli, kale, corn salsa and guacamole in the middle, ringed by small steel bowls of guacamole, tortilla chips, yogurt, cherry tomatoes, kale, zucchini noodles, corn salsa, rice and bean chilli",
+      "eyebrow": "Free cookbook",
+      "head": "30 dinners, 30 minutes each. <span class=\"accent\">Comment COOKBOOK.</span>",
+      "sub": "Every recipe has a tap-to-shop Instacart list. One word in the comments and the link lands in your DMs.",
+      "why": "The ask is the headline. Korian read the last cookbook post and could not find the comment-COOKBOOK intent; this one says it in the first three seconds, over a table full of food, with the number that makes it worth a comment.",
+      "app": "The cookbook: 30 recipes, each with a tap-to-shop Instacart list, delivered by DM when someone comments COOKBOOK."
     }
   ]
 }

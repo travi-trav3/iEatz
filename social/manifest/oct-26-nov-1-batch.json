@@ -51,7 +51,7 @@
     },
     {
       "id": "o26f-ig",
-      "status": "scheduled",
+      "status": "sent",
       "channel": "instagram",
       "dueAt": "2026-10-26T18:40:00-07:00",
       "file": "assets/social/oct26/o26-ig-footage-v2.mp4",
@@ -67,7 +67,9 @@
       "bufferId": "6aded3250b5343d0700bf2a0",
       "slackAlert": "Dr0CBW6D49CK",
       "note": "First real-footage reel (render-footage.js). Source clip: Travis, Oct 25, 720x1280, 5.7 s, kept in assets/video/raw (gitignored). The 18:25 alert for the drafted o26 still fires; the 18:26 correction names this reel (its Buffer link points at the wrong post, p26a; the time and slot are right).",
-      "fixed": "2026-10-26 17:00 PT: recut before it published. The aisle walk now runs at 3x (1 s) under the problem, the tilt into the cart carries the surprise, and the cart runs at half speed under the promise with a number; type centered in the middle third instead of the bottom-left caption zone; store ambience held at -20 LUFS instead of gained to -14; cover taken from the cart beat."
+      "fixed": "2026-10-26 17:00 PT: recut before it published. The aisle walk now runs at 3x (1 s) under the problem, the tilt into the cart carries the surprise, and the cart runs at half speed under the promise with a number; type centered in the middle third instead of the bottom-left caption zone; store ambience held at -20 LUFS instead of gained to -14; cover taken from the cart beat. 2026-10-28: Buffer shows this went out Mon 18:40 PT with the v2 cut (Travis asked for a recut at 17:00 and meant to move it to Tuesday; the move did not take). The v3 cut with his beats is scheduled as o29f-ig.",
+      "sentAt": "2026-10-26T18:40:58-07:00",
+      "externalLink": "https://www.instagram.com/reel/De-stMWiqJ7/"
     },
     {
       "id": "o27-ig",
@@ -97,17 +99,35 @@
       "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-28T18:45:00-07:00",
-      "file": "assets/social/oct26/o28-ig-reel.mp4",
-      "cover": "assets/social/oct26/o28-ig-reel-cover.png",
+      "file": "assets/social/oct26/o28-ig-reel-v2.mp4",
+      "cover": "assets/social/oct26/o28-ig-reel-v2-cover.png",
       "pillar": "Grocery/Instacart",
       "topic": "Cookbook",
       "cta": "cookbook-dm",
-      "videoTitle": "$34. Four cookbook dinners.",
-      "text": "$34.00 at the register: chicken breast, broccoli, ground beef, sweet potatoes, two cans of black beans, a can of corn, tortillas, a bag of frozen shrimp and a zucchini.\n\nFour dinners from The Real Food Cookbook, every one under 30 minutes: one-pan garlic chicken and broccoli, ground beef and sweet potato skillet, black bean and corn quesadillas, shrimp and zucchini stir-fry. The garlic, oil and spices were already home. Every recipe in the book has a tap-to-shop Instacart list, so the receipt builds itself.\n\nWant the other 26? Comment COOKBOOK and we'll DM you the cookbook. Free.\n\n#mealplanning #weeknightdinner #30minutemeals #budgetmeals #ieatzhealthy",
-      "firstComment": "COOKBOOK, one word in the comments, and the link lands in your DMs.",
-      "alt": "Vertical reel: a receipt from Market prints line by line on deep green, listing chicken breast, broccoli, ground beef, sweet potatoes, black beans, corn, tortillas, shrimp and zucchini for $34.00, then four cookbook dinners appear below it with a yellow sticker reading 4 dinners. Headline: $34. Four cookbook dinners.",
+      "videoTitle": "30 dinners, 30 minutes each. Comment COOKBOOK.",
+      "text": "Comment COOKBOOK and we DM you the book. Free.\n\n30 real-food dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list, so the cart builds itself. One-pan garlic chicken and broccoli. Ground beef and sweet potato skillet. Black bean and corn quesadillas. Shrimp and zucchini stir-fry. 26 more.\n\nOne word in the comments: COOKBOOK. The link lands in your DMs.\n\n#mealplanning #weeknightdinner #30minutemeals #budgetmeals #ieatzhealthy",
+      "firstComment": "COOKBOOK, one word, and the link is in your DMs within a minute.",
+      "alt": "Vertical reel over an overhead photo of a table of small bowls (chips, yogurt, guacamole, tomatoes, kale, corn salsa, rice, chilli) around a black bowl of all of them. Eyebrow: Free cookbook. Headline: 30 dinners, 30 minutes each. Comment COOKBOOK. Line: every recipe has a tap-to-shop Instacart list; one word in the comments and the link lands in your DMs.",
       "bufferId": "6ada61dae374ecc98220e596",
-      "slackAlert": "Dr0CBEC8CM6W"
+      "slackAlert": "Dr0CBEC8CM6W",
+      "fixed": "2026-10-28 15:50 PT: receipt reel (\"$34. Four cookbook dinners.\", the ask buried at the end of the caption) replaced before it published. Korian in Slack #marketing: the comment-COOKBOOK intent was too buried; Travis: the next one is cookbook-first and obvious, and gets a small boost. Now the ask is the headline and the first line of the caption."
+    },
+    {
+      "id": "o29f-ig",
+      "status": "scheduled",
+      "channel": "instagram",
+      "dueAt": "2026-10-29T17:15:00-07:00",
+      "file": "assets/social/oct26/o26-ig-footage-v3.mp4",
+      "cover": "assets/social/oct26/o26-ig-footage-v3-cover.png",
+      "pillar": "Grocery/Instacart",
+      "topic": "Grocery run",
+      "cta": "other",
+      "format": "reel",
+      "videoTitle": "No list. No plan. Just ingredients.",
+      "text": "No list, no plan, just ingredients, which is how most grocery runs go. Green beans, a pouch of jasmine rice, a dozen eggs, bananas, a lemonade for the drive home.\n\nTell iEatz what is in the cart, or snap the receipt at the register, and tonight is green bean and egg fried rice: rice into the hot pan first, beans in for 3 minutes, eggs scrambled through, soy and a squeeze of lemon. 15 minutes, about 20 g of protein per serving, estimated. No more what's-for-dinner merry-go-round. Verify for allergens.\n\n#groceryhaul #whatsfordinner #friedrice #15minutemeals #ieatzhealthy",
+      "firstComment": "Filmed on the real shopping run. The bananas are breakfast.",
+      "alt": "Vertical reel from a real phone clip, stabilized: the grocery aisle under No list. No plan. Just ingredients; the camera tilting into the cart under This isn't dinner...; the cart alone under yet.; then the cart in slow motion (green beans, jasmine rice, eggs, bananas, a lemonade) under Your cart is tonight's dinner, with a line about telling iEatz what you have or snapping the receipt, and no more what's-for-dinner merry-go-round.",
+      "note": "The v3 recut of Monday's footage reel, to Travis's beats (Oct 26 17:00 PT). Scheduled Thu 17:15 PT (8:15 PM ET) as its own post; a Trial Reel if Travis flips the toggle in Buffer (not settable through the API). The clip is the same shopping run as o26f; a Trial Reel goes to non-followers, so the overlap with Monday does not reach the same people."
     },
     {
       "id": "o30-ig",
