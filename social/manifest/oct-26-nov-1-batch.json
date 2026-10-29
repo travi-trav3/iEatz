@@ -117,8 +117,8 @@
       "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-29T17:15:00-07:00",
-      "file": "assets/social/oct26/o26-ig-footage-v3.mp4",
-      "cover": "assets/social/oct26/o26-ig-footage-v3-cover.png",
+      "file": "assets/social/oct26/o26-ig-footage-v4.mp4",
+      "cover": "assets/social/oct26/o26-ig-footage-v4-cover.png",
       "pillar": "Grocery/Instacart",
       "topic": "Grocery run",
       "cta": "other",
@@ -126,9 +126,10 @@
       "videoTitle": "No list. No plan. Just ingredients.",
       "text": "No list, no plan, just ingredients, which is how most grocery runs go. Green beans, a pouch of jasmine rice, a dozen eggs, bananas, a lemonade for the drive home.\n\nTell iEatz what is in the cart, or snap the receipt at the register, and tonight is green bean and egg fried rice: rice into the hot pan first, beans in for 3 minutes, eggs scrambled through, soy and a squeeze of lemon. 15 minutes, about 20 g of protein per serving, estimated. No more what's-for-dinner merry-go-round. Verify for allergens.\n\n#groceryhaul #whatsfordinner #friedrice #15minutemeals #ieatzhealthy",
       "firstComment": null,
-      "alt": "Vertical reel from a real phone clip, stabilized: the grocery aisle under No list. No plan. Just ingredients; the camera tilting into the cart under This isn't dinner...; the cart alone under yet.; then the cart in slow motion (green beans, jasmine rice, eggs, bananas, a lemonade) under Your cart is tonight's dinner, with a line about telling iEatz what you have or snapping the receipt, and no more what's-for-dinner merry-go-round.",
+      "alt": "Vertical reel from a real phone clip, stabilized: the grocery aisle under No list. No plan. Just ingredients; the camera tilting into the cart under This isn't dinner...; the cart alone under yet.; then the cart in slow motion (green beans, jasmine rice, eggs, bananas, a lemonade) under Your cart is tonight's dinner; then a cut to a mint end card: Real app screen, Tell it what you bought. It writes dinner, a phone showing the iEatz recipe screen (pan-seared chicken with asparagus and spinach, calories, carbs, protein, fat, a Shop with Instacart button).",
       "note": "The v3 recut of Monday's footage reel, to Travis's beats (Oct 26 17:00 PT). Scheduled Thu 17:15 PT (8:15 PM ET) as its own post; a Trial Reel if Travis flips the toggle in Buffer (not settable through the API). The clip is the same shopping run as o26f; a Trial Reel goes to non-followers, so the overlap with Monday does not reach the same people. No first comment: Buffer is on the Free plan on Oct 28 and rejects first comments on create and edit (existing ones are kept).",
-      "bufferId": "6ae2794504f348da40f737c3"
+      "bufferId": "6ae2794504f348da40f737c3",
+      "fixed": "2026-10-29 14:30 PT, Travis: \"still isn't quite there; what if there was an end card, use an existing template; hard hitting and engaging\" → v4: the frozen ending replaced with a 3.2 s device end card (the real recipe screen) on a hard cut; Buffer updated 15:28 PT."
     },
     {
       "id": "o30-ig",
