@@ -751,7 +751,9 @@
       ],
       "why": "Travis's beats: the problem stacked in three lines over the aisle, the sentence left hanging as the camera tilts into the cart, \"yet.\" alone over the groceries, then the promise: what is in the cart is tonight's dinner, and the what's-for-dinner merry-go-round stops.",
       "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein.",
-      "stabilize": true
+      "stabilize": true,
+      "status": "retracted",
+      "note": "2026-10-29, Travis: \"still isn't quite there; an end card from an existing template; hard hitting and engaging\". Recut as v4 with a device end card"
     },
     {
       "file": "o28-ig-reel-v2",
@@ -771,6 +773,80 @@
       "sub": "Every recipe has a tap-to-shop Instacart list. One word in the comments and the link lands in your DMs.",
       "why": "The ask is the headline. Korian read the last cookbook post and could not find the comment-COOKBOOK intent; this one says it in the first three seconds, over a table full of food, with the number that makes it worth a comment.",
       "app": "The cookbook: 30 recipes, each with a tap-to-shop Instacart list, delivered by DM when someone comments COOKBOOK."
+    },
+    {
+      "file": "o26-ig-footage-v4",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "style": "center",
+      "video": "assets/video/raw/2026-10-25-grocery-aisle-cart.mp4",
+      "segments": [
+        {
+          "trim": [
+            0,
+            2.9
+          ],
+          "speed": 1.5
+        },
+        {
+          "trim": [
+            2.9,
+            4.3
+          ],
+          "speed": 1.0
+        },
+        {
+          "trim": [
+            4.3,
+            5.7
+          ],
+          "speed": 0.6
+        }
+      ],
+      "hold": 1.2,
+      "audioLevel": -20,
+      "cover": 4.6,
+      "footageClaim": "Travis's phone clip, Oct 25: walking down a grocery aisle behind a green cart, then tilting down into the cart: a bag of green beans, a pouch of jasmine rice, a carton of eggs, bananas and a bottle of strawberry lemonade",
+      "overlays": [
+        {
+          "head": "No list.<br>No plan.<br><span class=\"accent\">Just ingredients.</span>",
+          "from": 0,
+          "to": 1.9
+        },
+        {
+          "head": "This isn't dinner...",
+          "from": 1.9,
+          "to": 3.1
+        },
+        {
+          "head": "<span class=\"accent\">yet.</span>",
+          "from": 3.4,
+          "to": 4.3,
+          "at": "top"
+        },
+        {
+          "head": "Your cart is <span class=\"accent\">tonight's dinner.</span>",
+          "eyebrow": "Fried rice, 15 minutes",
+          "from": 4.5,
+          "at": "top"
+        }
+      ],
+      "why": "Travis's beats, then the proof: the cart becomes a real recipe screen on a phone, which is the moment the viewer understands what the app does. The end card is a shell the reel has not shown (mint device), so the cut lands.",
+      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein.",
+      "stabilize": true,
+      "endCard": {
+        "template": "device",
+        "footer": "badge-br",
+        "duration": 3.2,
+        "photo": "app-recipe-macros.jpg",
+        "phoneW": 560,
+        "photoClaim": "iEatz app screen: pan-seared chicken with asparagus and spinach, 30 minutes, 450 calories, with carbs, protein and fat per serving and a Shop with Instacart button",
+        "eyebrow": "Real app screen",
+        "head": "Tell it what you bought. <span class=\"accent\">It writes dinner.</span>",
+        "cap": "Snap the receipt or type the five in. A recipe with calories and protein, and the missing items sent to Instacart. No more what's-for-dinner merry-go-round."
+      }
     }
   ]
 }

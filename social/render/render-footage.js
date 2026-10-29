@@ -4,6 +4,9 @@
 //   "segments": [{ "trim": [a, b], "speed": s }, ...]? (a cut: each piece at its own speed, in
 //   order, instead of one trim and one speed), "style": "center"? (type in the middle third),
 //   "stabilize": true? (two-pass vid.stab on the whole clip before the cuts, for handheld walking),
+//   "endCard": { "template": "device" | any static shell, ...its fields, "duration": 3 }? (a still
+//   rendered from that shell at the reel size, cross-faded in after the footage; the proof or the
+//   ask, in a shell the viewer has not just seen),
 //   "audioLevel": -14? (loudnorm target; a quiet ambience clip wants -20 so the gain does not
 //   turn room tone into hiss), "cover": 0.6? (the second the cover frame is taken from),
 //   "overlays": [ { "head", "sub"?, "eyebrow"?, "at": "top"?, "from": s, "to": s }, ... ], "footageClaim": "..." }
@@ -55,7 +58,11 @@ const probe = (f) => {
     if (!segs.length) continue;
     const clipLen = segs.reduce((a, s) => a + (s.trim[1] - s.trim[0]) / s.speed, 0);
     const hold = p.hold || 0;
-    const total = clipLen + hold;
+    const footLen = clipLen + hold;              // the footage, overlays live here
+    const ec = p.endCard || null;
+    const ecDur = ec ? (ec.duration || 3) : 0;
+    const XF = ec ? (ec.fade != null ? ec.fade : 0.1) : 0;   // into the end card: a near-cut by default (ec.fade for a slower dissolve)
+    const total = footLen + ecDur - XF;
     // 1. overlays: one transparent PNG per beat
     const pngs = [];
     let issues = [];
@@ -74,13 +81,33 @@ const probe = (f) => {
       const png = path.join(OUT, q.file + '.png');
       await page.screenshot({ path: png, omitBackground: true, clip: { x: 0, y: 0, width: p.w, height: p.h } });
       await page.close();
-      pngs.push({ png, from: o.from, to: o.to == null ? total : o.to });
+      pngs.push({ png, from: o.from, to: o.to == null ? footLen : o.to });
+    }
+    // 1b. end card: a static shell rendered at the reel size
+    let ecPng = null;
+    if (ec) {
+      const q = { ...ec, file: `${p.file}--end`, w: p.w, h: p.h, createdAt: batch.createdAt };
+      delete q.duration;
+      let html;
+      try { html = htmlDoc(q, PHOTOS); } catch (e) { issues.push(`end card: ${e.message}`); html = null; }
+      if (html) {
+        const hp = path.join(HTMLD, q.file + '.html'); fs.writeFileSync(hp, html);
+        const page = await browser.newPage({ viewport: { width: p.w, height: p.h }, deviceScaleFactor: 1 });
+        await page.goto('file://' + hp, { waitUntil: 'load' });
+        const { fc, safe } = await prepare(page);
+        if (safe.length) issues.push(...safe.map(s => `end card: ${s}`));
+        if (!Object.values(fc).every(Boolean)) issues.push('end card: fonts missing');
+        ecPng = path.join(OUT, q.file + '.png');
+        await page.screenshot({ path: ecPng, clip: { x: 0, y: 0, width: p.w, height: p.h } });
+        await page.close();
+      }
     }
     if (issues.length) { console.error(`!! ${p.file}: ${issues.join('; ')}`); bad++; continue; }
     // 2. composite with ffmpeg
     const out = path.join(OUT, p.file + '.mp4');
     const args = ['-v', 'error', '-y', '-i', src];
-    for (const o of pngs) args.push('-loop', '1', '-t', String(total), '-i', o.png);
+    for (const o of pngs) args.push('-loop', '1', '-t', String(footLen), '-i', o.png);
+    if (ecPng) args.push('-loop', '1', '-t', String(ecDur), '-i', ecPng);
     const withAudio = info.audio && p.audio !== false;
     // atempo takes 0.5 to 2 per stage; chain stages for faster cuts
     const atempo = (s) => { const st = []; let x = s; while (x > 2) { st.push('atempo=2'); x /= 2; } while (x < 0.5) { st.push('atempo=0.5'); x *= 2; } st.push(`atempo=${x.toFixed(4)}`); return st.join(','); };
@@ -104,11 +131,17 @@ const probe = (f) => {
     let last = 'v0';
     pngs.forEach((o, i) => {
       const fadeIn = i === 0 ? '' : `,fade=t=in:st=${o.from}:d=0.3:alpha=1`;
-      const fadeOut = o.to < total ? `,fade=t=out:st=${Math.max(0, o.to - 0.3)}:d=0.3:alpha=1` : '';
+      const fadeOut = o.to < footLen ? `,fade=t=out:st=${Math.max(0, o.to - 0.3)}:d=0.3:alpha=1` : '';
       fc.push(`[${i + 1}:v]format=rgba${fadeIn}${fadeOut}[o${i}]`);
       fc.push(`[${last}][o${i}]overlay=0:0:enable='between(t,${o.from},${o.to})'[v${i + 1}]`);
       last = `v${i + 1}`;
     });
+    if (ecPng) {
+      fc.push(`[${pngs.length + 1}:v]scale=${p.w}:${p.h},setsar=1,fps=30,format=yuv420p[ec]`);
+      fc.push(`[${last}]format=yuv420p[vf]`);
+      fc.push(`[vf][ec]xfade=transition=fade:duration=${XF}:offset=${(footLen - XF).toFixed(3)}[vend]`);
+      last = 'vend';
+    }
     args.push('-filter_complex', fc.join(';'), '-map', `[${last}]`);
     if (withAudio) args.push('-map', '[aout]', '-c:a', 'aac', '-b:a', '128k');
     else args.push('-an');
@@ -124,7 +157,7 @@ const probe = (f) => {
     fs.unlinkSync(frame);
     const o = probe(out);
     const mb = (fs.statSync(out).size / 1048576).toFixed(2);
-    console.log(`OK ${p.file}.mp4 ${o.w}x${o.h} ${o.duration.toFixed(1)}s (${segs.length > 1 ? `${segs.length} cuts, ` : ''}${p.stabilize ? 'stabilized, ' : ''}clip ${clipLen.toFixed(1)}s${hold ? ` + hold ${hold}s` : ''}, source ${info.w}x${info.h}) ${mb}MB audio=${withAudio ? `clip at ${p.audioLevel || -14} LUFS` : 'none'} overlays=${pngs.length} + ${p.file}-cover.png`);
+    console.log(`OK ${p.file}.mp4 ${o.w}x${o.h} ${o.duration.toFixed(1)}s (${segs.length > 1 ? `${segs.length} cuts, ` : ''}${p.stabilize ? 'stabilized, ' : ''}clip ${clipLen.toFixed(1)}s${hold ? ` + hold ${hold}s` : ''}, source ${info.w}x${info.h}) ${mb}MB audio=${withAudio ? `clip at ${p.audioLevel || -14} LUFS` : 'none'} overlays=${pngs.length}${ec ? ` + end card ${ec.template} ${ecDur}s` : ''} + ${p.file}-cover.png`);
   }
   await browser.close();
   console.log(`\n${posts.length} footage post${posts.length === 1 ? '' : 's'}, ${bad} with issues.`);
