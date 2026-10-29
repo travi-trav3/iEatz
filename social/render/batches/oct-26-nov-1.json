@@ -948,7 +948,9 @@
         "sticker": "1 photo",
         "head": "Snap the receipt. <em>That is the whole plan.</em>",
         "photoClaim": "a rendered receipt: the five items from the cart in the clip, with prices as illustration, and the one dinner iEatz writes from them"
-      }
+      },
+      "status": "retracted",
+      "note": "2026-10-29 15:05 PT, Travis: \"end card is not good; it should clearly explain the value prop with a CTA; the video is blurry in parts\". Recut as v6"
     },
     {
       "file": "o31-ig-cookbook-split",
@@ -966,6 +968,102 @@
         "objPos": "50% 55%"
       },
       "photoClaim": "an overhead table of four plated dinners (grilled chicken over wild rice, a salmon salad, roasted cauliflower with cashews, crudites with hummus and flatbread); below, a cast-iron skillet of spaghetti with blistered tomatoes, peas and basil, tomatoes on the vine and a bowl of olives beside it",
+      "seam": "Comment <em>COOKBOOK</em>",
+      "cap": "A month of real dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list. One word in the comments and the book lands in your DMs. <b>Free</b>",
+      "why": "For a cold audience the offer has to be the whole post: what you get (a month of dinners), the proof (two plates of it), the mechanic (one word in the comments), the price (free). The keyword sits in the seam pill, the one place on the frame a thumb stops.",
+      "app": "The cookbook: 30 recipes, each with a tap-to-shop Instacart list, delivered by DM when someone comments COOKBOOK.",
+      "status": "retracted",
+      "note": "2026-10-29, Travis: the pasta skillet is played out. Replaced by v2 with a photo no batch has used"
+    },
+    {
+      "file": "o26-ig-footage-v6",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "style": "center",
+      "video": "assets/video/raw/2026-10-25-grocery-aisle-cart.mp4",
+      "segments": [
+        {
+          "trim": [
+            0,
+            2.9
+          ],
+          "speed": 1.5
+        },
+        {
+          "trim": [
+            2.9,
+            4.3
+          ],
+          "speed": 1.4
+        },
+        {
+          "trim": [
+            4.3,
+            5.7
+          ],
+          "speed": 0.6
+        }
+      ],
+      "hold": 1.0,
+      "audioLevel": -20,
+      "cover": 4.6,
+      "footageClaim": "Travis's phone clip, Oct 25: walking down a grocery aisle behind a green cart, then tilting down into the cart: a bag of green beans, a pouch of jasmine rice, a carton of eggs, bananas and a bottle of strawberry lemonade",
+      "overlays": [
+        {
+          "head": "No list.<br>No plan.<br><span class=\"accent\">Just ingredients.</span>",
+          "from": 0,
+          "to": 1.9
+        },
+        {
+          "head": "This isn't dinner...",
+          "from": 1.9,
+          "to": 2.8
+        },
+        {
+          "head": "<span class=\"accent\">yet.</span>",
+          "from": 3.0,
+          "to": 3.9,
+          "at": "top"
+        },
+        {
+          "head": "Dinner. <span class=\"accent\">Decided.</span>",
+          "from": 4.0,
+          "at": "top"
+        }
+      ],
+      "why": "Travis's beats, the two-word payoff, then the value proposition stated plainly with the proof under it and the CTA in the last line: what it does, what you get, where to get it.",
+      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein.",
+      "stabilize": true,
+      "endCard": {
+        "template": "device",
+        "footer": "badge-br",
+        "duration": 3.6,
+        "photo": "app-recipe-macros.jpg",
+        "phoneW": 540,
+        "photoClaim": "iEatz app screen: pan-seared chicken with asparagus and spinach, 30 minutes, 450 calories, with carbs, protein and fat per serving and a Shop with Instacart button",
+        "eyebrow": "iEatz",
+        "head": "Dinner from what you <span class=\"accent\">already have.</span>",
+        "cap": "Tell it what is in the kitchen. It writes the recipe, counts the calories and protein, and sends anything missing to Instacart. Free on iOS and Android."
+      }
+    },
+    {
+      "file": "o31-ig-cookbook-split-v2",
+      "w": 1080,
+      "h": 1350,
+      "template": "split",
+      "footer": "badge-br",
+      "top": {
+        "photo": "food/healthy-bowls-table.jpg",
+        "objPos": "62% 40%",
+        "label": "30 dinners, 30 minutes each"
+      },
+      "bottom": {
+        "photo": "food/cobb-salad-plate.jpg",
+        "objPos": "50% 42%"
+      },
+      "photoClaim": "an overhead table of four plated dinners (grilled chicken over wild rice, a salmon salad, roasted cauliflower with cashews, crudites with hummus and flatbread); below, a white plate of open sandwiches on toasted bread: ham with pear and greens, a poached egg, grilled peach with arugula, and an avocado toast with tomatoes and mozzarella beside it",
       "seam": "Comment <em>COOKBOOK</em>",
       "cap": "A month of real dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list. One word in the comments and the book lands in your DMs. <b>Free</b>",
       "why": "For a cold audience the offer has to be the whole post: what you get (a month of dinners), the proof (two plates of it), the mechanic (one word in the comments), the price (free). The keyword sits in the seam pill, the one place on the frame a thumb stops.",

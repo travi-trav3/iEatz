@@ -433,6 +433,9 @@ html.footage,html.footage body,.ig-bleed.footage{background:transparent}
   .t-list,.t-stat,.ig-recipe,.ig-quote,.ig-statdark{padding-top:270px;padding-bottom:320px}
   .t-list:has(> .badge.corner.tl, > .badge.corner.tr),.t-stat:has(> .badge.corner.tl, > .badge.corner.tr),.ig-recipe:has(> .badge.corner.tl, > .badge.corner.tr),.ig-quote:has(> .badge.corner.tl, > .badge.corner.tr),.ig-statdark:has(> .badge.corner.tl, > .badge.corner.tr){padding-top:340px}
   .t-device{padding-top:260px;padding-bottom:320px}
+  .t-device .head{font-size:96px}
+  .t-device .dcap{font-size:36px;line-height:1.35;max-width:860px}
+  .t-device .dhead{gap:26px}
   .t-device:has(> .badge.corner.tl, > .badge.corner.tr){padding-top:340px}
   .t-photo .hero{height:52%}
   .ig-photo .hero{height:52%}

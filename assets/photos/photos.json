@@ -441,7 +441,11 @@
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/couple-cooking.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Jimmy Dean"
+      "flag": "brand-in-frame: Jimmy Dean",
+      "flags": [
+        "brand-in-frame"
+      ],
+      "note": "Jimmy Dean sausage package on the counter, bottom center"
     },
     {
       "file": "lifestyle/cook-snap-1.png",
@@ -514,7 +518,10 @@
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/couple-cooking-ad.jpg",
       "style": "people",
-      "note": "wide crop of couple-cooking.jpg made for the Meta ad set"
+      "note": "wide crop of couple-cooking.jpg made for the Meta ad set Jimmy Dean sausage package on the counter, bottom center",
+      "flags": [
+        "brand-in-frame"
+      ]
     },
     {
       "file": "app-receipt-scan.jpg",

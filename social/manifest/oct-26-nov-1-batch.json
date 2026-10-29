@@ -117,8 +117,8 @@
       "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-29T17:15:00-07:00",
-      "file": "assets/social/oct26/o26-ig-footage-v5.mp4",
-      "cover": "assets/social/oct26/o26-ig-footage-v5-cover.png",
+      "file": "assets/social/oct26/o26-ig-footage-v6.mp4",
+      "cover": "assets/social/oct26/o26-ig-footage-v6-cover.png",
       "pillar": "Grocery/Instacart",
       "topic": "Grocery run",
       "cta": "other",
@@ -126,26 +126,27 @@
       "videoTitle": "No list. No plan. Just ingredients.",
       "text": "No list, no plan, just ingredients, which is how most grocery runs go. Green beans, a pouch of jasmine rice, a dozen eggs, bananas, a lemonade for the drive home.\n\nSnap the receipt at the register, or tell iEatz what is in the cart, and tonight is green bean and egg fried rice: rice into the hot pan first, beans in for 3 minutes, eggs scrambled through, soy and a squeeze of lemon. 15 minutes, about 20 g of protein per serving, estimated. Dinner, decided. No more what's-for-dinner merry-go-round. Verify for allergens.\n\n#groceryhaul #whatsfordinner #friedrice #15minutemeals #ieatzhealthy",
       "firstComment": null,
-      "alt": "Vertical reel from a real phone clip, stabilized: the grocery aisle under No list. No plan. Just ingredients; the camera tilting into the cart under This isn't dinner...; the cart alone under yet.; the cart in slow motion under Dinner. Decided.; then a cut to a dark end card with a rendered receipt of the five items read as green bean and egg fried rice, tonight, 15 minutes, and the line Snap the receipt. That is the whole plan.",
+      "alt": "Vertical reel from a real phone clip, stabilized: the grocery aisle under No list. No plan. Just ingredients; the camera tilting into the cart under This isn't dinner...; the cart alone under yet.; the cart in slow motion under Dinner. Decided.; then a cut to a mint end card: Dinner from what you already have, with a phone showing the iEatz recipe screen (calories, carbs, protein, fat, a Shop with Instacart button) and the line Tell it what is in the kitchen. It writes the recipe, counts the calories and protein, and sends anything missing to Instacart. Free on iOS and Android.",
       "note": "The v3 recut of Monday's footage reel, to Travis's beats (Oct 26 17:00 PT). Scheduled Thu 17:15 PT (8:15 PM ET) as its own post; a Trial Reel if Travis flips the toggle in Buffer (not settable through the API). The clip is the same shopping run as o26f; a Trial Reel goes to non-followers, so the overlap with Monday does not reach the same people. No first comment: Buffer is on the Free plan on Oct 28 and rejects first comments on create and edit (existing ones are kept).",
       "bufferId": "6ae2794504f348da40f737c3",
-      "fixed": "2026-10-29 14:30 PT, Travis: \"still isn't quite there; what if there was an end card, use an existing template; hard hitting and engaging\" → v4: the frozen ending replaced with a 3.2 s device end card (the real recipe screen) on a hard cut; Buffer updated 15:28 PT. 2026-10-29 14:45 PT, Travis: \"different end card; Your cart is tonight's dinner is weak, more hard hitting, Dinner, Decided\" → v5: beat four is Dinner. Decided., the end card is the receipt shell (the five items read as tonight's fried rice). Buffer updated 15:49 PT."
+      "fixed": "2026-10-29 14:30 PT, Travis: \"still isn't quite there; what if there was an end card, use an existing template; hard hitting and engaging\" → v4: the frozen ending replaced with a 3.2 s device end card (the real recipe screen) on a hard cut; Buffer updated 15:28 PT. 2026-10-29 14:45 PT, Travis: \"different end card; Your cart is tonight's dinner is weak, more hard hitting, Dinner, Decided\" → v5: beat four is Dinner. Decided., the end card is the receipt shell (the five items read as tonight's fried rice). Buffer updated 15:49 PT. 2026-10-29 15:10 PT, Travis: \"end card is not good, it should clearly explain the value prop with a CTA; blurry in parts\" → v6: device end card stating the value proposition with the CTA in the last line, type enlarged at reel size; the tilt (the motion-blurred part of the 720p source) shortened to 1 s. Buffer updated."
     },
     {
       "id": "o31-ig",
       "status": "scheduled",
       "channel": "instagram",
       "dueAt": "2026-10-31T09:45:00-07:00",
-      "file": "assets/social/oct26/o31-ig-cookbook-split.png",
+      "file": "assets/social/oct26/o31-ig-cookbook-split-v2.png",
       "pillar": "Grocery/Instacart",
       "topic": "Cookbook",
       "cta": "cookbook-dm",
       "format": "static",
       "text": "Comment COOKBOOK and the book lands in your DMs. Free.\n\nA month of real dinners: 30 recipes, every one under 30 minutes, every one with a tap-to-shop Instacart list, so the cart builds itself. One-pan garlic chicken and broccoli. Ground beef and sweet potato skillet. Black bean and corn quesadillas. Shrimp and zucchini stir-fry. Kale and white bean soup. 25 more.\n\nOne word in the comments: COOKBOOK.\n\n#mealplanning #weeknightdinner #30minutemeals #easydinners #ieatzhealthy",
       "firstComment": null,
-      "alt": "Split image: top, an overhead table of four plated dinners with a label reading 30 dinners, 30 minutes each; bottom, a cast-iron skillet of spaghetti with blistered tomatoes, peas and basil. Seam pill: Comment COOKBOOK. Caption: a month of real dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list; one word in the comments and the book lands in your DMs. Free.",
+      "alt": "Split image: top, an overhead table of four plated dinners with a label reading 30 dinners, 30 minutes each; bottom, a plate of open sandwiches on toasted bread: ham with pear and greens, a poached egg, grilled peach with arugula, an avocado toast beside it. Seam pill: Comment COOKBOOK. Caption: a month of real dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list; one word in the comments and the book lands in your DMs. Free.",
       "bufferId": "6ae3cd69ba1ca51fd3e1fd14",
-      "note": "The boost post (Korian and Travis, Slack #marketing): the offer is the whole frame and the keyword sits in the seam pill. Saturday morning slot for shopping-day intent. Boost this post itself from Instagram so the ManyChat trigger keeps firing on its comments; a separate ad is a separate post. No first comment: Buffer Free plan. The recipe names in the caption are from the cookbook as listed in o28; \"kale and white bean soup\" is the kale soup o01 referred to, confirm the exact title against the book before Saturday."
+      "note": "The boost post (Korian and Travis, Slack #marketing): the offer is the whole frame and the keyword sits in the seam pill. Saturday morning slot for shopping-day intent. Boost this post itself from Instagram so the ManyChat trigger keeps firing on its comments; a separate ad is a separate post. No first comment: Buffer Free plan. The recipe names in the caption are from the cookbook as listed in o28; \"kale and white bean soup\" is the kale soup o01 referred to, confirm the exact title against the book before Saturday.",
+      "fixed": "2026-10-29 15:15 PT, Travis: \"the pasta skillet is played out\" → bottom photo replaced with one no batch has used (cobb-salad-plate.jpg, open sandwiches). Buffer updated."
     },
     {
       "id": "o30-ig",
