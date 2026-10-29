@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 // BATCH DIVERSITY GATE — run before any scheduling run, and after any batch change.
 // Usage: node diversity-gate.js <ledger or render batch> [--soft-format]
 //   ../manifest/<batch>.json   Buffer ledger (joins its "renderBatch" for anatomy fields)
@@ -155,6 +157,25 @@ if (require.main === module) {
   if (!file) { console.error('usage: node diversity-gate.js <ledger or render batch> [--soft-format] [--with <ledger>]...'); process.exit(1); }
   const { fails, warns, lines } = gate(file, { softFormat: args.includes('--soft-format'), with: withs });
   lines.forEach(l => console.log(l));
+  // 12. Shell coverage (Oct 29 2026, Travis: "you still aren't using the full range of templates").
+  //     Across this ledger and the two before it, every live shell should appear at least once;
+  //     the ones that do not are listed so the next plan starts from them. A warning, because
+  //     the right post beats the rotation (F-004); the planner reads it, the batch does not fail.
+  try {
+    const dir = path.dirname(file);
+    const ledgers = fs.readdirSync(dir).filter(f => /-batch\.json$/.test(f)).map(f => path.join(dir, f))
+      .map(f => ({ f, created: (JSON.parse(fs.readFileSync(f, 'utf8')).createdAt || '') })).filter(x => x.created && x.created <= ((load(file).batch || {}).createdAt || "9"))
+      .sort((a, b) => b.created.localeCompare(a.created)).slice(0, 3).map(x => x.f);
+    const used = new Set();
+    for (const f of ledgers) for (const p of load(f).posts) {
+      const r = p.render || {}; if (r.template) used.add(r.template);
+      for (const s of r.slides || []) if (s.template) used.add(s.template);
+      if (r.endCard && r.endCard.template) used.add(r.endCard.template);
+    }
+    const live = Object.entries(TEMPLATES).filter(([n, t]) => !t.deprecated && !/^ad/.test(n) && n !== 'sendthis').map(([n]) => n);
+    const unused = live.filter(n => !used.has(n));
+    if (unused.length) warns.push(`shells unused across the last ${ledgers.length} ledgers: ${unused.join(', ')} (plan the next batch from these first)`);
+  } catch (e) { warns.push(`shell coverage check skipped: ${e.message}`); }
   if (warns.length) { console.log('\nWarnings:'); warns.forEach(w => console.log(' ~ ' + w)); }
   if (fails.length) { console.error('\nDIVERSITY GATE FAILED:'); fails.forEach(f => console.error(' - ' + f)); process.exit(1); }
   console.log('\nDiversity gate PASSED.');
