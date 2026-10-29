@@ -827,8 +827,7 @@
           "at": "top"
         },
         {
-          "head": "Your cart is <span class=\"accent\">tonight's dinner.</span>",
-          "eyebrow": "Fried rice, 15 minutes",
+          "head": "Dinner. <span class=\"accent\">Decided.</span>",
           "from": 4.5,
           "at": "top"
         }
@@ -846,7 +845,131 @@
         "eyebrow": "Real app screen",
         "head": "Tell it what you bought. <span class=\"accent\">It writes dinner.</span>",
         "cap": "Snap the receipt or type the five in. A recipe with calories and protein, and the missing items sent to Instacart. No more what's-for-dinner merry-go-round."
+      },
+      "status": "retracted",
+      "note": "2026-10-29 14:40 PT, Travis: \"different end card; the Your cart is tonight's dinner line is weak, more hard hitting, Dinner, Decided; not redundant\". Recut as v5"
+    },
+    {
+      "file": "o26-ig-footage-v5",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "style": "center",
+      "video": "assets/video/raw/2026-10-25-grocery-aisle-cart.mp4",
+      "segments": [
+        {
+          "trim": [
+            0,
+            2.9
+          ],
+          "speed": 1.5
+        },
+        {
+          "trim": [
+            2.9,
+            4.3
+          ],
+          "speed": 1.0
+        },
+        {
+          "trim": [
+            4.3,
+            5.7
+          ],
+          "speed": 0.6
+        }
+      ],
+      "hold": 1.2,
+      "audioLevel": -20,
+      "cover": 4.6,
+      "footageClaim": "Travis's phone clip, Oct 25: walking down a grocery aisle behind a green cart, then tilting down into the cart: a bag of green beans, a pouch of jasmine rice, a carton of eggs, bananas and a bottle of strawberry lemonade",
+      "overlays": [
+        {
+          "head": "No list.<br>No plan.<br><span class=\"accent\">Just ingredients.</span>",
+          "from": 0,
+          "to": 1.9
+        },
+        {
+          "head": "This isn't dinner...",
+          "from": 1.9,
+          "to": 3.1
+        },
+        {
+          "head": "<span class=\"accent\">yet.</span>",
+          "from": 3.4,
+          "to": 4.3,
+          "at": "top"
+        },
+        {
+          "head": "Dinner. <span class=\"accent\">Decided.</span>",
+          "from": 4.5,
+          "at": "top"
+        }
+      ],
+      "why": "Travis's beats, the payoff cut to two words (Dinner. Decided.), then the mechanic as the end card: the same five things as a receipt, read as tonight's dinner. A different shell from the footage, and the one capability the whole reel points at.",
+      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein.",
+      "stabilize": true,
+      "endCard": {
+        "template": "receipt",
+        "footer": "badge-bl",
+        "duration": 3.4,
+        "store": "GROCERY",
+        "meta": "SATURDAY · 5:52 PM · 5 ITEMS",
+        "lines": [
+          {
+            "item": "Green beans",
+            "price": "3.49"
+          },
+          {
+            "item": "Jasmine rice, pouch",
+            "price": "2.99"
+          },
+          {
+            "item": "Eggs, dozen",
+            "price": "5.99"
+          },
+          {
+            "item": "Bananas",
+            "price": "1.49"
+          },
+          {
+            "item": "Strawberry lemonade",
+            "price": "3.99"
+          }
+        ],
+        "total": "$17.95",
+        "dishes": [
+          {
+            "name": "Green bean & egg fried rice",
+            "when": "Tonight · 15m"
+          }
+        ],
+        "sticker": "1 photo",
+        "head": "Snap the receipt. <em>That is the whole plan.</em>",
+        "photoClaim": "a rendered receipt: the five items from the cart in the clip, with prices as illustration, and the one dinner iEatz writes from them"
       }
+    },
+    {
+      "file": "o31-ig-cookbook-split",
+      "w": 1080,
+      "h": 1350,
+      "template": "split",
+      "footer": "badge-br",
+      "top": {
+        "photo": "food/healthy-bowls-table.jpg",
+        "objPos": "62% 40%",
+        "label": "30 dinners, 30 minutes each"
+      },
+      "bottom": {
+        "photo": "food/tomato-pasta-skillet.jpg",
+        "objPos": "50% 55%"
+      },
+      "photoClaim": "an overhead table of four plated dinners (grilled chicken over wild rice, a salmon salad, roasted cauliflower with cashews, crudites with hummus and flatbread); below, a cast-iron skillet of spaghetti with blistered tomatoes, peas and basil, tomatoes on the vine and a bowl of olives beside it",
+      "seam": "Comment <em>COOKBOOK</em>",
+      "cap": "A month of real dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list. One word in the comments and the book lands in your DMs. <b>Free</b>",
+      "why": "For a cold audience the offer has to be the whole post: what you get (a month of dinners), the proof (two plates of it), the mechanic (one word in the comments), the price (free). The keyword sits in the seam pill, the one place on the frame a thumb stops.",
+      "app": "The cookbook: 30 recipes, each with a tap-to-shop Instacart list, delivered by DM when someone comments COOKBOOK."
     }
   ]
 }
