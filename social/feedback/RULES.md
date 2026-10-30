@@ -188,10 +188,12 @@ ledger; (3) library photos rested 60 days or more; (4) nothing else, except a ho
 Nov 15 a stock photo on a post is a gate failure only while an own photo is free; when the inbox
 is empty or the own photos were all used this month, the library is the plan, not an excuse for
 a thin week. A photo used in the last 30 days warns (rest it). Flagged photos (`low-res`,
-`brand-in-frame`, `empty-scene`, `no-consent`) are never used, so the honest count of the
-never-used library on Oct 30 is 13, not 26: 12 of the 31 never-used files are under 1600 px and
-7 carry a logo. The week of Nov 2 uses 8 of the 13; the 7 rested photos and whatever the team
-shoots are next.
+`empty-scene`, `no-consent`) are never used. A logo or a product label in frame is fine (Travis,
+Oct 30: "it's okay if there is a logo"; real kitchens have brands), so the `brand-in-frame` flag
+is retired and the brands are kept in the photo's `note`. The one thing still worth a look by
+hand: a third-party app on a screen in the shot, which can read as ours. The week of Nov 2 uses
+8 never-used photos; on Nov 9 the supply is 12 never-used (the whole fridge category is back)
+and 11 rested, plus whatever the team shoots.
 Why: the inputs are the ceiling. A rule that strands the feed when the inbox is empty makes the
 team's upload rate the posting rate, and 173 reach a month cannot afford dark weeks.
 Enforced by: diversity-gate.js rule 6 (own-first failure from 2026-11-15; 30-day reuse warning);
@@ -230,3 +232,8 @@ _Rules replaced by a newer rule, kept with the date and the id that replaced the
   the five reboot pillars (Fridge to dinner, The receipt, Cook with me, Send this to, Comment
   COOKBOOK) with a cadence each, in the reboot doc; the `pillar` ledger field keeps the old names
   for the metrics history.
+- 2026-10-30 · `brand-in-frame` photo flag (refused at render since Oct 22; 15 photos, the whole
+  fridge category among them) → retired by Travis ("it's okay if there is a logo, slightly blur
+  it or just remove that gate altogether"). Removed rather than blurred: a blur needs hand-placed
+  coordinates per photo and reads as doctored; a jar with a label reads as a real fridge. The
+  brands stay in each photo's `note`.

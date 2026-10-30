@@ -9,7 +9,7 @@ https://drive.google.com/drive/folders/1blKSlrZMasGCS2YIqQFo2c1F8enCpBWf
 
 | Subfolder | What goes in | Notes |
 |---|---|---|
-| 1 photos (kitchen, fridge, receipts, food) | phone photos, 3000 px or wider, no logos or packaging brands in frame | the fridge category is empty of usable shots: clean shelves, a receipt on the counter, a bag being unpacked, the pan on the stove are the gaps |
+| 1 photos (kitchen, fridge, receipts, food) | phone photos, 3000 px or wider; logos and packaging brands in frame are fine (Oct 30), faces only with consent | the fridge category is empty of usable shots: clean shelves, a receipt on the counter, a bag being unpacked, the pan on the stove are the gaps |
 | 2 video clips (phone b-roll, screen recordings) | 10 to 60 s clips, vertical, natural light: receipt on the counter, a pan on the heat, a screen recording of a receipt import and of a recipe with macros | these become 30 to 60 s reels; the rendered 7 to 10 s graphics stay for the weeks without footage |
 | 3 app screenshots (full resolution) | every screen, 1170 px wide or more, straight from the phone | replaces the 640 px screens the device shell uses today |
 | 4 audio (Meta Sound Collection downloads) | mp3 beds from Meta Business Suite, with the Sound Collection id in the file name | business accounts are cleared for this library only; see `assets/audio/README.md` |
@@ -18,8 +18,8 @@ https://drive.google.com/drive/folders/1blKSlrZMasGCS2YIqQFo2c1F8enCpBWf
 ## Indexing (Nov 2026)
 Every upload is reviewed within a day and goes into `assets/photos/photos.json` with
 `source: "own"`, an honest `description` (what the frame literally shows, who is in it), and a
-`flag` for any logo, product label or a face that did not consent (`brand-in-frame`,
-`no-consent`): a flagged photo is never used. Clips are logged in the batch that cuts them
+`flag` for a face that did not consent (`no-consent`): a flagged photo is never used. Logos and
+product labels are fine since Oct 30 2026 and go in the `note`. Clips are logged in the batch that cuts them
 (`footageClaim`), never committed. From Nov 15 2026 our own photos come first: a post on a `stock` photo fails the gate only while
 an own photo is free; an empty inbox means the library (never-used, then rested 60 days) is the
 plan, never a thin week (F-008, `node social/render/photo-usage.js`). Inbox checks are logged in `photos.json` under `inboxLog`.

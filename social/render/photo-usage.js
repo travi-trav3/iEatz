@@ -6,7 +6,7 @@
 //   2. stock, unflagged, never used                      (the library nobody has opened)
 //   3. stock, unflagged, rested: last used 60+ days ago  (used once in July is fresh again)
 //   4. recent: used in the last 60 days                  (not this week)
-//   5. unusable: flagged (low-res, brand-in-frame, empty-scene, no-consent)
+//   5. unusable: flagged (low-res, empty-scene, no-consent)
 // The gate (diversity-gate.js rule 6) uses the same numbers: a stock photo on a post due on or
 // after 2026-11-15 fails only while an own photo is available; a week never ships thin because
 // the inbox was empty. A photo used in the last 30 days warns (CONTROL_CENTER §5: rest a hero).
@@ -62,7 +62,7 @@ function usage() {
 }
 
 const dayDiff = (a, b) => Math.round((Date.parse(a) - Date.parse(b)) / 864e5);
-const USABLE_FLAG = /low-res|brand-in-frame|empty-scene|no-consent|ext-mismatch/;
+const USABLE_FLAG = /low-res|empty-scene|no-consent|ext-mismatch/;   // brand-in-frame retired Oct 30 2026: logos are fine
 
 function supply(asOf) {
   const uses = usage();

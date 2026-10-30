@@ -55,10 +55,10 @@ async function annotate(p) {
       const t = TEMPLATES[p.template];
       if (!t) { console.error(`!! unknown template "${p.template}" for ${p.file}`); bad++; continue; }
       const photos = photosOf(p);
-      // photos.json flags "low-res" (under 1600 px) and "brand-in-frame" (a logo, a retailer, a
-      // third-party screen) refuse the photo at render (R10, Oct 22 2026): the batch has to pick
-      // another shot instead of shipping a soft or off-brand frame.
-      const refused = photos.map(f => [f, PHOTO_FLAG[f]]).filter(([, fl]) => fl && /low-res|brand-in-frame|empty-scene/.test(fl));
+      // photos.json flags "low-res" (under 1600 px), "empty-scene" and "no-consent" refuse the photo at
+      // render (R10, Oct 22 2026; the brand-in-frame flag was retired Oct 30 2026, a logo in frame is fine):
+      // the batch has to pick another shot instead of shipping a soft or empty frame.
+      const refused = photos.map(f => [f, PHOTO_FLAG[f]]).filter(([, fl]) => fl && /low-res|empty-scene|no-consent/.test(fl));
       if (refused.length) { console.error(`!! ${p.file}: photo refused: ${refused.map(([f, fl]) => `${f} (${fl})`).join(', ')}`); bad++; continue; }
       const graded = photos.some(f => !/^app-/.test(path.basename(f))) && gradeOn(p, batch);
       const claimMissing = isV2(batch, p) && photos.length > 0 && !p.photoClaim;

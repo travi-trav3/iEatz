@@ -338,48 +338,48 @@
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-stocked.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Coulommiers, Gervais, Martini, wine box",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Coulommiers, Gervais, Martini, wine box (allowed since Oct 30 2026)"
     },
     {
       "file": "fridge/fridge-full-produce.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-full-produce.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Tip Top Sunblest bread bag",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Tip Top Sunblest bread bag (allowed since Oct 30 2026)"
     },
     {
       "file": "fridge/fridge-warm-open.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-warm-open.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Cheez Whiz jar",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Cheez Whiz jar (allowed since Oct 30 2026)"
     },
     {
       "file": "fridge/fridge-real-mess.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-real-mess.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Eggland's Best, Spice World, Fresh Keeper",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Eggland's Best, Spice World, Fresh Keeper (allowed since Oct 30 2026)"
     },
     {
       "file": "fridge/fridge-organized.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-organized.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: ello containers and produce bag",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: ello containers and produce bag (allowed since Oct 30 2026)"
     },
     {
       "file": "fridge/anti-fridge-smeg.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/anti-fridge-smeg.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Smeg logo",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Smeg logo (allowed since Oct 30 2026)"
     },
     {
       "file": "fridge/anti-fridge-shoe.jpg",
@@ -388,7 +388,7 @@
       "style": "kitchen",
       "source": "stock",
       "description": "a near empty fridge holding a white sneaker, an egg carton, a bottle of ketchup, a carton of milk, a bottle of stout and a potted plant",
-      "flag": "brand-in-frame: Guinness bottle, Heinz ketchup"
+      "note": "brands in frame: Guinness bottle, Heinz ketchup (allowed since Oct 30 2026)"
     },
     {
       "file": "fridge/anti-fridge-rusty.jpg",
@@ -403,16 +403,16 @@
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/woman-grocery-shopping.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Boxed Water",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Boxed Water (allowed since Oct 30 2026)"
     },
     {
       "file": "grocery/kid-in-grocery-cart.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/kid-in-grocery-cart.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Cheez-It box",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Cheez-It box (allowed since Oct 30 2026)"
     },
     {
       "file": "grocery/grocery-storefront.jpg",
@@ -434,8 +434,8 @@
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-bag-produce.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: bakery brand and retailer URL",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: bakery brand and retailer URL (allowed since Oct 30 2026)"
     },
     {
       "file": "lifestyle/woman-in-kitchen.jpg",
@@ -464,16 +464,16 @@
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/mother-child-meal.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Hillshire Farm, OshKosh",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Hillshire Farm, OshKosh (allowed since Oct 30 2026)"
     },
     {
       "file": "lifestyle/mother-child-cooking.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/mother-child-cooking.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Hillshire Farm, OshKosh",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Hillshire Farm, OshKosh (allowed since Oct 30 2026)"
     },
     {
       "file": "lifestyle/kitchen-prep-scene.jpg",
@@ -523,11 +523,10 @@
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/couple-cooking.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Jimmy Dean",
       "flags": [
         "brand-in-frame"
       ],
-      "note": "Jimmy Dean sausage package on the counter, bottom center",
+      "note": "Jimmy Dean sausage package on the counter, bottom center; brands in frame: Jimmy Dean (allowed since Oct 30 2026)",
       "source": "stock"
     },
     {
@@ -584,16 +583,16 @@
       "category": "pantry",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/counter-eggs-prep.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: tablet running a third-party app",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: tablet running a third-party app (allowed since Oct 30 2026)"
     },
     {
       "file": "pantry/pantry-real-shelves.jpg",
       "category": "pantry",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/pantry-real-shelves.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Nutella, Senseo, dog food",
-      "source": "stock"
+      "source": "stock",
+      "note": "brands in frame: Nutella, Senseo, dog food (allowed since Oct 30 2026)"
     },
     {
       "file": "pantry/pantry-open-spice.jpg",
@@ -681,5 +680,12 @@
       "designExports": 0,
       "note": "all five subfolders empty; nothing new in Drive since the folder was created Oct 22"
     }
-  ]
+  ],
+  "flags": {
+    "low-res": "under 1600 px on the long edge: refused at render",
+    "empty-scene": "no food in frame: refused at render",
+    "ext-mismatch": "PNG bytes under a .jpg name",
+    "no-consent": "a face that did not agree to be posted: refused at render (own photos)",
+    "brand-in-frame": "retired Oct 30 2026 (Travis: a logo in frame is fine, real kitchens have brands); the brands are kept in `note` so the planner knows what is in the shot"
+  }
 }

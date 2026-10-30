@@ -134,8 +134,9 @@ show what iEatz did. The gate prints the rationale table; read it before the ren
   mint and dark shells bottom-left; photo shells stamp bottom-right; carousel interiors none;
   sendthis centred. The diversity gate fails any other position on posts from Oct 26; the old
   "rotate the footer" rules (adjacency, 50% cap) are gone.
-- **Flagged photos are refused.** `photos.json` `flag` of `low-res` (under 1600 px) or
-  `brand-in-frame` (logo, retailer, third-party screen) fails the render; pick another shot.
+- **Flagged photos are refused.** `photos.json` `flag` of `low-res` (under 1600 px),
+  `empty-scene` or `no-consent` fails the render; pick another shot. The `brand-in-frame` flag was
+  retired Oct 30 2026 (a logo in frame is fine); the brands are listed in the photo's `note`.
 
 ## Gates
 - **Set gate** (`diversity-gate.js`, the old name kept so every runbook works): per channel, in

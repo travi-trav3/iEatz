@@ -479,7 +479,8 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   the 84 px floor because line-height 0.9 overflowed the box) and the underline that fragmented
   when a phrase wrapped; poster and thread recomposed as one centred block; one badge home per
   surface (`FOOTER_HOME`) and the footer-rotation rules removed from the diversity gate; six
-  brand-in-frame photos flagged and refused at render with the nine low-res ones; a channel
+  brand-in-frame photos flagged and refused at render with the nine low-res ones (the brand flag
+  was retired Oct 30: logos are fine); a channel
   health step in the Monday routine. `batches/r4-smoke.json` renders the lot. Next: type scale
   tokens, the composition gate (`layout-gate.js`), the reference board, reels with a sound bed.
 - **Oct 16 2026 — "Send this to" pillar (the brief's task 0, done):** first prop-driven series
