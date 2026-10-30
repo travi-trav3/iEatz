@@ -446,7 +446,7 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   because the inputs ran out, not because the rules got looser. Voice rewritten
   (`feedback/RULES.md`, "The voice", F-007); every rotation rule that picked the shell dropped
   from `diversity-gate.js` (now the set gate: truth, rationale, hero reuse, dedupe, footer home,
-  plus the stock cutoff of Nov 15, F-008, and a track on every reel, F-009); copy gate gains the
+  plus own-photos-first from Nov 15 with the library as the fallback, F-008, and a track on every reel, F-009); copy gate gains the
   eight-word headline, the hook type, the hashtag cap and the stop words. Every photo in
   `photos.json` is tagged `source: "stock"`; our own photos arrive via the Drive inbox as
   `source: "own"`. The week is planned from footage, not from a calendar: no footage means

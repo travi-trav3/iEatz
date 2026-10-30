@@ -16,8 +16,9 @@ const path = require('path');
 // What stays, as failures: the copy gate (truth, rationale, headline, F-006), ledger/render
 // mismatches, a near-duplicate message, a hero photo reused in one channel's set, the badge in
 // its home position and never badge-url on Instagram.
-// What is new: no stock photo on a post due on or after 2026-11-15 (F-008); every reel due from
-// 2026-11-02 names its track (F-009); the three hook variants of one clip (`variantOf`) are
+// What is new: from 2026-11-15 our own photos come first and a stock photo fails only while an
+// own one is free (F-008; `node photo-usage.js` prints the supply in priority order); every reel
+// due from 2026-11-02 names its track (F-009); the three hook variants of one clip (`variantOf`) are
 // allowed to share a caption, a clip and a cover.
 // Warnings never fail: deprecated shells, a hero with no style, a week with no comment-COOKBOOK
 // post, the shells unused across the last three ledgers (the planner starts from them).
@@ -29,9 +30,10 @@ const path = require('path');
 const { load } = require('./ledger');
 const { TEMPLATES, footerHome } = require('./templates');
 const { photosOf } = require('./doc');
+const { supply } = require('./photo-usage');
 const copyGate = require('./copy-gate');
 
-const STOCK_ENDS = '2026-11-15';   // F-008: after this, no post from stock
+const STOCK_ENDS = '2026-11-15';   // F-008: from this, own photos first; stock only while no own photo is free
 const TRACK_FROM = '2026-11-02';   // F-009: from this, no reel without a track
 const REPO = path.resolve(__dirname, '../..');
 const PHOTO_SOURCE = {};
@@ -117,12 +119,31 @@ function gate(file, opts = {}) {
     });
     // 5. A hero with no style in photos.json is a photo nobody opened.
     ps.forEach(p => { if (p.heroPhoto && (!p.photoStyle || p.photoStyle === 'unknown')) warns.push(`${channel}: ${p.id} hero ${p.heroPhoto} has no style in photos.json`); });
-    // 6. F-008: no post from stock on or after 2026-11-15. Our own photos carry source "own" in
-    //    photos.json; a footage reel's clip is ours by definition; app-*.jpg are real screens.
+    // 6. F-008 (as Travis set it Oct 30): own photos first, the library second, never a thin week
+    //    because the inbox was empty. From 2026-11-15 a stock photo fails only while an own photo
+    //    (source "own", unflagged, not used in the last 30 days) is free on the post's day; with
+    //    none free it is a note, not a failure. A photo used in the last 30 days anywhere warns:
+    //    rest it (CONTROL_CENTER §5), there are never-used and rested photos first.
     ps.forEach(p => {
-      if (!p.dueAt || p.dueAt.slice(0, 10) < STOCK_ENDS) return;
-      const stock = photosOfPost(p.render).filter(isStock);
-      if (stock.length) fails.push(`${channel}: ${p.id} is due ${p.dueAt.slice(0, 10)} on stock photo${stock.length > 1 ? 's' : ''} ${stock.join(', ')} (no post from stock after ${STOCK_ENDS}; F-008)`);
+      if (!p.dueAt) return;
+      const day = p.dueAt.slice(0, 10);
+      const photos = photosOfPost(p.render);
+      if (!photos.length) return;
+      let sup; try { sup = supply(day); } catch (e) { warns.push(`photo supply check skipped: ${e.message}`); return; }
+      const tier = Object.fromEntries(sup.rows.map(r => [r.file, r]));
+      const ownFree = (sup.by.own || []).length;
+      const stock = photos.filter(isStock);
+      if (day >= STOCK_ENDS && stock.length) {
+        if (ownFree) fails.push(`${channel}: ${p.id} is due ${day} on stock (${stock.join(', ')}) while ${ownFree} of our own photos are free (own first; F-008)`);
+        else warns.push(`${channel}: ${p.id} is due ${day} on stock (${stock.join(', ')}): no own photo free, the library is the fallback (F-008)`);
+      }
+      for (const f of photos) {
+        const r = tier[f]; if (!r || !r.lastUsed) continue;
+        // the use being checked is this post itself when it is already in a ledger; look past it
+        const prior = (sup.uses[f] || []).filter(u => u.date && u.date < day && !u.post.endsWith(`:${p.id}`)).sort((a, b) => b.date.localeCompare(a.date))[0];
+        if (prior && Math.round((Date.parse(day) - Date.parse(prior.date)) / 864e5) <= 30 && !(p.variantOf))
+          warns.push(`${channel}: ${p.id} reuses ${f}, last used ${prior.date} (${prior.post}); rest a photo 30 days when a never-used or rested one fits (F-008)`);
+      }
     });
     // 7. F-009: a reel due from 2026-11-02 names its track in the ledger (`track`: "buffer" when
     //    Travis adds Instagram's licensed music in the Buffer editor, or the Sound Collection id

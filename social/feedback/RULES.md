@@ -69,7 +69,7 @@ the formulaic-CTA cap, the accent-tail and eyebrow ratios, the plated-photo cap,
 carousel-and-reel-per-week rule, the two-beat aphorism cap. They produced the sameness they
 were meant to prevent. Shell choice comes from the post's job and the rationale table; the
 unused-shells list stays as a reminder, not a rule.
-**What the gates added:** no post from stock after 2026-11-15 (F-008); no reel without a track
+**What the gates added:** own photos first from 2026-11-15, the library as the fallback, never a thin week for lack of a photo (F-008); no reel without a track
 (F-009); a hook type on every post (F-007).
 
 ## Active
@@ -176,18 +176,26 @@ Enforced by: copy-gate.js rules 10 to 12 (headline over eight words, missing hoo
 and the allergen line fail on batches created from 2026-10-30, warn before); banned-phrases.txt
 (F-007 block); the rationale table at the QA gate.
 
-### F-008 · 2026-10-30 · No post from stock after 2026-11-15
-Source: the reboot doc ("Stock photos stop on 15 November; after that a pin without our own photo
-does not ship"), approved by Travis Oct 30.
-Rule: From Nov 15 2026 no post may use a photo whose `source` in `assets/photos/photos.json` is
-`stock` (every photo in the library on Oct 30 is stock). Our own photos arrive through the Drive
-inbox, are indexed with `source: "own"`, an honest description, and a flag for any logo or a
-face that did not consent; a flagged photo is never used. Footage reels (our own clips) and
-`app-*.jpg` (real screens) are not stock. Posts with no photo (send-this, poster) are unaffected.
-Why: "48 of 80 stock photos are used, one dinner photo is left": the library is the ceiling, and
-recombining it is what "played out" looks like.
-Enforced by: diversity-gate.js rule 6 (fails on dueAt on or after 2026-11-15); photos.json
-`source`.
+### F-008 · 2026-10-30 · Own photos first, the library second, never a thin week for lack of a photo
+Source: the reboot doc ("Stock photos stop on 15 November"), then Travis, in session, Oct 30: "we
+can't solely rely on the team-provided photography. If that is empty or they have all been used
+recently, then we need to use the existing library; there are 26 photographs there that have not
+been used even once."
+Rule: Photos are picked in this order, and `node social/render/photo-usage.js` prints the supply
+in exactly this order every Monday: (1) our own photos (`source: "own"` in photos.json, from the
+Drive inbox, unflagged, not used in the last 30 days); (2) library photos never used in any
+ledger; (3) library photos rested 60 days or more; (4) nothing else, except a hotfix. From
+Nov 15 a stock photo on a post is a gate failure only while an own photo is free; when the inbox
+is empty or the own photos were all used this month, the library is the plan, not an excuse for
+a thin week. A photo used in the last 30 days warns (rest it). Flagged photos (`low-res`,
+`brand-in-frame`, `empty-scene`, `no-consent`) are never used, so the honest count of the
+never-used library on Oct 30 is 13, not 26: 12 of the 31 never-used files are under 1600 px and
+7 carry a logo. The week of Nov 2 uses 8 of the 13; the 7 rested photos and whatever the team
+shoots are next.
+Why: the inputs are the ceiling. A rule that strands the feed when the inbox is empty makes the
+team's upload rate the posting rate, and 173 reach a month cannot afford dark weeks.
+Enforced by: diversity-gate.js rule 6 (own-first failure from 2026-11-15; 30-day reuse warning);
+photo-usage.js for the Monday plan; photos.json `source`, `flag`, `description`.
 
 ### F-009 · 2026-10-30 · Sound on, three hooks, trial reels
 Source: the reboot doc and social/reference/TRIAL-REELS.md, approved by Travis Oct 30.

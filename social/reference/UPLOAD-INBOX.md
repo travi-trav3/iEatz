@@ -20,8 +20,9 @@ Every upload is reviewed within a day and goes into `assets/photos/photos.json` 
 `source: "own"`, an honest `description` (what the frame literally shows, who is in it), and a
 `flag` for any logo, product label or a face that did not consent (`brand-in-frame`,
 `no-consent`): a flagged photo is never used. Clips are logged in the batch that cuts them
-(`footageClaim`), never committed. From Nov 15 2026 a post on a `stock` photo fails the gate
-(F-008). Inbox checks are logged in `photos.json` under `inboxLog`.
+(`footageClaim`), never committed. From Nov 15 2026 our own photos come first: a post on a `stock` photo fails the gate only while
+an own photo is free; an empty inbox means the library (never-used, then rested 60 days) is the
+plan, never a thin week (F-008, `node social/render/photo-usage.js`). Inbox checks are logged in `photos.json` under `inboxLog`.
 
 Stock b-roll, if filming slips: Pexels and Pixabay (free, commercial use), Mixkit, Coverr; paid:
 Artgrid, Storyblocks, Envato Elements. Instagram's 2026 originality rule treats pure stock

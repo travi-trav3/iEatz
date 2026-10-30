@@ -22,7 +22,8 @@ social/
     render-batch.js     ← static PNGs:  node render-batch.js batches/<batch>.json
     render-motion.js    ← reels (MP4): node render-motion.js batches/<batch>.json
     ledger.js           ← loads a ledger or render batch for the gates (joins renderBatch)
-    diversity-gate.js   ← the set gate (truth, rationale, stock cutoff, tracks); also runs the copy gate
+    diversity-gate.js   ← the set gate (truth, rationale, own-first photos, tracks); also runs the copy gate
+    photo-usage.js      ← the photo supply in priority order (own, never-used, rested); run it Monday
     copy-gate.js        ← copy rules as code; copy-allowlist.txt = allowed capitals
     contact-sheet.js    ← per-channel montage; --with-live = the IG grid as it will look
     compat-check.js     ← re-renders legacy batches and byte-compares with committed PNGs
@@ -140,8 +141,10 @@ show what iEatz did. The gate prints the rationale table; read it before the ren
 - **Set gate** (`diversity-gate.js`, the old name kept so every runbook works): per channel, in
   publish order. Ledger/render mismatches; the copy gate; no near-duplicate message (the three
   `variantOf` cuts of one clip and two comment-COOKBOOK asks are exempt); no hero reuse in a
-  channel's set; the badge in its home position and never `badge-url` on Instagram; **no stock
-  photo on a post due on or after 2026-11-15** (F-008, `source` in photos.json); **every reel due
+  channel's set; the badge in its home position and never `badge-url` on Instagram; **from 2026-11-15
+  our own photos first: a stock photo fails only while an own photo is free** (F-008; `node
+  photo-usage.js` prints the supply: own, never-used, rested 60+ days, recent, unusable);
+  a photo reused inside 30 days warns; **every reel due
   from 2026-11-02 names its `track`** (F-009). Warnings: deprecated shells, a hero with no style,
   a week with no comment-COOKBOOK post, and the shells unused across the last three ledgers.
   The rotation rules (adjacency, template cap, pillar rules, formulaic CTA cap, accent-tail and
