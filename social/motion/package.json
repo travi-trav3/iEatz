@@ -1,0 +1,19 @@
+{
+  "name": "ieatz-social-motion",
+  "version": "1.0.0",
+  "description": "iEatz Healthy reels, rendered with Remotion",
+  "scripts": {
+    "postinstall": "mkdir -p public/fonts && cp ../render/fonts/*.woff2 public/fonts/",
+    "studio": "remotion studio src/index.ts",
+    "render:receipt": "remotion render src/index.ts ReceiptReel out/receipt-reel.mp4 --codec=h264"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.529",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.529",
+    "typescript": "^7.0.2"
+  },
+  "private": true
+}
