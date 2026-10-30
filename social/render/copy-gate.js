@@ -13,10 +13,10 @@
 //   7. (F-004) `why` and `app` on every post; a thread whose replies never show the app
 //   8. (F-005) a headline that opens with an instruction verb: warning
 //   9. (F-006) a caption that reads as a recipe (three or more method verbs)
-//  10. (F-005, as code from batches created 2026-11-02) a headline over eight words; sendthis exempt
+//  10. (F-005, as code from batches created 2026-10-30) a headline over eight words; sendthis exempt
 //  11. (F-007) the hook type on every post (ledger `hook`, render `hookType`): problem | promise |
 //      surprise, the column of the rationale table
-//  12. (F-007) more than five hashtags; "verify for allergens" in the first three lines
+//  12. (F-007) more than five hashtags; "verify for allergens" anywhere but the last line
 // The rationale table it prints (why, app, hook, the headline read aloud) is read by a person
 // before anything renders; "read aloud" means exactly that.
 const fs = require('fs');
@@ -148,7 +148,7 @@ function check(loaded) {
   }
   // 10 (F-005 as code, Nov 2026): eight words or fewer. A problem, a promise with a number or a
   //    surprise fits in eight; past that it is a sentence, and a stranger at speed reads none of
-  //    it. Fails on batches created from 2026-11-02, warns before. The sendthis hook is its own
+  //    it. Fails on batches created from 2026-10-30 (the reboot), warns before. The sendthis hook is its own
   //    format (up to 16 words by the brief) and is exempt.
   const wordsIn = (h) => (h.match(/[A-Za-z0-9$][\w'$.:%-]*/g) || []).length;
   for (const p of loaded.posts) {
@@ -157,14 +157,14 @@ function check(loaded) {
     const n = wordsIn(h);
     if (n > 8) {
       const msg = `${p.id}: headline is ${n} words ("${h}"): eight or fewer, a problem, a promise with a number or a surprise (F-005)`;
-      if (created >= '2026-11-02') fails.push(msg); else warns.push(msg);
+      if (created >= '2026-10-30') fails.push(msg); else warns.push(msg);
     }
   }
   // 11 (F-007, Nov 2026): every post names its hook type, the column Travis reads in the
   //    rationale table: problem (a pain they have), promise (a payoff with a number), surprise
-  //    (a line that makes them look twice). Required on batches created from 2026-11-02.
+  //    (a line that makes them look twice). Required on batches created from 2026-10-30.
   const HOOKS = new Set(['problem', 'promise', 'surprise']);
-  if (created >= '2026-11-02') for (const p of loaded.posts) {
+  if (created >= '2026-10-30') for (const p of loaded.posts) {
     if (!p.render) continue;
     if (!HOOKS.has(p.hook)) fails.push(`${p.id}: hook type missing or not one of problem | promise | surprise (render "hookType" or ledger "hook"; F-007)`);
   }
@@ -175,12 +175,12 @@ function check(loaded) {
     const tags = (text.match(/(^|\s)#[\w]+/g) || []).length;
     if (tags > 5) {
       const msg = `${p.id}: ${tags} hashtags in the caption (five at most, all ones people search; F-007)`;
-      if (created >= '2026-11-02') fails.push(msg); else warns.push(msg);
+      if (created >= '2026-10-30') fails.push(msg); else warns.push(msg);
     }
-    const firstThree = text.split('\n').filter(l => l.trim()).slice(0, 3).join('\n');
-    if (/verify for allergens/i.test(firstThree)) {
-      const msg = `${p.id}: "verify for allergens" in the first three lines of the caption (it goes last; F-007)`;
-      if (created >= '2026-11-02') fails.push(msg); else warns.push(msg);
+    const lines = text.split('\n').filter(l => l.trim());
+    if (/verify for allergens/i.test(text) && !/verify for allergens/i.test(lines[lines.length - 1] || '')) {
+      const msg = `${p.id}: "verify for allergens" is not the last line of the caption (it goes last, never in the opening; F-007)`;
+      if (created >= '2026-10-30') fails.push(msg); else warns.push(msg);
     }
   }
   check.warns = warns;

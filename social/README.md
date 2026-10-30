@@ -114,7 +114,7 @@ bedDb }` bakes a Meta Sound Collection bed and/or a voiceover into the file (rul
 ### Rationale fields (F-004, Oct 22 2026; hook type Nov 2026)
 Every post in a batch created from Oct 22 carries `why` (the insight or joke in one sentence) and
 `app` (where a real capability enters: receipt import, add what you have, a recipe with calories
-and protein, the Instacart hand-off, the cookbook); from Nov 2 also `hookType` (problem |
+and protein, the Instacart hand-off, the cookbook); from Oct 30 also `hookType` (problem |
 promise | surprise, F-007). `copy-gate.js` refuses a post without them,
 refuses an `app` line that names no capability, and refuses a `thread` whose reply bubbles never
 show what iEatz did. The gate prints the rationale table; read it before the renders.
@@ -152,7 +152,7 @@ show what iEatz did. The gate prints the rationale table; read it before the ren
   is fine), every `photoClaim` shares a noun with its headline or caption, nothing on
   `feedback/banned-phrases.txt` (F-001 claims, F-007 stop words), `why` and `app` on every post
   (F-004), a caption that reads as a method fails (F-006), a headline over eight words fails from
-  batches created 2026-11-02 (F-005), every post names its hook type (`hookType` on the render
+  batches created 2026-10-30 (F-005), every post names its hook type (`hookType` on the render
   post: problem | promise | surprise; F-007), five hashtags at most and "verify for allergens"
   never in the first three lines (F-007). It prints the rationale table (why, app, hook, the
   headline read aloud): a person reads it before anything renders.

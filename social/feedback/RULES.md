@@ -40,7 +40,7 @@ brand. Not a recipe magazine. A person with a point of view and a trick.
 **Caption:** the first line is the thought, never the recipe. Naming the dish, the time and the
 protein is the most it gives away; the method stays in the app (F-006). One sentence about what
 iEatz did, in plain words. Five hashtags at most, all ones people search. "Verify for allergens"
-goes last, never in the first three lines.
+goes last, never in the opening; the gate checks it is the last line.
 **Words we stop using:** fridge-first, editorial, wellness, nourish, elevate, hack, unlock,
 journey, delicious. If the word would not survive a group chat, it does not ship.
 **The read-aloud test:** every headline goes in the rationale table as it would be said to a
@@ -173,7 +173,7 @@ Captions carry five hashtags at most and never "verify for allergens" in the fir
 The stop-word list is banned.
 Why: "reads like a brand posting to post; nothing a 26 year old would send a friend."
 Enforced by: copy-gate.js rules 10 to 12 (headline over eight words, missing hook type, hashtags
-and the allergen line fail on batches created from 2026-11-02, warn before); banned-phrases.txt
+and the allergen line fail on batches created from 2026-10-30, warn before); banned-phrases.txt
 (F-007 block); the rationale table at the QA gate.
 
 ### F-008 · 2026-10-30 · No post from stock after 2026-11-15

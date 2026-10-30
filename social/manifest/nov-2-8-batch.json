@@ -1,0 +1,174 @@
+{
+  "batch": "nov-2-8",
+  "createdAt": "2026-10-30",
+  "organization": {
+    "name": "Applied Intelligence Co.",
+    "id": "6a138b7d82bb2ed009fed356"
+  },
+  "channels": {
+    "pinterest": {
+      "id": "6a7a4b64b2d9d577435279f6"
+    },
+    "instagram": {
+      "id": "6a14b495c687a22dd4267bfc"
+    }
+  },
+  "urlBase": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/",
+  "appStoreUrl": "https://apps.apple.com/us/app/id6475559706",
+  "renderBatch": "social/render/batches/nov-2-8.json",
+  "igMetadata": {
+    "post": {
+      "type": "post",
+      "shouldShareToFeed": true
+    },
+    "reel": {
+      "type": "reel",
+      "shouldShareToFeed": true
+    }
+  },
+  "note": "Mon Nov 2 to Sun Nov 8 (PST from Nov 2: -08:00). The thin week of the reboot doc: no footage in the Drive inbox on Oct 30, so no reels. Wednesday cookbook post (o04-ig, 18:45 PT), Thursday send-this (st03 in manifest/send-this.json, 11:00 PT, already scheduled) and one pin a day at 12:10 PT from the unused stock photos. Rationale table (why, app, hook, headline read aloud) sent to Travis in Slack #social before scheduling; nothing is created in Buffer until he says go. Pins link to the breakfasts page where the pin is a breakfast, else the App Store. Buffer Free plan: no first comments. Last batch allowed on stock (F-008 from Nov 15).",
+  "posts": [
+    {
+      "id": "p02-pin",
+      "status": "pending",
+      "channel": "pinterest",
+      "dueAt": "2026-11-02T12:10:00-08:00",
+      "file": "assets/pinterest/nov2/p02-pin-avocado-photo.png",
+      "pillar": "Pantry/Fridge",
+      "topic": "Avocado",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "problem",
+      "board": "High protein meals and macro friendly recipes",
+      "boardServiceId": "1011339728762228748",
+      "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/",
+      "title": "Ripe avocado ideas: avocado and egg toast before it turns brown (10 minutes)",
+      "text": "the avocado hit ripe this morning and by tomorrow it's brown. you have eggs. you have the end of a loaf. that's breakfast, you just haven't decided yet.\n\ntell iEatz what's on the counter and it writes it in seconds, calories and protein estimated (about 14 g here), and sends anything you're missing to Instacart. free on iOS and Android. save this for the next avocado emergency.",
+      "alt": "Pin: a photo of one avocado half on a pink background above a paper panel. Eyebrow: It happens once. Headline: The avocado is ripe today. Only today. Chips: eggs, bread, done; 10 minutes; about 14 g protein."
+    },
+    {
+      "id": "p03-pin",
+      "status": "pending",
+      "channel": "pinterest",
+      "dueAt": "2026-11-03T12:10:00-08:00",
+      "file": "assets/pinterest/nov2/p03-pin-greens-bleed.png",
+      "pillar": "Pantry/Fridge",
+      "topic": "Greens",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "surprise",
+      "board": "Pantry meals and fridge clean out dinners",
+      "boardServiceId": "1011339728762228744",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "What to do with wilting greens: fridge clean out dinner ideas, no plan needed",
+      "text": "the kale is going soft, the spinach is a day from slime and the cucumber is bending. that's not trash, that's three dinners you haven't picked yet.\n\ntell iEatz what's dying in the drawer and it writes tonight's recipe from exactly that before you throw it out, calories and protein estimated, the missing bits to Instacart. free on iOS and Android.",
+      "alt": "Pin: kale, spinach, cucumber slices, lime and celery laid out on a mint background. Eyebrow: The drawer, Tuesday. Headline: Wilting greens are three dinners, not trash. Line: tell iEatz what is going soft and it writes tonight from exactly that, protein counted."
+    },
+    {
+      "id": "p04-pin",
+      "status": "pending",
+      "channel": "pinterest",
+      "dueAt": "2026-11-04T12:10:00-08:00",
+      "file": "assets/pinterest/nov2/p04-pin-aisle-bleed.png",
+      "pillar": "Grocery/Instacart",
+      "topic": "Receipt",
+      "cta": "receipt-scan",
+      "format": "static",
+      "hook": "promise",
+      "board": "Grocery list ideas and meal planning",
+      "boardServiceId": "1011339728762228750",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Grocery shopping without a meal plan: one receipt becomes five dinners",
+      "text": "no list, no plan, a basket and vibes. that's fine, that's most of us.\n\nsnap the receipt at the register and iEatz turns what you actually bought into the week's dinners, calories and protein estimated, and sends the two things you forgot to Instacart. one receipt, five dinners, zero planning. free on iOS and Android.",
+      "alt": "Pin: a shopper walking away down a supermarket aisle with a blue basket. Eyebrow: No list, no plan. Headline: One receipt. Five dinners. Zero planning. Line: shop on vibes, snap the receipt at the register and iEatz writes the week from what is actually in the basket, protein counted."
+    },
+    {
+      "id": "o04-ig",
+      "status": "pending",
+      "channel": "instagram",
+      "dueAt": "2026-11-04T18:45:00-08:00",
+      "file": "assets/social/nov2/o04-ig-cookbook-igphoto.png",
+      "pillar": "Grocery/Instacart",
+      "topic": "Cookbook",
+      "cta": "cookbook-dm",
+      "format": "static",
+      "hook": "promise",
+      "text": "comment COOKBOOK and the book's in your dms. free.\n\n30 dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list so the cart builds itself. real food, the kind that looks like burger night, not like a diet. one-pan garlic chicken and broccoli. ground beef and sweet potato skillet. black bean and corn quesadillas. shrimp and zucchini stir-fry. 26 more.\n\none word: COOKBOOK.\n\n#mealplanning #weeknightdinner #30minutemeals #easydinners #ieatzhealthy",
+      "firstComment": null,
+      "alt": "A tall beef burger with lettuce, tomato and onion on a seeded bun, potato wedges beside it, above a paper panel. Eyebrow: Free cookbook. Headline: 30 dinners you'd actually eat. Comment COOKBOOK. Chips: every one under 30 minutes; an Instacart list per recipe; free, in your DMs.",
+      "note": "The week's comment-COOKBOOK post (Wednesday per the reboot doc). Boost the organic post itself so the ManyChat trigger keeps firing on its comments; o31 (Sat Oct 31) was the last boost candidate. No first comment: Buffer Free plan. The recipe names are the ones listed in o28 and o31."
+    },
+    {
+      "id": "p05-pin",
+      "status": "pending",
+      "channel": "pinterest",
+      "dueAt": "2026-11-05T12:10:00-08:00",
+      "file": "assets/pinterest/nov2/p05-pin-breakfast-bleed.png",
+      "pillar": "Health/Diet",
+      "topic": "Breakfast",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "promise",
+      "board": "High protein meals and macro friendly recipes",
+      "boardServiceId": "1011339728762228748",
+      "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/",
+      "title": "10 minute high protein breakfast with eggs, tomatoes and toast (about 22 g protein)",
+      "text": "it's 7:40 and you have eggs, tomatoes and the end of a loaf. that's a 10 minute breakfast with about 22 g of protein, you just haven't decided yet.\n\ntell iEatz the three and it writes it, calories and protein estimated. free on iOS and Android. verify for allergens.",
+      "alt": "Pin: a close up breakfast plate of halved boiled eggs, cherry tomatoes, mozzarella, grilled sausage and toast, under a dark scrim. Eyebrow: 7:40 AM. Headline: Eggs, tomatoes, toast. Breakfast in 10. Line: tell iEatz the three and it writes it, about 22 g protein, estimated."
+    },
+    {
+      "id": "p06-pin",
+      "status": "pending",
+      "channel": "pinterest",
+      "dueAt": "2026-11-06T12:10:00-08:00",
+      "file": "assets/pinterest/nov2/p06-pin-brunch-bleed.png",
+      "pillar": "Money/Waste",
+      "topic": "Brunch",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "promise",
+      "board": "Cheap healthy dinners on a budget",
+      "boardServiceId": "1011339728762228747",
+      "url": "https://ieatzhealthy.com/recipes/10-minute-breakfasts-busy-mornings/",
+      "title": "Avocado toast with egg at home: the 10 minute brunch you queue 40 minutes for",
+      "text": "forty minutes in a brunch line for avocado toast and eggs you could make in ten. you have the avocado. you have eggs. you have bread.\n\ntell iEatz the three and it writes the plate, calories and protein estimated, and sends the bread to Instacart if you're out. free on iOS and Android. the line can keep the mimosa markup.",
+      "alt": "Pin: a cafe plate on a yellow dish with avocado toast topped with a soft egg, scrambled eggs, beet slaw and greens, under a dark scrim. Eyebrow: Saturday, 11 AM. Headline: Brunch line: 40 minutes. Your kitchen: 10. Line: an avocado, two eggs, bread; tell iEatz what is there and it writes this plate, protein counted."
+    },
+    {
+      "id": "p07-pin",
+      "status": "pending",
+      "channel": "pinterest",
+      "dueAt": "2026-11-07T12:10:00-08:00",
+      "file": "assets/pinterest/nov2/p07-pin-spices-photo.png",
+      "pillar": "Recipe/Food",
+      "topic": "Spices",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "problem",
+      "board": "Easy weeknight dinner ideas",
+      "boardServiceId": "1011339728762228746",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "What to cook with spices you already have: easy weeknight chicken dinner ideas",
+      "text": "the chicken is thawed and you're about to make the exact thing you made tuesday. you own eleven spices. you use two.\n\ntell iEatz the chicken and the three jars you can reach and it writes something new tonight, calories and protein estimated, the one thing you're missing to Instacart. free on iOS and Android.",
+      "alt": "Pin: ground spices and seeds in antique spoons on white marble with chillies and bay leaves, above a paper panel. Eyebrow: Chicken, again. Headline: Bland chicken again? Your spice drawer disagrees. Chips: the jars you already own; 15 minutes; Instacart for the rest."
+    },
+    {
+      "id": "p08-pin",
+      "status": "pending",
+      "channel": "pinterest",
+      "dueAt": "2026-11-08T12:10:00-08:00",
+      "file": "assets/pinterest/nov2/p08-pin-fruit-bleed.png",
+      "pillar": "Money/Waste",
+      "topic": "Fruit",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "problem",
+      "board": "Healthy meal prep for the week",
+      "boardServiceId": "1011339728762228752",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Sunday meal prep: use up the fruit before it goes bad, easy breakfast ideas",
+      "text": "every sunday the fruit bowl is full and every thursday half of it goes in the trash. not this week.\n\ntell iEatz what's in the bowl, berries, rhubarb, whatever citrus is left, and it writes the breakfasts and snacks that use it up first, calories and protein estimated, the yogurt you're out of to Instacart. free on iOS and Android.",
+      "alt": "Pin: a bowl of berries, rhubarb stalks and citrus halves along the left edge of a white surface, the rest empty, under a dark scrim. Eyebrow: The Sunday haul. Headline: Bought Sunday. Trash by Thursday. Not this week. Line: berries, rhubarb, citrus; tell iEatz what is in the bowl and it writes the breakfasts that use it up before anything turns."
+    }
+  ]
+}
