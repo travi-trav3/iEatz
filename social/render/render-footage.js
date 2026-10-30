@@ -143,7 +143,7 @@ const probe = (f) => {
       last = 'vend';
     }
     args.push('-filter_complex', fc.join(';'), '-map', `[${last}]`);
-    if (withAudio) args.push('-map', '[aout]', '-c:a', 'aac', '-b:a', '128k');
+    if (withAudio) args.push('-map', '[aout]', '-c:a', 'aac', '-b:a', '128k', '-ar', '48000'); // loudnorm upsamples to 192 kHz and aac picked 96 kHz; Instagram wants 48
     else args.push('-an');
     args.push('-t', String(total), '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out);
     try { execFileSync('ffmpeg', args, { stdio: ['ignore', 'ignore', 'pipe'] }); } catch (e) { console.error(`!! ${p.file}: ffmpeg: ${String(e.stderr || e.message).slice(0, 400)}`); bad++; continue; }
