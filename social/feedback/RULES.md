@@ -88,6 +88,21 @@ Enforced by: this file at the QA gate (CONTROL_CENTER §6 item 10) and the ratio
 copy gate flags a headline that opens with an instruction verb ("Add", "Tell", "Name", "Type",
 "Snap") as a warning so the reviewer looks at it.
 
+### F-006 · 2026-10-30 · Captions sell the app, never the recipe
+Source: Travis, in session, on the Oct 30 queue (`o30-ig` pesto split: "Blitz it with the parmesan end,
+olive oil, a squeeze of lemon and a clove of garlic; toss with linguine...").
+Rule: A caption or pin description names the pain point and builds the want. It never walks through the
+recipe: no ingredient lists with method, no "roast, toast, toss" steps, no temperatures or step timings.
+Naming the dish, the time and the protein is fine; the recipe itself lives in the app. "The cilantro is
+two days from the trash and you have no plan for it" is the post. "Blitz it with x, y, z, then toss with
+linguine" is the app's job, given away to someone who is scrolling and will never cook from a caption.
+Why: "the content and copy should be building their desire to download the app, not give them partial
+value of the app itself. Build curiosity, entertain, make them smile. Push on the pain point and the
+problem, don't provide a partial solution."
+Enforced by: copy-gate.js rule 9 (three or more cooking-method verbs in a caption fail the batch from
+Oct 30 2026; earlier batches warn), and this file at the QA gate. Recipe steps on a carousel slide or a
+Pinterest steps card are a separate decision for the reboot doc; the caption rule applies everywhere now.
+
 ## Keep doing
 _Things Travis called out as working._
 

@@ -127,6 +127,16 @@ function check(loaded) {
     const h = strip(p.headline || '');
     if (/^(add|tell|name|type|snap|put|enter|open)\b/i.test(h)) warns.push(`${p.id}: headline opens with an instruction ("${h}"): state the problem, the promise or the surprise instead (F-005)`);
   }
+  // 9 (F-006, Oct 30 2026): a caption sells the app, never the recipe. Three or more cooking-method
+  //    verbs in a caption or pin description read as a method; fail from Oct 30 2026, warn before.
+  const METHOD = /\b(roast|toast|blitz|toss|saut[eé]|simmer|scramble|whisk|stir|fold|spread|sear|chop|dice|mince|drizzle|season|preheat|bake|fry|boil|blend|slice)\b/gi;
+  for (const p of loaded.posts) {
+    const hits = (strip(p.text || '').match(METHOD) || []).map(w => w.toLowerCase());
+    if (hits.length >= 3) {
+      const msg = `${p.id}: caption reads as a recipe (${[...new Set(hits)].join(', ')}): name the pain and the dish, never the method (F-006)`;
+      if (created >= '2026-10-30') fails.push(msg); else warns.push(msg);
+    }
+  }
   // 3: two-beat aphorism cap, per channel
   for (const [channel, ps] of Object.entries(byChannel)) {
     const hs = ps.map(p => p.headline).filter(Boolean);

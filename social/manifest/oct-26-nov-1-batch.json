@@ -158,11 +158,12 @@
       "pillar": "Money/Waste",
       "topic": "Herbs",
       "cta": "other",
-      "text": "6:05 PM, the last of the cilantro going soft in the drawer. Blitz it with the parmesan end, olive oil, a squeeze of lemon and a clove of garlic; toss with linguine and a ladle of the pasta water. 15 minutes, about 17 g of protein per serving, estimated.\n\nAdd the five to iEatz and it writes this one, or whatever your fridge version is. Verify for allergens.\n\n#pastarecipes #foodwaste #15minutemeals #pantrymeals #ieatzhealthy",
+      "text": "6:05 PM. the cilantro is two days from the trash and you have no plan for it.\n\nthat is the exact night iEatz exists for. tell it what's going soft in the drawer and it writes dinner from that, 15 minutes, protein counted. tonight it's a pesto you didn't know you had.\n\n#pastarecipes #foodwaste #15minutemeals #pantrymeals #ieatzhealthy",
       "firstComment": "Works with parsley, basil, the top of the carrots. Anything green and going.",
       "alt": "Split image: top, hands chopping cilantro on a wooden board with a mono label reading 6:05 PM, the last of the cilantro; bottom, a fork lifting linguine coated in green herb pesto against a dark background. Seam label: Herbs to pesto. Caption: The wilting bunch, the parmesan end, olive oil, a lemon, a bag of linguine. Add the five to iEatz. 15 min.",
       "bufferId": "6ada61de43a2d9ebee144fef",
-      "slackAlert": "Dr0CB992KRN1"
+      "slackAlert": "Dr0CB992KRN1",
+      "fixed": "2026-10-30 11:41 PT: caption rewritten from a method to the pain point; F-006. Buffer updated 19 minutes before the slot."
     },
     {
       "id": "o01-ig",
@@ -365,12 +366,12 @@
       "board": "Pantry meals and fridge clean out",
       "boardServiceId": "1011339728762228744",
       "url": "https://apps.apple.com/us/app/id6475559706",
-      "title": "Chickpea and sweet potato tacos: 25 minute pantry dinner from a can of chickpeas",
-      "text": "No plan for tonight and nothing thawed? A can of chickpeas, a sweet potato and a stack of tortillas are taco night: roast the sweet potato and chickpeas with cumin and chilli, warm the tortillas, pile them up with avocado, tomato, red onion and a squeeze of lime. 25 minutes, about 13 g of protein per serving, estimated. Type the three into iEatz and it writes the recipe, counts the protein and sends the avocado to Instacart if you are out. Free on iOS and Android.",
+      "title": "Pantry dinner ideas: a can of chickpeas is taco night, the free app writes the recipe",
+      "text": "No plan for tonight and nothing thawed? A can of chickpeas, a sweet potato and a stack of tortillas are a taco night you cannot see yet. Tell iEatz what is in the pantry and it writes the recipe in seconds, counts the protein, and sends anything you are missing to Instacart. Free on iOS and Android. Save this for the next 6 PM panic.",
       "alt": "Pin with a photo of a hand squeezing lime over soft tacos filled with roasted sweet potato, chickpeas, avocado, tomato and jalapeno on a wooden board. Eyebrow: No plan for tonight? Headline: A can of chickpeas is taco night. Line: type the three into iEatz and it writes these tacos in 25 minutes, protein counted; no avocado, it goes to Instacart.",
       "bufferId": "6ada6217e374ecc982210342",
       "slackAlert": "Dr0CB8AZPJ2X",
-      "fixed": "2026-10-26: the herbs collage (\"The herbs went in before they went off\": a slogan, and the same two photos as the Friday Instagram split) replaced with a fresh pantry pin on the tacos photo, problem-first; F-005"
+      "fixed": "2026-10-26: the herbs collage (\"The herbs went in before they went off\": a slogan, and the same two photos as the Friday Instagram split) replaced with a fresh pantry pin on the tacos photo, problem-first; F-005 2026-10-30 11:41 PT: description rewritten without the method; F-006."
     }
   ]
 }
