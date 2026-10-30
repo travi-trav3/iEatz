@@ -17,3 +17,15 @@
 /sees what('s| is) (in|on)/
 /identif(y|ies|ied) (everything|what)/
 /recogni[sz]es? (the |your )?(food|ingredients|fridge)/
+
+# F-007 (2026-10-30): words we stop using. The reboot doc: "if the word would not survive a group
+# chat, it does not ship." Travis, Oct 30: "youthful, social-native, gen Z unpolished energy".
+/fridge[- ]first/
+/\beditorial\b/
+/\bwellness\b/
+/\bnourish(es|ed|ing|ment)?\b/
+/\belevate[sd]?\b/
+/\bhacks?\b/
+/\bunlocks?\b/
+/\bjourney\b/
+/\bdelicious\b/

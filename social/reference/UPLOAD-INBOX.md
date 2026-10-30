@@ -15,6 +15,14 @@ https://drive.google.com/drive/folders/1blKSlrZMasGCS2YIqQFo2c1F8enCpBWf
 | 4 audio (Meta Sound Collection downloads) | mp3 beds from Meta Business Suite, with the Sound Collection id in the file name | business accounts are cleared for this library only; see `assets/audio/README.md` |
 | 5 design system export | the updated design system (HTML, Figma export, or a zip) | lands in `social/reference/design-system/<name>/` |
 
+## Indexing (Nov 2026)
+Every upload is reviewed within a day and goes into `assets/photos/photos.json` with
+`source: "own"`, an honest `description` (what the frame literally shows, who is in it), and a
+`flag` for any logo, product label or a face that did not consent (`brand-in-frame`,
+`no-consent`): a flagged photo is never used. Clips are logged in the batch that cuts them
+(`footageClaim`), never committed. From Nov 15 2026 a post on a `stock` photo fails the gate
+(F-008). Inbox checks are logged in `photos.json` under `inboxLog`.
+
 Stock b-roll, if filming slips: Pexels and Pixabay (free, commercial use), Mixkit, Coverr; paid:
 Artgrid, Storyblocks, Envato Elements. Instagram's 2026 originality rule treats pure stock
 reposts as non-original, so stock is always cut with our own type, app screens or voice, never

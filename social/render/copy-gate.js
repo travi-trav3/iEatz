@@ -4,12 +4,21 @@
 // body, seam, cap, method, slides...) through ledger.js. Fails on:
 //   1. any em dash (U+2014), or an en dash (U+2013) used as a dash (anywhere but between digits)
 //   2. "not X, it's Y" / "not X. It's Y" / "not X, but Y" (and the parallel "not by X, by Y")
-//   3. more than 50% of a channel's headlines under five words (the two-beat aphorism cap)
+//   3. (gone, Nov 2026) the two-beat aphorism cap: fragments are the voice now (F-007)
 //   4. sentence-case violations in headlines: a capitalised word after the first that is not a
 //      sentence start, the pronoun I, an acronym, or on copy-allowlist.txt
 //   5. photoClaim: required on every photo post/slide, and at least one noun from it must
 //      appear in the headline or caption (both strings are printed so the fix is obvious)
 //   6. any phrase on ../feedback/banned-phrases.txt (operator feedback turned into a hard rule)
+//   7. (F-004) `why` and `app` on every post; a thread whose replies never show the app
+//   8. (F-005) a headline that opens with an instruction verb: warning
+//   9. (F-006) a caption that reads as a recipe (three or more method verbs)
+//  10. (F-005, as code from batches created 2026-11-02) a headline over eight words; sendthis exempt
+//  11. (F-007) the hook type on every post (ledger `hook`, render `hookType`): problem | promise |
+//      surprise, the column of the rationale table
+//  12. (F-007) more than five hashtags; "verify for allergens" in the first three lines
+// The rationale table it prints (why, app, hook, the headline read aloud) is read by a person
+// before anything renders; "read aloud" means exactly that.
 const fs = require('fs');
 const path = require('path');
 const { load, strip, headlineOf } = require('./ledger');
@@ -137,12 +146,42 @@ function check(loaded) {
       if (created >= '2026-10-30') fails.push(msg); else warns.push(msg);
     }
   }
-  // 3: two-beat aphorism cap, per channel
-  for (const [channel, ps] of Object.entries(byChannel)) {
-    const hs = ps.map(p => p.headline).filter(Boolean);
-    const short = hs.filter(h => (h.match(/[A-Za-z0-9$][\w'$.:]*/g) || []).length < 5);
-    if (hs.length && short.length / hs.length > 0.5)
-      fails.push(`${channel}: ${short.length}/${hs.length} headlines are under five words (cap 50%): ${short.map(h => `"${h}"`).join(', ')}`);
+  // 10 (F-005 as code, Nov 2026): eight words or fewer. A problem, a promise with a number or a
+  //    surprise fits in eight; past that it is a sentence, and a stranger at speed reads none of
+  //    it. Fails on batches created from 2026-11-02, warns before. The sendthis hook is its own
+  //    format (up to 16 words by the brief) and is exempt.
+  const wordsIn = (h) => (h.match(/[A-Za-z0-9$][\w'$.:%-]*/g) || []).length;
+  for (const p of loaded.posts) {
+    const r = p.render || {}; if (r.template === 'sendthis') continue;
+    const h = strip(p.headline || '');
+    const n = wordsIn(h);
+    if (n > 8) {
+      const msg = `${p.id}: headline is ${n} words ("${h}"): eight or fewer, a problem, a promise with a number or a surprise (F-005)`;
+      if (created >= '2026-11-02') fails.push(msg); else warns.push(msg);
+    }
+  }
+  // 11 (F-007, Nov 2026): every post names its hook type, the column Travis reads in the
+  //    rationale table: problem (a pain they have), promise (a payoff with a number), surprise
+  //    (a line that makes them look twice). Required on batches created from 2026-11-02.
+  const HOOKS = new Set(['problem', 'promise', 'surprise']);
+  if (created >= '2026-11-02') for (const p of loaded.posts) {
+    if (!p.render) continue;
+    if (!HOOKS.has(p.hook)) fails.push(`${p.id}: hook type missing or not one of problem | promise | surprise (render "hookType" or ledger "hook"; F-007)`);
+  }
+  // 12 (F-007, Nov 2026): the caption is a text message, not a brand post. Five hashtags at most,
+  //    all ones people search; the allergen line goes last, never in the first three lines.
+  for (const p of loaded.posts) {
+    const text = String(p.text || '');
+    const tags = (text.match(/(^|\s)#[\w]+/g) || []).length;
+    if (tags > 5) {
+      const msg = `${p.id}: ${tags} hashtags in the caption (five at most, all ones people search; F-007)`;
+      if (created >= '2026-11-02') fails.push(msg); else warns.push(msg);
+    }
+    const firstThree = text.split('\n').filter(l => l.trim()).slice(0, 3).join('\n');
+    if (/verify for allergens/i.test(firstThree)) {
+      const msg = `${p.id}: "verify for allergens" in the first three lines of the caption (it goes last; F-007)`;
+      if (created >= '2026-11-02') fails.push(msg); else warns.push(msg);
+    }
   }
   check.warns = warns;
   return fails;
@@ -156,8 +195,8 @@ if (require.main === module) {
   const n = loaded.posts.length, strings = loaded.posts.reduce((a, p) => a + p.copy.length, 0);
   console.log(`${loaded.source}: ${n} posts, ${strings} strings checked`);
   // The rationale table is for the human review: read it before the renders.
-  const withWhy = loaded.posts.filter(p => p.render && (p.render.why || p.render.app));
-  if (withWhy.length) { console.log('\nRationale (why / app):'); for (const p of withWhy) console.log(`  ${p.id}\n    why: ${p.render.why || '(none)'}\n    app: ${p.render.app || '(none)'}`); }
+  const withWhy = loaded.posts.filter(p => p.render && (p.render.why || p.render.app || p.hook));
+  if (withWhy.length) { console.log('\nRationale (why / app / hook / headline read aloud):'); for (const p of withWhy) console.log(`  ${p.id}\n    why:   ${p.render.why || '(none)'}\n    app:   ${p.render.app || '(none)'}\n    hook:  ${p.hook || '(none)'}\n    aloud: "${strip(p.headline || '')}"`); }
   if (check.warns && check.warns.length) { console.log('\nCopy warnings:'); check.warns.forEach(w => console.log(' - ' + w)); }
   if (fails.length) { console.error('\nCOPY GATE FAILED:'); fails.forEach(f => console.error(' - ' + f)); process.exit(1); }
   console.log('\nCopy gate PASSED.');

@@ -1,26 +1,50 @@
 const fs = require('fs');
 const path = require('path');
-// BATCH DIVERSITY GATE — run before any scheduling run, and after any batch change.
-// Usage: node diversity-gate.js <ledger or render batch> [--soft-format]
+// SET GATE (the file keeps its old name so every runbook still works) — run before any
+// scheduling run, and after any batch change.
+// Usage: node diversity-gate.js <ledger or render batch> [--with <ledger>]...
 //   ../manifest/<batch>.json   Buffer ledger (joins its "renderBatch" for anatomy fields)
 //   batches/<batch>.json       render batch with channel/dueAt/pillar/cta/title/text per post
-// Checks each channel's posts AS A SET (publish order), not as isolated images.
-// Per-post fields (written at planning time, derived from the render batch when missing):
-//   pillar, topic, template, surface, heroPhoto, cta, title/text                  (v1)
-//   format static|carousel|reel, footer, eyebrow, accentTail, photoStyle, photoClaim  (v2)
-// Also runs the copy gate (copy-gate.js) on the same posts; its failures are prefixed "copy:".
-// Exit 1 on any failure. Warnings never fail. --soft-format turns the Instagram
-// carousel/reel-per-week rule into a warning (allowed for the first two v2 batches only).
+//
+// Reboot, Nov 2026 (social/feedback/RULES.md F-007 to F-009, the reboot doc of Oct 30): the
+// rotation rules that used to pick the shell for the post are GONE: adjacent template and
+// surface, the template cap, pillar adjacency and the three-pillar floor, the formulaic-CTA cap,
+// the accent-tail and eyebrow ratios, the plated-photo cap, the carousel-and-reel-per-week rule.
+// They produced the sameness they were meant to prevent (F-004: the shell and the photo were
+// picked to satisfy rotation, and the content followed). Shell choice comes from the post's job
+// and the rationale table.
+// What stays, as failures: the copy gate (truth, rationale, headline, F-006), ledger/render
+// mismatches, a near-duplicate message, a hero photo reused in one channel's set, the badge in
+// its home position and never badge-url on Instagram.
+// What is new: no stock photo on a post due on or after 2026-11-15 (F-008); every reel due from
+// 2026-11-02 names its track (F-009); the three hook variants of one clip (`variantOf`) are
+// allowed to share a caption, a clip and a cover.
+// Warnings never fail: deprecated shells, a hero with no style, a week with no comment-COOKBOOK
+// post, the shells unused across the last three ledgers (the planner starts from them).
 // --with <ledger> (repeatable) merges another ledger's posts into the set before the checks: a
 // weekly batch runs with every live series ledger (e.g. ../manifest/send-this.json) so the
-// adjacency and cap rules see the feed as it will actually publish.
-// A ledger with "series": "<name>" is one shell by design (one post a week, interleaved with the
-// weekly batches): the copy gate, message dedupe, hero reuse and CTA rules still run on it alone;
-// the set rules (adjacency, caps, pillars, anatomy, formats) run where it is merged with --with.
+// set rules see the feed as it will actually publish.
+// A ledger with "series": "<name>" is one shell by design: its set rules run where it is merged.
 // Pair with contact-sheet.js --with-live and eyeball the montage.
 const { load } = require('./ledger');
 const { TEMPLATES, footerHome } = require('./templates');
+const { photosOf } = require('./doc');
 const copyGate = require('./copy-gate');
+
+const STOCK_ENDS = '2026-11-15';   // F-008: after this, no post from stock
+const TRACK_FROM = '2026-11-02';   // F-009: from this, no reel without a track
+const REPO = path.resolve(__dirname, '../..');
+const PHOTO_SOURCE = {};
+for (const ph of JSON.parse(fs.readFileSync(path.join(REPO, 'assets/photos/photos.json'), 'utf8')).photos) PHOTO_SOURCE[ph.file] = ph.source || 'stock';
+// app-*.jpg are real screens of the product, never stock; anything not in the index is unknown and counts as stock.
+const isStock = (f) => !/^app-/.test(path.basename(f)) && (PHOTO_SOURCE[f] || 'stock') === 'stock';
+const photosOfPost = (r) => {
+  if (!r) return [];
+  const out = new Set();
+  for (const unit of r.slides || [r]) photosOf(unit).forEach(f => out.add(f));
+  if (r.endCard) photosOf(r.endCard).forEach(f => out.add(f));
+  return [...out];
+};
 
 function gate(file, opts = {}) {
   const loaded = load(file);
@@ -43,7 +67,7 @@ function gate(file, opts = {}) {
   const fails = [...mismatches.map(m => `ledger/render mismatch: ${m}`)];
   // The copy gate runs as part of this gate (and standalone as copy-gate.js).
   fails.push(...copyGate.check(loaded).map(f => `copy: ${f}`));
-  const warns = [];
+  const warns = [...(copyGate.check.warns || []).map(w => `copy: ${w}`)];
   const lines = [];
   if (series) lines.push(`series ledger "${batch.series}": one shell by design; set rules apply where a weekly batch merges it with --with`);
   const byChannel = {};
@@ -56,95 +80,74 @@ function gate(file, opts = {}) {
     let n = 0; for (const w of A) if (B.has(w)) n++;
     return n < 3 ? 0 : n / Math.min(A.size, B.size); // require >=3 shared words: short titles are noisy
   };
-  const pct = (k, n) => `${k}/${n} (${Math.round(100 * k / n)}%)`;
+  // Hook variants of one clip (trial reels: three first lines, one cut) are one post for the
+  // dedupe and hero rules; followers never see trial reels, so near-duplicates are by design.
+  const sameClip = (a, b) => a.variantOf && b.variantOf && a.variantOf === b.variantOf;
+  // The weekly comment-COOKBOOK ask says the same thing every week by design (the offer, the
+  // word, the price); two of them are not a repeated message.
+  const sameAsk = (a, b) => a.cta === 'cookbook-dm' && b.cta === 'cookbook-dm';
 
   for (const [channel, list] of Object.entries(byChannel)) {
     const ps = [...list].sort((a, b) => (a.dueAt || '').localeCompare(b.dueAt || ''));
-    const n = ps.length, cap = Math.ceil(n / 3);
-    const set = (arr, msg) => (series ? warns : arr).push(series ? `${msg} [series: set rule, checked at merge]` : msg);
+    const n = ps.length;
 
-    // 1. No two ADJACENT posts share a template, surface or footer position
-    for (let i = 1; i < n; i++) {
-      const a = ps[i - 1], b = ps[i];
-      // A hotfix (ledger `fixed`: content replaced after scheduling) is exempt: the right post beats rotation.
-      if (a.fixed || b.fixed) continue;
-      if (b.template && b.template === a.template) set(fails, `${channel}: adjacent template "${b.template}" (${a.id} -> ${b.id})`);
-      if (b.surface && b.surface === a.surface) set(fails, `${channel}: adjacent surface "${b.surface}" (${a.id} -> ${b.id})`);
-      // Footer adjacency was dropped on 2026-10-22: the mark now has one home per surface (rule 8).
-    }
-    // 2. No template exceeds ~1/3 of the batch; deprecated shells warn on any use
+    // 1. Deprecated shells warn on any use.
     const tCount = {};
     ps.forEach(p => { if (p.template) tCount[p.template] = (tCount[p.template] || 0) + 1; });
-    for (const [t, c] of Object.entries(tCount)) if (c > cap) set(fails, `${channel}: template "${t}" used ${c}/${n} (cap ${cap})`);
     ps.forEach(p => { const t = TEMPLATES[p.coverTemplate || p.template]; if (t && t.deprecated) warns.push(`${channel}: ${p.id} uses deprecated "${p.coverTemplate || p.template}" (${t.deprecated})`); });
-    // 3. No pillar back-to-back; batch covers >=3 pillars (when n >= 6)
-    for (let i = 1; i < n; i++)
-      if (ps[i].pillar && ps[i].pillar === ps[i - 1].pillar) set(fails, `${channel}: adjacent pillar "${ps[i].pillar}" (${ps[i - 1].id} -> ${ps[i].id})`);
-    const pillars = new Set(ps.map(p => p.pillar).filter(Boolean));
-    if (n >= 6 && pillars.size < 3) set(fails, `${channel}: only ${pillars.size} pillars across ${n} posts (need >=3)`);
-    // 4. No repeated message: headline/title word-overlap > 60% between any two posts
+    // 2. No repeated message: headline/title word-overlap > 60% between any two posts (variants of one clip exempt).
     for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) {
+      if (sameClip(ps[i], ps[j]) || sameAsk(ps[i], ps[j])) continue;
       const o = overlap(ps[i].title || ps[i].text, ps[j].title || ps[j].text);
       if (o > 0.6) fails.push(`${channel}: near-duplicate message ${ps[i].id} vs ${ps[j].id} (${Math.round(o * 100)}% word overlap)`);
     }
-    // 5. Hero photo never reused within the batch
+    // 3. Hero photo never reused within the batch (variants of one clip exempt).
     const seen = {};
-    ps.forEach(p => { if (p.heroPhoto) { if (seen[p.heroPhoto]) fails.push(`${channel}: hero photo reused ${seen[p.heroPhoto]} & ${p.id} (${p.heroPhoto})`); seen[p.heroPhoto] = p.id; } });
-    // 6. FORMULAIC caption closers capped <= 40%, never 3 in a row.
-    const formulaic = batch.formulaicCtas || ['receipt-scan'];
-    for (const f of formulaic) {
-      const k = ps.filter(p => p.cta === f).length;
-      if (k / n > 0.4) fails.push(`${channel}: formulaic cta "${f}" on ${k}/${n} posts (cap 40%)`);
-      for (let i = 2; i < n; i++)
-        if (ps[i].cta === f && ps[i - 1].cta === f && ps[i - 2].cta === f) fails.push(`${channel}: formulaic cta "${f}" 3x in a row ending at ${ps[i].id}`);
-    }
-
-    // ---------- v2 anatomy rules (Sep 2026) ----------
-    // 7. Italic accent tail on <= 40% of posts; eyebrow on <= 50%
-    const tails = ps.filter(p => p.accentTail === true).length;
-    if (tails / n > 0.4) set(fails, `${channel}: accentTail on ${pct(tails, n)} (cap 40%)`);
-    const brows = ps.filter(p => p.eyebrow === true).length;
-    if (brows / n > 0.5) set(fails, `${channel}: eyebrow on ${pct(brows, n)} (cap 50%)`);
-    // 8. Footer: never badge-url on Instagram. From 2026-10-26 the mark sits in its home position
+    ps.forEach(p => { if (p.heroPhoto) { const prev = seen[p.heroPhoto]; if (prev && !sameClip(prev, p)) fails.push(`${channel}: hero photo reused ${prev.id} & ${p.id} (${p.heroPhoto})`); seen[p.heroPhoto] = seen[p.heroPhoto] || p; } });
+    // 4. Footer: never badge-url on Instagram. From 2026-10-26 the mark sits in its home position
     //    for the surface (templates.js FOOTER_HOME); only "none" (carousel interiors), "badge-bc"
-    //    (sendthis) and "ad" are also allowed. Until Oct 22 this rule forced the badge to rotate.
+    //    (sendthis) and "ad" are also allowed.
     if (channel === 'instagram') ps.forEach(p => { if (p.footer === 'badge-url') fails.push(`instagram: ${p.id} footer "badge-url" (the URL is dead weight on Instagram; move the badge)`); });
     const fCount = {};
     ps.forEach(p => { if (p.footer && p.footer !== 'ad') fCount[p.footer] = (fCount[p.footer] || 0) + 1; });
     ps.forEach(p => {
       if (!p.footer || p.footer === 'ad' || p.footer === 'none' || p.footer === 'badge-bc' || p.dueAt < '2026-10-26') return;
       const home = footerHome(p.surface);
-      if (home && p.footer !== home) set(fails, `${channel}: ${p.id} footer "${p.footer}" on a ${p.surface} shell (home is "${home}")`);
+      if (home && p.footer !== home) (series ? warns : fails).push(`${channel}: ${p.id} footer "${p.footer}" on a ${p.surface} shell (home is "${home}")`);
     });
-    // 9. Plated photography on <= 30% of photo posts
-    const photoPosts = ps.filter(p => p.heroPhoto);
-    const plated = photoPosts.filter(p => p.photoStyle === 'plated').length;
-    if (photoPosts.length && plated / photoPosts.length > 0.3) fails.push(`${channel}: photoStyle "plated" on ${pct(plated, photoPosts.length)} of photo posts (cap 30%)`);
+    // 5. A hero with no style in photos.json is a photo nobody opened.
     ps.forEach(p => { if (p.heroPhoto && (!p.photoStyle || p.photoStyle === 'unknown')) warns.push(`${channel}: ${p.id} hero ${p.heroPhoto} has no style in photos.json`); });
-    // 10. Instagram: at least one carousel and one reel in every 7-day window of the batch, and
-    //     (since Oct 17 2026) at least one post whose cta is "cookbook-dm": the "comment COOKBOOK"
-    //     line that runs the ManyChat flow. Never two of those back to back.
-    if (channel === 'instagram' && n) {
+    // 6. F-008: no post from stock on or after 2026-11-15. Our own photos carry source "own" in
+    //    photos.json; a footage reel's clip is ours by definition; app-*.jpg are real screens.
+    ps.forEach(p => {
+      if (!p.dueAt || p.dueAt.slice(0, 10) < STOCK_ENDS) return;
+      const stock = photosOfPost(p.render).filter(isStock);
+      if (stock.length) fails.push(`${channel}: ${p.id} is due ${p.dueAt.slice(0, 10)} on stock photo${stock.length > 1 ? 's' : ''} ${stock.join(', ')} (no post from stock after ${STOCK_ENDS}; F-008)`);
+    });
+    // 7. F-009: a reel due from 2026-11-02 names its track in the ledger (`track`: "buffer" when
+    //    Travis adds Instagram's licensed music in the Buffer editor, or the Sound Collection id
+    //    of the bed baked in by render-motion.js). Silence is a bug. Render batches have no
+    //    ledger row, so this runs on ledgers only.
+    ps.forEach(p => {
+      if (p.format !== 'reel' || !p.status || !p.dueAt || p.dueAt.slice(0, 10) < TRACK_FROM) return;
+      if (!p.track || !String(p.track).trim()) fails.push(`${channel}: ${p.id} is a reel with no track (ledger "track": "buffer" or the Sound Collection id; F-009)`);
+    });
+    // 8. Instagram: one comment-COOKBOOK post a week keeps the ManyChat flow fed. A warning: a
+    //    week with no footage ships two posts, and the right posts beat the calendar.
+    if (channel === 'instagram' && n && ps[0].status) {
       const day = (s) => Date.parse(s) || 0;
       const t0 = day(ps[0].dueAt);
       const windows = {};
       ps.forEach(p => { const w = Math.floor((day(p.dueAt) - t0) / (7 * 864e5)); (windows[w] = windows[w] || []).push(p); });
       for (const [w, wp] of Object.entries(windows)) {
         const span = `${wp[0].dueAt.slice(0, 10)} .. ${wp[wp.length - 1].dueAt.slice(0, 10)}, ${wp.length} posts`;
-        for (const fmt of ['carousel', 'reel']) {
-          if (!wp.some(p => p.format === fmt)) {
-            const msg = `instagram: no ${fmt} in 7-day window ${+w + 1} (${span})`;
-            if (opts.softFormat) warns.push(msg + ' [--soft-format]'); else set(fails, msg);
-          }
-        }
-        // Only a Buffer ledger (posts carry a status) is a plan; render batches and fixtures are not.
-        if (wp[0].status && wp[0].dueAt >= '2026-10-17' && !wp.some(p => p.cta === 'cookbook-dm'))
-          set(fails, `instagram: no "comment COOKBOOK" post (cta cookbook-dm) in 7-day window ${+w + 1} (${span})`);
+        if (wp[0].dueAt >= '2026-10-17' && !wp.some(p => p.cta === 'cookbook-dm')) warns.push(`instagram: no "comment COOKBOOK" post (cta cookbook-dm) in 7-day window ${+w + 1} (${span})`);
       }
-      for (let i = 1; i < n; i++) if (ps[i].cta === 'cookbook-dm' && ps[i - 1].cta === 'cookbook-dm') set(fails, `instagram: cookbook-dm cta on two posts in a row (${ps[i - 1].id} -> ${ps[i].id})`);
     }
     const fm = {}; ps.forEach(p => { fm[p.format] = (fm[p.format] || 0) + 1; });
-    lines.push(`${channel}: ${n} posts | templates ${JSON.stringify(tCount)} | pillars [${[...pillars]}] | formats ${JSON.stringify(fm)} | footers ${JSON.stringify(fCount)} | accentTail ${pct(tails, n)} eyebrow ${pct(brows, n)} plated ${photoPosts.length ? pct(plated, photoPosts.length) : '0/0'}`);
+    const hooks = {}; ps.forEach(p => { if (p.hook) hooks[p.hook] = (hooks[p.hook] || 0) + 1; });
+    const pillars = new Set(ps.map(p => p.pillar).filter(Boolean));
+    lines.push(`${channel}: ${n} posts | templates ${JSON.stringify(tCount)} | pillars [${[...pillars]}] | formats ${JSON.stringify(fm)} | hooks ${JSON.stringify(hooks)} | footers ${JSON.stringify(fCount)}`);
   }
   return { fails, warns, lines };
 }
@@ -154,13 +157,14 @@ if (require.main === module) {
   const withs = [];
   for (let i = 0; i < args.length; i++) if (args[i] === '--with') withs.push(args.splice(i, 2)[1]), i--;
   const file = args.find(a => !a.startsWith('--'));
-  if (!file) { console.error('usage: node diversity-gate.js <ledger or render batch> [--soft-format] [--with <ledger>]...'); process.exit(1); }
-  const { fails, warns, lines } = gate(file, { softFormat: args.includes('--soft-format'), with: withs });
+  if (!file) { console.error('usage: node diversity-gate.js <ledger or render batch> [--with <ledger>]...'); process.exit(1); }
+  if (args.includes('--soft-format')) console.log('(--soft-format is a no-op since Nov 2026: the carousel-and-reel-per-week rule is gone)');
+  const { fails, warns, lines } = gate(file, { with: withs });
   lines.forEach(l => console.log(l));
-  // 12. Shell coverage (Oct 29 2026, Travis: "you still aren't using the full range of templates").
-  //     Across this ledger and the two before it, every live shell should appear at least once;
-  //     the ones that do not are listed so the next plan starts from them. A warning, because
-  //     the right post beats the rotation (F-004); the planner reads it, the batch does not fail.
+  // 9. Shell coverage (Oct 29 2026, Travis: "you still aren't using the full range of templates").
+  //    Across this ledger and the two before it, every live shell should appear at least once;
+  //    the ones that do not are listed so the next plan starts from them. A warning, because
+  //    the right post beats the rotation (F-004); the planner reads it, the batch does not fail.
   try {
     const dir = path.dirname(file);
     const ledgers = fs.readdirSync(dir).filter(f => /-batch\.json$/.test(f)).map(f => path.join(dir, f))
@@ -174,11 +178,11 @@ if (require.main === module) {
     }
     const live = Object.entries(TEMPLATES).filter(([n, t]) => !t.deprecated && !/^ad/.test(n) && n !== 'sendthis').map(([n]) => n);
     const unused = live.filter(n => !used.has(n));
-    if (unused.length) warns.push(`shells unused across the last ${ledgers.length} ledgers: ${unused.join(', ')} (plan the next batch from these first)`);
+    if (unused.length) warns.push(`shells unused across the last ${ledgers.length} ledgers: ${unused.join(', ')} (a reminder, not a rule: the post's job picks the shell)`);
   } catch (e) { warns.push(`shell coverage check skipped: ${e.message}`); }
   if (warns.length) { console.log('\nWarnings:'); warns.forEach(w => console.log(' ~ ' + w)); }
-  if (fails.length) { console.error('\nDIVERSITY GATE FAILED:'); fails.forEach(f => console.error(' - ' + f)); process.exit(1); }
-  console.log('\nDiversity gate PASSED.');
+  if (fails.length) { console.error('\nSET GATE FAILED:'); fails.forEach(f => console.error(' - ' + f)); process.exit(1); }
+  console.log('\nSet gate PASSED.');
 }
 
 module.exports = { gate };

@@ -69,7 +69,8 @@
       "note": "First real-footage reel (render-footage.js). Source clip: Travis, Oct 25, 720x1280, 5.7 s, kept in assets/video/raw (gitignored). The 18:25 alert for the drafted o26 still fires; the 18:26 correction names this reel (its Buffer link points at the wrong post, p26a; the time and slot are right).",
       "fixed": "2026-10-26 17:00 PT: recut before it published. The aisle walk now runs at 3x (1 s) under the problem, the tilt into the cart carries the surprise, and the cart runs at half speed under the promise with a number; type centered in the middle third instead of the bottom-left caption zone; store ambience held at -20 LUFS instead of gained to -14; cover taken from the cart beat. 2026-10-28: Buffer shows this went out Mon 18:40 PT with the v2 cut (Travis asked for a recut at 17:00 and meant to move it to Tuesday; the move did not take). The v3 cut with his beats is scheduled as o29f-ig.",
       "sentAt": "2026-10-26T18:40:58-07:00",
-      "externalLink": "https://www.instagram.com/reel/De-stMWiqJ7/"
+      "externalLink": "https://www.instagram.com/reel/De-stMWiqJ7/",
+      "variantOf": "clip-2026-10-25-grocery-aisle"
     },
     {
       "id": "o27-ig",
@@ -130,7 +131,8 @@
       "note": "The v3 recut of Monday's footage reel, to Travis's beats (Oct 26 17:00 PT). Scheduled Thu 17:15 PT (8:15 PM ET) as its own post; a Trial Reel if Travis flips the toggle in Buffer (not settable through the API). The clip is the same shopping run as o26f; a Trial Reel goes to non-followers, so the overlap with Monday does not reach the same people. No first comment: Buffer is on the Free plan on Oct 28 and rejects first comments on create and edit (existing ones are kept). Published Thu 17:16 PT with the v6 cut (device end card): Instagram accepted it (Buffer shows the published reel as a separate network post, 6ae4cff9fe2ad86776bc0036) while Buffer marked its own post \"error: unknown error\", so the v7 swap at 15:30 was refused as past due. The Buffer post now holds v7 as a draft; posting it would be a second reel of the same clip.",
       "bufferId": "6ae2794504f348da40f737c3",
       "fixed": "2026-10-29 14:30 PT, Travis: \"still isn't quite there; what if there was an end card, use an existing template; hard hitting and engaging\" → v4: the frozen ending replaced with a 3.2 s device end card (the real recipe screen) on a hard cut; Buffer updated 15:28 PT. 2026-10-29 14:45 PT, Travis: \"different end card; Your cart is tonight's dinner is weak, more hard hitting, Dinner, Decided\" → v5: beat four is Dinner. Decided., the end card is the receipt shell (the five items read as tonight's fried rice). Buffer updated 15:49 PT. 2026-10-29 15:10 PT, Travis: \"end card is not good, it should clearly explain the value prop with a CTA; blurry in parts\" → v6: device end card stating the value proposition with the CTA in the last line, type enlarged at reel size; the tilt (the motion-blurred part of the 720p source) shortened to 1 s. Buffer updated. 2026-10-29 15:25 PT, Travis: \"change the end card!\" → v7: poster end card (type on paper), value proposition in one line, the three outcomes in the readout, CTA in the last sentence, site in the footer. Buffer updated.",
-      "sentAt": "2026-10-29T17:16:13-07:00"
+      "sentAt": "2026-10-29T17:16:13-07:00",
+      "variantOf": "clip-2026-10-25-grocery-aisle"
     },
     {
       "id": "o31-ig",

@@ -53,7 +53,8 @@ function derive(r) {
 
 // Copy a gate should read: [{field, text}] for every rendered string plus caption fields.
 const SKIP = new Set(['file', 'photo', 'objPos', 'template', 'footer', 'channel', 'dueAt', 'id', 'status', 'bufferId', 'slackAlert',
-  'surface', 'pillar', 'topic', 'cta', 'heroPhoto', 'format', 'photoStyle', 'board', 'boardServiceId', 'labelSide', 'ink', 'bg', 'createdAt', 'url', 'alt', 'variant']);
+  'surface', 'pillar', 'topic', 'cta', 'heroPhoto', 'format', 'photoStyle', 'board', 'boardServiceId', 'labelSide', 'ink', 'bg', 'createdAt', 'url', 'alt', 'variant',
+  'hook', 'hookType', 'track', 'variantOf', 'video', 'cover', 'videoTitle', 'source']);
 function copyOf(obj, prefix = '', out = []) {
   if (Array.isArray(obj)) { obj.forEach((v, i) => copyOf(v, `${prefix}[${i}]`, out)); return out; }
   if (obj && typeof obj === 'object') {
@@ -92,6 +93,13 @@ function load(file) {
       title: raw.title || (r && r.title) || '', text: raw.text || (r && r.text) || '', firstComment: raw.firstComment || (r && r.firstComment) || '',
       render: r,
       fixed: raw.fixed || null,
+      // Reboot fields (Nov 2026): hook type for the rationale table (ledger `hook`, render
+      // `hookType`; the sendthis shell already uses `hook` for its line), the reel's track, and
+      // the clip a trial-reel variant belongs to (its siblings share a caption by design).
+      hook: ['problem', 'promise', 'surprise'].find(h => h === raw.hook || (r && h === r.hookType)) || null,
+      track: raw.track || null,
+      variantOf: raw.variantOf || (r && r.variantOf) || null,
+      status: raw.status || null,
     };
     for (const k of ['template', 'surface', 'format', 'footer', 'eyebrow', 'accentTail', 'heroPhoto', 'photoClaim']) {
       // A render batch read directly has no separate ledger: its props (eyebrow text, footer

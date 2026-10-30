@@ -22,7 +22,7 @@ social/
     render-batch.js     ← static PNGs:  node render-batch.js batches/<batch>.json
     render-motion.js    ← reels (MP4): node render-motion.js batches/<batch>.json
     ledger.js           ← loads a ledger or render batch for the gates (joins renderBatch)
-    diversity-gate.js   ← set-level rules; also runs the copy gate
+    diversity-gate.js   ← the set gate (truth, rationale, stock cutoff, tracks); also runs the copy gate
     copy-gate.js        ← copy rules as code; copy-allowlist.txt = allowed capitals
     contact-sheet.js    ← per-channel montage; --with-live = the IG grid as it will look
     compat-check.js     ← re-renders legacy batches and byte-compares with committed PNGs
@@ -36,7 +36,7 @@ Rendered PNGs/MP4s are copied to `../assets/pinterest/` and `../assets/social/` 
 cd social/render && npm install          # playwright-core + sharp; never `playwright install`
 node render-batch.js batches/<batch>.json            # PNGs -> out/<batch>/ (carousels: <file>--01.png ...)
 node render-motion.js batches/<batch>.json           # posts with "motion" -> out/<batch>/<file>.mp4 + <file>-cover.png
-node diversity-gate.js ../manifest/<batch>.json      # diversity + copy gates (add --soft-format for the first two v2 batches)
+node diversity-gate.js ../manifest/<batch>.json      # set + copy gates (--soft-format is a no-op since Nov 2026)
 node copy-gate.js ../manifest/<batch>.json           # copy gate alone
 node contact-sheet.js ../manifest/<batch>.json --with-live   # per-channel sheets + IG grid with the last 9 live posts
 node compat-check.js                                 # sep-10-16 must stay byte-identical
@@ -111,10 +111,11 @@ bedDb }` bakes a Meta Sound Collection bed and/or a voiceover into the file (rul
 **Deprecated** (kept so old batches re-render; the gate warns on any use): `statdark` (use `poster`),
 `recipe` (text-only; use `recipephoto`), `quote` (paper; use `quotedark`).
 
-### Rationale fields (F-004, Oct 22 2026)
+### Rationale fields (F-004, Oct 22 2026; hook type Nov 2026)
 Every post in a batch created from Oct 22 carries `why` (the insight or joke in one sentence) and
 `app` (where a real capability enters: receipt import, add what you have, a recipe with calories
-and protein, the Instacart hand-off, the cookbook). `copy-gate.js` refuses a post without them,
+and protein, the Instacart hand-off, the cookbook); from Nov 2 also `hookType` (problem |
+promise | surprise, F-007). `copy-gate.js` refuses a post without them,
 refuses an `app` line that names no capability, and refuses a `thread` whose reply bubbles never
 show what iEatz did. The gate prints the rationale table; read it before the renders.
 
@@ -136,21 +137,33 @@ show what iEatz did. The gate prints the rationale table; read it before the ren
   `brand-in-frame` (logo, retailer, third-party screen) fails the render; pick another shot.
 
 ## Gates
-- **Diversity gate** (`diversity-gate.js`): per channel, in publish order. Adjacent template, surface,
-  pillar or footer never repeat; template ≤ ⅓; ≥3 pillars; no near-duplicate messages; no hero reuse;
-  formulaic CTA ≤ 40% and never 3 in a row; accentTail ≤ 40%; eyebrow ≤ 50%; plated ≤ 30% of photo
-  posts; Instagram needs a carousel and a reel in every 7-day window.
-- **Copy gate** (`copy-gate.js`, also run by the diversity gate): no em dash, no en dash as a dash, no
-  "not X, it's Y" family, ≤ 50% of headlines under five words, sentence-case headlines (allowlist in
-  `copy-allowlist.txt`), and every `photoClaim` shares a noun with its headline or caption.
+- **Set gate** (`diversity-gate.js`, the old name kept so every runbook works): per channel, in
+  publish order. Ledger/render mismatches; the copy gate; no near-duplicate message (the three
+  `variantOf` cuts of one clip and two comment-COOKBOOK asks are exempt); no hero reuse in a
+  channel's set; the badge in its home position and never `badge-url` on Instagram; **no stock
+  photo on a post due on or after 2026-11-15** (F-008, `source` in photos.json); **every reel due
+  from 2026-11-02 names its `track`** (F-009). Warnings: deprecated shells, a hero with no style,
+  a week with no comment-COOKBOOK post, and the shells unused across the last three ledgers.
+  The rotation rules (adjacency, template cap, pillar rules, formulaic CTA cap, accent-tail and
+  eyebrow ratios, plated cap, carousel and reel per week) were dropped in Nov 2026
+  (`feedback/RULES.md`, F-007): the post's job picks the shell.
+- **Copy gate** (`copy-gate.js`, also run by the set gate): no em dash, no en dash as a dash, no
+  "not X, it's Y" family, sentence-case headlines (allowlist in `copy-allowlist.txt`; lowercase
+  is fine), every `photoClaim` shares a noun with its headline or caption, nothing on
+  `feedback/banned-phrases.txt` (F-001 claims, F-007 stop words), `why` and `app` on every post
+  (F-004), a caption that reads as a method fails (F-006), a headline over eight words fails from
+  batches created 2026-11-02 (F-005), every post names its hook type (`hookType` on the render
+  post: problem | promise | surprise; F-007), five hashtags at most and "verify for allergens"
+  never in the first three lines (F-007). It prints the rationale table (why, app, hook, the
+  headline read aloud): a person reads it before anything renders.
 - **Ledger fields** written at planning time: `pillar, topic, template, surface, heroPhoto, cta,
-  format, footer, eyebrow, accentTail, photoStyle, photoClaim`. A ledger with `"renderBatch"` gets any
-  missing field derived from the render batch, and a written field that disagrees with it fails.
+  format, footer, eyebrow, accentTail, photoStyle, photoClaim, hook, track, variantOf`. A ledger
+  with `"renderBatch"` gets any missing field derived from the render batch, and a written field
+  that disagrees with it fails.
 - **Series ledgers** (`"series": "send-this"` in `manifest/send-this.json`): one shell by design, one post a
-  week, interleaved with the weekly batches. On its own the gate runs the copy, dedupe, hero and CTA
-  rules and prints the set rules as warnings. Every weekly batch runs
+  week, interleaved with the weekly batches. Every weekly batch runs
   `node diversity-gate.js ../manifest/<batch>.json --with ../manifest/send-this.json` so the series posts
-  count in that week's adjacency, cap, pillar and format rules.
+  count in that week's set.
 
 ## Non-negotiables (see CONTROL_CENTER.md for the full list)
 - Self-host fonts; never ship a fallback-font render (the render line checks every face).

@@ -40,401 +40,483 @@
       "file": "food/restaurant-plated-dish.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/restaurant-plated-dish.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock",
+      "description": "cafe plate on a yellow dish: avocado toast topped with a soft egg and pickled onion, a pile of scrambled eggs, beet slaw and greens, on a mosaic table"
     },
     {
       "file": "food/gourmet-burger.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/gourmet-burger.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock",
+      "description": "a tall beef burger with lettuce, tomato and onion on a seeded bun, a pick through the top, on a slate with potato wedges, red leather booth behind"
     },
     {
       "file": "food/veggie-bowl-eggs.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/veggie-bowl-eggs.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/power-bowl-veg.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/power-bowl-veg.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/mezze-dips-spread.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/mezze-dips-spread.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/breakfast-plate-eggs.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/breakfast-plate-eggs.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock",
+      "description": "a breakfast plate close up: halved hard boiled eggs, cherry tomatoes, mozzarella balls, grilled sausage or bacon and toast on a dark wooden table"
     },
     {
       "file": "food/breakfast-flatlay-avocado.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/breakfast-flatlay-avocado.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/brunch-table-spread.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/brunch-table-spread.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/grain-bowl-burlap.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/grain-bowl-burlap.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/rice-bowl-in-hands.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/rice-bowl-in-hands.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/spaghetti-plate.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/spaghetti-plate.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/tomato-toast.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/tomato-toast.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/chickpea-power-bowl.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/chickpea-power-bowl.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/outdoor-dining-table.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/outdoor-dining-table.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock",
+      "description": "a cafe breakfast for two on a wooden table outdoors: eggs in a small pan, flatbread in a basket, a bowl of tomato rice, a cappuccino and tea"
     },
     {
       "file": "food/healthy-bowls-table.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/healthy-bowls-table.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/tomato-pasta-skillet.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/tomato-pasta-skillet.jpg",
       "style": "plated",
-      "note": "spaghetti with peas, onion and cherry tomatoes; olives and red wine on the table"
+      "note": "spaghetti with peas, onion and cherry tomatoes; olives and red wine on the table",
+      "source": "stock"
     },
     {
       "file": "food/cobb-salad-plate.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/cobb-salad-plate.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/veggie-plate-avocado.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/veggie-plate-avocado.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/tacos-lime.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/tacos-lime.jpg",
       "style": "plated",
-      "note": "chickpea and sweet potato tacos, no chicken"
+      "note": "chickpea and sweet potato tacos, no chicken",
+      "source": "stock"
     },
     {
       "file": "food/spices-spoons.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/spices-spoons.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock",
+      "description": "ground spices and seeds in antique spoons laid out on white marble with chillies, bay leaves and lemongrass"
     },
     {
       "file": "food/prep-spread-greens.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/prep-spread-greens.jpg",
-      "style": "process"
+      "style": "process",
+      "source": "stock"
     },
     {
       "file": "food/platter-roast.png",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/platter-roast.png",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock",
+      "description": "a dark table of small plates: an omelette, grilled sausages, chickpeas, hummus and chicken; too small to publish",
+      "flag": "low-res"
     },
     {
       "file": "food/pesto-pasta-bowl.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/pesto-pasta-bowl.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/pasta-dark-fork.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/pasta-dark-fork.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/nuts-almonds.png",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/nuts-almonds.png",
       "style": "people",
-      "note": "slug lies: a woman in a grocery aisle holding a phone and a snack pack, no almonds"
+      "note": "slug lies: a woman in a grocery aisle holding a phone and a snack pack, no almonds",
+      "source": "stock",
+      "description": "a woman in a red top reading her phone in a grocery aisle with a jar in her other hand and a basket behind her; the slug is wrong, there are no almonds; too small to publish",
+      "flag": "low-res"
     },
     {
       "file": "food/greens-flatlay-mint.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/greens-flatlay-mint.jpg",
-      "style": "process"
+      "style": "process",
+      "source": "stock",
+      "description": "cucumber slices, kale, spinach, lime, celery and herbs arranged in a grid on a mint green background"
     },
     {
       "file": "food/green-bowl-floral.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/green-bowl-floral.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/buddha-bowl.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/buddha-bowl.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/berries-negative-space.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/berries-negative-space.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock",
+      "description": "a bowl of berries, rhubarb stalks, blood orange and grapefruit halves along the left edge of a white surface, the right two thirds empty"
     },
     {
       "file": "food/avocado-pink.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/avocado-pink.jpg",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock",
+      "description": "one avocado half with the stone, centred on a pink background"
     },
     {
       "file": "food/food-03.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-03.jpg",
       "flag": "low-res",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/food-02.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-02.jpg",
       "flag": "low-res",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/food-05-salmon.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-05-salmon.jpg",
       "flag": "low-res",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/cutting-board-veg.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/cutting-board-veg.jpg",
-      "style": "process"
+      "style": "process",
+      "source": "stock"
     },
     {
       "file": "food/roast-table.png",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/roast-table.png",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock",
+      "description": "a whole roast chicken with orange slices and rosemary on a platter, roast potatoes and grapes beside it, a hand reaching in; too small to publish",
+      "flag": "low-res"
     },
     {
       "file": "food/food-07.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-07.jpg",
       "flag": "low-res",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/food-04.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-04.jpg",
       "flag": "low-res",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/food-01.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-01.jpg",
       "flag": "low-res",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "food/food-06.jpg",
       "category": "food",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/food/food-06.jpg",
       "flag": "low-res",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "fridge/fridge-stocked.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-stocked.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Coulommiers, Gervais, Martini, wine box"
+      "flag": "brand-in-frame: Coulommiers, Gervais, Martini, wine box",
+      "source": "stock"
     },
     {
       "file": "fridge/fridge-full-produce.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-full-produce.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Tip Top Sunblest bread bag"
+      "flag": "brand-in-frame: Tip Top Sunblest bread bag",
+      "source": "stock"
     },
     {
       "file": "fridge/fridge-warm-open.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-warm-open.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Cheez Whiz jar"
+      "flag": "brand-in-frame: Cheez Whiz jar",
+      "source": "stock"
     },
     {
       "file": "fridge/fridge-real-mess.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-real-mess.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Eggland's Best, Spice World, Fresh Keeper"
+      "flag": "brand-in-frame: Eggland's Best, Spice World, Fresh Keeper",
+      "source": "stock"
     },
     {
       "file": "fridge/fridge-organized.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/fridge-organized.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: ello containers and produce bag"
+      "flag": "brand-in-frame: ello containers and produce bag",
+      "source": "stock"
     },
     {
       "file": "fridge/anti-fridge-smeg.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/anti-fridge-smeg.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Smeg logo"
+      "flag": "brand-in-frame: Smeg logo",
+      "source": "stock"
     },
     {
       "file": "fridge/anti-fridge-shoe.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/anti-fridge-shoe.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "source": "stock",
+      "description": "a near empty fridge holding a white sneaker, an egg carton, a bottle of ketchup, a carton of milk, a bottle of stout and a potted plant",
+      "flag": "brand-in-frame: Guinness bottle, Heinz ketchup"
     },
     {
       "file": "fridge/anti-fridge-rusty.jpg",
       "category": "fridge",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/anti-fridge-rusty.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "source": "stock",
+      "description": "an old rusted fridge standing open and empty in a field, trees behind it"
     },
     {
       "file": "grocery/woman-grocery-shopping.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/woman-grocery-shopping.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Boxed Water"
+      "flag": "brand-in-frame: Boxed Water",
+      "source": "stock"
     },
     {
       "file": "grocery/kid-in-grocery-cart.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/kid-in-grocery-cart.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Cheez-It box"
+      "flag": "brand-in-frame: Cheez-It box",
+      "source": "stock"
     },
     {
       "file": "grocery/grocery-storefront.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-storefront.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "source": "stock"
     },
     {
       "file": "grocery/grocery-store-aisle.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-store-aisle.jpg",
-      "style": "people"
+      "style": "people",
+      "source": "stock",
+      "description": "a shopper in a brown coat walking away down a supermarket aisle with a blue basket, wine shelves on the left, empty shelves on the right"
     },
     {
       "file": "grocery/grocery-bag-produce.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-bag-produce.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: bakery brand and retailer URL"
+      "flag": "brand-in-frame: bakery brand and retailer URL",
+      "source": "stock"
     },
     {
       "file": "lifestyle/woman-in-kitchen.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/woman-in-kitchen.jpg",
-      "style": "people"
+      "style": "people",
+      "source": "stock"
     },
     {
       "file": "lifestyle/woman-eating-salad.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/woman-eating-salad.jpg",
-      "style": "people"
+      "style": "people",
+      "source": "stock"
     },
     {
       "file": "lifestyle/woman-dining-out.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/woman-dining-out.jpg",
-      "style": "people"
+      "style": "people",
+      "source": "stock",
+      "description": "a smiling person with long dark hair in a striped shirt, seated in a restaurant, no food in frame"
     },
     {
       "file": "lifestyle/mother-child-meal.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/mother-child-meal.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Hillshire Farm, OshKosh"
+      "flag": "brand-in-frame: Hillshire Farm, OshKosh",
+      "source": "stock"
     },
     {
       "file": "lifestyle/mother-child-cooking.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/mother-child-cooking.jpg",
       "style": "people",
-      "flag": "brand-in-frame: Hillshire Farm, OshKosh"
+      "flag": "brand-in-frame: Hillshire Farm, OshKosh",
+      "source": "stock"
     },
     {
       "file": "lifestyle/kitchen-prep-scene.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/kitchen-prep-scene.jpg",
-      "style": "process"
+      "style": "process",
+      "source": "stock"
     },
     {
       "file": "lifestyle/family-meal-at-table.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/family-meal-at-table.jpg",
-      "style": "people"
+      "style": "people",
+      "source": "stock"
     },
     {
       "file": "lifestyle/family-cooking-together.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/family-cooking-together.jpg",
-      "style": "people"
+      "style": "people",
+      "source": "stock"
     },
     {
       "file": "lifestyle/cooking-roast-at-stove.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/cooking-roast-at-stove.jpg",
-      "style": "process"
+      "style": "process",
+      "source": "stock"
     },
     {
       "file": "lifestyle/pan-steam.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/pan-steam.jpg",
-      "style": "process"
+      "style": "process",
+      "source": "stock"
     },
     {
       "file": "lifestyle/kitchen-wide.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/kitchen-wide.jpg",
       "style": "kitchen",
-      "flag": "empty-scene: cabinets and a bare counter, no food in frame"
+      "flag": "empty-scene: cabinets and a bare counter, no food in frame",
+      "source": "stock"
     },
     {
       "file": "lifestyle/couple-cooking.jpg",
@@ -445,73 +527,87 @@
       "flags": [
         "brand-in-frame"
       ],
-      "note": "Jimmy Dean sausage package on the counter, bottom center"
+      "note": "Jimmy Dean sausage package on the counter, bottom center",
+      "source": "stock"
     },
     {
       "file": "lifestyle/cook-snap-1.png",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/cook-snap-1.png",
       "style": "people",
-      "note": "same shoot as shop-label-check: man at a stove reading his phone (no app screen visible)"
+      "note": "same shoot as shop-label-check: man at a stove reading his phone (no app screen visible)",
+      "source": "stock",
+      "description": "a man in an apron at a stove reading his phone, a moka pot, lemons and a bottle beside him; too small to publish",
+      "flag": "low-res"
     },
     {
       "file": "lifestyle/chop-tomatoes.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/chop-tomatoes.jpg",
-      "style": "process"
+      "style": "process",
+      "source": "stock"
     },
     {
       "file": "lifestyle/chop-cilantro.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/chop-cilantro.jpg",
-      "style": "process"
+      "style": "process",
+      "source": "stock"
     },
     {
       "file": "lifestyle/shop-label-check.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/shop-label-check.jpg",
-      "flag": "ext-mismatch: PNG data with .jpg name",
-      "style": "people"
+      "flag": "ext-mismatch: PNG data with .jpg name; low-res",
+      "style": "people",
+      "source": "stock",
+      "description": "the same man in an apron at the stove reading his phone, a near duplicate of cook-snap-1; too small to publish"
     },
     {
       "file": "lifestyle/watermelon-beach.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/watermelon-beach.jpg",
       "flag": "low-res",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "lifestyle/lifestyle-02.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/lifestyle-02.jpg",
       "flag": "low-res",
-      "style": "plated"
+      "style": "plated",
+      "source": "stock"
     },
     {
       "file": "pantry/counter-eggs-prep.jpg",
       "category": "pantry",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/counter-eggs-prep.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: tablet running a third-party app"
+      "flag": "brand-in-frame: tablet running a third-party app",
+      "source": "stock"
     },
     {
       "file": "pantry/pantry-real-shelves.jpg",
       "category": "pantry",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/pantry-real-shelves.jpg",
       "style": "kitchen",
-      "flag": "brand-in-frame: Nutella, Senseo, dog food"
+      "flag": "brand-in-frame: Nutella, Senseo, dog food",
+      "source": "stock"
     },
     {
       "file": "pantry/pantry-open-spice.jpg",
       "category": "pantry",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/pantry-open-spice.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "source": "stock"
     },
     {
       "file": "pantry/pantry-jars.jpg",
       "category": "pantry",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/pantry/pantry-jars.jpg",
-      "style": "kitchen"
+      "style": "kitchen",
+      "source": "stock"
     },
     {
       "file": "lifestyle/couple-cooking-ad.jpg",
@@ -521,42 +617,69 @@
       "note": "wide crop of couple-cooking.jpg made for the Meta ad set Jimmy Dean sausage package on the counter, bottom center",
       "flags": [
         "brand-in-frame"
-      ]
+      ],
+      "source": "stock",
+      "description": "a laughing couple in a kitchen, she tastes from a wooden spoon he holds out; landscape frame, a 2:3 crop keeps only one of them"
     },
     {
       "file": "app-receipt-scan.jpg",
       "category": "app",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/app-receipt-scan.jpg",
       "style": "product",
-      "note": "Real iEatz receipt-import screen (app-receipt.jpg on main, in verified-facts app_screens_allowlist) cropped below the store header so no retailer logo or address shows. Device shell only; never graded."
+      "note": "Real iEatz receipt-import screen (app-receipt.jpg on main, in verified-facts app_screens_allowlist) cropped below the store header so no retailer logo or address shows. Device shell only; never graded.",
+      "source": "stock"
     },
     {
       "file": "grocery/grocery-bag-unpacked.jpg",
       "category": "grocery",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/grocery/grocery-bag-unpacked.jpg",
       "style": "kitchen",
-      "note": "4:5 crop of grocery-bag-produce.jpg (bananas, cabbage, apples) cut to exclude a bagel brand logo and a printed retailer URL. Use this, not the original, for 4:5 and 2:3 frames."
+      "note": "4:5 crop of grocery-bag-produce.jpg (bananas, cabbage, apples) cut to exclude a bagel brand logo and a printed retailer URL. Use this, not the original, for 4:5 and 2:3 frames.",
+      "source": "stock"
     },
     {
       "file": "app-instacart-handoff.jpg",
       "category": "app",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/app-instacart-handoff.jpg",
       "style": "product",
-      "note": "derived crop of app-instacart.jpg (the real Instacart hand-off screen) without the Safari status and URL bars and the bottom browser nav; content untouched"
+      "note": "derived crop of app-instacart.jpg (the real Instacart hand-off screen) without the Safari status and URL bars and the bottom browser nav; content untouched",
+      "source": "stock"
     },
     {
       "file": "app-recipe-macros.jpg",
       "category": "app",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/app-recipe-macros.jpg",
       "style": "product",
-      "note": "derived crop of app-recipe.jpg (the real recipe screen with calories and macros) without the status bar and the bottom Add missing ingredients button; content untouched"
+      "note": "derived crop of app-recipe.jpg (the real recipe screen with calories and macros) without the status bar and the bottom Add missing ingredients button; content untouched",
+      "source": "stock"
     },
     {
       "file": "lifestyle/cooking-roast-at-stove-carve.jpg",
       "category": "lifestyle",
       "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/lifestyle/cooking-roast-at-stove-carve.jpg",
       "style": "process",
-      "note": "derived crop of cooking-roast-at-stove.jpg (bottom 58%): the carving, not the shirt; nothing added"
+      "note": "derived crop of cooking-roast-at-stove.jpg (bottom 58%): the carving, not the shirt; nothing added",
+      "source": "stock"
+    }
+  ],
+  "sources": {
+    "stock": "the Design System export and the Pexels/Unsplash re-sourcing; no post may use one on or after 2026-11-15 (F-008)",
+    "own": "shot by the team and pulled from the Drive inbox (iEatz social inbox); every entry carries an honest description and a flag for any logo or a face that did not consent"
+  },
+  "countBySource": {
+    "stock": 80,
+    "own": 0
+  },
+  "inboxLog": [
+    {
+      "checked": "2026-10-30T12:45:00-07:00",
+      "folder": "1blKSlrZMasGCS2YIqQFo2c1F8enCpBWf",
+      "photos": 0,
+      "clips": 0,
+      "screenshots": 0,
+      "audio": 0,
+      "designExports": 0,
+      "note": "all five subfolders empty; nothing new in Drive since the folder was created Oct 22"
     }
   ]
 }

@@ -48,8 +48,11 @@ Design tokens: `index.html` `:root` block and `social/render/base.css`
 - **Ink:** `#0A0F0C` / medium `#5C625E` / light `#9CA29F` / faint `#C8CDCA`.
 - **Type:** display = **Instrument Serif** (headlines, stat numerals); body = **Inter Tight**;
   mono = JetBrains Mono. Self-hosted woff2 in `social/render/fonts/`.
-- **Voice:** sentence-case headlines, **one green italic emphasis word** per headline,
-  editorial-wellness tone, **no emoji in marketing copy**.
+- **Voice (superseded Oct 30 2026):** the brand voice is the reboot voice in
+  `social/feedback/RULES.md` ("The voice"): a 27 year old who refuses to go to the store, text-
+  message captions, lowercase fine, eight-word headlines that are a problem, a promise or a
+  surprise. Sentence case stays (Title Case is still wrong); the green accent is a choice, not a
+  rule; still no emoji walls or hashtag walls.
 - **Brand mark:** the fridge badge (SVG in the render scripts) + "iEatz Healthy" wordmark.
 - **App Store URL (all CTAs):** `https://apps.apple.com/us/app/ai-recipe-generator-by-ieatz/id6475559706`
 
@@ -439,6 +442,19 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Oct 30 2026 — the reboot (doc "iEatz Social Reboot", approved):** the content got worse
+  because the inputs ran out, not because the rules got looser. Voice rewritten
+  (`feedback/RULES.md`, "The voice", F-007); every rotation rule that picked the shell dropped
+  from `diversity-gate.js` (now the set gate: truth, rationale, hero reuse, dedupe, footer home,
+  plus the stock cutoff of Nov 15, F-008, and a track on every reel, F-009); copy gate gains the
+  eight-word headline, the hook type, the hashtag cap and the stop words. Every photo in
+  `photos.json` is tagged `source: "stock"`; our own photos arrive via the Drive inbox as
+  `source: "own"`. The week is planned from footage, not from a calendar: no footage means
+  send-this Thursday, cookbook Wednesday and one pin a day, nothing else. Reels ship as three hook
+  variants (`variantOf`) at 17:15 PT as Trial Reels, pins at 12:10 PT; music and the Trial Reel
+  toggle are Travis's two manual steps in Buffer, named in every reel alert. Friday: the
+  scorecard in #social against the baseline (Instagram reach 173, best reel under 300 views,
+  Pinterest impressions 42). §5's eight-pillar rotation and §2's voice are superseded (see RULES.md).
 - **Oct 25 2026 — the honest review and the first real footage:** Travis on the Oct 26 to Nov 1
   queue: "a lot of poor quality ones, it all feels the same, not appetizing." Eight posts pulled to
   drafts; the real-photo posts stay. His first phone clip (grocery aisle, tilt to the cart) became
