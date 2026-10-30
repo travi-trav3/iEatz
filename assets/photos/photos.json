@@ -2,21 +2,23 @@
   "description": "Raw food photography library for the iEatz Healthy social content pipeline. Organized by content pillar (category) so render templates can filter. Byte sources uploaded from the iEatz Healthy Design System photo set.",
   "urlBase": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/",
   "categories": [
+    "app",
     "food",
     "fridge",
     "grocery",
     "lifestyle",
-    "pantry",
-    "app"
+    "own",
+    "pantry"
   ],
-  "count": 77,
+  "count": 87,
   "countByCategory": {
     "food": 39,
     "fridge": 8,
     "grocery": 6,
-    "lifestyle": 19,
+    "lifestyle": 20,
     "pantry": 4,
-    "app": 1
+    "app": 3,
+    "own": 7
   },
   "styles": [
     "kitchen",
@@ -27,12 +29,11 @@
     "receipt"
   ],
   "countByStyle": {
+    "plated": 41,
+    "process": 11,
+    "people": 16,
     "kitchen": 16,
-    "process": 7,
-    "people": 15,
-    "plated": 38,
-    "product": 1,
-    "receipt": 0
+    "product": 3
   },
   "styleNote": "style is what the frame documents, tagged by opening every photo (Sep 2026): kitchen = fridge/pantry/counter/stock as a place; process = hands or tools mid-task; people = a person is the subject; plated = finished food styled for camera (every styled overhead bowl or flat lay); product = a phone showing the real iEatz app; receipt = a grocery receipt in frame. app-*.jpg screenshots are not indexed here and count as product.",
   "photos": [
@@ -659,6 +660,65 @@
       "style": "process",
       "note": "derived crop of cooking-roast-at-stove.jpg (bottom 58%): the carving, not the shirt; nothing added",
       "source": "stock"
+    },
+    {
+      "file": "own/2026-10-29-travis-img6315.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2026-10-29-travis-img6315.jpg",
+      "style": "plated",
+      "source": "own",
+      "description": "a bunless burger bowl on a wooden table: a beef patty under lettuce, tomato, avocado and a pickle in a white bowl, a bowl of fries and a stacked burger behind it, sauce bottles at the edge, pink napkins; Travis, home kitchen",
+      "note": "brands in frame: sauce bottle labels at the left edge"
+    },
+    {
+      "file": "own/2026-10-29-travis-img4952.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2026-10-29-travis-img4952.jpg",
+      "style": "process",
+      "source": "own",
+      "description": "a stove from above: a pan of red coconut curry with peppers and a wooden spoon, a tray of browned tofu cubes, a bowl of cooked grain, a cast iron pan on the back burner; Travis, home kitchen"
+    },
+    {
+      "file": "own/2026-10-29-travis-img6201.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2026-10-29-travis-img6201.jpg",
+      "style": "plated",
+      "source": "own",
+      "description": "sheet-pan nachos on a baking tray: tortilla chips under melted cheese, mushrooms, cherry tomatoes, jalapeno slices and dollops of guacamole, a glass bowl of guacamole and an open jar beside it; Travis, home kitchen",
+      "note": "brands in frame: open jar label, unreadable"
+    },
+    {
+      "file": "own/2026-10-29-travis-img5625.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2026-10-29-travis-img5625.jpg",
+      "style": "plated",
+      "source": "own",
+      "description": "a stack of five pancakes on a white plate on a wooden table, a bottle of maple syrup and a jar behind it, flowers and a living room out of focus; Travis, home kitchen",
+      "note": "brands in frame: Kirkland maple syrup"
+    },
+    {
+      "file": "own/2026-10-29-travis-img6825.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2026-10-29-travis-img6825.jpg",
+      "style": "people",
+      "source": "own",
+      "description": "a set table from above: a cutting board with sliced steak, a bowl of ravioli with herbs and parmesan, a bowl of broccoli, candles, pink napkins, a hand reaching in at the top; Travis, home dinner"
+    },
+    {
+      "file": "own/2026-10-29-travis-img6358.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2026-10-29-travis-img6358.jpg",
+      "style": "process",
+      "source": "own",
+      "description": "a sheet pan of roasted purple sweet potato chunks and slabs of squash, some charred, on a wooden table; Travis, home kitchen"
+    },
+    {
+      "file": "own/2025-12-09-travis-502bcfab.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2025-12-09-travis-502bcfab.jpg",
+      "style": "plated",
+      "source": "own",
+      "description": "a holiday plate on an orange plaid runner: sliced turkey, mashed potatoes, salad greens and stuffing, mini pumpkins and a paper towel roll behind it; Travis, family table, Dec 2025; 1536x2048"
     }
   ],
   "sources": {
@@ -667,7 +727,7 @@
   },
   "countBySource": {
     "stock": 80,
-    "own": 0
+    "own": 7
   },
   "inboxLog": [
     {
@@ -679,6 +739,18 @@
       "audio": 0,
       "designExports": 0,
       "note": "all five subfolders empty; nothing new in Drive since the folder was created Oct 22"
+    },
+    {
+      "checked": "2026-10-30T13:50:00-07:00",
+      "folder": "1blKSlrZMasGCS2YIqQFo2c1F8enCpBWf",
+      "photos": 15,
+      "indexed": 7,
+      "skipped": 8,
+      "clips": 0,
+      "screenshots": 0,
+      "audio": 0,
+      "designExports": 1,
+      "note": "6 HEIC phone photos (Oct 29) decoded to JPEG at 3024x4032 and one full-size JPEG (Dec 2025) indexed as own/; 8 JPEGs were Apple Photos thumbnails at 360x480 and were skipped (re-export at full size); design system export \"iEatz Healthy Design System (2)\" pulled to social/reference/design-system/ieatz-healthy-ds-2"
     }
   ],
   "flags": {

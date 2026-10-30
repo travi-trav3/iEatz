@@ -1,7 +1,7 @@
 {
   "name": "nov-2-8",
   "createdAt": "2026-10-30",
-  "note": "First batch under the reboot (RULES.md, The voice; F-007 to F-009). Planned Oct 30 from the footage that exists: none. The Drive inbox was empty in all five folders, so the week is the thin week the reboot doc names: the Wednesday comment-COOKBOOK post, the Thursday send-this (st03, series ledger, already scheduled) and one pin a day at 12:10 PT from the unused stock photos (the last week stock is allowed: F-008 cuts it off Nov 15). Every photo opened before use; descriptions in photos.json. Shell from the post's job: bleed where the food fills the frame and the type needs a scrim, the paper photo shell where the picture is an object on a flat colour and the headline wants clean paper. Captions are text messages: lowercase, the pain first, the dish and the number, what iEatz did in one line, no method (F-006). Pins link to the breakfasts page where the pin is a breakfast, else the App Store (no other page exists; ieatzhealthy.com is not reachable from this session so the page contents were not re-read).",
+  "note": "First batch under the reboot (RULES.md, The voice; F-007 to F-009). Planned Oct 30 from the footage that exists: none. The Drive inbox was empty in all five folders, so the week is the thin week the reboot doc names: the Wednesday comment-COOKBOOK post, the Thursday send-this (st03, series ledger, already scheduled) and one pin a day at 12:10 PT from the unused stock photos (the last week stock is allowed: F-008 cuts it off Nov 15). Every photo opened before use; descriptions in photos.json. Shell from the post's job: bleed where the food fills the frame and the type needs a scrim, the paper photo shell where the picture is an object on a flat colour and the headline wants clean paper. Captions are text messages: lowercase, the pain first, the dish and the number, what iEatz did in one line, no method (F-006). Pins link to the breakfasts page where the pin is a breakfast, else the App Store (no other page exists; ieatzhealthy.com is not reachable from this session so the page contents were not re-read). [2026-10-30 14:00 PT: seven of Travis's own photos landed in the Drive inbox the same afternoon; every frame except the receipt pin (no own receipt photo yet) was rebuilt on them as v2. Own phone photos render ungraded (grade false): nothing styled.]",
   "posts": [
     {
       "file": "p02-pin-avocado-photo",
@@ -21,7 +21,9 @@
       ],
       "hookType": "problem",
       "why": "The ripe window is a joke everyone who has bought an avocado has lived: a 24-hour countdown sitting on the counter. The fix is the eggs next to it.",
-      "app": "Tell iEatz what is on the counter (an avocado, eggs, bread) and it writes the breakfast with calories and protein estimated; anything missing goes to Instacart."
+      "app": "Tell iEatz what is on the counter (an avocado, eggs, bread) and it writes the breakfast with calories and protein estimated; anything missing goes to Instacart.",
+      "status": "retracted",
+      "note": "2026-10-30 14:00 PT: replaced by the v2 frame on one of Travis's own photos (Drive inbox, Oct 29); the stock frame never scheduled"
     },
     {
       "file": "p03-pin-greens-bleed",
@@ -37,7 +39,9 @@
       "sub": "Kale, spinach, cucumber, a lime. Tell iEatz what is going soft and it writes tonight from exactly that, protein counted.",
       "hookType": "surprise",
       "why": "The surprise is the reframe: the sad drawer reads as a loss and is three dinners nobody has picked yet. Everyone has thrown out this exact bag.",
-      "app": "Add what is going soft to iEatz and it writes the recipe from those items with calories and protein estimated; missing items to Instacart."
+      "app": "Add what is going soft to iEatz and it writes the recipe from those items with calories and protein estimated; missing items to Instacart.",
+      "status": "retracted",
+      "note": "2026-10-30 14:00 PT: replaced by the v2 frame on one of Travis's own photos (Drive inbox, Oct 29); the stock frame never scheduled"
     },
     {
       "file": "p04-pin-aisle-bleed",
@@ -73,7 +77,9 @@
         "every one under 30 minutes",
         "an Instacart list per recipe",
         "free, in your DMs"
-      ]
+      ],
+      "status": "retracted",
+      "note": "2026-10-30 14:00 PT: replaced by the v2 frame on one of Travis's own photos (Drive inbox, Oct 29); the stock frame never scheduled"
     },
     {
       "file": "p05-pin-breakfast-bleed",
@@ -89,7 +95,9 @@
       "sub": "Tell iEatz the three and it writes it. About 22 g protein, estimated.",
       "hookType": "promise",
       "why": "Three things most fridges hold, a time and a protein number: the promise is that breakfast is already decided, you just have to say the words.",
-      "app": "Add the three to iEatz and it writes the breakfast with calories and protein estimated."
+      "app": "Add the three to iEatz and it writes the breakfast with calories and protein estimated.",
+      "status": "retracted",
+      "note": "2026-10-30 14:00 PT: replaced by the v2 frame on one of Travis's own photos (Drive inbox, Oct 29); the stock frame never scheduled"
     },
     {
       "file": "p06-pin-brunch-bleed",
@@ -105,7 +113,9 @@
       "sub": "An avocado, two eggs, bread. Tell iEatz what is there and it writes this plate, protein counted.",
       "hookType": "promise",
       "why": "The number everyone standing outside a brunch place has done in their head. The plate in the photo is the plate you waited for, made from three things you own.",
-      "app": "Tell iEatz what is in the kitchen (avocado, eggs, bread) and it writes the plate with calories and protein estimated; out of bread, it goes to Instacart."
+      "app": "Tell iEatz what is in the kitchen (avocado, eggs, bread) and it writes the plate with calories and protein estimated; out of bread, it goes to Instacart.",
+      "status": "retracted",
+      "note": "2026-10-30 14:00 PT: replaced by the v2 frame on one of Travis's own photos (Drive inbox, Oct 29); the stock frame never scheduled"
     },
     {
       "file": "p07-pin-spices-photo",
@@ -125,7 +135,9 @@
       ],
       "hookType": "problem",
       "why": "The same chicken three nights running is the real weeknight problem; the fix was in the drawer the whole time. The spoons show the ingredient nobody counts as one.",
-      "app": "Tell iEatz the chicken and the three jars you can reach and it writes a new dinner with calories and protein estimated; the missing item goes to Instacart."
+      "app": "Tell iEatz the chicken and the three jars you can reach and it writes a new dinner with calories and protein estimated; the missing item goes to Instacart.",
+      "status": "retracted",
+      "note": "2026-10-30 14:00 PT: replaced by the v2 frame on one of Travis's own photos (Drive inbox, Oct 29); the stock frame never scheduled"
     },
     {
       "file": "p08-pin-fruit-bleed",
@@ -141,7 +153,148 @@
       "sub": "Berries, rhubarb, citrus. Tell iEatz what is in the bowl and it writes the breakfasts that use it up before anything turns.",
       "hookType": "problem",
       "why": "The Sunday fruit haul that dies by Thursday is a weekly ritual of guilt; the post names the cycle and ends it in three words.",
-      "app": "Tell iEatz what is in the fruit bowl and it writes the breakfasts and snacks from it, calories and protein estimated; the yogurt you are out of goes to Instacart."
+      "app": "Tell iEatz what is in the fruit bowl and it writes the breakfasts and snacks from it, calories and protein estimated; the yogurt you are out of goes to Instacart.",
+      "status": "retracted",
+      "note": "2026-10-30 14:00 PT: replaced by the v2 frame on one of Travis's own photos (Drive inbox, Oct 29); the stock frame never scheduled"
+    },
+    {
+      "file": "p02-pin-burgerbowl-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "photo",
+      "footer": "badge-bl",
+      "photo": "own/2026-10-29-travis-img6315.jpg",
+      "objPos": "50% 88%",
+      "grade": false,
+      "photoClaim": "a bunless burger bowl on a wooden table: a beef patty under lettuce, tomato, avocado and a pickle in a white bowl, a bowl of fries and a stacked burger behind it",
+      "eyebrow": "Monday, 6:40 PM",
+      "head": "Forgot the buns. <span class=\"accent\">Didn't go back.</span>",
+      "hookType": "surprise",
+      "why": "The brand in one frame: a real burger night in a real kitchen, no bun, no store run, still dinner. The surprise is that it got better, not worse.",
+      "app": "Add the four ingredients to iEatz and it writes the burger bowl with calories and protein estimated; the bun goes to Instacart if you want it.",
+      "chips": [
+        "ground beef, lettuce, avocado",
+        "20 minutes",
+        "buns to Instacart, if you must"
+      ]
+    },
+    {
+      "file": "p03-pin-curry-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "photo",
+      "footer": "badge-bl",
+      "photo": "own/2026-10-29-travis-img4952.jpg",
+      "objPos": "50% 75%",
+      "grade": false,
+      "photoClaim": "a stove from above: a pan of red coconut curry with peppers and a wooden spoon, a tray of browned tofu cubes, a bowl of cooked grain, a cast iron pan on the back burner",
+      "eyebrow": "The tofu from Sunday",
+      "head": "One can of coconut milk. <span class=\"accent\">Dinner, decided.</span>",
+      "hookType": "promise",
+      "why": "The stove mid-mess is the proof: this is a Tuesday, not a shoot. The promise is one pantry can turning the leftovers into a real dinner.",
+      "app": "Add what is in the fridge and the can to iEatz and it writes the curry with calories and protein estimated; missing items to Instacart.",
+      "chips": [
+        "tofu, coconut milk, peppers",
+        "25 minutes",
+        "about 18 g protein"
+      ]
+    },
+    {
+      "file": "o04-ig-cookbook-nachos-v2",
+      "w": 1080,
+      "h": 1350,
+      "template": "igphoto",
+      "footer": "badge-bl",
+      "photo": "own/2026-10-29-travis-img6201.jpg",
+      "objPos": "50% 55%",
+      "grade": false,
+      "photoClaim": "sheet-pan nachos on a baking tray: tortilla chips under melted cheese, mushrooms, cherry tomatoes, jalapeno slices and dollops of guacamole, a bowl of guacamole beside it",
+      "eyebrow": "Free cookbook",
+      "head": "30 dinners you'd actually eat. <span class=\"accent\">Comment COOKBOOK.</span>",
+      "chips": [
+        "every one under 30 minutes",
+        "an Instacart list per recipe",
+        "free, in your DMs"
+      ],
+      "hookType": "promise",
+      "why": "The weekly ask with the offer as the whole frame, on our own food for the first time: a tray of nachos from a real kitchen says \"you would eat this\" better than any stock plate did.",
+      "app": "The cookbook: 30 recipes, each with a tap-to-shop Instacart list, delivered by DM when someone comments COOKBOOK."
+    },
+    {
+      "file": "p05-pin-pancakes-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "photo",
+      "footer": "badge-bl",
+      "photo": "own/2026-10-29-travis-img5625.jpg",
+      "objPos": "50% 60%",
+      "grade": false,
+      "photoClaim": "a stack of five pancakes on a white plate on a wooden table, a bottle of maple syrup behind it, flowers and a living room out of focus",
+      "eyebrow": "Saturday, 9 AM",
+      "head": "No pancake mix in the house. <span class=\"accent\">Pancakes anyway.</span>",
+      "chips": [
+        "flour, eggs, milk",
+        "20 minutes",
+        "about 12 g protein"
+      ],
+      "hookType": "surprise",
+      "why": "The box is the thing people think they need; the stack says the pantry had it the whole time. Weekend breakfast is the most-saved pin category we post into.",
+      "app": "Tell iEatz flour, eggs and milk and it writes the pancakes with calories and protein estimated; out of syrup, it goes to Instacart."
+    },
+    {
+      "file": "p06-pin-datenight-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "own/2026-10-29-travis-img6825.jpg",
+      "objPos": "50% 60%",
+      "grade": false,
+      "photoClaim": "a set table from above: a cutting board with sliced steak, a bowl of ravioli with herbs and parmesan, a bowl of broccoli, candles, pink napkins, a hand reaching in at the top",
+      "eyebrow": "Friday, no reservation",
+      "head": "Date night at home. <span class=\"accent\">25 minutes.</span>",
+      "sub": "A steak, a bag of ravioli, a head of broccoli. Tell iEatz the three and it writes the whole table, protein counted.",
+      "hookType": "promise",
+      "why": "A hand, candles, a real table: the first frame with a person in it. The promise is the restaurant night for the price of three things already in the fridge.",
+      "app": "Add the three to iEatz and it writes the steak, the ravioli and the side with calories and protein estimated; missing items to Instacart."
+    },
+    {
+      "file": "p07-pin-sheetpan-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "own/2026-10-29-travis-img6358.jpg",
+      "objPos": "50% 50%",
+      "grade": false,
+      "photoClaim": "a sheet pan of roasted purple sweet potato chunks and slabs of squash, some charred, on a wooden table",
+      "eyebrow": "The half squash, day four",
+      "head": "Half a squash, two potatoes. <span class=\"accent\">One tray.</span>",
+      "sub": "The half squash and the sweet potatoes rolling around the drawer. Tell iEatz and it writes the tray, protein counted.",
+      "hookType": "promise",
+      "why": "The sad half squash everyone has in the drawer, shown as what it becomes: one tray, charred edges, a real kitchen. The number is one, and that is the point.",
+      "app": "Add the squash and the potatoes to iEatz and it writes the sheet-pan dinner with calories and protein estimated; the missing protein goes to Instacart."
+    },
+    {
+      "file": "p08-pin-roast-v2",
+      "w": 1000,
+      "h": 1500,
+      "template": "photo",
+      "footer": "badge-bl",
+      "photo": "own/2025-12-09-travis-502bcfab.jpg",
+      "objPos": "50% 90%",
+      "grade": false,
+      "photoClaim": "a holiday plate on an orange plaid runner: sliced turkey, mashed potatoes, salad greens and stuffing, mini pumpkins and a paper towel roll behind it",
+      "eyebrow": "Sunday roast",
+      "head": "One roast. <span class=\"accent\">Three more dinners hiding in it.</span>",
+      "hookType": "surprise",
+      "why": "The Sunday plate everyone photographs, reframed as Monday, Tuesday and Wednesday. The paper towel roll stays in frame: nothing styled.",
+      "app": "Add the leftovers to iEatz and it writes the next dinners from them with calories and protein estimated; the missing items go to Instacart.",
+      "chips": [
+        "turkey, potatoes, greens",
+        "3 dinners",
+        "leftovers in, week out"
+      ]
     }
   ]
 }

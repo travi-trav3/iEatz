@@ -18,7 +18,7 @@ const REPO = path.resolve(__dirname, '../..');
 const INDEX = JSON.parse(fs.readFileSync(path.join(REPO, 'assets/photos/photos.json'), 'utf8'));
 const MANIFEST = path.join(REPO, 'social/manifest');
 const BATCHES = path.join(__dirname, 'batches');
-const PHOTO_RE = /^(food|fridge|grocery|lifestyle|pantry)\/[^/]+\.(jpe?g|png)$|^app-[^/]+\.jpg$/;
+const PHOTO_RE = /^(food|fridge|grocery|lifestyle|pantry|own)\/[^/]+\.(jpe?g|png)$|^app-[^/]+\.jpg$/;
 
 const photosOfPost = (r) => {
   const out = new Set();
