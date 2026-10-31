@@ -1,0 +1,224 @@
+/* ============================================================
+   iEatz Healthy — iOS App Kit
+   Recreates the actual app's hi-fi screens from the Figma file.
+   Designed at 375×812 (iPhone X-class). Each .ios-screen scales
+   into its frame.
+   ============================================================ */
+
+:root {
+  /* Plus Jakarta Sans is the app's UI face */
+  --app-font: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.ios-stage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 40px;
+  background: #ECEAE0;
+  justify-content: center;
+}
+
+.ios-device {
+  width: 375px;
+  height: 812px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 44px;
+  background: var(--app-mint-bg);
+  box-shadow: var(--shadow-lg),
+              0 0 0 12px #18211C,
+              0 0 0 13px #2A332E;
+  font-family: var(--app-font);
+}
+
+.ios-screen {
+  position: absolute;
+  inset: 0;
+  background: var(--app-mint-bg);
+  overflow: hidden;
+}
+
+/* iOS chrome */
+.ios-status {
+  position: absolute; top: 0; left: 0; right: 0; height: 44px;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 24px;
+  font-family: var(--app-font);
+  font-size: 14px; font-weight: 600;
+  color: var(--ink-1);
+  z-index: 5;
+}
+.ios-status .icons { display:flex; gap:6px; align-items:center; }
+.ios-home {
+  position:absolute; bottom:8px; left:50%; transform:translateX(-50%);
+  width:134px; height:5px; border-radius:999px; background:var(--ink-1); opacity:0.85;
+  z-index:5;
+}
+
+/* Top action row */
+.ios-toprow {
+  position:absolute; top:60px; left:24px; right:24px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.ios-circle-btn {
+  width:44px; height:44px; border-radius:999px;
+  background:var(--app-green); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  border:none; cursor:pointer;
+}
+.ios-tile-btn {
+  width:44px; height:44px; border-radius:14px;
+  background:var(--brand-green-light); color:var(--ink-1);
+  display:flex; align-items:center; justify-content:center;
+  border:none; cursor:pointer;
+}
+.ios-avatar {
+  width:44px; height:44px; border-radius:999px; overflow:hidden;
+  background:#F0CFB9; display:flex; align-items:center; justify-content:center;
+  font-size:22px;
+}
+
+/* Big screen title */
+.ios-title {
+  font-family: var(--app-font);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink-1);
+  margin: 0;
+}
+.ios-title.green { color: var(--app-green); }
+
+/* Filter pills row */
+.ios-pills {
+  display:flex; gap:10px; overflow:hidden; padding:4px 0;
+}
+.ios-pill {
+  flex-shrink:0;
+  padding:8px 18px;
+  border-radius:999px;
+  font-family:var(--app-font);
+  font-size:14px; font-weight:600;
+  background:transparent; color:var(--ink-3);
+  border:1px solid #D5DDD5;
+}
+.ios-pill.on { background:var(--app-green); color:#fff; border-color:var(--app-green); }
+.ios-pill.on-dark { background:var(--app-green-deep); color:#fff; border-color:var(--app-green-deep); }
+
+/* Calorie card */
+.ios-cal-card {
+  background: transparent;
+  padding: 14px 0;
+}
+.ios-cal-head {
+  display:flex; justify-content:space-between; align-items:center;
+  font-family:var(--app-font);
+}
+.ios-cal-head .label { font-size:15px; font-weight:600; color:var(--ink-1); }
+.ios-cal-head .num   { font-size:15px; font-weight:600; color:var(--ink-1); }
+.ios-cal-bar {
+  height:6px; background:#E4ECE5; border-radius:999px; overflow:hidden;
+  margin-top:10px;
+}
+.ios-cal-bar > div { height:100%; background:var(--app-green); border-radius:999px; }
+.ios-cal-foot { font-size:12px; color:var(--ink-4); margin-top:8px; font-family:var(--app-font); }
+
+/* Bottom tab bar */
+.ios-tabbar {
+  position:absolute; left:0; right:0; bottom:0;
+  height:88px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--white) 30%);
+  display:flex; padding:0 14px 20px;
+  z-index:4;
+}
+.ios-tab {
+  flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
+  padding-bottom:12px; gap:4px;
+  font-family:var(--app-font);
+  font-size:11px; font-weight:600;
+  color:var(--ink-4);
+}
+.ios-tab.on { color: var(--app-green); }
+.ios-tab svg { width:22px; height:22px; }
+.ios-fab {
+  position:absolute; bottom:54px; left:50%; transform:translateX(-50%);
+  width:56px; height:56px; border-radius:999px;
+  background: var(--app-green);
+  color:#fff; display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 4px 16px rgba(31,139,76,0.4), 0 2px 6px rgba(0,0,0,0.08);
+  z-index: 6; border:none; cursor:pointer;
+  font-size:24px; line-height:0;
+}
+
+/* Recipe card */
+.ios-recipe {
+  background: var(--white);
+  border-radius:20px;
+  padding:14px;
+  box-shadow: 0 2px 8px rgba(14,74,42,0.05);
+  display:flex; flex-direction:column; gap:10px;
+}
+.ios-recipe .photo {
+  aspect-ratio: 4/3;
+  border-radius:14px;
+  background-color: #E6F4EC;
+  background-size: cover;
+  background-position: center;
+}
+.ios-recipe .name { font-size:14px; font-weight:700; color:var(--ink-1); line-height:1.2; }
+.ios-recipe .meta { font-size:11px; color:var(--ink-4); display:flex; gap:8px;}
+
+/* Form fields */
+.ios-field {
+  background: rgba(230, 244, 236, 0.7);
+  border-radius:14px;
+  padding:18px 18px;
+  display:flex; align-items:center; gap:12px;
+  font-family: var(--app-font);
+  font-size: 16px; font-weight:500;
+  color: var(--ink-3);
+}
+.ios-field input {
+  border:none; outline:none; background:transparent; font:inherit; flex:1; color:var(--ink-1);
+}
+.ios-field input::placeholder { color: var(--ink-4); }
+
+/* Primary CTA */
+.ios-cta {
+  display:block; width:100%;
+  background: var(--app-green-deep);
+  color:#fff;
+  border:none; cursor:pointer;
+  font-family: var(--app-font); font-weight:700; font-size:16px;
+  padding: 18px 24px; border-radius:16px;
+  text-align:center;
+}
+.ios-cta.bright { background: var(--app-green); }
+
+/* Section list (profile) */
+.ios-section-label {
+  font-family: var(--app-font); font-size:13px; font-weight:500; color:var(--ink-4);
+  margin: 0 0 10px;
+}
+.ios-section {
+  background: var(--white); border-radius:18px; padding:6px 16px;
+  box-shadow: 0 2px 6px rgba(14,74,42,0.04);
+}
+.ios-section-row {
+  display:flex; align-items:center; gap:14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #EAEFEA;
+  font-family: var(--app-font);
+}
+.ios-section-row:last-child { border-bottom:none; }
+.ios-section-row .ic { width:24px; height:24px; color: var(--ink-1); flex-shrink:0;}
+.ios-section-row .label { flex:1; font-size:15px; font-weight:600; color:var(--ink-1); }
+.ios-section-row .chev { width:16px; height:16px; color:var(--ink-4); flex-shrink:0;}
+
+/* Decorative arc pattern (onboarding bg) */
+.ios-arcs {
+  position:absolute; inset:0; overflow:hidden; pointer-events:none;
+}
+.ios-arcs svg { position:absolute; }

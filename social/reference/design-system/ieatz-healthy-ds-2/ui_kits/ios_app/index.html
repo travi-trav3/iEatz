@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Ios App" name="iOS app UI kit" subtitle="Click-through recreation of the app" viewport="1280x720" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>iEatz Healthy — iOS App Kit</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="app.css">
+<style>
+  body { margin:0; padding:0; background:#ECEAE0; }
+  .header {
+    padding:40px 64px 16px;
+    font-family:var(--font-sans);
+  }
+  .header h1 {
+    font-family: var(--font-serif);
+    font-size:40px; font-weight:400; margin:0;
+    color:var(--ink-1); letter-spacing:-0.01em;
+  }
+  .header p { font-size:14px; color:var(--ink-3); margin:6px 0 0; max-width:680px; line-height:1.5; }
+  .header .tip { font-size:12px; color:var(--ink-4); margin-top:10px; }
+  .label-row {
+    display:flex; gap:28px; padding: 8px 64px 12px;
+    flex-wrap: wrap;
+  }
+  .label-row .lbl {
+    width:375px; flex-shrink:0;
+    font-family:var(--font-sans); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-4);
+  }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="header">
+  <h1>iOS App — UI Kit</h1>
+  <p>Click-through recreation of the iEatz Healthy iOS app. Tap the bottom-nav icons on the live phone to navigate Home → Recipes → Inventory → Profile. Tap pills to filter.</p>
+  <p class="tip">Designed at 375×812. Components come from <code>Icons.jsx · Chrome.jsx · Screens.jsx</code>.</p>
+</div>
+
+<div id="root"></div>
+
+<script type="text/babel" src="Icons.jsx"></script>
+<script type="text/babel" src="Chrome.jsx"></script>
+<script type="text/babel" src="Screens.jsx"></script>
+<script type="text/babel">
+function LivePhone() {
+  const [tab, setTab] = React.useState("home");
+  const screen = tab === "home"  ? <ScreenHome    active={tab} onChange={setTab}/>
+               : tab === "inv"   ? <ScreenRecipes active={tab} onChange={setTab}/>
+               : tab === "prof"  ? <ScreenProfile active={tab} onChange={setTab}/>
+               : tab === "fav"   ? <ScreenRecipes active={tab} onChange={setTab}/>
+               : <ScreenHome     active={tab} onChange={setTab}/>;
+  return <div className="ios-device">{screen}</div>;
+}
+
+function Stage() {
+  return (
+    <>
+      <div className="label-row">
+        <div className="lbl">Live click-through</div>
+        <div className="lbl">Onboarding · splash</div>
+        <div className="lbl">Onboarding · sign up</div>
+      </div>
+      <div className="ios-stage" style={{ paddingTop:8 }}>
+        <LivePhone/>
+        <div className="ios-device"><ScreenSplash/></div>
+        <div className="ios-device"><ScreenSignUp/></div>
+      </div>
+
+      <div className="label-row">
+        <div className="lbl">Onboarding · choose ingredients</div>
+        <div className="lbl">Recipes</div>
+        <div className="lbl">Profile</div>
+      </div>
+      <div className="ios-stage" style={{ paddingTop:8 }}>
+        <div className="ios-device"><ScreenChooseIngredients/></div>
+        <div className="ios-device"><ScreenRecipes/></div>
+        <div className="ios-device"><ScreenProfile/></div>
+      </div>
+
+      <div className="label-row">
+        <div className="lbl">Paywall</div>
+      </div>
+      <div className="ios-stage" style={{ paddingTop:8, paddingBottom:48 }}>
+        <div className="ios-device"><ScreenPaywall/></div>
+      </div>
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Stage/>);
+</script>
+</body>
+</html>

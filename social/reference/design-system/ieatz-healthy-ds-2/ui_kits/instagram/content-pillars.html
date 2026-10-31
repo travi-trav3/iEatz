@@ -1,0 +1,107 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Instagram" name="Content pillars — carousels & pins" subtitle="3 IG carousels (5 slides) + 9 Pinterest pins, by pillar" viewport="1280x720" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>iEatz Healthy — Content Brand Pillars</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="social.css">
+<style id="__om-edit-overrides"></style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="app-store-badge.jsx"></script>
+<script type="text/babel" src="Shared.jsx"></script>
+<script type="text/babel" src="Carousels.jsx"></script>
+<script type="text/babel" src="Pins.jsx"></script>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "#1F8B4C",
+  "paper": "warm",
+  "headline": 1,
+  "pinAspect": "standard",
+  "photos": true
+}/*EDITMODE-END*/;
+
+const PILLARS = [
+  { key: "pantry",  index: "01", name: "Pantry / Fridge",   theme: "Cook with what you have" },
+  { key: "health",  index: "02", name: "Health / Diet",     theme: "Body stats · macros · calories" },
+  { key: "grocery", index: "03", name: "Grocery / Instacart", theme: "Ingredients · Instacart · inventory" },
+];
+
+function Pillar({ p }) {
+  const carousel = window.CAROUSELS[p.key];
+  const pins = window.PINS[p.key];
+  return (
+    <section className="pillar">
+      <div className="pillar-bar">
+        <span className="pillar-index">{p.index}</span>
+        <h2 className="pillar-name">{p.name}</h2>
+        <span className="pillar-theme">{p.theme}</span>
+      </div>
+      <div className="row-label">Instagram carousel · 1080 × 1350 · swipe 1 → 5</div>
+      <div className="rail">
+        {carousel.map((s, i) => (
+          <IGFrame key={i} cap={s.cap} dark={s.dark}>{s.content}</IGFrame>
+        ))}
+      </div>
+      <div className="row-label">Pinterest pins · 1000 wide · 3 standalone</div>
+      <div className="rail">
+        {pins.map((s, i) => (
+          <PinFrame key={i} cap={s.cap} dark={s.dark}>{s.content}</PinFrame>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  window.__PILLAR_PHOTOS = t.photos !== false;
+  window.__PILLAR_TALL = t.pinAspect === "tall";
+  const rootStyle = {
+    "--pillar-accent": t.accent,
+    "--pillar-paper": t.paper === "soft" ? "#FBFAF6" : "#F5F2EA",
+    "--hl-scale": t.headline,
+  };
+  return (
+    <div className="page" style={rootStyle}>
+      <header className="page-head">
+        <p className="page-kicker">iEatz Healthy · Content Brand Pillars</p>
+        <h1 className="page-title">Three pillars, built off the <em>product pages.</em></h1>
+        <p className="page-sub">One Instagram carousel and three Pinterest pins for each pillar — carrying the App Store custom-product-page themes into an always-on content engine. Editorial photography leads the hooks; real app screens carry the proof.</p>
+      </header>
+      {PILLARS.map((p) => <Pillar key={p.key} p={p} />)}
+      <TweaksPanel>
+        <TweakSection label="Brand" />
+        <TweakColor label="Accent green" value={t.accent}
+          options={["#1F8B4C", "#0E4A2A", "#2FA35F", "#157A5E"]}
+          onChange={(v) => setTweak("accent", v)} />
+        <TweakRadio label="Background" value={t.paper}
+          options={["warm", "soft"]} onChange={(v) => setTweak("paper", v)} />
+        <TweakSection label="Type" />
+        <TweakSlider label="Headline size" value={t.headline} min={0.85} max={1.15} step={0.05}
+          onChange={(v) => setTweak("headline", v)} />
+        <TweakSection label="Pinterest" />
+        <TweakRadio label="Aspect" value={t.pinAspect}
+          options={["standard", "tall"]} onChange={(v) => setTweak("pinAspect", v)} />
+        <TweakSection label="Imagery" />
+        <TweakToggle label="Use real photos" value={t.photos}
+          onChange={(v) => setTweak("photos", v)} />
+      </TweaksPanel>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+{
+  "_note": "Content object for the Pinterest roundup page type. Extends ieatz-content-hub-build-spec.md. Recipe copy, protein figures and FAQ answers below are DRAFT — Travis authors the final recipes (uniqueness rule 11). Anything marked VERIFY must be pulled from the live site or App Store Connect before publish.",
+  "page": {
+    "create": true,
+    "type": "roundup",
+    "slug": "10-minute-breakfasts-busy-mornings",
+    "title_tag": "10-minute high-protein breakfasts for busy mornings | iEatz Healthy",
+    "meta_description": "Five breakfasts you can make in ten minutes, each with 20g of protein or more, from things already in your kitchen. Full recipes, times and servings.",
+    "h1": "What can I make for breakfast in 10 minutes?",
+    "direct_answer": "Cottage cheese toast, savory oats with a jammy egg, a frozen-berry yogurt bowl, a black bean and egg skillet, or a peanut banana shake—each one 20 grams of protein or more, from things already in most kitchens. All five are written out in full below, with times, servings and where the protein comes from.",
+    "hero_image": {
+      "src": "/img/recipes/10-minute-breakfasts-hero.jpg",
+      "alt": "Five 10-minute high-protein breakfasts arranged on a wooden kitchen counter",
+      "pin_description": "Five 10-minute breakfasts, 20g+ protein each, from what is already in your kitchen.",
+      "dimensions": "1000x1500",
+      "status": "placeholder"
+    },
+    "recipes": [
+      {
+        "anchor": "cottage-cheese-toast",
+        "name": "Whipped cottage cheese toast with chili crisp",
+        "time_minutes": 5,
+        "servings": 1,
+        "protein_g": 28,
+        "image": { "src": "/img/recipes/whipped-cottage-cheese-toast.jpg", "alt": "Whipped cottage cheese toast topped with chili crisp and flaky salt", "pin_description": "Whipped cottage cheese toast with chili crisp. 5 minutes, 28g protein.", "dimensions": "1000x1500", "status": "placeholder" },
+        "ingredients": ["1 thick slice sourdough or seeded bread", "3/4 cup (170g) cottage cheese", "1 tsp chili crisp or hot honey", "Flaky salt", "Optional: a few cucumber ribbons"],
+        "steps": ["Toast the bread dark. Dark toast holds up under a wet topping.", "Blitz the cottage cheese for 20 seconds in a small blender, or mash it hard with a fork, until it turns glossy.", "Pile it on the toast, spoon the chili crisp over, finish with flaky salt."],
+        "why_it_works": "Cottage cheese whipped is a different food than cottage cheese scooped. Same tub, no shopping trip, 28 grams of protein."
+      },
+      {
+        "anchor": "savory-oats-jammy-egg",
+        "name": "Savory oats with a jammy egg",
+        "time_minutes": 10,
+        "servings": 1,
+        "protein_g": 24,
+        "image": { "src": "/img/recipes/savory-oats-jammy-egg.jpg", "alt": "Savory oats topped with a halved jammy egg, scallion and black pepper", "pin_description": "Savory oats with a 7-minute egg. 10 minutes, 24g protein.", "dimensions": "1000x1500", "status": "placeholder" },
+        "ingredients": ["1/2 cup rolled oats", "1 cup water or broth", "1 egg", "2 tbsp grated parmesan or cheddar", "Scallion, soy sauce, black pepper"],
+        "steps": ["Boil water in a small pot. Lower one egg in for 7 minutes, then move it to cold water.", "Add the oats to the same water and cook 5 minutes, stirring, until thick.", "Stir in the cheese and a splash of soy. Top with the peeled egg, halved, plus scallion and a lot of pepper."],
+        "why_it_works": "Oats are only a sweet food by habit. Treated like risotto they carry cheese, egg and salt, and the pot count stays at one."
+      },
+      {
+        "anchor": "freezer-berry-yogurt-bowl",
+        "name": "Freezer-berry yogurt bowl with toasted seeds",
+        "time_minutes": 6,
+        "servings": 1,
+        "protein_g": 26,
+        "image": { "src": "/img/recipes/freezer-berry-yogurt-bowl.jpg", "alt": "Greek yogurt bowl with warm frozen berries and toasted pumpkin seeds", "pin_description": "Frozen berries make their own syrup. 6 minutes, 26g protein.", "dimensions": "1000x1500", "status": "placeholder" },
+        "ingredients": ["1 cup plain Greek yogurt", "3/4 cup frozen berries", "2 tbsp pumpkin or sunflower seeds", "1 tsp honey or maple", "Pinch of cinnamon"],
+        "steps": ["Toast the seeds dry in a small pan, 3 minutes, until they start popping.", "Microwave the frozen berries 45 seconds so they collapse into their own syrup.", "Spoon the berries over the yogurt, add the seeds and cinnamon, drizzle honey."],
+        "why_it_works": "Frozen berries make their own sauce, which is the part a fresh berry cannot do. This is also the cheapest 26 grams on the list."
+      },
+      {
+        "anchor": "black-bean-egg-skillet",
+        "name": "Black bean and egg skillet, wrapped",
+        "time_minutes": 9,
+        "servings": 2,
+        "protein_g": 22,
+        "image": { "src": "/img/recipes/black-bean-egg-skillet.jpg", "alt": "Black bean and egg skillet with two tortillas rolled and cut in half", "pin_description": "One pan, one can. 9 minutes, 22g protein, feeds two.", "dimensions": "1000x1500", "status": "placeholder" },
+        "ingredients": ["1 can black beans, drained", "2 eggs", "2 flour tortillas", "1/2 tsp cumin", "Salsa, cheese, cilantro — whatever is open"],
+        "steps": ["Warm the beans in a dry skillet with the cumin, smashing about half of them.", "Push them aside, crack the eggs into the empty half, cover, 3 minutes.", "Warm the tortillas over the same burner, fill, add salsa, roll tight."],
+        "why_it_works": "One pan, one can, and the can was already in the cupboard. It doubles for two people without doubling the time."
+      },
+      {
+        "anchor": "peanut-banana-shake",
+        "name": "Peanut banana shake, no protein powder",
+        "time_minutes": 4,
+        "servings": 1,
+        "protein_g": 21,
+        "image": { "src": "/img/recipes/peanut-banana-shake.jpg", "alt": "Peanut butter and banana protein shake in a tall glass beside a blender", "pin_description": "21g of protein, no powder. Four minutes.", "dimensions": "1000x1500", "status": "placeholder" },
+        "ingredients": ["1 banana, ideally frozen", "1 cup milk or kefir", "2 tbsp peanut butter", "1/2 cup cottage cheese or Greek yogurt", "Pinch of salt, ice"],
+        "steps": ["Put everything in the blender, cottage cheese first so it sits against the blade.", "Blend 45 seconds. Longer than feels necessary — that is what makes it smooth instead of grainy.", "Salt it. A pinch of salt is the difference between this and a sad smoothie."],
+        "why_it_works": "Twenty-one grams of protein with nothing bought from a supplement aisle. Freeze bananas as they turn and this is a four-minute breakfast forever."
+      }
+    ],
+    "inline_app_mention": "Every recipe on this page starts with a shopping list. The iEatz app starts with your fridge instead—name three things you already have and it writes the rest.",
+    "inline_app_mention_after_recipe": 2,
+    "bridge": {
+      "headline": "These five assume you shopped for them.",
+      "subhead": "Every recipe list on the internet decides what you should eat and then sends you to the store. iEatz runs the other direction. It starts with what is already in your kitchen this morning, which is the one thing a page like this can never know.",
+      "beats": [
+        { "title": "Wednesday stops being a decision.", "detail": "You open the fridge, name three things, and the meal is already chosen. The deciding was the tiring part, not the cooking." },
+        { "title": "The half-bag of spinach gets eaten.", "detail": "Cooking from what is already there means the wilting thing becomes tonight, instead of becoming Sunday's bin." },
+        { "title": "You stop buying the same three things twice.", "detail": "When the kitchen is already accounted for, the store trip gets shorter. Nothing gets bought because you could not remember." }
+      ],
+      "app_screens": [
+        { "name": "Choose available ingredients", "status": "RECREATION — from the iEatz iOS UI kit in this design system. Replace with a verified App Store capture." },
+        { "name": "Recipes home, from your fridge", "status": "RECREATION — from the iEatz iOS UI kit in this design system. Replace with a verified App Store capture." }
+      ],
+      "proof": {
+        "rating": "5.0",
+        "review_quote": "VERIFY — pull the real App Store review quote from iEatsHealthy.com",
+        "review_author": "VERIFY — reviewer name",
+        "usage_stat": "VERIFY — usage number already live on iEatsHealthy.com"
+      },
+      "cta_label": "Get the app free",
+      "reassurance": "Free to download. No account needed to try."
+    },
+    "supporting_sections": [
+      {
+        "heading": "Where the protein actually comes from",
+        "eyebrow": "Protein math",
+        "body": "None of these use powder. In every case one ingredient is doing most of the work, which is useful to know because it is the ingredient worth keeping stocked.",
+        "rows": [
+          { "dish": "Cottage cheese toast", "protein": "28g", "source": "3/4 cup cottage cheese carries 24g of it" },
+          { "dish": "Savory oats, jammy egg", "protein": "24g", "source": "Parmesan 8g, egg 6g, the oats themselves 5g" },
+          { "dish": "Berry yogurt bowl", "protein": "26g", "source": "One cup of Greek yogurt, 20g" },
+          { "dish": "Bean and egg skillet", "protein": "22g", "source": "Half a can of beans plus one egg" },
+          { "dish": "Peanut banana shake", "protein": "21g", "source": "Cottage cheese 12g, peanut butter 7g" }
+        ],
+        "footnote": "Per serving, rounded. Calculated from USDA averages—your brands will move each number by a gram or two."
+      }
+    ],
+    "_supporting_slot_2": "Left open on purpose. Rotation pool for page two onward (rule 13, never the same two consecutively): prep-ahead notes, ingredient swaps table, buy once use five ways, common mistakes, scaling for a family.",
+    "faq": [
+      { "q": "What is the fastest high-protein breakfast?", "a": "The peanut banana shake, at about four minutes and 21 grams of protein. Everything goes in the blender at once and there is nothing to wash but the jar." },
+      { "q": "Can I make any of these the night before?", "a": "The savory oats and the yogurt bowl both hold. Cook the oats and refrigerate them, then loosen with a splash of water in the morning. For the yogurt bowl, keep the toasted seeds in a separate jar so they stay crisp." },
+      { "q": "How do I get to 30 grams of protein at breakfast?", "a": "Add one thing rather than making a bigger portion. An extra egg, two tablespoons of hemp seeds, or half a cup of cottage cheese each add roughly six to twelve grams without changing the recipe or the timing." }
+    ],
+    "internal_links": [
+      { "title": "Pantry dinners in 15 minutes", "url": "/recipes/15-minute-pantry-dinners", "status": "placeholder URL" },
+      { "title": "What to cook when the fridge looks empty", "url": "/recipes/cook-when-fridge-looks-empty", "status": "placeholder URL" },
+      { "title": "One can of chickpeas, five ways", "url": "/recipes/one-can-chickpeas-five-ways", "status": "placeholder URL" }
+    ],
+    "final_cta": {
+      "line": "Tomorrow's breakfast is already in your fridge.",
+      "label": "Get the app free",
+      "reassurance": "Free to download. No account needed to try."
+    },
+    "footer_provenance": "Recipes on this page are developed with the iEatz recipe engine and edited by a person before publishing. Times, servings and protein figures are tested against the written method."
+  },
+  "cta": {
+    "destination": "app_store",
+    "url": "https://apps.apple.com/us/app/id6475559706?pt=PROVIDER_TOKEN&ct=pin-lp&mt=8",
+    "campaign_token": "pin-lp",
+    "provider_token": "PROVIDER_TOKEN",
+    "utm": "?utm_source=pinterest&utm_medium=social&utm_campaign=pin-lp&utm_content=10-minute-breakfasts",
+    "_note": "Apple reads pt, ct and mt only. UTMs are for GA4 and our own logging. Tokenize by arm (pin-lp / pin-direct) until a single page clears 5 downloads in a reporting window."
+  },
+  "analytics": {
+    "events": [
+      { "name": "app_store_click", "params": ["page_slug", "cta_position", "utm_content"], "cta_positions": ["header", "inline", "bridge", "footer", "sticky"] },
+      { "name": "scroll_depth", "params": ["page_slug", "depth"], "thresholds": [25, 50, 75, 100] },
+      { "name": "recipe_anchor_click", "params": ["page_slug", "recipe_name"] }
+    ]
+  }
+}

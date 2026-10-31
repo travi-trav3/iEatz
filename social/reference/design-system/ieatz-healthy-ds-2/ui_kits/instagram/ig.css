@@ -1,0 +1,124 @@
+/* ============================================================
+   iEatz Healthy — Instagram Post Templates
+   Each .ig-slide = 1080×1350.
+   Wrapped by .ig-stage for proportional scaling in any viewport.
+   ============================================================ */
+
+.ig-stage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  background: #ECEAE0;
+  justify-content: center;
+}
+
+.ig-slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+  border-radius: 4px;
+  box-shadow: var(--shadow-lg);
+  flex-shrink: 0;
+  transform-origin: top center;
+  /* fit-into-viewport scaler */
+  transform: scale(var(--ig-scale, 0.4));
+  margin-bottom: calc((1350px * (var(--ig-scale, 0.4) - 1)));
+  margin-right: calc((1080px * (var(--ig-scale, 0.4) - 1)));
+}
+
+/* Brand badge in IG slides */
+.ig-badge {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+}
+.ig-badge.right { left: auto; right: 80px; }
+.ig-badge.dark .ig-badge__text { color: rgba(255,255,255,0.92); }
+.ig-badge.dark .ig-badge__mark path { fill: #fff; }
+.ig-badge__mark { width: 28px; height: auto; color: var(--brand-green); }
+.ig-badge__text {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
+}
+
+/* Page counter for carousels */
+.ig-pager {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink-4);
+  letter-spacing: 0.04em;
+  z-index: 10;
+}
+
+/* Eyebrow on slides */
+.ig-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+}
+
+/* Accent bar */
+.ig-accent {
+  display: block;
+  width: 96px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--brand-green);
+}
+
+/* Pill labels in slides */
+.ig-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: var(--brand-green-light);
+  color: var(--brand-green-dark);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Photo placeholder */
+.ig-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(80% 60% at 30% 20%, rgba(255,255,255,0.5), transparent 70%),
+    linear-gradient(135deg, #E6F4EC 0%, #C6DCC8 100%);
+  color: var(--ink-3);
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ig-photo::before {
+  content: '';
+  width: 56px;
+  height: 56px;
+  margin-right: 16px;
+  background: rgba(14, 74, 42, 0.12);
+  border-radius: 12px;
+  display: inline-block;
+}
+.ig-photo span { opacity: 0.7; }
