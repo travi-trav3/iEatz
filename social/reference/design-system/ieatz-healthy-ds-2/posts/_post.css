@@ -1,0 +1,119 @@
+/* ============================================================
+   iEatz Healthy — Static IG posts
+   Each .post is a 1080×1350 canvas scaled to fit any viewport.
+   Designed to be exported at native size via screenshot.
+   ============================================================ */
+@import url('../colors_and_type.css');
+
+html, body { margin:0; padding:0; background:#ECEAE0; font-family: var(--font-sans); }
+
+.stage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.fit {
+  position: relative;
+  /* JS sets width/height; container is the scaled wrapper */
+  flex: none;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(14,74,42,.16), 0 6px 18px rgba(14,74,42,.08);
+}
+.fit .post {
+  position: absolute;
+  inset: 0;
+  transform-origin: top left;
+}
+
+.post {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+/* shared post helpers */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+}
+.eyebrow.ink   { color: var(--ink-3); }
+.eyebrow.paper { color: var(--paper); opacity:.85; }
+
+.accent-bar {
+  display: inline-block;
+  width: 96px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--brand-green);
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  line-height: 0.98;
+  color: var(--ink-1);
+  text-wrap: balance;
+  margin: 0;
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.42;
+  color: var(--ink-3);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+.chip {
+  display:inline-flex;
+  align-items:center;
+  padding: 10px 22px;
+  background: var(--brand-green-light);
+  color: var(--brand-green-dark);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.005em;
+}
+
+/* Brand badge — fridge mark + iEatz Healthy wordmark */
+.badge {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 5;
+}
+.badge svg { width: 30px; height: auto; color: var(--brand-green); flex:none; }
+.badge .wm {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
+}
+.badge.dark .wm { color: var(--paper); }
+.badge.dark svg { color: var(--paper); }
+.badge.on-photo {
+  background: rgba(245,242,234,0.96);
+  padding: 12px 22px 12px 18px;
+  border-radius: 999px;
+  bottom: 80px;
+}

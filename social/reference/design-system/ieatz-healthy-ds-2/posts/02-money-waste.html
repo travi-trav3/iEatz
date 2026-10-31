@@ -1,0 +1,105 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Post · Money & Waste" subtitle="Big italic $1,866 · the pantry math" viewport="1080x1350" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>iEatz · Money &amp; Waste — $1,866</title>
+<link rel="stylesheet" href="_post.css">
+<style>
+  .p2 { background: var(--paper-light); }
+  .p2 .accent-photo {
+    position:absolute; right:-100px; top:-100px;
+    width:420px; height:420px; border-radius:50%;
+    background: url("../assets/photos/food/berries-negative-space.jpg") 18% 32%/200% no-repeat;
+    opacity:.96;
+  }
+  .p2 .top {
+    position:absolute; top:170px; left:80px; right:80px;
+    display:flex; flex-direction:column; gap:24px;
+  }
+  .p2 .stat {
+    position:absolute; top:340px; left:80px; right:80px;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--brand-green);
+    font-size: 280px;
+    line-height: 0.88;
+    letter-spacing: -0.045em;
+    white-space: nowrap;
+  }
+  .p2 .stat-cents {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.32em;
+    color: var(--ink-1);
+    letter-spacing: -0.03em;
+    vertical-align: 1.6em;
+    margin-left: 4px;
+  }
+  .p2 .lede {
+    position:absolute; left:80px; right:120px; top:720px;
+    font-family: var(--font-serif);
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    color: var(--ink-1);
+    text-wrap: balance;
+  }
+  .p2 .punchline {
+    position:absolute; left:80px; right:80px; top:960px;
+    display:flex; align-items:center; gap:24px;
+  }
+  .p2 .punchline .text {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 32px;
+    color: var(--ink-3);
+    letter-spacing: -0.005em;
+    line-height: 1.35;
+    max-width: 720px;
+  }
+  .p2 .punchline .text b { color: var(--ink-1); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="stage"><div class="fit"><section class="post p2" data-screen-label="02 Money and Waste">
+
+  <div class="accent-photo"></div>
+
+  <div class="top">
+    <span class="eyebrow">The pantry math</span>
+  </div>
+
+  <div class="stat">$1,866</div>
+
+  <div class="lede">
+    is what the average American household throws out in food every year.
+  </div>
+
+  <div class="punchline">
+    <span class="accent-bar" style="width:60px;"></span>
+    <div class="text">We're <b>rounding that down to zero</b> — recipes generated from what's already on your shelf.</div>
+  </div>
+
+  <div class="badge">
+    <svg viewBox="0 0 38.25 58.486" fill="currentColor"><path d="M0 5.03C0 2.252 2.252 0 5.03 0H33.22C35.998 0 38.25 2.252 38.25 5.03V20.119H0V5.03Z"/><path d="M0 49.83C0 52.608 2.252 54.86 5.03 54.86H33.22C35.998 54.86 38.25 52.608 38.25 49.83V22.81H0V49.83Z"/><path d="M6.083 6.2C6.083 5.489 6.659 4.913 7.369 4.913 8.08 4.913 8.656 5.489 8.656 6.2V16.259C8.656 16.97 8.08 17.546 7.369 17.546 6.659 17.546 6.083 16.97 6.083 16.259Z"/><path d="M6.083 26.787C6.083 26.076 6.659 25.5 7.369 25.5 8.08 25.5 8.656 26.076 8.656 26.787V36.846C8.656 37.557 8.08 38.133 7.369 38.133 6.659 38.133 6.083 37.557 6.083 36.846Z"/><path d="M5.264 54.86H10.878L9.892 57.771C9.748 58.199 9.347 58.486 8.895 58.486H7.2C6.743 58.486 6.338 58.192 6.198 57.757Z"/><path d="M27.489 54.86H33.103L32.117 57.771C31.972 58.199 31.571 58.486 31.12 58.486H29.425C28.968 58.486 28.563 58.192 28.423 57.757Z"/></svg>
+    <span class="wm">iEatz Healthy</span>
+  </div>
+
+</section></div></div>
+<script>
+(function fit(){
+  function go(){
+    const f = document.querySelector('.fit');
+    const w = Math.min(window.innerWidth - 48, 1080);
+    const s = w / 1080;
+    f.style.width = (1080*s)+'px';
+    f.style.height = (1350*s)+'px';
+    f.querySelector('.post').style.transform = `scale(${s})`;
+  }
+  go(); window.addEventListener('resize', go);
+})();
+</script>
+</body></html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Buttons" subtitle="Primary, secondary, text, pill" viewport="700x260" -->
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:32px; background:var(--paper); display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  button { font-family:var(--font-sans); font-size:14px; font-weight:600; letter-spacing:0.01em; cursor:pointer; transition: transform .12s ease, box-shadow .12s ease, background .12s ease; }
+  .primary { background:var(--brand-green-dark); color:#fff; border:none; padding:14px 28px; border-radius:14px; box-shadow:var(--shadow-sm); }
+  .primary:hover { background:#0b3a21; }
+  .primary:active { transform:translateY(1px); box-shadow:none;}
+  .secondary { background:var(--white); color:var(--ink-1); border:1px solid var(--ink-5); padding:14px 28px; border-radius:14px; }
+  .ghost { background:transparent; color:var(--brand-green-dark); border:none; padding:14px 8px; font-weight:600; }
+  .pill-active { background:var(--brand-green); color:#fff; border:none; padding:8px 18px; border-radius:999px; font-size:13px; }
+  .pill { background:transparent; color:var(--ink-3); border:1px solid var(--ink-5); padding:8px 18px; border-radius:999px; font-size:13px; }
+  .icon { width:48px; height:48px; padding:0; background:var(--brand-green); color:#fff; border:none; border-radius:14px; display:inline-flex; align-items:center; justify-content:center; }
+</style></head><body>
+  <button class="primary">Generate recipe</button>
+  <button class="secondary">Save for later</button>
+  <button class="ghost">Skip →</button>
+  <button class="pill-active">All</button>
+  <button class="pill">Breakfast</button>
+  <button class="pill">Lunch</button>
+  <button class="icon">+</button>
+</body></html>

@@ -1,0 +1,338 @@
+/* ==========================================================================
+   iEatz Healthy — Design System Tokens
+   Visual direction: editorial wellness. Magazine-feel, not fitness-app green.
+   ========================================================================== */
+
+/* ---- Fonts (Google) ----
+   Display:    Instrument Serif  — marketing headlines, stat numerals
+   Body:       Inter Tight        — UI text + marketing body
+   App UI:     Plus Jakarta Sans  — entire iOS app surface
+   Mono:       JetBrains Mono     — mono captions (rare)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ===========================================================
+   EDITORIAL SERIF — Instrument Serif
+   Marketing surfaces (IG, web) use Instrument Serif at 400 weight,
+   with italic for stat numerals and pull quotes. It is a non-variable
+   transitional serif with no optical-size / WONK / SOFT axes — quiet
+   and consistent at every scale.
+   App surfaces use Plus Jakarta Sans (see --app-font in app.css).
+   =========================================================== */
+
+:root {
+  /* ---------- COLOR — Brand greens ---------- */
+  --ie-green:           #1F8B4C;   /* primary accent, CTAs, stat numbers */
+  --ie-green-dark:      #0E4A2A;   /* headlines, strong emphasis */
+  --ie-green-deep:      #08311B;   /* darkest, used sparingly */
+  --ie-green-light:     #E6F4EC;   /* card tints, subtle backgrounds */
+  --ie-green-mint:      #F2FAF6;   /* full-bleed light-wash backgrounds */
+
+  /* ---------- COLOR — Ink (text) ---------- */
+  --ie-ink:             #0A0F0C;   /* primary text */
+  --ie-ink-medium:      #5C625E;   /* secondary text, body on warm paper */
+  --ie-ink-light:       #9CA29F;   /* captions, labels, meta */
+  --ie-ink-faint:       #C8CDCA;   /* dividers, disabled */
+
+  /* ---------- COLOR — Surfaces ---------- */
+  --ie-paper:           #F5F2EA;   /* preferred warm background, NOT white */
+  --ie-paper-deep:      #ECE7D8;   /* sectioning, alt cards */
+  --ie-white:           #FFFFFF;   /* cards, overlays */
+  --ie-black:           #0A0F0C;   /* full-bleed dark moments */
+
+  /* ---------- COLOR — Accents (used sparingly, food-photo adjacent) ---------- */
+  --ie-tomato:          #C9412B;   /* warning, contrast moments, "not that" */
+  --ie-saffron:         #E4A93C;   /* highlight, callouts */
+  --ie-aubergine:       #4A2E4D;   /* rare deep accent */
+
+  /* ---------- TYPE — Families ---------- */
+  --ie-font-display:    "Instrument Serif", "Times New Roman", Georgia, serif;
+  --ie-font-sans:       "Inter Tight", "Helvetica Neue", system-ui, sans-serif;
+  --ie-font-mono:       "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+  /* ---------- TYPE — Scale (instagram-first; mobile-safe) ---------- */
+  /* 24px floor for body, 36+ for headlines on 1080×1350 IG posts */
+  --ie-fs-hero:         clamp(56px, 7.2vw, 120px); /* @kind font */  /* IG carousel hero */
+  --ie-fs-display:      clamp(44px, 5.4vw, 88px); /* @kind font */  /* large headlines */
+  --ie-fs-h1:           clamp(36px, 4vw, 64px); /* @kind font */
+  --ie-fs-h2:           clamp(28px, 3vw, 48px); /* @kind font */
+  --ie-fs-h3:           24px; /* @kind font */
+  --ie-fs-stat:         clamp(80px, 12vw, 220px); /* @kind font */  /* the big number */
+  --ie-fs-body-lg:      28px; /* @kind font */
+  --ie-fs-body:         24px; /* @kind font */  /* floor */
+  --ie-fs-caption:      18px; /* @kind font */
+  --ie-fs-eyebrow:      14px; /* @kind font */  /* small caps eyebrow */
+
+  /* ---------- TYPE — Weights ---------- */
+  --ie-fw-light:        300; /* @kind font */
+  --ie-fw-regular:      400; /* @kind font */
+  --ie-fw-medium:       500; /* @kind font */
+  --ie-fw-semibold:     600; /* @kind font */
+  --ie-fw-bold:         700; /* @kind font */
+
+  /* ---------- SPACING (4-step base, generous) ---------- */
+  --ie-sp-1:  4px;
+  --ie-sp-2:  8px;
+  --ie-sp-3:  12px;
+  --ie-sp-4:  16px;
+  --ie-sp-5:  24px;
+  --ie-sp-6:  32px;
+  --ie-sp-7:  48px;
+  --ie-sp-8:  64px;
+  --ie-sp-9:  80px;       /* IG safe-zone */
+  --ie-sp-10: 120px;
+
+  /* ---------- RADII (soft, magazine-like) ---------- */
+  --ie-r-xs:  4px;
+  --ie-r-sm:  8px;
+  --ie-r-md:  16px;
+  --ie-r-lg:  24px;
+  --ie-r-xl:  32px;
+  --ie-r-pill: 999px;
+
+  /* ---------- SHADOWS (green-tinted, multi-layer) ---------- */
+  --ie-shadow-xs:  0 1px 2px rgba(14, 74, 42, 0.04);
+  --ie-shadow-sm:  0 1px 2px rgba(14, 74, 42, 0.04),
+                   0 2px 6px rgba(14, 74, 42, 0.05);
+  --ie-shadow-md:  0 2px 6px rgba(14, 74, 42, 0.05),
+                   0 8px 24px rgba(14, 74, 42, 0.07);
+  --ie-shadow-lg:  0 4px 12px rgba(14, 74, 42, 0.06),
+                   0 16px 40px rgba(14, 74, 42, 0.10),
+                   0 32px 72px rgba(14, 74, 42, 0.06);
+  --ie-shadow-xl:  0 8px 24px rgba(14, 74, 42, 0.08),
+                   0 32px 72px rgba(14, 74, 42, 0.14);
+
+  /* ---------- BORDERS ---------- */
+  --ie-border-hair:   1px solid rgba(10, 15, 12, 0.08); /* @kind other */
+  --ie-border-card:   1px solid rgba(10, 15, 12, 0.06); /* @kind other */
+  --ie-border-strong: 1px solid rgba(10, 15, 12, 0.16); /* @kind other */
+
+  /* ---------- IG TEMPLATE TOKENS ---------- */
+  --ig-w: 1080px;
+  --ig-h: 1350px;
+  --ig-safe: 80px;          /* safe zone on all edges */
+  --ig-no-text-bottom: 15%; /* % of height reserved at bottom (caption preview) */
+
+  /* ===========================================================
+     UI-KIT ALIASES — the IG kit (templates/) and iOS kit
+     (ui_kits/ios_app/) reference these short names.
+     Mapped to the canonical --ie-* tokens above.
+     =========================================================== */
+
+  /* Type */
+  --font-sans:  var(--ie-font-sans);
+  --font-serif: var(--ie-font-display);
+  --font-mono:  var(--ie-font-mono);
+
+  /* Surfaces */
+  --paper:        var(--ie-paper);
+  --paper-light:  #FAF7F0;                  /* slightly lighter than paper */
+  --white:        var(--ie-white);
+  --black:        var(--ie-black);
+
+  /* Brand greens */
+  --brand-green:        var(--ie-green);
+  --brand-green-dark:   var(--ie-green-dark);
+  --brand-green-deep:   var(--ie-green-deep);
+  --brand-green-light:  var(--ie-green-light);
+  --brand-mint:         var(--ie-green-mint);
+
+  /* App-specific greens (iOS kit uses these names) */
+  --app-mint-bg:    #F1FCF3;                /* almost-white green, iOS bg */
+  --app-green:      #3BBF4F;                /* bright action green (FAB, chips) */
+  --app-green-deep: #193A19;                /* primary CTA fill */
+  --brand-mark-green: #61CA8C;              /* logo mark on mint (app splash) */
+
+  /* Ink scale (1 = darkest, 5 = faintest) */
+  --ink-1: var(--ie-ink);
+  --ink-2: #2A2F2C;                         /* slightly softer primary */
+  --ink-3: var(--ie-ink-medium);
+  --ink-4: var(--ie-ink-light);
+  --ink-5: var(--ie-ink-faint);
+
+  /* Shadow aliases */
+  --shadow-xs: var(--ie-shadow-xs);
+  --shadow-sm: var(--ie-shadow-sm);
+  --shadow-md: var(--ie-shadow-md);
+  --shadow-lg: var(--ie-shadow-lg);
+  --shadow-xl: var(--ie-shadow-xl);
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   Use these classes wherever possible.
+   ============================================================ */
+
+.ie-hero {
+  font-family: var(--ie-font-display);
+  font-weight: 400;
+  font-size: var(--ie-fs-hero);
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  color: var(--ie-green-dark);
+}
+
+.ie-display {
+  font-family: var(--ie-font-display);
+  font-weight: 500;
+  font-size: var(--ie-fs-display);
+  line-height: 1.0;
+  letter-spacing: -0.015em;
+  color: var(--ie-ink);
+  text-wrap: balance;
+}
+
+.ie-h1 {
+  font-family: var(--ie-font-display);
+  font-weight: 500;
+  font-size: var(--ie-fs-h1);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ie-ink);
+  text-wrap: balance;
+}
+
+.ie-h2 {
+  font-family: var(--ie-font-display);
+  font-weight: 500;
+  font-size: var(--ie-fs-h2);
+  line-height: 1.08;
+  letter-spacing: -0.008em;
+  color: var(--ie-ink);
+  text-wrap: balance;
+}
+
+.ie-h3 {
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: var(--ie-fs-h3);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink);
+}
+
+.ie-stat {
+  font-family: var(--ie-font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--ie-fs-stat);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--ie-green);
+}
+
+.ie-stat--ink { color: var(--ie-green-dark); }
+.ie-stat--tomato { color: var(--ie-tomato); }
+
+.ie-body {
+  font-family: var(--ie-font-sans);
+  font-weight: 400;
+  font-size: var(--ie-fs-body);
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink-medium);
+  text-wrap: pretty;
+}
+
+.ie-body-lg {
+  font-family: var(--ie-font-sans);
+  font-weight: 400;
+  font-size: var(--ie-fs-body-lg);
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink-medium);
+  text-wrap: pretty;
+}
+
+.ie-caption {
+  font-family: var(--ie-font-sans);
+  font-weight: 500;
+  font-size: var(--ie-fs-caption);
+  line-height: 1.4;
+  color: var(--ie-ink-light);
+}
+
+.ie-eyebrow {
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: var(--ie-fs-eyebrow);
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ie-ink-medium);
+}
+
+.ie-eyebrow--green { color: var(--ie-green); }
+.ie-eyebrow--paper { color: var(--ie-paper); }
+
+.ie-mono {
+  font-family: var(--ie-font-mono);
+  font-size: 16px;
+  letter-spacing: 0;
+  color: var(--ie-ink-medium);
+}
+
+/* ============================================================
+   COMPONENT PRIMITIVES
+   ============================================================ */
+
+.ie-accent-bar {
+  display: inline-block;
+  width: 48px;
+  height: 4px;
+  background: var(--ie-green);
+  border-radius: 2px;
+}
+
+.ie-card {
+  background: var(--ie-white);
+  border-radius: var(--ie-r-lg);
+  box-shadow: var(--ie-shadow-md);
+  border: var(--ie-border-card);
+}
+
+.ie-card--paper {
+  background: var(--ie-paper);
+}
+
+.ie-card--green {
+  background: var(--ie-green-light);
+}
+
+.ie-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 28px;
+  background: var(--ie-green-dark);
+  color: var(--ie-paper);
+  border-radius: var(--ie-r-pill);
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.005em;
+  border: none;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.ie-cta:hover { background: var(--ie-green); transform: translateY(-1px); }
+.ie-cta:active { transform: translateY(0) scale(0.99); }
+
+/* Brand badge: small fridge icon + iEatz Healthy wordmark */
+.ie-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ie-font-sans);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.005em;
+  color: var(--ie-ink);
+}
+.ie-brand-badge .mark {
+  width: 24px; height: 24px;
+  color: var(--ie-green);
+  display: inline-flex;
+}
+.ie-brand-badge.on-dark { color: var(--ie-paper); }
+.ie-brand-badge.on-dark .mark { color: var(--ie-green-light); }

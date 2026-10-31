@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Inputs" subtitle="Field, search, chip-input" viewport="700x320" -->
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:32px; background:var(--paper); display:flex; flex-direction:column; gap:16px;}
+  .field {
+    display:flex; align-items:center; gap:12px;
+    background:var(--brand-mint); border-radius:14px;
+    padding:16px 18px; max-width:420px;
+    font-family:var(--font-sans);
+  }
+  .field input { border:none; outline:none; background:transparent; font:inherit; font-size:15px; color:var(--ink-1); flex:1; }
+  .field input::placeholder { color:var(--ink-4); }
+  .field svg { width:18px; height:18px; color:var(--ink-3); }
+  .field.focus { background:var(--white); box-shadow: 0 0 0 2px var(--brand-green); }
+
+  .check { display:flex; align-items:center; gap:14px; font-family:var(--font-sans); }
+  .check .box { width:22px; height:22px; border-radius:6px; background:var(--brand-green); display:flex; align-items:center; justify-content:center; color:#fff;}
+  .check .box.off { background:transparent; border:1.5px solid var(--ink-5); color:transparent;}
+  .check .lbl { font-size:15px; color:var(--ink-1); font-weight:500; }
+</style></head><body>
+  <div class="field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><input placeholder="Search ingredients"></div>
+  <div class="field focus"><input placeholder="cucumber, chickpeas, lemon"></div>
+  <div class="check"><div class="box">✓</div><div class="lbl">Vegetarian recipes only</div></div>
+  <div class="check"><div class="box off"></div><div class="lbl">Show low-carb options</div></div>
+</body></html>

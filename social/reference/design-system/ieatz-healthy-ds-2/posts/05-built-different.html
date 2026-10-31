@@ -1,0 +1,187 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Post · Built Different" subtitle="Ingredient list → recipe card · the AI moment" viewport="1080x1350" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>iEatz · Built Different — It reads your fridge, then it cooks dinner</title>
+<link rel="stylesheet" href="_post.css">
+<style>
+  .p5 { background: var(--paper); }
+  .p5 .top {
+    position:absolute; top:80px; left:80px; right:80px;
+    display:flex; flex-direction:column; gap:22px;
+  }
+  .p5 .head {
+    font-family: var(--font-serif);
+    font-size: 78px;
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.018em;
+    color: var(--ink-1);
+    text-wrap: balance;
+    max-width: 920px;
+  }
+  .p5 .head em { color: var(--brand-green); font-style: italic; }
+
+  .p5 .demo {
+    position:absolute; top: 430px; left:80px; right:80px; bottom: 290px;
+    display:grid; grid-template-columns: 1fr 96px 1fr; align-items: stretch; gap: 24px;
+  }
+  .p5 .panel {
+    border-radius: 28px;
+    padding: 36px 36px;
+    box-sizing: border-box;
+    display:flex; flex-direction:column;
+    overflow: hidden;
+  }
+  .p5 .panel.in  { background: var(--white); box-shadow: var(--shadow-md); }
+  .p5 .panel.out { background: var(--brand-green-dark); color: var(--paper); }
+
+  .p5 .panel .kicker {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+    margin-bottom: 12px;
+  }
+  .p5 .panel.out .kicker { color: rgba(230,244,236,0.7); }
+
+  .p5 .panel.in ul {
+    list-style:none; padding:0; margin:0;
+    display:flex; flex-direction:column; gap: 14px;
+  }
+  .p5 .panel.in li {
+    display:flex; align-items:center; gap:14px;
+    font-family: var(--font-mono);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink-1);
+  }
+  .p5 .panel.in li .dot {
+    width: 10px; height: 10px; border-radius: 99px;
+    background: var(--brand-green); flex:none;
+  }
+  .p5 .panel.in .scan-tag {
+    margin-top: auto;
+    display:flex; align-items:center; gap:10px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--brand-green);
+  }
+  .p5 .panel.in .scan-tag .pulse {
+    width:10px; height:10px; border-radius:99px;
+    background: var(--brand-green);
+    box-shadow: 0 0 0 0 rgba(31,139,76, 0.6);
+  }
+
+  .p5 .panel.out .name {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 56px;
+    line-height: 0.98;
+    color: var(--paper);
+    margin-bottom: 18px;
+  }
+  .p5 .panel.out .desc {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgba(230,244,236, 0.85);
+    margin-bottom: 22px;
+  }
+  .p5 .panel.out .meta {
+    margin-top: auto;
+    border-top: 1px solid rgba(230,244,236, 0.18);
+    padding-top: 18px;
+    display:grid; grid-template-columns: 1fr 1fr; gap: 8px 18px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+  }
+  .p5 .panel.out .meta .lbl { color: rgba(230,244,236, 0.6); }
+  .p5 .panel.out .meta .val { color: var(--paper); text-align: right; font-weight: 600;}
+
+  .p5 .arrow {
+    align-self:center; justify-self:center;
+    width:88px; height:88px; border-radius:999px;
+    background: var(--brand-green);
+    color: var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-sans);
+    font-size: 42px; font-weight: 500;
+    box-shadow: 0 8px 24px rgba(31,139,76,0.32);
+  }
+
+  .p5 .footnote {
+    position:absolute; left:80px; right:80px; bottom:230px;
+    font-family: var(--font-sans);
+    font-size: 18px;
+    color: var(--ink-4);
+    letter-spacing: 0.04em;
+  }
+  .p5 .footnote b { color: var(--ink-2); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="stage"><div class="fit"><section class="post p5" data-screen-label="05 Built Different">
+
+  <div class="top">
+    <span class="eyebrow">Built different</span>
+    <h1 class="head">It <em>reads</em> your fridge. Then it cooks dinner.</h1>
+  </div>
+
+  <div class="demo">
+
+    <div class="panel in">
+      <div class="kicker">In your fridge</div>
+      <ul>
+        <li><span class="dot"></span> ½ salmon fillet</li>
+        <li><span class="dot"></span> 2 eggs</li>
+        <li><span class="dot"></span> baby spinach</li>
+        <li><span class="dot"></span> miso paste</li>
+        <li><span class="dot"></span> half a lemon</li>
+        <li><span class="dot"></span> garlic, ginger</li>
+      </ul>
+      <div class="scan-tag"><span class="pulse"></span> scanning · 6 ingredients found</div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="panel out">
+      <div class="kicker">TONIGHT, READY IN ~20MIN</div>
+      <div class="name">Miso<br>salmon bowl.</div>
+      <div class="desc">Sheet-pan, very few dishes. Built from what you had — no grocery run.</div>
+      <div class="meta">
+        <span class="lbl">time</span>      <span class="val">22 min</span>
+        <span class="lbl">calories</span>  <span class="val">580</span>
+        <span class="lbl">protein</span>   <span class="val">42 g</span>
+        <span class="lbl">cost</span>      <span class="val">$6.40</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footnote"><b>+ 312</b> other recipes today, all from the same six ingredients.</div>
+
+  <div class="badge">
+    <svg viewBox="0 0 38.25 58.486" fill="currentColor"><path d="M0 5.03C0 2.252 2.252 0 5.03 0H33.22C35.998 0 38.25 2.252 38.25 5.03V20.119H0V5.03Z"/><path d="M0 49.83C0 52.608 2.252 54.86 5.03 54.86H33.22C35.998 54.86 38.25 52.608 38.25 49.83V22.81H0V49.83Z"/><path d="M6.083 6.2C6.083 5.489 6.659 4.913 7.369 4.913 8.08 4.913 8.656 5.489 8.656 6.2V16.259C8.656 16.97 8.08 17.546 7.369 17.546 6.659 17.546 6.083 16.97 6.083 16.259Z"/><path d="M6.083 26.787C6.083 26.076 6.659 25.5 7.369 25.5 8.08 25.5 8.656 26.076 8.656 26.787V36.846C8.656 37.557 8.08 38.133 7.369 38.133 6.659 38.133 6.083 37.557 6.083 36.846Z"/><path d="M5.264 54.86H10.878L9.892 57.771C9.748 58.199 9.347 58.486 8.895 58.486H7.2C6.743 58.486 6.338 58.192 6.198 57.757Z"/><path d="M27.489 54.86H33.103L32.117 57.771C31.972 58.199 31.571 58.486 31.12 58.486H29.425C28.968 58.486 28.563 58.192 28.423 57.757Z"/></svg>
+    <span class="wm">iEatz Healthy</span>
+  </div>
+
+</section></div></div>
+<script>
+(function fit(){
+  function go(){
+    const f = document.querySelector('.fit');
+    const w = Math.min(window.innerWidth - 48, 1080);
+    const s = w / 1080;
+    f.style.width = (1080*s)+'px';
+    f.style.height = (1350*s)+'px';
+    f.querySelector('.post').style.transform = `scale(${s})`;
+  }
+  go(); window.addEventListener('resize', go);
+})();
+</script>
+</body></html>

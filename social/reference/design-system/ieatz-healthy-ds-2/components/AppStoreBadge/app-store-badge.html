@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="App Store badge" subtitle="Official download badge, 3:1, height-scalable" viewport="720x360" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  .stage{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;background:var(--ie-paper);padding:64px}
+  .row{display:flex;align-items:flex-end;gap:40px}
+  .dark{background:var(--ie-green-deep);border-radius:24px;padding:40px 56px}
+  .cap{font-family:var(--ie-font-mono);font-size:13px;letter-spacing:0.1em;color:var(--ie-ink-light);text-transform:uppercase}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  const { AppStoreBadge } = window.IEatzHealthyDesignSystem_c3fa3a;
+  const e = React.createElement;
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    e("div", { className: "stage" },
+      e("span", { className: "cap" }, "Download on the App Store — native 3:1"),
+      e("div", { className: "row" },
+        e(AppStoreBadge, { height: 64 }),
+        e(AppStoreBadge, { height: 96 }),
+      ),
+      e("div", { className: "dark" }, e(AppStoreBadge, { height: 96 })),
+    )
+  );
+</script>
+</body>
+</html>

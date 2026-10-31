@@ -1,0 +1,20 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Stat cards" subtitle="Stat-led component treatments" viewport="700x360" -->
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:32px; background:var(--paper); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:680px; }
+  .stat { padding:24px; background:var(--white); border-radius:20px; box-shadow:var(--shadow-sm); }
+  .num { font-family:var(--font-serif); font-style:italic; font-weight:400; font-size:64px; line-height:0.9; color:var(--brand-green); letter-spacing:-0.02em; }
+  .num .unit { font-style:normal; font-size:28px; color:var(--ink-1); margin-left:6px;}
+  .lbl { font-family:var(--font-sans); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-4); margin-top:14px;}
+  .desc { font-family:var(--font-sans); font-size:14px; color:var(--ink-3); margin-top:4px; }
+  .accent { width:48px; height:3px; border-radius:999px; background:var(--brand-green); margin-bottom:14px;}
+</style></head><body>
+<div class="grid">
+  <div class="stat"><span class="accent"></span><div class="num">300<span class="unit">/day</span></div><div class="lbl">recipes</div><div class="desc">Personalized to what's in your kitchen.</div></div>
+  <div class="stat"><span class="accent"></span><div class="num">12<span class="unit">min</span></div><div class="lbl">prep, avg</div><div class="desc">From pantry to plate.</div></div>
+  <div class="stat"><span class="accent"></span><div class="num">$4.99</div><div class="lbl">pro / month</div><div class="desc">Unlocks bulk scanner.</div></div>
+  <div class="stat"><span class="accent"></span><div class="num">98<span class="unit">%</span></div><div class="lbl">less waste</div><div class="desc">When you cook from what's already there.</div></div>
+</div>
+</body></html>

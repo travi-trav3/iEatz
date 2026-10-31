@@ -1,0 +1,12 @@
+/* ==========================================================================
+   iEatz Healthy — Design System root stylesheet
+   --------------------------------------------------------------------------
+   Single entry point for consumers. Link THIS file and you get the full
+   token set + semantic type/component classes.
+
+   Surface-specific stylesheets are loaded only where that surface lives:
+     • ui_kits/instagram/ig.css   — Instagram 1080×1350 template helpers
+     • ui_kits/ios_app/app.css    — iOS app kit
+     • posts/_post.css            — standalone static-post scaffolding
+   ========================================================================== */
+@import url('./colors_and_type.css');
