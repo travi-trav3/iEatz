@@ -316,6 +316,140 @@
         "3 dinners",
         "leftovers in, week out"
       ]
+    },
+    {
+      "file": "o03r-ig-haul-problem",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "style": "center",
+      "video": "assets/video/raw/nov2/haul-problem.mp4",
+      "stringout": [
+        "IMG_2104:0.0:1.2",
+        "IMG_2091:3.0:3.6",
+        "IMG_2092:2.6:3.2",
+        "IMG_2096:2.5:3.1",
+        "IMG_2104:2.9:3.5",
+        "IMG_2123:1.6:3.8",
+        "IMG_2124:0.9:3.766"
+      ],
+      "hold": 0.4,
+      "audioLevel": -20,
+      "cover": 0.6,
+      "footageClaim": "the team's phone clips: the Nov 1 Harris Teeter run (bananas, Jackson's chips, gold potatoes, too good yogurt, the full cart) and the Nov 2 7:24 AM paper plate of scrambled eggs on the stove where a banana and a yogurt cup are set down",
+      "overlays": [
+        {
+          "head": "$86.63 of groceries.<br><span class=\"accent\">Zero plan.</span>",
+          "from": 0,
+          "to": 2.4,
+          "at": "top"
+        },
+        {
+          "head": "Monday, <span class=\"accent\">7:24 AM.</span>",
+          "from": 3.6,
+          "to": 5.6,
+          "at": "top"
+        },
+        {
+          "head": "Snap the receipt.<br><span class=\"accent\">iEatz writes<br>the week.</span>",
+          "from": 5.8,
+          "at": "top"
+        }
+      ],
+      "hookType": "problem",
+      "why": "Three-hook trial-reel test on the team's first clip set: same 8 s body, only the opener and its line change, so the 72-hour read says which opening earns the push.",
+      "app": "Receipt import: snap the receipt and iEatz writes the week from what you bought, calories and protein estimated, the missing items to Instacart.",
+      "status": "pending"
+    },
+    {
+      "file": "o04r-ig-haul-promise",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "style": "center",
+      "video": "assets/video/raw/nov2/haul-promise.mp4",
+      "stringout": [
+        "IMG_2123:0.0:1.2",
+        "IMG_2091:3.0:3.6",
+        "IMG_2092:2.6:3.2",
+        "IMG_2096:2.5:3.1",
+        "IMG_2104:2.9:3.5",
+        "IMG_2123:1.6:3.8",
+        "IMG_2124:0.9:3.766"
+      ],
+      "hold": 0.4,
+      "audioLevel": -20,
+      "cover": 0.6,
+      "footageClaim": "the team's phone clips: the Nov 1 Harris Teeter run (bananas, Jackson's chips, gold potatoes, too good yogurt, the full cart) and the Nov 2 7:24 AM paper plate of scrambled eggs on the stove where a banana and a yogurt cup are set down",
+      "overlays": [
+        {
+          "head": "One receipt.<br>4 breakfasts.<br><span class=\"accent\">Zero planning.</span>",
+          "from": 0,
+          "to": 2.4,
+          "at": "top"
+        },
+        {
+          "head": "Monday, <span class=\"accent\">7:24 AM.</span>",
+          "from": 3.6,
+          "to": 5.6,
+          "at": "top"
+        },
+        {
+          "head": "Snap the receipt.<br><span class=\"accent\">iEatz writes<br>the week.</span>",
+          "from": 5.8,
+          "at": "top"
+        }
+      ],
+      "hookType": "promise",
+      "why": "Three-hook trial-reel test on the team's first clip set: same 8 s body, only the opener and its line change, so the 72-hour read says which opening earns the push.",
+      "app": "Receipt import: snap the receipt and iEatz writes the week from what you bought, calories and protein estimated, the missing items to Instacart.",
+      "status": "pending"
+    },
+    {
+      "file": "o05r-ig-haul-surprise",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "style": "center",
+      "video": "assets/video/raw/nov2/haul-surprise.mp4",
+      "stringout": [
+        "IMG_2092:2.1:3.3",
+        "IMG_2091:3.0:3.6",
+        "IMG_2094:2.4:3.0",
+        "IMG_2096:2.5:3.1",
+        "IMG_2104:2.9:3.5",
+        "IMG_2123:1.6:3.8",
+        "IMG_2124:0.9:3.766"
+      ],
+      "hold": 0.4,
+      "audioLevel": -20,
+      "cover": 0.6,
+      "footageClaim": "the team's phone clips: the Nov 1 Harris Teeter run (bananas, Jackson's chips, gold potatoes, too good yogurt, the full cart) and the Nov 2 7:24 AM paper plate of scrambled eggs on the stove where a banana and a yogurt cup are set down",
+      "overlays": [
+        {
+          "head": "The chips were <span class=\"accent\">not breakfast.</span>",
+          "from": 0,
+          "to": 2.4
+        },
+        {
+          "head": "Monday, <span class=\"accent\">7:24 AM.</span>",
+          "from": 3.6,
+          "to": 5.6,
+          "at": "top"
+        },
+        {
+          "head": "Snap the receipt.<br><span class=\"accent\">iEatz writes<br>the week.</span>",
+          "from": 5.8,
+          "at": "top"
+        }
+      ],
+      "hookType": "surprise",
+      "why": "Three-hook trial-reel test on the team's first clip set: same 8 s body, only the opener and its line change, so the 72-hour read says which opening earns the push.",
+      "app": "Receipt import: snap the receipt and iEatz writes the week from what you bought, calories and protein estimated, the missing items to Instacart.",
+      "status": "pending"
     }
   ]
 }
