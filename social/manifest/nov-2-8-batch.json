@@ -29,26 +29,6 @@
   "note": "Mon Nov 2 to Sun Nov 8 (PST from Nov 2: -08:00). The thin week of the reboot doc: no footage in the Drive inbox on Oct 30, so no reels. Wednesday cookbook post (o04-ig, 18:45 PT), Thursday send-this (st03 in manifest/send-this.json, 11:00 PT, already scheduled) and one pin a day at 12:10 PT from the unused stock photos. Rationale table (why, app, hook, headline read aloud) sent to Travis in Slack #social before scheduling; nothing is created in Buffer until he says go. Pins link to the breakfasts page where the pin is a breakfast, else the App Store. Buffer Free plan: no first comments. Last batch allowed on stock (F-008 from Nov 15). [2026-10-30 14:00 PT: v2. Seven of Travis's own photos landed in the Drive inbox; every frame except the receipt pin was rebuilt on them. Revised rationale table sent to #social.]",
   "posts": [
     {
-      "id": "p02-pin",
-      "status": "pending",
-      "channel": "pinterest",
-      "dueAt": "2026-11-02T12:10:00-08:00",
-      "file": "assets/pinterest/nov2/p02-pin-burgerbowl-v2.png",
-      "pillar": "Pantry/Fridge",
-      "topic": "Burger bowl",
-      "cta": "app-value",
-      "format": "static",
-      "hook": "surprise",
-      "board": "Easy weeknight dinner ideas",
-      "boardServiceId": "1011339728762228746",
-      "url": "https://apps.apple.com/us/app/id6475559706",
-      "title": "Burger bowl without the bun: 20 minute dinner from ground beef, avocado and lettuce",
-      "text": "made burgers. forgot buns. didn't go back to the store. made the iEatz burger bowl instead and honestly it was better.\n\nthis one came straight out of iEatz. tell it what you've got and it writes the recipe, calories and protein estimated, buns to Instacart if you must. free on iOS and Android.",
-      "alt": "Pin: a bunless burger bowl with lettuce, tomato, avocado and a pickle, a bowl of fries and a stacked burger behind it on a wooden table, above a paper panel. Eyebrow: Monday, 6:40 PM. Headline: Forgot the buns. Didn't go back. Chips: ground beef, lettuce, avocado; 20 minutes; buns to Instacart, if you must.",
-      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling. Nov 2: caption strengthened to say the bowl came out of iEatz, on Korian's confirmation that it did.",
-      "proof": "Korian (founder) cooked this from an iEatz recipe; confirmed in #social Nov 1 05:24 PT, ts 1793539466.240409. The caption may say it came out of iEatz; it must not say the app read a photo (F-001)."
-    },
-    {
       "id": "p03-pin",
       "status": "pending",
       "channel": "pinterest",
@@ -233,8 +213,28 @@
       "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling."
     },
     {
-      "id": "p08-pin",
+      "id": "p02-pin",
       "status": "pending",
+      "channel": "pinterest",
+      "dueAt": "2026-11-08T12:10:00-08:00",
+      "file": "assets/pinterest/nov2/p02-pin-burgerbowl-v2.png",
+      "pillar": "Pantry/Fridge",
+      "topic": "Burger bowl",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "surprise",
+      "board": "Easy weeknight dinner ideas",
+      "boardServiceId": "1011339728762228746",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Burger bowl without the bun: 20 minute dinner from ground beef, avocado and lettuce",
+      "text": "made burgers. forgot buns. didn't go back to the store. made the iEatz burger bowl instead and honestly it was better.\n\nthis one came straight out of iEatz. tell it what you've got and it writes the recipe, calories and protein estimated, buns to Instacart if you must. free on iOS and Android.",
+      "alt": "Pin: a bunless burger bowl with lettuce, tomato, avocado and a pickle, a bowl of fries and a stacked burger behind it on a wooden table, above a paper panel. Eyebrow: Monday, 6:40 PM. Headline: Forgot the buns. Didn't go back. Chips: ground beef, lettuce, avocado; 20 minutes; buns to Instacart, if you must.",
+      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling. Nov 2: caption strengthened to say the bowl came out of iEatz, on Korian's confirmation that it did. Nov 2 11:30 PT: no go from Travis by the cutoff, so Monday's slot passed unscheduled; moved to Sun Nov 8 12:10 (as said in #social).",
+      "proof": "Korian (founder) cooked this from an iEatz recipe; confirmed in #social Nov 1 05:24 PT, ts 1793539466.240409. The caption may say it came out of iEatz; it must not say the app read a photo (F-001)."
+    },
+    {
+      "id": "p08-pin",
+      "status": "deferred",
       "channel": "pinterest",
       "dueAt": "2026-11-08T12:10:00-08:00",
       "file": "assets/pinterest/nov2/p08-pin-roast-v2.png",
@@ -249,7 +249,7 @@
       "title": "Sunday roast leftovers: one roast turkey becomes three more weeknight dinners",
       "text": "the sunday roast everyone photographs is also monday, tuesday and wednesday. the turkey, the potatoes, the greens: three more dinners hiding on that plate.\n\ntell iEatz what's left on monday morning and it writes the week from the leftovers, calories and protein estimated, the one thing you're missing to Instacart. free on iOS and Android.",
       "alt": "Pin: a holiday plate on an orange plaid runner with sliced turkey, mashed potatoes, greens and stuffing, mini pumpkins behind it, above a paper panel. Eyebrow: Sunday roast. Headline: One roast. Three more dinners hiding in it. Chips: turkey, potatoes, greens; 3 dinners; leftovers in, week out.",
-      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling."
+      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling. Nov 2 11:30 PT: bumped to the Nov 9 week to make room for the burger bowl on Sunday; render and caption unchanged."
     }
   ]
 }
