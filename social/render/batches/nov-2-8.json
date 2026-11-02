@@ -60,6 +60,27 @@
       "app": "Receipt import: snap the receipt and iEatz writes the week's dinners from the items on it, calories and protein estimated, the missing items handed to Instacart."
     },
     {
+      "file": "p04-pin-receipt-v3",
+      "w": 1000,
+      "h": 1500,
+      "template": "photo",
+      "footer": "badge-bl",
+      "photo": "own/2026-11-01-team-img2111.jpg",
+      "objPos": "100% 55%",
+      "grade": false,
+      "photoClaim": "the Nov 1 Harris Teeter haul on a stove top (chips, Birds Eye bags, too good yogurt, chocolate milk, gold potatoes, cubed beef, shredded cheese, bananas, a dozen eggs) with the receipt curling on the counter at the right edge, oven clock 9:30",
+      "eyebrow": "Sunday, 7:23 PM. $86.63.",
+      "head": "One receipt. Five dinners. <span class=\"accent\">Zero planning.</span>",
+      "chips": [
+        "13 items, no list",
+        "snap the receipt",
+        "the week, written"
+      ],
+      "hookType": "promise",
+      "why": "Same promise as the stock version, now on the team's real Sunday haul with the real receipt: $86.63, 13 items, no list. The receipt in frame is the proof the feature starts from something everyone already has.",
+      "app": "Receipt import: snap the receipt and iEatz writes the week's dinners from the items on it, calories and protein estimated, the missing items handed to Instacart."
+    },
+    {
       "file": "o04-ig-cookbook-igphoto",
       "w": 1080,
       "h": 1350,

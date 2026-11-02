@@ -10,7 +10,7 @@
     "own",
     "pantry"
   ],
-  "count": 87,
+  "count": 90,
   "countByCategory": {
     "food": 39,
     "fridge": 8,
@@ -18,7 +18,7 @@
     "lifestyle": 20,
     "pantry": 4,
     "app": 3,
-    "own": 7
+    "own": 10
   },
   "styles": [
     "kitchen",
@@ -32,8 +32,9 @@
     "plated": 41,
     "process": 11,
     "people": 16,
-    "kitchen": 16,
-    "product": 3
+    "kitchen": 18,
+    "product": 3,
+    "receipt": 1
   },
   "styleNote": "style is what the frame documents, tagged by opening every photo (Sep 2026): kitchen = fridge/pantry/counter/stock as a place; process = hands or tools mid-task; people = a person is the subject; plated = finished food styled for camera (every styled overhead bowl or flat lay); product = a phone showing the real iEatz app; receipt = a grocery receipt in frame. app-*.jpg screenshots are not indexed here and count as product.",
   "photos": [
@@ -719,6 +720,33 @@
       "style": "plated",
       "source": "own",
       "description": "a holiday plate on an orange plaid runner: sliced turkey, mashed potatoes, salad greens and stuffing, mini pumpkins and a paper towel roll behind it; Travis, family table, Dec 2025; 1536x2048"
+    },
+    {
+      "file": "own/2026-11-01-team-img2089.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2026-11-01-team-img2089.jpg",
+      "style": "kitchen",
+      "source": "own",
+      "description": "the organic produce aisle at Harris Teeter at night: peppers, cucumbers, squash and greens down a long lit case, the front of an empty cart with a red WARNING sticker at the bottom edge; no people; uploaded by admin@ieatzhealthy.com to the Drive inbox Nov 1",
+      "note": "brands in frame: Harris Teeter cart sticker; shelf signage"
+    },
+    {
+      "file": "own/2026-11-01-team-img2110.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2026-11-01-team-img2110.jpg",
+      "style": "kitchen",
+      "source": "own",
+      "description": "the Nov 1 Harris Teeter haul laid out on a black glass stove top, oven clock reading 9:30: Jackson's sweet potato chips, two Birds Eye Steamfresh bags, a Birds Eye air-fryer broccoli and cauliflower bag, a too good yogurt four-pack, a Promised Land chocolate milk, Simple Truth organic gold potatoes, a tray of cubed beef, Mexican four-cheese, a bunch of Chiquita bananas, a dozen Vital Farms pasture-raised eggs; no people; uploaded by admin@ieatzhealthy.com to the Drive inbox Nov 1",
+      "note": "brands in frame: Jackson's, Birds Eye, too good, Promised Land, Simple Truth, Vital Farms, Chiquita"
+    },
+    {
+      "file": "own/2026-11-01-team-img2111.jpg",
+      "category": "own",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/own/2026-11-01-team-img2111.jpg",
+      "style": "receipt",
+      "source": "own",
+      "description": "the same Nov 1 haul from the side on the stove top, oven clock 9:30, with the Harris Teeter receipt curling on the counter at the right edge ($86.63, 13 items); no people; uploaded by admin@ieatzhealthy.com to the Drive inbox Nov 1",
+      "note": "brands in frame: as IMG_2110 plus the Harris Teeter receipt. The receipt body (card line, transaction codes, barcode) is blurred in this file; the header and the edge stay. Total read before blurring: $86.63 for 13 items, 7:23 PM"
     }
   ],
   "sources": {
@@ -727,7 +755,7 @@
   },
   "countBySource": {
     "stock": 80,
-    "own": 7
+    "own": 10
   },
   "inboxLog": [
     {
@@ -751,6 +779,21 @@
       "audio": 0,
       "designExports": 1,
       "note": "6 HEIC phone photos (Oct 29) decoded to JPEG at 3024x4032 and one full-size JPEG (Dec 2025) indexed as own/; 8 JPEGs were Apple Photos thumbnails at 360x480 and were skipped (re-export at full size); design system export \"iEatz Healthy Design System (2)\" pulled to social/reference/design-system/ieatz-healthy-ds-2"
+    },
+    {
+      "checked": "2026-11-02T08:20:00-08:00",
+      "folder": "1blKSlrZMasGCS2YIqQFo2c1F8enCpBWf",
+      "photos": 3,
+      "indexed": 3,
+      "skipped": 0,
+      "clips": 26,
+      "clipsPulled": 9,
+      "clipsOverLimit": 17,
+      "duplicateUploads": 5,
+      "screenshots": 0,
+      "audio": 0,
+      "designExports": 0,
+      "note": "Uploaded by admin@ieatzhealthy.com Nov 1 to 2: 3 HEIC photos (the Nov 1 Harris Teeter run: produce aisle; the haul on the stove twice, one with the receipt) indexed as own/ at 3024x4032 with EXIF and GPS dropped and the receipt body blurred; 31 video files in folder 2, 26 unique (5 uploaded twice). The Drive connector drops any file over about 6.3 MB, so 9 clips came through (IMG_2090 2091 2092 2094 2096 2104 2108 2123 2124: the store run and Monday's breakfast plate) and 17 did not (IMG_2095 2097 2098 2099 2100 2101 2102 2119 2120 2121 2122 2126, the four ScreenRecording files and Rec_Scan.mp4). Every clip carries GPS in its metadata; render-footage.js now drops metadata on every cut."
     }
   ],
   "flags": {
