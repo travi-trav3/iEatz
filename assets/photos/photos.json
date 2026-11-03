@@ -794,6 +794,18 @@
       "audio": 0,
       "designExports": 0,
       "note": "Uploaded by admin@ieatzhealthy.com Nov 1 to 2: 3 HEIC photos (the Nov 1 Harris Teeter run: produce aisle; the haul on the stove twice, one with the receipt) indexed as own/ at 3024x4032 with EXIF and GPS dropped and the receipt body blurred; 31 video files in folder 2, 26 unique (5 uploaded twice). The Drive connector drops any file over about 6.3 MB, so 9 clips came through (IMG_2090 2091 2092 2094 2096 2104 2108 2123 2124: the store run and Monday's breakfast plate) and 17 did not (IMG_2095 2097 2098 2099 2100 2101 2102 2119 2120 2121 2122 2126, the four ScreenRecording files and Rec_Scan.mp4). Every clip carries GPS in its metadata; render-footage.js now drops metadata on every cut."
+    },
+    {
+      "checked": "2026-11-03T14:20:00-08:00",
+      "folder": "1blKSlrZMasGCS2YIqQFo2c1F8enCpBWf",
+      "photos": 7,
+      "indexed": 0,
+      "skipped": 7,
+      "clips": 0,
+      "screenshots": 0,
+      "audio": 0,
+      "designExports": 0,
+      "note": "Travis uploaded 7 photos of the Nov 2 salmon dinner into folder 2 (video) by mistake at 14:13 PT; moved to folder 1 (photos) on his request. Not indexed: six are Apple Photos derivatives at 360x640 (the _4_5005_c names, vertical 9:16, which reads as video stills) and one is a 768x1024 export (_1_105_c, shot Nov 2 19:22); all under the 1600 px floor. Content: glazed salmon on rice with broccoli, the glaze in a saucepan, the stove with the salmon tray, broccoli and rice, an arm in two frames, no faces. Needed: the originals (full-size HEIC or the videos themselves)."
     }
   ],
   "flags": {
