@@ -30,7 +30,7 @@
   "posts": [
     {
       "id": "p03-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-11-03T12:10:00-08:00",
       "file": "assets/pinterest/nov2/p03-pin-curry-v2.png",
@@ -45,7 +45,9 @@
       "title": "Tofu coconut curry from pantry staples: one can, the leftover peppers, dinner in 25",
       "text": "the tofu's been in there since sunday and the peppers are going soft. one can of coconut milk in the pantry. that's dinner, you just haven't decided yet.\n\ntell iEatz the three and it writes the curry in seconds, calories and protein estimated, the rice to Instacart if you're out. free on iOS and Android.",
       "alt": "Pin: a stove seen from above, a pan of red coconut curry with peppers and a wooden spoon, a tray of browned tofu cubes and a bowl of cooked grain, above a paper panel. Eyebrow: The tofu from Sunday. Headline: One can of coconut milk. Dinner, decided. Chips: tofu, coconut milk, peppers; 25 minutes; about 18 g protein.",
-      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling."
+      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling.",
+      "bufferId": "6ae93d1641f57fdb742c094c",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "channel": "instagram",
@@ -65,15 +67,17 @@
       "videoTitle": "$86.63 of groceries. Zero plan.",
       "opener": "the full cart, static, 1.2 s (IMG_2104 0.0 to 1.2)",
       "file": "assets/social/nov2/o03r-ig-haul-problem.mp4",
-      "status": "pending",
+      "status": "draft",
       "note": "Three-hook trial-reel test on the first clip set from the team (F-009). Only the opener and its line change; Body, the same in all three: bananas grabbed (IMG_2091 3.0 to 3.6), chips (IMG_2092 2.6 to 3.2; potatoes IMG_2094 2.6 to 3.2 in the chips-opener cut), yogurt (IMG_2096 2.5 to 3.1), the cart pushing off (IMG_2104 2.4 to 3.0), the banana set on the eggs (IMG_2123 1.6 to 3.8), the yogurt cup set down (IMG_2124 0.9 to 3.77, last frame held 0.4 s). About 8 s. Overlays: the hook from 0 to 2.4 s; 'Monday, 7:24 AM.' over the plate; 'Snap the receipt. iEatz writes the week.' over the yogurt drop. Store sound at -20 LUFS, Buffer music on top. Cut on Travis's go after the revised table (Nov 2). Trial Reel toggle and music are Travis's steps in Buffer. The caption does not claim this breakfast came out of iEatz: the 07:05 to 07:11 screen recordings that might show it are over the Drive connector's size limit and unseen.",
       "alt": "Vertical reel from the team's phone clips: the full cart, static, 1.2 s (IMG_2104 0.0 to 1.2) under $86.63 of groceries. Zero plan.; quick cuts of bananas, chips, yogurt and the cart in a grocery store; a paper plate of scrambled eggs on a stove where a banana and a yogurt cup are set down, under Monday, 7:24 AM., then Snap the receipt. iEatz writes the week.",
       "cover": "assets/social/nov2/o03r-ig-haul-problem-cover.png",
-      "renderBatchFile": "o03r-ig-haul-problem"
+      "renderBatchFile": "o03r-ig-haul-problem",
+      "bufferId": "6ae93c590d3397810d06fac7",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "id": "p04-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-11-04T12:10:00-08:00",
       "file": "assets/pinterest/nov2/p04-pin-receipt-v3.png",
@@ -89,7 +93,9 @@
       "text": "sunday, 7:23 pm. 13 items, no list, $86.63. that's most of us.\n\nsnap the receipt at the register and iEatz turns what you actually bought into the week's dinners, calories and protein estimated, and sends the two things you forgot to Instacart. one receipt, five dinners, zero planning. free on iOS and Android.",
       "alt": "Pin: a Sunday grocery haul on a stove top, chips, frozen vegetables, yogurt, chocolate milk, potatoes, cubed beef, shredded cheese, bananas and a dozen eggs, with the receipt at the right edge. Eyebrow: Sunday, 7:23 PM. $86.63. Headline: One receipt. Five dinners. Zero planning. Chips: 13 items, no list; snap the receipt; the week, written.",
       "photoSource": "own",
-      "note": "Nov 2: moved off the stock aisle photo onto the team's own Nov 1 haul with the real receipt (p04-pin-receipt-v3, receipt body blurred); the eyebrow uses the receipt's own time and total."
+      "note": "Nov 2: moved off the stock aisle photo onto the team's own Nov 1 haul with the real receipt (p04-pin-receipt-v3, receipt body blurred); the eyebrow uses the receipt's own time and total.",
+      "bufferId": "6ae93d2e0d3397810d07382d",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "channel": "instagram",
@@ -109,15 +115,17 @@
       "videoTitle": "One receipt. 4 breakfasts. Zero planning.",
       "opener": "the eggs-only plate, 1.2 s (IMG_2123 0.0 to 1.2)",
       "file": "assets/social/nov2/o04r-ig-haul-promise.mp4",
-      "status": "pending",
+      "status": "draft",
       "note": "Three-hook trial-reel test on the first clip set from the team (F-009). Only the opener and its line change; Body, the same in all three: bananas grabbed (IMG_2091 3.0 to 3.6), chips (IMG_2092 2.6 to 3.2; potatoes IMG_2094 2.6 to 3.2 in the chips-opener cut), yogurt (IMG_2096 2.5 to 3.1), the cart pushing off (IMG_2104 2.4 to 3.0), the banana set on the eggs (IMG_2123 1.6 to 3.8), the yogurt cup set down (IMG_2124 0.9 to 3.77, last frame held 0.4 s). About 8 s. Overlays: the hook from 0 to 2.4 s; 'Monday, 7:24 AM.' over the plate; 'Snap the receipt. iEatz writes the week.' over the yogurt drop. Store sound at -20 LUFS, Buffer music on top. Cut on Travis's go after the revised table (Nov 2). Trial Reel toggle and music are Travis's steps in Buffer. The caption does not claim this breakfast came out of iEatz: the 07:05 to 07:11 screen recordings that might show it are over the Drive connector's size limit and unseen.",
       "alt": "Vertical reel from the team's phone clips: the eggs-only plate, 1.2 s (IMG_2123 0.0 to 1.2) under One receipt. 4 breakfasts. Zero planning.; quick cuts of bananas, chips, yogurt and the cart in a grocery store; a paper plate of scrambled eggs on a stove where a banana and a yogurt cup are set down, under Monday, 7:24 AM., then Snap the receipt. iEatz writes the week.",
       "cover": "assets/social/nov2/o04r-ig-haul-promise-cover.png",
-      "renderBatchFile": "o04r-ig-haul-promise"
+      "renderBatchFile": "o04r-ig-haul-promise",
+      "bufferId": "6ae93d056f053cdb90b73832",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "id": "o04-ig",
-      "status": "pending",
+      "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-11-04T18:45:00-08:00",
       "file": "assets/social/nov2/o04-ig-cookbook-nachos-v2.png",
@@ -129,11 +137,13 @@
       "text": "comment COOKBOOK and the book's in your dms. free.\n\n30 dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list so the cart builds itself. real food from a real kitchen, the kind that looks like nacho night, not like a diet. one-pan garlic chicken and broccoli. ground beef and sweet potato skillet. black bean and corn quesadillas. shrimp and zucchini stir-fry. 26 more.\n\none word: COOKBOOK.\n\n#mealplanning #weeknightdinner #30minutemeals #easydinners #ieatzhealthy",
       "firstComment": null,
       "alt": "Sheet-pan nachos with melted cheese, mushrooms, cherry tomatoes, jalapeno and guacamole on a baking tray, a bowl of guacamole beside it, above a paper panel. Eyebrow: Free cookbook. Headline: 30 dinners you'd actually eat. Comment COOKBOOK. Chips: every one under 30 minutes; an Instacart list per recipe; free, in your DMs.",
-      "note": "The week's comment-COOKBOOK post (Wednesday per the reboot doc). Boost the organic post itself so the ManyChat trigger keeps firing on its comments; o31 (Sat Oct 31) was the last boost candidate. No first comment: Buffer Free plan. The recipe names are the ones listed in o28 and o31. v2 on Travis's own nachos photo; the stock burger frame retired before scheduling."
+      "note": "The week's comment-COOKBOOK post (Wednesday per the reboot doc). Boost the organic post itself so the ManyChat trigger keeps firing on its comments; o31 (Sat Oct 31) was the last boost candidate. No first comment: Buffer Free plan. The recipe names are the ones listed in o28 and o31. v2 on Travis's own nachos photo; the stock burger frame retired before scheduling.",
+      "bufferId": "6ae93d0b7996caf141c50a91",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "id": "p05-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-11-05T12:10:00-08:00",
       "file": "assets/pinterest/nov2/p05-pin-pancakes-v2.png",
@@ -148,7 +158,9 @@
       "title": "Pancakes without pancake mix: flour, eggs and milk, 20 minute weekend breakfast",
       "text": "no pancake mix in the house and nobody's going to the store at 9 AM. flour, eggs, milk. that's pancakes, you just haven't decided yet.\n\ntell iEatz the three and it writes the recipe in seconds, calories and protein estimated (about 12 g a stack). syrup to Instacart if you're out. free on iOS and Android.",
       "alt": "Pin: a stack of five pancakes on a white plate on a wooden table, a bottle of maple syrup behind it, above a paper panel. Eyebrow: Saturday, 9 AM. Headline: No pancake mix in the house. Pancakes anyway. Chips: flour, eggs, milk; 20 minutes; about 12 g protein.",
-      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling."
+      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling.",
+      "bufferId": "6ae93d346f053cdb90b7406e",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "channel": "instagram",
@@ -168,15 +180,17 @@
       "videoTitle": "The chips were not breakfast.",
       "opener": "the hand pulling the chips off the display, 1.2 s (IMG_2092 2.1 to 3.3)",
       "file": "assets/social/nov2/o05r-ig-haul-surprise.mp4",
-      "status": "pending",
+      "status": "draft",
       "note": "Three-hook trial-reel test on the first clip set from the team (F-009). Only the opener and its line change; Body, the same in all three: bananas grabbed (IMG_2091 3.0 to 3.6), chips (IMG_2092 2.6 to 3.2; potatoes IMG_2094 2.6 to 3.2 in the chips-opener cut), yogurt (IMG_2096 2.5 to 3.1), the cart pushing off (IMG_2104 2.4 to 3.0), the banana set on the eggs (IMG_2123 1.6 to 3.8), the yogurt cup set down (IMG_2124 0.9 to 3.77, last frame held 0.4 s). About 8 s. Overlays: the hook from 0 to 2.4 s; 'Monday, 7:24 AM.' over the plate; 'Snap the receipt. iEatz writes the week.' over the yogurt drop. Store sound at -20 LUFS, Buffer music on top. Cut on Travis's go after the revised table (Nov 2). Trial Reel toggle and music are Travis's steps in Buffer. The caption does not claim this breakfast came out of iEatz: the 07:05 to 07:11 screen recordings that might show it are over the Drive connector's size limit and unseen.",
       "alt": "Vertical reel from the team's phone clips: the hand pulling the chips off the display, 1.2 s (IMG_2092 2.1 to 3.3) under The chips were not breakfast.; quick cuts of bananas, chips, yogurt and the cart in a grocery store; a paper plate of scrambled eggs on a stove where a banana and a yogurt cup are set down, under Monday, 7:24 AM., then Snap the receipt. iEatz writes the week.",
       "cover": "assets/social/nov2/o05r-ig-haul-surprise-cover.png",
-      "renderBatchFile": "o05r-ig-haul-surprise"
+      "renderBatchFile": "o05r-ig-haul-surprise",
+      "bufferId": "6ae93d08186a5afbce798343",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "id": "p06-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-11-06T12:10:00-08:00",
       "file": "assets/pinterest/nov2/p06-pin-datenight-v2.png",
@@ -191,11 +205,13 @@
       "title": "Date night dinner at home in 25 minutes: steak, ravioli and broccoli, no reservation",
       "text": "friday. no reservation, no plan, a steak in the fridge and a bag of ravioli. candles are free. that's date night, you just haven't decided yet.\n\ntell iEatz the three and it writes the whole table in seconds, calories and protein estimated, the parmesan to Instacart if you're out. free on iOS and Android.",
       "alt": "Pin: a set table from above, a cutting board of sliced steak, a bowl of ravioli with herbs and parmesan, a bowl of broccoli, candles and pink napkins, a hand reaching in at the top. Eyebrow: Friday, no reservation. Headline: Date night at home. 25 minutes. Line: a steak, a bag of ravioli, a head of broccoli; tell iEatz the three and it writes the whole table, protein counted.",
-      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling."
+      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling.",
+      "bufferId": "6ae93d396f053cdb90b74421",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "id": "p07-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-11-07T12:10:00-08:00",
       "file": "assets/pinterest/nov2/p07-pin-sheetpan-v2.png",
@@ -210,11 +226,13 @@
       "title": "Sheet pan roasted squash and sweet potatoes: the half squash in the drawer is dinner",
       "text": "the half squash has been in the drawer since tuesday and the sweet potatoes are rolling around under it. one tray, 30 minutes, charred edges. that's dinner.\n\ntell iEatz the two and it writes the tray in seconds, calories and protein estimated, and sends the protein you're missing to Instacart. free on iOS and Android.",
       "alt": "Pin: a sheet pan of roasted purple sweet potato chunks and slabs of squash with charred edges on a wooden table. Eyebrow: The half squash, day four. Headline: Half a squash, two potatoes. One tray. Line: tell iEatz and it writes the tray, protein counted.",
-      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling."
+      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling.",
+      "bufferId": "6ae93d41186a5afbce798e6f",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "id": "p02-pin",
-      "status": "pending",
+      "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-11-08T12:10:00-08:00",
       "file": "assets/pinterest/nov2/p02-pin-burgerbowl-v2.png",
@@ -230,7 +248,9 @@
       "text": "made burgers. forgot buns. didn't go back to the store. made the iEatz burger bowl instead and honestly it was better.\n\nthis one came straight out of iEatz. tell it what you've got and it writes the recipe, calories and protein estimated, buns to Instacart if you must. free on iOS and Android.",
       "alt": "Pin: a bunless burger bowl with lettuce, tomato, avocado and a pickle, a bowl of fries and a stacked burger behind it on a wooden table, above a paper panel. Eyebrow: Monday, 6:40 PM. Headline: Forgot the buns. Didn't go back. Chips: ground beef, lettuce, avocado; 20 minutes; buns to Instacart, if you must.",
       "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling. Nov 2: caption strengthened to say the bowl came out of iEatz, on Korian's confirmation that it did. Nov 2 11:30 PT: no go from Travis by the cutoff, so Monday's slot passed unscheduled; moved to Sun Nov 8 12:10 (as said in #social).",
-      "proof": "Korian (founder) cooked this from an iEatz recipe; confirmed in #social Nov 1 05:24 PT, ts 1793539466.240409. The caption may say it came out of iEatz; it must not say the app read a photo (F-001)."
+      "proof": "Korian (founder) cooked this from an iEatz recipe; confirmed in #social Nov 1 05:24 PT, ts 1793539466.240409. The caption may say it came out of iEatz; it must not say the app read a photo (F-001).",
+      "bufferId": "6ae93d477996caf141c5164e",
+      "draftedAt": "2026-11-02T17:47:00-08:00"
     },
     {
       "id": "p08-pin",

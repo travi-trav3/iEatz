@@ -214,6 +214,29 @@ audience cannot vote", so every reel is a test against strangers.
 Enforced by: diversity-gate.js rule 7 (a reel due from 2026-11-02 with no `track` fails);
 TRIAL-REELS.md and the Slack alert template for the manual steps; this file for the cut.
 
+### F-010 · 2026-11-02 · Everything goes into Buffer as a draft the moment it is cut
+Source: Travis, in session, Nov 2 ("you should always put them in buffer as drafts at least so i can
+view and leave feedback there or bring it here directly to you").
+Rule: Every post that is rendered or cut is created in Buffer as a draft in its planned slot the
+same day (`saveToDraft: true`, `mode: customScheduled`, `dueAt` set), and its `bufferId` and
+`status: draft` go in the ledger. Scheduling still waits for Travis's go: on the go the drafts are
+converted in place, never re-created. Before any recut or scheduling, read the notes on each draft
+(Buffer `get_post` returns them) and anything Travis says in session; that is the feedback channel.
+Why: Travis reviews in Buffer, where the post looks the way it will publish; a link in Slack or a
+frame in the repo is not a review.
+Enforced by: the batch routine (drafts on render) and the scheduled checks (read draft notes first).
+
+### F-011 · 2026-11-02 · No Slack message to anyone else under Travis's name
+Source: Travis, in session, Nov 2 ("you are replying as you, but under my slack profile/name/photo.
+can we create a profile/username for you").
+Rule: The Slack connector posts as Travis. Until a separate bot identity exists (a Slack app with
+its own bot token, set up by Travis), nothing is posted in #social or any shared channel, and no
+one else is replied to. Reminders meant for Travis (the music and Trial Reel steps, go-checks) go
+to his own DM with himself (channel id U0B25658MC0), which only he sees. Status and questions come
+to the session. Reading #social is fine.
+Why: messages to the founder and the team read as Travis's own words.
+Enforced by: every routine that would post to Slack checks this rule first.
+
 ## Keep doing
 _Things Travis called out as working._
 
