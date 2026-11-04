@@ -54,7 +54,7 @@ function derive(r) {
 // Copy a gate should read: [{field, text}] for every rendered string plus caption fields.
 const SKIP = new Set(['file', 'photo', 'objPos', 'template', 'footer', 'channel', 'dueAt', 'id', 'status', 'bufferId', 'slackAlert',
   'surface', 'pillar', 'topic', 'cta', 'heroPhoto', 'format', 'photoStyle', 'board', 'boardServiceId', 'labelSide', 'ink', 'bg', 'createdAt', 'url', 'alt', 'variant',
-  'hook', 'hookType', 'track', 'variantOf', 'video', 'cover', 'videoTitle', 'source']);
+  'hook', 'hookType', 'track', 'sound', 'variantOf', 'video', 'cover', 'videoTitle', 'source']);
 function copyOf(obj, prefix = '', out = []) {
   if (Array.isArray(obj)) { obj.forEach((v, i) => copyOf(v, `${prefix}[${i}]`, out)); return out; }
   if (obj && typeof obj === 'object') {
@@ -94,10 +94,12 @@ function load(file) {
       render: r,
       fixed: raw.fixed || null,
       // Reboot fields (Nov 2026): hook type for the rationale table (ledger `hook`, render
-      // `hookType`; the sendthis shell already uses `hook` for its line), the reel's track, and
-      // the clip a trial-reel variant belongs to (its siblings share a caption by design).
+      // `hookType`; the sendthis shell already uses `hook` for its line), the reel's track (F-009,
+      // reels due before Nov 9) or its sound picks (F-012), and the clip a hook variant belongs to
+      // (retired by F-013; kept so older ledgers still read).
       hook: ['problem', 'promise', 'surprise'].find(h => h === raw.hook || (r && h === r.hookType)) || null,
       track: raw.track || null,
+      sound: raw.sound || null,
       variantOf: raw.variantOf || (r && r.variantOf) || null,
       status: raw.status || null,
     };

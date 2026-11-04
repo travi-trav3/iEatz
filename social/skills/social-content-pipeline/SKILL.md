@@ -122,8 +122,15 @@ Plan the full batch before rendering:
    get one built and verified live, and only then is the pin scheduled with the page URL (7+ days
    out). A pin whose recipe exists on the site never points at the App Store. The Sep 28 batch
    skipped this step and sent five recipe pins to the store while two live pages sat unused.
-9. **Reels carry sound.** Bake it into the file (`motion.audio`: a commercially cleared bed and/or a
-   voiceover) so the reel still auto-publishes; listen to it before scheduling.
+9. **Reels carry sound, every one.** Music goes under every reel, and under the voice when there
+   is one. Where the scheduler's API cannot attach library music (Buffer, Nov 2026), the planner
+   picks 2 or 3 tracks per reel (at least one trend-backed when a trend source is connected, at
+   least one chosen for fit against the picture), writes them into the ledger and onto the draft,
+   and the operator adds one in the scheduler's editor. Otherwise bake it into the file
+   (`motion.audio`: a commercially cleared bed and/or a voiceover). Business accounts only get
+   commercially cleared audio, so a sound trending in the app may not be available. Check the
+   platform's eligibility before planning around a feature: Instagram Trial Reels need 200
+   followers. iEatz: `social/reference/REEL-SOUND.md`.
 10. **Operator feedback is a rules source.** Before planning, read the brand's feedback rules
    (iEatz: `social/feedback/RULES.md`, fed from Buffer post notes by `social/feedback/README.md`).
    Every lasting point becomes a numbered rule, enforced by a gate wherever it can be counted.

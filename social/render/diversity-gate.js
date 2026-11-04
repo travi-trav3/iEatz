@@ -18,8 +18,9 @@ const path = require('path');
 // its home position and never badge-url on Instagram.
 // What is new: from 2026-11-15 our own photos come first and a stock photo fails only while an
 // own one is free (F-008; `node photo-usage.js` prints the supply in priority order); every reel
-// due from 2026-11-02 names its track (F-009); the three hook variants of one clip (`variantOf`) are
-// allowed to share a caption, a clip and a cover.
+// due from 2026-11-02 names its track (F-009), and from 2026-11-09 carries 2 or 3 sound picks (F-012);
+// from 2026-11-09 a reel may not be a hook variant (`variantOf`, F-013). Variants already in older
+// ledgers still share a caption, a clip and a cover without failing.
 // Warnings never fail: deprecated shells, a hero with no style, a week with no comment-COOKBOOK
 // post, the shells unused across the last three ledgers (the planner starts from them).
 // --with <ledger> (repeatable) merges another ledger's posts into the set before the checks: a
@@ -35,6 +36,7 @@ const copyGate = require('./copy-gate');
 
 const STOCK_ENDS = '2026-11-15';   // F-008: from this, own photos first; stock only while no own photo is free
 const TRACK_FROM = '2026-11-02';   // F-009: from this, no reel without a track
+const SOUND_FROM = '2026-11-09';   // F-012 / F-013: from this, 2-3 sound picks per reel and no hook variants
 const REPO = path.resolve(__dirname, '../..');
 const PHOTO_SOURCE = {};
 for (const ph of JSON.parse(fs.readFileSync(path.join(REPO, 'assets/photos/photos.json'), 'utf8')).photos) PHOTO_SOURCE[ph.file] = ph.source || 'stock';
@@ -82,8 +84,8 @@ function gate(file, opts = {}) {
     let n = 0; for (const w of A) if (B.has(w)) n++;
     return n < 3 ? 0 : n / Math.min(A.size, B.size); // require >=3 shared words: short titles are noisy
   };
-  // Hook variants of one clip (trial reels: three first lines, one cut) are one post for the
-  // dedupe and hero rules; followers never see trial reels, so near-duplicates are by design.
+  // Hook variants of one clip (the retired trial-reel plan, F-009) are one post for the dedupe and
+  // hero rules in ledgers that already have them. New ones fail from SOUND_FROM (rule 7b, F-013).
   const sameClip = (a, b) => a.variantOf && b.variantOf && a.variantOf === b.variantOf;
   // The weekly comment-COOKBOOK ask says the same thing every week by design (the offer, the
   // word, the price); two of them are not a repeated message.
@@ -145,13 +147,34 @@ function gate(file, opts = {}) {
           warns.push(`${channel}: ${p.id} reuses ${f}, last used ${prior.date} (${prior.post}); rest a photo 30 days when a never-used or rested one fits (F-008)`);
       }
     });
-    // 7. F-009: a reel due from 2026-11-02 names its track in the ledger (`track`: "buffer" when
-    //    Travis adds Instagram's licensed music in the Buffer editor, or the Sound Collection id
-    //    of the bed baked in by render-motion.js). Silence is a bug. Render batches have no
-    //    ledger row, so this runs on ledgers only.
+    // 7. Sound on every reel. Reels due 2026-11-02 to 2026-11-08 name a `track` (F-009, retired).
+    //    From 2026-11-09 the ledger row carries `sound` (F-012): 2 or 3 `picks`, each with a title
+    //    and a `why`, and at least one `search` term for Buffer's music picker. Travis adds the
+    //    track by hand in Buffer's editor (the API has no music field), so the gate checks only that
+    //    the picks were made, never that the music is on. Render batches have no ledger row, so this
+    //    runs on ledgers only.
+    // 7b. F-013: no Trial Reels below 200 followers, so from 2026-11-09 no hook-variant cuts.
     ps.forEach(p => {
-      if (p.format !== 'reel' || !p.status || !p.dueAt || p.dueAt.slice(0, 10) < TRACK_FROM) return;
-      if (!p.track || !String(p.track).trim()) fails.push(`${channel}: ${p.id} is a reel with no track (ledger "track": "buffer" or the Sound Collection id; F-009)`);
+      if (p.format !== 'reel' || !p.status || !p.dueAt) return;
+      const day = p.dueAt.slice(0, 10);
+      if (day < TRACK_FROM) return;
+      if (day < SOUND_FROM) {
+        if (!p.track || !String(p.track).trim()) fails.push(`${channel}: ${p.id} is a reel with no track (ledger "track": "buffer" or the Sound Collection id; F-009)`);
+        return;
+      }
+      const snd = p.sound || {};
+      const picks = Array.isArray(snd.picks) ? snd.picks : [];
+      const search = Array.isArray(snd.search) ? snd.search.filter(x => String(x).trim()) : [];
+      if (picks.length < 2 || picks.length > 3) fails.push(`${channel}: ${p.id} is a reel with ${picks.length} sound picks; it needs 2 or 3 in ledger "sound.picks" (F-012)`);
+      picks.forEach((k, i) => {
+        if (!k || !String(k.title || '').trim() || !String(k.why || '').trim())
+          fails.push(`${channel}: ${p.id} sound pick ${i + 1} needs a title and a why (F-012)`);
+        else if (!['virlo-niche', 'virlo-platform', 'fit'].includes(k.source))
+          fails.push(`${channel}: ${p.id} sound pick ${i + 1} needs source virlo-niche, virlo-platform or fit (F-012)`);
+      });
+      if (!search.length) fails.push(`${channel}: ${p.id} needs at least one "sound.search" term for Buffer's music picker (F-012)`);
+      if (picks.length && !picks.some(k => k && k.source === 'fit')) warns.push(`${channel}: ${p.id} has no fit pick; one track chosen for the picture, not the trend, is the backstop when a trending sound is not in Buffer's picker (F-012)`);
+      if (p.variantOf) fails.push(`${channel}: ${p.id} is a hook variant of ${p.variantOf}; one cut per clip while Trial Reels are unavailable (F-013)`);
     });
     // 8. Instagram: one comment-COOKBOOK post a week keeps the ManyChat flow fed. A warning: a
     //    week with no footage ships two posts, and the right posts beat the calendar.

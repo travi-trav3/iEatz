@@ -1,5 +1,10 @@
 # Trial Reels: the distribution plan
 
+> **Retired Nov 4 2026, never run.** Instagram offers Trial Reels only to professional accounts
+> with at least 200 followers, and @ieatzhealthy is below that. Reels publish as normal reels, one
+> cut per clip (F-013), with music picked by Claude and added by Travis in Buffer (F-012). The
+> current procedure is `REEL-SOUND.md`. This file is kept for the history.
+
 Instagram Trial Reels (Buffer: "Trial Reel: Auto") show a reel to people who do not follow the
 account first. If it performs, Instagram pushes it to followers after 72 hours; if not, followers
 never see it. For an account with 173 reach a month, that is the lever: every reel is a test

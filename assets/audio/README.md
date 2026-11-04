@@ -1,5 +1,10 @@
 # assets/audio
 
+> **Since Nov 4 2026 the usual path is Buffer's Music picker** (F-012): Claude picks 2 or 3
+> tracks per reel, Travis adds one in Buffer's editor. See `social/reference/REEL-SOUND.md`.
+> What follows is the fallback, for a voiceover or for a reel that has to auto-publish with a
+> bed baked into the file.
+
 Sound for reels. `render-motion.js` mixes these into the MP4 so reels keep auto-publishing through
 Buffer: Instagram's API cannot attach library music, and it posts audio inside the file as
 "original audio".

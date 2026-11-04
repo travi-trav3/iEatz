@@ -27,7 +27,7 @@ brand. Not a recipe magazine. A person with a point of view and a trick.
 2. Food in the first second. If the opening frame is not something you want to eat or a problem
    you recognize, cut it.
 3. One idea per post. The idea is a feeling (relief, smugness, panic at 6 PM), not a feature.
-4. Sound on. Every reel has a track or a voice. Silence is a bug.
+4. Sound on. Every reel has music, under the voice when there is one (F-012). Silence is a bug.
 5. People in frame. Hands, faces, reactions, a bite. The app appears as proof, late, never as
    the hero.
 6. Write like a text message, not a brand. Lowercase is fine. Fragments are fine. Mild swearing
@@ -69,8 +69,8 @@ the formulaic-CTA cap, the accent-tail and eyebrow ratios, the plated-photo cap,
 carousel-and-reel-per-week rule, the two-beat aphorism cap. They produced the sameness they
 were meant to prevent. Shell choice comes from the post's job and the rationale table; the
 unused-shells list stays as a reminder, not a rule.
-**What the gates added:** own photos first from 2026-11-15, the library as the fallback, never a thin week for lack of a photo (F-008); no reel without a track
-(F-009); a hook type on every post (F-007).
+**What the gates added:** own photos first from 2026-11-15, the library as the fallback, never a thin week for lack of a photo (F-008); no reel without
+2 or 3 sound picks in its ledger row (F-012); no hook-variant reels (F-013); a hook type on every post (F-007).
 
 ## Active
 
@@ -199,28 +199,15 @@ team's upload rate the posting rate, and 173 reach a month cannot afford dark we
 Enforced by: diversity-gate.js rule 6 (own-first failure from 2026-11-15; 30-day reuse warning);
 photo-usage.js for the Monday plan; photos.json `source`, `flag`, `description`.
 
-### F-009 · 2026-10-30 · Sound on, three hooks, trial reels
-Source: the reboot doc and social/reference/TRIAL-REELS.md, approved by Travis Oct 30.
-Rule: Every reel ships as a Trial Reel with a track. Music and the Trial Reel toggle are set by
-Travis in Buffer's editor (neither is in the API), so the ledger names the track (`track:
-"buffer"`, or the Sound Collection id of a bed baked in by render-motion.js) and the Slack alert
-for the reel names the two manual steps. Every clip is cut three ways with a different first line
-(a problem, a promise with a number, a surprise), one per day at 17:15 PT; the three variants
-share `variantOf` in the ledger so the dedupe and hero rules read them as one post. Pins go out
-at 12:10 PT. The 72-hour read (non-follower views, watch time, shares, graduated or not) picks
-next week's hook pattern; losers retire.
-Why: "Reels are muted by default in the algorithm's eyes"; "173 reach a month means the
-audience cannot vote", so every reel is a test against strangers.
-Enforced by: diversity-gate.js rule 7 (a reel due from 2026-11-02 with no `track` fails);
-TRIAL-REELS.md and the Slack alert template for the manual steps; this file for the cut.
-
 ### F-010 · 2026-11-02 · Everything goes into Buffer as a draft the moment it is cut
 Source: Travis, in session, Nov 2 ("you should always put them in buffer as drafts at least so i can
 view and leave feedback there or bring it here directly to you").
 Rule: Every post that is rendered or cut is created in Buffer as a draft in its planned slot the
 same day (`saveToDraft: true`, `mode: customScheduled`, `dueAt` set), and its `bufferId` and
 `status: draft` go in the ledger. Scheduling still waits for Travis's go: on the go the drafts are
-converted in place, never re-created. Before any recut or scheduling, read the notes on each draft
+converted in place, never re-created. Reels are the exception (F-012): Travis schedules them
+himself in Buffer's editor when he adds the music, and the session does not edit a reel through
+the API after that. Before any recut or scheduling, read the notes on each draft
 (Buffer `get_post` returns them) and anything Travis says in session; that is the feedback channel.
 Why: Travis reviews in Buffer, where the post looks the way it will publish; a link in Slack or a
 frame in the repo is not a review.
@@ -231,11 +218,77 @@ Source: Travis, in session, Nov 2 ("you are replying as you, but under my slack 
 can we create a profile/username for you").
 Rule: The Slack connector posts as Travis. Until a separate bot identity exists (a Slack app with
 its own bot token, set up by Travis), nothing is posted in #social or any shared channel, and no
-one else is replied to. Reminders meant for Travis (the music and Trial Reel steps, go-checks) go
+one else is replied to. Reminders meant for Travis (reels waiting on music, go-checks) go
 to his own DM with himself (channel id U0B25658MC0), which only he sees. Status and questions come
 to the session. Reading #social is fine.
 Why: messages to the founder and the team read as Travis's own words.
 Enforced by: every routine that would post to Slack checks this rule first.
+
+### F-012 · 2026-11-04 · Every reel gets music: Claude picks, Travis adds
+Source: Travis, in session, Nov 4 ("update SOPs to include adding a thoughtful sound that is trending
+or appropriate/clever for the visual clip to all reels"), after the Nov 3 audit measured the three
+drafted reels silent from second 4 (-46.9 dBFS) and found `track: "buffer"` passing the gate with
+no music in the file.
+Rule: Every reel gets music, ducked under the voice when there is one. Buffer's editor now has a
+Music picker for Instagram reels, but the Buffer API has no music field (checked Nov 4 against
+`create_post`, `edit_post` and `get_post`), so the work splits:
+- **Claude picks.** At planning time every reel's ledger row carries `sound`: 2 or 3 `picks`
+  (title, artist, why it fits this clip, and `source`: `virlo-niche`, `virlo-platform` or `fit`),
+  2 or 3 `search` terms to type into Buffer's picker if none of the picks is there, and a `cue`
+  (where the beat or drop should land on the cut). At least one pick is trend-backed when Virlo is
+  connected, and at least one is chosen for fit: a mood, tempo or lyric that is clever against the
+  picture. Picks from memory are `source: "fit"` and never called trending.
+- **Claude flags it on the draft.** The Buffer draft carries the `needs music` tag (created once by
+  Travis; its id is in `reference/REEL-SOUND.md`) and a block at the top of its caption, never in
+  the ledger `text`: `🎵 PICK ONE IN MUSIC, THEN DELETE THIS BLOCK` followed by the picks and the
+  search terms.
+- **Travis adds and schedules.** In Buffer's editor he picks the track, deletes the block, removes
+  the tag and presses Schedule. That is the go for a reel. The session does not edit the post
+  through the API afterwards: an API edit re-sends the whole post and has not been tested to keep
+  a track added in the editor. A recut goes back to Travis for the music.
+- **No gate on the music itself** (Travis's call, Nov 4): nothing can read the track back, so the
+  ledger trusts it. The gate checks only that Claude did its part.
+Business accounts only get commercially cleared audio, so a sound trending in the Instagram app
+may be missing from Buffer's picker. That is why every reel also carries search terms and a fit
+pick. Baking a Meta Sound Collection bed into the file (`render-motion.js`, `assets/audio/`) stays
+as the fallback for a reel that must auto-publish without Travis.
+Why: "Sound on" was a rule the pipeline could not keep. The reel is half sound, and a picked track
+is the cheapest lift to watch time there is.
+Enforced by: diversity-gate.js rule 7 (a reel due from 2026-11-09 fails without `sound.picks` of 2
+or 3, each with a `why`, and at least one `sound.search` term; earlier reels still accept `track`);
+`reference/REEL-SOUND.md` for the procedure.
+
+### F-013 · 2026-11-04 · No Trial Reels, no hook-variant cuts
+Source: Travis, in session, Nov 4 ("looks like you missed something important - we cant run trial
+reels"). Instagram's Help Center lists Trial Reels for public professional accounts with at least
+200 followers (1,000 for personal accounts); @ieatzhealthy is below that.
+Rule: Reels publish as normal reels. One cut per clip, one hook per reel; three cuts of one clip
+(`variantOf`) are retired, because without Trial Reels every variant goes to followers too, and the
+Oct 29 second cut of one clip earned 30 reach against the first's 127. The hook test becomes week
+over week: every reel keeps its `hook` type in the ledger, and the Monday read compares reels of
+different hooks across weeks. When the account passes 200 followers, check the toggle in Buffer and
+propose Trial Reels again as a new rule; until then the toggle is not a step.
+Why: the three-variant plan rested on followers never seeing the variants. They would have.
+Enforced by: diversity-gate.js rule 7b (a reel due from 2026-11-09 with `variantOf` fails); the
+follower count in the Monday read.
+
+### F-014 · 2026-11-04 · Sunday: draft the week two weeks out
+Source: Travis, in session, Nov 4 ("we will have to run this as a routine where content is added 2
+weeks ahead, every Sunday. I then review it and give feedback").
+Rule: Every Sunday the routine plans, cuts and drafts the week that starts 15 days later (Sunday
+Nov 8 drafts Mon Nov 23 to Sun Nov 29), so Travis always has two weeks of drafts in Buffer and
+reviews one new week at a time. In order: read draft notes and session feedback (F-010); run the
+Virlo sound and format read (F-012); plan from the footage and photos in the inbox; render, gate,
+host; create every post as a draft in its slot, reels with the `needs music` tag and the sound
+block; post the review table in the session (F-011: not Slack), one row per post with why, app,
+hook, the headline read aloud and, for reels, the three picks. Travis gives feedback during the
+week; pins and statics convert on his go (F-010), reels on his own Schedule press (F-012).
+Footage for a week has to be in the inbox by the Sunday that drafts it.
+Two weeks of drafts is about 6 Instagram and 14 Pinterest posts in Buffer at once. The Free plan
+caps scheduled posts at 10 per channel; whether drafts count is not known yet, so the first Sunday
+checks it, and if they count, Pinterest drops to 5 a week or the plan is upgraded.
+Why: Travis reviews in one sitting with time to fix things, instead of a go-check racing the slot.
+Enforced by: the Sunday scheduled routine and this file.
 
 ## Keep doing
 _Things Travis called out as working._
@@ -260,3 +313,22 @@ _Rules replaced by a newer rule, kept with the date and the id that replaced the
   it or just remove that gate altogether"). Removed rather than blurred: a blur needs hand-placed
   coordinates per photo and reads as doctored; a jar with a label reads as a real fridge. The
   brands stay in each photo's `note`.
+- 2026-11-04 · F-009 (Sound on, three hooks, trial reels; `track: "buffer"` on the ledger) →
+  F-012 (music on every reel, Claude picks 2 or 3 tracks, Travis adds them in Buffer's editor and
+  schedules the reel), F-013 (no Trial Reels below 200 followers, no hook-variant cuts) and F-014
+  (the Sunday routine, two weeks out). `reference/TRIAL-REELS.md` is kept for the history only.
+  The retired text:
+  > ### F-009 · 2026-10-30 · Sound on, three hooks, trial reels
+  > Source: the reboot doc and social/reference/TRIAL-REELS.md, approved by Travis Oct 30.
+  > Rule: Every reel ships as a Trial Reel with a track. Music and the Trial Reel toggle are set by
+  > Travis in Buffer's editor (neither is in the API), so the ledger names the track (`track:
+  > "buffer"`, or the Sound Collection id of a bed baked in by render-motion.js) and the Slack alert
+  > for the reel names the two manual steps. Every clip is cut three ways with a different first line
+  > (a problem, a promise with a number, a surprise), one per day at 17:15 PT; the three variants
+  > share `variantOf` in the ledger so the dedupe and hero rules read them as one post. Pins go out
+  > at 12:10 PT. The 72-hour read (non-follower views, watch time, shares, graduated or not) picks
+  > next week's hook pattern; losers retire.
+  > Why: "Reels are muted by default in the algorithm's eyes"; "173 reach a month means the
+  > audience cannot vote", so every reel is a test against strangers.
+  > Enforced by: diversity-gate.js rule 7 (a reel due from 2026-11-02 with no `track` fails);
+  > TRIAL-REELS.md and the Slack alert template for the manual steps; this file for the cut.

@@ -107,7 +107,9 @@ headline; poster draws the underline, counts the readout up, fills the strip; bl
 the headline reveals word by word. Silent-safe: every word is on screen by the end.
 `timeline` overrides any phase with `[start, end]` seconds. `audio: { bed, license, voice, voiceAt,
 bedDb }` bakes a Meta Sound Collection bed and/or a voiceover into the file (rules and licensing in
-`assets/audio/README.md`); without it the reel has no audio track.
+`assets/audio/README.md`); without it the reel has no audio track. Music itself is added by Travis in
+Buffer's editor from Claude's picks (F-012, `reference/REEL-SOUND.md`); a baked bed is the fallback
+for a reel that has to publish without him.
 
 **Deprecated** (kept so old batches re-render; the gate warns on any use): `statdark` (use `poster`),
 `recipe` (text-only; use `recipephoto`), `quote` (paper; use `quotedark`).
@@ -140,13 +142,17 @@ show what iEatz did. The gate prints the rationale table; read it before the ren
 
 ## Gates
 - **Set gate** (`diversity-gate.js`, the old name kept so every runbook works): per channel, in
-  publish order. Ledger/render mismatches; the copy gate; no near-duplicate message (the three
-  `variantOf` cuts of one clip and two comment-COOKBOOK asks are exempt); no hero reuse in a
+  publish order. Ledger/render mismatches; the copy gate; no near-duplicate message (two comment-COOKBOOK asks are exempt, and so are the
+  `variantOf` cuts already in older ledgers); no hero reuse in a
   channel's set; the badge in its home position and never `badge-url` on Instagram; **from 2026-11-15
   our own photos first: a stock photo fails only while an own photo is free** (F-008; `node
   photo-usage.js` prints the supply: own, never-used, rested 60+ days, recent, unusable);
   a photo reused inside 30 days warns; **every reel due
-  from 2026-11-02 names its `track`** (F-009). Warnings: deprecated shells, a hero with no style,
+  from 2026-11-09 carries `sound`: 2 or 3 picks, each with a title, a `why` and a `source`
+  (`virlo-niche`, `virlo-platform` or `fit`), plus at least one search term for Buffer's music
+  picker** (F-012; reels due Nov 2 to 8 still name a `track`, F-009, retired); **from 2026-11-09 a
+  reel with `variantOf` fails** (no hook-variant cuts while Trial Reels are unavailable, F-013).
+  The gate never checks that the music is on: nothing can read it back. Warnings: a reel with no `fit` sound pick, deprecated shells, a hero with no style,
   a week with no comment-COOKBOOK post, and the shells unused across the last three ledgers.
   The rotation rules (adjacency, template cap, pillar rules, formulaic CTA cap, accent-tail and
   eyebrow ratios, plated cap, carousel and reel per week) were dropped in Nov 2026
@@ -161,7 +167,8 @@ show what iEatz did. The gate prints the rationale table; read it before the ren
   never in the first three lines (F-007). It prints the rationale table (why, app, hook, the
   headline read aloud): a person reads it before anything renders.
 - **Ledger fields** written at planning time: `pillar, topic, template, surface, heroPhoto, cta,
-  format, footer, eyebrow, accentTail, photoStyle, photoClaim, hook, track, variantOf`. A ledger
+  format, footer, eyebrow, accentTail, photoStyle, photoClaim, hook, sound` (reels), and on
+  older ledgers `track` and `variantOf`. A ledger
   with `"renderBatch"` gets any missing field derived from the render batch, and a written field
   that disagrees with it fails.
 - **Series ledgers** (`"series": "send-this"` in `manifest/send-this.json`): one shell by design, one post a

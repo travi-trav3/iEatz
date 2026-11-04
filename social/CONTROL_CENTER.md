@@ -286,6 +286,12 @@ with zero duplicates:
   captions carry the full short recipe + estimated macros; alt text is descriptive.
 
 ### 8.5 Reels and carousels (v2 engine, Sep 2026)
+- **Music on every reel (F-012, Nov 2026; procedure in `reference/REEL-SOUND.md`).** The Buffer API
+  has no music field, so the reel draft carries the `needs music` tag and a 🎵 block at the top of
+  its Buffer caption (2 or 3 picks + search terms, from the ledger's `sound`). Travis adds the
+  track in Buffer's editor, deletes the block, removes the tag and presses Schedule: that is the
+  reel's go. After that, never `edit_post` the reel (untested whether an API edit keeps the
+  track). No Trial Reel toggle: the account is under the 200-follower minimum (F-013).
 - **Reel:** `create_post` with `assets:[{video:{url, metadata:{thumbnailOffset:<ms>, title}}}]` and
   `metadata.instagram = {type:"reel", shouldShareToFeed:true}`. Video = `render-motion.js` output
   (`out/<batch>/<file>.mp4`, 1080x1920 H.264), hosted on raw.githubusercontent like the PNGs. Set
@@ -338,11 +344,19 @@ with zero duplicates:
    `/recipes/high-protein-dinners-kids-actually-eat/`.
 4. Render (`render-batch.js batches/<batch>.json`; reels `render-motion.js` with `motion.audio`,
    see `assets/audio/README.md`) → **QA gate every image, and listen to every reel** → fix until clean.
-5. **Batch diversity gate:** `node diversity-gate.js ../manifest/<batch>.json` must PASS, and
+4a. **Sound picks for every reel** (F-012): run the Virlo read (niche + platform), watch the cut,
+   write `sound` into the ledger row (2 or 3 picks with `why` and `source`, search terms, the cue).
+   See `reference/REEL-SOUND.md`.
+5. **Batch diversity gate:** run it while the rows are still `planned`, before drafting: the
+   ledger loader skips `status: "draft"` (a rule from before F-010), so a gate run after drafting
+   checks almost nothing. `node diversity-gate.js ../manifest/<batch>.json` must PASS, and
    eyeball `contact-sheet.js` output next to already-published tiles. No scheduling until clean.
 6. Host, verify 200.
-7. Schedule in Buffer (preview gate), IG ≤4–5/wk, Pinterest heavier, humanized times — and
-   **immediately schedule each post's Slack alert** (§9), recording `slackAlert` ids in the ledger.
+7. Draft in Buffer (F-010), reels with the `needs music` tag and the 🎵 block (§8.5). Pins and
+   statics convert to scheduled on Travis's go; reels are scheduled by Travis when he adds the
+   music (F-012). Slack alerts are paused (F-011).
+   **Cadence (F-014):** this whole workflow runs every Sunday for the week that starts 15 days
+   later, so two weeks of drafts always sit in Buffer for review.
 8. Later: pull `sent` metrics, weight next batch to winners.
 
 ## 11. Current state (update as you go)
@@ -442,6 +456,14 @@ This file is iEatz-specific; the reusable engine is the **`social-content-pipeli
   CONTROL_CENTER-style instance file so the next session resumes cleanly.
 
 ## 13. Evolution log (what changed, so learnings compound)
+- **Nov 4 2026 — music on every reel, no Trial Reels, the Sunday routine:** Buffer's editor gained a
+  Music picker for Instagram reels; the API did not. Claude now picks 2 or 3 tracks per reel
+  (Virlo trend reads plus picks chosen for fit against the picture) and Travis adds one in Buffer
+  and schedules the reel himself (F-012; `reference/REEL-SOUND.md`). Travis found that Trial Reels
+  need 200 followers and the account is below that, so the Trial Reel plan and its three hook
+  variants per clip are retired; one cut per clip, the hook test runs week over week (F-013).
+  Content is drafted every Sunday for the week two weeks out (F-014). The set gate checks the
+  picks, not the music. Virlo still needs `dev.virlo.ai` allowed in the cloud environment.
 - **Oct 30 2026 — the reboot (doc "iEatz Social Reboot", approved):** the content got worse
   because the inputs ran out, not because the rules got looser. Voice rewritten
   (`feedback/RULES.md`, "The voice", F-007); every rotation rule that picked the shell dropped
