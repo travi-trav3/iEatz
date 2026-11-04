@@ -222,6 +222,14 @@ Org **"Applied Intelligence Co."** = `6a138b7d82bb2ed009fed356`.
 - Common `create_post` args: `channelId`, `schedulingType:"automatic"`, `mode:"customScheduled"`,
   `dueAt` (ISO with `-07:00`), `text`, `assets:[{image:{url, thumbnailUrl, metadata:{altText, dimensions}}}]`.
 
+- **Plan: Buffer Essentials since Nov 4 2026** (was Free). What it changed, checked through the
+  API the same day: scheduled posts up to 5,000 (was 10 per channel), 250 tags, first comments on
+  Instagram (F-015), and `get_aggregated_post_metrics` beyond the Free plan's last-31-days window
+  (Jul 1 to Nov 4 returned in one call). Use the long window in the Monday read: compare this week
+  with the trailing 8 weeks, not just last week. Tags can filter that aggregate, so if Travis
+  creates `hook: problem`, `hook: promise` and `hook: surprise` tags, every Instagram post gets
+  its hook tag at draft time and the hook test (F-013) reads straight from Buffer.
+
 ### 8.1 Cadence — post like a human, not a scheduler (learned Jul 2026)
 Do NOT fall into a fixed grid. The classic bot tell is **IG on Mon/Wed/Fri every week at
 identical times**, and **all Pinterest pins clustered in one afternoon band**. Two goals:
@@ -274,8 +282,9 @@ with zero duplicates:
   ("permission stream closed") — fall back to one call per turn. Edits are idempotent, so a
   partially-failed batch is safe to re-fire.
 - **No `updateIdea`/`editIdea`** — cannot attach media to an existing *idea*; `create_post` fresh.
-- **IG first comments — standard on every IG post** (Buffer Essentials from Nov 4 2026; the Free
-  plan had none): `create_post` / `edit_post` now take `metadata.instagram.firstComment` directly.
+- **IG first comments — standard on every IG post (F-015)** (Buffer Essentials from Nov 4 2026;
+  the Free plan had none): `create_post` / `edit_post` now take `metadata.instagram.firstComment`
+  directly. Send it in the `create_post` that makes the draft, from the ledger's `firstComment`.
   An edit is a full-post re-send (text + every asset + `type`/`shouldShareToFeed`), so carry
   everything forward, and never edit a reel after Travis has added its music (F-012). Older
   sessions used `execute_mutation` on GraphQL `editPost` for the same field.
@@ -354,7 +363,8 @@ with zero duplicates:
    checks almost nothing. `node diversity-gate.js ../manifest/<batch>.json` must PASS, and
    eyeball `contact-sheet.js` output next to already-published tiles. No scheduling until clean.
 6. Host, verify 200.
-7. Draft in Buffer (F-010), reels with the `needs music` tag and the 🎵 block (§8.5). Pins and
+7. Draft in Buffer (F-010) with the ledger's `firstComment` on every Instagram post (F-015),
+   reels with the `needs music` tag and the 🎵 block (§8.5). Pins and
    statics convert to scheduled on Travis's go; reels are scheduled by Travis when he adds the
    music (F-012). Slack alerts are paused (F-011).
    **Cadence (F-014):** this whole workflow runs every Sunday for the week that starts 15 days

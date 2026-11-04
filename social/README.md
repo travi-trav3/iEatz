@@ -152,7 +152,9 @@ show what iEatz did. The gate prints the rationale table; read it before the ren
   (`virlo-niche`, `virlo-platform` or `fit`), plus at least one search term for Buffer's music
   picker** (F-012; reels due Nov 2 to 8 still name a `track`, F-009, retired); **from 2026-11-09 a
   reel with `variantOf` fails** (no hook-variant cuts while Trial Reels are unavailable, F-013).
-  The gate never checks that the music is on: nothing can read it back. Warnings: a reel with no `fit` sound pick, deprecated shells, a hero with no style,
+  The gate never checks that the music is on: nothing can read it back. **From 2026-11-09 every Instagram post has a `firstComment`** (20 words at most, no hashtag or
+  link, never COOKBOOK on a comment-COOKBOOK post; F-015).
+  Warnings: a reel with no `fit` sound pick, deprecated shells, a hero with no style,
   a week with no comment-COOKBOOK post, and the shells unused across the last three ledgers.
   The rotation rules (adjacency, template cap, pillar rules, formulaic CTA cap, accent-tail and
   eyebrow ratios, plated cap, carousel and reel per week) were dropped in Nov 2026

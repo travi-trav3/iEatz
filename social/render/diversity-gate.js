@@ -36,6 +36,7 @@ const copyGate = require('./copy-gate');
 
 const STOCK_ENDS = '2026-11-15';   // F-008: from this, own photos first; stock only while no own photo is free
 const TRACK_FROM = '2026-11-02';   // F-009: from this, no reel without a track
+const FIRST_COMMENT_FROM = '2026-11-09'; // F-015: from this, a first comment on every Instagram post
 const SOUND_FROM = '2026-11-09';   // F-012 / F-013: from this, 2-3 sound picks per reel and no hook variants
 const REPO = path.resolve(__dirname, '../..');
 const PHOTO_SOURCE = {};
@@ -175,6 +176,18 @@ function gate(file, opts = {}) {
       if (!search.length) fails.push(`${channel}: ${p.id} needs at least one "sound.search" term for Buffer's music picker (F-012)`);
       if (picks.length && !picks.some(k => k && k.source === 'fit')) warns.push(`${channel}: ${p.id} has no fit pick; one track chosen for the picture, not the trend, is the backstop when a trending sound is not in Buffer's picker (F-012)`);
       if (p.variantOf) fails.push(`${channel}: ${p.id} is a hook variant of ${p.variantOf}; one cut per clip while Trial Reels are unavailable (F-013)`);
+    });
+    // 10. F-015: a first comment on every Instagram post due from 2026-11-09, short, no hashtag or
+    //     link, and never the ManyChat trigger word on a comment-COOKBOOK post.
+    if (channel === 'instagram') ps.forEach(p => {
+      if (!p.status || !p.dueAt || p.dueAt.slice(0, 10) < FIRST_COMMENT_FROM) return;
+      const fc = String(p.firstComment || '').trim();
+      if (!fc) { fails.push(`instagram: ${p.id} has no firstComment (F-015)`); return; }
+      const words = fc.split(/\s+/).filter(Boolean).length;
+      if (words > 20) fails.push(`instagram: ${p.id} firstComment is ${words} words; 20 at most (F-015)`);
+      if (/(^|\s)#\w/.test(fc)) fails.push(`instagram: ${p.id} firstComment has a hashtag; hashtags stay in the caption (F-015)`);
+      if (/https?:\/\/|www\./i.test(fc)) fails.push(`instagram: ${p.id} firstComment has a link (F-015)`);
+      if (p.cta === 'cookbook-dm' && /cookbook/i.test(fc)) fails.push(`instagram: ${p.id} firstComment says COOKBOOK on a cookbook-dm post; ManyChat may fire on our own comment (F-015)`);
     });
     // 8. Instagram: one comment-COOKBOOK post a week keeps the ManyChat flow fed. A warning: a
     //    week with no footage ships two posts, and the right posts beat the calendar.

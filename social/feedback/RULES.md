@@ -286,9 +286,40 @@ week; pins and statics convert on his go (F-010), reels on his own Schedule pres
 Footage for a week has to be in the inbox by the Sunday that drafts it.
 Two weeks of drafts is about 6 Instagram and 14 Pinterest posts in Buffer at once. Travis moved
 Buffer from Free to Essentials on Nov 4 (`get_account` limits: 5,000 scheduled posts, 250 tags), so
-the old 10-per-channel cap no longer binds, and first comments are available again.
+the old 10-per-channel cap no longer binds, and first comments are available again (F-015).
 Why: Travis reviews in one sitting with time to fix things, instead of a go-check racing the slot.
 Enforced by: the Sunday scheduled routine and this file.
+
+### F-015 · 2026-11-04 · A first comment on every Instagram post
+Source: Travis, in session, Nov 4 ("first comment needs to be back on and a standard SOP"), after
+the move to Buffer Essentials. Nov 4 test: `edit_post` with `metadata.instagram.firstComment` on a
+retired draft saved it and read it back; the test comment was removed the same minute.
+Rule: Every Instagram post (reel, static, carousel, send-this) carries a first comment, written at
+planning time into the ledger's `firstComment` and sent in the same `create_post` call that makes
+the draft. It is never added later with `edit_post` on a reel (F-012: no API edits after the
+music). The comment:
+- **is a reply, not more caption.** The brand reacting to the one specific thing the viewer just
+  saw: a detail in the frame, the number in the headline, the obvious objection ("no, it does not
+  mean eggs five nights in a row"). If it would read naturally pasted onto the end of the caption,
+  rewrite it (the portable rule in `skills/social-content-pipeline/SKILL.md`).
+- **can ask one real question** when it fits (the saddest thing in your fridge, your last receipt
+  total). Never "comment YES" bait.
+- **is short and in the voice:** one line, 20 words at most, lowercase is fine, no hashtags, no
+  link, no repeat of the value prop.
+- **obeys the truth rules:** F-001, F-002 and F-006 apply. The copy gate already reads
+  `firstComment`.
+- **never says COOKBOOK** on a comment-COOKBOOK post. ManyChat fires on comments with the word,
+  and whether it ignores the account's own comment is untested, so the brand's comment never
+  says it.
+Pinterest has no first comment.
+Check after the first publish: open the first Instagram post that goes out with a first comment
+and confirm the comment is under it, then log it. Buffer saving the field is not proof that
+Instagram gets it.
+Why: the account is too small for comments to start on their own; a first comment gives a viewer
+something to answer, and Essentials makes it schedulable.
+Enforced by: diversity-gate.js rule 10 (an Instagram post due from 2026-11-09 fails with no
+`firstComment`, with more than 20 words, with a hashtag or a link, or, on a cookbook-dm post, with
+the word COOKBOOK); the copy gate for the words.
 
 ## Keep doing
 _Things Travis called out as working._
