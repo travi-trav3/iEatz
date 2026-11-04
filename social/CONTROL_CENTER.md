@@ -355,7 +355,8 @@ with zero duplicates:
    `/recipes/high-protein-dinners-kids-actually-eat/`.
 4. Render (`render-batch.js batches/<batch>.json`; reels `render-motion.js` with `motion.audio`,
    see `assets/audio/README.md`) → **QA gate every image, and listen to every reel** → fix until clean.
-4a. **Sound picks for every reel** (F-012): run the Virlo read (niche + platform), watch the cut,
+4a. **Sound picks for every reel** (F-012, F-016): voice first, then the music bed. Read a trend
+   source if one is available (Virlo until Nov 11), watch the cut,
    write `sound` into the ledger row (2 or 3 picks with `why` and `source`, search terms, the cue).
    See `reference/REEL-SOUND.md`.
 5. **Batch diversity gate:** run it while the rows are still `planned`, before drafting: the

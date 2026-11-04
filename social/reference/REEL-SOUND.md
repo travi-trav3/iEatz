@@ -10,7 +10,7 @@ is no music field on `create_post`, `edit_post` or `get_post` (checked Nov 4 202
 
 | Step | Who | Where |
 |---|---|---|
-| Read what is trending (food niche and Reels as a whole) | Claude | Virlo, every Sunday |
+| Read what is trending, when a source is available | Claude | Virlo until Nov 11; Travis's notes after |
 | Pick 2 or 3 tracks per reel, with search terms and a cue | Claude | the ledger row's `sound` |
 | Flag the draft | Claude | Buffer: `needs music` tag + a block at the top of the caption |
 | Choose the track, add it, delete the block, remove the tag, press Schedule | Travis | Buffer's editor |
@@ -47,7 +47,8 @@ the first pick is a placeholder for whatever the Virlo read finds):
     against the visual: something deadpan under a disaster, something triumphant under a
     sad fridge, a lyric that names what is on screen.
 - **At least one `fit` pick on every reel** (the gate warns without one). It is the backstop
-  for a trending sound that turns out not to be in Buffer's picker.
+  for a trending sound that turns out not to be in Buffer's picker, and after Nov 11 it is the
+  normal case.
 - **Search terms** (1 to 3) for Buffer's picker, for when none of the picks is there.
 - **The cue** says where the beat, drop or swell should land on the cut, so the track serves
   the edit and not the other way round.
@@ -111,28 +112,19 @@ the API. A recut or caption change goes back as a new draft (or Travis makes the
 To retire this rule: add music to one test draft in the editor, change its caption with
 `edit_post`, and check in the editor whether the track is still there.
 
-## Virlo: setup and the Sunday read
+## Trend source
 
-Virlo is the trend source. It has not connected from the cloud session (the proxy refused
-`dev.virlo.ai`), so until it does every pick is `fit`.
+**Virlo, until Nov 11 2026 only.** Travis's Virlo trial ends Nov 11 and will not be renewed (the
+plan is $49 a month). The MCP connector reaches `dev.virlo.ai` but needs Travis's sign-in, and
+every call spends Virlo credits. The Nov 4 audit, gathered in Chrome from his trial workspace, is
+the trend record: `VIRLO-AUDIT-2026-11.md`. Its main finding for sound: no track carries the food
+niche (the most-used sound was in 2 of 316 videos; 7 of the top 10 were original audio), so voice
+leads and the music is a bed (F-016).
 
-**Fix (Travis, once):**
-1. In the Claude app, open this session's cloud environment menu (title bar), then **Edit**.
-2. **Network access**: under Allowed domains add `dev.virlo.ai`, leave "Allow package managers"
-   ticked, save. Steps: https://code.claude.com/docs/en/cloud-environments#network-access
-3. Start a new session (the MCP server connects at session start). Virlo signs in with your
-   Virlo account (OAuth), not an API key. If the session reports Virlo as needing
-   authentication, sign in when prompted.
-4. First run: the session calls `get_credit_balance` and tells you the balance. Sound reads bill
-   per call.
-
-**The Sunday read (Claude, once a week, before picking):**
-- `get_breakout_sounds` and `get_trending_sounds` for Instagram Reels as a whole
-  (`virlo-platform`).
-- The same, narrowed to food, grocery and cooking content (`virlo-niche`).
-- `lookup_sound` on any candidate to check it is still rising, not peaked.
-- Log the read in `feedback/LOG.md` with the date, so a pick's `source` can be traced.
-- Tell Travis the credit spend before the first paid call of the day.
+**After Nov 11:** picks are `fit` by default. If Travis notices a sound rising in the Reels app
+that is also in Buffer's picker, he names it in the session and it can be a `virlo-platform`-style
+trend pick with `source: "fit"` and the note "Travis, Reels app, <date>". Re-run a free trend read
+only if a new trial or a free source turns up.
 
 ## What happened to Trial Reels
 

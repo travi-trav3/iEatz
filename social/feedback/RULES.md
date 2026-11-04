@@ -235,9 +235,11 @@ Music picker for Instagram reels, but the Buffer API has no music field (checked
 - **Claude picks.** At planning time every reel's ledger row carries `sound`: 2 or 3 `picks`
   (title, artist, why it fits this clip, and `source`: `virlo-niche`, `virlo-platform` or `fit`),
   2 or 3 `search` terms to type into Buffer's picker if none of the picks is there, and a `cue`
-  (where the beat or drop should land on the cut). At least one pick is trend-backed when Virlo is
-  connected, and at least one is chosen for fit: a mood, tempo or lyric that is clever against the
-  picture. Picks from memory are `source: "fit"` and never called trending.
+  (where the beat or drop should land on the cut). At least one pick is chosen for fit: a mood,
+  tempo or lyric that is clever against the picture. A trend-backed pick is welcome when there is
+  data behind it, but not required: the Nov 4 Virlo read found sound trends barely move this niche
+  (F-016), and the Virlo trial ends Nov 11. Picks from memory are `source: "fit"` and never called
+  trending.
 - **Claude flags it on the draft.** The Buffer draft carries the `needs music` tag (created once by
   Travis; its id is in `reference/REEL-SOUND.md`) and a block at the top of its caption, never in
   the ledger `text`: `🎵 PICK ONE IN MUSIC, THEN DELETE THIS BLOCK` followed by the picks and the
@@ -277,8 +279,8 @@ Source: Travis, in session, Nov 4 ("we will have to run this as a routine where 
 weeks ahead, every Sunday. I then review it and give feedback").
 Rule: Every Sunday the routine plans, cuts and drafts the week that starts 15 days later (Sunday
 Nov 8 drafts Mon Nov 23 to Sun Nov 29), so Travis always has two weeks of drafts in Buffer and
-reviews one new week at a time. In order: read draft notes and session feedback (F-010); run the
-Virlo sound and format read (F-012); plan from the footage and photos in the inbox; render, gate,
+reviews one new week at a time. In order: read draft notes and session feedback (F-010); if a trend source
+is available (Virlo until Nov 11, or Travis's weekly scout in the Reels app), read it (F-012); plan from the footage and photos in the inbox; render, gate,
 host; create every post as a draft in its slot, reels with the `needs music` tag and the sound
 block; post the review table in the session (F-011: not Slack), one row per post with why, app,
 hook, the headline read aloud and, for reels, the three picks. Travis gives feedback during the
@@ -320,6 +322,31 @@ something to answer, and Essentials makes it schedulable.
 Enforced by: diversity-gate.js rule 10 (an Instagram post due from 2026-11-09 fails with no
 `firstComment`, with more than 20 words, with a hashtag or a link, or, on a cookbook-dm post, with
 the word COOKBOOK); the copy gate for the words.
+
+### F-016 · 2026-11-04 · What the Nov 4 Virlo read changes about reels
+Source: the Virlo audit of Travis's "Healthy Meal Recipes" research agent, Nov 4
+(`reference/VIRLO-AUDIT-2026-11.md`: 316 videos, 61% TikTok, 19 scored Reels, first cycle).
+Rule:
+- **Voice carries the reel; music is the bed.** In the niche the most-used sound appeared in 2 of
+  316 videos and 7 of the top 10 sounds were original audio. Every reel with words has a voiceover
+  or someone talking, with the F-012 track ducked under it. Do not hold a reel for a trending song.
+- **Length follows the job.** A single-dish or 3-ingredient teaser runs under 20 s. A fridge
+  rescue, a receipt-to-week story or anything showing the app runs 30 to 60 s, because the payoff
+  needs time. The first frame still shows the outcome or states the problem on screen (voice rule
+  2): the finished dish, or the line, then the app as proof. Never the app UI first.
+- **No "I've been doing X for years and just found this" hook.** It is 10 of the 25 winning
+  outliers in the niche, mostly paid placements for funded competitors (Potto, Osta and others).
+  Copying it makes iEatz read as one more ad. Use the problem, the outcome or the fridge.
+- **Lead with the open angle.** Competitors crowd "AI meal planner" (47.4M views). "Rescue what's
+  already in your fridge" is smaller (9.9M) but has the best share rates in the read and almost no
+  app owns it. iEatz's receipt and add-what-you-have features fit it exactly. Plan reels from it
+  first; it is also the angle least likely to date.
+- **Benchmark on shares and engagement, not views.** The niche's leaderboard is inflated by paid
+  placements (6 of 25) and boosted posts (engagement under 1%). The Monday read compares iEatz
+  with itself on shares, saves and engagement rate.
+Why: the first real data on the niche; every number above is from it, and its limits (TikTok
+skew, one cycle) are written in the audit file.
+Enforced by: this file at planning and in the review table; F-012's gate for the music.
 
 ## Keep doing
 _Things Travis called out as working._
