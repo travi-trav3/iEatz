@@ -274,9 +274,11 @@ with zero duplicates:
   ("permission stream closed") — fall back to one call per turn. Edits are idempotent, so a
   partially-failed batch is safe to re-fire.
 - **No `updateIdea`/`editIdea`** — cannot attach media to an existing *idea*; `create_post` fresh.
-- **IG first comments — standard on every IG post:** typed tools have no first-comment field; use
-  `execute_mutation` on GraphQL `editPost` with `metadata.instagram.firstComment` (full-post
-  re-send: text + every asset + `type`/`shouldShareToFeed` + `schedulingType`, or you wipe media).
+- **IG first comments — standard on every IG post** (Buffer Essentials from Nov 4 2026; the Free
+  plan had none): `create_post` / `edit_post` now take `metadata.instagram.firstComment` directly.
+  An edit is a full-post re-send (text + every asset + `type`/`shouldShareToFeed`), so carry
+  everything forward, and never edit a reel after Travis has added its music (F-012). Older
+  sessions used `execute_mutation` on GraphQL `editPost` for the same field.
   Select `... on PostActionSuccess { post { id metadata { ... on InstagramPostMetadata { firstComment } } } }`
   + error fragments; verify a non-null echo; record `firstComment` in the ledger (retry-safe).
   Comment voice = the brand replying to its own post: react to the specific quote, photo, or

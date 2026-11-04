@@ -284,9 +284,9 @@ block; post the review table in the session (F-011: not Slack), one row per post
 hook, the headline read aloud and, for reels, the three picks. Travis gives feedback during the
 week; pins and statics convert on his go (F-010), reels on his own Schedule press (F-012).
 Footage for a week has to be in the inbox by the Sunday that drafts it.
-Two weeks of drafts is about 6 Instagram and 14 Pinterest posts in Buffer at once. The Free plan
-caps scheduled posts at 10 per channel; whether drafts count is not known yet, so the first Sunday
-checks it, and if they count, Pinterest drops to 5 a week or the plan is upgraded.
+Two weeks of drafts is about 6 Instagram and 14 Pinterest posts in Buffer at once. Travis moved
+Buffer from Free to Essentials on Nov 4 (`get_account` limits: 5,000 scheduled posts, 250 tags), so
+the old 10-per-channel cap no longer binds, and first comments are available again.
 Why: Travis reviews in one sitting with time to fix things, instead of a go-check racing the slot.
 Enforced by: the Sunday scheduled routine and this file.
 
