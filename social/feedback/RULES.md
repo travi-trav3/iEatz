@@ -323,29 +323,37 @@ Enforced by: diversity-gate.js rule 10 (an Instagram post due from 2026-11-09 fa
 `firstComment`, with more than 20 words, with a hashtag or a link, or, on a cookbook-dm post, with
 the word COOKBOOK); the copy gate for the words.
 
-### F-016 · 2026-11-04 · What the Nov 4 Virlo read changes about reels
+### F-016 · 2026-11-04 · What the Nov 4 Virlo read changes about reels, within what we can make
 Source: the Virlo audit of Travis's "Healthy Meal Recipes" research agent, Nov 4
-(`reference/VIRLO-AUDIT-2026-11.md`: 316 videos, 61% TikTok, 19 scored Reels, first cycle).
+(`reference/VIRLO-AUDIT-2026-11.md`: 316 videos, 61% TikTok, 19 scored Reels, first cycle), and
+Travis, same day: "we won't have a lot of voice-over content. we are doing programmatic via claude
+to create reels bc we don't have an in-house content creator ... stick with what we are capable
+of doing ... work in some voice over content occasionally."
+The constraint comes first: reels are cut by Claude from the team's phone clips and photos, with
+on-screen text, the clip's own sound and a music track. Nobody is on camera and voiceover is the
+exception. Research is used where it fits that; a format that needs a creator is not copied.
 Rule:
-- **Voice carries the reel; music is the bed.** In the niche the most-used sound appeared in 2 of
-  316 videos and 7 of the top 10 sounds were original audio. Every reel with words has a voiceover
-  or someone talking, with the F-012 track ducked under it. Do not hold a reel for a trending song.
-- **Length follows the job.** A single-dish or 3-ingredient teaser runs under 20 s. A fridge
-  rescue, a receipt-to-week story or anything showing the app runs 30 to 60 s, because the payoff
-  needs time. The first frame still shows the outcome or states the problem on screen (voice rule
-  2): the finished dish, or the line, then the app as proof. Never the app UI first.
+- **The default reel is faceless:** real footage, the on-screen line, the clip's own sound
+  (sizzle, crunch, the cart) and the F-012 track under it. That makes the music pick matter more,
+  not less. A voiceover is a bonus when Travis or the team records one (a 3 to 6 s phone memo,
+  `assets/audio/README.md`); plan for one or two a month, never as the assumption.
+- **Length follows the footage and the job.** Most reels are short teasers, under 20 s: one dish,
+  one rescue, one receipt. Go longer (30 to 60 s) only when there is enough real footage to carry
+  it, typically a fridge rescue with a before, the cooking and the plate, or a story that ends on
+  the app. Never pad a short clip set to reach a length.
+- **The first frame shows the outcome or states the problem** (voice rule 2): the finished dish,
+  or the problem in on-screen text over food. The app comes late, as proof, never as the opener.
 - **No "I've been doing X for years and just found this" hook.** It is 10 of the 25 winning
   outliers in the niche, mostly paid placements for funded competitors (Potto, Osta and others).
   Copying it makes iEatz read as one more ad. Use the problem, the outcome or the fridge.
 - **Lead with the open angle.** Competitors crowd "AI meal planner" (47.4M views). "Rescue what's
   already in your fridge" is smaller (9.9M) but has the best share rates in the read and almost no
-  app owns it. iEatz's receipt and add-what-you-have features fit it exactly. Plan reels from it
-  first; it is also the angle least likely to date.
+  app owns it. It also suits faceless footage: the sad drawer, the pan, the plate.
 - **Benchmark on shares and engagement, not views.** The niche's leaderboard is inflated by paid
   placements (6 of 25) and boosted posts (engagement under 1%). The Monday read compares iEatz
   with itself on shares, saves and engagement rate.
-Why: the first real data on the niche; every number above is from it, and its limits (TikTok
-skew, one cycle) are written in the audit file.
+Why: the first real data on the niche, read against what a two-person team with an AI editor can
+produce every week.
 Enforced by: this file at planning and in the review table; F-012's gate for the music.
 
 ## Keep doing
