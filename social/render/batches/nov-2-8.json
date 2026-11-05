@@ -502,8 +502,8 @@
       "footer": "badge-br",
       "headAt": "top",
       "grain": false,
-      "head": "Comment <span class=\"accent\">COOKBOOK</span> and we'll DM you 30 dinner recipes.",
-      "sub": "It's free. Every recipe takes under 30 minutes and comes with its own Instacart list.",
+      "head": "Takeout again tonight?<br><span class=\"accent\">Comment COOKBOOK instead.</span>",
+      "sub": "We'll DM you 30 dinners that cook in under 30 minutes, about as long as delivery takes. It's free.",
       "cards": [
         {
           "photo": "own/2026-10-29-travis-img6201.jpg",
@@ -543,16 +543,18 @@
       },
       "notes": [
         {
-          "text": "no delivery fees were paid",
+          "text": "real food, real kitchen*",
           "x": 76,
-          "y": 1040
+          "y": 1030
         }
       ],
       "photoClaim": "sheet-pan nachos with jalapeno and guacamole; a bunless burger bowl with avocado, tomato and a pickle; sliced steak with a bowl of ravioli",
-      "hookType": "promise",
+      "hookType": "problem",
       "why": "A boost-worthy lead magnet: the ask and the value read first, then three real dinners from our own kitchen so it feels like food, not an ad.",
       "app": "The cookbook's recipes each come with a tap-to-shop Instacart list; the DM flow hands out the free book.",
-      "grade": false
+      "grade": false,
+      "fine": "*Every photo here was shot on a phone in our team's kitchen. No food stylist, no stock photos.",
+      "headSize": 84
     }
   ]
 }

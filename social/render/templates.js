@@ -371,8 +371,9 @@ const TEMPLATES = {
       ${(p.notes || []).map(n => `<div class="cc-note${n.big ? ' big' : ''}" data-clear=".cc-card,.cc-head" style="left:${n.x}px;top:${n.y}px">${n.text}</div>`).join('')}
       ${p.arrow ? `<div class="cc-arrow" style="left:${p.arrow.x}px;top:${p.arrow.y}px">${p.arrow.text}</div>` : ''}
       ${p.price ? `<div class="cc-price" style="left:${p.price.x}px;top:${p.price.y}px">${p.price.text}</div>` : ''}
+      ${p.fine ? `<p class="cc-fine" data-clear=".cc-card">${p.fine}</p>` : ''}
       ${p.headAt === 'top'
-        ? `<div class="cc-top" data-clear=".cc-card,.cc-note"><h1 class="cc-head-t">${p.head}</h1>${p.sub ? `<p class="cc-sub">${p.sub}</p>` : ''}</div>`
+        ? `<div class="cc-top" data-clear=".cc-card,.cc-note"><h1 class="cc-head-t"${p.headSize ? ` style="font-size:${p.headSize}px"` : ''}>${p.head}</h1>${p.sub ? `<p class="cc-sub">${p.sub}</p>` : ''}</div>`
         : `<h1 class="cc-head" data-clear=".cc-card,.cc-note">${p.head}</h1>`}
     </div>
     ${p.grain === false ? '' : '<div class="grain-layer"></div>'}

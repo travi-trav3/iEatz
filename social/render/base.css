@@ -337,6 +337,7 @@ html.footage,html.footage body,.ig-bleed.footage{background:transparent}
 .cc-top{position:absolute;left:64px;top:80px;width:952px}
 .cc-head-t{font-family:var(--serif);font-weight:400;font-size:92px;line-height:0.98;letter-spacing:-0.015em;color:var(--ink);margin:0}
 .cc-head-t .accent,.cc-head-t em{font-style:italic;color:var(--green)}
+.cc-fine{position:absolute;left:64px;bottom:64px;max-width:660px;font-family:var(--sans);font-weight:500;font-size:24px;line-height:1.35;color:#5C625E;margin:0}
 .cc-sub{font-family:var(--sans);font-weight:500;font-size:33px;line-height:1.3;color:#3c4a42;margin:22px 0 0;max-width:900px}
 .sh-collage:has(> .foot:not(.solo-r)) .cc-head{bottom:170px}
 .sh-collage > .foot{position:absolute;left:64px;right:64px;bottom:52px;z-index:6}
