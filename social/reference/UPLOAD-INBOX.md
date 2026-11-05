@@ -29,6 +29,22 @@ Artgrid, Storyblocks, Envato Elements. Instagram's 2026 originality rule treats 
 reposts as non-original, so stock is always cut with our own type, app screens or voice, never
 posted as is.
 
+## What to film for one reel (Nov 5 2026, F-017)
+One dish, one session, phone held vertical, daylight, about 10 minutes of the cook's time. Hands
+only, no faces needed.
+1. **Before:** the ingredients where they actually are: the fridge shelf, the veg drawer, or the
+   receipt on the counter. 3 to 5 s, one slow move in.
+2. **The process:** 6 to 10 clips of 2 to 4 s each, one action per clip, close: chopping, the pan
+   hitting the heat, things going in, a stir, a flip. Hold still at the start and end of each.
+3. **The money shot:** the finished dish, 5 to 8 s, with a hand doing something to it: a fork in,
+   a dip, a lift, a pull. Shoot two or three tries. This becomes the first and last frame.
+4. **The app (Travis):** a screen recording of the iEatz step that made it: the receipt import or
+   the items typed in, then the recipe with protein estimated. 10 to 20 s.
+5. **Name it:** put the dish and how long it took in the file name or a note
+   ("fridge-fried-rice-12min"), so the title card is true.
+Clips go in folder 2. Screen recordings are usually over the Drive connector's ~6.3 MB limit, so
+until the file path is fixed, AirDrop or email them to Travis to upload another way.
+
 ## How a clip becomes a reel (Oct 25 2026)
 1. Drop the clip in folder 2 (or send it in chat). It is copied to `assets/video/raw/` (gitignored).
 2. The batch gets a `footage` post: the clip, a `hold` for the last frame, two or three `overlays`

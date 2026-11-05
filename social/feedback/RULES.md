@@ -356,6 +356,39 @@ Why: the first real data on the niche, read against what a two-person team with 
 produce every week.
 Enforced by: this file at planning and in the review table; F-012's gate for the music.
 
+### F-017 · 2026-11-05 · The default reel: dish first, hands, loop
+Source: Virlo audit 2 (`reference/VIRLO-AUDIT-2-2026-11.md`): the 9 scored faceless food Reels in
+Travis's research agent, frame by frame. Small sample, 5 of the 9 from one competitor account, so
+this is how the few winners are built, not proof. The best match to our pipeline is @hangrywife's
+9-second beer cheese dip (Virality 43, 2.4K followers): a finished dish, one title card, hands
+only, a cut about every second, a track, back to the dish.
+Rule: unless the batch has a reason to do otherwise, a reel is cut to this spec.
+- **0 to 2 s: the finished dish with a hand doing something to it** (a fork in, a dip, a lift, a
+  pull). 7 of the 9 open this way. On it, a title card naming the dish and its time, "12 minute
+  fridge fried rice", on for 2 to 3 s. It is a promise with a number (F-005), eight words or fewer.
+- **Text style:** small, centered, sentence case or lowercase, no background box (what the
+  winners use), with a soft shadow or outline so it reads over any footage; contrast still
+  decides (voice rule, F-003). Usually one title card and nothing else; at most one more line, for
+  the turn.
+- **Then the process, hands only, from the fridge, the drawer or the receipt:** a new shot about
+  every second. No shot is held longer than 2 s except the money shot at the end. (The Nov 3
+  drafts held one plate for 5.5 s.)
+- **Optional, the last 3 to 6 s: a real iEatz screen recording** of the step that made the dish
+  (receipt import, or what you have turned into the recipe with protein estimated). Real screens
+  only, nothing the app does not do (F-001). The recipe-then-app Reels had the highest repost
+  counts in the set. This needs Travis's screen recordings to reach the editor, which the Drive
+  connector's ~6.3 MB limit blocked in November.
+- **End on the finished dish** so the loop restarts cleanly.
+- **Length:** 8 to 20 s for this spec. Longer only when the footage carries it (F-016).
+- **Cover:** the frame at `thumbnailOffset` shows the dish with its name on it. The cover can say
+  something different from the first-frame card.
+- **Audio:** the F-012 track; keep the clip's own sizzle low under it where it adds something.
+- **Caption:** the thought first (F-006), the app line, hashtags. The first comment follows F-015.
+What this spec does not settle (Travis's calls, listed in the audit file): an AI voiceover test,
+a comment-RECIPE DM, a series label, ingredient lists in the caption.
+Why: the one place the research describes a reel we can make every week with no one on camera.
+Enforced by: this file at the cut and the review template; the shot list in `UPLOAD-INBOX.md`.
+
 ## Keep doing
 _Things Travis called out as working._
 
