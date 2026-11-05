@@ -51,8 +51,11 @@ Write the review as that person would react, then as the editor who has to fix i
 4. **Misreading:** could it be read wrongly or partly? Who or what is "iEatz" to a stranger? Does
    any word, number or picture contradict another (a bun in the "forgot the buns" photo)? Does it
    imply the app does something it does not (F-001)?
-5. **Shorter and sharper:** is there a more efficient way to say it that is still clever, funny or
-   creative? Cut every word that does not earn its place. Try one alternative line before passing.
+5. **Whole sentences, then shorter and sharper:** read the headline and subheader aloud. Is each a
+   complete sentence a person would say (F-021)? A dropped subject or verb ("Still pancakes.")
+   fails. Then: is there a more efficient way to say it that is still clever, funny or creative?
+   Cut every word that does not earn its place, but never into a fragment. Try one alternative
+   line before passing.
 6. **Craft:** is every word readable at feed size; no word alone on a line and no number cut from
    its unit (F-018); the food looks good enough to want; the layout is not the same as the
    previous post on that channel (F-020)?
@@ -64,4 +67,5 @@ Write the review as that person would react, then as the editor who has to fix i
 | 1 | "No pancake mix in the house. *Pancakes anyway.*" | "some pancakes?" | iEatz's part is invisible | headline names iEatz |
 | 2 | "No pancake mix? *iEatz said: pancakes.*" | "what is iEatz? who said?" | still unclear, still the same bottom-panel layout | new layout, the text thread |
 | 3 | thread: "No pancake mix? Still pancakes." + bubbles | "pancakes from stuff in the kitchen, somebody's app" | iEatz not named as an app | subheader: "Told the iEatz app what we had. It wrote the recipe." |
-| 4 | same, subheader on one line, full stack in the bubble | "an app turned flour, eggs and milk into pancakes, and the roommate is coming downstairs" | none | **pass** |
+| 4 | same, subheader on one line, full stack in the bubble | "an app turned flour, eggs and milk into pancakes" | passed review, but Travis: "'still pancakes' isn't even a complete sentence" | the review missed grammar; question 5 now checks it |
+| 5 | "You don't need pancake mix to make pancakes." / "We told the iEatz app we had flour, eggs and milk. It wrote the recipe." | "you can make pancakes without the mix; an app worked it out from what was in the kitchen" | subheader broke after "It" | break between the two sentences; **pass** |

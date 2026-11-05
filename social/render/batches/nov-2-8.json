@@ -271,7 +271,7 @@
       "template": "thread",
       "footer": "badge-bl",
       "bg": "mint",
-      "head": "No pancake mix?<br>Still pancakes.",
+      "head": "You don't need pancake mix<br>to make pancakes.",
       "msgs": [
         {
           "time": "Sat 9:02 AM"
@@ -286,7 +286,7 @@
         },
         {
           "who": "me",
-          "text": "iEatz says that's pancakes"
+          "text": "iEatz says that's enough for pancakes"
         },
         {
           "who": "me",
@@ -295,7 +295,7 @@
         },
         {
           "who": "them",
-          "text": "coming downstairs"
+          "text": "ok I'm coming downstairs"
         }
       ],
       "photoClaim": "a stack of five pancakes on a white plate on a wooden table, a bottle of maple syrup behind it",
@@ -303,7 +303,7 @@
       "why": "Everyone thinks pancakes need the box; the text thread shows the moment iEatz says flour, eggs and milk are enough, and ends on the stack.",
       "app": "Tell iEatz flour, eggs and milk and it writes the pancakes, calories and protein estimated.",
       "grade": false,
-      "sub": "Told the iEatz app what we had. It wrote the recipe."
+      "sub": "We told the iEatz app we had flour, eggs and milk.<br>It wrote the recipe."
     },
     {
       "file": "p06-pin-datenight-v2",

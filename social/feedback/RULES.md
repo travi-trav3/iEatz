@@ -14,7 +14,7 @@ Why: <Travis's reason, quoted or paraphrased>
 Enforced by: copy gate (banned-phrases.txt) | copy-gate.js | diversity-gate.js | templates.js | this file
 ```
 
-## Before anything is drafted: the three checks every post passes
+## Before anything is drafted: the four checks every post passes
 
 1. **No word alone on a line (F-018).** No single word on its own line, and no number cut from
    what follows it ("25 / minutes"), anywhere in the copy on a post or a reel. The renderer
@@ -23,7 +23,10 @@ Enforced by: copy gate (banned-phrases.txt) | copy-gate.js | diversity-gate.js |
    size, and reviewed as a stranger scrolling Instagram would see it: is the message clear in two
    seconds, does it make them feel something, could it be misread, is there a sharper way to say
    it. Procedure: `reference/CREATIVE-QA.md`. No `qa.verdict: "pass"`, no draft.
-3. **Layout variety (F-020).** Never the same layout twice in a row on a channel, never more than
+3. **Whole sentences on the image (F-021).** The headline and subheader are complete, grammatical
+   sentences. "Still pancakes." is a fragment and fails; "You don't need pancake mix to make
+   pancakes." passes.
+4. **Layout variety (F-020).** Never the same layout twice in a row on a channel, never more than
    twice a week on one channel. The full set of live layouts is in `social/README.md`.
 
 ## The voice (reboot, 2026-10-30)
@@ -42,8 +45,9 @@ brand. Not a recipe magazine. A person with a point of view and a trick.
 4. Sound on. Every reel has music, under the voice when there is one (F-012). Silence is a bug.
 5. People in frame. Hands, faces, reactions, a bite. The app appears as proof, late, never as
    the hero.
-6. Write like a text message, not a brand. Lowercase is fine. Fragments are fine. Mild swearing
-   is fine. Hashtag walls are not.
+6. Write like a text message, not a brand. Lowercase is fine. Mild swearing is fine. Hashtag
+   walls are not. Fragments belong in dialogue (a text bubble, a quote) and chips only: every
+   headline and subheader is a complete sentence a person would say out loud (F-021).
 7. Be honest to the product. iEatz does not read photos of food (F-001). It reads a receipt,
    takes what you type, writes the recipe, counts the protein, sends the rest to Instacart.
    Everything else is the person.
@@ -451,6 +455,19 @@ idea; this floor only stops the opposite failure, the same two shells every day.
 Why: two layouts for a whole week made the feed look templated and lazy.
 Enforced by: diversity-gate.js rule 12 (from 2026-11-09: same non-footage layout back to back on a
 channel fails; a layout used more than twice in one channel's week fails).
+
+### F-021 · 2026-11-04 · Headlines are complete sentences
+Source: Travis, in session, Nov 4, on the pancake pin "No pancake mix? Still pancakes.": "'still
+pancakes' isn't even a complete sentence - sounds like a caveman wrote our copy."
+Rule: The headline and subheader on every post are complete, grammatical sentences, the way a
+person would say them to a friend: a subject, a verb, nothing dropped to save a word. A question is
+fine ("Out of pancake mix?") when the sentence after it answers it in full. Fragments are allowed
+only inside dialogue (a text bubble, a quoted line) and in chips. The eight-word headline limit
+(F-005) never justifies a fragment: if the complete sentence needs nine or ten words, it gets them,
+and the review says why.
+Why: clipped copy reads as broken, not punchy, and a stranger has to fill in the missing words.
+Enforced by: the Creative QA review (question 5 in `reference/CREATIVE-QA.md`) and this file; no
+gate can parse grammar reliably.
 
 ## Keep doing
 _Things Travis called out as working._
