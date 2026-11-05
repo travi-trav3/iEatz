@@ -1153,6 +1153,78 @@
             "value": "to instacart"
           }
         ]
+      },
+      "status": "retracted",
+      "note": "2026-11-05, Travis: \"cart sound is louder than the music; new end card that explains the value prop more clearly and succinctly\". Recut as v8"
+    },
+    {
+      "file": "o26-ig-footage-v8",
+      "w": 1080,
+      "h": 1920,
+      "template": "footage",
+      "footer": "badge-br",
+      "style": "center",
+      "video": "assets/video/raw/2026-10-25-grocery-aisle-cart.mp4",
+      "segments": [
+        {
+          "trim": [
+            0,
+            2.9
+          ],
+          "speed": 1.5
+        },
+        {
+          "trim": [
+            2.9,
+            4.3
+          ],
+          "speed": 1.4
+        },
+        {
+          "trim": [
+            4.3,
+            5.7
+          ],
+          "speed": 0.6
+        }
+      ],
+      "hold": 1.0,
+      "audioLevel": -34,
+      "cover": 4.6,
+      "footageClaim": "Travis's phone clip, Oct 25: walking down a grocery aisle behind a green cart, then tilting down into the cart: a bag of green beans, a pouch of jasmine rice, a carton of eggs, bananas and a bottle of strawberry lemonade",
+      "overlays": [
+        {
+          "head": "No list.<br>No plan.<br><span class=\"accent\">Just ingredients.</span>",
+          "from": 0,
+          "to": 1.9
+        },
+        {
+          "head": "This isn't dinner...",
+          "from": 1.9,
+          "to": 2.8
+        },
+        {
+          "head": "<span class=\"accent\">yet.</span>",
+          "from": 3.0,
+          "to": 3.9,
+          "at": "top"
+        },
+        {
+          "head": "Dinner. <span class=\"accent\">Decided.</span>",
+          "from": 4.0,
+          "at": "top"
+        }
+      ],
+      "why": "Travis's beats, the two-word payoff, then the value proposition in one line on the dark green card the send-this series made familiar: you tell it what you have, it writes dinner, free.",
+      "app": "Receipt import or add what you bought; iEatz writes the recipe with calories and protein.",
+      "stabilize": true,
+      "endCard": {
+        "template": "sendthis",
+        "variant": "green",
+        "duration": 3.4,
+        "showRule": true,
+        "hook": "you tell it what is in the fridge. it writes dinner.",
+        "payoff": "iEatz. free on iOS and Android."
       }
     }
   ]

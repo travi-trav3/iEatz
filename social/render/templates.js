@@ -481,7 +481,7 @@ const TEMPLATES = {
   sendthis: { defaultFooter: 'badge-bc', surface: (p) => (p.variant === 'green' ? 'dark' : 'paper'), render: (p) => {
     need(p, 'hook', 'payoff', 'variant');
     if (!['cream', 'green'].includes(p.variant)) throw new Error(`${p.file}: sendthis variant is "cream" or "green", got "${p.variant}"`);
-    if (p.w !== 1080 || p.h !== 1350) throw new Error(`${p.file}: sendthis renders Instagram 1080x1350 only, got ${p.w}x${p.h}`);
+    if (p.w !== 1080 || (p.h !== 1350 && p.h !== 1920)) throw new Error(`${p.file}: sendthis renders Instagram 1080x1350 (or 1080x1920 as a reel end card) only, got ${p.w}x${p.h}`);
     const hook = plain(p.hook), pay = plain(p.payoff);
     const hw = hook.split(' ').length, pw = pay.split(' ').length;
     // The approved posts 01 and 04 run 16 words; the brief's "14 or fewer" is the writing target.

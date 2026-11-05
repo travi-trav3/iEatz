@@ -54,3 +54,5 @@ Maya
 Leoactionz
 SixSocks
 COOKBOOK   # the ManyChat keyword, always upper case
+iOS
+Android
