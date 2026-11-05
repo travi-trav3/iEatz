@@ -298,6 +298,45 @@
       "text": "the sunday roast everyone photographs is also monday, tuesday and wednesday. the turkey, the potatoes, the greens: three more dinners hiding on that plate.\n\ntell iEatz what's left on monday morning and it writes the week from the leftovers, calories and protein estimated, the one thing you're missing to Instacart. free on iOS and Android.",
       "alt": "Pin: a holiday plate on an orange plaid runner with sliced turkey, mashed potatoes, greens and stuffing, mini pumpkins behind it, above a paper panel. Eyebrow: Sunday roast. Headline: One roast. Three more dinners hiding in it. Chips: turkey, potatoes, greens; 3 dinners; leftovers in, week out.",
       "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling. Nov 2 11:30 PT: bumped to the Nov 9 week to make room for the burger bowl on Sunday; render and caption unchanged."
+    },
+    {
+      "id": "o07-ig",
+      "status": "draft",
+      "channel": "instagram",
+      "dueAt": "2026-11-08T09:45:00-08:00",
+      "format": "carousel",
+      "slides": [
+        "assets/social/nov2/o07-ig-cookbook-fridge--01.png",
+        "assets/social/nov2/o07-ig-cookbook-fridge--02.png",
+        "assets/social/nov2/o07-ig-cookbook-fridge--03.png",
+        "assets/social/nov2/o07-ig-cookbook-fridge--04.png",
+        "assets/social/nov2/o07-ig-cookbook-fridge--05.png"
+      ],
+      "pillar": "Grocery/Instacart",
+      "topic": "Cookbook",
+      "cta": "cookbook-dm",
+      "hook": "problem",
+      "text": "comment COOKBOOK and 30 dinners show up in your dms. free.\n\nyou know the move. open the fridge. close it. open it again like something new is going to be in there. twenty minutes later doordash wins and so does the guilt.\n\nthese are 30 dinners that end that. every one under 30 minutes. every one with a tap-to-shop instacart cart, so the groceries come to you and the thinking is already done. loaded nachos, garlic chicken, black bean quesadillas. food that looks like a friday, not a diet.\n\ncomment COOKBOOK. we'll dm it. tag the person who's staring at their fridge right now.\n\n#mealplanning #weeknightdinner #30minutemeals #easydinners #ieatzhealthy",
+      "firstComment": "be honest, how many times have you opened the fridge tonight?",
+      "why": "Boost concept B: the fridge-stare everyone knows, then the cookbook as the way out, proof slides (nachos from a real user, what's inside), and the ask with real dinners beside it.",
+      "app": "The cookbook's recipes each come with a tap-to-shop Instacart list; the DM flow hands out the book.",
+      "source": "Travis's design 'Fridge Four Times' (Claude Design bundle, uploaded Nov 4), polished in session: social/reference/design-source/fridge-four-times-polish.js",
+      "proof": "Nachos photo: Travis's own dinner from an iEatz recipe (in session Nov 4 23:05 PT). Recipe names on slide 4 are the ones named in earlier cookbook posts (o28, o31) and in Travis's caption. Slide 1 fridge photo is from the stock library (allowed until Nov 15, F-008).",
+      "alt": "Five-slide carousel. 1: an open fridge at night, 'You've opened the fridge four times tonight...' / 'Nothing changed. We checked.', tag 'Free cookbook inside'. 2: cream, 'We planned 30 dinners so you don't have to.' and how the shopping works. 3: loaded sheet-pan nachos, 'Yes, there are loaded nachos in this cookbook.' / 'It's real food that looks like a Friday, not a diet.', tag 'Made by a real iEatz user'. 4: dark green, 'Here's a taste of what's inside.' with five recipes under 30 minutes and 'Plus 25 more, each with its own Instacart list.' 5: 'Comment COOKBOOK and it's yours.' / 'We'll DM you all 30 dinners. It's free.' with three photos of real dinners.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 3,
+        "read": "I keep staring at my fridge; this free cookbook plans 30 quick dinners, comment COOKBOOK to get it",
+        "fixed": [
+          "slide 1 said nothing about the cookbook for people who don't swipe: added 'Free cookbook inside' tag",
+          "slide 2 headline was two fragments (F-021)",
+          "slide 3 headline fragment; added real-user tag",
+          "slide 4 was a placeholder with an unconfirmed '23 minutes': replaced by a what's-inside list",
+          "slide 5 'Comment / COOKBOOK.' was one word per line (F-018) and 'Free.' a fragment; added proof thumbnails",
+          "'30 / dinners' split; 'iEatz' uppercased in a tag"
+        ]
+      },
+      "note": "Second comment-COOKBOOK concept for the $20 boost decision (vs o04-ig collage). Draft for Sun Nov 8 09:45 PT so the two never publish together; publish only the winner."
     }
   ]
 }
