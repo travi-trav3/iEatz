@@ -88,9 +88,7 @@ When the Sunday routine creates a reel draft (F-010, F-014):
 3. Leave `metadata.instagram` as `{type: "reel", shouldShareToFeed: true}`. No Trial Reel step
    (F-013).
 
-**`needs music` tag id:** not created yet. Travis creates the tag once in Buffer (any reel draft,
-Tags, new tag `needs music`); the next session reads its id from that post with `get_post` and
-writes it here.
+**`needs music` tag id:** `6aeb8cffd38803d21dbdebac` (Buffer name "Needs Music", colour #D925AC; read Nov 4 2026 from post 6ada61d12f4faf5f79630579). Pass it in `tagIds` on `create_post` for every reel.
 
 ## Travis's step, per reel (about a minute)
 
