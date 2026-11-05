@@ -222,6 +222,10 @@ Org **"Applied Intelligence Co."** = `6a138b7d82bb2ed009fed356`.
 - Common `create_post` args: `channelId`, `schedulingType:"automatic"`, `mode:"customScheduled"`,
   `dueAt` (ISO with `-07:00`), `text`, `assets:[{image:{url, thumbnailUrl, metadata:{altText, dimensions}}}]`.
 
+- **Editing a scheduled post moves it back to draft (verified Nov 4 2026).** `edit_post` on a
+  `scheduled` post without `mode` returned it as `draft`, despite the tool's note that omitting mode
+  keeps the slot. When a scheduled post must stay scheduled, send `mode: "customScheduled"`, its
+  `dueAt` and `saveToDraft: false` in the same edit, and check `status` in the reply.
 - **Plan: Buffer Essentials since Nov 4 2026** (was Free). What it changed, checked through the
   API the same day: scheduled posts up to 5,000 (was 10 per channel), 250 tags, first comments on
   Instagram (F-015), and `get_aggregated_post_metrics` beyond the Free plan's last-31-days window
