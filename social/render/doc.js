@@ -87,14 +87,14 @@ function htmlDoc(p, PHOTOS, opts = {}) {
   if (!t) throw new Error(`unknown template "${p.template}" for ${p.file}`);
   const grain = p.grain === true && !t.ownGrain ? '<div class="grain-layer fixed"></div>' : '';
   const pager = p._pager ? `<div class="pager">${p._pager.n} / ${p._pager.total}</div>` : '';
-  return `<!doctype html><html><head><meta charset="utf-8">
+  return glueUnits(`<!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="file://${DIR}/fonts.css">
 <style>${baseCss}
 html,body{width:${p.w}px;height:${p.h}px;margin:0}.pin{width:${p.w}px;height:${p.h}px}
 :root{--s:${p.w / 1080}}
 ${p.statSize ? `.ig-statdark .bignum{font-size:${p.statSize}px}` : ''}
 ${p.headSize ? `.ig-bleed .bhead{font-size:${p.headSize}px}.po-head,.rc-head,.cc-head{font-size:${p.headSize}px}` : ''}
-</style></head><body>${t.render(p, PHOTOS)}${grain}${pager}${FIT_SCRIPT}${SAFE_SCRIPT}${opts.motion ? t.motion(p) : ''}</body></html>`;
+</style></head><body>${t.render(p, PHOTOS)}${grain}${pager}${FIT_SCRIPT}${SAFE_SCRIPT}${ORPHAN_SCRIPT}${opts.motion ? t.motion(p) : ''}</body></html>`);
 }
 
 // [data-safe="<pad px>[,<max bottom fraction>]"]: after fitting, the element's box must sit inside
@@ -110,7 +110,30 @@ for(const o of document.querySelectorAll(el.dataset.clear)){if(o===el||el.contai
 if(r.left<q.right-1&&r.right>q.left+1&&r.top<q.bottom-1&&r.bottom>q.top+1){out.push(n+' sits over '+((o.className||o.tagName).toString().split(' ')[0])+' (F-003: type on clean paper)');break;}}}
 for(const u of document.querySelectorAll('.u')){if(u.getClientRects().length>1){out.push('underlined phrase "'+u.textContent.trim()+'" wraps onto two lines (shorten it or the headline)');break;}}
 for(const h of document.querySelectorAll('.po-head,.th-head,.t-steps .head,.t-list .head,.bhead,.cc-head')){const lh=parseFloat(getComputedStyle(h).lineHeight)||1;const lines=Math.round(h.getBoundingClientRect().height/lh);if(lines>4){out.push(((h.className||h.tagName).toString().split(' ')[0])+' runs to '+lines+' lines (max 4: cut the headline)');break;}}
+if(window.__orphans)out.push(...window.__orphans());
 return out;};</script>`;
+
+// F-018: no word alone on a line, and no number cut from what follows it, in any rendered copy.
+// Lines are read from the browser's own layout: every word's box, grouped by its top edge, inside
+// each block that owns text. Runs after __fit, so it judges the copy at the size it ships.
+const ORPHAN_SCRIPT = `<script>window.__orphans=()=>{const out=[],inl=e=>getComputedStyle(e).display.startsWith('inline');
+for(const el of document.body.querySelectorAll('*')){if(/^(SCRIPT|STYLE|IMG|svg|path)$/i.test(el.tagName))continue;const cs=getComputedStyle(el);if(cs.display==='none'||cs.visibility==='hidden'||inl(el))continue;
+let owns=false;for(const c of el.childNodes){if(c.nodeType===3&&c.textContent.trim()){owns=true;break;}if(c.nodeType===1&&inl(c)&&c.textContent.trim()){owns=true;break;}}if(!owns)continue;
+const words=[],tw=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n;while((n=tw.nextNode())){let p=n.parentElement,nested=false;while(p&&p!==el){if(!inl(p)){nested=true;break;}p=p.parentElement;}if(nested)continue;
+const re=/\\S+/g;let m;while((m=re.exec(n.textContent))){const r=document.createRange();r.setStart(n,m.index);r.setEnd(n,m.index+m[0].length);const q=r.getClientRects()[0];if(!q||!q.width)continue;words.push({w:m[0],top:q.top,h:q.height});}}
+if(words.length<2)continue;const lines=[];for(const w of words){const L=lines[lines.length-1];if(L&&Math.abs(w.top-L.top)<w.h*0.5)L.ws.push(w.w);else lines.push({top:w.top,ws:[w.w]});}
+if(lines.length<2)continue;const name=(el.className||el.tagName).toString().split(' ')[0],txt=el.textContent.trim().replace(/\\s+/g,' ').slice(0,70);
+lines.forEach((L,i)=>{if(L.ws.length===1)out.push('orphan (F-018): "'+L.ws[0]+'" alone on line '+(i+1)+' of '+lines.length+' in '+name+' ("'+txt+'")');
+if(i<lines.length-1&&/^[$£€]?\\d[\\d.,:]*$/.test(L.ws[L.ws.length-1]))out.push('orphan (F-018): the number "'+L.ws[L.ws.length-1]+'" ends line '+(i+1)+' in '+name+', cut from "'+lines[i+1].ws[0]+'" ("'+txt+'")');});}
+return out;};</script>`;
+
+// A number stays on the line with its unit: "25 minutes", "12 g", "$4.98 a dinner" never split.
+const UNIT = /(\d)\s+(minutes?|mins?|hours?|hrs?|seconds?|g|grams?|kg|oz|lbs?|cups?|items?|dinners?|breakfasts?|lunches|meals?|recipes?|ingredients?|days?|weeks?|servings?|nights?|people|%)\b/gi;
+function glueUnits(html) {
+  return html.split(/(<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>)/i)
+    .map(part => /^<(script|style)/i.test(part) ? part : part.replace(/>([^<]*)</g, (m, t) => '>' + t.replace(UNIT, '$1&nbsp;$2') + '<'))
+    .join('');
+}
 
 // Wait for fonts + images, force-load and check every face, then fit text and check safe zones.
 // Returns QA facts: imgs, fc (font checks) and safe (violations, empty when clean).

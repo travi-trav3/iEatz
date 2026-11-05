@@ -163,6 +163,8 @@ const volume = (ff, mp4) => {
     await page.evaluate((tt) => window.setT(tt), duration);
     const cover = path.join(OUT, p.file + '-cover.png');
     await sharp(await page.screenshot({ clip: { x: 0, y: 0, width: W, height: H } })).resize(W, H, { fit: 'fill', kernel: 'lanczos3' }).png({ compressionLevel: 9 }).toFile(cover);
+    // F-018: the copy on the final, fully built frame may not leave a word alone on a line.
+    problems.push(...await page.evaluate(() => (window.__orphans ? window.__orphans() : [])));
     await page.close();
     const mb = fs.statSync(mp4).size / 1048576;
     if (mb >= MAX_MB) problems.push(`size ${mb.toFixed(2)}MB >= ${MAX_MB}MB`);

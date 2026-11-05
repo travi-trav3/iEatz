@@ -82,7 +82,7 @@ Current kit (surface in brackets; the gate reads it):
 | `poster` | paper | `head` (≤1 `<span class="u">` tomato underline, ≤1 `<span class="i">` green italic), `body`, `readout[{label,value}]` ≤3, `strip` | badge-tr · **motion** |
 | `collage` | paper-deep | `cards[{photo,w,h,x,y,rot,tape?,objPos?}]` 2–3, `notes[{text,x,y,big?}]`, `arrow{text,x,y}`?, `price{text,x,y}`?, `head`, `grain` (default true). Positions are px on the 1080x1350 frame; other sizes scale by width, centered | badge-tl |
 | `split` | photo-bleed | `top{photo,objPos,label}`, `bottom{photo,objPos}`, `seam`, `cap` (`<b>` = mono saffron) | badge-br |
-| `thread` | mint / photo-bleed | `bg`: `"mint"` or `{photo,objPos}`, `head`?, `msgs[]` ≤8 bubbles: `{who,text}` (who = them or me), `{who:"me",photo}`, `{time}`; `foot` | badge-br |
+| `thread` | mint / photo-bleed | `bg`: `"mint"` or `{photo,objPos}`, `head`?, `sub`? (sans subheader under the head, Nov 2026), `msgs[]` ≤8 bubbles: `{who,text}` (who = them or me), `{who:"me",photo}`, `{time}`; `foot` | badge-br |
 | `sharpie` | photo-bleed | `photo`, `objPos`, `head` (≤24 chars, marker caps), `marks[{x,y,rx,ry,label,labelSide}]` 1–4, `arrows[{x1,y1,x2,y2}]`?, `ink` (`#0A0F0C` or `#fff`), `shade`? (auto). Marks are in 1080x1350 photo space; a mark cropped out at another size throws | badge-br |
 | `sendthis` | paper (cream) / dark (green) | `hook` (plain text, ≤16 words / 120 chars, `\n` = intentional break, never names the app), `payoff` (italic, ≤12 words, ≤2 lines), `variant` `cream` \| `green`, `showRule`? (hairline between them). Lowercase except `copy-allowlist.txt` capitals; no dashes, emoji or hashtags. Hook size tiers 124/110/98 px by length, then the safe-zone assertion. **1080x1350 only** (the pillar has no Pinterest variant). Reference: `../reference/design-system/ig-send-this/` | badge-bc |
 | `bleed` | photo-bleed | `photo`, `objPos`, `eyebrow`, `head`, `sub`, `headSize` | badge-url · **motion** |
@@ -159,6 +159,10 @@ show what iEatz did. The gate prints the rationale table; read it before the ren
   The rotation rules (adjacency, template cap, pillar rules, formulaic CTA cap, accent-tail and
   eyebrow ratios, plated cap, carousel and reel per week) were dropped in Nov 2026
   (`feedback/RULES.md`, F-007): the post's job picks the shell.
+- **Render checks** (every render, `doc.js`): safe zones, type over photos on paper shells, and
+  **no word alone on a line or number cut from its unit** (F-018, `__orphans()`; render-motion checks
+  the final frame). **From 2026-11-09 the set gate also needs a Creative QA pass (`qa`) on every post
+  (F-019) and fails the same non-footage layout back to back or 3 times a week on a channel (F-020).**
 - **Copy gate** (`copy-gate.js`, also run by the set gate): no em dash, no en dash as a dash, no
   "not X, it's Y" family, sentence-case headlines (allowlist in `copy-allowlist.txt`; lowercase
   is fine), every `photoClaim` shares a noun with its headline or caption, nothing on

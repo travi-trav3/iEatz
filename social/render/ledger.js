@@ -54,7 +54,7 @@ function derive(r) {
 // Copy a gate should read: [{field, text}] for every rendered string plus caption fields.
 const SKIP = new Set(['file', 'photo', 'objPos', 'template', 'footer', 'channel', 'dueAt', 'id', 'status', 'bufferId', 'slackAlert',
   'surface', 'pillar', 'topic', 'cta', 'heroPhoto', 'format', 'photoStyle', 'board', 'boardServiceId', 'labelSide', 'ink', 'bg', 'createdAt', 'url', 'alt', 'variant',
-  'hook', 'hookType', 'track', 'sound', 'variantOf', 'video', 'cover', 'videoTitle', 'source']);
+  'hook', 'hookType', 'track', 'sound', 'qa', 'variantOf', 'video', 'cover', 'videoTitle', 'source']);
 function copyOf(obj, prefix = '', out = []) {
   if (Array.isArray(obj)) { obj.forEach((v, i) => copyOf(v, `${prefix}[${i}]`, out)); return out; }
   if (obj && typeof obj === 'object') {
@@ -100,6 +100,7 @@ function load(file) {
       hook: ['problem', 'promise', 'surprise'].find(h => h === raw.hook || (r && h === r.hookType)) || null,
       track: raw.track || null,
       sound: raw.sound || null,
+      qa: raw.qa || null,
       variantOf: raw.variantOf || (r && r.variantOf) || null,
       status: raw.status || null,
     };

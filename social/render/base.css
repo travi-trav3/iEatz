@@ -360,6 +360,8 @@ html.footage,html.footage body,.ig-bleed.footage{background:transparent}
 .sh-thread:has(> .badge.corner.tl, > .badge.corner.tr){padding-top:150px}
 .th-head{font-family:var(--serif);font-weight:400;font-size:84px;line-height:1.0;letter-spacing:-0.01em;color:var(--ink)}
 .th-head .accent,.th-head em{font-style:italic;color:var(--green)}
+.th-sub{font-family:var(--sans);font-weight:500;font-size:34px;line-height:1.25;color:var(--ink-medium,#3c4a42);margin:18px 0 0;max-width:820px}
+.sh-thread.on-photo .th-sub{color:#fff}
 /* Headline and bubbles form one block, centred by the ::before spacer and th-fill; the foot row
    stays on the bottom. Before: bubbles floated mid-frame with a 300px gap under the headline. */
 .sh-thread::before{content:"";flex:1 1 0;min-height:0}
@@ -456,3 +458,6 @@ html.footage,html.footage body,.ig-bleed.footage{background:transparent}
   .sk-head{top:250px}
   .sh-collage > .foot{bottom:330px}
 }
+
+/* F-018: no word alone on a line. Browsers that support it avoid short last lines; the render check (doc.js __orphans) catches the rest. */
+body *{text-wrap:pretty}

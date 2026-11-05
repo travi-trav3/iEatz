@@ -90,7 +90,7 @@
       "objPos": "50% 40%",
       "photoClaim": "a tall beef burger with lettuce, tomato and onion on a seeded bun, a pick through the top, on a slate with potato wedges, a red leather booth behind",
       "eyebrow": "Free cookbook",
-      "head": "30 dinners you'd actually eat. <span class=\"accent\">Comment COOKBOOK.</span>",
+      "head": "30 dinners you'd actually eat.<br><span class=\"accent\">Comment COOKBOOK.</span>",
       "hookType": "promise",
       "why": "The weekly ask with the offer as the whole frame. A free cookbook has one thing to prove to a stranger: that the food is food you want. The burger says it before the headline does, so it sits in the light, not under a scrim.",
       "app": "The cookbook: 30 recipes, each with a tap-to-shop Instacart list, delivered by DM when someone comments COOKBOOK.",
@@ -189,7 +189,7 @@
       "grade": false,
       "photoClaim": "a bunless burger bowl on a wooden table: a beef patty under lettuce, tomato, avocado and a pickle in a white bowl, a bowl of fries and a stacked burger behind it",
       "eyebrow": "Monday, 6:40 PM",
-      "head": "Forgot the buns. <span class=\"accent\">Didn't go back.</span>",
+      "head": "Forgot the buns.<br><span class=\"accent\">Didn't go back.</span>",
       "hookType": "surprise",
       "why": "The brand in one frame: a real burger night in a real kitchen, no bun, no store run, still dinner. The surprise is that it got better, not worse.",
       "app": "Add the four ingredients to iEatz and it writes the burger bowl with calories and protein estimated; the bun goes to Instacart if you want it.",
@@ -231,7 +231,7 @@
       "grade": false,
       "photoClaim": "sheet-pan nachos on a baking tray: tortilla chips under melted cheese, mushrooms, cherry tomatoes, jalapeno slices and dollops of guacamole, a bowl of guacamole beside it",
       "eyebrow": "Free cookbook",
-      "head": "30 dinners you'd actually eat. <span class=\"accent\">Comment COOKBOOK.</span>",
+      "head": "30 dinners you'd actually eat.<br><span class=\"accent\">Comment COOKBOOK.</span>",
       "chips": [
         "every one under 30 minutes",
         "an Instacart list per recipe",
@@ -260,7 +260,50 @@
       ],
       "hookType": "surprise",
       "why": "The box is the thing people think they need; the stack says the pantry had it the whole time. Weekend breakfast is the most-saved pin category we post into.",
-      "app": "Tell iEatz flour, eggs and milk and it writes the pancakes with calories and protein estimated; out of syrup, it goes to Instacart."
+      "app": "Tell iEatz flour, eggs and milk and it writes the pancakes with calories and protein estimated; out of syrup, it goes to Instacart.",
+      "status": "retracted",
+      "note": "2026-11-04 21:00 PT: replaced by v4 (thread), Travis: still not clear enough."
+    },
+    {
+      "file": "p05-pin-pancakes-v4",
+      "w": 1000,
+      "h": 1500,
+      "template": "thread",
+      "footer": "badge-bl",
+      "bg": "mint",
+      "head": "No pancake mix?<br>Still pancakes.",
+      "msgs": [
+        {
+          "time": "Sat 9:02 AM"
+        },
+        {
+          "who": "them",
+          "text": "we're out of pancake mix"
+        },
+        {
+          "who": "me",
+          "text": "we have flour, eggs and milk"
+        },
+        {
+          "who": "me",
+          "text": "iEatz says that's pancakes"
+        },
+        {
+          "who": "me",
+          "photo": "own/2026-10-29-travis-img5625.jpg",
+          "objPos": "50% 70%"
+        },
+        {
+          "who": "them",
+          "text": "coming downstairs"
+        }
+      ],
+      "photoClaim": "a stack of five pancakes on a white plate on a wooden table, a bottle of maple syrup behind it",
+      "hookType": "surprise",
+      "why": "Everyone thinks pancakes need the box; the text thread shows the moment iEatz says flour, eggs and milk are enough, and ends on the stack.",
+      "app": "Tell iEatz flour, eggs and milk and it writes the pancakes, calories and protein estimated.",
+      "grade": false,
+      "sub": "Told the iEatz app what we had. It wrote the recipe."
     },
     {
       "file": "p06-pin-datenight-v2",

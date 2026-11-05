@@ -37,6 +37,7 @@ const copyGate = require('./copy-gate');
 const STOCK_ENDS = '2026-11-15';   // F-008: from this, own photos first; stock only while no own photo is free
 const TRACK_FROM = '2026-11-02';   // F-009: from this, no reel without a track
 const FIRST_COMMENT_FROM = '2026-11-09'; // F-015: from this, a first comment on every Instagram post
+const QA_FROM = '2026-11-09';            // F-019 / F-020: from this, Creative QA pass and layout variety
 const SOUND_FROM = '2026-11-09';   // F-012 / F-013: from this, 2-3 sound picks per reel and no hook variants
 const REPO = path.resolve(__dirname, '../..');
 const PHOTO_SOURCE = {};
@@ -189,6 +190,27 @@ function gate(file, opts = {}) {
       if (/https?:\/\/|www\./i.test(fc)) fails.push(`instagram: ${p.id} firstComment has a link (F-015)`);
       if (p.cta === 'cookbook-dm' && /cookbook/i.test(fc)) fails.push(`instagram: ${p.id} firstComment says COOKBOOK on a cookbook-dm post; ManyChat may fire on our own comment (F-015)`);
     });
+    // 11. F-019: every post due from 2026-11-09 carries a Creative QA pass on its rendered image.
+    // 12. F-020: on a channel, never the same layout twice in a row, never more than twice a week.
+    //     Footage reels are exempt (the footage is the variety).
+    {
+      const late = ps.filter(p => p.status && p.dueAt && p.dueAt.slice(0, 10) >= QA_FROM);
+      late.forEach(p => {
+        const qa = p.qa || {};
+        if (qa.verdict !== 'pass' || !String(qa.read || '').trim())
+          fails.push(`${channel}: ${p.id} has no Creative QA pass (ledger "qa": {verdict: "pass", read, rounds, fixed}; F-019, reference/CREATIVE-QA.md)`);
+      });
+      const shellOf = p => p.template || (p.render && p.render.template) || null;
+      let prev = null; const perWeek = {};
+      late.forEach(p => {
+        const t = shellOf(p); if (!t || t === 'footage') { prev = null; return; }
+        if (prev && shellOf(prev) === t) fails.push(`${channel}: ${prev.id} and ${p.id} are both "${t}" back to back (F-020)`);
+        const d = new Date(p.dueAt.slice(0, 10) + 'T12:00:00Z'); const mon = new Date(d); mon.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+        const k = mon.toISOString().slice(0, 10) + ':' + t; perWeek[k] = (perWeek[k] || 0) + 1;
+        if (perWeek[k] === 3) fails.push(`${channel}: "${t}" used 3 times in the week of ${k.slice(0, 10)} (max 2; F-020)`);
+        prev = p;
+      });
+    }
     // 8. Instagram: one comment-COOKBOOK post a week keeps the ManyChat flow fed. A warning: a
     //    week with no footage ships two posts, and the right posts beat the calendar.
     if (channel === 'instagram' && n && ps[0].status) {

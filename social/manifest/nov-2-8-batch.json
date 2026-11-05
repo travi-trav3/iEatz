@@ -128,7 +128,7 @@
       "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-11-04T18:45:00-08:00",
-      "file": "assets/social/nov2/o04-ig-cookbook-nachos-v2.png",
+      "file": "assets/social/nov2/o04-ig-cookbook-nachos-v3.png",
       "pillar": "Grocery/Instacart",
       "topic": "Cookbook",
       "cta": "cookbook-dm",
@@ -137,7 +137,7 @@
       "text": "comment COOKBOOK and the book's in your dms. free.\n\n30 dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list so the cart builds itself. real food from a real kitchen, the kind that looks like nacho night, not like a diet. one-pan garlic chicken and broccoli. ground beef and sweet potato skillet. black bean and corn quesadillas. shrimp and zucchini stir-fry. 26 more.\n\none word: COOKBOOK.\n\n#mealplanning #weeknightdinner #30minutemeals #easydinners #ieatzhealthy",
       "firstComment": null,
       "alt": "Sheet-pan nachos with melted cheese, mushrooms, cherry tomatoes, jalapeno and guacamole on a baking tray, a bowl of guacamole beside it, above a paper panel. Eyebrow: Free cookbook. Headline: 30 dinners you'd actually eat. Comment COOKBOOK. Chips: every one under 30 minutes; an Instacart list per recipe; free, in your DMs.",
-      "note": "The week's comment-COOKBOOK post (Wednesday per the reboot doc). Boost the organic post itself so the ManyChat trigger keeps firing on its comments; o31 (Sat Oct 31) was the last boost candidate. No first comment: Buffer Free plan. The recipe names are the ones listed in o28 and o31. v2 on Travis's own nachos photo; the stock burger frame retired before scheduling.",
+      "note": "The week's comment-COOKBOOK post (Wednesday per the reboot doc). Boost the organic post itself so the ManyChat trigger keeps firing on its comments; o31 (Sat Oct 31) was the last boost candidate. No first comment: Buffer Free plan. The recipe names are the ones listed in o28 and o31. v2 on Travis's own nachos photo; the stock burger frame retired before scheduling. Nov 4: v3, 'Comment COOKBOOK.' on its own line instead of 'COOKBOOK.' alone (F-018).",
       "bufferId": "6ae93d0b7996caf141c50a91",
       "draftedAt": "2026-11-02T17:47:00-08:00"
     },
@@ -146,7 +146,7 @@
       "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-11-05T12:10:00-08:00",
-      "file": "assets/pinterest/nov2/p05-pin-pancakes-v3.png",
+      "file": "assets/pinterest/nov2/p05-pin-pancakes-v4.png",
       "pillar": "Recipe/Food",
       "topic": "Pancakes",
       "cta": "app-value",
@@ -157,11 +157,23 @@
       "url": "https://apps.apple.com/us/app/id6475559706",
       "title": "Pancakes without pancake mix: flour, eggs and milk, 20 minute weekend breakfast",
       "text": "no pancake mix in the house and nobody's going to the store at 9 AM. flour, eggs, milk. that's pancakes, you just haven't decided yet.\n\ntell iEatz the three and it writes the recipe in seconds, calories and protein estimated (about 12 g a stack). syrup to Instacart if you're out. free on iOS and Android.",
-      "alt": "Pin: a stack of five pancakes on a white plate on a wooden table, a jar of peanut butter and a jug of maple syrup behind it, above a paper panel. Eyebrow: Flour, eggs, milk. That's it. Headline: No pancake mix? iEatz said: pancakes. Chips: no store run; 20 minutes; about 12 g protein.",
+      "alt": "Pin in a text-thread layout on mint. Headline: No pancake mix? Still pancakes. Subheader: Told the iEatz app what we had. It wrote the recipe. Messages: we're out of pancake mix / we have flour, eggs and milk / iEatz says that's pancakes / a photo of a stack of five pancakes with maple syrup behind / coming downstairs.",
       "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling. Nov 4 20:40 PT: v3 headline on Travis's note (\"needs a bit more clarity ... iEatz told me I have the ingredients to make pancakes anyway\"); 'Pancakes anyway' alone did not say iEatz was involved.",
       "bufferId": "6ae93d346f053cdb90b7406e",
       "draftedAt": "2026-11-02T17:47:00-08:00",
-      "proof": "Travis, in session Nov 4 2026 ~20:30 PT: iEatz told him flour, eggs and milk were enough for pancakes. The pin may say iEatz suggested them; it must not say the app read a photo (F-001)."
+      "proof": "Travis, in session Nov 4 2026 ~20:30 PT: iEatz told him flour, eggs and milk were enough for pancakes. The pin may say iEatz suggested them; it must not say the app read a photo (F-001).",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 4,
+        "read": "an app turned flour, eggs and milk into pancakes, and the roommate is coming downstairs",
+        "fixed": [
+          "iEatz's part was invisible in 'Pancakes anyway'",
+          "'iEatz said: pancakes' still did not say what iEatz is",
+          "moved off the bottom-panel layout to the text thread",
+          "subheader names the app",
+          "full stack shown in the photo bubble"
+        ]
+      }
     },
     {
       "channel": "instagram",
@@ -194,7 +206,7 @@
       "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-11-06T12:10:00-08:00",
-      "file": "assets/pinterest/nov2/p06-pin-datenight-v2.png",
+      "file": "assets/pinterest/nov2/p06-pin-datenight-v3.png",
       "pillar": "Lifestyle",
       "topic": "Date night",
       "cta": "app-value",
@@ -206,7 +218,7 @@
       "title": "Date night dinner at home in 25 minutes: steak, ravioli and broccoli, no reservation",
       "text": "friday. no reservation, no plan, a steak in the fridge and a bag of ravioli. candles are free. that's date night, you just haven't decided yet.\n\ntell iEatz the three and it writes the whole table in seconds, calories and protein estimated, the parmesan to Instacart if you're out. free on iOS and Android.",
       "alt": "Pin: a set table from above, a cutting board of sliced steak, a bowl of ravioli with herbs and parmesan, a bowl of broccoli, candles and pink napkins, a hand reaching in at the top. Eyebrow: Friday, no reservation. Headline: Date night at home. 25 minutes. Line: a steak, a bag of ravioli, a head of broccoli; tell iEatz the three and it writes the whole table, protein counted.",
-      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling.",
+      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling. Nov 4: v3 re-render, '25 minutes' kept together (F-018).",
       "bufferId": "6ae93d396f053cdb90b74421",
       "draftedAt": "2026-11-02T17:47:00-08:00"
     },
@@ -236,7 +248,7 @@
       "status": "draft",
       "channel": "pinterest",
       "dueAt": "2026-11-08T12:10:00-08:00",
-      "file": "assets/pinterest/nov2/p02-pin-burgerbowl-v2.png",
+      "file": "assets/pinterest/nov2/p02-pin-burgerbowl-v3.png",
       "pillar": "Pantry/Fridge",
       "topic": "Burger bowl",
       "cta": "app-value",
@@ -248,7 +260,7 @@
       "title": "Burger bowl without the bun: 20 minute dinner from ground beef, avocado and lettuce",
       "text": "made burgers. forgot buns. didn't go back to the store. made the iEatz burger bowl instead and honestly it was better.\n\nthis one came straight out of iEatz. tell it what you've got and it writes the recipe, calories and protein estimated, buns to Instacart if you must. free on iOS and Android.",
       "alt": "Pin: a bunless burger bowl with lettuce, tomato, avocado and a pickle, a bowl of fries and a stacked burger behind it on a wooden table, above a paper panel. Eyebrow: Monday, 6:40 PM. Headline: Forgot the buns. Didn't go back. Chips: ground beef, lettuce, avocado; 20 minutes; buns to Instacart, if you must.",
-      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling. Nov 2: caption strengthened to say the bowl came out of iEatz, on Korian's confirmation that it did. Nov 2 11:30 PT: no go from Travis by the cutoff, so Monday's slot passed unscheduled; moved to Sun Nov 8 12:10 (as said in #social).",
+      "note": "v2 on Travis's own photo (Drive inbox Oct 29); stock v1 retired before scheduling. Nov 2: caption strengthened to say the bowl came out of iEatz, on Korian's confirmation that it did. Nov 2 11:30 PT: no go from Travis by the cutoff, so Monday's slot passed unscheduled; moved to Sun Nov 8 12:10 (as said in #social). Nov 4: v3, headline broken after 'Forgot the buns.' (F-018).",
       "proof": "Korian (founder) cooked this from an iEatz recipe; confirmed in #social Nov 1 05:24 PT, ts 1793539466.240409. The caption may say it came out of iEatz; it must not say the app read a photo (F-001).",
       "bufferId": "6ae93d477996caf141c5164e",
       "draftedAt": "2026-11-02T17:47:00-08:00"

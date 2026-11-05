@@ -14,6 +14,18 @@ Why: <Travis's reason, quoted or paraphrased>
 Enforced by: copy gate (banned-phrases.txt) | copy-gate.js | diversity-gate.js | templates.js | this file
 ```
 
+## Before anything is drafted: the three checks every post passes
+
+1. **No word alone on a line (F-018).** No single word on its own line, and no number cut from
+   what follows it ("25 / minutes"), anywhere in the copy on a post or a reel. The renderer
+   fails the render when it happens.
+2. **Creative QA on the screenshot (F-019).** The final image is looked at, full size and at feed
+   size, and reviewed as a stranger scrolling Instagram would see it: is the message clear in two
+   seconds, does it make them feel something, could it be misread, is there a sharper way to say
+   it. Procedure: `reference/CREATIVE-QA.md`. No `qa.verdict: "pass"`, no draft.
+3. **Layout variety (F-020).** Never the same layout twice in a row on a channel, never more than
+   twice a week on one channel. The full set of live layouts is in `social/README.md`.
+
 ## The voice (reboot, 2026-10-30)
 
 From the approved reboot doc (iEatz Social Reboot, Oct 30 2026). This section outranks the
@@ -388,6 +400,57 @@ What this spec does not settle (Travis's calls, listed in the audit file): an AI
 a comment-RECIPE DM, a series label, ingredient lists in the caption.
 Why: the one place the research describes a reel we can make every week with no one on camera.
 Enforced by: this file at the cut and the review template; the shot list in `UPLOAD-INBOX.md`.
+
+### F-018 · 2026-11-04 · No word alone on a line
+Source: Travis, in session, Nov 4, on the date night pin ("Date night at home. 25 / minutes."):
+"you can't have one word on a line all by itself for any content copy - in this example, '25
+Minutes' should be together on the second line."
+Rule: In every piece of copy that appears on a post or a reel (headline, eyebrow, subheader,
+body line, chip, overlay, end card, cover), no line may hold a single word, and no line may end on
+a number that belongs to the next line. A number stays with its unit ("25 minutes", "12 g",
+"$4.98 a dinner"). When a headline has two thoughts, break between them on purpose with `<br>`
+("Forgot the buns.<br>Didn't go back."), rather than letting the line fall where it falls. If the
+copy still orphans, shorten it; never shrink type to make it fit.
+Why: a word alone on a line reads as a mistake and splits the meaning; the scroller has two
+seconds.
+Enforced by: `doc.js` `__orphans()`, run inside every render's safe check (render-batch,
+render-footage overlays and end cards, render-motion's final frame): a violation fails the render
+line with the word and the block named. `doc.js` also glues a number to its unit with a
+non-breaking space, and `base.css` sets `text-wrap: pretty`, so most orphans never happen.
+
+### F-019 · 2026-11-04 · Creative QA on the screenshot of every post
+Source: Travis, in session, Nov 4: "take a screenshot of the final post and think 'does this make
+sense to a human who is scrolling on IG and passes by our content? does it make them feel
+something and is the intention clearly communicated? could it be interpreted incorrectly or
+partially? is there a more efficient way to communicate it while still being engaging and
+creative, clever, or humorous?' that needs to be done for every single post." And: "if you need
+to add a subheader below it do so. the message must be put ahead of all else."
+Rule: Every post is reviewed on its rendered image, full size and at feed size, by the Creative QA
+reviewer in `reference/CREATIVE-QA.md` (a stranger scrolling Instagram, two seconds, no caption).
+The six questions are answered in writing; anything short of a clean yes is a fix and another
+round. The main message is the first and biggest thing read; if it needs help, a subheader goes
+directly under the headline. The result goes in the ledger row as `qa` ({verdict, rounds, read,
+fixed}) and the screenshot goes in the review table.
+Why: the gates pass posts that follow every rule and still say nothing to a stranger. The Nov 4
+pancake pin needed four rounds to be clear.
+Enforced by: diversity-gate.js rule 11 (a post due from 2026-11-09 fails without
+`qa.verdict: "pass"` and a `qa.read`); the review table.
+
+### F-020 · 2026-11-04 · Use the whole set of layouts
+Source: Travis, in session, Nov 4, on the Nov 3 to 8 queue: "these are all getting repetitive and
+too predictable ... it's either the photograph takes the whole picture or it's that one layout
+with just the bottom third of the post that has copy. this looks lazy and boring. where did all
+the previous templates and layouts go?"
+Rule: The layout is still chosen by the post's job (F-004), but from the whole set: photo,
+igphoto, bleed, thread, sharpie, split, collage, receipt, poster, steps, recipephoto, list, stat,
+device, quotedark, sendthis (the table in `social/README.md`; contact sheet of examples:
+`node social/render/contact-sheet.js`). On each channel, never the same layout on two posts in a
+row, and no layout more than twice in a week. Footage reels are exempt: the footage is the
+variety. The Oct 30 reboot dropped every rotation rule because they picked the shell before the
+idea; this floor only stops the opposite failure, the same two shells every day.
+Why: two layouts for a whole week made the feed look templated and lazy.
+Enforced by: diversity-gate.js rule 12 (from 2026-11-09: same non-footage layout back to back on a
+channel fails; a layout used more than twice in one channel's week fails).
 
 ## Keep doing
 _Things Travis called out as working._

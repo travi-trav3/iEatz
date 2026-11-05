@@ -429,7 +429,7 @@ const TEMPLATES = {
       : `${p.foot ? `<div class="th-foot">${fline}</div>` : ''}${footer(p, { url: onPhoto ? `<div class="foot-dark th-url">${badgeDark}<span class="url">ieatzhealthy.com</span></div>` : foot.replace('class="foot"', 'class="foot th-url"'), top: onPhoto ? 'photo' : 'paper', bottom: on, def: 'badge-br' })}`;
     return `<div class="pin sh-thread${onPhoto ? ' on-photo' : ''}">
     ${onPhoto ? `<img class="bg" src="${PHOTOS}/${p.bg.photo}" alt="" style="object-position:${p.bg.objPos || 'center'}"><div class="th-scrim"></div>` : ''}
-    ${p.head ? `<h1 class="th-head">${p.head}</h1>` : ''}
+    ${p.head ? `<h1 class="th-head">${p.head}</h1>` : ''}${p.sub ? `<p class="th-sub">${p.sub}</p>` : ''}
     <div class="th-msgs">${msgs}</div>
     <div class="th-fill"></div>
     ${bottom}
