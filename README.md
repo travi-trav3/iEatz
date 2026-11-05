@@ -17,7 +17,7 @@ python3 -m http.server 8000
 ```
 index.html                       # the landing page — all CSS (design tokens + page) inline
 cookbook/
-  index.html                     # /cookbook/ — The Real Food Cookbook, all 30 recipes from the PDF
+  index.html                     # /cookbook/ — The Real Food Cookbook, all 30 recipes from the PDF + a web-only bonus (sheet-pan nachos)
   iEatz-Real-Food-Cookbook.pdf   # the PDF itself, linked from the page as a download
 assets/
   app-store-badge.png            # App Store download badge
@@ -34,7 +34,8 @@ assets/
     app-home.jpg                 # in-app screenshots used in the product gallery
     app-recipe.jpg
     app-instacart.jpg
-    cookbook/                    # cookbook photos (one per recipe, from the PDF) + cover.jpg, og.jpg
+    cookbook/                    # cookbook photos (one per recipe, from the PDF) + cover.jpg, og.jpg,
+                                 #   sheet-pan-nachos.jpg (web-only bonus recipe)
 ```
 
 Typography (Instrument Serif, Inter Tight, Plus Jakarta Sans, JetBrains Mono)
