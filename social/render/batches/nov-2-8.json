@@ -242,7 +242,7 @@
       "app": "The cookbook: 30 recipes, each with a tap-to-shop Instacart list, delivered by DM when someone comments COOKBOOK."
     },
     {
-      "file": "p05-pin-pancakes-v2",
+      "file": "p05-pin-pancakes-v3",
       "w": 1000,
       "h": 1500,
       "template": "photo",
@@ -251,10 +251,10 @@
       "objPos": "50% 60%",
       "grade": false,
       "photoClaim": "a stack of five pancakes on a white plate on a wooden table, a bottle of maple syrup behind it, flowers and a living room out of focus",
-      "eyebrow": "Saturday, 9 AM",
-      "head": "No pancake mix in the house. <span class=\"accent\">Pancakes anyway.</span>",
+      "eyebrow": "Flour, eggs, milk. That's it.",
+      "head": "No pancake mix?<br><span class=\"accent\">iEatz said: pancakes.</span>",
       "chips": [
-        "flour, eggs, milk",
+        "no store run",
         "20 minutes",
         "about 12 g protein"
       ],
