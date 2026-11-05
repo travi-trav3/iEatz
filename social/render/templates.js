@@ -475,6 +475,31 @@ const TEMPLATES = {
     ${footer(p, { url: footDark, row: rowDarkAbs, top: 'photo', bottom: 'photo', def: 'badge-br' })}
   </div>`; } },
 
+  // punchline: a sight gag with the answer on a card. The question sits on a dark scrim at the top,
+  // the gag in the photo carries a pen ring (mark), an optional pen arrow and a marker label, and
+  // the answer is a taped paper card at the bottom (card.head serif, card.body sans, optional tomato
+  // tag, badge inside the card). Mark, arrows and label are in 1080x1350 photo space on a stage that
+  // covers the frame, like sharpie. Built Nov 5 2026 for the shoe-in-the-fridge cookbook post.
+  punchline: { surface: 'photo-bleed', defaultFooter: 'none', render: (p, PHOTOS) => {
+    need(p, 'photo', 'head', 'card');
+    const c = Math.max(p.w / 1080, p.h / 1350);
+    const rnd = seeded(p.file);
+    const m = p.mark;
+    const pen = (m ? `<path d="${penEllipse(m, rnd)}"/><path d="${penEllipse(m, rnd)}" opacity="0.9"/>` : '')
+      + (p.arrows || []).map(a => `<path d="${penArrow(a, rnd)}"/>`).join('');
+    const label = p.label ? `<div class="pl-label" style="left:${p.label.x}px;top:${p.label.y}px;transform:rotate(${p.label.rot != null ? p.label.rot : -4}deg)">${p.label.text}</div>` : '';
+    return `<div class="pin sh-punch" style="--ink-pen:${p.ink || 'var(--tomato)'}">
+    <div class="sk-stage" style="transform:translate(-50%,-50%) scale(${c})">
+      ${img(PHOTOS, p.photo, p.objPos)}
+      <svg class="sk-pen" viewBox="0 0 1080 1350" fill="none" stroke="${p.ink || '#C9412B'}" stroke-width="${(7 / c).toFixed(2)}" stroke-linecap="round" stroke-linejoin="round">${pen}</svg>
+      ${label}
+    </div>
+    <div class="pl-scrim"></div>
+    <div class="pl-top" data-safe="56"><h1 class="pl-head"${p.headSize ? ` style="font-size:${p.headSize}px"` : ''}>${p.head}</h1>${p.sub ? `<p class="pl-sub">${p.sub}</p>` : ''}</div>
+    <div class="pl-card" data-clear=".pl-top">${p.card.tag ? `<span class="pl-tag">${p.card.tag}</span>` : ''}<span class="pl-tape"></span>
+      <h2 class="pl-ask">${p.card.head}</h2><div class="pl-row">${p.card.body ? `<p class="pl-body">${p.card.body}</p>` : ''}${p.card.badge === false ? '' : `<div class="pl-sign">${badge}</div>`}</div></div>
+  </div>`; } },
+
   // sendthis: the "send this to ___" series (Oct 2026). Type only: a lowercase serif hook, an
   // italic payoff, the badge centred at the bottom. Instagram 1080x1350 only; the pillar has no
   // Pinterest variant by design. variant "cream" | "green" alternates post to post; showRule adds

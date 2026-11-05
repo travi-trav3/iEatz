@@ -43,7 +43,8 @@ const REPO = path.resolve(__dirname, '../..');
 const PHOTO_SOURCE = {};
 for (const ph of JSON.parse(fs.readFileSync(path.join(REPO, 'assets/photos/photos.json'), 'utf8')).photos) PHOTO_SOURCE[ph.file] = ph.source || 'stock';
 // app-*.jpg are real screens of the product, never stock; anything not in the index is unknown and counts as stock.
-const isStock = (f) => !/^app-/.test(path.basename(f)) && (PHOTO_SOURCE[f] || 'stock') === 'stock';
+// Anything not shot by us counts as stock for F-008, AI-generated images included (source "ai").
+const isStock = (f) => !/^app-/.test(path.basename(f)) && (PHOTO_SOURCE[f] || 'stock') !== 'own';
 const photosOfPost = (r) => {
   if (!r) return [];
   const out = new Set();

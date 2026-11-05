@@ -339,6 +339,38 @@
       "note": "Second comment-COOKBOOK concept for the $20 boost decision (vs o04-ig collage). Draft for Sun Nov 8 09:45 PT so the two never publish together; publish only the winner.",
       "bufferId": "6aec1ad3660b2991f154e9ac",
       "draftedAt": "2026-11-04T21:57:00-08:00"
+    },
+    {
+      "id": "o08-ig",
+      "status": "draft",
+      "channel": "instagram",
+      "dueAt": "2026-11-06T09:45:00-08:00",
+      "file": "assets/social/nov2/o08-ig-cookbook-shoe.png",
+      "renderBatchFile": "o08-ig-cookbook-shoe",
+      "pillar": "Grocery/Instacart",
+      "topic": "Cookbook",
+      "cta": "cookbook-dm",
+      "format": "static",
+      "hook": "problem",
+      "text": "if dinner at your place has started tasting like a gym shoe, you're not a bad cook. you're out of ideas, so the same five meals keep coming back.\n\ncomment COOKBOOK and we'll DM you 30 dinners that cook in under 30 minutes and taste like actual food. one-pan garlic chicken and broccoli. ground beef and sweet potato skillet. shrimp and zucchini stir-fry. 27 more.\n\neach one comes with a tap-to-shop Instacart list, so the groceries take one tap instead of one more thing to plan.\n\nit's free. your shoes are safe.\n\n#weeknightdinner #easydinners #30minutemeals #mealplanning #ieatzhealthy",
+      "firstComment": "what's the shoe in your rotation? we'll go first: plain chicken breast, no seasoning, three nights straight.",
+      "why": "Boost concept C: humor. A sneaker on the fridge shelf circled as tonight's dinner makes the pain (bland, repetitive cooking) a laugh instead of a lecture, and the card answers it in the same breath: comment COOKBOOK, 30 dinners that taste like actual food.",
+      "app": "The cookbook's recipes each come with a tap-to-shop Instacart list; the DM flow hands out the book.",
+      "source": "Travis's concept and image (Nov 5 2026: 'Tired of cooking that tastes like a shoe?'). New punchline shell in templates.js.",
+      "proof": "The fridge image is AI-generated (supplied by Travis); the post makes no claim that it is a real kitchen or a real user's photo. The recipe names are the ones listed in o04-ig and o07-ig.",
+      "alt": "Instagram post: an open fridge at night with a worn gray sneaker on the middle shelf between a block of cheddar and an egg carton, circled in red marker with an arrow and the handwritten words tonight's dinner. Headline at the top: Tired of cooking that tastes like a shoe? Taped to the bottom, a paper card with a red FREE tag: Comment COOKBOOK. We'll DM you 30 dinners that taste like actual food. Each one takes under 30 minutes and comes with its own Instacart list. iEatz Healthy logo.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 2,
+        "read": "ha, my cooking tastes like a shoe; comment COOKBOOK and they'll DM me 30 free dinners that taste like real food",
+        "fixed": [
+          "the card's top edge and tape cut into the pen ring on the shoe: badge moved onto the body line, card shortened",
+          "'We'll send you' changed to 'We'll DM you' so the scroller knows where the book arrives",
+          "headline kept as Travis wrote it ('Tired of ...?' is an everyday spoken question, not a fragment); tried 'Are you tired of ...?' and it reads slower"
+        ]
+      },
+      "note": "Third comment-COOKBOOK concept for the $20 boost decision (vs o04-ig collage, o07-ig carousel). Draft for Fri Nov 6 09:45 PT so no two concepts publish together; publish only the winner. AI image: tick Buffer's AI-generated label if the API or editor offers it. Hook is humor on a problem: the gate's type is problem.",
+      "draftedAt": "2026-11-05T00:00:00-08:00"
     }
   ]
 }

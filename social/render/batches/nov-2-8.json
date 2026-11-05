@@ -555,6 +555,46 @@
       "grade": false,
       "fine": "*Real dinners a real iEatz user made from the app,<br>shot on a phone. No food stylist, no stock photos.",
       "headSize": 84
+    },
+    {
+      "file": "o08-ig-cookbook-shoe",
+      "w": 1080,
+      "h": 1350,
+      "template": "punchline",
+      "footer": "none",
+      "grain": false,
+      "photo": "fridge/ai-fridge-shoe-night.jpg",
+      "objPos": "37% 50%",
+      "head": "Tired of cooking that<br>tastes like a <em>shoe?</em>",
+      "mark": {
+        "x": 545,
+        "y": 735,
+        "rx": 275,
+        "ry": 145
+      },
+      "arrows": [
+        {
+          "x1": 860,
+          "y1": 545,
+          "x2": 760,
+          "y2": 610
+        }
+      ],
+      "label": {
+        "text": "tonight’s dinner",
+        "x": 600,
+        "y": 470,
+        "rot": -4
+      },
+      "card": {
+        "tag": "FREE",
+        "head": "Comment <span class=\"accent\">COOKBOOK</span>. We’ll DM you 30 dinners that taste like actual food.",
+        "body": "Each one takes under 30 minutes and comes with its own Instacart list."
+      },
+      "photoClaim": "an open fridge at night with a worn gray sneaker on the middle shelf between cheddar and an egg carton (AI-generated; shown as a gag, not as a real kitchen)",
+      "why": "Everyone has eaten a dinner that tasted like nothing: a sneaker on the shelf circled as tonight's dinner turns that pain into a laugh, and the card answers it straight away with 30 dinners that taste like actual food.",
+      "app": "The free cookbook arrives by DM: 30 dinners under 30 minutes, each with a tap-to-shop Instacart list.",
+      "hookType": "problem"
     }
   ]
 }

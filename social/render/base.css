@@ -409,6 +409,23 @@ html.footage,html.footage body,.ig-bleed.footage{background:transparent}
 .sk-shade{position:absolute;left:0;right:0;background:linear-gradient(180deg,rgba(245,242,234,0.78) 0%,rgba(245,242,234,0.40) 52%,rgba(245,242,234,0) 100%)}
 .sk-head{position:absolute;left:64px;right:64px;top:64px;z-index:3;font-family:var(--marker);font-weight:400;font-size:calc(86px * var(--s));line-height:1.02;text-transform:uppercase;color:var(--ink-pen);transform:rotate(-1.6deg);transform-origin:0 50%}
 
+/* punchline: question on a dark top scrim, a pen-marked gag in the photo, the answer on a taped card */
+.sh-punch{background:var(--ink)}
+.pl-scrim{position:absolute;left:0;right:0;top:0;height:calc(600px * var(--s));background:linear-gradient(180deg,rgba(10,15,12,0.92) 0%,rgba(10,15,12,0.78) 45%,rgba(10,15,12,0) 100%);pointer-events:none}
+.pl-top{position:absolute;left:64px;right:64px;top:72px;z-index:3}
+.pl-head{font-family:var(--serif);font-weight:400;font-size:104px;line-height:0.95;letter-spacing:-0.02em;color:var(--paper);margin:0}
+.pl-head em,.pl-head .accent{font-style:italic;color:var(--mark-mint)}
+.pl-sub{font-family:var(--sans);font-weight:500;font-size:32px;line-height:1.3;color:rgba(245,242,234,0.9);margin:22px 0 0;max-width:900px}
+.pl-label{position:absolute;font-family:var(--marker);font-size:54px;line-height:1;white-space:nowrap;color:var(--ink-pen);text-shadow:0 0 3px rgba(245,242,234,0.95),0 0 10px rgba(245,242,234,0.9),0 0 20px rgba(245,242,234,0.7);transform-origin:0 50%}
+.pl-card{position:absolute;left:64px;right:64px;bottom:64px;z-index:4;background:#FFFDF8;padding:48px 54px 42px;transform:rotate(-1.4deg);box-shadow:0 28px 54px rgba(0,0,0,0.45),0 4px 10px rgba(0,0,0,0.22)}
+.pl-tape{position:absolute;top:-24px;left:50%;width:180px;height:50px;transform:translateX(-50%) rotate(-3deg);background:rgba(228,169,60,0.85);box-shadow:0 2px 4px rgba(0,0,0,0.08)}
+.pl-tag{position:absolute;right:-16px;top:-30px;background:var(--tomato);color:var(--paper);font-family:var(--mono);font-weight:500;font-size:28px;letter-spacing:0.08em;padding:12px 22px;transform:rotate(5deg);box-shadow:0 8px 18px rgba(0,0,0,0.25)}
+.pl-ask{font-family:var(--serif);font-weight:400;font-size:68px;line-height:1.0;letter-spacing:-0.015em;color:var(--ink);margin:0}
+.pl-ask em,.pl-ask .accent{font-style:italic;color:var(--green)}
+.pl-row{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;margin-top:22px}
+.pl-body{font-family:var(--sans);font-weight:500;font-size:30px;line-height:1.35;color:#3c4a42;margin:0;max-width:620px}
+.pl-sign{flex:none;padding-bottom:4px}
+
 /* sendthis: the "send this to" series. Type only, Instagram 1080x1350 only. Export spec: hook
    124/0.94/-0.028em, payoff italic 54/1.1, 80px safe zone, bottom 15% clear of copy. */
 .sh-sendthis{background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 80px 250px}

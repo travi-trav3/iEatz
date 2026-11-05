@@ -10,10 +10,10 @@
     "own",
     "pantry"
   ],
-  "count": 90,
+  "count": 91,
   "countByCategory": {
     "food": 39,
-    "fridge": 8,
+    "fridge": 9,
     "grocery": 6,
     "lifestyle": 20,
     "pantry": 4,
@@ -747,15 +747,26 @@
       "source": "own",
       "description": "the same Nov 1 haul from the side on the stove top, oven clock 9:30, with the Harris Teeter receipt curling on the counter at the right edge ($86.63, 13 items); no people; uploaded by admin@ieatzhealthy.com to the Drive inbox Nov 1",
       "note": "brands in frame: as IMG_2110 plus the Harris Teeter receipt. The receipt body (card line, transaction codes, barcode) is blurred in this file; the header and the edge stay. Total read before blurring: $86.63 for 13 items, 7:23 PM"
+    },
+    {
+      "file": "fridge/ai-fridge-shoe-night.jpg",
+      "category": "fridge",
+      "url": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/assets/photos/fridge/ai-fridge-shoe-night.jpg",
+      "style": "kitchen",
+      "source": "ai",
+      "description": "an open fridge at night with a worn gray sneaker on the middle shelf between a block of cheddar and an egg carton; leftovers, yogurt and a milk jug on the top shelf, salad dressing, mayo and door condiments, spinach and carrots in the crisper",
+      "note": "AI-generated image supplied by Travis on Nov 5 2026 for the shoe cookbook concept (garbled label text on the yogurt, spinach and egg carton gives it away up close). Never present it as a real kitchen or a real user's photo. Brand in frame: Hellmann's mayo (AI-rendered label). Treated as stock by F-008."
     }
   ],
   "sources": {
     "stock": "the Design System export and the Pexels/Unsplash re-sourcing; no post may use one on or after 2026-11-15 (F-008)",
-    "own": "shot by the team and pulled from the Drive inbox (iEatz social inbox); every entry carries an honest description and a flag for any logo or a face that did not consent"
+    "own": "shot by the team and pulled from the Drive inbox (iEatz social inbox); every entry carries an honest description and a flag for any logo or a face that did not consent",
+    "ai": "AI-generated images (Nov 2026 on). Gags and concepts only, never as proof of a real meal or kitchen; the gates treat them as stock (F-008)"
   },
   "countBySource": {
     "stock": 80,
-    "own": 10
+    "own": 10,
+    "ai": 1
   },
   "inboxLog": [
     {
