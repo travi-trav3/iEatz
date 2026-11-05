@@ -543,7 +543,7 @@
       },
       "notes": [
         {
-          "text": "real food, real kitchen*",
+          "text": "real user, real kitchen*",
           "x": 76,
           "y": 1030
         }
@@ -553,7 +553,7 @@
       "why": "A boost-worthy lead magnet: the ask and the value read first, then three real dinners from our own kitchen so it feels like food, not an ad.",
       "app": "The cookbook's recipes each come with a tap-to-shop Instacart list; the DM flow hands out the free book.",
       "grade": false,
-      "fine": "*Every photo here was shot on a phone in our team's kitchen. No food stylist, no stock photos.",
+      "fine": "*Real dinners a real iEatz user made from the app,<br>shot on a phone. No food stylist, no stock photos.",
       "headSize": 84
     }
   ]
