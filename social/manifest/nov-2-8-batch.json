@@ -128,7 +128,7 @@
       "status": "draft",
       "channel": "instagram",
       "dueAt": "2026-11-07T09:45:00-08:00",
-      "file": "assets/social/nov2/o06-ig-cookbook-collage-v3.png",
+      "file": "assets/social/nov2/o06-ig-cookbook-collage-v4.png",
       "pillar": "Grocery/Instacart",
       "topic": "Cookbook",
       "cta": "cookbook-dm",
@@ -136,7 +136,7 @@
       "hook": "problem",
       "text": "takeout again tonight? same.\n\ncomment COOKBOOK and we'll send you 30 dinners that cook in under 30 minutes. that's about as long as you'd wait for delivery, minus the fee and the soggy fries.\n\nevery recipe comes with a tap-to-shop Instacart list, so the cart builds itself. one-pan garlic chicken and broccoli. ground beef and sweet potato skillet. black bean and corn quesadillas. 27 more.\n\nit's free. one word: COOKBOOK.\n\n#mealplanning #weeknightdinner #30minutemeals #easydinners #ieatzhealthy",
       "firstComment": "which one are you making first? the quesadillas are a weeknight cheat code.",
-      "alt": "Instagram post on warm paper. Headline: Takeout again tonight? Comment COOKBOOK instead. Subheader: We'll DM you 30 dinners that cook in under 30 minutes, about as long as delivery takes. It's free. Below, three taped phone photos of dinners: sheet-pan nachos with jalapeno and guacamole under a red FREE tag, a bunless burger bowl with avocado and a pickle, sliced steak with a bowl of ravioli. Handwritten note: real user, real kitchen*. Fine print: *Real dinners a real iEatz user made from the app, shot on a phone. No food stylist, no stock photos.",
+      "alt": "Instagram post on warm paper. Headline: Takeout again tonight? Comment COOKBOOK instead. Subheader: We'll DM you 30 dinners that cook in under 30 minutes, about as long as delivery takes. It's free. Below, three taped phone photos of dinners: sheet-pan nachos with jalapeno and guacamole under a red FREE tag, a bunless burger bowl with avocado and a pickle, a burger on a bun and fries behind it, sliced steak with a bowl of ravioli. Handwritten note: real user, real kitchen*. Fine print: *Real dinners a real iEatz user made from the app, shot on a phone. No food stylist, no stock photos.",
       "note": "The week's comment-COOKBOOK post (Wednesday per the reboot doc). Boost the organic post itself so the ManyChat trigger keeps firing on its comments; o31 (Sat Oct 31) was the last boost candidate. No first comment: Buffer Free plan. The recipe names are the ones listed in o28 and o31. v2 on Travis's own nachos photo; the stock burger frame retired before scheduling. Nov 4: v3, 'Comment COOKBOOK.' on its own line instead of 'COOKBOOK.' alone (F-018). Nov 4 22:40 PT: rebuilt as the boost candidate on Travis's note ('not good enough to spend $20 on ... too bland ... create a new COMMENT COOKBOOK post that I'll be impressed with'): collage with the message on top (new headAt:'top' + sub), three own dinner photos, FREE tag; moved to Sat Nov 7 09:45 PT as a draft.",
       "bufferId": "6ae93d0b7996caf141c50a91",
       "draftedAt": "2026-11-02T17:47:00-08:00",
@@ -150,7 +150,8 @@
           "pain point led (Travis): takeout headline",
           "'instead.' orphan and headline over the photos fixed with a smaller headline",
           "asterisked fine print: team kitchen, phone, no stylist, no stock (not 'a real user': only the burger bowl is confirmed from iEatz)",
-          "fine print and note changed to the real-user claim on Travis's confirmation"
+          "fine print and note changed to the real-user claim on Travis's confirmation",
+          "burger on a bun brought back into the bowl card (Travis: it makes clear what the bowl is)"
         ]
       },
       "proof": "Travis, in session Nov 4 2026 ~23:05 PT: 'i am a user of the app and these are my recipes. so it is truthful.' The nachos, burger bowl and steak-and-ravioli photos are his own dinners made from iEatz recipes; the post may say 'a real iEatz user made from the app'."
