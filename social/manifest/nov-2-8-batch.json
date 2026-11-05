@@ -369,8 +369,9 @@
           "headline kept as Travis wrote it ('Tired of ...?' is an everyday spoken question, not a fragment); tried 'Are you tired of ...?' and it reads slower"
         ]
       },
-      "note": "Third comment-COOKBOOK concept for the $20 boost decision (vs o04-ig collage, o07-ig carousel). Draft for Fri Nov 6 09:45 PT so no two concepts publish together; publish only the winner. AI image: tick Buffer's AI-generated label if the API or editor offers it. Hook is humor on a problem: the gate's type is problem.",
-      "draftedAt": "2026-11-05T00:00:00-08:00"
+      "note": "Third comment-COOKBOOK concept for the $20 boost decision (vs o04-ig collage, o07-ig carousel). Draft for Fri Nov 6 09:45 PT so no two concepts publish together; publish only the winner. Buffer draft carries isAiGenerated: true (Instagram's AI info label). Hook is humor on a problem: the gate's type is problem.",
+      "draftedAt": "2026-11-04T22:09:00-08:00",
+      "bufferId": "6aec1d8380f7fd0537f31e2f"
     }
   ]
 }
