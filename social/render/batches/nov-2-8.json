@@ -493,6 +493,66 @@
       "why": "Three-hook trial-reel test on the team's first clip set: same 8 s body, only the opener and its line change, so the 72-hour read says which opening earns the push.",
       "app": "Receipt import: snap the receipt and iEatz writes the week from what you bought, calories and protein estimated, the missing items to Instacart.",
       "status": "pending"
+    },
+    {
+      "file": "o06-ig-cookbook-collage",
+      "w": 1080,
+      "h": 1350,
+      "template": "collage",
+      "footer": "badge-br",
+      "headAt": "top",
+      "grain": false,
+      "head": "Comment <span class=\"accent\">COOKBOOK</span> and we'll DM you 30 dinner recipes.",
+      "sub": "It's free. Every recipe takes under 30 minutes and comes with its own Instacart list.",
+      "cards": [
+        {
+          "photo": "own/2026-10-29-travis-img6201.jpg",
+          "x": 56,
+          "y": 450,
+          "w": 540,
+          "h": 540,
+          "rot": -3,
+          "tape": true,
+          "objPos": "45% 55%"
+        },
+        {
+          "photo": "own/2026-10-29-travis-img6315.jpg",
+          "x": 610,
+          "y": 440,
+          "w": 410,
+          "h": 300,
+          "rot": 3,
+          "tape": "right",
+          "objPos": "50% 100%"
+        },
+        {
+          "photo": "own/2026-10-29-travis-img6825.jpg",
+          "x": 570,
+          "y": 790,
+          "w": 440,
+          "h": 360,
+          "rot": -2,
+          "tape": "left",
+          "objPos": "45% 62%"
+        }
+      ],
+      "price": {
+        "text": "FREE",
+        "x": 70,
+        "y": 430
+      },
+      "notes": [
+        {
+          "text": "no delivery fees were paid",
+          "x": 76,
+          "y": 1040
+        }
+      ],
+      "photoClaim": "sheet-pan nachos with jalapeno and guacamole; a bunless burger bowl with avocado, tomato and a pickle; sliced steak with a bowl of ravioli",
+      "hookType": "promise",
+      "why": "A boost-worthy lead magnet: the ask and the value read first, then three real dinners from our own kitchen so it feels like food, not an ad.",
+      "app": "The cookbook's recipes each come with a tap-to-shop Instacart list; the DM flow hands out the free book.",
+      "grade": false
     }
   ]
 }

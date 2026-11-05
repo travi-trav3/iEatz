@@ -127,19 +127,29 @@
       "id": "o04-ig",
       "status": "draft",
       "channel": "instagram",
-      "dueAt": "2026-11-04T18:45:00-08:00",
-      "file": "assets/social/nov2/o04-ig-cookbook-nachos-v3.png",
+      "dueAt": "2026-11-07T09:45:00-08:00",
+      "file": "assets/social/nov2/o06-ig-cookbook-collage.png",
       "pillar": "Grocery/Instacart",
       "topic": "Cookbook",
       "cta": "cookbook-dm",
       "format": "static",
       "hook": "promise",
-      "text": "comment COOKBOOK and the book's in your dms. free.\n\n30 dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list so the cart builds itself. real food from a real kitchen, the kind that looks like nacho night, not like a diet. one-pan garlic chicken and broccoli. ground beef and sweet potato skillet. black bean and corn quesadillas. shrimp and zucchini stir-fry. 26 more.\n\none word: COOKBOOK.\n\n#mealplanning #weeknightdinner #30minutemeals #easydinners #ieatzhealthy",
-      "firstComment": null,
-      "alt": "Sheet-pan nachos with melted cheese, mushrooms, cherry tomatoes, jalapeno and guacamole on a baking tray, a bowl of guacamole beside it, above a paper panel. Eyebrow: Free cookbook. Headline: 30 dinners you'd actually eat. Comment COOKBOOK. Chips: every one under 30 minutes; an Instacart list per recipe; free, in your DMs.",
-      "note": "The week's comment-COOKBOOK post (Wednesday per the reboot doc). Boost the organic post itself so the ManyChat trigger keeps firing on its comments; o31 (Sat Oct 31) was the last boost candidate. No first comment: Buffer Free plan. The recipe names are the ones listed in o28 and o31. v2 on Travis's own nachos photo; the stock burger frame retired before scheduling. Nov 4: v3, 'Comment COOKBOOK.' on its own line instead of 'COOKBOOK.' alone (F-018).",
+      "text": "comment COOKBOOK and we'll send you the whole thing. it's free.\n\n30 dinners, every one under 30 minutes, every one with a tap-to-shop Instacart list so the cart builds itself. one-pan garlic chicken and broccoli. ground beef and sweet potato skillet. black bean and corn quesadillas. shrimp and zucchini stir-fry. 26 more where those came from.\n\nif you've opened a delivery app twice this week, this one's for you.\n\n#mealplanning #weeknightdinner #30minutemeals #easydinners #ieatzhealthy",
+      "firstComment": "which one are you making first? the quesadillas are a weeknight cheat code.",
+      "alt": "Instagram post on warm paper. Headline: Comment COOKBOOK and we'll DM you 30 dinner recipes. Subheader: It's free. Every recipe takes under 30 minutes and comes with its own Instacart list. Below, three taped photos of dinners from our kitchen: sheet-pan nachos with jalapeno and guacamole under a red FREE tag, a bunless burger bowl with avocado and a pickle, sliced steak with a bowl of ravioli. Handwritten note: no delivery fees were paid.",
+      "note": "The week's comment-COOKBOOK post (Wednesday per the reboot doc). Boost the organic post itself so the ManyChat trigger keeps firing on its comments; o31 (Sat Oct 31) was the last boost candidate. No first comment: Buffer Free plan. The recipe names are the ones listed in o28 and o31. v2 on Travis's own nachos photo; the stock burger frame retired before scheduling. Nov 4: v3, 'Comment COOKBOOK.' on its own line instead of 'COOKBOOK.' alone (F-018). Nov 4 22:40 PT: rebuilt as the boost candidate on Travis's note ('not good enough to spend $20 on ... too bland ... create a new COMMENT COOKBOOK post that I'll be impressed with'): collage with the message on top (new headAt:'top' + sub), three own dinner photos, FREE tag; moved to Sat Nov 7 09:45 PT as a draft.",
       "bufferId": "6ae93d0b7996caf141c50a91",
-      "draftedAt": "2026-11-02T17:47:00-08:00"
+      "draftedAt": "2026-11-02T17:47:00-08:00",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 2,
+        "read": "comment COOKBOOK and they'll send me 30 quick dinner recipes for free",
+        "fixed": [
+          "burger-on-a-bun crept into the bowl card; cropped",
+          "dead space under the subheader",
+          "flat note replaced with 'no delivery fees were paid'"
+        ]
+      }
     },
     {
       "id": "p05-pin",

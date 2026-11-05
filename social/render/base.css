@@ -333,6 +333,11 @@ html.footage,html.footage body,.ig-bleed.footage{background:transparent}
 .cc-price{position:absolute;background:var(--tomato);color:var(--paper);font-family:var(--mono);font-weight:500;font-size:31px;padding:14px 24px;transform:rotate(-4deg);box-shadow:0 10px 20px rgba(60,20,10,0.25);white-space:nowrap}
 .cc-head{position:absolute;left:64px;bottom:96px;max-width:620px;font-family:var(--serif);font-weight:400;font-size:104px;line-height:0.95;letter-spacing:-0.015em;color:var(--ink)}
 .cc-head .accent,.cc-head em{font-style:italic;color:var(--green)}
+/* collage with the message first (headAt:"top", Nov 2026): headline and subheader across the top, the photos below */
+.cc-top{position:absolute;left:64px;top:80px;width:952px}
+.cc-head-t{font-family:var(--serif);font-weight:400;font-size:92px;line-height:0.98;letter-spacing:-0.015em;color:var(--ink);margin:0}
+.cc-head-t .accent,.cc-head-t em{font-style:italic;color:var(--green)}
+.cc-sub{font-family:var(--sans);font-weight:500;font-size:33px;line-height:1.3;color:#3c4a42;margin:22px 0 0;max-width:900px}
 .sh-collage:has(> .foot:not(.solo-r)) .cc-head{bottom:170px}
 .sh-collage > .foot{position:absolute;left:64px;right:64px;bottom:52px;z-index:6}
 
