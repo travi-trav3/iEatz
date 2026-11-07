@@ -342,9 +342,9 @@
     },
     {
       "id": "o08-ig",
-      "status": "draft",
+      "status": "sent",
       "channel": "instagram",
-      "dueAt": "2026-11-06T09:45:00-08:00",
+      "dueAt": "2026-11-05T11:15:15-08:00",
       "file": "assets/social/nov2/o08-ig-cookbook-shoe.png",
       "renderBatchFile": "o08-ig-cookbook-shoe",
       "pillar": "Grocery/Instacart",
@@ -369,9 +369,10 @@
           "headline kept as Travis wrote it ('Tired of ...?' is an everyday spoken question, not a fragment); tried 'Are you tired of ...?' and it reads slower"
         ]
       },
-      "note": "Third comment-COOKBOOK concept for the $20 boost decision (vs o04-ig collage, o07-ig carousel). Draft for Fri Nov 6 09:45 PT so no two concepts publish together; publish only the winner. Buffer draft carries isAiGenerated: true (Instagram's AI info label). Hook is humor on a problem: the gate's type is problem.",
+      "note": "Third comment-COOKBOOK concept for the $20 boost decision (vs o04-ig collage, o07-ig carousel). Draft for Fri Nov 6 09:45 PT so no two concepts publish together; publish only the winner. Buffer draft carries isAiGenerated: true (Instagram's AI info label). Hook is humor on a problem: the gate's type is problem. Published Thu Nov 5 11:15 PT (Travis moved it up from the Fri draft slot).",
       "draftedAt": "2026-11-04T22:09:00-08:00",
-      "bufferId": "6aec1d8380f7fd0537f31e2f"
+      "bufferId": "6aec1d8380f7fd0537f31e2f",
+      "sentAt": "2026-11-05T11:15:34-08:00"
     }
   ]
 }
