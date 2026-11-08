@@ -56,3 +56,4 @@ SixSocks
 COOKBOOK   # the ManyChat keyword, always upper case
 iOS
 Android
+Thanksgiving  # proper noun (holiday), Nov 2026

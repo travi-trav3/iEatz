@@ -83,6 +83,50 @@
       "alt": "Deep green card with cream serif type: send this to whoever opens the fridge, stares for a full minute, and closes it again. Below, in pale green italics: it's not empty. you just can't see dinner yet. iEatz can. iEatz Healthy badge at the bottom.",
       "bufferId": "6ad285861dbc08628961ca1e",
       "slackAlert": "Dr0C9SQ13M7X"
+    },
+    {
+      "id": "st05",
+      "status": "planned",
+      "channel": "instagram",
+      "dueAt": "2026-11-19T11:00:00-08:00",
+      "file": "assets/social/send-this/st05-hosting-list.png",
+      "renderBatchFile": "st05-hosting-list",
+      "pillar": "Send this to",
+      "topic": "Thanksgiving",
+      "cta": "send",
+      "hook": "problem",
+      "format": "static",
+      "text": "it's a week away. send this to your host.\n\n#ieatzhealthy #thanksgiving #sendthis",
+      "firstComment": "hosts, what's still not on the list? we'll go first: the cranberry sauce.",
+      "alt": "Cream card with dark green serif type: send this to whoever's hosting thanksgiving and hasn't made a list yet. Below, in grey italics: it's next thursday. we're a little worried. iEatz Healthy badge and the line fridge to table at the bottom.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 1,
+        "read": "send this to the friend hosting Thanksgiving with no list; it's a week away",
+        "fixed": []
+      }
+    },
+    {
+      "id": "st06",
+      "status": "planned",
+      "channel": "instagram",
+      "dueAt": "2026-11-29T11:00:00-08:00",
+      "file": "assets/social/send-this/st06-turkey-sunday.png",
+      "renderBatchFile": "st06-turkey-sunday",
+      "pillar": "Send this to",
+      "topic": "Thanksgiving leftovers",
+      "cta": "send",
+      "hook": "surprise",
+      "format": "static",
+      "text": "day four. send this to your turkey person.\n\n#ieatzhealthy #thanksgivingleftovers #sendthis",
+      "firstComment": "what's the longest you've gone on one turkey? no judgment here.",
+      "alt": "Deep green card with cream serif type: send this to whoever is still eating turkey on sunday. Below, in pale green italics: four days in. it's okay to let go. iEatz Healthy badge and the line fridge to table at the bottom.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 1,
+        "read": "send this to the friend still eating Thanksgiving turkey on Sunday",
+        "fixed": []
+      }
     }
   ]
 }

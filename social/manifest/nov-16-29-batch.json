@@ -1,0 +1,352 @@
+{
+  "organization": {
+    "name": "Applied Intelligence Co.",
+    "id": "6a138b7d82bb2ed009fed356"
+  },
+  "channels": {
+    "pinterest": {
+      "id": "6a7a4b64b2d9d577435279f6"
+    },
+    "instagram": {
+      "id": "6a14b495c687a22dd4267bfc"
+    }
+  },
+  "urlBase": "https://raw.githubusercontent.com/travi-trav3/iEatz/add-food-photography/",
+  "appStoreUrl": "https://apps.apple.com/us/app/id6475559706",
+  "igMetadata": {
+    "post": {
+      "type": "post",
+      "shouldShareToFeed": true
+    },
+    "reel": {
+      "type": "reel",
+      "shouldShareToFeed": true
+    }
+  },
+  "batch": "nov-16-29",
+  "createdAt": "2026-11-08",
+  "renderBatch": "social/render/batches/nov-16-29.json",
+  "note": "Sunday routine Nov 8 (F-014). Weeks of Mon Nov 16 (it had only the scheduled o07 carousel) and Mon Nov 23, Thanksgiving week. No reels: nothing new in the Drive inbox since Nov 3 and the 17 clips over the connector's ~6.3 MB limit still fail to pull (retested Nov 8), so the reel slots stay empty rather than padded (F-016, F-017). Pins rebuild the unpublished Nov 3 to 8 drafts that failed review (p02, p06, p07, p08) and re-slot the approved pancake thread; every photo post is on our own photos (F-008). Send-this st05 and st06 are in manifest/send-this.json. Drafts only; pins convert on Travis's go.",
+  "posts": [
+    {
+      "id": "p16-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-16T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p16-pin-haul-sharpie.png",
+      "renderBatchFile": "p16-pin-haul-sharpie",
+      "pillar": "Money/Waste",
+      "topic": "Grocery haul",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "problem",
+      "board": "Grocery list ideas and meal planning",
+      "boardServiceId": "1011339728762228750",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Grocery haul with no meal plan: what to make from the bag you just bought",
+      "text": "came home at 9:30 with sweet potato chips, two bags of frozen veg, eggs, bananas and a bag of cheese. no list, no plan.\n\nsnap the receipt and iEatz writes the week from what you actually bought, calories and protein estimated, the stuff you forgot sent to Instacart. free on iOS and Android.",
+      "alt": "Pin: a grocery haul on a black stove top, oven clock 9:30: sweet potato chips, Birds Eye vegetable bags, shredded cheese, a carton of eggs, bananas and a bottle of creamer. Black marker headline: Nobody made a list. The chips are circled and labelled not dinner; the eggs are labelled breakfast.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 3,
+        "read": "someone came home with a random haul and no plan; the chips are not dinner, the eggs are breakfast",
+        "fixed": [
+          "headline ran into the chips ring and 'tuesday' collided with 'breakfast': cut to two marks",
+          "white marker unreadable over the chips bag: black ink with the light shade"
+        ]
+      },
+      "why": "Everyone has unpacked a bag like this with no plan: the pen sorts it the way a person would (the chips are not dinner), and the caption hands the rest to the receipt.",
+      "app": "Snap the receipt and iEatz writes the week from what you bought, calories and protein estimated; what's missing goes to Instacart."
+    },
+    {
+      "id": "p17-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-17T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p17-pin-squash-bleed.png",
+      "renderBatchFile": "p17-pin-squash-bleed",
+      "pillar": "Recipe/Food",
+      "topic": "Sheet pan",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "surprise",
+      "board": "Cheap healthy dinners on a budget",
+      "boardServiceId": "1011339728762228747",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Roasted squash and sweet potato sheet pan dinner from what's left in the drawer",
+      "text": "the half squash has been in the drawer since tuesday and the sweet potatoes are rolling around under it. one tray, charred edges. that's dinner.\n\ntell iEatz the two and it writes the tray in seconds, calories and protein estimated, and sends the protein you're missing to Instacart. free on iOS and Android.",
+      "alt": "Pin: a sheet pan of roasted purple sweet potato chunks and slabs of squash, some charred, on a wooden table. Headline: The half squash in the drawer became dinner. Subheader: We told the iEatz app what was left. It wrote the sheet pan recipe.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 1,
+        "read": "the leftover squash became dinner because the iEatz app wrote a recipe from it",
+        "fixed": [
+          "rebuild of p07 (photo layout, failed review) as a bleed with the app named in a subheader"
+        ]
+      },
+      "why": "The half squash nobody had a plan for is the most common thing in a crisper drawer; the charred tray says it was dinner all along.",
+      "app": "Add what you have to iEatz and it writes the recipe with calories and protein estimated; the missing protein goes to Instacart."
+    },
+    {
+      "id": "p18-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-18T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p18-pin-pancakes-thread.png",
+      "renderBatchFile": "p18-pin-pancakes-thread",
+      "pillar": "Recipe/Food",
+      "topic": "Pancakes",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "surprise",
+      "board": "School lunch and family dinner ideas",
+      "boardServiceId": "1011339728762228742",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Pancakes without pancake mix: flour, eggs and milk for weekend breakfast",
+      "text": "no pancake mix in the house and nobody's going to the store at 9 AM. flour, eggs, milk. that's pancakes, you just haven't decided yet.\n\ntell iEatz the three and it writes the recipe in seconds, calories and protein estimated. syrup to Instacart if you're out. free on iOS and Android.",
+      "alt": "Pin in a text-thread layout on mint. Headline: You don't need pancake mix to make pancakes. Subheader: We told the iEatz app we had flour, eggs and milk. It wrote the recipe. Messages: we're out of pancake mix / we have flour, eggs and milk / iEatz says that's enough for pancakes / a photo of a stack of pancakes with maple syrup behind / ok I'm coming downstairs.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 5,
+        "read": "you can make pancakes without the mix; an app worked it out from what was in the kitchen",
+        "fixed": [
+          "the approved p05 v5, re-slotted: the Nov 5 draft never ran",
+          "removed the unverified 'about 12 g a stack' from the description"
+        ]
+      },
+      "why": "Everyone thinks pancakes need the box; the thread shows the moment iEatz says flour, eggs and milk are enough, and ends on the stack.",
+      "app": "Tell iEatz flour, eggs and milk and it writes the pancakes, calories and protein estimated."
+    },
+    {
+      "id": "p19-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-19T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p19-pin-datenight-photo.png",
+      "renderBatchFile": "p19-pin-datenight-photo",
+      "pillar": "Recipe/Food",
+      "topic": "Date night",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "surprise",
+      "board": "Easy weeknight dinner ideas",
+      "boardServiceId": "1011339728762228746",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Date night dinner at home: steak, ravioli and broccoli, no reservation needed",
+      "text": "friday. no reservation, no plan, a steak in the fridge and a bag of ravioli. candles are free. that's date night, you just haven't decided yet.\n\ntell iEatz the three and it writes the whole table, calories and protein estimated, the parmesan to Instacart if you're out. free on iOS and Android.",
+      "alt": "Pin: a set table from above with sliced steak on a cutting board, a bowl of ravioli with herbs and parmesan, a bowl of broccoli, candles and pink napkins, above a paper panel. Eyebrow: No reservation, no plan. Headline: We skipped the reservation and ate better. Chips: steak, ravioli, broccoli; recipe from the iEatz app; candles optional.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 2,
+        "read": "they stayed home instead of going out and the dinner the iEatz app wrote was better",
+        "fixed": [
+          "rebuild of p06 ('Date night at home. 25 minutes.': unverified number, failed review)",
+          "app only in a small chip: 'recipe from the iEatz app' chip"
+        ]
+      },
+      "why": "Date night is the dinner people think has to be bought; a real table at home with candles says otherwise, and it's one of Travis's own iEatz dinners.",
+      "app": "Tell iEatz the steak, the ravioli and the broccoli and it writes the whole table, calories and protein estimated; the parmesan goes to Instacart."
+    },
+    {
+      "id": "p21-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-21T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p21-pin-fridge-poster.png",
+      "renderBatchFile": "p21-pin-fridge-poster",
+      "pillar": "Pantry/Fridge",
+      "topic": "Fridge clean out",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "promise",
+      "board": "Pantry meals and fridge clean out dinners",
+      "boardServiceId": "1011339728762228744",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Fridge clean out dinner ideas: use up what's left on a Saturday",
+      "text": "saturday. half a pepper, two eggs, the last of the spinach, a tortilla that's still fine. that's not nothing, that's lunch. you just haven't decided yet.\n\ntell iEatz what's left and it writes the recipe with calories and protein estimated, and sends what's missing to Instacart. free on iOS and Android.",
+      "alt": "Type-only pin on warm paper. Headline: Saturday is for using up the fridge. Body: Tell the iEatz app what's left in there. It writes the recipe with protein estimated and sends what's missing to Instacart. A green and red dashed strip below. iEatz Healthy badge top right.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 2,
+        "read": "use up the fridge on Saturday; the iEatz app turns what's left into a recipe",
+        "fixed": [
+          "'fridge.' and 'using' alone on a line: manual break and a 130 px headline"
+        ]
+      },
+      "why": "A type-only pin for the weekend clean-out: the line is something people already say on a Saturday, and the body is the whole app in one breath.",
+      "app": "Add what's left to iEatz and it writes the recipe with calories and protein estimated; the missing items go to Instacart."
+    },
+    {
+      "id": "p23-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-23T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p23-pin-hosting-bleed.png",
+      "renderBatchFile": "p23-pin-hosting-bleed",
+      "pillar": "Grocery/Instacart",
+      "topic": "Thanksgiving hosting",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "problem",
+      "board": "Grocery list ideas and meal planning",
+      "boardServiceId": "1011339728762228750",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Thanksgiving grocery list: what to buy when you're hosting and short on time",
+      "text": "hosting thursday. the list is a sticky note that says 'turkey?' and the store is going to be a war zone by wednesday.\n\ntell iEatz what's already in the pantry and it writes the recipes, then sends everything you're missing to Instacart so the cart builds itself. free on iOS and Android.",
+      "alt": "Pin: the produce aisle of a grocery store at night, peppers, cucumbers and greens down a long lit case, the front of an empty cart. Headline: Hosting Thanksgiving and the list isn't written? Subheader: Tell the iEatz app what's already in the pantry. It writes the recipes and sends the rest to Instacart.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 2,
+        "read": "if I'm hosting Thanksgiving with no list, the iEatz app works from my pantry and sends the rest to Instacart",
+        "fixed": [
+          "'Thursday' did not say Thanksgiving to a stranger",
+          "'Tell iEatz' changed to 'Tell the iEatz app'"
+        ]
+      },
+      "why": "Thanksgiving week, Monday: the host with no list is a panic everyone knows, and an empty aisle at night is what it looks like.",
+      "app": "Add what's in the pantry to iEatz and it writes the recipes; the missing items go to Instacart."
+    },
+    {
+      "id": "p24-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-24T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p24-pin-burgerbowl-thread.png",
+      "renderBatchFile": "p24-pin-burgerbowl-thread",
+      "pillar": "Recipe/Food",
+      "topic": "Burger bowl",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "surprise",
+      "board": "Easy weeknight dinner ideas",
+      "boardServiceId": "1011339728762228746",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Burger bowl without the bun: easy ground beef dinner with avocado and lettuce",
+      "text": "made burgers. forgot buns. didn't go back to the store. made the iEatz burger bowl instead and honestly it was better.\n\nthis one came straight out of iEatz. tell it what you've got and it writes the recipe, calories and protein estimated, buns to Instacart if you must. free on iOS and Android.",
+      "alt": "Pin in a text-thread layout on mint. Headline: We forgot the buns and didn't go back. Subheader: We told the iEatz app what we had. It wrote a burger bowl. Messages: did you get buns / forgot. not going back / iEatz says burger bowl / a photo of a bunless burger bowl with lettuce, tomato, avocado and a pickle, fries and a burger behind / ok this is better.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 1,
+        "read": "they forgot buns, the iEatz app suggested a burger bowl, and it was better",
+        "fixed": [
+          "rebuild of p02 ('Forgot the buns. Didn't go back.': two fragments, F-021) as a thread with a complete headline"
+        ]
+      },
+      "why": "The forgotten-buns night is universal; the thread turns it into a product moment (iEatz says burger bowl) and ends on Travis's real bowl.",
+      "app": "Tell iEatz the beef, lettuce and avocado and it writes the burger bowl, calories and protein estimated; buns to Instacart if you must."
+    },
+    {
+      "id": "p25-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-25T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p25-pin-nightbefore-collage.png",
+      "renderBatchFile": "p25-pin-nightbefore-collage",
+      "pillar": "Pantry/Fridge",
+      "topic": "Night before Thanksgiving",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "problem",
+      "board": "Pantry meals and fridge clean out dinners",
+      "boardServiceId": "1011339728762228744",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Easy dinner the night before Thanksgiving: coconut curry or sheet-pan nachos",
+      "text": "the night before thanksgiving the oven's spoken for and nobody has anything left. one can of coconut milk is a curry. a bag of chips and some jalapenos is nachos. both count.\n\ntell iEatz what's in the kitchen and it writes something easy, calories and protein estimated, the missing bits to Instacart. free on iOS and Android.",
+      "alt": "Pin on warm paper. Headline: Nobody wants to cook the night before Thanksgiving. Subheader: Tell the iEatz app what's in the kitchen. It writes something easy. Two taped photos: a stove from above with a pan of coconut curry, browned tofu and a bowl of grain, noted one can of coconut milk; sheet-pan nachos with jalapeno and guacamole, noted nachos count as dinner.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 1,
+        "read": "nobody wants to cook before Thanksgiving; the iEatz app gives you something easy like curry or nachos",
+        "fixed": []
+      },
+      "why": "Wednesday of Thanksgiving week, nobody has energy left for a real dinner; two easy ones from the kitchen say you don't need it.",
+      "app": "Add what's in the kitchen to iEatz and it writes an easy dinner with calories and protein estimated."
+    },
+    {
+      "id": "p27-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-27T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p27-pin-leftovers-photo.png",
+      "renderBatchFile": "p27-pin-leftovers-photo",
+      "pillar": "Money/Waste",
+      "topic": "Thanksgiving leftovers",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "promise",
+      "board": "Healthy meal prep for the week",
+      "boardServiceId": "1011339728762228752",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Thanksgiving leftovers ideas: turn leftover turkey into three more dinners",
+      "text": "the plate everyone photographs on thursday is also friday, saturday and sunday. the turkey, the potatoes, the greens: three more dinners hiding in the fridge.\n\ntell iEatz what's left and it writes new dinners from the leftovers, calories and protein estimated, the one thing you're missing to Instacart. free on iOS and Android.",
+      "alt": "Pin: a holiday plate of sliced turkey, mashed potatoes, greens and stuffing on an orange plaid runner, mini pumpkins behind, above a paper panel. Eyebrow: The day after Thanksgiving. Headline: Leftover turkey is three more dinners. Chips: turkey, potatoes, greens; no store run; the missing bits to Instacart.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 2,
+        "read": "the Thanksgiving leftovers can turn into three more dinners",
+        "fixed": [
+          "crop showed pumpkins and cut the turkey: reframed on the plate",
+          "rebuild of p08 (deferred Sunday roast pin) for the day after Thanksgiving"
+        ]
+      },
+      "why": "The day after Thanksgiving every fridge is full of the same plate; the promise is that it turns into the week instead of the trash.",
+      "app": "Tell iEatz what's left and it writes new dinners from the leftovers, calories and protein estimated; the missing bits go to Instacart."
+    },
+    {
+      "id": "p28-pin",
+      "status": "planned",
+      "channel": "pinterest",
+      "dueAt": "2026-11-28T12:10:00-08:00",
+      "file": "assets/pinterest/nov16/p28-pin-store-poster.png",
+      "renderBatchFile": "p28-pin-store-poster",
+      "pillar": "Grocery/Instacart",
+      "topic": "After Thanksgiving",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "problem",
+      "board": "Pantry meals and fridge clean out dinners",
+      "boardServiceId": "1011339728762228744",
+      "url": "https://apps.apple.com/us/app/id6475559706",
+      "title": "Skip the grocery store after Thanksgiving: dinner from what's already in the fridge",
+      "text": "two days after thanksgiving the store is chaos and you're still full. the fridge has more in it than you think.\n\ntell iEatz what's in there and it writes dinner, calories and protein estimated. what's missing goes to Instacart and you stay on the couch. free on iOS and Android.",
+      "alt": "Type-only pin on warm paper. Headline: Nobody should go to the store today. Body: Two days after Thanksgiving, the store is chaos. Tell the iEatz app what's in the fridge, and what's missing goes to Instacart. A green and red dashed strip below. iEatz Healthy badge top right.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 2,
+        "read": "don't go to the store after Thanksgiving; the iEatz app works from your fridge and Instacart brings the rest",
+        "fixed": [
+          "'Skip the store the Saturday after Thanksgiving' orphaned twice: new line 'Nobody should go to the store today.' with the timing in the body"
+        ]
+      },
+      "why": "The grocery store two days after Thanksgiving is a shared nightmare; the pin gives permission to stay home and the app is how.",
+      "app": "Add what's in the fridge to iEatz and it writes the recipe; the missing items go to Instacart."
+    },
+    {
+      "id": "o27-ig",
+      "status": "planned",
+      "channel": "instagram",
+      "dueAt": "2026-11-27T10:20:00-08:00",
+      "file": "assets/social/nov16/o27-ig-leftovers-bleed.png",
+      "renderBatchFile": "o27-ig-leftovers-bleed",
+      "pillar": "Money/Waste",
+      "topic": "Thanksgiving leftovers",
+      "cta": "app-value",
+      "format": "static",
+      "hook": "promise",
+      "text": "the fridge is mostly turkey now. the potatoes are hiding behind it and the greens have about a day left.\n\nthat's three more dinners, not three more days of the same plate. tell iEatz what's left and it writes something new from it tonight, calories and protein estimated, the missing bits to Instacart. free on iOS and Android.\n\n#thanksgivingleftovers #leftoverturkey #easydinners #weeknightdinner #ieatzhealthy",
+      "firstComment": "what's the leftover that always ends up in the trash at your place? ours is the stuffing.",
+      "alt": "Instagram post: a holiday plate of sliced turkey, mashed potatoes, greens and stuffing on an orange plaid runner, mini pumpkins and a paper towel roll behind, under a dark scrim. Headline: The leftovers are three more dinners. Subheader: Tell the iEatz app what's left. It writes tonight, protein estimated.",
+      "qa": {
+        "verdict": "pass",
+        "rounds": 2,
+        "read": "the Thanksgiving leftovers can be three more dinners; the iEatz app writes them",
+        "fixed": [
+          "'dinners.' alone on a line: manual break",
+          "crop reframed on the plate"
+        ]
+      },
+      "why": "Black Friday, everyone's fridge is the same plate; the post promises it becomes the week, not the trash.",
+      "app": "Tell iEatz what's left and it writes new dinners from the leftovers, calories and protein estimated."
+    }
+  ]
+}

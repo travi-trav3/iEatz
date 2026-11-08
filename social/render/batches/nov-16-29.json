@@ -1,0 +1,292 @@
+{
+  "name": "nov-16-29",
+  "createdAt": "2026-11-08",
+  "note": "Sunday routine Nov 8: weeks of Nov 16 and Nov 23 (Thanksgiving). No new footage in the Drive inbox and the clips over 6.3 MB still fail to pull, so no reels. Own photos on every photo post (F-008). Send-this posts st05 and st06 live in batches/send-this.json.",
+  "posts": [
+    {
+      "file": "p16-pin-haul-sharpie",
+      "w": 1000,
+      "h": 1500,
+      "template": "sharpie",
+      "footer": "badge-br",
+      "photo": "own/2026-11-01-team-img2110.jpg",
+      "objPos": "50% 50%",
+      "grade": false,
+      "head": "Nobody made a list.",
+      "ink": "#0A0F0C",
+      "marks": [
+        {
+          "x": 255,
+          "y": 345,
+          "rx": 150,
+          "ry": 125,
+          "label": "not dinner",
+          "labelSide": "right"
+        },
+        {
+          "x": 700,
+          "y": 1085,
+          "rx": 260,
+          "ry": 105,
+          "label": "breakfast",
+          "labelSide": "above"
+        }
+      ],
+      "photoClaim": "the Nov 1 Harris Teeter haul on a black stove top: sweet potato chips, Birds Eye vegetable bags, a carton of eggs, bananas, shredded cheese and a bottle of creamer",
+      "hookType": "problem",
+      "why": "Everyone has unpacked a bag like this with no plan: the pen sorts it the way a person would (the chips are not dinner), and the caption hands the rest to the receipt.",
+      "app": "Snap the receipt and iEatz writes the week from what you bought, calories and protein estimated; what's missing goes to Instacart.",
+      "shade": true
+    },
+    {
+      "file": "p17-pin-squash-bleed",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "own/2026-10-29-travis-img6358.jpg",
+      "objPos": "50% 50%",
+      "grade": false,
+      "head": "The half squash in the drawer became dinner.",
+      "sub": "We told the iEatz app what was left. It wrote the sheet pan recipe.",
+      "photoClaim": "a sheet pan of roasted purple sweet potato chunks and slabs of squash, some charred, on a wooden table",
+      "hookType": "surprise",
+      "why": "The half squash nobody had a plan for is the most common thing in a crisper drawer; the charred tray says it was dinner all along.",
+      "app": "Add what you have to iEatz and it writes the recipe with calories and protein estimated; the missing protein goes to Instacart."
+    },
+    {
+      "file": "p18-pin-pancakes-thread",
+      "w": 1000,
+      "h": 1500,
+      "template": "thread",
+      "footer": "badge-bl",
+      "bg": "mint",
+      "grade": false,
+      "head": "You don't need pancake mix<br>to make pancakes.",
+      "sub": "We told the iEatz app we had flour, eggs and milk.<br>It wrote the recipe.",
+      "msgs": [
+        {
+          "time": "Sat 9:02 AM"
+        },
+        {
+          "who": "them",
+          "text": "we're out of pancake mix"
+        },
+        {
+          "who": "me",
+          "text": "we have flour, eggs and milk"
+        },
+        {
+          "who": "me",
+          "text": "iEatz says that's enough for pancakes"
+        },
+        {
+          "who": "me",
+          "photo": "own/2026-10-29-travis-img5625.jpg",
+          "objPos": "50% 70%"
+        },
+        {
+          "who": "them",
+          "text": "ok I'm coming downstairs"
+        }
+      ],
+      "photoClaim": "a stack of five pancakes on a white plate on a wooden table, a bottle of maple syrup behind it",
+      "hookType": "surprise",
+      "why": "Everyone thinks pancakes need the box; the thread shows the moment iEatz says flour, eggs and milk are enough, and ends on the stack.",
+      "app": "Tell iEatz flour, eggs and milk and it writes the pancakes, calories and protein estimated."
+    },
+    {
+      "file": "p19-pin-datenight-photo",
+      "w": 1000,
+      "h": 1500,
+      "template": "photo",
+      "footer": "badge-bl",
+      "photo": "own/2026-10-29-travis-img6825.jpg",
+      "objPos": "50% 45%",
+      "grade": false,
+      "eyebrow": "No reservation, no plan",
+      "head": "We skipped the reservation and ate better.",
+      "chips": [
+        "steak, ravioli, broccoli",
+        "recipe from the iEatz app",
+        "candles optional"
+      ],
+      "photoClaim": "a set table from above: a cutting board with sliced steak, a bowl of ravioli with herbs and parmesan, a bowl of broccoli, candles and pink napkins",
+      "hookType": "surprise",
+      "why": "Date night is the dinner people think has to be bought; a real table at home with candles says otherwise, and it's one of Travis's own iEatz dinners.",
+      "app": "Tell iEatz the steak, the ravioli and the broccoli and it writes the whole table, calories and protein estimated; the parmesan goes to Instacart."
+    },
+    {
+      "file": "p21-pin-fridge-poster",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-bl",
+      "head": "Saturday is for<br>using up the <span class=\"i\">fridge.</span>",
+      "body": "Tell the iEatz app what's left in there. It writes the recipe with protein estimated and sends what's missing to Instacart.",
+      "strip": true,
+      "hookType": "promise",
+      "why": "A type-only pin for the weekend clean-out: the line is something people already say on a Saturday, and the body is the whole app in one breath.",
+      "app": "Add what's left to iEatz and it writes the recipe with calories and protein estimated; the missing items go to Instacart.",
+      "headSize": 130
+    },
+    {
+      "file": "p23-pin-hosting-bleed",
+      "w": 1000,
+      "h": 1500,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "own/2026-11-01-team-img2089.jpg",
+      "objPos": "50% 50%",
+      "grade": false,
+      "head": "Hosting Thanksgiving and the list isn't written?",
+      "sub": "Tell the iEatz app what's already in the pantry. It writes the recipes and sends the rest to Instacart.",
+      "photoClaim": "the organic produce aisle at Harris Teeter at night: peppers, cucumbers, squash and greens down a long lit case, the front of an empty cart",
+      "hookType": "problem",
+      "why": "Thanksgiving week, Monday: the host with no list is a panic everyone knows, and an empty aisle at night is what it looks like.",
+      "app": "Add what's in the pantry to iEatz and it writes the recipes; the missing items go to Instacart."
+    },
+    {
+      "file": "p24-pin-burgerbowl-thread",
+      "w": 1000,
+      "h": 1500,
+      "template": "thread",
+      "footer": "badge-bl",
+      "bg": "mint",
+      "grade": false,
+      "head": "We forgot the buns<br>and didn't go back.",
+      "sub": "We told the iEatz app what we had. It wrote a burger bowl.",
+      "msgs": [
+        {
+          "time": "Tue 6:40 PM"
+        },
+        {
+          "who": "them",
+          "text": "did you get buns"
+        },
+        {
+          "who": "me",
+          "text": "forgot. not going back"
+        },
+        {
+          "who": "me",
+          "text": "iEatz says burger bowl"
+        },
+        {
+          "who": "me",
+          "photo": "own/2026-10-29-travis-img6315.jpg",
+          "objPos": "50% 85%"
+        },
+        {
+          "who": "them",
+          "text": "ok this is better"
+        }
+      ],
+      "photoClaim": "a bunless burger bowl with lettuce, tomato, avocado and a pickle in a white bowl, a bowl of fries and a burger behind it",
+      "hookType": "surprise",
+      "why": "The forgotten-buns night is universal; the thread turns it into a product moment (iEatz says burger bowl) and ends on Travis's real bowl.",
+      "app": "Tell iEatz the beef, lettuce and avocado and it writes the burger bowl, calories and protein estimated; buns to Instacart if you must."
+    },
+    {
+      "file": "p25-pin-nightbefore-collage",
+      "w": 1000,
+      "h": 1500,
+      "template": "collage",
+      "footer": "badge-bl",
+      "headAt": "top",
+      "headSize": 80,
+      "grain": false,
+      "head": "Nobody wants to cook the night<br>before Thanksgiving.",
+      "sub": "Tell the iEatz app what's in the kitchen. It writes something easy.",
+      "cards": [
+        {
+          "photo": "own/2026-10-29-travis-img4952.jpg",
+          "x": 56,
+          "y": 470,
+          "w": 540,
+          "h": 600,
+          "rot": -3,
+          "tape": true,
+          "objPos": "50% 70%"
+        },
+        {
+          "photo": "own/2026-10-29-travis-img6201.jpg",
+          "x": 560,
+          "y": 560,
+          "w": 470,
+          "h": 520,
+          "rot": 3,
+          "tape": "right",
+          "objPos": "50% 55%"
+        }
+      ],
+      "notes": [
+        {
+          "text": "one can of coconut milk",
+          "x": 70,
+          "y": 1120
+        },
+        {
+          "text": "nachos count as dinner",
+          "x": 600,
+          "y": 1130
+        }
+      ],
+      "photoClaim": "a stove from above with a pan of red coconut curry, a tray of browned tofu and a bowl of grain; sheet-pan nachos with jalapeno and guacamole",
+      "hookType": "problem",
+      "why": "Wednesday of Thanksgiving week, nobody has energy left for a real dinner; two easy ones from the kitchen say you don't need it.",
+      "app": "Add what's in the kitchen to iEatz and it writes an easy dinner with calories and protein estimated."
+    },
+    {
+      "file": "p27-pin-leftovers-photo",
+      "w": 1000,
+      "h": 1500,
+      "template": "photo",
+      "footer": "badge-bl",
+      "photo": "own/2025-12-09-travis-502bcfab.jpg",
+      "objPos": "50% 100%",
+      "grade": false,
+      "eyebrow": "The day after Thanksgiving",
+      "head": "Leftover turkey is three more dinners.",
+      "chips": [
+        "turkey, potatoes, greens",
+        "no store run",
+        "the missing bits to Instacart"
+      ],
+      "photoClaim": "a holiday plate of sliced turkey, mashed potatoes, salad greens and stuffing on an orange plaid runner with mini pumpkins",
+      "hookType": "promise",
+      "why": "The day after Thanksgiving every fridge is full of the same plate; the promise is that it turns into the week instead of the trash.",
+      "app": "Tell iEatz what's left and it writes new dinners from the leftovers, calories and protein estimated; the missing bits go to Instacart."
+    },
+    {
+      "file": "p28-pin-store-poster",
+      "w": 1000,
+      "h": 1500,
+      "template": "poster",
+      "footer": "badge-bl",
+      "head": "Nobody should go<br>to the store <span class=\"i\">today.</span>",
+      "body": "Two days after Thanksgiving, the store is chaos. Tell the iEatz app what's in the fridge, and what's missing goes to Instacart.",
+      "strip": true,
+      "hookType": "problem",
+      "why": "The grocery store two days after Thanksgiving is a shared nightmare; the pin gives permission to stay home and the app is how.",
+      "app": "Add what's in the fridge to iEatz and it writes the recipe; the missing items go to Instacart.",
+      "headSize": 140
+    },
+    {
+      "file": "o27-ig-leftovers-bleed",
+      "w": 1080,
+      "h": 1350,
+      "template": "bleed",
+      "footer": "badge-br",
+      "photo": "own/2025-12-09-travis-502bcfab.jpg",
+      "objPos": "50% 100%",
+      "grade": false,
+      "head": "The leftovers are<br>three more dinners.",
+      "sub": "Tell the iEatz app what's left. It writes tonight, protein estimated.",
+      "photoClaim": "a holiday plate of sliced turkey, mashed potatoes, salad greens and stuffing on an orange plaid runner with mini pumpkins",
+      "hookType": "promise",
+      "why": "Black Friday, everyone's fridge is the same plate; the post promises it becomes the week, not the trash.",
+      "app": "Tell iEatz what's left and it writes new dinners from the leftovers, calories and protein estimated."
+    }
+  ]
+}

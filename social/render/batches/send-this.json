@@ -48,6 +48,30 @@
       "payoff": "it's not empty. you just can't see dinner yet. iEatz can.",
       "why": "The fridge stare is universal; the app is the thing that sees dinner in it.",
       "app": "Tell iEatz what is in there and it writes the recipe."
+    },
+    {
+      "file": "st05-hosting-list",
+      "w": 1080,
+      "h": 1350,
+      "template": "sendthis",
+      "variant": "cream",
+      "hook": "send this to whoever's hosting thanksgiving and hasn't made a list yet",
+      "payoff": "it's next thursday. we're a little worried.",
+      "hookType": "problem",
+      "why": "A week out from Thanksgiving, everyone knows the host with no list; sending it is the nudge, and the app is the list.",
+      "app": "Add what's in the pantry to iEatz and it writes the recipes; the missing items go to Instacart."
+    },
+    {
+      "file": "st06-turkey-sunday",
+      "w": 1080,
+      "h": 1350,
+      "template": "sendthis",
+      "variant": "green",
+      "hook": "send this to whoever is still eating turkey on sunday",
+      "payoff": "four days in. it's okay to let go.",
+      "hookType": "surprise",
+      "why": "The Sunday after Thanksgiving, someone is on day four of the same sandwich; the joke is the intervention, the app is what's next.",
+      "app": "Tell iEatz what's left in the fridge and it writes something that isn't turkey, calories and protein estimated."
     }
   ]
 }
