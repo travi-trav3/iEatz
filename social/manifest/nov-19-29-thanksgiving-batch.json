@@ -45,7 +45,7 @@
    "boardServiceId": "1011339728762228750",
    "url": "https://www.instacart.com/store/shopping_lists/25949752?utm_campaign=instacart-idp&utm_medium=affiliate&utm_source=instacart_idp&utm_term=partnertype-mediapartner&utm_content=campaignid-20313_partnerid-6442115",
    "title": "Friendsgiving grocery list for 4 to 6: the whole Instacart cart, turkey breast to pie",
-   "text": "Friendsgiving for four to six, built as one Instacart cart: a turkey breast instead of a whole bird, the sides and a pie. Open it, take out what you already have on the table, order the rest. We may earn a commission when you order through these carts.",
+   "text": "Friendsgiving dinner for four to six, built as one Instacart cart: a turkey breast instead of a whole bird, the sides and a pie. Open it, take out what you already have, order the rest. We may earn a commission when you order through these carts.",
    "alt": "Pin: a dinner table at night with candles, a board of sliced steak, broccoli and ravioli. Headline: Friendsgiving for five fits in one cart. A text thread over the photo: ok who is doing the turkey; i can bring a side? maybe; nobody is cooking a whole bird for five people; sent the group the iEatz cart, turkey breast, sides, pie, done; wait that's the whole thing? Footer: The Friendsgiving cart is already built on Instacart.",
    "qa": {
     "verdict": "pass",
@@ -59,7 +59,7 @@
    "why": "Every Friendsgiving starts as a group chat where nobody wants the turkey; the pin shows the moment one person ends the thread by sending the whole cart.",
    "app": "No app claim on this pin: the Friendsgiving cart is an iEatz-built Instacart list and the pin links straight to it.",
    "photoClaim": "a wooden dinner table at night with lit candles, a cutting board of sliced steak, a bowl of broccoli, a bowl of ravioli with parsley and pink napkins",
-   "bufferId": null,
+   "bufferId": "6aff2b4801383f7d0f7cfa1c",
    "note": "Thursday 13:10 slot per the brief. Own photo (Travis's Oct 29 dinner table). Links to cart B2."
   },
   {
@@ -89,7 +89,7 @@
    "why": "Hosting ten is the scariest grocery trip of the year; a real plate with the whole classic spread, circled, says the list is already done.",
    "app": "No app claim on this pin: the classic cart is an iEatz-built Instacart list and the pin links straight to it.",
    "photoClaim": "a holiday plate on an orange plaid runner: sliced turkey, mashed potatoes, stuffing, candied sweet potatoes and a green salad, small pumpkins and a paper towel roll behind it",
-   "bufferId": null,
+   "bufferId": "6aff292c8ceb322055130b04",
    "note": "Thursday 18:10 slot. Own photo (the Dec 2025 holiday plate, also the hub hero). Links to cart B1."
   },
   {
@@ -129,7 +129,7 @@
    },
    "why": "The week before Thanksgiving everyone is building the same list from scratch; nine slides say it is already built, seven ways, and the only decision left is which table is yours.",
    "app": "No app claim on this post: the carts are iEatz-built Instacart lists and the hub page links to them; the app is only mentioned on the hub's After Thursday section.",
-   "bufferId": null,
+   "bufferId": "6aff2930ecf884890185102a",
    "note": "Thursday 17:15 slot. Type-only slides on purpose: no cart photos exist and no stock. The IG bio link must point at https://ieatzhealthy.com/thanksgiving/ before this goes live."
   }
  ]
