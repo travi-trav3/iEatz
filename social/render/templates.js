@@ -337,7 +337,7 @@ const TEMPLATES = {
     const hasU = /class="u"/.test(p.head);
     const bars = Array.from({ length: 8 }, (_, i) => `<i class="${i % 2 ? (hasU ? 'k' : 't') : 'g'}"></i>`).join('');
     return `<div class="pin sh-poster">
-    <h1 class="po-head" data-fit="84">${p.head}</h1>
+    <h1 class="po-head" data-fit="84"${p.headSize ? ` style="font-size:${p.headSize}px"` : ""}>${p.head}</h1>
     ${p.body || p.readout ? `<div class="po-row">${p.body ? `<p class="po-body">${p.body}</p>` : '<span></span>'}${p.readout ? `<div class="po-readout">${p.readout.map(r => `<div class="ro"><span class="l">${r.label}</span><span class="v">${r.value}</span></div>`).join('')}</div>` : ''}</div>` : ''}
     ${p.strip ? `<div class="po-strip">${bars}</div>` : ''}
     <div class="po-fill"></div>

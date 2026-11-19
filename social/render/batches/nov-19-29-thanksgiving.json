@@ -1,0 +1,284 @@
+{
+ "name": "nov-19-29-thanksgiving",
+ "createdAt": "2026-11-19",
+ "note": "Thanksgiving carts campaign (brief Nov 19): seven iEatz-built Instacart carts, Pinterest pins to the carts, Instagram to the /thanksgiving hub. Truth rules: leftover ingredients only, never leftover dishes; the carts are not in the app; app CTA only on leftover-ingredient content; no prices; disclosure in every cart pin description. Own photos only (F-008).",
+ "posts": [
+  {
+   "file": "p1-pin-friendsgiving-thread",
+   "w": 1000,
+   "h": 1500,
+   "template": "thread",
+   "footer": "badge-br",
+   "grade": false,
+   "bg": {
+    "photo": "own/2026-10-29-travis-img6825.jpg",
+    "objPos": "50% 42%"
+   },
+   "head": "Friendsgiving for five<br>fits in one cart.",
+   "msgs": [
+    {
+     "time": "Sun 7:40 PM"
+    },
+    {
+     "who": "them",
+     "text": "ok who is doing the turkey"
+    },
+    {
+     "who": "them",
+     "text": "i can bring a side? maybe"
+    },
+    {
+     "who": "me",
+     "text": "nobody is cooking a whole bird for five people"
+    },
+    {
+     "who": "me",
+     "text": "sent the group the iEatz cart. turkey breast, sides, pie. done"
+    },
+    {
+     "who": "them",
+     "text": "wait that's the whole thing?"
+    }
+   ],
+   "foot": "The Friendsgiving cart is already built on Instacart. Open it, take out what you have, order the rest.",
+   "photoClaim": "a wooden dinner table at night with lit candles, a cutting board of sliced steak, a bowl of broccoli, a bowl of ravioli with parsley and pink napkins",
+   "hookType": "promise",
+   "why": "Every Friendsgiving starts as a group chat where nobody wants the turkey; the pin shows the moment one person ends the thread by sending the whole cart.",
+   "app": "No app claim on this pin: the Friendsgiving cart is an iEatz-built Instacart list and the pin links straight to it."
+  },
+  {
+   "file": "p2-pin-traditional-punchline",
+   "w": 1000,
+   "h": 1500,
+   "template": "punchline",
+   "footer": "none",
+   "grade": false,
+   "photo": "own/2025-12-09-travis-502bcfab.jpg",
+   "objPos": "50% 62%",
+   "head": "Thanksgiving for ten starts with <em>one tap.</em>",
+   "mark": {
+    "x": 612,
+    "y": 1010,
+    "rx": 175,
+    "ry": 120
+   },
+   "label": {
+    "text": "the whole table",
+    "x": 300,
+    "y": 640,
+    "rot": -5
+   },
+   "arrows": [
+    {
+     "x1": 560,
+     "y1": 680,
+     "x2": 600,
+     "y2": 860
+    }
+   ],
+   "card": {
+    "tag": "cart 01 of 7",
+    "head": "Turkey, stuffing, cranberry, gravy, potatoes and pie.",
+    "body": "The classic table for eight to ten, already in an Instacart cart. Open it and order."
+   },
+   "photoClaim": "a holiday plate on an orange plaid runner: sliced turkey, mashed potatoes, stuffing, candied sweet potatoes and a green salad, small pumpkins and a paper towel roll behind it",
+   "hookType": "promise",
+   "why": "Hosting ten is the scariest grocery trip of the year; a real plate with the whole classic spread, circled, says the list is already done.",
+   "app": "No app claim on this pin: the classic cart is an iEatz-built Instacart list and the pin links straight to it."
+  },
+  {
+   "file": "i1-ig-seven-carts-carousel",
+   "w": 1080,
+   "h": 1350,
+   "grade": false,
+   "hookType": "promise",
+   "why": "The week before Thanksgiving everyone is building the same list from scratch; nine slides say it is already built, seven ways, and the only decision left is which table is yours.",
+   "app": "No app claim on this post: the carts are iEatz-built Instacart lists and the hub page links to them; the app is only mentioned on the hub's After Thursday section.",
+   "slides": [
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "head": "Seven Thanksgiving<br>carts. <span class=\"u\">Pick yours.</span>",
+     "body": "We built the full grocery list for seven different tables on Instacart. Swipe to find yours, then open it from the link in bio.",
+     "readout": [
+      {
+       "label": "carts",
+       "value": "7"
+      },
+      {
+       "label": "store trips",
+       "value": "0"
+      }
+     ],
+     "strip": true,
+     "headSize": 126
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "head": "The <i>classic</i> table<br>feeds eight to ten.",
+     "body": "Turkey, stuffing, cranberry, gravy, potatoes and pie. The cart most tables are picturing.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "01 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "turkey"
+      }
+     ],
+     "headSize": 150
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "head": "<i>Friendsgiving</i> gets<br>a turkey breast<br>and six plates.",
+     "body": "A turkey breast instead of a whole bird, with the sides right-sized for four to six.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "02 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "4 to 6"
+      },
+      {
+       "label": "centerpiece",
+       "value": "turkey breast"
+      }
+     ],
+     "headSize": 150
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "head": "You said you would<br>bring the <i>green</i><br><i>bean casserole.</i>",
+     "body": "Everything for one green bean casserole that serves eight to ten, and nothing you have to go back for.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "03 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "1 dish"
+      },
+      {
+       "label": "centerpiece",
+       "value": "casserole"
+      }
+     ],
+     "headSize": 150
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "head": "The <i>budget</i> table<br>is the same<br>table for less.",
+     "body": "A frozen bird, store brands, canned and boxed sides where they hold up fine.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "04 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "frozen bird"
+      }
+     ],
+     "headSize": 150
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "head": "<i>Southern</i> soul food<br>starts with the<br>mac and cheese.",
+     "body": "Mac and cheese, collards with smoked turkey wings, candied yams and sweet potato pie.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "05 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "yams and pie"
+      }
+     ],
+     "headSize": 150
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "head": "<i>Vegetarian</i> puts<br>a stuffed squash<br>in the middle.",
+     "body": "A stuffed butternut squash as the centerpiece, with a mushroom gravy. Vegetarian, not vegan.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "06 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "squash"
+      }
+     ],
+     "headSize": 150
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "head": "<i>Premium</i> means<br>a fresh bird<br>and two pies.",
+     "body": "A fresh bird, scratch sides, two pies, a cheese board and cider. For the year it has to show.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "07 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "fresh bird"
+      }
+     ],
+     "headSize": 150
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "head": "Pick your cart<br>at the link in bio.",
+     "body": "ieatzhealthy.com/thanksgiving. Open the cart, take out what you already have, order the rest. We may earn a commission when you order through these carts.",
+     "readout": [
+      {
+       "label": "carts",
+       "value": "7"
+      },
+      {
+       "label": "link",
+       "value": "in bio"
+      }
+     ],
+     "strip": true,
+     "headSize": 150
+    }
+   ]
+  }
+ ]
+}
