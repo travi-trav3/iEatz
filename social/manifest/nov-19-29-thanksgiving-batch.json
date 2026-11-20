@@ -27,7 +27,7 @@
  "batch": "nov-19-29-thanksgiving",
  "createdAt": "2026-11-19",
  "renderBatch": "social/render/batches/nov-19-29-thanksgiving.json",
- "note": "Thanksgiving carts campaign, brief of Nov 19. Phase 1 (Nov 19 to 25): Pinterest pins to the seven iEatz-built Instacart carts, Instagram to the /thanksgiving hub. Phase 2 (Nov 27 to 29): leftover-ingredient content with the app CTA. Everything is drafted in Buffer (F-010) and nothing is scheduled until Travis says go. Board: the brief's new board 'Thanksgiving dinner menu and grocery list ideas' did not exist in Buffer at draft time, so pins sit on the fallback 'Grocery list ideas and meal planning' (1011339728762228750); move them when the board exists. Disclosure on every cart pin and in the I1 caption. No prices anywhere.",
+ "note": "Thanksgiving carts campaign, brief of Nov 19. Phase 1 (Nov 19 to 25): Pinterest pins to the seven iEatz-built Instacart carts, Instagram to the /thanksgiving hub. Phase 2 (Nov 27 to 29): leftover-ingredient content with the app CTA. Everything is drafted in Buffer (F-010) and nothing is scheduled until Travis says go. Board: the brief's new board 'Thanksgiving dinner menu and grocery list ideas' did not exist in Buffer at draft time, so pins sit on the fallback 'Grocery list ideas and meal planning' (1011339728762228750); move them when the board exists. Disclosure on every cart pin and in the I1 caption. No prices anywhere. All 14 Phase 1 posts are Buffer drafts as of Nov 19 17:00 PT. Thursday's three (P1, P2, I1) missed their slots while the set was reworked; on go they move to Fri Nov 20 10:10 (P1), 14:10 (P2) and 17:15 (I1).",
  "posts": [
   {
    "id": "p1-pin",
@@ -174,7 +174,7 @@
    },
    "why": "Being told to bring a side is the most common Thanksgiving job; the casserole is cut out and taped down, every ingredient arrives, and the dry-casserole line is the joke everyone at the table has lived.",
    "app": "The casserole cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
-   "bufferId": null,
+   "bufferId": "6aff9aa37b0a126ceb96b150",
    "note": "Frame cut Nov 19 17:30 PT from Travis's Thanksgiving photo set. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
    "photoClaim": "a green bean casserole topped with crispy onions in a white dish, and a dish of mac and cheese with rosemary, both cut from a dark holiday table",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
@@ -211,7 +211,7 @@
    "why": "A budget Thanksgiving sounds like a compromise; a real haul of frozen bags and store brands says the same homemade dinner arrives for less, with the cooking walked through.",
    "app": "The budget cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "an overhead shot of a long wooden table crowded with plates of roast meat, potatoes, salads, a basket of bread and people's hands and forks",
-   "bufferId": null,
+   "bufferId": "6aff983bd5f8acdd0d5c30a7",
    "note": "Friday 18:10. Own photo (Nov 1 haul). Links to cart B4. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
@@ -243,7 +243,7 @@
    "why": "Friendsgiving is this weekend and the group chat still has not decided who brings what; a real small-table dinner says every ingredient arrives and the cooking is walked through.",
    "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "hands reaching over a candlelit wooden table for a charcuterie board, a cheese board, strawberries and glasses of wine",
-   "bufferId": null,
+   "bufferId": "6aff94f47b0a126ceb94a3d2",
    "note": "Saturday 11:00. Own photo (Oct 29 dinner table). Links to the hub via bio. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
@@ -279,7 +279,7 @@
    "why": "The Southern table has the longest shopping list of the seven; two cut photos, the yams and the spice drawer, and one line that every ingredient arrives and each dish is walked through.",
    "app": "The Southern cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "a close shot of baked mac and cheese with a crisp golden top, and a sheet pan of roasted purple sweet potato chunks and squash",
-   "bufferId": null,
+   "bufferId": "6aff93e9ca85ebefb0e1bcbc",
    "note": "Saturday 12:10. Own photo (Travis's Oct 29 sweet potato and squash tray). Links to cart B5. Swap to Travis's sweet potato shot if it lands before Saturday. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
@@ -315,7 +315,7 @@
    "why": "The vegetarian guest usually gets the sides; this cart arrives with every ingredient for a centerpiece of their own, and iEatz walks them through it.",
    "app": "The vegetarian cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "a wooden cutting board with half an avocado, cherry tomatoes, two eggs, three mushrooms, spinach and scallions, a frying pan above it",
-   "bufferId": null,
+   "bufferId": "6aff93f0d5f8acdd0d5a8a52",
    "note": "Sunday 12:10. Own photo (Travis's Oct 29 tofu curry). Links to cart B6. Vegetarian, not vegan, stated in the description. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin.",
    "stockOk": "legibility and variety: the own curry stove is dark; library reopened Nov 19"
   },
@@ -346,7 +346,7 @@
    "why": "The year you host and want it to show is the year the list gets long; the full dark table says every ingredient for it arrives and the cooking is walked through.",
    "app": "The premium cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "an overhead holiday table on dark wood: a roast chicken with potatoes and carrots, a herb-crusted roast on a board, Yorkshire puddings, brussels sprouts and green plates",
-   "bufferId": null,
+   "bufferId": "6aff9aacca85ebefb0e420d3",
    "note": "Sunday 18:10. Waits for a new own photo (Travis's shots today or Friday: herbs, butter, a fresh bird would all do). A candle-table fallback is rendered (out/nov-19-29-thanksgiving/p7-pin-premium-punchline.png) but that photo is already P1's hero, so it only ships if nothing new lands by Saturday. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
@@ -382,7 +382,7 @@
    "why": "The worst part of hosting is the second and third trip to the store; the aisle sits above three steps that end the trips and the guesswork.",
    "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "hands carving a roast turkey in a glass dish, with stuffing, green beans and mashed potatoes beside it",
-   "bufferId": null,
+   "bufferId": "6aff9490ca85ebefb0e1ebac",
    "note": "Monday 12:10. Own photo (Nov 1 Harris Teeter aisle). Links to cart B1, second image. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
@@ -412,7 +412,7 @@
    "why": "Three days out, one person in every group has the casserole and no groceries; the post is the nudge their friends were going to send anyway.",
    "app": "The casserole cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": null,
-   "bufferId": null,
+   "bufferId": "6aff9500ca85ebefb0e225af",
    "note": "Monday 17:15. Send-this series, cream variant, type only by design. Links to the hub via bio. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin."
   },
   {
@@ -441,7 +441,7 @@
    },
    "why": "The potluck side is the smallest Thanksgiving job and still gets a review from mom; the thread turns that into the moment every ingredient arrives and the cooking is walked through.",
    "app": "The casserole cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
-   "bufferId": null,
+   "bufferId": "6aff9ab2d5f8acdd0d5cf81d",
    "note": "Frame cut Nov 19 17:30 PT from Travis's Thanksgiving photo set. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
    "photoClaim": "a plate of sauteed green beans with garlic and bacon bits, cut from a turkey-carving photo",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
@@ -474,7 +474,7 @@
    "why": "The day before, the gratitude decor is out and someone still has not bought butter; the frame plays the word against the one thing you can actually be thankful for, a dinner that arrives and cooks itself through you.",
    "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "gold glitter letters spelling THANKFUL on a dark wood table surrounded by small wooden leaves, acorns and pumpkins",
-   "bufferId": null,
+   "bufferId": "6aff950e738ce4635f734269",
    "note": "Wednesday 11:00. Send-this line on the poster shell so I3 and I4 are not the same layout back to back (F-020). Links to the hub via bio. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
@@ -507,7 +507,7 @@
    "why": "The night before Thanksgiving someone realizes the list was never finished; the pin shows the bags arriving instead of the trip, with the cooking walked through.",
    "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "two paper grocery bags on a wood floor holding apples, a cabbage, bananas and a bag of bagels",
-   "bufferId": null,
+   "bufferId": "6aff94ac7b0a126ceb948c46",
    "note": "Wednesday 12:10. Own photo (Nov 1 haul, side view). Links to cart B1, third image. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin.",
    "stockOk": "variety: the second haul photo would repeat P4; library reopened Nov 19"
   }
