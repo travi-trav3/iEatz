@@ -119,7 +119,7 @@
   },
   {
    "id": "p19-pin",
-   "status": "planned",
+   "status": "cut",
    "channel": "pinterest",
    "dueAt": "2026-11-19T12:10:00-08:00",
    "file": "assets/pinterest/nov16/p19-pin-datenight-photo.png",
@@ -145,11 +145,12 @@
     ]
    },
    "why": "Date night is the dinner people think has to be bought; a real table at home with candles says otherwise, and it's one of Travis's own iEatz dinners.",
-   "app": "Tell iEatz the steak, the ravioli and the broccoli and it writes the whole table, calories and protein estimated; the parmesan goes to Instacart."
+   "app": "Tell iEatz the steak, the ravioli and the broccoli and it writes the whole table, calories and protein estimated; the parmesan goes to Instacart.",
+   "note": " Cut Nov 19: never drafted in Buffer; the Thanksgiving campaign owns Nov 19 to 25 on Pinterest (two pins a day)."
   },
   {
    "id": "p21-pin",
-   "status": "planned",
+   "status": "cut",
    "channel": "pinterest",
    "dueAt": "2026-11-21T12:10:00-08:00",
    "file": "assets/pinterest/nov16/p21-pin-fridge-poster.png",
@@ -174,7 +175,8 @@
     ]
    },
    "why": "A type-only pin for the weekend clean-out: the line is something people already say on a Saturday, and the body is the whole app in one breath.",
-   "app": "Add what's left to iEatz and it writes the recipe with calories and protein estimated; the missing items go to Instacart."
+   "app": "Add what's left to iEatz and it writes the recipe with calories and protein estimated; the missing items go to Instacart.",
+   "note": " Cut Nov 19: never drafted; Nov 21 carries P5 and I2 from the Thanksgiving campaign."
   },
   {
    "id": "p23-pin",
@@ -209,7 +211,7 @@
   },
   {
    "id": "p24-pin",
-   "status": "planned",
+   "status": "cut",
    "channel": "pinterest",
    "dueAt": "2026-11-24T12:10:00-08:00",
    "file": "assets/pinterest/nov16/p24-pin-burgerbowl-thread.png",
@@ -234,7 +236,8 @@
     ]
    },
    "why": "The forgotten-buns night is universal; the thread turns it into a product moment (iEatz says burger bowl) and ends on Travis's real bowl.",
-   "app": "Tell iEatz the beef, lettuce and avocado and it writes the burger bowl, calories and protein estimated; buns to Instacart if you must."
+   "app": "Tell iEatz the beef, lettuce and avocado and it writes the burger bowl, calories and protein estimated; buns to Instacart if you must.",
+   "note": " Cut Nov 19: never drafted; Nov 24 carries P9 (also a thread shell) from the Thanksgiving campaign."
   },
   {
    "id": "p25-pin",

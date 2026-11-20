@@ -103,6 +103,7 @@ function load(file) {
       qa: raw.qa || null,
       variantOf: raw.variantOf || (r && r.variantOf) || null,
       status: raw.status || null,
+      stockOk: raw.stockOk || null,
     };
     for (const k of ['template', 'surface', 'format', 'footer', 'eyebrow', 'accentTail', 'heroPhoto', 'photoClaim']) {
       // A render batch read directly has no separate ledger: its props (eyebrow text, footer
