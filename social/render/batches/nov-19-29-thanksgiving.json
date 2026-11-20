@@ -1887,6 +1887,38 @@
    "hookType": "promise",
    "why": "A budget Thanksgiving sounds like a compromise; a crowded real table says the frozen bird and store brands still make the whole dinner, every ingredient delivered, the cooking walked through.",
    "app": "The budget cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "i2-ig-friendsgiving-punchline-v4",
+   "w": 1080,
+   "h": 1350,
+   "template": "punchline",
+   "footer": "none",
+   "grade": false,
+   "photo": "thanksgiving/tg-cheese-board-hands.jpg",
+   "objPos": "50% 50%",
+   "head": "Every ingredient for<br>Friendsgiving, <em>delivered.</em>",
+   "mark": {
+    "x": 540,
+    "y": 680,
+    "rx": 300,
+    "ry": 160
+   },
+   "label": {
+    "text": "the pregame",
+    "x": 300,
+    "y": 470,
+    "rot": -5
+   },
+   "card": {
+    "tag": "4 to 6 people",
+    "head": "The dinner part: turkey breast, sides and pie.",
+    "body": "A turkey breast, not a whole bird, in one Instacart cart with the sides and the pie. iEatz walks you through each dish. Link in bio."
+   },
+   "photoClaim": "hands reaching over a candlelit wooden table for a charcuterie board, a cheese board, strawberries and glasses of wine",
+   "hookType": "promise",
+   "why": "Friendsgiving is this weekend and the group chat still has not decided who brings what; the board is the pregame everyone already does, and the card is the dinner that arrives and gets walked through.",
+   "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
   }
  ]
 }
