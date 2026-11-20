@@ -74,19 +74,19 @@
    "status": "planned",
    "channel": "instagram",
    "dueAt": "2026-11-19T17:15:00-08:00",
-   "file": "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--01.png",
-   "renderBatchFile": "i1-ig-seven-dinners-carousel-v3",
+   "file": "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--01.png",
+   "renderBatchFile": "i1-ig-seven-dinners-carousel-v4",
    "slides": [
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--01.png",
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--02.png",
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--03.png",
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--04.png",
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--05.png",
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--06.png",
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--07.png",
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--08.png",
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--09.png",
-    "assets/social/nov19/i1-ig-seven-dinners-carousel-v3--10.png"
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--01.png",
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--02.png",
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--03.png",
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--04.png",
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--05.png",
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--06.png",
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--07.png",
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--08.png",
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--09.png",
+    "assets/social/nov19/i1-ig-seven-dinners-carousel-v4--10.png"
    ],
    "pillar": "Grocery/Instacart",
    "topic": "Thanksgiving carts: all seven",
@@ -95,22 +95,23 @@
    "hook": "promise",
    "text": "7 thanksgiving dinners. pick yours.\n\nhere's how it works. pick the dinner you want. the Instacart cart already has every ingredient for the whole homemade spread, turkey through pie, delivered to your door, no shopping, no figuring out what to cook. then iEatz walks you through each dish step by step.\n\nwe can't do anything about your uncle. the shopping and the cooking, we can.\n\nclassic, friendsgiving, the potluck green bean casserole, budget, southern soul food, vegetarian, premium. link in bio.\n\nwe may earn a commission when you order through these carts.\n\n#thanksgiving #thanksgivingdinner #friendsgiving #grocerylist #ieatzhealthy",
    "firstComment": "which dinner are you picking? all seven are at ieatzhealthy.com/thanksgiving",
-   "alt": "Instagram carousel, ten slides on warm paper. Cover: Seven Thanksgiving dinners. Pick yours. Slide two, over an overhead photo of a roast turkey with its sides: How it works. Thanksgiving without the headache. Pick the dinner you want from seven carts. Instacart delivers every ingredient for the whole homemade spread. iEatz walks you through each dish, step by step. Then one slide per cart, each ending with every ingredient arrives from Instacart and iEatz walks you through each dish. Last slide: Pick your dinner at the link in bio, with the commission disclosure.",
+   "alt": "Instagram carousel, ten slides. Cover: a dark holiday table flat lay with white marker text, Seven dinners. Pick one, the ham circled and labelled every ingredient, delivered. Slide two, hands carving a turkey: How it works. Thanksgiving without the headache. Pick the dinner you want from seven carts. Instacart delivers every ingredient for the whole homemade spread. iEatz walks you through each dish, step by step. Then one photo slide per cart: the classic table, three friends with wine, a green bean casserole, a crowded family table, baked mac and cheese, a vegetable board and a roast beef dinner, each naming the cart, what is in it, delivered by Instacart, step by step in iEatz. Last slide, a pumpkin pie being cut: Pick your dinner at the link in bio. Seven dinners, every ingredient delivered, with the commission disclosure.",
    "qa": {
     "verdict": "pass",
-    "rounds": 5,
+    "rounds": 6,
     "read": "pick a dinner, every ingredient arrives, iEatz cooks you through it; one slide per cart",
     "fixed": [
      "poster headlines at the default 196px broke into one-word lines on every slide: added headSize to the poster shell and set 150 (cover 126) with forced breaks",
      "cover 'Seven Thanksgiving' still wrapped at 150: cover at 126",
      "Travis: the mechanics were not clear; added a How it works steps slide and the delivered plus walked-through line on every slide",
-     "how-it-works slide photo is the plated dinner from Travis's set; uncle line in the caption"
+     "how-it-works slide photo is the plated dinner from Travis's set; uncle line in the caption",
+     "Travis: the carousel needed photos; v4 puts one on every slide (sharpie cover, steps and igphoto cart slides, punchline end card) from his set"
     ]
    },
    "why": "The week before Thanksgiving everyone is building the same list from scratch; ten slides say pick a dinner, every ingredient arrives, and iEatz cooks you through it.",
    "app": "The chosen cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "bufferId": "6aff2930ecf884890185102a",
-   "note": "Thursday 17:15 slot. Type-only slides on purpose: no cart photos exist and no stock. The IG bio link must point at https://ieatzhealthy.com/thanksgiving/ before this goes live. v2 Nov 19 16:40 PT: ten slides (how-it-works slide added). v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
+   "note": "Thursday 17:15 slot. Type-only slides on purpose: no cart photos exist and no stock. The IG bio link must point at https://ieatzhealthy.com/thanksgiving/ before this goes live. v2 Nov 19 16:40 PT: ten slides (how-it-works slide added). v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight. v4 Nov 19 17:40 PT: photo on every slide.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
   {
@@ -198,19 +199,20 @@
    "url": "https://www.instacart.com/store/shopping_lists/25949752?utm_campaign=instacart-idp&utm_medium=affiliate&utm_source=instacart_idp&utm_term=partnertype-mediapartner&utm_content=campaignid-20313_partnerid-6442115",
    "title": "Friendsgiving dinner for 6: every ingredient in one Instacart cart, turkey breast to pie",
    "text": "Friendsgiving dinner for four to six, every ingredient in one Instacart cart, turkey breast to pie, delivered to whoever is hosting. iEatz walks the host through each dish step by step. Wine is the only thing left to bring. We may earn a commission when you order through these carts.",
-   "alt": "Pin: a text thread over an overhead photo of a crowded dinner table. Headline: Every ingredient for Friendsgiving arrives at your door. Thread: ok who is doing the turkey; i can bring a side? maybe; nobody is cooking a whole bird for five people; sent everyone the Friendsgiving cart, every ingredient, turkey breast to pie, delivered; and iEatz walks us through each dish step by step; ok so i'm just bringing wine. Footer: The Friendsgiving cart, delivered by Instacart. iEatz walks you through each dish.",
+   "alt": "Pin: a text thread over a candlelit photo of hands reaching across a cheese board. Headline: Every ingredient for Friendsgiving arrives at your door. Thread: ok who is doing the turkey; i can bring a side? maybe; nobody is cooking a whole bird for five people; sent everyone the Friendsgiving cart, every ingredient, turkey breast to pie, delivered; and iEatz walks us through each dish step by step; ok so i'm just bringing wine. Footer: The Friendsgiving cart, delivered by Instacart. iEatz walks you through each dish.",
    "qa": {
     "verdict": "pass",
     "rounds": 2,
     "read": "the group chat over the table; one person ends it with the cart and iEatz",
     "fixed": [
      "'Friendsgiving' orphaned on line 2: forced breaks",
-     "thread scrim darkened at the top so the headline reads over any photo"
+     "thread scrim darkened at the top so the headline reads over any photo",
+     "crowded table was already P4's hero: moved to the candlelit cheese-board table"
     ]
    },
    "why": "Every Friendsgiving starts as a group chat where nobody wants the turkey; the thread sits over a crowded table, one person ends it by sending the cart that holds every ingredient, and the last bubble says iEatz cooks them through it.",
    "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
-   "photoClaim": "an overhead shot of a long wooden table crowded with plates of roast meat, potatoes, salads, a basket of bread and people's hands and forks",
+   "photoClaim": "hands reaching over a candlelit wooden table for a charcuterie board, a cheese board, strawberries and glasses of wine",
    "bufferId": null,
    "note": "Added Nov 19 17:20 PT at Travis's request: a second Friendsgiving pin in the thread-over-photo layout he preferred, with the darker scrim. Friday 15:10 so it lands before Friendsgiving weekend. Links to cart B2.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
