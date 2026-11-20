@@ -260,8 +260,8 @@
    "status": "planned",
    "channel": "instagram",
    "dueAt": "2026-11-21T11:00:00-08:00",
-   "file": "assets/social/nov19/i2-ig-friendsgiving-punchline-v4.png",
-   "renderBatchFile": "i2-ig-friendsgiving-punchline-v4",
+   "file": "assets/social/nov19/i2-ig-friendsgiving-igphoto-v5.png",
+   "renderBatchFile": "i2-ig-friendsgiving-igphoto-v5",
    "pillar": "Grocery/Instacart",
    "topic": "Thanksgiving carts: Friendsgiving (B2)",
    "cta": "hub-link-in-bio",
@@ -269,23 +269,24 @@
    "hook": "promise",
    "text": "friendsgiving is this weekend and the group chat still hasn't picked who's doing what.\n\nthe board is the pregame, you've got that. the dinner part is the smaller-table cart: a turkey breast instead of a whole bird, sides and pie for four to six, one Instacart order, at your door. iEatz handles the how-to-cook-it, dish by dish.\n\nlink in bio. we may earn a commission when you order through these carts.\n\n#friendsgiving #thanksgiving #grocerylist #ieatzhealthy",
    "firstComment": "who's hosting friendsgiving this year? the smaller-table cart is at ieatzhealthy.com/thanksgiving",
-   "alt": "Instagram post: hands reaching over a candlelit cheese board with wine. Headline on a dark scrim: Every ingredient for Friendsgiving, delivered. A red marker label reads the pregame, with the cheese board circled. A white card: 4 to 6 people. The dinner part: turkey breast, sides and pie. A turkey breast, not a whole bird, in one Instacart cart with the sides and the pie. iEatz walks you through each dish. Link in bio.",
+   "alt": "Instagram post: hands reaching over a candlelit cheese board with wine, above a paper panel. Eyebrow: Friendsgiving, 4 to 6 people. Headline: You bring the board. Dinner gets delivered. Chips: Turkey breast, not a whole bird; Sides and pie for 4 to 6; iEatz walks you through each dish.",
    "qa": {
     "verdict": "pass",
-    "rounds": 4,
+    "rounds": 5,
     "read": "friends around a board, every ingredient delivered, the cooking walked through",
     "fixed": [
      "white marker over the white plate was unreadable: punchline shell, headline on the scrim, card on paper",
      "caption now says every ingredient arrives and iEatz walks you through each dish",
      "own steak table swapped for the candlelit cheese-board hands from Travis's set",
-     "Travis: 'nobody roasted a bird' circled a wedge of cheese and then the card sold a turkey breast, three stories in one frame; the board is now labelled the pregame and the card is the dinner part, so the halves read as before and after"
+     "Travis: 'nobody roasted a bird' circled a wedge of cheese and then the card sold a turkey breast, three stories in one frame; the board is now labelled the pregame and the card is the dinner part, so the halves read as before and after",
+     "I3 went out early by hand, which left I2 and I4 as back-to-back punchline frames (F-020): I2 moves to the photo-panel shell with the same board-then-dinner bridge"
     ]
    },
-   "why": "Friendsgiving is this weekend and the group chat still has not decided who brings what; the board is the pregame everyone already does, and the card is the dinner that arrives and gets walked through.",
+   "why": "Friendsgiving is this weekend and the group chat still has not decided who brings what; the board is the part everyone already does, and the panel says the dinner part arrives and gets walked through.",
    "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "hands reaching over a candlelit wooden table for a charcuterie board, a cheese board, strawberries and glasses of wine",
    "bufferId": "6aff94f47b0a126ceb94a3d2",
-   "note": "Saturday 11:00. Own photo (Oct 29 dinner table). Links to the hub via bio. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight. v4 Nov 19 18:00 PT: pregame/dinner bridge.",
+   "note": "Saturday 11:00. Own photo (Oct 29 dinner table). Links to the hub via bio. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight. v4 Nov 19 18:00 PT: pregame/dinner bridge. v5 Nov 19 18:20 PT: photo-panel shell.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
   {

@@ -1951,6 +1951,26 @@
    "hookType": "surprise",
    "why": "The day before, the gratitude decor is out and someone still has not shopped; the word is circled for the one thing a host can actually be thankful for, the shopping being done, and the card sends that relief to the person who still needs butter.",
    "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "i2-ig-friendsgiving-igphoto-v5",
+   "w": 1080,
+   "h": 1350,
+   "template": "igphoto",
+   "footer": "badge-bl",
+   "grade": false,
+   "photo": "thanksgiving/tg-cheese-board-hands.jpg",
+   "eyebrow": "Friendsgiving &middot; 4 to 6 people",
+   "head": "You bring the board. Dinner gets delivered.",
+   "chips": [
+    "Turkey breast, not a whole bird",
+    "Sides and pie for 4 to 6",
+    "iEatz walks you through each dish"
+   ],
+   "photoClaim": "hands reaching over a candlelit wooden table for a charcuterie board, a cheese board, strawberries and glasses of wine",
+   "hookType": "promise",
+   "why": "Friendsgiving is this weekend and the group chat still has not decided who brings what; the board is the part everyone already does, and the panel says the dinner part arrives and gets walked through.",
+   "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
   }
  ]
 }
