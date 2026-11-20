@@ -34,8 +34,8 @@
    "status": "planned",
    "channel": "pinterest",
    "dueAt": "2026-11-19T13:10:00-08:00",
-   "file": "assets/pinterest/nov19/p1-pin-friendsgiving-thread-v3.png",
-   "renderBatchFile": "p1-pin-friendsgiving-thread-v3",
+   "file": "assets/pinterest/nov19/p1-pin-friendsgiving-thread-v4.png",
+   "renderBatchFile": "p1-pin-friendsgiving-thread-v4",
    "pillar": "Grocery/Instacart",
    "topic": "Thanksgiving carts: Friendsgiving (B2)",
    "cta": "instacart-cart",
@@ -46,10 +46,10 @@
    "url": "https://www.instacart.com/store/shopping_lists/25949752?utm_campaign=instacart-idp&utm_medium=affiliate&utm_source=instacart_idp&utm_term=partnertype-mediapartner&utm_content=campaignid-20313_partnerid-6442115",
    "title": "Friendsgiving menu for 6 with the grocery list already done, turkey breast to pie",
    "text": "Friendsgiving menu for four to six with the grocery list already done: one Instacart cart holds every ingredient for a homemade dinner, turkey breast to pie, and brings it to your door. You handle the wine. iEatz then talks you through each dish. We may earn a commission when you order through these carts.",
-   "alt": "Pin on mint paper. Headline: Every ingredient for Friendsgiving arrives at your door. Subhead: Pick the cart. Instacart delivers it. iEatz walks you through each dish. A text thread: ok who is doing the turkey; nobody is cooking a whole bird for five people; sent everyone the Friendsgiving cart, every ingredient, turkey breast to pie, delivered; a photo of three friends with wine around a kitchen island; and iEatz walks us through each dish step by step; wait that's the whole thing?",
+   "alt": "Pin on mint paper. Headline: Every ingredient for Friendsgiving arrives at your door. Subhead: Pick the cart. Instacart delivers it. iEatz walks you through each dish. A text thread: ok who is doing the turkey; nobody is cooking a whole bird for five people; sent everyone the Friendsgiving cart, every ingredient, turkey breast to pie, delivered; a photo of three friends with wine around a kitchen island; and iEatz walks us through each dish step by step; ok so i'm just bringing wine",
    "qa": {
     "verdict": "pass",
-    "rounds": 4,
+    "rounds": 5,
     "read": "a friend ends the who-brings-what chat; the cart brings every ingredient and iEatz walks them through the cooking",
     "fixed": [
      "headline wrapped 'one cart.' onto its own line over the broccoli: forced the break after 'five'",
@@ -57,14 +57,16 @@
      "white headline over the photo was hard to read: thread moved to mint paper with the photo as a bubble",
      "thread rewritten so the cart is every ingredient plus iEatz cooking you through it, not finished dishes",
      "photo bubble is the stock brunch table, so the own dinner table is not on three pins",
-     "photo bubble is now the wine-and-charcuterie friends shot from Travis's set"
+     "photo bubble is now the wine-and-charcuterie friends shot from Travis's set",
+     "two-line footer was clipped at the bottom edge: one line",
+     "'wait that's the whole thing?' read as AI copy (Travis): now 'ok so i'm just bringing wine'"
     ]
    },
    "why": "Every Friendsgiving starts as a group chat where nobody wants the turkey; one person ends it by sending the cart that holds every ingredient, and the last bubble says iEatz cooks them through it.",
    "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "three women around a kitchen island with glasses of red wine, bottles, a charcuterie board and chopped carrots and celery",
    "bufferId": "6aff2b4801383f7d0f7cfa1c",
-   "note": "Thursday 13:10 slot per the brief. Own photo (Travis's Oct 29 dinner table). Links to cart B2. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
+   "note": "Thursday 13:10 slot per the brief. Own photo (Travis's Oct 29 dinner table). Links to cart B2. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight. v4 Nov 19 17:20 PT: footer fits, last bubble rewritten.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
   {
@@ -177,6 +179,40 @@
    "bufferId": "6aff9aa37b0a126ceb96b150",
    "note": "Frame cut Nov 19 17:30 PT from Travis's Thanksgiving photo set. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
    "photoClaim": "a green bean casserole topped with crispy onions in a white dish, and a dish of mac and cheese with rosemary, both cut from a dark holiday table",
+   "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
+  },
+  {
+   "id": "p1b-pin",
+   "status": "planned",
+   "channel": "pinterest",
+   "dueAt": "2026-11-20T15:10:00-08:00",
+   "file": "assets/pinterest/nov19/p1b-pin-friendsgiving-photothread-v4.png",
+   "renderBatchFile": "p1b-pin-friendsgiving-photothread-v4",
+   "pillar": "Grocery/Instacart",
+   "topic": "Thanksgiving carts: Friendsgiving (B2), thread over the photo",
+   "cta": "instacart-cart",
+   "format": "static",
+   "hook": "promise",
+   "board": "Grocery list ideas and meal planning",
+   "boardServiceId": "1011339728762228750",
+   "url": "https://www.instacart.com/store/shopping_lists/25949752?utm_campaign=instacart-idp&utm_medium=affiliate&utm_source=instacart_idp&utm_term=partnertype-mediapartner&utm_content=campaignid-20313_partnerid-6442115",
+   "title": "Friendsgiving dinner for 6: every ingredient in one Instacart cart, turkey breast to pie",
+   "text": "Friendsgiving dinner for four to six, every ingredient in one Instacart cart, turkey breast to pie, delivered to whoever is hosting. iEatz walks the host through each dish step by step. Wine is the only thing left to bring. We may earn a commission when you order through these carts.",
+   "alt": "Pin: a text thread over an overhead photo of a crowded dinner table. Headline: Every ingredient for Friendsgiving arrives at your door. Thread: ok who is doing the turkey; i can bring a side? maybe; nobody is cooking a whole bird for five people; sent everyone the Friendsgiving cart, every ingredient, turkey breast to pie, delivered; and iEatz walks us through each dish step by step; ok so i'm just bringing wine. Footer: The Friendsgiving cart, delivered by Instacart. iEatz walks you through each dish.",
+   "qa": {
+    "verdict": "pass",
+    "rounds": 2,
+    "read": "the group chat over the table; one person ends it with the cart and iEatz",
+    "fixed": [
+     "'Friendsgiving' orphaned on line 2: forced breaks",
+     "thread scrim darkened at the top so the headline reads over any photo"
+    ]
+   },
+   "why": "Every Friendsgiving starts as a group chat where nobody wants the turkey; the thread sits over a crowded table, one person ends it by sending the cart that holds every ingredient, and the last bubble says iEatz cooks them through it.",
+   "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
+   "photoClaim": "an overhead shot of a long wooden table crowded with plates of roast meat, potatoes, salads, a basket of bread and people's hands and forks",
+   "bufferId": null,
+   "note": "Added Nov 19 17:20 PT at Travis's request: a second Friendsgiving pin in the thread-over-photo layout he preferred, with the darker scrim. Friday 15:10 so it lands before Friendsgiving weekend. Links to cart B2.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
   {

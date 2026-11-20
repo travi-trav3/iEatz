@@ -1580,6 +1580,99 @@
    "hookType": "problem",
    "why": "Being told to bring a side is the most common Thanksgiving job; the casserole is cut out and taped down, every ingredient arrives, and the dry-casserole line is the joke everyone at the table has lived.",
    "app": "The casserole cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "p1-pin-friendsgiving-thread-v4",
+   "w": 1000,
+   "h": 1500,
+   "template": "thread",
+   "footer": "badge-bl",
+   "grade": false,
+   "bg": "mint",
+   "head": "Every ingredient for Friendsgiving arrives at your door.",
+   "sub": "Pick the cart. Instacart delivers it. iEatz walks you through each dish.",
+   "msgs": [
+    {
+     "time": "Sun 7:40 PM"
+    },
+    {
+     "who": "them",
+     "text": "ok who is doing the turkey"
+    },
+    {
+     "who": "me",
+     "text": "nobody is cooking a whole bird for five people"
+    },
+    {
+     "who": "me",
+     "text": "sent everyone the Friendsgiving cart. every ingredient, turkey breast to pie, delivered"
+    },
+    {
+     "who": "me",
+     "photo": "thanksgiving/tg-wine-friends.jpg",
+     "objPos": "50% 40%"
+    },
+    {
+     "who": "me",
+     "text": "and iEatz walks us through each dish step by step"
+    },
+    {
+     "who": "them",
+     "text": "ok so i'm just bringing wine"
+    }
+   ],
+   "foot": "Every ingredient for Friendsgiving, in one Instacart order.",
+   "photoClaim": "three women around a kitchen island with glasses of red wine, bottles, a charcuterie board and chopped carrots and celery",
+   "hookType": "promise",
+   "why": "Every Friendsgiving starts as a group chat where nobody wants the turkey; one person ends it by sending the cart that holds every ingredient, and the last bubble says iEatz cooks them through it.",
+   "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "p1b-pin-friendsgiving-photothread-v4",
+   "w": 1000,
+   "h": 1500,
+   "template": "thread",
+   "footer": "badge-br",
+   "grade": false,
+   "bg": {
+    "photo": "thanksgiving/tg-family-table-top.jpg",
+    "objPos": "50% 50%"
+   },
+   "head": "Every ingredient for<br>Friendsgiving arrives<br>at your door.",
+   "msgs": [
+    {
+     "time": "Sun 7:40 PM"
+    },
+    {
+     "who": "them",
+     "text": "ok who is doing the turkey"
+    },
+    {
+     "who": "them",
+     "text": "i can bring a side? maybe"
+    },
+    {
+     "who": "me",
+     "text": "nobody is cooking a whole bird for five people"
+    },
+    {
+     "who": "me",
+     "text": "sent everyone the Friendsgiving cart. every ingredient, turkey breast to pie, delivered"
+    },
+    {
+     "who": "me",
+     "text": "and iEatz walks us through each dish step by step"
+    },
+    {
+     "who": "them",
+     "text": "ok so i'm just bringing wine"
+    }
+   ],
+   "foot": "The Friendsgiving cart, delivered by Instacart. iEatz walks you through each dish.",
+   "photoClaim": "an overhead shot of a long wooden table crowded with plates of roast meat, potatoes, salads, a basket of bread and people's hands and forks",
+   "hookType": "promise",
+   "why": "Every Friendsgiving starts as a group chat where nobody wants the turkey; the thread sits over a crowded table, one person ends it by sending the cart that holds every ingredient, and the last bubble says iEatz cooks them through it.",
+   "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
   }
  ]
 }

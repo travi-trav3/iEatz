@@ -386,7 +386,7 @@ html.footage,html.footage body,.ig-bleed.footage{background:transparent}
 .th-url{margin-top:24px}
 .sh-thread.on-photo{background:var(--ink)}
 .sh-thread.on-photo .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.th-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,12,0.30) 0%,rgba(10,15,12,0) 22%,rgba(10,15,12,0) 45%,rgba(10,15,12,0.62) 100%)}
+.th-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,12,0.72) 0%,rgba(10,15,12,0.45) 24%,rgba(10,15,12,0.10) 40%,rgba(10,15,12,0.15) 60%,rgba(10,15,12,0.70) 100%)}
 .sh-thread.on-photo > *:not(.bg):not(.th-scrim){position:relative;z-index:2}
 .sh-thread.on-photo > .badge.corner{position:absolute}
 .sh-thread.on-photo .th-msgs{justify-content:flex-end}
