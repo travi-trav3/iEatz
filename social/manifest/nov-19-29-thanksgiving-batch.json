@@ -117,9 +117,9 @@
   },
   {
    "id": "p2-pin",
-   "status": "planned",
+   "status": "sent",
    "channel": "pinterest",
-   "dueAt": "2026-11-19T18:10:00-08:00",
+   "dueAt": "2026-11-19T17:02:00-08:00",
    "file": "assets/pinterest/nov19/p2-pin-traditional-punchline-v3.png",
    "renderBatchFile": "p2-pin-traditional-punchline-v3",
    "pillar": "Grocery/Instacart",
@@ -147,7 +147,7 @@
    "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "a square white plate of turkey, mashed potatoes with gravy, stuffing, green beans, carrots and brussels sprouts beside a glass of red wine and a jar of cranberry sauce",
    "bufferId": "6aff292c8ceb322055130b04",
-   "note": "Thursday 18:10 slot. Own photo (the Dec 2025 holiday plate, also the hub hero). Links to cart B1. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
+   "note": "Thursday 18:10 slot. Own photo (the Dec 2025 holiday plate, also the hub hero). Links to cart B1. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight. Published by Travis by hand Nov 19 17:02 PT; go-live ping posted in #social at his request.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
   {
@@ -429,9 +429,9 @@
   },
   {
    "id": "i3-ig",
-   "status": "planned",
+   "status": "sent",
    "channel": "instagram",
-   "dueAt": "2026-11-23T17:15:00-08:00",
+   "dueAt": "2026-11-19T17:06:00-08:00",
    "file": "assets/social/nov19/i3-ig-sendthis-casserole-v2.png",
    "renderBatchFile": "i3-ig-sendthis-casserole-v2",
    "pillar": "Grocery/Instacart",
@@ -454,7 +454,7 @@
    "app": "The casserole cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": null,
    "bufferId": "6aff9500ca85ebefb0e225af",
-   "note": "Monday 17:15. Send-this series, cream variant, type only by design. Links to the hub via bio. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin."
+   "note": "Monday 17:15. Send-this series, cream variant, type only by design. Links to the hub via bio. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. Published by Travis by hand Nov 19 17:06 PT (he trimmed the caption and dropped the disclosure line); go-live ping posted in #social at his request."
   },
   {
    "id": "p9-pin",
@@ -492,31 +492,32 @@
    "status": "planned",
    "channel": "instagram",
    "dueAt": "2026-11-25T11:00:00-08:00",
-   "file": "assets/social/nov19/i4-ig-thankful-punchline-v3.png",
-   "renderBatchFile": "i4-ig-thankful-punchline-v3",
+   "file": "assets/social/nov19/i4-ig-thankful-punchline-v4.png",
+   "renderBatchFile": "i4-ig-thankful-punchline-v4",
    "pillar": "Grocery/Instacart",
    "topic": "Thanksgiving carts: classic traditional (B1), send-this last minute",
    "cta": "hub-link-in-bio",
    "format": "static",
    "hook": "surprise",
-   "text": "it's the day before, somebody still hasn't bought butter, and the uncle lands at 4.\n\nsend this to the butter person (not the uncle). the classic thanksgiving dinner for ten, turkey to pie, is one Instacart cart and it shows up at the door. iEatz covers the cooking from there, step by step. the little wooden pumpkins are on you. link in bio.\n\nwe may earn a commission when you order through these carts.\n\n#thanksgiving #thanksgivingprep #grocerylist #ieatzhealthy",
+   "text": "it's the day before and somebody still hasn't bought butter.\n\nsend them this. the classic thanksgiving dinner for ten, turkey to pie, is one Instacart cart and it shows up at the door. iEatz covers the cooking from there, step by step. the uncle is still your problem. link in bio.\n\nwe may earn a commission when you order through these carts.\n\n#thanksgiving #thanksgivingprep #grocerylist #ieatzhealthy",
    "firstComment": "the list is at ieatzhealthy.com/thanksgiving. nobody has to go back out.",
-   "alt": "Instagram post: gold glitter letters spelling THANKFUL on dark wood with wooden leaves and pumpkins, the word circled in red marker. Headline on a dark scrim: Thankful nobody has to go back to the store. A marker label reads the uncle lands at 4. A white card: the day before. Send this to whoever still needs butter. Every ingredient for the classic dinner for ten arrives from Instacart. iEatz walks you through each dish. Link in bio.",
+   "alt": "Instagram post: gold glitter letters spelling THANKFUL on dark wood with wooden leaves and pumpkins, the word circled in red marker and labelled all of it. Headline on a dark scrim: Thankful the shopping is already done. A white card: the day before. Send this to whoever still needs butter. Every ingredient for the classic dinner for ten arrives from Instacart. iEatz walks you through each dish. Link in bio.",
    "qa": {
     "verdict": "pass",
-    "rounds": 4,
+    "rounds": 5,
     "read": "gratitude decor, the uncle, and the butter person, with the dinner that arrives and cooks itself through you",
     "fixed": [
      "two send-this shells back to back on Instagram (F-020): the butter post keeps the send-this line on the poster shell",
      "body now carries delivered plus iEatz walking you through each dish",
-     "poster swapped for the THANKFUL photo as the humor frame (Travis: use humor, especially on the thankful image)"
+     "poster swapped for the THANKFUL photo as the humor frame (Travis: use humor, especially on the thankful image)",
+     "Travis: the store headline, the uncle label and the butter card were three unrelated gags; now one line: thankful the shopping is done, all of it, so send it to the person who still needs butter"
     ]
    },
-   "why": "The day before, the gratitude decor is out and someone still has not bought butter; the frame plays the word against the one thing you can actually be thankful for, a dinner that arrives and cooks itself through you.",
+   "why": "The day before, the gratitude decor is out and someone still has not shopped; the word is circled for the one thing a host can actually be thankful for, the shopping being done, and the card sends that relief to the person who still needs butter.",
    "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
    "photoClaim": "gold glitter letters spelling THANKFUL on a dark wood table surrounded by small wooden leaves, acorns and pumpkins",
    "bufferId": "6aff950e738ce4635f734269",
-   "note": "Wednesday 11:00. Send-this line on the poster shell so I3 and I4 are not the same layout back to back (F-020). Links to the hub via bio. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight.",
+   "note": "Wednesday 11:00. Send-this line on the poster shell so I3 and I4 are not the same layout back to back (F-020). Links to the hub via bio. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 (Nov 19 17:30 PT, Travis): his Thanksgiving photo folder (14 Unsplash shots) is in the library; a different photo on every frame; humor on about half the set (uncle, mom, wine, the dry casserole), the rest straight. v4 Nov 19 18:10 PT: one joke, one bridge.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   },
   {

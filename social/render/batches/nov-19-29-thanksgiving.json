@@ -1919,6 +1919,38 @@
    "hookType": "promise",
    "why": "Friendsgiving is this weekend and the group chat still has not decided who brings what; the board is the pregame everyone already does, and the card is the dinner that arrives and gets walked through.",
    "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "i4-ig-thankful-punchline-v4",
+   "w": 1080,
+   "h": 1350,
+   "template": "punchline",
+   "footer": "none",
+   "grade": false,
+   "photo": "thanksgiving/tg-thankful.jpg",
+   "objPos": "50% 50%",
+   "head": "Thankful the shopping<br>is already <em>done.</em>",
+   "mark": {
+    "x": 540,
+    "y": 690,
+    "rx": 470,
+    "ry": 130
+   },
+   "label": {
+    "text": "all of it",
+    "x": 330,
+    "y": 500,
+    "rot": -4
+   },
+   "card": {
+    "tag": "the day before",
+    "head": "Send this to whoever still needs butter.",
+    "body": "Every ingredient for the classic dinner for ten arrives from Instacart. iEatz walks you through each dish. Link in bio."
+   },
+   "photoClaim": "gold glitter letters spelling THANKFUL on a dark wood table surrounded by small wooden leaves, acorns and pumpkins",
+   "hookType": "surprise",
+   "why": "The day before, the gratitude decor is out and someone still has not shopped; the word is circled for the one thing a host can actually be thankful for, the shopping being done, and the card sends that relief to the person who still needs butter.",
+   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
   }
  ]
 }
