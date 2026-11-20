@@ -1744,7 +1744,7 @@
      "photo": "thanksgiving/tg-wine-friends.jpg",
      "objPos": "50% 50%",
      "eyebrow": "Cart 02 of 7",
-     "head": "The <i>Friendsgiving</i> cart feeds six, turkey breast to pie.",
+     "head": "The <i>Friendsgiving</i> cart feeds six friends.",
      "steps": [
       "<b>In the cart:</b> A turkey breast instead of a whole bird, sides right-sized for four to six.",
       "<b>Instacart</b> delivers every ingredient.",
@@ -1760,7 +1760,7 @@
        "value": "4 to 6"
       }
      ],
-     "photoClaim": "three women around a kitchen island with glasses of red wine, a charcuterie board and chopped vegetables"
+     "photoClaim": "three friends around a kitchen island with glasses of red wine, a charcuterie board and chopped vegetables"
     },
     {
      "template": "igphoto",
@@ -1780,7 +1780,7 @@
      "photo": "thanksgiving/tg-family-table-top.jpg",
      "objPos": "50% 50%",
      "eyebrow": "Cart 04 of 7",
-     "head": "The <i>budget</i> cart is the same dinner for less.",
+     "head": "The <i>budget</i> cart keeps it to store brands.",
      "steps": [
       "<b>In the cart:</b> A frozen bird, store brands, canned and boxed sides.",
       "<b>Instacart</b> delivers every ingredient.",
@@ -1796,7 +1796,7 @@
        "value": "8 to 10"
       }
      ],
-     "photoClaim": "an overhead long wooden table crowded with plates of roast meat, potatoes, salads and bread"
+     "photoClaim": "an overhead long wooden table crowded with dinner plates of roast meat, potatoes, salads and bread"
     },
     {
      "template": "igphoto",
@@ -1867,6 +1867,26 @@
      "photoClaim": "an overhead wooden table with a pumpkin pie being cut, a slice with whipped cream, challah, a glass of red punch and autumn leaves"
     }
    ]
+  },
+  {
+   "file": "p4-pin-budget-photo-v4",
+   "w": 1000,
+   "h": 1500,
+   "template": "photo",
+   "footer": "badge-bl",
+   "grade": false,
+   "photo": "thanksgiving/tg-family-table-top.jpg",
+   "eyebrow": "Budget table for 8 to 10",
+   "head": "Every ingredient for the<br>budget table, delivered.",
+   "chips": [
+    "Frozen bird, store brands",
+    "Everything delivered",
+    "iEatz cooks you through it"
+   ],
+   "photoClaim": "an overhead shot of a long wooden table crowded with plates of roast meat, potatoes, salads, a basket of bread and people's hands and forks",
+   "hookType": "promise",
+   "why": "A budget Thanksgiving sounds like a compromise; a crowded real table says the frozen bird and store brands still make the whole dinner, every ingredient delivered, the cooking walked through.",
+   "app": "The budget cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
   }
  ]
 }
