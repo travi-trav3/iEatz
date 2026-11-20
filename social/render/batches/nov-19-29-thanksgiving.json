@@ -482,6 +482,532 @@
    "hookType": "problem",
    "why": "The day before, everyone knows who still has not shopped; the post is the group chat message, with the finished list behind it.",
    "app": "No app claim on this post: the classic cart is an iEatz-built Instacart list, reached from the hub in the bio."
+  },
+  {
+   "file": "p1-pin-friendsgiving-thread-v2",
+   "w": 1000,
+   "h": 1500,
+   "template": "thread",
+   "footer": "badge-bl",
+   "grade": false,
+   "bg": "mint",
+   "head": "Every ingredient for Friendsgiving arrives at your door.",
+   "sub": "Pick the cart. Instacart delivers it. iEatz walks you through each dish.",
+   "msgs": [
+    {
+     "time": "Sun 7:40 PM"
+    },
+    {
+     "who": "them",
+     "text": "ok who is doing the turkey"
+    },
+    {
+     "who": "me",
+     "text": "nobody is cooking a whole bird for five people"
+    },
+    {
+     "who": "me",
+     "text": "sent everyone the Friendsgiving cart. every ingredient, turkey breast to pie, delivered"
+    },
+    {
+     "who": "me",
+     "photo": "food/brunch-table-spread.jpg",
+     "objPos": "50% 50%"
+    },
+    {
+     "who": "me",
+     "text": "and iEatz walks us through each dish step by step"
+    },
+    {
+     "who": "them",
+     "text": "wait that's the whole thing?"
+    }
+   ],
+   "foot": "Every ingredient for a homemade Friendsgiving for four to six, delivered by Instacart.",
+   "photoClaim": "a wooden dinner table from above, friends' hands reaching for small plates of salad, a mug and jars of sauce",
+   "hookType": "promise",
+   "why": "Every Friendsgiving starts as a group chat where nobody wants the turkey; one person ends it by sending the cart that holds every ingredient, and the last bubble says iEatz cooks them through it.",
+   "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "p2-pin-traditional-punchline-v2",
+   "w": 1000,
+   "h": 1500,
+   "template": "punchline",
+   "footer": "none",
+   "grade": false,
+   "photo": "own/2025-12-09-travis-502bcfab.jpg",
+   "objPos": "50% 62%",
+   "head": "Every ingredient for this plate, <em>delivered.</em>",
+   "mark": {
+    "x": 612,
+    "y": 1010,
+    "rx": 175,
+    "ry": 120
+   },
+   "label": {
+    "text": "homemade, all of it",
+    "x": 250,
+    "y": 640,
+    "rot": -5
+   },
+   "arrows": [
+    {
+     "x1": 560,
+     "y1": 680,
+     "x2": 600,
+     "y2": 860
+    }
+   ],
+   "card": {
+    "tag": "Thanksgiving for 8 to 10",
+    "head": "One cart holds every ingredient for every dish.",
+    "body": "Turkey, stuffing, cranberry, gravy, potatoes and pie arrive from Instacart. iEatz walks you through each dish step by step."
+   },
+   "photoClaim": "a holiday plate on an orange plaid runner: sliced turkey, mashed potatoes, stuffing, candied sweet potatoes and a green salad, small pumpkins and a paper towel roll behind it",
+   "hookType": "promise",
+   "why": "Hosting ten is the scariest grocery trip of the year; a real plate with the whole spread, circled, says every ingredient for it shows up at the door and the cooking is walked through.",
+   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "p4-pin-budget-photo-v2",
+   "w": 1000,
+   "h": 1500,
+   "template": "photo",
+   "footer": "badge-bl",
+   "grade": false,
+   "photo": "own/2026-11-01-team-img2110.jpg",
+   "eyebrow": "Budget table for 8 to 10",
+   "head": "Every ingredient for Thanksgiving, for less money.",
+   "chips": [
+    "Frozen bird, store brands",
+    "Everything delivered",
+    "iEatz cooks you through it"
+   ],
+   "photoClaim": "a grocery haul on a black stove top: bags of frozen vegetables, a bag of shredded cheese, a carton of eggs, bananas, sweet potato chips and a bottle of creamer",
+   "hookType": "promise",
+   "why": "A budget Thanksgiving sounds like a compromise; a real haul of frozen bags and store brands says the same homemade dinner arrives for less, with the cooking walked through.",
+   "app": "The budget cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "p6-pin-vegetarian-photo-v2",
+   "w": 1000,
+   "h": 1500,
+   "template": "photo",
+   "footer": "badge-bl",
+   "grade": false,
+   "photo": "food/cutting-board-veg.jpg",
+   "eyebrow": "Vegetarian table for 8 to 10",
+   "head": "Every ingredient for a<br>vegetarian Thanksgiving.",
+   "chips": [
+    "Stuffed butternut squash",
+    "Mushroom gravy",
+    "Delivered by Instacart",
+    "Step by step in iEatz"
+   ],
+   "photoClaim": "a wooden cutting board with half an avocado, cherry tomatoes, two eggs, three mushrooms, spinach and scallions, a frying pan above it",
+   "hookType": "promise",
+   "why": "The vegetarian guest usually gets the sides; this cart arrives with every ingredient for a centerpiece of their own, and iEatz walks them through it.",
+   "app": "The vegetarian cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "p8-pin-store-steps-v2",
+   "w": 1000,
+   "h": 1500,
+   "template": "steps",
+   "grade": false,
+   "photo": "own/2026-11-01-team-img2089.jpg",
+   "objPos": "50% 50%",
+   "eyebrow": "Thanksgiving for 8 to 10",
+   "head": "The whole Thanksgiving list arrives at your door.",
+   "steps": [
+    "<b>Pick</b> the classic dinner: turkey, stuffing, cranberry, gravy, potatoes and pie.",
+    "<b>Instacart</b> delivers every ingredient in one cart. No store.",
+    "<b>iEatz</b> talks you through every dish, start to finish."
+   ],
+   "readout": [
+    {
+     "label": "carts",
+     "value": "7"
+    },
+    {
+     "label": "store trips",
+     "value": "0"
+    }
+   ],
+   "photoClaim": "the organic produce aisle at a grocery store at night: peppers, cucumbers and greens on the left, a shopping cart handle in the foreground",
+   "hookType": "promise",
+   "why": "The worst part of hosting is the second and third trip to the store; the aisle sits above three steps that end the trips and the guesswork.",
+   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "i2-ig-friendsgiving-punchline-v2",
+   "w": 1080,
+   "h": 1350,
+   "template": "punchline",
+   "footer": "none",
+   "grade": false,
+   "photo": "own/2026-10-29-travis-img6825.jpg",
+   "objPos": "50% 45%",
+   "head": "Every ingredient for<br>Friendsgiving, <em>delivered.</em>",
+   "mark": {
+    "x": 560,
+    "y": 640,
+    "rx": 250,
+    "ry": 120
+   },
+   "label": {
+    "text": "nobody roasted a bird",
+    "x": 110,
+    "y": 500,
+    "rot": -5
+   },
+   "card": {
+    "tag": "4 to 6 people",
+    "head": "Turkey breast, sides and pie for four to six.",
+    "body": "One Instacart cart. iEatz walks you through each dish step by step. Link in bio."
+   },
+   "photoClaim": "a wooden dinner table at night with lit candles, a cutting board of sliced steak, a bowl of broccoli, a bowl of ravioli and pink napkins",
+   "hookType": "promise",
+   "why": "Friendsgiving is this weekend and the group chat still has not decided who brings what; a real small-table dinner says every ingredient arrives and the cooking is walked through.",
+   "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "i3-ig-sendthis-casserole-v2",
+   "w": 1080,
+   "h": 1350,
+   "template": "sendthis",
+   "variant": "cream",
+   "grade": false,
+   "hook": "send this to whoever is bringing the green bean casserole and hasn't bought anything yet",
+   "payoff": "every ingredient, delivered. iEatz cooks them through it. link in bio.",
+   "hookType": "problem",
+   "why": "Three days out, one person in every group has the casserole and no groceries; the post is the nudge their friends were going to send anyway.",
+   "app": "The casserole cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "i4-ig-butter-poster-v2",
+   "w": 1080,
+   "h": 1350,
+   "template": "poster",
+   "footer": "badge-bl",
+   "grade": false,
+   "strip": true,
+   "head": "Send this to<br>whoever still<br>needs <span class=\"u\">butter.</span>",
+   "headSize": 150,
+   "body": "Every ingredient for the classic dinner for ten, delivered by Instacart. iEatz walks you through each dish step by step. Link in bio.",
+   "readout": [
+    {
+     "label": "carts",
+     "value": "7"
+    },
+    {
+     "label": "store trips",
+     "value": "0"
+    }
+   ],
+   "hookType": "problem",
+   "why": "The day before, everyone knows who still has not shopped; the post is the group chat message, with the finished list and the cooking behind it.",
+   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "i1-ig-seven-dinners-carousel-v2",
+   "w": 1080,
+   "h": 1350,
+   "grade": false,
+   "hookType": "promise",
+   "why": "The week before Thanksgiving everyone is building the same list from scratch; ten slides say pick a dinner, every ingredient arrives, and iEatz cooks you through it.",
+   "app": "The chosen cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
+   "slides": [
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "headSize": 126,
+     "strip": true,
+     "head": "Seven Thanksgiving<br>dinners. <span class=\"u\">Pick yours.</span>",
+     "body": "Every ingredient for a homemade Thanksgiving dinner arrives from Instacart. iEatz walks you through each dish step by step. Swipe.",
+     "readout": [
+      {
+       "label": "dinners",
+       "value": "7"
+      },
+      {
+       "label": "store trips",
+       "value": "0"
+      }
+     ]
+    },
+    {
+     "template": "steps",
+     "photo": "own/2025-12-09-travis-502bcfab.jpg",
+     "objPos": "50% 60%",
+     "eyebrow": "How it works",
+     "head": "Thanksgiving without the headache.",
+     "steps": [
+      "<b>Pick</b> the dinner you want from seven carts.",
+      "<b>Instacart</b> delivers every ingredient for the whole homemade spread.",
+      "<b>iEatz</b> walks you through each dish, step by step."
+     ],
+     "readout": [
+      {
+       "label": "carts",
+       "value": "7"
+      },
+      {
+       "label": "shopping",
+       "value": "none"
+      }
+     ],
+     "photoClaim": "a holiday plate on an orange plaid runner: sliced turkey, mashed potatoes, stuffing, candied sweet potatoes and a green salad, small pumpkins behind it"
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "headSize": 150,
+     "head": "The <i>classic</i> cart<br>holds every<br>ingredient for ten.",
+     "body": "Turkey, stuffing, cranberry, gravy, potatoes and pie. Every ingredient arrives from Instacart. iEatz walks you through each dish, step by step.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "01 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "turkey"
+      }
+     ]
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "headSize": 150,
+     "head": "The <i>Friendsgiving</i><br>cart feeds six,<br>turkey breast to pie.",
+     "body": "A turkey breast instead of a whole bird, with the sides right-sized for four to six. Every ingredient arrives from Instacart. iEatz walks you through each dish, step by step.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "02 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "4 to 6"
+      },
+      {
+       "label": "centerpiece",
+       "value": "turkey breast"
+      }
+     ]
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "headSize": 150,
+     "head": "The <i>potluck</i> cart is<br>one complete green<br>bean casserole.",
+     "body": "Everything for one green bean casserole that serves eight to ten. Every ingredient arrives from Instacart. iEatz walks you through each dish, step by step.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "03 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "1 dish"
+      },
+      {
+       "label": "centerpiece",
+       "value": "casserole"
+      }
+     ]
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "headSize": 150,
+     "head": "The <i>budget</i> cart<br>is the same<br>dinner for less.",
+     "body": "A frozen bird, store brands, canned and boxed sides where they hold up fine. Every ingredient arrives from Instacart. iEatz walks you through each dish, step by step.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "04 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "frozen bird"
+      }
+     ]
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "headSize": 150,
+     "head": "The <i>Southern</i> cart<br>starts with the<br>mac and cheese.",
+     "body": "Mac and cheese, collards with smoked turkey wings, candied yams and sweet potato pie. Every ingredient arrives from Instacart. iEatz walks you through each dish, step by step.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "05 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "yams and pie"
+      }
+     ]
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "headSize": 150,
+     "head": "The <i>vegetarian</i><br>cart centers a<br>stuffed squash.",
+     "body": "A stuffed butternut squash as the centerpiece, with a mushroom gravy. Vegetarian, not vegan. Every ingredient arrives from Instacart. iEatz walks you through each dish, step by step.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "06 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "squash"
+      }
+     ]
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "headSize": 150,
+     "head": "<i>Premium</i> means<br>a fresh bird<br>and two pies.",
+     "body": "A fresh bird, scratch sides, two pies, a cheese board and cider. Every ingredient arrives from Instacart. iEatz walks you through each dish, step by step.",
+     "readout": [
+      {
+       "label": "cart",
+       "value": "07 of 7"
+      },
+      {
+       "label": "serves",
+       "value": "8 to 10"
+      },
+      {
+       "label": "centerpiece",
+       "value": "fresh bird"
+      }
+     ]
+    },
+    {
+     "template": "poster",
+     "footer": "badge-bl",
+     "headSize": 150,
+     "strip": true,
+     "head": "Pick your dinner<br>at the link in bio.",
+     "body": "ieatzhealthy.com/thanksgiving. Open the cart, take out what you already have, order. We may earn a commission when you order through these carts.",
+     "readout": [
+      {
+       "label": "dinners",
+       "value": "7"
+      },
+      {
+       "label": "link",
+       "value": "in bio"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "file": "p5-pin-southern-collage-v2",
+   "w": 1000,
+   "h": 1500,
+   "template": "collage",
+   "footer": "badge-bl",
+   "grade": false,
+   "headAt": "top",
+   "head": "Every ingredient for the Southern table, delivered.",
+   "headSize": 76,
+   "sub": "Mac and cheese, collards with smoked turkey wings, candied yams and sweet potato pie. Every ingredient arrives from Instacart. iEatz walks you through each dish, step by step.",
+   "cards": [
+    {
+     "photo": "own/2026-10-29-travis-img6358.jpg",
+     "objPos": "50% 50%",
+     "x": 70,
+     "y": 560,
+     "w": 560,
+     "h": 440,
+     "rot": -3,
+     "tape": "tl"
+    },
+    {
+     "photo": "food/spices-spoons.jpg",
+     "objPos": "50% 50%",
+     "x": 520,
+     "y": 760,
+     "w": 480,
+     "h": 400,
+     "rot": 2.5,
+     "tape": "tr"
+    }
+   ],
+   "notes": [
+    {
+     "x": 660,
+     "y": 500,
+     "text": "candied yams"
+    },
+    {
+     "x": 90,
+     "y": 1215,
+     "text": "the spice drawer, covered"
+    }
+   ],
+   "photoClaim": "a sheet pan of roasted purple sweet potato chunks and slabs of squash, and antique spoons of ground spices and seeds on white marble",
+   "hookType": "promise",
+   "why": "The Southern table has the longest shopping list of the seven; two cut photos, the yams and the spice drawer, and one line that every ingredient arrives and each dish is walked through.",
+   "app": "The Southern cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "p10-pin-forgot-punchline-v2",
+   "w": 1000,
+   "h": 1500,
+   "template": "punchline",
+   "footer": "none",
+   "grade": false,
+   "photo": "grocery/grocery-bag-unpacked.jpg",
+   "objPos": "50% 40%",
+   "head": "Forgot something? Every ingredient is <em>one tap away.</em>",
+   "mark": {
+    "x": 540,
+    "y": 760,
+    "rx": 300,
+    "ry": 170
+   },
+   "label": {
+    "text": "the whole dinner",
+    "x": 150,
+    "y": 470,
+    "rot": -5
+   },
+   "card": {
+    "tag": "Thanksgiving for 8 to 10",
+    "head": "The classic dinner, turkey through pie, delivered.",
+    "body": "Turkey, stuffing, cranberry, gravy, potatoes and pie land at your door in one Instacart order. Then iEatz talks you through every dish."
+   },
+   "photoClaim": "two paper grocery bags on a wood floor holding apples, a cabbage, bananas and a bag of bagels",
+   "hookType": "problem",
+   "why": "The night before Thanksgiving someone realizes the list was never finished; the pin shows the bags arriving instead of the trip, with the cooking walked through.",
+   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
   }
  ]
 }

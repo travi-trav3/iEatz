@@ -57,3 +57,7 @@ COOKBOOK   # the ManyChat keyword, always upper case
 iOS
 Android
 Thanksgiving  # proper noun (holiday), Nov 2026
+# proper nouns in the Thanksgiving set (Nov 2026)
+Friendsgiving
+Southern
+Thanksgiving

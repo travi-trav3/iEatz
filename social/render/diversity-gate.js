@@ -138,7 +138,11 @@ function gate(file, opts = {}) {
       const tier = Object.fromEntries(sup.rows.map(r => [r.file, r]));
       const ownFree = (sup.by.own || []).length;
       const stock = photos.filter(isStock);
-      if (day >= STOCK_ENDS && stock.length) {
+      // stockOk: a ledger row may carry the reason a stock photo was chosen over a free own one
+      // (Travis, Nov 19 2026: "you can still use all the existing images in the repo", for variety).
+      const raw = (loaded.posts.find(x => x.id === p.id) || {}).raw || {};
+      if (day >= STOCK_ENDS && stock.length && (p.stockOk || raw.stockOk)) warns.push(`${channel}: ${p.id} on stock by choice (${p.stockOk || raw.stockOk})`);
+      else if (day >= STOCK_ENDS && stock.length) {
         if (ownFree) fails.push(`${channel}: ${p.id} is due ${day} on stock (${stock.join(', ')}) while ${ownFree} of our own photos are free (own first; F-008)`);
         else warns.push(`${channel}: ${p.id} is due ${day} on stock (${stock.join(', ')}): no own photo free, the library is the fallback (F-008)`);
       }
