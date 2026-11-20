@@ -279,6 +279,209 @@
      "headSize": 150
     }
    ]
+  },
+  {
+   "file": "p4-pin-budget-sharpie",
+   "w": 1000,
+   "h": 1500,
+   "template": "sharpie",
+   "footer": "badge-br",
+   "grade": false,
+   "photo": "own/2026-11-01-team-img2110.jpg",
+   "objPos": "50% 50%",
+   "head": "Store brands<br>feed ten.",
+   "ink": "#0A0F0C",
+   "shade": true,
+   "marks": [
+    {
+     "x": 330,
+     "y": 560,
+     "rx": 200,
+     "ry": 150,
+     "label": "frozen sides",
+     "labelSide": "below"
+    }
+   ],
+   "photoClaim": "a grocery haul on a black stove top: bags of frozen vegetables, a bag of shredded cheese, a carton of eggs, bananas, sweet potato chips and a bottle of creamer",
+   "hookType": "surprise",
+   "why": "A budget Thanksgiving still sounds like a compromise; a real haul of frozen bags and store brands, marked up like a plan, says the same table costs less.",
+   "app": "No app claim on this pin: the budget cart is an iEatz-built Instacart list and the pin links straight to it."
+  },
+  {
+   "file": "p5-pin-southern-bleed",
+   "w": 1000,
+   "h": 1500,
+   "template": "bleed",
+   "footer": "badge-br",
+   "grade": false,
+   "photo": "own/2026-10-29-travis-img6358.jpg",
+   "objPos": "50% 45%",
+   "head": "Candied yams and collards come in one cart.",
+   "sub": "Mac and cheese, collards with smoked turkey wings, candied yams and sweet potato pie, already built on Instacart.",
+   "photoClaim": "a sheet pan of roasted purple sweet potato chunks and slabs of squash, some charred, on a wooden table",
+   "hookType": "promise",
+   "why": "The Southern table has the longest shopping list of the seven; one line says the whole thing is already in a cart.",
+   "app": "No app claim on this pin: the Southern cart is an iEatz-built Instacart list and the pin links straight to it."
+  },
+  {
+   "file": "p6-pin-vegetarian-photo",
+   "w": 1000,
+   "h": 1500,
+   "template": "photo",
+   "footer": "badge-bl",
+   "grade": false,
+   "photo": "own/2026-10-29-travis-img4952.jpg",
+   "eyebrow": "Cart 06 of 7",
+   "head": "Vegetarian gets a squash in the middle.",
+   "chips": [
+    "Serves 8 to 10",
+    "Stuffed butternut squash",
+    "Mushroom gravy"
+   ],
+   "photoClaim": "a stove top at night with a pan of coconut curry with peppers and onions, a pot of brown rice and a sheet tray of baked tofu cubes",
+   "hookType": "surprise",
+   "why": "The vegetarian guest usually gets the sides; a squash as the centerpiece, on a real sheet pan, says this table was built for them.",
+   "app": "No app claim on this pin: the vegetarian cart is an iEatz-built Instacart list and the pin links straight to it."
+  },
+  {
+   "file": "p7-pin-premium-punchline",
+   "w": 1000,
+   "h": 1500,
+   "template": "punchline",
+   "footer": "none",
+   "grade": false,
+   "photo": "own/2026-10-29-travis-img6825.jpg",
+   "objPos": "50% 30%",
+   "head": "Going all out starts with <em>one cart.</em>",
+   "mark": {
+    "x": 560,
+    "y": 720,
+    "rx": 260,
+    "ry": 120
+   },
+   "label": {
+    "text": "the host year",
+    "x": 120,
+    "y": 560,
+    "rot": -5
+   },
+   "card": {
+    "tag": "cart 07 of 7",
+    "head": "A fresh bird, scratch sides, two pies, a cheese board and cider.",
+    "body": "The premium table for eight to ten, already in an Instacart cart. Open it and order."
+   },
+   "photoClaim": "a wooden dinner table at night with lit candles, a cutting board of sliced steak, a bowl of broccoli, a bowl of ravioli and pink napkins",
+   "hookType": "promise",
+   "why": "The year you host and want it to show is the year the list gets long; a candlelit table with the spread circled says the long list is already done.",
+   "app": "No app claim on this pin: the premium cart is an iEatz-built Instacart list and the pin links straight to it."
+  },
+  {
+   "file": "p8-pin-store-sharpie",
+   "w": 1000,
+   "h": 1500,
+   "template": "sharpie",
+   "footer": "badge-br",
+   "grade": false,
+   "photo": "own/2026-11-01-team-img2089.jpg",
+   "objPos": "50% 50%",
+   "head": "Last trip.<br>We mean it.",
+   "ink": "#FFFDF8",
+   "shade": true,
+   "marks": [
+    {
+     "x": 640,
+     "y": 520,
+     "rx": 300,
+     "ry": 130,
+     "label": "not this week",
+     "labelSide": "below"
+    }
+   ],
+   "photoClaim": "the organic produce aisle at a grocery store at night: peppers, cucumbers and greens on the left, a shopping cart handle in the foreground",
+   "hookType": "promise",
+   "why": "The worst part of hosting is the second and third trip to the store; a real aisle, crossed off, promises the one list that ends that.",
+   "app": "No app claim on this pin: the classic cart is an iEatz-built Instacart list and the pin links straight to it."
+  },
+  {
+   "file": "p10-pin-forgot-bleed",
+   "w": 1000,
+   "h": 1500,
+   "template": "bleed",
+   "footer": "badge-br",
+   "grade": false,
+   "photo": "own/2026-11-01-team-img2111.jpg",
+   "objPos": "50% 40%",
+   "head": "Forgot something? The whole list is one cart.",
+   "sub": "The classic menu for ten, turkey through pie, already built on Instacart.",
+   "photoClaim": "a grocery haul from the side on a black stove top: a carton of eggs, bananas, frozen vegetable bags, shredded cheese and a receipt",
+   "hookType": "problem",
+   "why": "The night before Thanksgiving someone realizes the list was never finished; the pin hands them the finished list instead of a trip.",
+   "app": "No app claim on this pin: the classic cart is an iEatz-built Instacart list and the pin links straight to it."
+  },
+  {
+   "file": "i2-ig-friendsgiving-sharpie",
+   "w": 1080,
+   "h": 1350,
+   "template": "sharpie",
+   "footer": "badge-br",
+   "grade": false,
+   "photo": "own/2026-10-29-travis-img6825.jpg",
+   "objPos": "50% 45%",
+   "head": "Nobody roasted a bird.",
+   "ink": "#FFFDF8",
+   "shade": true,
+   "marks": [
+    {
+     "x": 560,
+     "y": 640,
+     "rx": 250,
+     "ry": 120,
+     "label": "friendsgiving, done",
+     "labelSide": "below"
+    }
+   ],
+   "photoClaim": "a wooden dinner table at night with lit candles, a cutting board of sliced steak, a bowl of broccoli, a bowl of ravioli and pink napkins",
+   "hookType": "surprise",
+   "why": "Friendsgiving is this weekend and the group chat still has not decided who is bringing what; a real small-table dinner says the smaller cart already decided.",
+   "app": "No app claim on this post: the Friendsgiving cart is an iEatz-built Instacart list, reached from the hub in the bio."
+  },
+  {
+   "file": "i3-ig-sendthis-casserole",
+   "w": 1080,
+   "h": 1350,
+   "template": "sendthis",
+   "variant": "cream",
+   "grade": false,
+   "hook": "send this to whoever is bringing the green bean casserole and hasn't bought anything yet",
+   "payoff": "the whole dish is one cart. link in bio.",
+   "hookType": "problem",
+   "why": "Three days out, one person in every group has the casserole and no groceries; the post is the nudge their friends were going to send anyway.",
+   "app": "No app claim on this post: the casserole cart is an iEatz-built Instacart list, reached from the hub in the bio."
+  },
+  {
+   "file": "i4-ig-butter-poster",
+   "w": 1080,
+   "h": 1350,
+   "template": "poster",
+   "footer": "badge-bl",
+   "grade": false,
+   "strip": true,
+   "head": "Send this to<br>whoever still<br>needs <span class=\"u\">butter.</span>",
+   "headSize": 150,
+   "body": "The whole classic list for eight to ten is one Instacart cart, turkey to pie. Link in bio.",
+   "readout": [
+    {
+     "label": "carts",
+     "value": "7"
+    },
+    {
+     "label": "trips",
+     "value": "0"
+    }
+   ],
+   "hookType": "problem",
+   "why": "The day before, everyone knows who still has not shopped; the post is the group chat message, with the finished list behind it.",
+   "app": "No app claim on this post: the classic cart is an iEatz-built Instacart list, reached from the hub in the bio."
   }
  ]
 }
