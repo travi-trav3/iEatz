@@ -1086,7 +1086,8 @@
    "photoClaim": "a square white plate of turkey, mashed potatoes with gravy, stuffing, green beans, carrots and brussels sprouts beside a glass of red wine and a jar of cranberry sauce",
    "hookType": "promise",
    "why": "Hosting ten is the scariest grocery trip of the year; a real plate with the whole spread, circled, says every ingredient for it shows up at the door and the cooking is walked through.",
-   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
+   "markClaim": "a square white plate of turkey, mashed potatoes with gravy, stuffing and green beans"
   },
   {
    "file": "p4-pin-budget-photo-v3",
@@ -1701,7 +1702,8 @@
        "labelSide": "below"
       }
      ],
-     "photoClaim": "a dark flat lay of a holiday table: sliced glazed ham on a board, pecan pie, pumpkin pie, green bean casserole, stuffing, a gravy boat and mac and cheese"
+     "photoClaim": "a dark flat lay of a holiday table: sliced glazed ham on a board, pecan pie, pumpkin pie, green bean casserole, stuffing, a gravy boat and mac and cheese",
+     "markClaim": "a sliced glazed ham on a wooden board"
     },
     {
      "template": "steps",
@@ -1813,12 +1815,12 @@
     },
     {
      "template": "steps",
-     "photo": "food/cutting-board-veg.jpg",
+     "photo": "own/2026-10-29-travis-img6358.jpg",
      "objPos": "50% 50%",
      "eyebrow": "Cart 06 of 7",
      "head": "The <i>vegetarian</i> cart centers a stuffed squash.",
      "steps": [
-      "<b>In the cart:</b> A stuffed butternut squash as the centerpiece, mushroom gravy. Vegetarian, not vegan.",
+      "<b>In the cart:</b> a stuffed butternut squash as the centerpiece, mushroom gravy. Vegetarian, not vegan.",
       "<b>Instacart</b> delivers every ingredient.",
       "<b>iEatz</b> walks you through each dish, step by step."
      ],
@@ -1832,7 +1834,7 @@
        "value": "8 to 10"
       }
      ],
-     "photoClaim": "a wooden cutting board with half an avocado, cherry tomatoes, eggs, mushrooms, spinach and scallions"
+     "photoClaim": "a sheet pan of roasted purple sweet potato chunks and slabs of squash on a wooden table"
     },
     {
      "template": "igphoto",
@@ -1864,7 +1866,8 @@
       "head": "Seven dinners, every<br>ingredient delivered.",
       "body": "Open the cart, take out what you already have, order. We may earn a commission when you order through these carts."
      },
-     "photoClaim": "an overhead wooden table with a pumpkin pie being cut, a slice with whipped cream, challah, a glass of red punch and autumn leaves"
+     "photoClaim": "an overhead wooden table with a pumpkin pie being cut, a slice with whipped cream, challah, a glass of red punch and autumn leaves",
+     "markClaim": "a whole pumpkin pie in a foil tin with one slice cut out"
     }
    ]
   },
@@ -1950,7 +1953,8 @@
    "photoClaim": "gold glitter letters spelling THANKFUL on a dark wood table surrounded by small wooden leaves, acorns and pumpkins",
    "hookType": "surprise",
    "why": "The day before, the gratitude decor is out and someone still has not shopped; the word is circled for the one thing a host can actually be thankful for, the shopping being done, and the card sends that relief to the person who still needs butter.",
-   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
+   "markClaim": "the gold glitter letters spelling THANKFUL"
   },
   {
    "file": "i2-ig-friendsgiving-igphoto-v5",
@@ -1971,6 +1975,65 @@
    "hookType": "promise",
    "why": "Friendsgiving is this weekend and the group chat still has not decided who brings what; the board is the part everyone already does, and the panel says the dinner part arrives and gets walked through.",
    "app": "The Friendsgiving cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "p10-pin-forgot-punchline-v3",
+   "w": 1000,
+   "h": 1500,
+   "template": "punchline",
+   "footer": "none",
+   "grade": false,
+   "photo": "thanksgiving/tg-pie-table.jpg",
+   "objPos": "52% 50%",
+   "head": "Forgot something? Every ingredient is <em>one tap away.</em>",
+   "mark": {
+    "x": 590,
+    "y": 560,
+    "rx": 250,
+    "ry": 175
+   },
+   "label": {
+    "text": "pie included",
+    "x": 520,
+    "y": 770,
+    "rot": -5
+   },
+   "markClaim": "a whole pumpkin pie in a foil tin with one slice cut out",
+   "card": {
+    "tag": "Thanksgiving for 8 to 10",
+    "head": "The classic dinner, turkey through pie, delivered.",
+    "body": "Turkey, stuffing, cranberry, gravy, potatoes and pie land at your door in one Instacart order. Then iEatz talks you through every dish."
+   },
+   "photoClaim": "an overhead wooden table with a pumpkin pie being cut, a slice with whipped cream, a pumpkin roll, challah, a glass of red punch and autumn leaves",
+   "hookType": "problem",
+   "why": "The night before Thanksgiving someone realises the list was never finished; the pie is circled because the pie is in the cart, and the card says the whole dinner lands at the door with the cooking walked through.",
+   "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "p6-pin-vegetarian-photo-v3",
+   "w": 1000,
+   "h": 1500,
+   "template": "photo",
+   "footer": "badge-bl",
+   "grade": false,
+   "photo": "own/2026-10-29-travis-img6358.jpg",
+   "eyebrow": "Vegetarian table for 8 to 10",
+   "head": "Every ingredient for a<br>vegetarian Thanksgiving.",
+   "chips": [
+    "Stuffed butternut squash",
+    "Mushroom gravy",
+    "Delivered by Instacart",
+    "Step by step in iEatz"
+   ],
+   "photoClaim": "a sheet pan of roasted purple sweet potato chunks and slabs of squash, some charred, on a wooden table",
+   "hookType": "promise",
+   "why": "The vegetarian guest usually gets the sides; this cart arrives with every ingredient for a centerpiece of their own, and iEatz walks them through it.",
+   "app": "The vegetarian cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
   }
+ ],
+ "photoPool": [
+  "thanksgiving/",
+  "own/2026-10-29-travis-img6358.jpg",
+  "own/2025-12-09-travis-502bcfab.jpg"
  ]
 }

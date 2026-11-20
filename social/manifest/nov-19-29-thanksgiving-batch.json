@@ -95,7 +95,7 @@
    "hook": "promise",
    "text": "7 thanksgiving dinners. pick yours.\n\nhere's how it works. pick the dinner you want. the Instacart cart already has every ingredient for the whole homemade spread, turkey through pie, delivered to your door, no shopping, no figuring out what to cook. then iEatz walks you through each dish step by step.\n\nwe can't do anything about your uncle. the shopping and the cooking, we can.\n\nclassic, friendsgiving, the potluck green bean casserole, budget, southern soul food, vegetarian (stuffed squash, mushroom gravy), premium. link in bio.\n\nwe may earn a commission when you order through these carts.\n\n#thanksgiving #thanksgivingdinner #friendsgiving #grocerylist #ieatzhealthy",
    "firstComment": "which dinner are you picking? all seven are at ieatzhealthy.com/thanksgiving",
-   "alt": "Instagram carousel, ten slides. Cover: a dark holiday table flat lay with white marker text, Seven dinners. Pick one, the ham circled and labelled every ingredient, delivered. Slide two, hands carving a turkey: How it works. Thanksgiving without the headache. Pick the dinner you want from seven carts. Instacart delivers every ingredient for the whole homemade spread. iEatz walks you through each dish, step by step. Then one photo slide per cart: the classic table, three friends with wine (the Friendsgiving cart feeds six friends), a green bean casserole, a crowded family table, baked mac and cheese, a vegetable board and a roast beef dinner, each naming the cart, what is in it, delivered by Instacart, step by step in iEatz. Last slide, a pumpkin pie being cut: Pick your dinner at the link in bio. Seven dinners, every ingredient delivered, with the commission disclosure.",
+   "alt": "Instagram carousel, ten slides. Cover: a dark holiday table flat lay with white marker text, Seven dinners. Pick one, the ham circled and labelled every ingredient, delivered. Slide two, hands carving a turkey: How it works. Thanksgiving without the headache. Pick the dinner you want from seven carts. Instacart delivers every ingredient for the whole homemade spread. iEatz walks you through each dish, step by step. Then one photo slide per cart: the classic table, three friends with wine (the Friendsgiving cart feeds six friends), a green bean casserole, a crowded family table, baked mac and cheese, a roasted squash tray and a roast beef dinner, each naming the cart, what is in it, delivered by Instacart, step by step in iEatz. Last slide, a pumpkin pie being cut: Pick your dinner at the link in bio. Seven dinners, every ingredient delivered, with the commission disclosure.",
    "qa": {
     "verdict": "pass",
     "rounds": 6,
@@ -106,7 +106,8 @@
      "Travis: the mechanics were not clear; added a How it works steps slide and the delivered plus walked-through line on every slide",
      "how-it-works slide photo is the plated dinner from Travis's set; uncle line in the caption",
      "Travis: the carousel needed photos; v4 puts one on every slide (sharpie cover, steps and igphoto cart slides, punchline end card) from his set",
-     "slide 6 'same dinner for less' dropped for the same reason; slide 4 names the friends in the photo"
+     "slide 6 'same dinner for less' dropped for the same reason; slide 4 names the friends in the photo",
+     "vegetarian slide: squash tray instead of the vegetable board; markClaims on the cover and end card"
     ]
    },
    "why": "The week before Thanksgiving everyone is building the same list from scratch; ten slides say pick a dinner, every ingredient arrives, and iEatz cooks you through it.",
@@ -330,8 +331,8 @@
    "status": "planned",
    "channel": "pinterest",
    "dueAt": "2026-11-22T12:10:00-08:00",
-   "file": "assets/pinterest/nov19/p6-pin-vegetarian-photo-v2.png",
-   "renderBatchFile": "p6-pin-vegetarian-photo-v2",
+   "file": "assets/pinterest/nov19/p6-pin-vegetarian-photo-v3.png",
+   "renderBatchFile": "p6-pin-vegetarian-photo-v3",
    "pillar": "Grocery/Instacart",
    "topic": "Thanksgiving carts: vegetarian (B6)",
    "cta": "instacart-cart",
@@ -342,24 +343,24 @@
    "url": "https://www.instacart.com/store/shopping_lists/25949750?utm_campaign=instacart-idp&utm_medium=affiliate&utm_source=instacart_idp&utm_term=partnertype-mediapartner&utm_content=campaignid-20313_partnerid-6442115",
    "title": "Vegetarian Thanksgiving menu with stuffed butternut squash and mushroom gravy, delivered",
    "text": "Vegetarian Thanksgiving menu for eight to ten: a stuffed butternut squash as the centerpiece and a mushroom gravy. Vegetarian, not vegan. One Instacart cart brings every ingredient to your door; iEatz takes it from there, dish by dish. We may earn a commission when you order through these carts.",
-   "alt": "Pin: a wooden cutting board with avocado, cherry tomatoes, eggs, mushrooms, spinach and scallions above a paper panel. Eyebrow: Vegetarian table for 8 to 10. Headline: Every ingredient for a vegetarian Thanksgiving. Chips: Stuffed butternut squash; Mushroom gravy; Delivered by Instacart; Step by step in iEatz.",
+   "alt": "Pin: a sheet pan of roasted sweet potatoes and squash above a paper panel. Eyebrow: Vegetarian table for 8 to 10. Headline: Every ingredient for a vegetarian Thanksgiving. Chips: Stuffed butternut squash; Mushroom gravy; Delivered by Instacart; Step by step in iEatz.",
    "qa": {
     "verdict": "pass",
-    "rounds": 3,
+    "rounds": 4,
     "read": "a fresh vegetable board; every ingredient for the vegetarian table delivered, the cooking walked through",
     "fixed": [
      "9-word headline cut to 7",
      "squash tray moved to P5; this one takes the curry stove",
      "dark curry stove swapped for the bright vegetable board (stock, allowed again per Travis Nov 19)",
-     "'delivered.' orphaned: moved into a chip"
+     "'delivered.' orphaned: moved into a chip",
+     "generic vegetable board was the furthest thing from Thanksgiving in the set: back to the own roasted squash tray"
     ]
    },
    "why": "The vegetarian guest usually gets the sides; this cart arrives with every ingredient for a centerpiece of their own, and iEatz walks them through it.",
    "app": "The vegetarian cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
-   "photoClaim": "a wooden cutting board with half an avocado, cherry tomatoes, two eggs, three mushrooms, spinach and scallions, a frying pan above it",
+   "photoClaim": "a sheet pan of roasted purple sweet potato chunks and slabs of squash, some charred, on a wooden table",
    "bufferId": "6aff93f0d5f8acdd0d5a8a52",
-   "note": "Sunday 12:10. Own photo (Travis's Oct 29 tofu curry). Links to cart B6. Vegetarian, not vegan, stated in the description. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin.",
-   "stockOk": "legibility and variety: the own curry stove is dark; library reopened Nov 19"
+   "note": "Sunday 12:10. Own photo (Travis's Oct 29 tofu curry). Links to cart B6. Vegetarian, not vegan, stated in the description. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 Nov 19 18:30 PT: squash tray."
   },
   {
    "id": "p7-pin",
@@ -526,8 +527,8 @@
    "status": "planned",
    "channel": "pinterest",
    "dueAt": "2026-11-25T12:10:00-08:00",
-   "file": "assets/pinterest/nov19/p10-pin-forgot-punchline-v2.png",
-   "renderBatchFile": "p10-pin-forgot-punchline-v2",
+   "file": "assets/pinterest/nov19/p10-pin-forgot-punchline-v3.png",
+   "renderBatchFile": "p10-pin-forgot-punchline-v3",
    "pillar": "Grocery/Instacart",
    "topic": "Thanksgiving carts: classic traditional (B1), third image",
    "cta": "instacart-cart",
@@ -538,21 +539,22 @@
    "url": "https://www.instacart.com/store/shopping_lists/25949748?utm_campaign=instacart-idp&utm_medium=affiliate&utm_source=instacart_idp&utm_term=partnertype-mediapartner&utm_content=campaignid-20313_partnerid-6442115",
    "title": "Forgot something for Thanksgiving? The whole classic dinner arrives in one Instacart order",
    "text": "Forgot something for Thanksgiving? The classic dinner for ten, turkey through pie, is one Instacart cart, and the bags arrive instead of a second trip. iEatz talks you through every dish once they land. We may earn a commission when you order through these carts.",
-   "alt": "Pin: two paper grocery bags on a wood floor with apples, a cabbage and bananas. Headline on a dark scrim: Forgot something? Every ingredient is one tap away. A red marker label reads the whole dinner. A white card: Thanksgiving for 8 to 10. The classic dinner, turkey through pie, delivered. Turkey, stuffing, cranberry, gravy, potatoes and pie, in one Instacart cart. iEatz walks you through each dish step by step.",
+   "alt": "Pin: an overhead table with a pumpkin pie being cut, challah and autumn leaves. Headline on a dark scrim: Forgot something? Every ingredient is one tap away. A red marker circle round the pie, labelled pie included. A white card: Thanksgiving for 8 to 10. The classic dinner, turkey through pie, delivered. Turkey, stuffing, cranberry, gravy, potatoes and pie land at your door in one Instacart order. Then iEatz talks you through every dish.",
    "qa": {
     "verdict": "pass",
-    "rounds": 2,
+    "rounds": 3,
     "read": "the night-before panic answered with the bags arriving and the cooking walked through",
     "fixed": [
-     "second haul photo of the week swapped for the stock grocery bags; headline moved to the punchline scrim"
+     "second haul photo of the week swapped for the stock grocery bags; headline moved to the punchline scrim",
+     "Travis: a circle round bananas labelled the whole dinner. Nothing Thanksgiving in the frame and the label was false of what it circled. Now the pie table, the pie circled, labelled pie included (pie is in cart B1). F-022 and a markClaim gate came out of this."
     ]
    },
-   "why": "The night before Thanksgiving someone realizes the list was never finished; the pin shows the bags arriving instead of the trip, with the cooking walked through.",
+   "why": "The night before Thanksgiving someone realises the list was never finished; the pie is circled because the pie is in the cart, and the card says the whole dinner lands at the door with the cooking walked through.",
    "app": "The classic cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
-   "photoClaim": "two paper grocery bags on a wood floor holding apples, a cabbage, bananas and a bag of bagels",
+   "photoClaim": "an overhead wooden table with a pumpkin pie being cut, a slice with whipped cream, a pumpkin roll, challah, a glass of red punch and autumn leaves",
    "bufferId": "6aff94ac7b0a126ceb948c46",
-   "note": "Wednesday 12:10. Own photo (Nov 1 haul, side view). Links to cart B1, third image. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin.",
-   "stockOk": "variety: the second haul photo would repeat P4; library reopened Nov 19"
+   "note": "Wednesday 12:10. Own photo (Nov 1 haul, side view). Links to cart B1, third image. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 Nov 19 18:30 PT: pie table.",
+   "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
   }
  ],
  "pending": []

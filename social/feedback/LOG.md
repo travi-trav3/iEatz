@@ -125,3 +125,13 @@ One entry per note or idea, newest last. Format:
 
 - 2026-11-05 · Travis · "one final cookbook concept. a humor angle: 'Tired of Cooking that Tastes like a shoe?' ... use a layout that would perform well ... OR use html to build something completely novel that still respects the design system" + an image of a sneaker on a fridge shelf → o08-ig on a new `punchline` shell (templates.js/base.css): the question on a dark scrim, the shoe ringed in tomato marker with "tonight's dinner", the answer on a taped paper card ("Comment COOKBOOK. We'll DM you 30 dinners that taste like actual food.", FREE tag, badge). Creative QA 2 rounds (card cut the ring; "send" → "DM"). The image is AI-generated: logged in photos.json as source `ai`, and the diversity gate now treats every non-own source as stock (F-008). Buffer draft Fri Nov 6 09:45 PT, one of three concepts for the $20 boost.
 - 2026-11-07 · Travis · "one non-follower sent a COOKBOOK comment - but the automation didn't fire. is it bc they weren't a follower?" → no: ManyChat comment triggers fire for non-followers. Most likely cause: o08-ig went live Thu Nov 5 11:15 PT as a new post, and a ManyChat trigger set to "specific post" only covers posts picked in it. Sent Travis the ManyChat checks (contact search, trigger post scope, keyword match, live status) and the manual DM for the missed commenter. Ledger o08-ig → sent.
+
+## 2026-11-19 · Thanksgiving carts, Phase 1 (Travis, live review in Buffer, 16:40 to 18:40 PT)
+- Set rebuilt three times in one evening: v2 (the mechanic on every frame: pick a dinner, every ingredient
+  arrives, iEatz walks you through each dish), v3 (his 14-photo Thanksgiving set, humor on half), v4 (the
+  photo on every carousel slide, the pregame/dinner bridge on I2, one joke on I4, the pie table on P10).
+- Misses he caught, in order: white type over bright food; the same own photos repeating; "a cart" sold
+  instead of the dinner; "for less money" (same store price); "wait that's the whole thing?" reads as AI
+  copy; a circle on cheese under "nobody roasted a bird" next to a turkey-breast card; three unrelated
+  gags on the THANKFUL frame; bananas circled as "the whole dinner". F-022 written from the last three.
+- P2 and I3 were published by hand at 17:02 and 17:06 PT; go-live pings posted in #social at his request.

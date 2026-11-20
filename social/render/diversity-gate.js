@@ -134,6 +134,10 @@ function gate(file, opts = {}) {
       const day = p.dueAt.slice(0, 10);
       const photos = photosOfPost(p.render);
       if (!photos.length) return;
+      // F-022: a campaign batch can pin its photo pool ("thanksgiving/", "own/..."); anything outside it fails.
+      const pool = (loaded.batch && loaded.batch.photoPool) || null;
+      if (pool && pool.length) for (const f of photos) if (!pool.some(pre => f.startsWith(pre))) fails.push(`${channel}: ${p.id} uses ${f}, outside the batch photoPool [${pool.join(', ')}] (F-022)`);
+
       let sup; try { sup = supply(day); } catch (e) { warns.push(`photo supply check skipped: ${e.message}`); return; }
       const tier = Object.fromEntries(sup.rows.map(r => [r.file, r]));
       const ownFree = (sup.by.own || []).length;

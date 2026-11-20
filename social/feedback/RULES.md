@@ -511,3 +511,34 @@ _Rules replaced by a newer rule, kept with the date and the id that replaced the
   > audience cannot vote", so every reel is a test against strangers.
   > Enforced by: diversity-gate.js rule 7 (a reel due from 2026-11-02 with no `track` fails);
   > TRIAL-REELS.md and the Slack alert template for the manual steps; this file for the cut.
+
+### F-022 · 2026-11-19 · A mark points at the thing it names, and a holiday set stays on holiday food
+
+**What happened.** The first Thanksgiving set (Nov 19) shipped to Buffer with a pin that circled a bunch of
+bananas in a grocery bag and labelled them "the whole dinner", a frame that circled a wedge of cheese under
+"nobody roasted a bird" and then sold a turkey breast, and a THANKFUL frame carrying three unrelated gags
+(the store, the uncle, the butter). Every one of them passed the copy gate, the diversity gate and a
+written Creative QA "read". Travis caught all three in Buffer. His words: "the whole dinner is a couple
+of bananas??? furthest thing from Thanksgiving."
+
+**Why the system let it through.** The gates checked photo nouns against copy nouns, headline length and
+layout variety. Nothing asked whether the pen mark sat on the thing the label named, whether the photo
+belonged to the occasion, or whether the headline, the marker note and the card told one story. The
+"read" line in `qa` was written by the same hand that cut the frame, without looking.
+
+**The rule.**
+1. A circle, arrow or marker label has a referent. The label must be literally true of what sits inside
+   the mark. The render batch carries `markClaim` (what the mark surrounds, plainly) next to `photoClaim`;
+   the copy gate fails a labelled mark with no `markClaim`, or one that names nothing in the photo.
+2. A campaign batch declares `photoPool` (path prefixes). The diversity gate fails any post whose photo is
+   outside the pool. For a holiday set the pool is holiday food and holiday tables. A grocery bag, a
+   vegetable board or a sneaker in a fridge is not Thanksgiving, whatever the caption says.
+3. One frame, one story. Headline, marker note and card have to be three beats of the same idea
+   (before and after, setup and payoff, claim and proof). If the marker note could be deleted without
+   anyone noticing, delete it. If it contradicts the card, the frame is wrong, not the note.
+4. The Creative QA `read` is written as what a stranger sees in two seconds, in their words, and if that
+   sentence is not the message, the frame goes back. "a circle round some bananas that says the whole
+   dinner" would have failed this frame in one line.
+5. Humor rides on a true observation about the occasion (the uncle, mom's review, the person who still
+   has not bought butter). It never rides on the product mechanic and never asks the photo to be
+   something it is not.

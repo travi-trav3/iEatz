@@ -98,6 +98,18 @@ function check(loaded) {
       const bad = sentenceCase(h);
       if (bad.length) fails.push(`${p.id}: sentence case in ${field}: "${strip(h)}" capitalises ${bad.map(b => `"${b}"`).join(', ')} (not a sentence start or on copy-allowlist.txt)`);
     }
+    // 5b (F-022, Nov 19 2026): a pen mark, circle or arrow has a referent. Every punchline/sharpie
+    //     unit that carries a label needs a markClaim saying, literally, what sits inside the mark
+    //     ("a bunch of bananas"), and the label has to be true of that thing. The banana pin: a circle
+    //     round bananas labelled "the whole dinner" passed every gate because no gate asked.
+    for (const u of (r.slides ? r.slides.map((s, i) => ({ id: `${p.id} slide ${i + 1}`, r: s })) : [{ id: p.id, r }])) {
+      const x = u.r || {};
+      const labels = [].concat(x.label ? [x.label.text] : [], (x.marks || []).map(m => m.label).filter(Boolean));
+      if (!labels.length) continue;
+      if (!x.markClaim) { fails.push(`${u.id}: a marker label (${labels.map(l => `"${l}"`).join(', ')}) with no markClaim (say literally what the mark surrounds; F-022)`); continue; }
+      const mc = nouns(x.markClaim), pc = nouns(x.photoClaim || '');
+      if (!mc.some(n => pc.includes(n))) fails.push(`${u.id}: markClaim "${x.markClaim}" names nothing that is in photoClaim (F-022)`);
+    }
     // 5: photoClaim required and grounded in the copy, per photo-bearing unit (post or slide)
     const units = r.slides ? r.slides.map((s, i) => ({ id: `${p.id} slide ${i + 1}`, r: s, head: headlineOf(s) })) : [{ id: p.id, r, head: headlineOf(r) }];
     for (const u of units) {
