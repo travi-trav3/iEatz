@@ -124,3 +124,9 @@ Still open:
   later render; the live pin is as it is.
 - Template changes this session: `photo` and `igphoto` take `objPos`; `.pl-tag` sits above
   `.pl-tape`; `bleed` is allowed as a carousel cover (doc.js).
+- Buffer state at 20:45 PT Nov 20: the nine draft pins and I4 carry the new frames. I1 and I2 are
+  SCHEDULED (I1 Sat 08:15 PT, set at 20:35 PT by someone other than this session; I2 Sat 11:00 PT)
+  and still carry the old frames (I1 v4, I2 v5): the ledger is ahead of Buffer on those two rows
+  until Travis says to swap. P1b shows a failed publish attempt at 20:37 PT (Buffer "unknown
+  error"); this session's image edit at 20:41 saved it back as a draft. P3's Buffer time is now
+  Sat 12:10 PT, the same slot as P5.
