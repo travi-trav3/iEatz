@@ -419,7 +419,7 @@ html.footage,html.footage body,.ig-bleed.footage{background:transparent}
 .pl-label{position:absolute;font-family:var(--marker);font-size:54px;line-height:1;white-space:nowrap;color:var(--ink-pen);text-shadow:0 0 3px rgba(245,242,234,0.95),0 0 10px rgba(245,242,234,0.9),0 0 20px rgba(245,242,234,0.7);transform-origin:0 50%}
 .pl-card{position:absolute;left:64px;right:64px;bottom:64px;z-index:4;background:#FFFDF8;padding:48px 54px 42px;transform:rotate(-1.4deg);box-shadow:0 28px 54px rgba(0,0,0,0.45),0 4px 10px rgba(0,0,0,0.22)}
 .pl-tape{position:absolute;top:-24px;left:50%;width:180px;height:50px;transform:translateX(-50%) rotate(-3deg);background:rgba(228,169,60,0.85);box-shadow:0 2px 4px rgba(0,0,0,0.08)}
-.pl-tag{position:absolute;right:-16px;top:-30px;background:var(--tomato);color:var(--paper);font-family:var(--mono);font-weight:500;font-size:28px;letter-spacing:0.08em;padding:12px 22px;transform:rotate(5deg);box-shadow:0 8px 18px rgba(0,0,0,0.25)}
+.pl-tag{position:absolute;z-index:2;right:-16px;top:-30px;background:var(--tomato);color:var(--paper);font-family:var(--mono);font-weight:500;font-size:28px;letter-spacing:0.08em;padding:12px 22px;transform:rotate(5deg);box-shadow:0 8px 18px rgba(0,0,0,0.25)}
 .pl-ask{font-family:var(--serif);font-weight:400;font-size:68px;line-height:1.0;letter-spacing:-0.015em;color:var(--ink);margin:0}
 .pl-ask em,.pl-ask .accent{font-style:italic;color:var(--green)}
 .pl-row{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;margin-top:22px}

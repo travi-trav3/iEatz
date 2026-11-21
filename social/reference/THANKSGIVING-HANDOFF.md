@@ -107,3 +107,20 @@ F-007 (text-message voice), F-010 (everything into Buffer as a draft the moment 
 rules: exact cart URLs, no prices, disclosure on every cart pin, B6 vegetarian not vegan, no em dashes,
 sentence case, no "not X, it's Y". Commit trailers: Co-Authored-By and Claude-Session lines as in the
 git log.
+
+## 6. Nov 20 audit (20:00 to 21:30 PT, the session after the one above)
+
+Every live frame was opened and read cold. Re-cut and now live in the ledger: I2 v6, I4 v5, I1 v5,
+P1b v5, P3 v4 (photo shell), P4 v5 (steps shell, Travis's own plate), P5 v4 (bleed, mac only), P7 v4,
+P9 v4 (texts only), P10 v4. Unchanged: P1 v4, P2 and I3 (sent), P8 v3. Each row's last `qa.fixed`
+line says what was wrong.
+
+Still open:
+- P6 and I1 slide 8 (vegetarian) show a pan of roasted sweet potatoes under "stuffed butternut
+  squash". Nothing in the library is a stuffed squash. I1 is `qa.verdict: hold` and fails the set
+  gate on purpose. Needs one photo from Travis; do not ship either until it lands.
+- P1 and P1b are the same headline and the same thread. Recommendation: drop P1b.
+- P2 (already published) has the tape covering "Thanks" in its tag. Fixed in base.css for every
+  later render; the live pin is as it is.
+- Template changes this session: `photo` and `igphoto` take `objPos`; `.pl-tag` sits above
+  `.pl-tape`; `bleed` is allowed as a carousel cover (doc.js).

@@ -209,12 +209,12 @@ const hookSize = (n) => n <= 90 ? 124 : n <= 105 ? 110 : 98;
 const TEMPLATES = {
   // ---------- paper surfaces ----------
   photo: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin t-photo">
-    <div class="hero"><img src="${PHOTOS}/${p.photo}" alt=""></div>
+    <div class="hero"><img src="${PHOTOS}/${p.photo}" alt=""${p.objPos ? ` style="object-position:${p.objPos}"` : ''}></div>
     <div class="panel">${eyebrow(p)}<h1 class="head">${p.head}</h1>${chips(p)}<div class="spacer"></div>${footer(p, F_PHOTO_TOP)}</div>
   </div>` },
 
   igphoto: { surface: 'paper', render: (p, PHOTOS) => `<div class="pin ig-photo">
-    <div class="hero"><img src="${PHOTOS}/${p.photo}" alt=""></div>
+    <div class="hero"><img src="${PHOTOS}/${p.photo}" alt=""${p.objPos ? ` style="object-position:${p.objPos}"` : ''}></div>
     <div class="panel">${eyebrow(p)}<h1 class="head">${p.head}</h1>${chips(p)}<div class="spacer"></div>${footer(p, F_PHOTO_TOP)}</div>
   </div>` },
 

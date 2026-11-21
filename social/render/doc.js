@@ -20,7 +20,7 @@ const FONT_CHECKS = {
 // its own box. Runs after fonts load, before the screenshot (and before motion frame 0).
 const FIT_SCRIPT = `<script>window.__fit=()=>{for(const el of document.querySelectorAll('[data-fit]')){const min=+el.dataset.fit||40;let fs=parseFloat(getComputedStyle(el).fontSize),g=300;while(g--&&fs>min&&(el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1)){fs-=2;el.style.fontSize=fs+'px';}}};</script>`;
 
-const CAROUSEL_COVERS = ['poster', 'sharpie', 'split'];
+const CAROUSEL_COVERS = ['poster', 'sharpie', 'split', 'bleed'];
 
 // A carousel post { file, w, h, slides:[{template,...}] } becomes one render job per slide:
 // <file>--01 ... all at the post's size. Slide 1 has no pager; slides 2+ show "n / total".
