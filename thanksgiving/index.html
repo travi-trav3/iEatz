@@ -361,6 +361,36 @@ pintrk('track', 'pagevisit', {
 .tg-after ul li::before{content:"\00B7";color:#9FD8B5;font-weight:700;flex:none}
 .tg-stores{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 @media (max-width:560px){.wrap{padding-left:16px;padding-right:16px}.tg-hero{padding-top:40px;gap:40px}.tg-card{padding:20px 18px 20px}.tg-after-grid{padding-top:56px;padding-bottom:56px}.tg-how{padding:48px 0}}
+
+.tg-card{padding:0;overflow:hidden}
+.tg-card-photo{display:block;width:100%;aspect-ratio:5/3;object-fit:cover;background:var(--mint)}
+.tg-card-body{display:flex;flex-direction:column;flex:1;padding:22px 26px 24px}
+.tg-card .tg-num{font-size:34px}
+.tg-why{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.35;color:var(--accent-ink);margin:14px 0 0}
+.tg-band{position:relative;margin-top:88px;min-height:520px;display:flex;align-items:flex-end;overflow:hidden;background:#0A0F0C}
+.tg-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.82}
+.tg-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,12,0.05) 0%,rgba(10,15,12,0.25) 45%,rgba(10,15,12,0.82) 100%)}
+.tg-band .wrap{position:relative;z-index:2;padding-top:140px;padding-bottom:64px;width:100%}
+.tg-band .eyebrow{color:#9FD8B5}.tg-band .eyebrow::before{background:#9FD8B5}
+.tg-band h2{font-size:clamp(34px,4.4vw,60px);line-height:1.0;margin:16px 0 0;color:#F5F2EA;max-width:18ch}
+.tg-band p{font-size:18px;line-height:1.55;color:#E6F4EC;margin:18px 0 0;max-width:52ch}
+.tg-gets{margin-top:88px}
+.tg-gets h2{font-size:clamp(32px,3.8vw,50px);line-height:1.03;margin:18px 0 0}
+.tg-gets-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:22px;margin-top:32px}
+.tg-get{background:#FFFFFF;border-radius:22px;border:1px solid rgba(10,15,12,0.06);box-shadow:var(--shadow-1);overflow:hidden}
+.tg-get img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--mint)}
+.tg-get div{padding:22px 24px 26px}
+.tg-get h3{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.08;letter-spacing:-0.012em;margin:0;color:var(--ink)}
+.tg-get p{font-size:16px;line-height:1.5;color:var(--muted);margin:12px 0 0;text-wrap:pretty}
+.tg-faq{margin-top:88px;background:var(--sage);padding:64px 0}
+.tg-faq h2{font-size:clamp(32px,3.8vw,50px);line-height:1.03;margin:18px 0 0;color:#0E4A2A}
+.tg-faq dl{margin:28px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}
+.tg-faq div{background:#FFFFFF;border-radius:18px;padding:22px 24px;box-shadow:var(--shadow-1)}
+.tg-faq dt{font-family:var(--serif);font-size:24px;line-height:1.15;color:var(--ink);margin:0}
+.tg-faq dd{font-size:16px;line-height:1.5;color:var(--muted);margin:10px 0 0}
+.tg-faq dd b{color:#0E4A2A;font-weight:600}
+@media (min-width:980px){.tg-grid > .tg-card:last-child:nth-child(3n+1){grid-column:1/-1;flex-direction:row}.tg-grid > .tg-card:last-child:nth-child(3n+1) .tg-card-photo{width:46%;aspect-ratio:auto;height:auto;min-height:360px}.tg-grid > .tg-card:last-child:nth-child(3n+1) .tg-card-body{padding:34px 40px}}
+@media (max-width:560px){.tg-band{min-height:420px}.tg-band .wrap{padding-top:100px;padding-bottom:44px}.tg-card-body{padding:18px 18px 20px}}
 </style>
 </head>
 <body>
@@ -379,7 +409,7 @@ pintrk('track', 'pagevisit', {
 <div>
 <span class="eyebrow">Thanksgiving 2026 &middot; 7 dinners, every ingredient delivered</span>
 <h1 class="h-serif">Seven Thanksgiving dinners. Pick yours.</h1>
-<p class="cb-lede">Pick the dinner you want. Every ingredient for the whole homemade spread arrives from Instacart, no shopping and no figuring out what to cook. When the bags land, iEatz walks you through each dish step by step.</p>
+<p class="cb-lede">Pick the dinner you want. Every ingredient for the whole homemade spread shows up at your door from Instacart, so the only list you make this year is who sits where. When the bags land, iEatz walks you through each dish, step by step, until the table is full.</p>
 <p class="cb-quote">&ldquo;Thanksgiving without the headache.&rdquo;</p>
 <div class="cb-actions">
 <a href="#carts" class="btn btn-dark">See all 7 dinners<span aria-hidden="true">&darr;</span></a>
@@ -388,8 +418,8 @@ pintrk('track', 'pagevisit', {
 <p class="tg-disc">We may earn a commission when you order through these carts.</p>
 </div>
 <div class="cb-cover">
-<img src="/assets/photos/thanksgiving/plate.jpg" alt="A Thanksgiving plate on an orange plaid runner: sliced turkey, mashed potatoes, stuffing, sweet potatoes and a green salad, small pumpkins behind it" width="1200" height="1600" fetchpriority="high">
-<span>7 dinners &middot; every ingredient delivered</span>
+<img src="/assets/photos/thanksgiving/tg-plate-wine.jpg" alt="A plate of turkey, mashed potatoes with gravy, stuffing, green beans and brussels sprouts beside a glass of red wine" width="1097" height="1600" fetchpriority="high">
+<span>7 dinners &middot; zero store runs</span>
 </div>
 </section>
 
@@ -410,53 +440,81 @@ pintrk('track', 'pagevisit', {
 <h2 class="h-serif" style="font-size:clamp(32px,3.8vw,50px);line-height:1.03;margin:18px 0 0">Which dinner are you making?</h2>
 <div class="tg-grid">
 <article class="tg-card" id="b1">
+<img class="tg-card-photo" src="/assets/photos/thanksgiving/tg-turkey-sides-top.jpg" alt="An overhead roast turkey on a silver tray with mashed potatoes, stuffing and rolls" loading="lazy">
+<div class="tg-card-body">
 <span class="tg-num">01</span>
 <h3>Classic table, traditional</h3>
 <span class="tg-for">8 to 10 people</span>
-<p>The full default spread: turkey, stuffing, cranberry, gravy, potatoes and pie. The cart most tables are picturing.</p>
+<p>The full default spread: turkey, stuffing, cranberry, gravy, potatoes and pie. The dinner everyone is picturing when they say they are coming.</p>
+<p class="tg-why">For the host who wants the table to look like the one they grew up with, without spending Wednesday in three different stores.</p>
 <div class="tg-open"><a href="https://www.instacart.com/store/shopping_lists/25949748?utm_campaign=instacart-idp&amp;utm_medium=affiliate&amp;utm_source=instacart_idp&amp;utm_term=partnertype-mediapartner&amp;utm_content=campaignid-20313_partnerid-6442115" target="_blank" rel="noopener sponsored" data-cart="classic-traditional" data-cart-number="1">Open the cart<span aria-hidden="true">&rarr;</span></a></div>
+</div>
 </article>
 <article class="tg-card" id="b2">
+<img class="tg-card-photo" src="/assets/photos/thanksgiving/tg-wine-friends.jpg" alt="Three friends around a kitchen island with glasses of red wine and a charcuterie board" loading="lazy">
+<div class="tg-card-body">
 <span class="tg-num">02</span>
 <h3>Friendsgiving</h3>
 <span class="tg-for">4 to 6 people</span>
-<p>A turkey breast instead of a whole bird, with the sides right-sized for a smaller table and a group chat that keeps changing its mind.</p>
+<p>A turkey breast instead of a whole bird, with the sides and a pie right-sized for the smaller table and the group chat that keeps changing its mind.</p>
+<p class="tg-why">For the one friend who ends the thread with "I have the cart" and then spends the night at the table instead of the stove.</p>
 <div class="tg-open"><a href="https://www.instacart.com/store/shopping_lists/25949752?utm_campaign=instacart-idp&amp;utm_medium=affiliate&amp;utm_source=instacart_idp&amp;utm_term=partnertype-mediapartner&amp;utm_content=campaignid-20313_partnerid-6442115" target="_blank" rel="noopener sponsored" data-cart="friendsgiving" data-cart-number="2">Open the cart<span aria-hidden="true">&rarr;</span></a></div>
+</div>
 </article>
 <article class="tg-card" id="b3">
+<img class="tg-card-photo" src="/assets/photos/thanksgiving/tg-casserole-crop.jpg" alt="A green bean casserole topped with crispy onions in a white dish" loading="lazy">
+<div class="tg-card-body">
 <span class="tg-num">03</span>
 <h3>Potluck: the green bean casserole</h3>
 <span class="tg-for">One dish for 8 to 10</span>
-<p>You were told to bring a side. This is everything for one green bean casserole, and nothing you will have to go back for.</p>
+<p>You were told to bring a side. This is everything for one green bean casserole, crispy onions included, and nothing you will have to go back for.</p>
+<p class="tg-why">For the person who said yes in October and is now reading this on the Tuesday before. We have been there.</p>
 <div class="tg-open"><a href="https://www.instacart.com/store/shopping_lists/25949753?utm_campaign=instacart-idp&amp;utm_medium=affiliate&amp;utm_source=instacart_idp&amp;utm_term=partnertype-mediapartner&amp;utm_content=campaignid-20313_partnerid-6442115" target="_blank" rel="noopener sponsored" data-cart="potluck-green-bean-casserole" data-cart-number="3">Open the cart<span aria-hidden="true">&rarr;</span></a></div>
+</div>
 </article>
 <article class="tg-card" id="b4">
+<img class="tg-card-photo" src="/assets/photos/thanksgiving/tg-family-table-top.jpg" alt="An overhead long wooden table crowded with plates of roast meat, potatoes, salads and bread" loading="lazy">
+<div class="tg-card-body">
 <span class="tg-num">04</span>
 <h3>Classic table, budget</h3>
 <span class="tg-for">8 to 10 people</span>
-<p>The same table, built to cost less: a frozen bird, store brands, canned and boxed sides where they hold up fine.</p>
+<p>The same table, built to cost less: a frozen bird, store brands, canned and boxed sides where they hold up fine. Nobody at the table will notice. Nobody ever does.</p>
+<p class="tg-why">For the host feeding the whole extended family on a regular paycheck, which is most hosts.</p>
 <div class="tg-open"><a href="https://www.instacart.com/store/shopping_lists/25949746?utm_campaign=instacart-idp&amp;utm_medium=affiliate&amp;utm_source=instacart_idp&amp;utm_term=partnertype-mediapartner&amp;utm_content=campaignid-20313_partnerid-6442115" target="_blank" rel="noopener sponsored" data-cart="classic-budget" data-cart-number="4">Open the cart<span aria-hidden="true">&rarr;</span></a></div>
+</div>
 </article>
 <article class="tg-card" id="b5">
+<img class="tg-card-photo" src="/assets/photos/thanksgiving/tg-mac-and-cheese.jpg" alt="A close shot of baked mac and cheese with a crisp golden top" loading="lazy">
+<div class="tg-card-body">
 <span class="tg-num">05</span>
 <h3>Southern soul food</h3>
 <span class="tg-for">8 to 10 people</span>
-<p>Mac and cheese, collards with smoked turkey wings, candied yams and sweet potato pie. The table your aunt would approve of.</p>
+<p>Mac and cheese, collards with smoked turkey wings, candied yams and sweet potato pie. The table your aunt would inspect and approve.</p>
+<p class="tg-why">For the cook who knows the mac and cheese is the real main course and is tired of pretending otherwise.</p>
 <div class="tg-open"><a href="https://www.instacart.com/store/shopping_lists/25949754?utm_campaign=instacart-idp&amp;utm_medium=affiliate&amp;utm_source=instacart_idp&amp;utm_term=partnertype-mediapartner&amp;utm_content=campaignid-20313_partnerid-6442115" target="_blank" rel="noopener sponsored" data-cart="southern-soul-food" data-cart-number="5">Open the cart<span aria-hidden="true">&rarr;</span></a></div>
+</div>
 </article>
 <article class="tg-card" id="b6">
+<img class="tg-card-photo" src="/assets/photos/thanksgiving/squash-tray.jpg" alt="A sheet pan of roasted squash and sweet potatoes on a wooden table" loading="lazy">
+<div class="tg-card-body">
 <span class="tg-num">06</span>
 <h3>Vegetarian</h3>
 <span class="tg-for">8 to 10 people</span>
 <p>A stuffed butternut squash as the centerpiece, with a mushroom gravy. Vegetarian, not vegan: the cream of mushroom has dairy in it.</p>
+<p class="tg-why">For the vegetarian who has eaten sides for dinner every November since college and would like a centerpiece of their own.</p>
 <div class="tg-open"><a href="https://www.instacart.com/store/shopping_lists/25949750?utm_campaign=instacart-idp&amp;utm_medium=affiliate&amp;utm_source=instacart_idp&amp;utm_term=partnertype-mediapartner&amp;utm_content=campaignid-20313_partnerid-6442115" target="_blank" rel="noopener sponsored" data-cart="vegetarian" data-cart-number="6">Open the cart<span aria-hidden="true">&rarr;</span></a></div>
+</div>
 </article>
 <article class="tg-card" id="b7">
+<img class="tg-card-photo" src="/assets/photos/thanksgiving/tg-roast-table-green-plates.jpg" alt="An overhead holiday table with a roast bird, a herb-crusted roast, Yorkshire puddings and sprouts" loading="lazy">
+<div class="tg-card-body">
 <span class="tg-num">07</span>
 <h3>Classic table, premium</h3>
 <span class="tg-for">8 to 10 people</span>
 <p>A fresh bird, scratch sides, two pies, a cheese board and cider. For the year you are hosting and want it to show.</p>
+<p class="tg-why">For the host whose mother-in-law is coming. We built this one carefully.</p>
 <div class="tg-open"><a href="https://www.instacart.com/store/shopping_lists/25949749?utm_campaign=instacart-idp&amp;utm_medium=affiliate&amp;utm_source=instacart_idp&amp;utm_term=partnertype-mediapartner&amp;utm_content=campaignid-20313_partnerid-6442115" target="_blank" rel="noopener sponsored" data-cart="classic-premium" data-cart-number="7">Open the cart<span aria-hidden="true">&rarr;</span></a></div>
+</div>
 </article>
 </div>
 <p class="tg-disc">We may earn a commission when you order through these carts.</p>
@@ -464,14 +522,48 @@ pintrk('track', 'pagevisit', {
 
 
 
+<section class="tg-band">
+<img src="/assets/photos/thanksgiving/tg-cheese-board-hands.jpg" alt="Hands reaching over a candlelit table for a cheese board and wine">
+<div class="wrap">
+<span class="eyebrow">The point of the day</span>
+<h2 class="h-serif">You did not invite everyone over to stand in a checkout line.</h2>
+<p>The average Thanksgiving host makes three trips to the store, forgets the butter on all three, and sits down last. The cart is one order, placed from the couch. What you get back is the Wednesday night, the Thursday morning and the seat at your own table.</p>
+</div>
+</section>
+
+<section class="wrap tg-gets">
+<span class="eyebrow">What the cart buys back</span>
+<h2 class="h-serif">Less list. More table.</h2>
+<div class="tg-gets-grid">
+<article class="tg-get"><img src="/assets/photos/thanksgiving/tg-pie-table.jpg" alt="A pumpkin pie being cut on a wooden table with autumn leaves" loading="lazy"><div><h3>Your Wednesday back.</h3><p>No parking lot, no third aisle, no standing in front of the cranberries wondering if you already have cranberries. Order it tonight, it arrives tomorrow, you go to bed.</p></div></article>
+<article class="tg-get"><img src="/assets/photos/thanksgiving/tg-carving-turkey.jpg" alt="Hands carving a roast turkey with stuffing and green beans beside it" loading="lazy"><div><h3>A kitchen that knows what it is doing.</h3><p>Every dish in your cart is in iEatz with its steps. Add what arrived, by hand or from the receipt, and it walks you through the bird, the gravy and the timing of all of it, calories and protein estimated.</p></div></article>
+<article class="tg-get"><img src="/assets/photos/thanksgiving/tg-buffet-crowd.jpg" alt="A crowd of people lining up at a harvest table with pumpkins, grapes and bread" loading="lazy"><div><h3>You, at the table, on time.</h3><p>The host who is not sprinting to the store at 2 pm is the host who hears the toast, eats the food hot, and has an actual opinion about the pie.</p></div></article>
+</div>
+</section>
+
+<section class="tg-faq">
+<div class="wrap">
+<span class="eyebrow">Honest questions</span>
+<h2 class="h-serif">Things people ask before they tap.</h2>
+<dl>
+<div><dt>Do I still have to cook?</dt><dd><b>Yes.</b> This is a homemade dinner. The cart brings every ingredient and iEatz walks you through each dish, step by step. The oven is still yours.</dd></div>
+<div><dt>Can I change the cart?</dt><dd><b>Yes.</b> It opens in your Instacart with your store. Take out what you already have, change counts for a bigger or smaller table, add the thing you always forget.</dd></div>
+<div><dt>What if my store does not carry something?</dt><dd>Instacart swaps or lets you pick a substitute, the same as any order. Availability varies by store, which is why we do not quote a total.</dd></div>
+<div><dt>Will this fix my uncle?</dt><dd><b>No.</b> We checked. It does get dinner on the table before he gets to the second topic, which is the most anyone can promise.</dd></div>
+<div><dt>Is the vegetarian cart vegan?</dt><dd><b>No.</b> The stuffed butternut squash cart is vegetarian; the cream of mushroom in the gravy has dairy. We would rather tell you here than at the table.</dd></div>
+<div><dt>Why is this free?</dt><dd>We may earn a commission when you order through these carts. That is the whole arrangement. No prices are marked up and nothing is added to your order.</dd></div>
+</dl>
+</div>
+</section>
+
 </main>
 
 <section class="tg-after" id="after" style="scroll-margin-top:84px">
 <div class="wrap tg-after-grid">
 <div>
 <span class="eyebrow">After Thursday</span>
-<h2 class="h-serif">The half bag of cranberries is still in there on Saturday.</h2>
-<p class="tg-hook">Tell iEatz what is left. It writes dinner.</p>
+<h2 class="h-serif">On Saturday the fridge is half celery, half heavy cream, and nobody has a plan.</h2>
+<p class="tg-hook">Tell iEatz what is left. It writes dinner, and you sit back down.</p>
 <p>Every big grocery run leaves ingredients behind: the second bag of green beans, the extra sweet potatoes, the stock you bought in case. Type what you have into the iEatz app and it writes recipes from those ingredients, with calories and protein estimated, and sends anything missing to Instacart.</p>
 <ul>
 <li>Add what you have by hand, or import a receipt</li>
