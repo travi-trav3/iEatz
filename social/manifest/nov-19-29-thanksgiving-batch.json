@@ -566,6 +566,56 @@
    "bufferId": "6aff94ac7b0a126ceb948c46",
    "note": "Wednesday 12:10. Own photo (Nov 1 haul, side view). Links to cart B1, third image. v2 (Nov 19 16:40 PT, Travis): every frame and caption rewritten around pick a dinner, every ingredient delivered, iEatz walks you through each dish; headline on paper or a dark scrim; a different photo on every pin. v3 Nov 19 18:30 PT: pie table.",
    "stockOk": "Travis's Nov 19 Thanksgiving photo set, by his instruction"
+  },
+  {
+   "id": "i7-ig",
+   "status": "planned",
+   "channel": "instagram",
+   "format": "static",
+   "dueAt": "2026-11-24T11:00:00-08:00",
+   "file": "assets/social/nov19/i7-ig-store-zoo-thread-v1.png",
+   "renderBatchFile": "i7-ig-store-zoo-thread-v1",
+   "pillar": "Grocery/Instacart",
+   "topic": "Thanksgiving carts: all seven, two days out, skip the store",
+   "cta": "hub-link-in-bio",
+   "hook": "promise",
+   "text": "the store on wednesday: no carts, no parking, no sage.\n\nskip it. the classic thanksgiving dinner is one Instacart order, every ingredient from the turkey to the pie, at your door. iEatz takes it from there and cooks you through it, dish by dish.\n\nyour mom is still bringing her stuffing. let her. six more dinners at the link in bio.\n\nwe may earn a commission when you order through these carts.\n\n#thanksgiving #thanksgivingprep #grocerydelivery #ieatzhealthy",
+   "firstComment": "whose stuffing wins at your table? be honest.",
+   "alt": "A text thread on a mint panel. Headline: Every Thanksgiving ingredient arrives at your door. Subhead: Pick the dinner. Instacart delivers it. iEatz walks you through each dish. Thread: have you bought the turkey yet; the store will be a zoo by wednesday; skipping it, every ingredient for the whole dinner, turkey to pie, is coming to the door; and iEatz walks me through each dish step by step; ok, i'm still bringing my stuffing. Footer: Seven dinners, every ingredient delivered. Link in bio.",
+   "qa": {
+    "verdict": "pass",
+    "rounds": 1,
+    "read": "a text thread with mom about the turkey and the store; the ingredients are coming to the door, iEatz walks through the cooking, mom still brings her stuffing",
+    "fixed": []
+   },
+   "why": "Two days out the store is the part everyone dreads and mom is already checking on the turkey; the thread ends the trip with every ingredient at the door and the cooking walked through, and mom brings her stuffing anyway, because she always does.",
+   "app": "The chosen cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt).",
+   "note": "Tuesday 11:00, added Nov 20 at Travis's request (an IG post for the 23rd or 24th). Tuesday, not Monday: two days out is the last comfortable order day and it sits the day before I4."
+  },
+  {
+   "id": "i8-ig",
+   "status": "planned",
+   "channel": "instagram",
+   "format": "static",
+   "dueAt": "2026-11-27T11:00:00-08:00",
+   "file": "assets/social/nov19/i8-ig-cranberries-poster-v1.png",
+   "renderBatchFile": "i8-ig-cranberries-poster-v1",
+   "pillar": "Pantry/Fridge",
+   "topic": "After Thursday: leftover ingredients into the app",
+   "cta": "app-value",
+   "hook": "problem",
+   "text": "thursday is over. the fridge is not.\n\nthe second bag of green beans, the extra sweet potatoes, the stock you bought in case, half a bag of cranberries. type what's left into iEatz, or import the receipt, and it writes dinner from those ingredients, calories and protein estimated. anything missing goes to Instacart in a tap.\n\nfree on iOS and Android. link in bio.\n\n#fridgecleanout #whatsfordinner #mealplanning #ieatzhealthy",
+   "firstComment": "what's the one ingredient still sitting in yours?",
+   "alt": "Type-only poster on paper. Headline: Half the cranberries are still in there. Body: Type in what Thursday left behind: the cranberries, the extra sweet potatoes, the stock. iEatz writes dinner from those ingredients. Link in bio.",
+   "qa": {
+    "verdict": "pass",
+    "rounds": 1,
+    "read": "half the cranberries are still in the fridge; type what is left into iEatz and it writes dinner",
+    "fixed": []
+   },
+   "why": "The day after, every fridge holds the half-used ingredients nobody planned for; naming the half bag of cranberries is the true thing, and the app's actual job is writing dinner from what is left.",
+   "app": "Type the ingredients left after Thursday into iEatz, or import the receipt, and it writes recipes from those ingredients with calories and protein estimated; anything missing goes to Instacart.",
+   "note": "Friday 11:00, added Nov 20 at Travis's request. Phase 2 opener, static; the I5 reel and I6 carousel from the brief still depend on Friday's shoot and real outputs. Leftover ingredients only, never leftover dishes."
   }
  ],
  "pending": []

@@ -2449,6 +2449,61 @@
      "photoClaim": "an overhead wooden table with a pumpkin pie being cut, a slice with whipped cream, challah, a glass of red punch and autumn leaves"
     }
    ]
+  },
+  {
+   "file": "i7-ig-store-zoo-thread-v1",
+   "w": 1080,
+   "h": 1350,
+   "template": "thread",
+   "footer": "badge-bl",
+   "grade": false,
+   "bg": "mint",
+   "head": "Every Thanksgiving ingredient arrives at your door.",
+   "sub": "Pick the dinner. Instacart delivers it. iEatz walks you through each dish.",
+   "msgs": [
+    {
+     "time": "Mon 8:05 PM"
+    },
+    {
+     "who": "them",
+     "text": "have you bought the turkey yet"
+    },
+    {
+     "who": "them",
+     "text": "the store will be a zoo by wednesday"
+    },
+    {
+     "who": "me",
+     "text": "skipping it. every ingredient for the whole dinner, turkey to pie, is coming to the door"
+    },
+    {
+     "who": "me",
+     "text": "and iEatz walks me through each dish step by step"
+    },
+    {
+     "who": "them",
+     "text": "ok. i'm still bringing my stuffing"
+    }
+   ],
+   "foot": "Seven dinners, every ingredient delivered. Link in bio.",
+   "hookType": "promise",
+   "why": "Two days out the store is the part everyone dreads and mom is already checking on the turkey; the thread ends the trip with every ingredient at the door and the cooking walked through, and mom brings her stuffing anyway, because she always does.",
+   "app": "The chosen cart is an iEatz-built Instacart list with every ingredient for the dinner; once it arrives, iEatz writes each dish step by step from those ingredients (add by hand or scan the receipt)."
+  },
+  {
+   "file": "i8-ig-cranberries-poster-v1",
+   "w": 1080,
+   "h": 1350,
+   "template": "poster",
+   "footer": "badge-bl",
+   "grade": false,
+   "strip": true,
+   "head": "Half the<br>cranberries are<br><span class=\"u\">still in there.</span>",
+   "headSize": 150,
+   "body": "Type in what Thursday left behind: the cranberries, the extra sweet potatoes, the stock. iEatz writes dinner from those ingredients. Link in bio.",
+   "hookType": "problem",
+   "why": "The day after, every fridge holds the half-used ingredients nobody planned for; naming the half bag of cranberries is the true thing, and the app's actual job is writing dinner from what is left.",
+   "app": "Type the ingredients left after Thursday into iEatz, or import the receipt, and it writes recipes from those ingredients with calories and protein estimated; anything missing goes to Instacart."
   }
  ],
  "photoPool": [
